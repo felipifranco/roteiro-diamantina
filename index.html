@@ -81,4 +81,71 @@ async function drawLine(){if(line)map.removeLayer(line);const status=document.ge
 // Links em blocos independentes, com nível de esforço e idade mínima declarada.
 function buildStopCard(s){const isOptional=s.kind==='opcional';const card=document.createElement('article');card.className=`stop ${isOptional?'optional-stop':''}`;const checkbox=s.kind!=='inicio'&&s.kind!=='alerta'&&s.kind!=='destino'?`<input class="stop-check" type="checkbox" aria-label="Incluir ${s.name} na rota" ${selected.has(s.id)?'checked':''}>`:'';const sights=s.sights.length?s.sights.map((name,i)=>{const [effort,note,cls]=effortFor(s,name);return `<div class="attraction-item"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name+' '+s.name)}">${name} ↗</a><div class="access-meta"><span class="effort ${cls}">Acesso: ${effort}</span><br>${note}<br><strong>${ageInfo}</strong></div></div>`}).join(''):'<span class="origin-note">Início da viagem.</span>';card.innerHTML=`<div class="stop-head"><span class="num ${isOptional?'optional-num':''}">${s===origin?'●':isOptional?'↗':selected.has(s.id)?orderedStops().findIndex(x=>x.id===s.id)+1:'+'}</span><button class="stop-focus" type="button"><span class="stop-name">${s.name.replace(' · desvio opcional','')}</span><span class="stop-kind">${isOptional?'DESVIO OPCIONAL':s.type==='historia'?'HISTÓRIA / CULTURA':'NATUREZA'}${s===destination?' · DESTINO FIXO':''}</span></button>${checkbox}</div><details class="attractions"><summary>${s.sights.length?'Passeios, acesso e idade':'Início / destino'}</summary><div class="attraction-links">${sights}<div class="attraction-item"><a target="_blank" rel="noopener" href="${s.url}">Informações oficiais / cidade ↗</a></div></div></details>`;card.querySelector('.stop-focus').addEventListener('click',()=>{map.flyTo([s.lat,s.lon],isOptional?8:9,{duration:.55});markers[s.id].openPopup()});const input=card.querySelector('.stop-check');if(input)input.addEventListener('change',()=>{if(input.checked)selected.add(s.id);else selected.delete(s.id);drawLine()});return card}
 renderList();drawLine();
+</script>
+<style>
+.schedule-heading{margin:12px 0 6px;padding:8px 9px;border-radius:8px;background:#edf3e9;color:#365c44;font-size:11px;font-weight:800;letter-spacing:.04em}.fixed-heading{background:#eaf0fb;color:#334f7a;border:1px solid #cdd9ef}.schedule-warning{padding:8px;border-radius:7px;background:#fff0e8;color:#8b432b}.stop-head:has(.stop-phase){grid-template-columns:25px minmax(0,1fr) 22px auto}.stop-phase{max-width:132px;border:1px solid var(--line);border-radius:7px;padding:5px 6px;background:#fff;color:var(--ink);font:10px/1.2 "Segoe UI",sans-serif}.trip-summary{line-height:1.45}.trip-summary p{margin:5px 0}@media(max-width:800px){.schedule-heading{margin:7px 0 4px;padding:6px 8px;font-size:10px}.stop-head:has(.stop-phase){grid-template-columns:24px minmax(0,1fr) 22px}.stop-phase{grid-column:2/-1;grid-row:2;max-width:140px;margin:0 0 3px}.trip-summary p{font-size:10px}}
+</style>
+<script>
+// Agrupa as paradas em torno do marco fixo de Diamantina (09/10).
+(()=>{
+ const phases=new Map();
+ const oldCard=window.buildStopCard;
+ const dateRange=s=>{const r=stayRanges[s.id]||[0,0];return r[0]===r[1]?`${r[0]} dia${r[0]===1?'':'s'}`:`${r[0]}–${r[1]} dias`};
+ const eligible=s=>s.id!==origin.id&&s.id!==destination.id&&s.kind!=='alerta';
+ const phaseOf=s=>phases.get(s.id)||'before';
+ function summary(){
+  const chosen=selectedStops(),before=chosen.filter(s=>phaseOf(s)==='before'),after=chosen.filter(s=>phaseOf(s)==='after');
+  const sumDays=list=>list.reduce((r,s)=>[r[0]+(stayRanges[s.id]?.[0]||0),r[1]+(stayRanges[s.id]?.[1]||0)],[0,0]);
+  const b=sumDays(before),a=sumDays(after),el=document.getElementById('tripSummary');
+  el.innerHTML=`<b>Calendário do roteiro</b><p>Saída: <strong>07/10</strong> · Paradas antes de Diamantina: <strong>07–08/10</strong> (${before.length?dateRangeTotal(b):'nenhuma selecionada'}; janela de 2 dias).</p><p><strong>Diamantina: 09/10 — data fixa.</strong> A seleção de paradas não altera esse dia.</p><p>Depois de Diamantina: <strong>a partir de 10/10</strong>${after.length?` · ${dateRangeTotal(a)} de visita estimada`:''}. Deslocamentos e descanso podem ampliar o período.</p>${b[1]>2?'<p class="schedule-warning"><strong>Atenção:</strong> as paradas anteriores excedem a janela 07–08/10. Mova algumas para “Depois” ou retire-as; Diamantina continua fixa em 09/10.</p>':''}`;
+ }
+ function dateRangeTotal(r){return r[0]===r[1]?`${r[0]} dia${r[0]===1?'':'s'}`:`${r[0]}–${r[1]} dias`}
+ window.buildStopCard=function(s){
+  const card=oldCard(s);
+  if(eligible(s)&&selected.has(s.id)){
+   const select=document.createElement('select');select.className='stop-phase';select.setAttribute('aria-label',`Quando visitar ${s.name}`);select.innerHTML='<option value="before">Antes · 07–08/10</option><option value="after">Depois · 10/10+</option>';select.value=phaseOf(s);
+   select.addEventListener('change',()=>{phases.set(s.id,select.value);window.drawLine()});card.querySelector('.stop-head').appendChild(select);
+  }
+  return card;
+ };
+ window.renderList=function(){
+  const root=document.getElementById('stops');root.innerHTML='';
+  const before=itineraryOrder.filter(s=>selected.has(s.id)&&s.id!==destination.id&&phaseOf(s)==='before');
+  const after=itineraryOrder.filter(s=>selected.has(s.id)&&s.id!==destination.id&&phaseOf(s)==='after');
+  const used=new Set([origin.id,destination.id,...before.map(s=>s.id),...after.map(s=>s.id)]);
+  const heading=(text,cls='optional-heading')=>{const h=document.createElement('div');h.className=cls;h.textContent=text;root.appendChild(h)};
+  const add=(s,num)=>{const c=window.buildStopCard(s),n=c.querySelector('.num');if(n)n.textContent=num;root.appendChild(c)};
+  heading('ANTES · 07–08/10','schedule-heading');add(origin,'I');before.forEach((s,i)=>add(s,String(i+2)));
+  heading('DIAMANTINA · 09/10 · DATA FIXA','schedule-heading fixed-heading');add(destination,String(before.length+2));
+  heading('DEPOIS · A PARTIR DE 10/10','schedule-heading');after.forEach((s,i)=>add(s,String(before.length+3+i)));
+  const candidates=stops.filter(s=>!used.has(s.id)&&s.kind!=='alerta'&&s.kind!=='opcional');
+  if(candidates.length){heading('OUTRAS PARADAS · selecione e escolha antes/depois');candidates.forEach(s=>root.appendChild(window.buildStopCard(s)))}
+  stops.filter(s=>s.kind==='opcional'&&!selected.has(s.id)).forEach(s=>root.appendChild(window.buildStopCard(s)));
+  stops.filter(s=>s.kind==='alerta').forEach(s=>root.appendChild(window.buildStopCard(s)));
+  summary();
+ };
+ window.drawLine=async function(){
+  if(line)map.removeLayer(line);
+  const status=document.getElementById('routeStatus');
+  if(!selected.has(origin.id)||!selected.has(destination.id)){status.textContent='Origem e Diamantina 09/10 são fixas.';return}
+  const request=++routeRequest,before=selectedStops().filter(s=>phaseOf(s)==='before'),after=selectedStops().filter(s=>phaseOf(s)==='after');
+  status.textContent='Calculando os trechos em torno de Diamantina…';
+  const tripFor=async points=>{if(points.length<2)return null;const coords=points.map(s=>`${s.lon},${s.lat}`).join(';');const r=await fetch(`https://router.project-osrm.org/trip/v1/driving/${coords}?roundtrip=false&source=first&destination=last&overview=full&geometries=geojson&steps=false`);const j=await r.json();if(!j.trips?.length)throw new Error('Rota indisponível');return {trip:j.trips[0],order:j.waypoints.map((w,i)=>({n:w.waypoint_index,s:points[i]})).sort((x,y)=>x.n-y.n).map(x=>x.s)}};
+  try{
+   const [pre,post]=await Promise.all([tripFor([origin,...before,destination]),after.length?tripFor([destination,...after]):Promise.resolve(null)]);
+   if(request!==routeRequest)return;
+   const preOrder=(pre?.order||[origin,destination]).filter(s=>s.id!==origin.id&&s.id!==destination.id);
+   const postOrder=(post?.order||[]).filter(s=>s.id!==destination.id);
+   itineraryOrder=[...preOrder,destination,...postOrder];
+   const legs=[pre?.trip,post?.trip].filter(Boolean),layers=legs.map(t=>L.geoJSON(t.geometry,{style:{color:'#35694f',weight:5,opacity:.86}}));
+   line=L.featureGroup(layers).addTo(map);
+   const km=Math.round(legs.reduce((n,t)=>n+t.distance,0)/1000).toLocaleString('pt-BR'),hours=Math.round(legs.reduce((n,t)=>n+t.duration,0)/3600);
+   itineraryOrder.forEach((s,i)=>markers[s.id].setIcon(pin(s,i+2)));markers[origin.id].setIcon(pin(origin,'I'));
+   stops.filter(s=>!selected.has(s.id)&&markers[s.id]).forEach(s=>markers[s.id].setIcon(pin(s,s.kind==='opcional'?'↗':s.kind==='alerta'?'!':'+')));
+   status.textContent=`Diamantina · 09/10 fixa · ${km} km · ${hours} h ao volante · ordem recalculada`;
+   window.renderList();
+  }catch{if(request===routeRequest){itineraryOrder=[...before,destination,...after];status.textContent='Trechos indisponíveis agora; Diamantina permanece fixa em 09/10.';window.renderList()}}
+ };
+ window.renderList();window.drawLine();
+})();
 </script></body></html>
