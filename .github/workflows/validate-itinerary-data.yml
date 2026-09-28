@@ -10,6 +10,7 @@ on:
       - "scripts/generate_route_data.py"
       - "tests/test_itinerary_source_of_truth.py"
       - "tests/test_no_child_specific_ui_copy.py"
+      - "tests/test_return_estimate_state.py"
       - "tests/mobile_icon_legend_regression.py"
       - "tests/desktop_timeline_layout_regression.py"
       - "tests/stop_order_mobile_regression.py"
@@ -25,6 +26,7 @@ on:
       - "scripts/generate_route_data.py"
       - "tests/test_itinerary_source_of_truth.py"
       - "tests/test_no_child_specific_ui_copy.py"
+      - "tests/test_return_estimate_state.py"
       - "tests/mobile_icon_legend_regression.py"
       - "tests/desktop_timeline_layout_regression.py"
       - "tests/stop_order_mobile_regression.py"
@@ -44,6 +46,7 @@ jobs:
       - run: python scripts/generate_route_data.py --check
       - run: python -m unittest tests/test_itinerary_source_of_truth.py -v
       - run: python -m unittest tests/test_no_child_specific_ui_copy.py -v
+      - run: python -m unittest tests/test_return_estimate_state.py -v
       - run: python tests/mobile_icon_legend_regression.py index.html
       - run: python tests/desktop_timeline_layout_regression.py index.html
       - run: python tests/stop_order_mobile_regression.py index.html
