@@ -150,7 +150,7 @@ renderList();drawLine();
 <script>
 // Datas individuais, estadias sugeridas e reordenação dos cartões.
 (()=>{
- const dates=new Map(),manual=[];let draggedId=null,reopenCandidates=null;
+ const dates=new Map(),manual=[],fixedDates=new Map([[origin.id,'2026-10-07'],[destination.id,'2026-10-09']]);let draggedId=null,reopenCandidates=null;
  if(stops.some(s=>s.id==='araxa')){selected.add('araxa');dates.set('araxa','2026-10-07')}
  const previousBuilder=window.buildStopCard;let returnDriveHours=null;
  const fmt=d=>`${d.slice(8,10)}/${d.slice(5,7)}`;
@@ -159,7 +159,7 @@ renderList();drawLine();
  const span=s=>stayRanges[s.id]||[0,0];
  const durationLabel=s=>s.days||'Duração a confirmar';
  const orderedSelected=()=>selectedStops().map(s=>{ensureDate(s);return s}).sort((a,b)=>dates.get(a.id).localeCompare(dates.get(b.id))||manual.indexOf(a.id)-manual.indexOf(b.id));
- function ensureDate(s){if(!dates.has(s.id))dates.set(s.id,s.parentId&&dates.has(s.parentId)?dates.get(s.parentId):suggestDate());if(!manual.includes(s.id))manual.push(s.id);return dates.get(s.id)}
+ function ensureDate(s){if(!dates.has(s.id)){const parentDate=s.parentId&&(dates.get(s.parentId)||fixedDates.get(s.parentId));dates.set(s.id,parentDate||suggestDate())}if(!manual.includes(s.id))manual.push(s.id);return dates.get(s.id)}
  function suggestDate(){let last='2026-10-09';selectedStops().forEach(s=>{const d=dates.get(s.id);if(!d)return;const end=add(d,Math.max(1,Math.ceil(span(s)[1]))-1);if(end>last)last=end});let next=add(last,1);if(next<'2026-10-10')next='2026-10-10';return next}
  const candidates=()=>{const out=[];for(let d='2026-10-07';d<='2026-10-31';d=add(d,1))if(d!=='2026-10-09')out.push(d);return out};
  function setMapIcon(s,label,date){
