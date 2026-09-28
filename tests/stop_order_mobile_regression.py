@@ -33,4 +33,8 @@ layers = re.findall(r"\.side\s*\{([^}]*)\}", html)
 assert layers, "sidebar stacking rule not found"
 assert re.search(r"position\s*:\s*relative", layers[-1]), "sidebar must create a stacking context above map markers"
 assert re.search(r"z-index\s*:\s*1000", layers[-1]), "sidebar must stack above Leaflet's marker pane"
-print("mobile stop-order and return-card layout regression: PASS")
+
+fixed_head = re.search(r"\.fixed-day \.stop-head\s*\{([^}]*)\}", html)
+assert fixed_head, "fixed destination card needs its own grid layout"
+assert re.search(r"grid-template-columns\s*:\s*32px\s+minmax\(0,1fr\)", fixed_head.group(1)), "destination number must have its own leading column"
+print("mobile stop-order and card alignment regression: PASS")
