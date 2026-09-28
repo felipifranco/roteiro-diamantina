@@ -43,7 +43,7 @@ assert re.search(r"grid-template-columns\s*:\s*32px\s+minmax\(0,1fr\)", fixed_he
 
 assert "const attractionStops=stops.flatMap" in html, "geolocated attractions must become independent route stops"
 assert "const routeStops=[...stops,...attractionStops]" in html, "city and attraction stops must share routing"
-assert "return routeStops.filter" in html, "selected attractions must be included in the itinerary"
+assert "function effectiveRouteStops(allStops,selectedIds)" in html and "parentsWithTours" in html, "selected attractions should replace their selected city group in the route"
 assert "attractionStops.forEach(addAttractionMarker)" in html, "attractions need clickable map markers"
 assert "function routeableAttractionInfo(s)" in html and "Idade mínima oficial:" in html and "confirme com o operador" in html, "natural route stops must retain effort and minimum-age guidance"
 assert "Tempo estimado de visita:" in html, "attraction stops must label their own visit duration, not a city stay"
