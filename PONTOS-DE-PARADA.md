@@ -1,5 +1,7 @@
 # Pontos de parada
 
+<!-- Gerado por scripts/generate_route_data.py a partir de data/roteiro.json. Não edite manualmente. -->
+
 Pontos e atrações recorrentes em roteiros de agências, operadoras e circuitos turísticos consolidados de Minas Gerais. A tabela procura responder duas perguntas antes de cada visita: **o que esse lugar ajuda a entender sobre Minas/Brasil** e **por que operadores profissionais gastam tempo de roteiro ali**. Há duas medidas separadas. **Estimativa de tempo** é uma faixa prática de planejamento, baseada no tipo de atração e, quando disponíveis, comentários/relatos de visitantes. **Tempo real publicado** só é preenchido quando foi localizada uma duração explicitamente informada por atração, órgão público, agência/operadora, guia turístico ou relato publicado. Quando não há referência explícita, fica **—**. Assim, estimativa e dado publicado nunca são misturados. As colunas **Criança de 1 ano** e **Idoso / mobilidade reduzida** só recebem uma conclusão quando há informação publicada suficiente sobre admissão, restrições ou acessibilidade; ausência de proibição não é tratada como confirmação de acesso.
 
 | Cidade / parada | Perfil | Ponto turístico | O que é e por que visitar | Por que as agências incluem a parada | Tipo de visita | Estimativa de tempo | Tempo real publicado | Criança de 1 ano | Idoso / mobilidade reduzida |
