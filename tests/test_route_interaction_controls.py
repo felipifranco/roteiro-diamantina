@@ -1,0 +1,108 @@
+import json
+import re
+import unittest
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PAGE = (ROOT / "index.html").read_text(encoding="utf-8")
+FINAL_ROUTING = PAGE.rsplit("// Datas individuais, estadias sugeridas e reordenação dos cartões.", 1)[1]
+
+
+class RouteInteractionControlsTests(unittest.TestCase):
+    def test_generated_routeable_attractions_use_catalog_estimates(self):
+        generated = (ROOT / "data" / "route-data.generated.js").read_text(encoding="utf-8")
+        serialized = generated.split("window.ROTEIRO_DATA = ", 1)[1].rsplit(";", 1)[0]
+        payload = json.loads(serialized)
+        stops = {stop["id"]: stop for stop in payload["routeStops"]}
+        self.assertNotIn("catalogVisitDurations", payload)
+        expected = {
+            "canastra": ("Casca d’Anta", "meio dia"),
+            "congonhas": ("Santuário do Bom Jesus", "1 h"),
+            "mariana": ("Praça Minas Gerais", "30 min"),
+            "diamantina": ("Casa de JK", "1 h"),
+        }
+        for stop_id, (name, duration) in expected.items():
+            attraction = next(a for a in stops[stop_id]["attractions"] if a["name"] == name)
+            self.assertEqual(attraction["days"], duration)
+
+    def test_generated_route_attractions_preserve_source_fields_and_unknowns(self):
+        source = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        generated = (ROOT / "data" / "route-data.generated.js").read_text(encoding="utf-8")
+        payload = json.loads(generated.split("window.ROTEIRO_DATA = ", 1)[1].rsplit(";", 1)[0])
+        source_stops = {stop["id"]: stop for stop in source["routeStops"]}
+        generated_stops = {stop["id"]: stop for stop in payload["routeStops"]}
+        self.assertEqual(set(source_stops), set(generated_stops))
+        for stop_id, source_stop in source_stops.items():
+            generated_stop = generated_stops[stop_id]
+            for key, value in source_stop.items():
+                if key != "attractions":
+                    self.assertEqual(generated_stop.get(key), value, (stop_id, key))
+            self.assertEqual(len(generated_stop.get("attractions", [])), len(source_stop.get("attractions", [])))
+            for source_attraction, generated_attraction in zip(
+                source_stop.get("attractions", []), generated_stop.get("attractions", [])
+            ):
+                for key, value in source_attraction.items():
+                    self.assertEqual(generated_attraction.get(key), value, (stop_id, key))
+                added = set(generated_attraction) - set(source_attraction)
+                self.assertLessEqual(added, {"days"}, (stop_id, added))
+        mirante = next(
+            attraction
+            for attraction in generated_stops["capitolio"]["attractions"]
+            if attraction["name"] == "Mirante dos Canyons"
+        )
+        self.assertNotIn("days", mirante)
+
+    def test_attraction_popup_helper_is_defined_before_markers_are_created(self):
+        marker_creation = PAGE.index("attractionStops.forEach(addAttractionMarker)")
+        popup_helper = PAGE.index("function routeableAttractionInfo(s)")
+        self.assertLess(popup_helper, marker_creation, "attraction popup helper must exist before marker creation")
+
+    def test_attractions_have_active_inactive_selector_with_visit_duration(self):
+        self.assertTrue("attraction-active-state" in FINAL_ROUTING, "attraction state selector missing")
+        self.assertTrue("Inativo · ${durationLabel(s)}" in FINAL_ROUTING, "inactive option omits duration")
+        self.assertTrue("Ativo · ${durationLabel(s)}" in FINAL_ROUTING, "active option omits duration")
+        self.assertTrue("setAttractionActive" in FINAL_ROUTING, "selector does not control attraction state")
+
+    def test_inactive_attraction_markers_are_hidden(self):
+        match = re.search(r"attractionStops\.forEach\(s=>\{if\(!selected\.has\(s\.id\).*?map\.removeLayer", FINAL_ROUTING, re.S)
+        self.assertIsNotNone(match, "inactive attraction markers are not removed from the map")
+        self.assertTrue("marker.addTo(map)" in FINAL_ROUTING, "active markers cannot be added to the map")
+
+    def test_reorder_updates_the_list_before_route_network_finishes(self):
+        move = re.search(r"function moveSameDay\(id,step\)\{(.*?)\}\s*function totalEnd", PAGE, re.S)
+        self.assertIsNotNone(move, "stop reorder handler not found")
+        move_body = move.group(1) if move else ""
+        self.assertTrue("window.renderList()" in move_body, "reorder handler does not render immediately")
+        self.assertLess(move_body.index("window.renderList()"), move_body.index("window.drawLine()"))
+
+    def test_final_route_draw_has_local_request_counter_and_bounded_fetch(self):
+        draw_start = FINAL_ROUTING.index("window.drawLine=async function(){")
+        before_draw = FINAL_ROUTING[:draw_start]
+        draw = FINAL_ROUTING[draw_start:]
+        self.assertRegex(before_draw, r"let[^;]*routeRequest=0")
+        self.assertIn("new AbortController()", draw)
+        self.assertIn("setTimeout", draw)
+        self.assertIn("signal:controller.signal", draw)
+        self.assertIn("response.ok", draw)
+
+    def test_attraction_cards_show_visit_duration_or_explicit_unknown(self):
+        self.assertIn("days:a.days||'Duração a confirmar'", PAGE)
+        self.assertIn("Tempo estimado de visita: ${durationLabel(s)}", PAGE)
+
+    def test_fixed_diamantina_day_tours_are_included_in_the_route(self):
+        draw_start = FINAL_ROUTING.index("window.drawLine=async function(){")
+        draw = FINAL_ROUTING[draw_start:]
+        self.assertIn("sameDay=order.filter(s=>dates.get(s.id)==='2026-10-09'&&s.id!==destination.id)", draw)
+        self.assertIn("stopsInOrder=[origin,...before,destination,...sameDay,...after,origin]", draw)
+
+    def test_route_request_is_invalidated_before_aborting_previous_fetch(self):
+        draw_start = FINAL_ROUTING.index("window.drawLine=async function(){")
+        draw = FINAL_ROUTING[draw_start:]
+        request_id = draw.index("request=++routeRequest")
+        previous_abort = draw.index("if(routeController)routeController.abort()")
+        self.assertLess(request_id, previous_abort, "mark the previous request stale before aborting it")
+
+
+if __name__ == "__main__":
+    unittest.main()

@@ -5,8 +5,11 @@ Edit only data/roteiro.json, then run `python3 scripts/generate_route_data.py`.
 """
 
 import argparse
+import copy
 import json
+import re
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -148,8 +151,75 @@ def _js_json(value):
     )
 
 
+CATALOG_ATTRACTION_ALIASES = {
+    "casa de jk": "casa de juscelino kubitschek",
+    "santuario do bom jesus": "santuario do bom jesus de matosinhos",
+}
+
+
+def _normalized_name(value):
+    normalized_punctuation = value.translate(
+        str.maketrans({"’": "'", "‘": "'", "ʼ": "'"})
+    )
+    ascii_name = (
+        unicodedata.normalize("NFKD", normalized_punctuation)
+        .encode("ascii", "ignore")
+        .decode("ascii")
+        .lower()
+    )
+    return " ".join(re.findall(r"[a-z0-9]+", ascii_name))
+
+
+def _catalog_city_match_score(stop_name, catalog_name):
+    stop = _normalized_name(stop_name)
+    city = _normalized_name(catalog_name)
+    if stop == city:
+        return 3
+    if stop.startswith(city + " ") or city.startswith(stop + " "):
+        return 2
+    if f" {stop} " in f" {city} " or f" {city} " in f" {stop} ":
+        return 1
+    return 0
+
+
+def _matching_catalog_city(stop_name, catalog_cities):
+    scored = [
+        (_catalog_city_match_score(stop_name, city["name"]), city)
+        for city in catalog_cities
+    ]
+    highest = max((score for score, _ in scored), default=0)
+    matches = [city for score, city in scored if score == highest and score > 0]
+    return matches[0] if len(matches) == 1 else None
+
+
+def _enrich_route_attraction_durations(route_stops, catalog_cities):
+    for stop in route_stops:
+        attractions = stop.get("attractions", [])
+        if not attractions:
+            continue
+        city = _matching_catalog_city(stop["name"], catalog_cities)
+        if city is None:
+            continue
+        catalog_attractions = {
+            _normalized_name(item["name"]): item for item in city["attractions"]
+        }
+        for attraction in attractions:
+            if attraction.get("days") and attraction["days"] != "Duração a confirmar":
+                continue
+            route_name = _normalized_name(attraction["name"])
+            catalog_name = _normalized_name(
+                CATALOG_ATTRACTION_ALIASES.get(route_name, attraction["name"])
+            )
+            match = catalog_attractions.get(catalog_name)
+            duration = match.get("estimatedDuration") if match else None
+            if duration and duration != "—":
+                attraction["days"] = duration
+
+
 def render_app_data(data):
-    payload = {"routeStops": data["routeStops"]}
+    route_stops = copy.deepcopy(data["routeStops"])
+    _enrich_route_attraction_durations(route_stops, data["catalog"]["cities"])
+    payload = {"routeStops": route_stops}
     return (
         "// Generated from data/roteiro.json by scripts/generate_route_data.py. Do not edit.\n"
         "window.ROTEIRO_DATA = " + _js_json(payload) + ";\n"

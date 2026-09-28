@@ -32,7 +32,8 @@ window.ROTEIRO_DATA = {
         {
           "name": "Casca d’Anta",
           "lat": -20.30191,
-          "lon": -46.52234
+          "lon": -46.52234,
+          "days": "meio dia"
         }
       ]
     },
@@ -77,7 +78,8 @@ window.ROTEIRO_DATA = {
         {
           "name": "Santuário do Bom Jesus",
           "lat": -20.50753,
-          "lon": -43.86053
+          "lon": -43.86053,
+          "days": "1 h"
         }
       ]
     },
@@ -116,7 +118,8 @@ window.ROTEIRO_DATA = {
         {
           "name": "Praça Minas Gerais",
           "lat": -20.37812,
-          "lon": -43.41813
+          "lon": -43.41813,
+          "days": "30 min"
         }
       ]
     },
@@ -226,7 +229,8 @@ window.ROTEIRO_DATA = {
         {
           "name": "Casa de JK",
           "lat": -18.24491,
-          "lon": -43.60027
+          "lon": -43.60027,
+          "days": "1 h"
         }
       ]
     },
