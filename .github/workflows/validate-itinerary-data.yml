@@ -1,54 +1,35 @@
-name: Validate itinerary source data
+name: Validate itinerary
 
 on:
-  push:
-    paths:
-      - "data/roteiro.json"
-      - "data/route-data.generated.js"
-      - "PONTOS-DE-PARADA.md"
-      - "index.html"
-      - "scripts/generate_route_data.py"
-      - "tests/test_itinerary_source_of_truth.py"
-      - "tests/test_no_child_specific_ui_copy.py"
-      - "tests/test_return_estimate_state.py"
-      - "tests/mobile_icon_legend_regression.py"
-      - "tests/desktop_timeline_layout_regression.py"
-      - "tests/stop_order_mobile_regression.py"
-      - "tests/mobile_map_size_regression.py"
-      - "tests/mobile_popup_width_regression.py"
-      - ".github/workflows/validate-itinerary-data.yml"
   pull_request:
-    paths:
-      - "data/roteiro.json"
-      - "data/route-data.generated.js"
-      - "PONTOS-DE-PARADA.md"
-      - "index.html"
-      - "scripts/generate_route_data.py"
-      - "tests/test_itinerary_source_of_truth.py"
-      - "tests/test_no_child_specific_ui_copy.py"
-      - "tests/test_return_estimate_state.py"
-      - "tests/mobile_icon_legend_regression.py"
-      - "tests/desktop_timeline_layout_regression.py"
-      - "tests/stop_order_mobile_regression.py"
-      - "tests/mobile_map_size_regression.py"
-      - "tests/mobile_popup_width_regression.py"
-      - ".github/workflows/validate-itinerary-data.yml"
+    branches: [main]
+  push:
+    branches: [main]
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   verify-generated-data:
+    name: verify-generated-data
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
-      - run: python scripts/generate_route_data.py --check
-      - run: python -m unittest tests/test_itinerary_source_of_truth.py -v
-      - run: python -m unittest tests/test_no_child_specific_ui_copy.py -v
-      - run: python -m unittest tests/test_return_estimate_state.py -v
-      - run: python tests/mobile_icon_legend_regression.py index.html
-      - run: python tests/desktop_timeline_layout_regression.py index.html
-      - run: python tests/stop_order_mobile_regression.py index.html
-      - run: python tests/mobile_map_size_regression.py index.html
-      - run: python tests/mobile_popup_width_regression.py index.html
+          python-version: "3.12"
+      - name: Check generated files
+        run: python scripts/generate_route_data.py --check
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Run UI regression checks
+        run: |
+          for test in tests/*_regression.py; do
+            python "$test" index.html
+          done
