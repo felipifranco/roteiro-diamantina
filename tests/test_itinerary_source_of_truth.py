@@ -46,6 +46,8 @@ class ItinerarySourceOfTruthTests(unittest.TestCase):
             ("lon", float("-inf")),
             ("lat", True),
             ("lon", True),
+            ("lat", "-20.8"),
+            ("lon", None),
             ("lat", 10**400),
             ("lon", 10**400),
         )
@@ -67,6 +69,17 @@ class ItinerarySourceOfTruthTests(unittest.TestCase):
                     ValueError, "coordinates must be valid latitude and longitude values"
                 ):
                     validate(data)
+
+        for field, value in (("lat", -90), ("lat", 90), ("lon", -180), ("lon", 180)):
+            with self.subTest(valid_route_boundary=field, value=value):
+                data = json.loads(json.dumps(original))
+                data["routeStops"][0][field] = value
+                validate(data)
+            with self.subTest(valid_attraction_boundary=field, value=value):
+                data = json.loads(json.dumps(original))
+                stop = next(stop for stop in data["routeStops"] if stop.get("attractions"))
+                stop["attractions"][0][field] = value
+                validate(data)
 
         class OverflowingCoordinate(int):
             def __ge__(self, other):
