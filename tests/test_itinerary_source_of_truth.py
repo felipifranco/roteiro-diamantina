@@ -11,7 +11,7 @@ EXPECTED_ROUTE_STOP_IDS = (
     "cipo", "tabuleiro", "serro", "milhoverde", "saogoncalo", "diamantina",
     "biribiri", "peruacu", "delfinopolis", "cordisburgo", "belohorizonte",
     "brumadinho", "saojoaodelrei", "tiradentes", "bichinho", "curralinho",
-    "catasaltas", "santabarbara", "caraca", "sabara", "caete", "araxa",
+    "catasaltas", "santabarbara", "caraca", "sabara", "caete", "peiro", "araxa",
     "itabirito", "amarantina",
 )
 
@@ -27,6 +27,37 @@ class ItinerarySourceOfTruthTests(unittest.TestCase):
             tuple(stop["id"] for stop in data["routeStops"]), EXPECTED_ROUTE_STOP_IDS
         )
         self.assertGreater(len(data["catalog"]["cities"]), 0)
+
+    def test_araxa_and_peiropolis_attractions_are_canonical_route_stops(self):
+        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        route_stops = {stop["id"]: stop for stop in data["routeStops"]}
+        expected_araxa = (
+            "Grande Hotel e Termas de Araxá",
+            "Complexo do Barreiro",
+            "Museu Dona Beja",
+            "Museu Calmon Barreto / Memorial de Araxá",
+            "Igreja de São Domingos",
+            "Parque do Cristo",
+            "Fontes Dona Beja e Andrade Júnior",
+        )
+        self.assertEqual(
+            [item["name"] for item in route_stops["araxa"]["attractions"]],
+            list(expected_araxa),
+        )
+        peiro = route_stops["peiro"]
+        self.assertEqual(
+            [item["name"] for item in peiro["attractions"]],
+            [
+                "Museu dos Dinossauros / Complexo Cultural e Científico de Peirópolis",
+                "Geossítio de Peirópolis",
+            ],
+        )
+        self.assertTrue(
+            all("lat" in item and "lon" in item for item in route_stops["araxa"]["attractions"] + peiro["attractions"])
+        )
+        page = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn("const attractionStops=stops.flatMap", page)
+        self.assertIn("const routeStops=[...stops,...attractionStops]", page)
 
     def test_route_coordinates_stay_within_geographic_ranges(self):
         from scripts.generate_route_data import validate

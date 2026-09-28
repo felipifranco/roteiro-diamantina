@@ -10,17 +10,22 @@ class NoChildSpecificUiCopyTests(unittest.TestCase):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertRegex(
             page,
-            r"note\.textContent\s*=\s*s\.id===origin\.id\?durationLabel\(s\):`Estadia sugerida: \$\{durationLabel\(s\)\}`",
+            r"note\.textContent\s*=\s*s\.id===origin\.id\?durationLabel\(s\):s\.kind==='atracao'\?`Tempo estimado de visita: \$\{durationLabel\(s\)\}`:`Estadia sugerida: \$\{durationLabel\(s\)\}`",
             "origin note must not be prefixed as a suggested stay duration",
         )
 
     def test_interface_does_not_include_child_specific_copy(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         child_copy = re.search(
-            r"(?i)(?:crian[cç]as?|beb[eê]s?|idade\s+m[ií]nima|ageInfo|s\.kid)",
+            r"(?i)(?:crian[cç]as?|beb[eê]s?|s\.kid)",
             page,
         )
         self.assertIsNone(child_copy, "child-specific content must not appear in the interface")
+
+    def test_natural_attractions_show_official_minimum_age_or_confirmation_fallback(self):
+        page = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn("Idade mínima oficial:", page)
+        self.assertIn("confirme com o operador", page)
 
 
 if __name__ == "__main__":
