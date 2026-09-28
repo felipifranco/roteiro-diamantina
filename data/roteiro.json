@@ -473,6 +473,37 @@
       "url": "https://www.google.com/maps/search/?api=1&query=Serra+da+Piedade+Caete"
     },
     {
+      "id": "peiro",
+      "name": "Uberaba · Peirópolis",
+      "lat": -19.74364,
+      "lon": -47.74276,
+      "kind": "opcional",
+      "type": "historia",
+      "days": "1–2 h",
+      "sights": [
+        "Museu dos Dinossauros / Complexo Cultural e Científico de Peirópolis",
+        "Geossítio de Peirópolis"
+      ],
+      "kid": "Visitas externas podem ter piso irregular; confirme acessibilidade e condições do trajeto com o CCCP/UFTM.",
+      "url": "https://www.uftm.edu.br/proext/cccp/museu-dos-dinossauros",
+      "attractions": [
+        {
+          "name": "Museu dos Dinossauros / Complexo Cultural e Científico de Peirópolis",
+          "lat": -19.7442903,
+          "lon": -47.7424457,
+          "days": "1–2 h"
+        },
+        {
+          "name": "Geossítio de Peirópolis",
+          "lat": -19.742990494,
+          "lon": -47.743080139,
+          "days": "30–60 min",
+          "type": "natureza",
+          "accessibility": "Área geológica extensa com acessos por estrada e trilhas; confirmar condições locais."
+        }
+      ]
+    },
+    {
       "id": "araxa",
       "name": "Araxá",
       "lat": -19.600915,
@@ -483,10 +514,23 @@
       "sights": [
         "Grande Hotel e Termas de Araxá",
         "Complexo do Barreiro",
-        "Museu Dona Beja"
+        "Museu Dona Beja",
+        "Museu Calmon Barreto / Memorial de Araxá",
+        "Igreja de São Domingos",
+        "Parque do Cristo",
+        "Fontes Dona Beja e Andrade Júnior"
       ],
       "kid": "Confirme horários, serviços termais e acessibilidade diretamente com os atrativos.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Arax%C3%A1+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Arax%C3%A1+MG",
+      "attractions": [
+        {"name": "Grande Hotel e Termas de Araxá", "lat": -19.6469277, "lon": -46.9498159, "days": "2 h"},
+        {"name": "Complexo do Barreiro", "lat": -19.6472115, "lon": -46.954839, "days": "2 h"},
+        {"name": "Museu Dona Beja", "lat": -19.5898756, "lon": -46.9380426, "days": "1 h"},
+        {"name": "Museu Calmon Barreto / Memorial de Araxá", "lat": -19.586776, "lon": -46.9426564, "days": "30–60 min"},
+        {"name": "Igreja de São Domingos", "lat": -19.5927815, "lon": -46.9409702, "days": "20–30 min"},
+        {"name": "Parque do Cristo", "lat": -19.5837868, "lon": -46.9345619, "days": "30–60 min", "type": "natureza", "accessibility": "Mirante em área elevada; confirme rota sem escadas e condições de acesso."},
+        {"name": "Fontes Dona Beja e Andrade Júnior", "lat": -19.64819425, "lon": -46.94960645, "days": "20–40 min", "type": "natureza", "accessibility": "Fontes dentro do complexo do Barreiro; confirme acesso e condições com o operador."}
+      ]
     },
     {
       "id": "itabirito",
