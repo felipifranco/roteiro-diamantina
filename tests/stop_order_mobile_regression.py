@@ -50,6 +50,8 @@ assert "Tempo estimado de visita:" in html, "attraction stops must label their o
 assert "s.parentId&&(dates.get(s.parentId)||fixedDates.get(s.parentId))" in html, "attractions should inherit their selected city's or fixed parent date"
 assert "fixedDates=new Map([[origin.id,'2026-10-07'],[destination.id,'2026-10-09']])" in html, "fixed stop dates should be available to child attractions"
 assert "dates.get(s.parentId)||fixedDates.get(s.parentId)" in html, "child attractions should inherit fixed parent dates"
+assert "d!=='2026-10-09'||d===selectedDate" in html, "child attractions should be able to select their fixed parent date"
+assert "candidates(date).map" in html, "date options should include the inherited date"
 assert "routeStops.forEach(s=>" in html, "selected attractions must update markers and popups"
 assert "selected.add('araxa')" in html, "Araxá must be preselected in the route"
 assert "dates.set('araxa','2026-10-07')" in html, "Araxá must be the first stop before Diamantina"
