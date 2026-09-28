@@ -28,4 +28,9 @@ move = re.search(r"function moveSameDay\(id,step\)\{(.*?)\}\s*function totalEnd"
 assert move, "stop reorder handler not found"
 assert "dates.set(current.id,nextDate)" in move.group(1), "reorder must cross date groups"
 assert "dates.set(adjacent.id,currentDate)" in move.group(1), "reorder must preserve the adjacent stop's date"
+
+layers = re.findall(r"\.side\s*\{([^}]*)\}", html)
+assert layers, "sidebar stacking rule not found"
+assert re.search(r"position\s*:\s*relative", layers[-1]), "sidebar must create a stacking context above map markers"
+assert re.search(r"z-index\s*:\s*1000", layers[-1]), "sidebar must stack above Leaflet's marker pane"
 print("mobile stop-order and return-card layout regression: PASS")
