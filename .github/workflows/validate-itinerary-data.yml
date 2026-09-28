@@ -13,6 +13,8 @@ on:
       - "tests/mobile_icon_legend_regression.py"
       - "tests/desktop_timeline_layout_regression.py"
       - "tests/stop_order_mobile_regression.py"
+      - "tests/mobile_map_size_regression.py"
+      - "tests/mobile_popup_width_regression.py"
       - ".github/workflows/validate-itinerary-data.yml"
   pull_request:
     paths:
@@ -26,6 +28,8 @@ on:
       - "tests/mobile_icon_legend_regression.py"
       - "tests/desktop_timeline_layout_regression.py"
       - "tests/stop_order_mobile_regression.py"
+      - "tests/mobile_map_size_regression.py"
+      - "tests/mobile_popup_width_regression.py"
       - ".github/workflows/validate-itinerary-data.yml"
   workflow_dispatch:
 
@@ -43,3 +47,5 @@ jobs:
       - run: python tests/mobile_icon_legend_regression.py index.html
       - run: python tests/desktop_timeline_layout_regression.py index.html
       - run: python tests/stop_order_mobile_regression.py index.html
+      - run: python tests/mobile_map_size_regression.py index.html
+      - run: python tests/mobile_popup_width_regression.py index.html

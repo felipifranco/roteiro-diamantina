@@ -258,4 +258,5 @@ renderList();drawLine();
 .fixed-day .stop-head .num{grid-column:1;grid-row:1;justify-self:center}
 .fixed-day .stop-head .stop-focus{grid-column:2;grid-row:1;min-width:0}
 .side{position:relative;z-index:1000}
-</style></body></html>
+@media(max-width:800px){.leaflet-popup-content{max-width:calc(100vw - 130px)!important}}
+</style><script>new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(map.getContainer());</script></body></html>
