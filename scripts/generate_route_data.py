@@ -36,6 +36,8 @@ ATTRACTION_FIELDS = (
     "oneYearOld",
     "accessibility",
 )
+STOP_KINDS = {"inicio", "destino", "natureza", "historia", "opcional", "alerta"}
+STOP_TYPES = {"natureza", "historia"}
 
 
 def _valid_coordinates(lat, lon):
@@ -71,6 +73,15 @@ def validate(data):
         if not isinstance(stop["id"], str) or not stop["id"] or stop["id"] in ids:
             raise ValueError(f"routeStops[{index}].id must be unique and non-empty")
         ids.add(stop["id"])
+        if not isinstance(stop["name"], str) or not stop["name"].strip():
+            raise ValueError(f"routeStops[{index}].name must be a non-empty string")
+        if not isinstance(stop["kind"], str) or stop["kind"] not in STOP_KINDS:
+            raise ValueError(f"routeStops[{index}].kind must be one of {sorted(STOP_KINDS)}")
+        if not isinstance(stop["type"], str) or stop["type"] not in STOP_TYPES:
+            raise ValueError(f"routeStops[{index}].type must be one of {sorted(STOP_TYPES)}")
+        for field in ("days", "kid", "url"):
+            if not isinstance(stop[field], str):
+                raise ValueError(f"routeStops[{index}].{field} must be a string")
         lat, lon = stop["lat"], stop["lon"]
         if not _valid_coordinates(lat, lon):
             raise ValueError(
@@ -78,6 +89,8 @@ def validate(data):
             )
         if not isinstance(stop["sights"], list):
             raise ValueError(f"routeStops[{index}].sights must be a list")
+        if any(not isinstance(sight, str) for sight in stop["sights"]):
+            raise ValueError(f"routeStops[{index}].sights must contain only strings")
         mapped_attractions = stop.get("attractions", [])
         if not isinstance(mapped_attractions, list):
             raise ValueError(f"routeStops[{index}].attractions must be a list")

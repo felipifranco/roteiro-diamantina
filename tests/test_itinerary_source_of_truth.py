@@ -133,6 +133,46 @@ class ItinerarySourceOfTruthTests(unittest.TestCase):
             with self.subTest(label=label), self.assertRaises(ValueError):
                 validate(data)
 
+    def test_validator_rejects_non_string_route_stop_name(self):
+        from scripts.generate_route_data import validate
+
+        source = ROOT / "data" / "roteiro.json"
+        data = json.loads(source.read_text(encoding="utf-8"))
+        data["routeStops"][0]["name"] = None
+
+        with self.assertRaisesRegex(ValueError, r"routeStops\[0\]\.name must be a non-empty string"):
+            validate(data)
+
+    def test_validator_rejects_unknown_route_stop_kind(self):
+        from scripts.generate_route_data import validate
+
+        source = ROOT / "data" / "roteiro.json"
+        data = json.loads(source.read_text(encoding="utf-8"))
+        data["routeStops"][0]["kind"] = "unknown"
+
+        with self.assertRaisesRegex(ValueError, r"routeStops\[0\]\.kind must be one of"):
+            validate(data)
+
+    def test_validator_rejects_invalid_required_route_stop_field_types(self):
+        from scripts.generate_route_data import validate
+
+        source = ROOT / "data" / "roteiro.json"
+        original = json.loads(source.read_text(encoding="utf-8"))
+        invalid_values = (
+            ("type", None),
+            ("type", "unknown"),
+            ("days", None),
+            ("kid", None),
+            ("url", None),
+            ("sights", [None]),
+        )
+        for field, value in invalid_values:
+            with self.subTest(field=field, value=value):
+                data = json.loads(json.dumps(original))
+                data["routeStops"][0][field] = value
+                with self.assertRaises(ValueError):
+                    validate(data)
+
     def test_application_uses_generated_route_data(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn('<script src="./data/route-data.generated.js"></script>', page)
