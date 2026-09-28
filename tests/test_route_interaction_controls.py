@@ -60,13 +60,13 @@ class RouteInteractionControlsTests(unittest.TestCase):
 
     def test_attractions_have_active_inactive_selector_with_visit_duration(self):
         self.assertTrue("attraction-active-state" in FINAL_ROUTING, "attraction state selector missing")
-        self.assertTrue("Inativo · ${durationLabel(s)}" in FINAL_ROUTING, "inactive option omits duration")
-        self.assertTrue("Ativo · ${durationLabel(s)}" in FINAL_ROUTING, "active option omits duration")
+        self.assertTrue("Inativo · ${durationLabel(tour)}" in FINAL_ROUTING, "inactive option omits duration")
+        self.assertTrue("Ativo · ${durationLabel(tour)}" in FINAL_ROUTING, "active option omits duration")
         self.assertTrue("setAttractionActive" in FINAL_ROUTING, "selector does not control attraction state")
 
     def test_inactive_attraction_markers_are_hidden(self):
-        match = re.search(r"attractionStops\.forEach\(s=>\{if\(!selected\.has\(s\.id\).*?map\.removeLayer", FINAL_ROUTING, re.S)
-        self.assertIsNotNone(match, "inactive attraction markers are not removed from the map")
+        self.assertIn("attractionStops.forEach(s=>{if((!selected.has(s.id)||!selected.has(s.parentId))", FINAL_ROUTING)
+        self.assertIn("map.removeLayer(markers[s.id])", FINAL_ROUTING)
         self.assertTrue("marker.addTo(map)" in FINAL_ROUTING, "active markers cannot be added to the map")
 
     def test_reorder_updates_the_list_before_route_network_finishes(self):
