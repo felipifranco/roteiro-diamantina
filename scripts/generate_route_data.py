@@ -6,7 +6,6 @@ Edit only data/roteiro.json, then run `python3 scripts/generate_route_data.py`.
 
 import argparse
 import json
-import math
 import sys
 from pathlib import Path
 
@@ -39,15 +38,33 @@ ATTRACTION_FIELDS = (
 )
 
 
+def _valid_coordinates(lat, lon):
+    if (
+        isinstance(lat, bool)
+        or isinstance(lon, bool)
+        or not isinstance(lat, (int, float))
+        or not isinstance(lon, (int, float))
+    ):
+        return False
+    try:
+        return -90 <= lat <= 90 and -180 <= lon <= 180
+    except OverflowError:
+        return False
+
+
 def validate(data):
-    if data.get("version") != 1:
-        raise ValueError("version must be 1")
+    if not isinstance(data, dict):
+        raise ValueError("route data must be an object")
+    if type(data.get("version")) is not int or data["version"] != 1:
+        raise ValueError("version must be the integer 1")
     route_stops = data.get("routeStops")
     if not isinstance(route_stops, list) or not route_stops:
         raise ValueError("routeStops must be a non-empty list")
     ids = set()
     required_stop_fields = ("id", "name", "lat", "lon", "kind", "type", "days", "sights", "kid", "url")
     for index, stop in enumerate(route_stops):
+        if not isinstance(stop, dict):
+            raise ValueError(f"routeStops[{index}] must be an object")
         missing = [field for field in required_stop_fields if field not in stop]
         if missing:
             raise ValueError(f"routeStops[{index}] missing fields: {', '.join(missing)}")
@@ -55,25 +72,29 @@ def validate(data):
             raise ValueError(f"routeStops[{index}].id must be unique and non-empty")
         ids.add(stop["id"])
         lat, lon = stop["lat"], stop["lon"]
-        if (
-            isinstance(lat, bool)
-            or isinstance(lon, bool)
-            or not isinstance(lat, (int, float))
-            or not isinstance(lon, (int, float))
-            or not math.isfinite(lat)
-            or not math.isfinite(lon)
-            or not -90 <= lat <= 90
-            or not -180 <= lon <= 180
-        ):
+        if not _valid_coordinates(lat, lon):
             raise ValueError(
                 f"routeStops[{index}] coordinates must be valid latitude and longitude values"
             )
         if not isinstance(stop["sights"], list):
             raise ValueError(f"routeStops[{index}].sights must be a list")
-        if not isinstance(stop.get("attractions", []), list):
+        mapped_attractions = stop.get("attractions", [])
+        if not isinstance(mapped_attractions, list):
             raise ValueError(f"routeStops[{index}].attractions must be a list")
+        for attraction_index, attraction in enumerate(mapped_attractions):
+            if not isinstance(attraction, dict):
+                raise ValueError(
+                    f"routeStops[{index}].attractions[{attraction_index}] must be an object"
+                )
+            if not _valid_coordinates(attraction.get("lat"), attraction.get("lon")):
+                raise ValueError(
+                    f"routeStops[{index}].attractions[{attraction_index}] "
+                    "coordinates must be valid latitude and longitude values"
+                )
 
-    catalog = data.get("catalog", {})
+    catalog = data.get("catalog")
+    if not isinstance(catalog, dict):
+        raise ValueError("catalog must be an object")
     if not isinstance(catalog.get("intro"), str) or not catalog["intro"].strip():
         raise ValueError("catalog.intro must be a non-empty string")
     cities = catalog.get("cities")
@@ -81,6 +102,8 @@ def validate(data):
         raise ValueError("catalog.cities must be a non-empty list")
     city_names = set()
     for city_index, city in enumerate(cities):
+        if not isinstance(city, dict):
+            raise ValueError(f"catalog.cities[{city_index}] must be an object")
         if not isinstance(city.get("name"), str) or not city["name"].strip():
             raise ValueError(f"catalog.cities[{city_index}].name must be non-empty")
         if city["name"] in city_names:
@@ -92,6 +115,10 @@ def validate(data):
         if not isinstance(attractions, list) or not attractions:
             raise ValueError(f"catalog.cities[{city_index}].attractions must be non-empty")
         for attraction_index, attraction in enumerate(attractions):
+            if not isinstance(attraction, dict):
+                raise ValueError(
+                    f"catalog.cities[{city_index}].attractions[{attraction_index}] must be an object"
+                )
             missing = [field for field in ATTRACTION_FIELDS if field not in attraction]
             if missing:
                 raise ValueError(

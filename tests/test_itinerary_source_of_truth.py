@@ -39,8 +39,15 @@ class ItinerarySourceOfTruthTests(unittest.TestCase):
             ("lon", 181),
             ("lon", -181),
             ("lat", float("nan")),
+            ("lon", float("nan")),
+            ("lat", float("inf")),
             ("lon", float("inf")),
+            ("lat", float("-inf")),
+            ("lon", float("-inf")),
             ("lat", True),
+            ("lon", True),
+            ("lat", 10**400),
+            ("lon", 10**400),
         )
         for field, value in invalid_values:
             with self.subTest(field=field, value=value):
@@ -50,6 +57,68 @@ class ItinerarySourceOfTruthTests(unittest.TestCase):
                     ValueError, "coordinates must be valid latitude and longitude values"
                 ):
                     validate(data)
+
+        for field, value in invalid_values:
+            with self.subTest(attraction_field=field, value=value):
+                data = json.loads(json.dumps(original))
+                stop = next(stop for stop in data["routeStops"] if stop.get("attractions"))
+                stop["attractions"][0][field] = value
+                with self.assertRaisesRegex(
+                    ValueError, "coordinates must be valid latitude and longitude values"
+                ):
+                    validate(data)
+
+        class OverflowingCoordinate(int):
+            def __ge__(self, other):
+                raise OverflowError("simulated numeric comparison overflow")
+
+            def __le__(self, other):
+                raise OverflowError("simulated numeric comparison overflow")
+
+        data = json.loads(json.dumps(original))
+        data["routeStops"][0]["lat"] = OverflowingCoordinate(0)
+        with self.assertRaisesRegex(
+            ValueError, "coordinates must be valid latitude and longitude values"
+        ):
+            validate(data)
+
+    def test_validator_rejects_malformed_json_objects(self):
+        from scripts.generate_route_data import validate
+
+        source = ROOT / "data" / "roteiro.json"
+        original = json.loads(source.read_text(encoding="utf-8"))
+        malformed = [("top-level", [])]
+        invalid_version = json.loads(json.dumps(original))
+        invalid_version["version"] = True
+        malformed.append(("boolean version", invalid_version))
+        invalid_float_version = json.loads(json.dumps(original))
+        invalid_float_version["version"] = 1.0
+        malformed.append(("float version", invalid_float_version))
+        mapped_index = next(
+            index for index, stop in enumerate(original["routeStops"]) if stop.get("attractions")
+        )
+        for label, path in (
+            ("catalog", ("catalog",)),
+            ("route stop", ("routeStops", 0)),
+            ("city", ("catalog", "cities", 0)),
+            ("attraction", ("catalog", "cities", 0, "attractions", 0)),
+            ("mapped route attraction", ("routeStops", mapped_index, "attractions", 0)),
+        ):
+            data = json.loads(json.dumps(original))
+            target = data
+            for key in path[:-1]:
+                target = target[key]
+            target[path[-1]] = [] if label == "catalog" else None
+            malformed.append((label, data))
+
+        for field in ("lat", "lon"):
+            missing_coordinate = json.loads(json.dumps(original))
+            missing_coordinate["routeStops"][mapped_index]["attractions"][0].pop(field)
+            malformed.append((f"mapped attraction missing {field}", missing_coordinate))
+
+        for label, data in malformed:
+            with self.subTest(label=label), self.assertRaises(ValueError):
+                validate(data)
 
     def test_application_uses_generated_route_data(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
