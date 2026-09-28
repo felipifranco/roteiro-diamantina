@@ -203,7 +203,7 @@ renderList();drawLine();
   return card;
  }
  function moveBefore(from,to){const i=manual.indexOf(from);if(i>=0)manual.splice(i,1);const j=manual.indexOf(to);manual.splice(j<0?manual.length:j,0,from)}
- function moveSameDay(id,step){const current=dates.get(id),group=orderedSelected().filter(s=>dates.get(s.id)===current),ids=group.map(s=>s.id),i=ids.indexOf(id),j=i+step;if(i<0||j<0||j>=ids.length)return;[ids[i],ids[j]]=[ids[j],ids[i]];const slots=group.map(s=>manual.indexOf(s.id)).sort((a,b)=>a-b);slots.forEach((slot,k)=>manual[slot]=ids[k]);window.drawLine()}
+ function moveSameDay(id,step){const order=orderedSelected(),index=order.findIndex(s=>s.id===id),targetIndex=index+step;if(index<0||targetIndex<0||targetIndex>=order.length)return;const current=order[index],adjacent=order[targetIndex],currentDate=dates.get(current.id),nextDate=dates.get(adjacent.id);if(currentDate===nextDate){const a=manual.indexOf(current.id),b=manual.indexOf(adjacent.id);[manual[a],manual[b]]=[manual[b],manual[a]]}else{dates.set(current.id,nextDate);dates.set(adjacent.id,currentDate)}window.drawLine()}
  function totalEnd(order){let end='2026-10-09';order.forEach(s=>{const d=dates.get(s.id);if(!d)return;const x=add(d,Math.max(1,Math.ceil(span(s)[1]))-1);if(x>end)end=x});return end}
  function returnDate(order){return returnDriveHours===null?totalEnd(order):add(totalEnd(order),Math.max(1,Math.ceil(returnDriveHours/8)))}
  function drawSummary(order){const home=returnDate(order),days=Math.round((parse(home)-parse('2026-10-07'))/86400000)+1;const before=order.filter(s=>dates.get(s.id)<'2026-10-09'),conflict=before.some(s=>add(dates.get(s.id),Math.max(1,Math.ceil(span(s)[1]))-1)>='2026-10-09');const sum=document.getElementById('tripSummary');sum.innerHTML=`<b>Viagem de ida e volta</b><div class="trip-timeline"><div><small>SAÍDA</small><strong>07/10</strong><span>Mirassol</span></div><i>›</i><div class="fixed"><small>DATA FIXA</small><strong>09/10</strong><span>Diamantina</span></div><i>›</i><div><small>RETORNO</small><strong>${returnDriveHours===null?'…':fmt(home)}</strong><span>Mirassol</span></div></div><p class="trip-caption">${returnDriveHours===null?'Calculando retorno…':`${days} dias estimados · ${order.length} parada${order.length===1?'':'s'} selecionada${order.length===1?'':'s'}.`} Datas e estadias sugeridas aparecem nos cartões.</p>${conflict?'<p class="schedule-warning"><strong>Atenção:</strong> a estadia de uma parada anterior encosta ou ultrapassa 09/10. Ajuste a data/estadia; Diamantina permanece fixa.</p>':''}`}
@@ -286,4 +286,7 @@ renderList();drawLine();
 .stop-head:has(.add-stop-button) .add-stop-button{min-width:150px;min-height:44px;font-size:14px}
 .stop-head:has(.stop-date) .remove-stop-button{min-height:42px;font-size:13px}
 }
+.return-stop .stop-head{grid-template-columns:32px minmax(0,1fr)}
+.return-stop .num{grid-column:1;grid-row:1;justify-self:center}
+.return-stop .stop-focus{grid-column:2;grid-row:1;min-width:0}
 </style></body></html>

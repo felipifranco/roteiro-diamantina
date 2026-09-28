@@ -19,4 +19,13 @@ assert declaration(".stop-head:has(.stop-date) .stop-date", "grid-row") == "2", 
 assert declaration(".stop-head:has(.stop-date) .reorder-actions", "grid-column") == "1/3", "reorder arrows should align under the drag handle and order number"
 assert declaration(".stop-head:has(.stop-date) .reorder-actions", "grid-row") == "2", "reorder arrows should share the date row"
 assert declaration(".stop-head:has(.stop-date) .reorder-actions button", "width") == "30px", "arrow buttons must fit the two-column order-control rail"
-print("mobile stop-order icon layout regression: PASS")
+
+return_head = re.search(r"\.return-stop \.stop-head\s*\{([^}]*)\}", html)
+assert return_head, "return card needs a dedicated grid layout"
+assert re.search(r"grid-template-columns\s*:\s*32px\s+minmax\(0,1fr\)", return_head.group(1)), "return icon must have its own leading column"
+
+move = re.search(r"function moveSameDay\(id,step\)\{(.*?)\}\s*function totalEnd", html, re.S)
+assert move, "stop reorder handler not found"
+assert "dates.set(current.id,nextDate)" in move.group(1), "reorder must cross date groups"
+assert "dates.set(adjacent.id,currentDate)" in move.group(1), "reorder must preserve the adjacent stop's date"
+print("mobile stop-order and return-card layout regression: PASS")
