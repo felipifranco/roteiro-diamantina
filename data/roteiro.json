@@ -11,7 +11,8 @@
       "days": "Ponto de partida e retorno",
       "sights": [],
       "kid": "Organize a primeira perna com pausa planejada.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Mirassol+SP"
+      "url": "https://www.google.com/maps/search/?api=1&query=Mirassol+SP",
+      "guideBriefing": "Por que considerar Mirassol? Esta parada acrescenta uma experiência própria ao circuito e pode funcionar como natureza, história, cultura ou apoio de percurso, conforme os atrativos escolhidos. O objetivo é permitir que o viajante entenda o papel dela antes de decidir incluí-la no roteiro."
     },
     {
       "id": "canastra",
@@ -34,7 +35,8 @@
           "lat": -20.30191,
           "lon": -46.52234
         }
-      ]
+      ],
+      "guideBriefing": "Por que considerar esta parada? São Roque de Minas / Serra da Canastra acrescenta ao roteiro a leitura de parque nacional, cachoeiras, gastronomia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "capitolio",
@@ -57,7 +59,8 @@
           "lat": -20.6461,
           "lon": -46.26575
         }
-      ]
+      ],
+      "guideBriefing": "Por que considerar esta parada? Capitólio acrescenta ao roteiro a leitura de cânions, água, natureza. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "congonhas",
@@ -79,7 +82,8 @@
           "lat": -20.50753,
           "lon": -43.86053
         }
-      ]
+      ],
+      "guideBriefing": "Congonhas concentra em um único conjunto uma das expressões mais importantes do barroco brasileiro. O Santuário do Bom Jesus, os Profetas e os Passos da Paixão transformam a obra de Aleijadinho em uma experiência espacial: as esculturas foram concebidas para serem vistas naquele percurso, e não isoladamente. É uma parada especialmente eficiente para o viajante porque entrega arte, religiosidade popular e história em uma área relativamente concentrada."
     },
     {
       "id": "ouropreto",
@@ -95,7 +99,8 @@
         "Minas históricas"
       ],
       "kid": "Ladeiras e calçamento irregular podem dificultar carrinho; planeje pausas e hospedagem bem localizada.",
-      "url": "https://ouropreto.org.br/atracoes-turisticas"
+      "url": "https://ouropreto.org.br/atracoes-turisticas",
+      "guideBriefing": "Ouro Preto, antiga Vila Rica, permite ler quase como um livro aberto o auge da mineração de ouro no século XVIII. Igrejas, antigas repartições, minas, casarões e espaços ligados à Inconfidência mostram de onde vinha a riqueza, como a Coroa a controlava, como ela era convertida em arte e como uma sociedade profundamente desigual se organizava. Para o viajante, a importância está menos em ver edifícios isolados e mais em perceber como mineração, escravidão, religião, poder e arte barroca formam uma mesma história."
     },
     {
       "id": "mariana",
@@ -118,7 +123,8 @@
           "lat": -20.37812,
           "lon": -43.41813
         }
-      ]
+      ],
+      "guideBriefing": "Mariana está entre os núcleos urbanos mais antigos de Minas e ajuda a entender o começo da organização política, religiosa e econômica da região mineradora. Praças, igrejas, Câmara e Cadeia e minas permitem observar, em escala mais compacta, como uma vila colonial era estruturada. A parada complementa Ouro Preto sem simplesmente repeti-la: Mariana oferece outra leitura do poder civil, da arte sacra, da música e da própria mineração."
     },
     {
       "id": "cipo",
@@ -134,7 +140,8 @@
         "Paisagens da Serra do Espinhaço"
       ],
       "kid": "Muitas atrações envolvem trilha, terreno irregular ou água; escolha apenas após checar acesso e estrutura.",
-      "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/cerrado/lista-de-ucs/parna-da-serra-do-cipo"
+      "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/cerrado/lista-de-ucs/parna-da-serra-do-cipo",
+      "guideBriefing": "Por que considerar Serra do Cipó? Esta parada acrescenta uma experiência própria ao circuito e pode funcionar como natureza, história, cultura ou apoio de percurso, conforme os atrativos escolhidos. O objetivo é permitir que o viajante entenda o papel dela antes de decidir incluí-la no roteiro."
     },
     {
       "id": "tabuleiro",
@@ -149,7 +156,8 @@
         "Poços e mirantes"
       ],
       "kid": "A cachoeira é associada a caminhada e terreno de serra; não considerar visita como passeio de carrinho. Confirmar acesso local.",
-      "url": "https://turismo.cmd.mg.gov.br/"
+      "url": "https://turismo.cmd.mg.gov.br/",
+      "guideBriefing": "Por que considerar esta parada? Conceição do Mato Dentro acrescenta ao roteiro a leitura de natureza, estrada real, história. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "serro",
@@ -165,7 +173,8 @@
         "Queijo do Serro"
       ],
       "kid": "Parada cultural/gastronômica mais flexível que trilhas; verificar hospedagem e pausas.",
-      "url": "https://www.serro.mg.gov.br/portal/turismo"
+      "url": "https://www.serro.mg.gov.br/portal/turismo",
+      "guideBriefing": "Serro nasceu no avanço da mineração pelo antigo Serro Frio e integra o Caminho dos Diamantes da Estrada Real. A cidade preserva arquitetura, igrejas e uma paisagem urbana que ajudam a acompanhar o deslocamento da ocupação mineradora em direção a Diamantina. Ao mesmo tempo, o Queijo do Serro mostra uma herança que continuou viva quando a mineração perdeu força. A parada une patrimônio colonial e cultura alimentar."
     },
     {
       "id": "milhoverde",
@@ -181,7 +190,8 @@
         "Cachoeiras"
       ],
       "kid": "Estradas e acessos a cachoeiras podem ser rústicos; considerar visita à vila e evitar agenda apertada.",
-      "url": "https://www.serro.mg.gov.br/portal/turismo/0/9/748/Milho-Verde"
+      "url": "https://www.serro.mg.gov.br/portal/turismo/0/9/748/Milho-Verde",
+      "guideBriefing": "Milho Verde é um antigo arraial da região do Serro Frio onde patrimônio e paisagem permanecem muito próximos. O distrito está ligado às antigas rotas mineradoras, à história de Chica da Silva e a pequenas igrejas inseridas na Serra do Espinhaço. A experiência é diferente das grandes cidades históricas: aqui interessa perceber a escala de um povoado, sua relação com as montanhas, a água e a vida cotidiana."
     },
     {
       "id": "saogoncalo",
@@ -204,7 +214,8 @@
           "lat": -18.41676,
           "lon": -43.49807
         }
-      ]
+      ],
+      "guideBriefing": "São Gonçalo do Rio das Pedras preserva a escala de um povoado formado no contexto colonial do Serro Frio e das rotas fiscalizadas pela Coroa entre Serro e a região diamantífera. A parada ajuda a entender que a Estrada Real não era feita apenas de grandes vilas: pequenos núcleos, caminhos, postos de circulação e comunidades também sustentavam a ocupação do território. Hoje essa história aparece junto à paisagem da Serra do Espinhaço."
     },
     {
       "id": "diamantina",
@@ -228,7 +239,8 @@
           "lat": -18.24491,
           "lon": -43.60027
         }
-      ]
+      ],
+      "guideBriefing": "Diamantina nasceu da mineração e ganhou importância com a descoberta dos diamantes no século XVIII. O antigo Arraial do Tijuco preservou uma paisagem urbana colonial singular, marcada por ruas estreitas, sobrados, igrejas, personagens como Chica da Silva e, séculos depois, Juscelino Kubitschek. A cidade também mantém uma identidade musical muito própria, visível na Vesperata. É uma parada para entender como riqueza mineral, controle da Coroa, escravidão, vida urbana e cultura produziram uma Minas diferente daquela das cidades do ouro."
     },
     {
       "id": "biribiri",
@@ -243,7 +255,8 @@
         "Cachoeiras"
       ],
       "kid": "Passeio regional fora do centro; confirmar estrada e acesso à água para a data escolhida.",
-      "url": "https://visitediamantina.com.br/"
+      "url": "https://visitediamantina.com.br/",
+      "guideBriefing": "Biribiri conta um capítulo posterior ao ciclo colonial: a industrialização mineira do século XIX. A vila surgiu em torno de uma fábrica de tecidos fundada em 1876 e preserva a relação entre comunidade fabril, energia hidráulica e isolamento geográfico. Cercada pelo Parque Estadual do Biribiri, permite combinar história industrial com rios, campos rupestres e cachoeiras — um contraste interessante depois do centro colonial de Diamantina."
     },
     {
       "id": "peruacu",
@@ -259,7 +272,8 @@
         "Pinturas rupestres"
       ],
       "kid": "Visitas podem exigir reserva, guia e caminhada; avaliar como extensão separada, não como parada simples com bebês.",
-      "url": "https://whc.unesco.org/en/list/1747"
+      "url": "https://whc.unesco.org/en/list/1747",
+      "guideBriefing": "Por que considerar Peruaçu? Esta parada acrescenta uma experiência própria ao circuito e pode funcionar como natureza, história, cultura ou apoio de percurso, conforme os atrativos escolhidos. O objetivo é permitir que o viajante entenda o papel dela antes de decidir incluí-la no roteiro."
     },
     {
       "id": "delfinopolis",
@@ -274,7 +288,8 @@
         "Cachoeiras da região"
       ],
       "kid": "Com bebês, confirme operação, filas e embarque antes de escolher esse caminho. Não confundir essa travessia com o acesso urbano a Capitólio.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Balsa+Cassia+Delfinopolis"
+      "url": "https://www.google.com/maps/search/?api=1&query=Balsa+Cassia+Delfinopolis",
+      "guideBriefing": "Por que considerar Delfinópolis? Esta parada acrescenta uma experiência própria ao circuito e pode funcionar como natureza, história, cultura ou apoio de percurso, conforme os atrativos escolhidos. O objetivo é permitir que o viajante entenda o papel dela antes de decidir incluí-la no roteiro."
     },
     {
       "id": "cordisburgo",
@@ -289,7 +304,8 @@
         "Museu Casa Guimarães Rosa"
       ],
       "kid": "Gruta exige caminhada monitorada; confirme restrições e acessos. O museu é alternativa mais leve.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Cordisburgo+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Cordisburgo+MG",
+      "guideBriefing": "Cordisburgo é uma parada em que dois capítulos muito diferentes de Minas se encontram. No subsolo, a Gruta do Maquiné ajuda a contar a formação geológica da região e a história das pesquisas de Peter Lund, pioneiras para a paleontologia brasileira. Na superfície, a cidade natal de João Guimarães Rosa aproxima o viajante do sertão que se tornou matéria-prima de uma das obras mais importantes da literatura brasileira. Para uma agência, a força da parada está justamente nessa combinação: em poucas horas o cliente pode sair da história natural de milhões de anos para a cultura e a linguagem do sertão mineiro."
     },
     {
       "id": "belohorizonte",
@@ -305,7 +321,8 @@
         "Mercado Central"
       ],
       "kid": "A cidade tem deslocamentos urbanos; agrupe visitas por região e confira acessibilidade de cada atração.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Belo+Horizonte+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Belo+Horizonte+MG",
+      "guideBriefing": "Por que considerar esta parada? Belo Horizonte acrescenta ao roteiro a leitura de arquitetura, cultura, gastronomia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "brumadinho",
@@ -319,7 +336,8 @@
         "Instituto Inhotim"
       ],
       "kid": "Inhotim é extenso; há transporte interno opcional, mas planeje pausas e confirme serviços para crianças.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Instituto+Inhotim"
+      "url": "https://www.google.com/maps/search/?api=1&query=Instituto+Inhotim",
+      "guideBriefing": "Por que considerar esta parada? Brumadinho acrescenta ao roteiro a leitura de arte, arquitetura, jardins. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "saojoaodelrei",
@@ -338,7 +356,8 @@
         "Memorial Tancredo Neves"
       ],
       "kid": "Centro com calçamento e desníveis; confirme operação e acessibilidade do trem antes de reservar.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Sao+Joao+del+Rei+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Sao+Joao+del+Rei+MG",
+      "guideBriefing": "Por que considerar esta parada? São João del-Rei acrescenta ao roteiro a leitura de história, barroco, música, ferrovia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "tiradentes",
@@ -357,7 +376,8 @@
         "Museu de Sant’Ana"
       ],
       "kid": "Ruas de pedra e ladeiras podem dificultar carrinhos; priorize trechos curtos e pausas.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Tiradentes+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Tiradentes+MG",
+      "guideBriefing": "Por que considerar esta parada? Tiradentes acrescenta ao roteiro a leitura de história, arquitetura, gastronomia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "bichinho",
@@ -373,7 +393,8 @@
         "Cachaçarias e produtos locais"
       ],
       "kid": "O passeio é principalmente em ruas e ateliês; confirme horários e acesso local.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Bichinho+Prados+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Bichinho+Prados+MG",
+      "guideBriefing": "Por que considerar esta parada? Bichinho / Prados acrescenta ao roteiro a leitura de artesanato, cultura popular. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "curralinho",
@@ -388,7 +409,8 @@
         "Experiência de garimpo"
       ],
       "kid": "Acesso a gruta e garimpo pode envolver terreno irregular; confirme operação e condições com guia local.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Curralinho+Extra%C3%A7%C3%A3o+Diamantina"
+      "url": "https://www.google.com/maps/search/?api=1&query=Curralinho+Extra%C3%A7%C3%A3o+Diamantina",
+      "guideBriefing": "Diamantina nasceu da mineração e ganhou importância com a descoberta dos diamantes no século XVIII. O antigo Arraial do Tijuco preservou uma paisagem urbana colonial singular, marcada por ruas estreitas, sobrados, igrejas, personagens como Chica da Silva e, séculos depois, Juscelino Kubitschek. A cidade também mantém uma identidade musical muito própria, visível na Vesperata. É uma parada para entender como riqueza mineral, controle da Coroa, escravidão, vida urbana e cultura produziram uma Minas diferente daquela das cidades do ouro."
     },
     {
       "id": "catasaltas",
@@ -404,7 +426,8 @@
         "Serra do Caraça"
       ],
       "kid": "Centro tem calçamento; trilhas na serra exigem checagem individual de percurso e esforço.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Catas+Altas+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Catas+Altas+MG",
+      "guideBriefing": "Por que considerar esta parada? Catas Altas acrescenta ao roteiro a leitura de história, montanha, gastronomia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "santabarbara",
@@ -419,7 +442,8 @@
         "Centro Histórico"
       ],
       "kid": "Confirme abertura das igrejas e condições de acesso antes da visita.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Santa+Barbara+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Santa+Barbara+MG",
+      "guideBriefing": "Por que considerar esta parada? Santa Bárbara acrescenta ao roteiro a leitura de história, barroco, natureza. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "caraca",
@@ -436,7 +460,8 @@
         "Observação do lobo-guará"
       ],
       "kid": "Trilhas variam em esforço; observação noturna do lobo exige espera e não é garantida. Confirme acesso e hospedagem.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Santuario+do+Caraca"
+      "url": "https://www.google.com/maps/search/?api=1&query=Santuario+do+Caraca",
+      "guideBriefing": "Por que considerar esta parada? Santuário do Caraça acrescenta ao roteiro a leitura de história, religiosidade, natureza. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "sabara",
@@ -455,7 +480,8 @@
         "Chafariz do Kaquende"
       ],
       "kid": "Centro histórico com calçamento; verifique abertura e acessibilidade de cada edifício.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Sabara+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Sabara+MG",
+      "guideBriefing": "Por que considerar esta parada? Sabará acrescenta ao roteiro a leitura de barroco, história colonial. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "caete",
@@ -470,7 +496,8 @@
         "Santuário Nossa Senhora da Piedade"
       ],
       "kid": "A visita ao topo envolve estrada e caminhada; confirme condições de acesso e alternativas sem degraus.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Serra+da+Piedade+Caete"
+      "url": "https://www.google.com/maps/search/?api=1&query=Serra+da+Piedade+Caete",
+      "guideBriefing": "Por que considerar esta parada? Caeté acrescenta ao roteiro a leitura de religiosidade, montanha, história. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "peiro",
@@ -501,7 +528,8 @@
           "type": "natureza",
           "accessibility": "Área geológica extensa com acessos por estrada e trilhas; confirmar condições locais."
         }
-      ]
+      ],
+      "guideBriefing": "Por que considerar esta parada? Uberaba / Peirópolis acrescenta ao roteiro a leitura de paleontologia, geologia e história científica. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "araxa",
@@ -523,14 +551,54 @@
       "kid": "Confirme horários, serviços termais e acessibilidade diretamente com os atrativos.",
       "url": "https://www.google.com/maps/search/?api=1&query=Arax%C3%A1+MG",
       "attractions": [
-        {"name": "Grande Hotel e Termas de Araxá", "lat": -19.6469277, "lon": -46.9498159, "days": "2 h"},
-        {"name": "Complexo do Barreiro", "lat": -19.6472115, "lon": -46.954839, "days": "2 h"},
-        {"name": "Museu Dona Beja", "lat": -19.5898756, "lon": -46.9380426, "days": "1 h"},
-        {"name": "Museu Calmon Barreto / Memorial de Araxá", "lat": -19.586776, "lon": -46.9426564, "days": "30–60 min"},
-        {"name": "Igreja de São Domingos", "lat": -19.5927815, "lon": -46.9409702, "days": "20–30 min"},
-        {"name": "Parque do Cristo", "lat": -19.5837868, "lon": -46.9345619, "days": "30–60 min", "type": "natureza", "accessibility": "Mirante em área elevada; confirme rota sem escadas e condições de acesso."},
-        {"name": "Fontes Dona Beja e Andrade Júnior", "lat": -19.64819425, "lon": -46.94960645, "days": "20–40 min", "type": "natureza", "accessibility": "Fontes dentro do complexo do Barreiro; confirme acesso e condições com o operador."}
-      ]
+        {
+          "name": "Grande Hotel e Termas de Araxá",
+          "lat": -19.6469277,
+          "lon": -46.9498159,
+          "days": "2 h"
+        },
+        {
+          "name": "Complexo do Barreiro",
+          "lat": -19.6472115,
+          "lon": -46.954839,
+          "days": "2 h"
+        },
+        {
+          "name": "Museu Dona Beja",
+          "lat": -19.5898756,
+          "lon": -46.9380426,
+          "days": "1 h"
+        },
+        {
+          "name": "Museu Calmon Barreto / Memorial de Araxá",
+          "lat": -19.586776,
+          "lon": -46.9426564,
+          "days": "30–60 min"
+        },
+        {
+          "name": "Igreja de São Domingos",
+          "lat": -19.5927815,
+          "lon": -46.9409702,
+          "days": "20–30 min"
+        },
+        {
+          "name": "Parque do Cristo",
+          "lat": -19.5837868,
+          "lon": -46.9345619,
+          "days": "30–60 min",
+          "type": "natureza",
+          "accessibility": "Mirante em área elevada; confirme rota sem escadas e condições de acesso."
+        },
+        {
+          "name": "Fontes Dona Beja e Andrade Júnior",
+          "lat": -19.64819425,
+          "lon": -46.94960645,
+          "days": "20–40 min",
+          "type": "natureza",
+          "accessibility": "Fontes dentro do complexo do Barreiro; confirme acesso e condições com o operador."
+        }
+      ],
+      "guideBriefing": "Por que considerar esta parada? Araxá acrescenta ao roteiro a leitura de termalismo, arquitetura, história. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "itabirito",
@@ -545,7 +613,8 @@
         "Pastel de angu"
       ],
       "kid": "Parada urbana flexível; confirme horário de igrejas, restaurantes e locais de venda.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Itabirito+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Itabirito+MG",
+      "guideBriefing": "Por que considerar esta parada? Itabirito acrescenta ao roteiro a leitura de estrada real, história, gastronomia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
     },
     {
       "id": "amarantina",
@@ -559,7 +628,8 @@
         "Núcleo histórico"
       ],
       "kid": "Distrito pequeno; confirme serviços e horários antes de desviar da rota principal.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Amarantina+Ouro+Preto+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Amarantina+Ouro+Preto+MG",
+      "guideBriefing": "Ouro Preto, antiga Vila Rica, permite ler quase como um livro aberto o auge da mineração de ouro no século XVIII. Igrejas, antigas repartições, minas, casarões e espaços ligados à Inconfidência mostram de onde vinha a riqueza, como a Coroa a controlava, como ela era convertida em arte e como uma sociedade profundamente desigual se organizava. Para o viajante, a importância está menos em ver edifícios isolados e mais em perceber como mineração, escravidão, religião, poder e arte barroca formam uma mesma história."
     }
   ],
   "catalog": {
@@ -577,7 +647,8 @@
             "estimatedDuration": "2–3 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Centro Histórico? Conjunto urbano colonial formado durante o ciclo dos diamantes. As ruas de pedra, sobrados e igrejas permitem entender como a riqueza diamantífera moldou a cidade; é Patrimônio Mundial da UNESCO. Diamantina é tratada como destino principal, e não simples escala: preserva a história da mineração de diamantes, da sociedade colonial e uma identidade musical própria. Nos circuitos longos, costuma justificar pernoites porque o conjunto histórico e cultural não cabe em uma parada rápida. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Passadiço da Glória",
@@ -587,7 +658,8 @@
             "estimatedDuration": "20 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Passadiço da Glória? Dois casarões ligados por um passadiço elevado sobre a rua, uma das imagens mais reconhecíveis de Diamantina. Vale pela arquitetura incomum e pela relação com a antiga vida religiosa e educacional da cidade. Ícone visual do centro histórico e parada frequente nos city tours. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Casa de Chica da Silva",
@@ -597,7 +669,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Casa de Chica da Silva? Residência associada a Chica da Silva, personagem central da sociedade diamantífera do século XVIII. A visita ajuda a compreender mineração, escravidão, mobilidade social e costumes da época. Acrescenta história humana e social ao roteiro, além da arquitetura colonial. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Casa de Juscelino Kubitschek",
@@ -607,7 +680,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "< 1 h",
             "oneYearOld": "Sim",
-            "accessibility": "Sim — há rota externa, acesso interno por rampa e sanitário acessível"
+            "accessibility": "Sim — há rota externa, acesso interno por rampa e sanitário acessível",
+            "guideBriefing": "Por que conhecer Casa de Juscelino Kubitschek? Casa onde JK viveu na juventude, hoje museu. Liga a pequena cidade colonial à trajetória do futuro presidente responsável pela construção de Brasília. Introduz uma camada de história republicana ao roteiro colonial. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja de São Francisco de Assis",
@@ -617,7 +691,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja de São Francisco de Assis? Igreja setecentista ligada à elite local e à arte sacra de Diamantina. É uma boa leitura da religiosidade e da organização social do período minerador. Integra os circuitos guiados de arte sacra do centro histórico. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Rua da Quitanda / Beco da Tecla",
@@ -627,7 +702,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Rua da Quitanda / Beco da Tecla? Trecho de casario colonial que concentra a atmosfera mais característica do centro. A Rua da Quitanda também é o cenário tradicional da Vesperata. É o espaço onde patrimônio arquitetônico e vida cultural contemporânea se encontram. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Vesperata",
@@ -640,9 +716,11 @@
             "accessibility": "—",
             "schedule": "09/10/2026 · 20h · Rua da Quitanda",
             "scheduleNote": "Sessão extra divulgada em setembro; confira ingresso e eventuais atualizações.",
-            "eventUrl": "https://bileto.sympla.com.br/event/117032?share_id=1-copiarlink"
+            "eventUrl": "https://bileto.sympla.com.br/event/117032?share_id=1-copiarlink",
+            "guideBriefing": "Por que conhecer Vesperata? Concerto em que músicos se apresentam das sacadas dos casarões enquanto maestros e público ocupam a rua. Não é apenas um show: utiliza a própria arquitetura colonial como palco. É uma das experiências culturais mais características e procuradas de Diamantina. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Diamantina nasceu da mineração e ganhou importância com a descoberta dos diamantes no século XVIII. O antigo Arraial do Tijuco preservou uma paisagem urbana colonial singular, marcada por ruas estreitas, sobrados, igrejas, personagens como Chica da Silva e, séculos depois, Juscelino Kubitschek. A cidade também mantém uma identidade musical muito própria, visível na Vesperata. É uma parada para entender como riqueza mineral, controle da Coroa, escravidão, vida urbana e cultura produziram uma Minas diferente daquela das cidades do ouro."
       },
       {
         "name": "Cordisburgo",
@@ -656,7 +734,8 @@
             "estimatedDuration": "1h30",
             "publishedDuration": "60 min",
             "oneYearOld": "Com ressalvas",
-            "accessibility": "Com ressalvas — percurso em gruta exige caminhada; confirmar condições individuais"
+            "accessibility": "Com ressalvas — percurso em gruta exige caminhada; confirmar condições individuais",
+            "guideBriefing": "Por que conhecer Gruta do Maquiné? Grande caverna calcária com salões, estalactites e estalagmites. Foi explorada cientificamente por Peter Lund no século XIX e está ligada ao nascimento da paleontologia brasileira. Operadoras que ligam Diamantina a Belo Horizonte aproveitam Cordisburgo para transformar um dia de deslocamento em dia de visita. Maquiné acrescenta geologia, ciência e uma atração de grande escala sem exigir outro destino distante. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Museu Casa Guimarães Rosa",
@@ -666,9 +745,11 @@
             "estimatedDuration": "1h30–2 h",
             "publishedDuration": "1–2 h",
             "oneYearOld": "Sim",
-            "accessibility": "Sim — possui rampa móvel e atividades para terceira idade"
+            "accessibility": "Sim — possui rampa móvel e atividades para terceira idade",
+            "guideBriefing": "Por que conhecer Museu Casa Guimarães Rosa? Casa natal de João Guimarães Rosa, preservada com objetos, documentos e referências ao universo sertanejo que inspirou sua literatura. Costuma ser combinada com Maquiné: em uma mesma parada a agência entrega natureza e literatura. Guimarães Rosa também conecta a paisagem real do sertão mineiro ao Brasil retratado em sua obra. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Cordisburgo é uma parada em que dois capítulos muito diferentes de Minas se encontram. No subsolo, a Gruta do Maquiné ajuda a contar a formação geológica da região e a história das pesquisas de Peter Lund, pioneiras para a paleontologia brasileira. Na superfície, a cidade natal de João Guimarães Rosa aproxima o viajante do sertão que se tornou matéria-prima de uma das obras mais importantes da literatura brasileira. Para uma agência, a força da parada está justamente nessa combinação: em poucas horas o cliente pode sair da história natural de milhões de anos para a cultura e a linguagem do sertão mineiro."
       },
       {
         "name": "Belo Horizonte",
@@ -682,7 +763,8 @@
             "estimatedDuration": "meio dia",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Conjunto Moderno da Pampulha? Conjunto de Oscar Niemeyer com paisagismo de Burle Marx e obras de Portinari. É um marco da arquitetura moderna brasileira e Patrimônio Mundial. As agências incluem a Pampulha porque ela mostra outra Minas: modernista, urbana e ligada ao projeto político de JK. Depois do barroco, Niemeyer, Burle Marx e Portinari criam um contraste histórico deliberado. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Praça da Liberdade",
@@ -692,7 +774,8 @@
             "estimatedDuration": "1–3 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Praça da Liberdade? Antigo centro do poder estadual, cercado por palácios e edifícios de diferentes períodos que hoje integram um circuito cultural. Concentra museus e arquitetura em uma área caminhável. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Mercado Central",
@@ -702,9 +785,11 @@
             "estimatedDuration": "1h30–2 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Mercado Central? Mercado tradicional onde se encontram queijos, doces, cachaças, temperos e pratos mineiros. A atração é experimentar a cultura gastronômica, não apenas fazer compras. É uma parada de experiência, não apenas de compras: permite provar em um só lugar queijo, doce, cachaça, café e pratos mineiros. Para uma agência, entrega gastronomia com logística simples e tempo previsível. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Belo Horizonte acrescenta ao roteiro a leitura de arquitetura, cultura, gastronomia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Brumadinho",
@@ -718,9 +803,11 @@
             "estimatedDuration": "1 dia",
             "publishedDuration": "—",
             "oneYearOld": "Sim",
-            "accessibility": "Sim — cadeira de rodas disponível e transporte interno opcional"
+            "accessibility": "Sim — cadeira de rodas disponível e transporte interno opcional",
+            "guideBriefing": "Por que conhecer Instituto Inhotim? Museu de arte contemporânea em escala monumental, com galerias e obras espalhadas por um jardim botânico. Muitas obras foram concebidas para o próprio espaço, fazendo paisagem e arte funcionarem juntas. Inhotim costuma receber um dia próprio porque é uma experiência de escala internacional e muito diferente das cidades históricas. A alternância entre galerias, obras ao ar livre e jardins evita que o circuito fique restrito a igrejas e casario colonial. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Brumadinho acrescenta ao roteiro a leitura de arte, arquitetura, jardins. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Ouro Preto",
@@ -734,7 +821,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Praça Tiradentes? Antigo centro cívico de Vila Rica. De um lado está o antigo Palácio dos Governadores; do outro, a antiga Casa de Câmara e Cadeia. O monumento a Tiradentes marca o lugar onde sua cabeça foi exposta após a execução. É o melhor ponto para entender a relação entre Coroa, mineração e Inconfidência. A praça funciona como aula de abertura de Ouro Preto: em poucos metros o guia apresenta Coroa, administração colonial, mineração e Inconfidência. A partir dela, quase todo o restante do centro pode ser percorrido a pé. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Museu da Inconfidência",
@@ -744,7 +832,8 @@
             "estimatedDuration": "1h30",
             "publishedDuration": "1–1h30",
             "oneYearOld": "Sim",
-            "accessibility": "Sim — rampas, corrimãos, cadeira de rodas e sanitário adaptado"
+            "accessibility": "Sim — rampas, corrimãos, cadeira de rodas e sanitário adaptado",
+            "guideBriefing": "Por que conhecer Museu da Inconfidência? Ocupa a antiga Casa de Câmara e Cadeia. Reúne objetos, documentos, arte sacra e os restos mortais atribuídos a inconfidentes, explicando a sociedade mineradora e a Inconfidência Mineira. É recorrente nos pacotes porque organiza uma história complexa em objetos, edifício e personagens. Depois da visita, Tiradentes e a Inconfidência deixam de ser apenas nomes vistos nas ruas e praças. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja de São Francisco de Assis",
@@ -754,7 +843,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja de São Francisco de Assis? Uma das obras-primas do barroco/rococó mineiro, com projeto e esculturas associados a Aleijadinho e pintura de Mestre Ataíde. Para os circuitos de barroco, é parada essencial: permite ver arquitetura, escultura e pintura associadas a Aleijadinho e Ataíde no mesmo edifício, tornando visível o que os guias explicam sobre o barroco mineiro. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Basílica de Nossa Senhora do Pilar",
@@ -764,7 +854,8 @@
             "estimatedDuration": "40 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Basílica de Nossa Senhora do Pilar? Exterior relativamente sóbrio esconde um interior coberto por talha dourada. A quantidade de ouro aplicada na decoração materializa a riqueza produzida pela mineração. As agências a usam para materializar a riqueza de Vila Rica. Depois de ouvir sobre ouro e impostos da Coroa, o visitante vê como parte dessa riqueza foi convertida em arte e ostentação religiosa. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja Nossa Senhora do Carmo",
@@ -774,7 +865,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja Nossa Senhora do Carmo? Igreja rococó ligada à Ordem Terceira do Carmo, com elementos associados a Aleijadinho e importante conjunto artístico. Fica no núcleo da Praça Tiradentes e complementa a leitura da arte religiosa local. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja Nossa Senhora do Rosário",
@@ -784,7 +876,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja Nossa Senhora do Rosário? Igreja de planta curva singular, construída por irmandade ligada à população negra. Ajuda a compreender a organização religiosa e social de grupos que não pertenciam às elites brancas. Acrescenta uma dimensão social que vai além das igrejas mais ricas do centro. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Teatro Municipal / Casa da Ópera",
@@ -794,7 +887,8 @@
             "estimatedDuration": "40 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Teatro Municipal / Casa da Ópera? Teatro do século XVIII ainda preservado, considerado um dos mais antigos em funcionamento nas Américas. Mostra que Vila Rica também possuía intensa vida cultural. É uma atração histórica diferente de igrejas e mineração e aparece em city tours de agências. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Mina de ouro visitável",
@@ -804,7 +898,8 @@
             "estimatedDuration": "1h30",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Mina de ouro visitável? Galerias escavadas durante o ciclo do ouro permitem entrar fisicamente no ambiente de mineração. A experiência ajuda a compreender técnicas de extração e as condições de trabalho, inclusive do trabalho escravizado. Entrar numa galeria muda a compreensão da mineração: profundidade, espaço, ferramentas e condições de trabalho deixam de ser abstratos. Por isso operadoras frequentemente reservam uma mina como experiência, em vez de visitar apenas museus. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Rua Direita e casario colonial",
@@ -814,7 +909,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Rua Direita e casario colonial? Eixo tradicional do centro, cercado por sobrados que mostram a organização urbana e comercial de Vila Rica. O valor está no conjunto, não em um edifício isolado. Permite que o deslocamento entre atrações seja também parte da visita histórica. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Casa dos Contos",
@@ -824,7 +920,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Casa dos Contos? Solar do fim do século XVIII ligado à administração das finanças e à cobrança de tributos da Coroa. Além da arquitetura, permite entender para onde ia a riqueza extraída das minas, a fiscalização do ouro, a moeda e a estrutura econômica de Vila Rica. Agências a incluem porque completa a história contada nas minas e igrejas: depois de ver onde o ouro era extraído e gasto, aqui se entende como ele era controlado e tributado pela Coroa. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Feira de Pedra-Sabão",
@@ -834,7 +931,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Feira de Pedra-Sabão? Feira de artesanato próxima à Igreja de São Francisco de Assis, dedicada sobretudo à pedra-sabão, material profundamente associado à escultura e à arquitetura de Ouro Preto. É uma parada recorrente porque conecta o barroco histórico a uma tradição artesanal que continua viva e ainda oferece tempo livre para compras sem deslocamento adicional. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Museu de Mineralogia / Museu de Ciência e Técnica",
@@ -844,9 +942,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Museu de Mineralogia / Museu de Ciência e Técnica? Acervo ligado à antiga Escola de Minas, instalado no antigo Palácio dos Governadores. Minerais, mineração e ciência ajudam a entender geologicamente por que Ouro Preto existiu e por que a região atraiu tanta riqueza. Algumas operadoras o oferecem como alternativa ao Museu da Inconfidência porque acrescenta a explicação científica da mineração ao conteúdo histórico do circuito. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Ouro Preto, antiga Vila Rica, permite ler quase como um livro aberto o auge da mineração de ouro no século XVIII. Igrejas, antigas repartições, minas, casarões e espaços ligados à Inconfidência mostram de onde vinha a riqueza, como a Coroa a controlava, como ela era convertida em arte e como uma sociedade profundamente desigual se organizava. Para o viajante, a importância está menos em ver edifícios isolados e mais em perceber como mineração, escravidão, religião, poder e arte barroca formam uma mesma história."
       },
       {
         "name": "Mariana",
@@ -860,7 +960,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Praça Minas Gerais? Praça monumental onde Igreja do Carmo, Igreja de São Francisco, Casa de Câmara e Cadeia e pelourinho formam um raro conjunto civil e religioso colonial. É extremamente eficiente para grupos: em uma única praça o guia consegue explicar Igreja, Estado, justiça e organização urbana colonial. Isso faz Mariana render muito conteúdo mesmo em visitas de poucas horas. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Catedral da Sé",
@@ -870,7 +971,8 @@
             "estimatedDuration": "40 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Catedral da Sé? Uma das igrejas mais antigas e importantes de Minas. Guarda um órgão Arp Schnitger do início do século XVIII, raríssimo no Brasil. Acrescenta patrimônio musical e religioso ao circuito. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja de São Francisco de Assis",
@@ -880,7 +982,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja de São Francisco de Assis? Igreja setecentista com obras associadas a Aleijadinho e Mestre Ataíde; o próprio Ataíde está sepultado no templo. Liga Mariana diretamente aos grandes mestres do barroco mineiro. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja Nossa Senhora do Carmo",
@@ -890,7 +993,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja Nossa Senhora do Carmo? Igreja rococó que forma, junto com São Francisco, uma das imagens urbanas mais marcantes de Mariana. Completa o conjunto arquitetônico da Praça Minas Gerais. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Casa de Câmara e Cadeia",
@@ -900,7 +1004,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Casa de Câmara e Cadeia? Edifício que reunia funções administrativas e judiciais da vila colonial. Ajuda a entender como o poder português funcionava localmente. Complementa a visita religiosa com história política e administrativa. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Mina da Passagem",
@@ -910,7 +1015,8 @@
             "estimatedDuration": "1h15",
             "publishedDuration": "~45 min",
             "oneYearOld": "Não confirmado",
-            "accessibility": "Não confirmado — há meia-entrada 60+, mas isso não comprova acessibilidade física"
+            "accessibility": "Não confirmado — há meia-entrada 60+, mas isso não comprova acessibilidade física",
+            "guideBriefing": "Por que conhecer Mina da Passagem? Antiga mina de ouro industrial com visita por vagonete até galerias subterrâneas. A escala e profundidade tornam a mineração muito mais compreensível do que apenas observá-la em museus. A descida de vagonete e as galerias dão caráter de experiência ao roteiro. Agências a utilizam para explicar em escala física a atividade econômica que criou Mariana e Ouro Preto. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Rua Direita e casario",
@@ -920,7 +1026,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Rua Direita e casario? Eixo histórico de Mariana com sobrados coloniais que permite perceber o desenho urbano planejado da cidade e a vida civil fora das grandes igrejas. Aparece nos walking tours porque liga as atrações centrais e transforma o deslocamento em leitura da cidade colonial. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Órgão Arp Schnitger",
@@ -930,7 +1037,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Órgão Arp Schnitger? Órgão alemão do início do século XVIII instalado na Catedral da Sé, um dos raríssimos instrumentos de sua época preservados no Brasil. Operadoras e roteiros oficiais o destacam porque oferece patrimônio musical excepcional, diferenciando Mariana das demais cidades barrocas. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja de São Pedro dos Clérigos",
@@ -940,9 +1048,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja de São Pedro dos Clérigos? Igreja iniciada no século XVIII, marcante pela implantação elevada e pela arquitetura de linhas curvas. Entra em roteiros mais completos para ampliar a leitura da arquitetura religiosa de Mariana além do conjunto da Praça Minas Gerais. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Mariana está entre os núcleos urbanos mais antigos de Minas e ajuda a entender o começo da organização política, religiosa e econômica da região mineradora. Praças, igrejas, Câmara e Cadeia e minas permitem observar, em escala mais compacta, como uma vila colonial era estruturada. A parada complementa Ouro Preto sem simplesmente repeti-la: Mariana oferece outra leitura do poder civil, da arte sacra, da música e da própria mineração."
       },
       {
         "name": "Congonhas",
@@ -956,7 +1066,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Santuário do Bom Jesus de Matosinhos? Complexo religioso setecentista construído no alto de uma colina e reconhecido como Patrimônio Mundial. O valor está no conjunto formado pela basílica, adro, profetas e capelas. Congonhas oferece alto valor histórico com logística simples: o conjunto principal está concentrado no santuário. Por isso cabe naturalmente no deslocamento entre Ouro Preto/BH e São João del-Rei/Tiradentes. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Doze Profetas",
@@ -966,7 +1077,8 @@
             "estimatedDuration": "40 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Doze Profetas? Doze esculturas monumentais em pedra-sabão executadas por Aleijadinho e sua oficina. A disposição das figuras no adro faz parte da obra e é considerada um dos ápices do barroco brasileiro. Os Profetas são tratados como obra indispensável de Aleijadinho e como um dos símbolos do barroco brasileiro. Ver as esculturas no local e na disposição concebida para o adro é diferente de conhecê-las por fotografias. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Passos da Paixão / Via Crucis",
@@ -976,7 +1088,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Passos da Paixão / Via Crucis? Seis capelas guardam grupos de esculturas policromadas representando cenas da Paixão de Cristo. Permitem observar Aleijadinho também como escultor de figuras dramáticas em madeira. Complementam os Profetas e formam uma narrativa artística completa. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Sala dos Milagres / ex-votos",
@@ -986,7 +1099,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Sala dos Milagres / ex-votos? Reúne objetos deixados por fiéis em agradecimento por graças alcançadas, documentando séculos de religiosidade popular. Acrescenta a dimensão humana e devocional ao conjunto monumental. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Museu de Congonhas",
@@ -996,9 +1110,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Museu de Congonhas? Museu dedicado à interpretação do Santuário, da peregrinação, da devoção e da obra de Aleijadinho. Ajuda a compreender o conjunto antes ou depois de observá-lo ao ar livre. Roteiros oficiais o incluem porque fornece contexto: explica por que o Santuário existe, como a peregrinação se desenvolveu e por que Profetas e Passos são tão importantes. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Congonhas concentra em um único conjunto uma das expressões mais importantes do barroco brasileiro. O Santuário do Bom Jesus, os Profetas e os Passos da Paixão transformam a obra de Aleijadinho em uma experiência espacial: as esculturas foram concebidas para serem vistas naquele percurso, e não isoladamente. É uma parada especialmente eficiente para o viajante porque entrega arte, religiosidade popular e história em uma área relativamente concentrada."
       },
       {
         "name": "São João del-Rei",
@@ -1012,7 +1128,8 @@
             "estimatedDuration": "2–3 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Centro Histórico? Pontes de pedra, casarões e igrejas mostram uma cidade colonial que continuou economicamente ativa depois do ciclo do ouro, ao contrário de núcleos que ficaram quase congelados no século XVIII. São João del-Rei não ficou presa ao século XVIII: ouro, comércio, ferrovia, política e música continuaram moldando a cidade. As agências a usam justamente para mostrar essa continuidade histórica. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja de São Francisco de Assis",
@@ -1022,7 +1139,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja de São Francisco de Assis? Grande templo rococó com projeto modificado por Aleijadinho, cercado por jardim de Burle Marx. É uma das obras arquitetônicas mais marcantes da cidade. É a principal parada artística dos city tours locais. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igrejas e tradição musical",
@@ -1032,7 +1150,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igrejas e tradição musical? A cidade mantém antigas orquestras e uma forte tradição de música sacra associada às celebrações religiosas. A musicalidade é um dos diferenciais usados pelos roteiros oficiais de Minas. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Estação da Estrada de Ferro Oeste de Minas",
@@ -1042,7 +1161,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Estação da Estrada de Ferro Oeste de Minas? Complexo ferroviário histórico com locomotivas, vagões e memória da ferrovia inaugurada no século XIX. Prepara e contextualiza a experiência da Maria Fumaça. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Maria Fumaça São João del-Rei–Tiradentes",
@@ -1052,7 +1172,8 @@
             "estimatedDuration": "1h15 só ida",
             "publishedDuration": "45–50 min por trecho",
             "oneYearOld": "Sim",
-            "accessibility": "Sim — vagões adaptados e rampas; avisar na reserva"
+            "accessibility": "Sim — vagões adaptados e rampas; avisar na reserva",
+            "guideBriefing": "Por que conhecer Maria Fumaça São João del-Rei–Tiradentes? Viagem em trem histórico por cerca de 12 km entre as duas cidades, margeando o Rio das Mortes e a Serra de São José. O próprio deslocamento torna-se atração. É popular porque resolve duas coisas ao mesmo tempo: desloca o visitante entre duas cidades históricas e transforma o trajeto em atração. A paisagem e o equipamento ferroviário histórico tornam o percurso parte do passeio. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Artesanato em estanho",
@@ -1062,7 +1183,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Artesanato em estanho? São João del-Rei tornou-se referência brasileira na produção artesanal de peças de estanho. Acrescenta uma tradição produtiva local ao roteiro histórico. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Ponte da Cadeia",
@@ -1072,7 +1194,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Ponte da Cadeia? Ponte de pedra sobre o Córrego do Lenheiro, parte da infraestrutura histórica que conectava os setores da antiga vila. Walking tours a utilizam como ponto de leitura da formação urbana: ela permite explicar circulação, cursos d'água e expansão da cidade. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Teatro Municipal",
@@ -1082,7 +1205,8 @@
             "estimatedDuration": "40 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Teatro Municipal? Teatro histórico que representa a vida cultural urbana de São João del-Rei para além das igrejas. É incluído para mostrar que a cidade desenvolveu vida cultural e instituições urbanas importantes, especialmente no século XIX. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Museu Regional",
@@ -1092,7 +1216,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Museu Regional? Instalado em grande sobrado colonial, reúne mobiliário, arte sacra, utensílios e objetos do cotidiano dos séculos XVIII e XIX. Dá aos guias material concreto para explicar como se vivia dentro das casas que o visitante vê pelas ruas. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Memorial Tancredo Neves",
@@ -1102,7 +1227,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Memorial Tancredo Neves? Espaço dedicado à trajetória de Tancredo Neves, natural de São João del-Rei, e ao processo político brasileiro que culminou na redemocratização. Leva o roteiro do período colonial ao Brasil contemporâneo e explica por que São João del-Rei também é relevante para a história política republicana. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Solar dos Neves / Sobrado Lustosa",
@@ -1112,7 +1238,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Solar dos Neves / Sobrado Lustosa? Casarões históricos associados à família Neves e ao tecido urbano tradicional da cidade. Aparecem nos walking tours porque permitem contar história política e arquitetura doméstica enquanto o grupo percorre o centro. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Museu da FEB",
@@ -1122,7 +1249,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Museu da FEB? Acervo dedicado à participação brasileira na Segunda Guerra Mundial e aos expedicionários da região. É incluído em roteiros locais para apresentar uma camada do século XX que normalmente não aparece nos circuitos coloniais. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja Nossa Senhora do Carmo",
@@ -1132,7 +1260,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja Nossa Senhora do Carmo? Igreja rococó de fachada marcante e importante conjunto de arte sacra, ligada à Ordem Terceira do Carmo. É uma das principais igrejas do walking tour e permite comparar diferentes irmandades e estilos religiosos da cidade. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Catedral Basílica Nossa Senhora do Pilar",
@@ -1142,7 +1271,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Catedral Basílica Nossa Senhora do Pilar? Matriz histórica com interior ricamente ornamentado, ligada à formação religiosa e urbana de São João del-Rei. É parada central porque materializa a riqueza do ciclo do ouro e a continuidade das tradições religiosas locais. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Casa de Bárbara Heliodora",
@@ -1152,9 +1282,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Casa de Bárbara Heliodora? Imóvel associado à poetisa Bárbara Heliodora, figura ligada ao ambiente intelectual e familiar da Inconfidência Mineira. Entra nos roteiros para conectar a Inconfidência a personagens e residências concretas da cidade, ampliando a narrativa além de Tiradentes. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? São João del-Rei acrescenta ao roteiro a leitura de história, barroco, música, ferrovia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Tiradentes",
@@ -1168,7 +1300,8 @@
             "estimatedDuration": "2–3 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Centro Histórico? Núcleo colonial muito preservado, com ruas de pedra, sobrados e igrejas aos pés da Serra de São José. A escala compacta permite compreender a cidade caminhando. Tiradentes funciona muito bem para pernoite: o centro é caminhável, há restaurantes e vida noturna tranquila, e as atrações podem ser visitadas sem veículo. Por isso aparece frequentemente como base dos circuitos. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Matriz de Santo Antônio",
@@ -1178,7 +1311,8 @@
             "estimatedDuration": "45 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Matriz de Santo Antônio? Igreja com interior ricamente dourado e fachada atribuída a Aleijadinho. É o principal monumento religioso da cidade e domina a paisagem urbana. Concentra arte barroca e uma vista privilegiada do núcleo histórico. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Chafariz de São José",
@@ -1188,7 +1322,8 @@
             "estimatedDuration": "20 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Chafariz de São José? Chafariz setecentista que abastecia moradores, animais e viajantes. Mostra de maneira simples como funcionava a infraestrutura urbana colonial. É uma parada rápida que ajuda o guia a explicar a vida cotidiana do século XVIII. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Museu Casa Padre Toledo",
@@ -1198,7 +1333,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Museu Casa Padre Toledo? Solar ligado ao inconfidente Padre Toledo, onde ocorreram encontros associados à conspiração. A casa dá endereço e ambiente doméstico à conspiração. Para agências que já passaram pelo Museu da Inconfidência, ela continua a mesma narrativa em outro cenário. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Serra de São José",
@@ -1208,7 +1344,8 @@
             "estimatedDuration": "meio dia",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Serra de São José? Formação montanhosa que envolve a cidade, com trilhas, mirantes e áreas de preservação. Acrescenta natureza à permanência em uma cidade predominantemente histórica. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Gastronomia",
@@ -1218,7 +1355,8 @@
             "estimatedDuration": "2 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Gastronomia? A cidade concentra restaurantes, chefs e festivais gastronômicos que reinterpretam ingredientes e pratos mineiros. As agências conseguem combinar visita histórica com noite livre e experiência gastronômica. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Largo das Forras",
@@ -1228,7 +1366,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Largo das Forras? Praça central e tradicional ponto de encontro da cidade. Além do casario, restaurantes e comércio, seu nome é associado à presença de pessoas negras alforriadas e o espaço recebeu paisagismo de Burle Marx no século XX. Agências o usam como ponto de chegada, orientação e tempo livre: dali o visitante entra a pé no centro histórico e também percebe a Tiradentes viva, não apenas monumental. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Rua Direita",
@@ -1238,7 +1377,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Rua Direita? Principal eixo histórico, cercado por sobrados, ateliês, lojas e restaurantes. Caminhar por ela permite observar a arquitetura doméstica e comercial, não apenas edifícios religiosos. Faz parte dos passeios porque conecta várias atrações importantes e concentra artesanato e gastronomia no próprio percurso. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Museu de Sant'Ana",
@@ -1248,7 +1388,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Museu de Sant'Ana? Funciona na antiga cadeia e reúne centenas de representações de Sant'Ana produzidas em diferentes regiões e períodos. O contraste entre arte sacra e o antigo espaço carcerário também faz parte da experiência. É usado para aprofundar arte sacra sem repetir uma visita a igreja e para aproveitar um edifício histórico central da cidade. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Museu da Liturgia",
@@ -1258,7 +1399,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Museu da Liturgia? Museu dedicado aos objetos, ritos e símbolos da liturgia católica, com centenas de peças sacras. Ajuda o visitante a compreender para que serviam muitos objetos e práticas encontrados nas igrejas visitadas ao longo do circuito mineiro. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja Nossa Senhora do Rosário dos Pretos",
@@ -1268,9 +1410,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja Nossa Senhora do Rosário dos Pretos? Uma das igrejas mais antigas da cidade, construída pela irmandade negra. Sua história revela a organização religiosa da população negra durante a escravidão e amplia a leitura social da cidade colonial. É incluída porque oferece uma narrativa diferente da Matriz de Santo Antônio: em vez da riqueza das elites, permite discutir irmandades negras, escravidão e devoção. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Tiradentes acrescenta ao roteiro a leitura de história, arquitetura, gastronomia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Bichinho / Prados",
@@ -1284,7 +1428,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Oficina de Agosto? Oficina que ajudou a transformar Bichinho em polo de artesanato e design, trabalhando madeira, metal, tecido e materiais reaproveitados. É um dos nomes que consolidaram a vila como extensão artística de Tiradentes. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Ateliês e oficinas",
@@ -1294,7 +1439,8 @@
             "estimatedDuration": "1h30–2 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Ateliês e oficinas? Pequenos produtores trabalham móveis, esculturas, cerâmica, madeira e objetos decorativos; a graça é visitar os locais de produção. Mostra uma cultura artesanal viva, e não apenas patrimônio antigo. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Cachaçarias e produtos locais",
@@ -1304,9 +1450,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Cachaçarias e produtos locais? Produção artesanal regional que pode ser conhecida e degustada no próprio distrito. Complementa o passeio com gastronomia e produção local. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Bichinho / Prados acrescenta ao roteiro a leitura de artesanato, cultura popular. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Serro",
@@ -1320,7 +1468,8 @@
             "estimatedDuration": "2–3 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Centro Histórico? Conjunto de casarões, igrejas e ladeiras de uma das primeiras vilas do norte minerador de Minas. É um núcleo menos monumental e mais preservado na escala cotidiana. O Serro é usado porque preserva um elo histórico do próprio caminho que levava às áreas diamantíferas. Também oferece patrimônio e gastronomia suficientes para que a parada tenha valor próprio. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igrejas coloniais",
@@ -1330,7 +1479,8 @@
             "estimatedDuration": "1h30",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igrejas coloniais? Templos distribuídos pelas ladeiras documentam irmandades, arte sacra e a sociedade mineradora local. Dão conteúdo histórico a uma parada que também é gastronômica. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Queijo do Serro",
@@ -1340,9 +1490,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Queijo do Serro? Queijo artesanal produzido há séculos com técnicas tradicionais; a região é uma das referências da cultura queijeira mineira. O queijo transforma patrimônio imaterial em experiência sensorial. Agências conseguem ligar história rural, técnica tradicional e degustação em uma mesma parada. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Serro nasceu no avanço da mineração pelo antigo Serro Frio e integra o Caminho dos Diamantes da Estrada Real. A cidade preserva arquitetura, igrejas e uma paisagem urbana que ajudam a acompanhar o deslocamento da ocupação mineradora em direção a Diamantina. Ao mesmo tempo, o Queijo do Serro mostra uma herança que continuou viva quando a mineração perdeu força. A parada une patrimônio colonial e cultura alimentar."
       },
       {
         "name": "Milho Verde",
@@ -1356,7 +1508,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja de Nossa Senhora do Rosário? Pequena igreja branca isolada diante da serra, uma das imagens mais emblemáticas da Estrada Real. O valor está tanto no templo quanto na paisagem ao redor. É um cartão-postal muito eficiente em roteiros do Caminho dos Diamantes. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Núcleo histórico",
@@ -1366,7 +1519,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Núcleo histórico? Casario e ruas preservam a escala de um antigo povoado ligado à mineração de ouro e diamantes. Oferece experiência de vila histórica mais tranquila que os grandes centros. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Cachoeiras",
@@ -1376,9 +1530,11 @@
             "estimatedDuration": "meio dia",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Cachoeiras? Quedas e poços próximos ao povoado permitem alternar patrimônio e natureza no mesmo dia. Justificam permanecer mais tempo na região em vez de apenas atravessá-la. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Milho Verde é um antigo arraial da região do Serro Frio onde patrimônio e paisagem permanecem muito próximos. O distrito está ligado às antigas rotas mineradoras, à história de Chica da Silva e a pequenas igrejas inseridas na Serra do Espinhaço. A experiência é diferente das grandes cidades históricas: aqui interessa perceber a escala de um povoado, sua relação com as montanhas, a água e a vida cotidiana."
       },
       {
         "name": "São Gonçalo do Rio das Pedras",
@@ -1392,7 +1548,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Núcleo histórico? Pequeno povoado surgido nos caminhos da mineração, preservando arquitetura simples e ritmo rural. É uma parada autêntica no trajeto da Estrada Real entre Serro e Diamantina. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igrejas e capelas",
@@ -1402,7 +1559,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igrejas e capelas? Pequenos templos ajudam a contar a formação religiosa e comunitária dos povoados mineradores. Complementam a narrativa das grandes igrejas barrocas com patrimônio rural. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Cachoeiras e Serra do Espinhaço",
@@ -1412,9 +1570,11 @@
             "estimatedDuration": "meio dia",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Cachoeiras e Serra do Espinhaço? Trilhas, cursos d'água e campos rupestres cercam o distrito. Permitem inserir natureza sem abandonar o eixo histórico da viagem. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "São Gonçalo do Rio das Pedras preserva a escala de um povoado formado no contexto colonial do Serro Frio e das rotas fiscalizadas pela Coroa entre Serro e a região diamantífera. A parada ajuda a entender que a Estrada Real não era feita apenas de grandes vilas: pequenos núcleos, caminhos, postos de circulação e comunidades também sustentavam a ocupação do território. Hoje essa história aparece junto à paisagem da Serra do Espinhaço."
       },
       {
         "name": "Biribiri",
@@ -1428,7 +1588,8 @@
             "estimatedDuration": "2 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Vila de Biribiri? Vila operária do século XIX criada em torno de uma fábrica têxtil, com casas, igreja e traçado preservados. É uma rara oportunidade de ver patrimônio industrial dentro de uma paisagem natural. Biribiri acrescenta a industrialização do século XIX à viagem: depois de mineração colonial, o visitante vê uma comunidade organizada em torno de uma fábrica têxtil. A proximidade de Diamantina facilita um bate-volta. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Cachoeiras",
@@ -1438,7 +1599,8 @@
             "estimatedDuration": "meio dia",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Cachoeiras? Poços e quedas d'água dentro do Parque Estadual do Biribiri. Depois de um city tour de ruas, igrejas e museus, oferecem uma mudança real de ritmo e contato com a paisagem do Espinhaço. Operadoras de Vesperata combinam explicitamente city tour histórico-cultural com trilhas e cachoeiras em Biribiri, equilibrando patrimônio e natureza dentro da mesma estadia. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Trilhas do Parque Estadual do Biribiri",
@@ -1448,9 +1610,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Trilhas do Parque Estadual do Biribiri? Caminhos pelo cerrado e campos rupestres levam a cursos d'água, mirantes e áreas naturais em torno da antiga vila. São incluídas para transformar Biribiri em experiência ativa, e não apenas visita fotográfica à vila histórica. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Biribiri conta um capítulo posterior ao ciclo colonial: a industrialização mineira do século XIX. A vila surgiu em torno de uma fábrica de tecidos fundada em 1876 e preserva a relação entre comunidade fabril, energia hidráulica e isolamento geográfico. Cercada pelo Parque Estadual do Biribiri, permite combinar história industrial com rios, campos rupestres e cachoeiras — um contraste interessante depois do centro colonial de Diamantina."
       },
       {
         "name": "Curralinho / Extração (Diamantina)",
@@ -1464,7 +1628,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Gruta do Salitre? Formação rochosa de grande impacto próxima a Diamantina, com paredões e cavidades associados à paisagem mineral da região. A visita ajuda a perceber que a história diamantífera nasceu de uma geologia muito particular. Operadoras de ecoturismo de Diamantina a combinam com city tour e Biribiri para ligar a história da mineração à paisagem que a produziu. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Experiência de garimpo",
@@ -1474,9 +1639,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Experiência de garimpo? Atividade interpretativa ligada às técnicas e à memória da procura por ouro e diamantes na região. O interesse é compreender na prática o trabalho que deu origem aos povoados e à economia local. Aparece em pacotes porque transforma a narrativa do ciclo dos diamantes em experiência participativa, em vez de apenas museológica. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Curralinho / Extração (Diamantina) acrescenta ao roteiro a leitura de geologia, garimpo, natureza. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Conceição do Mato Dentro",
@@ -1490,7 +1657,8 @@
             "estimatedDuration": "1 h mirante / 4 h parte baixa",
             "publishedDuration": "Mirante: 15–30 min de caminhada; parte baixa: ~3 h de passeio",
             "oneYearOld": "Não — acesso aos atrativos tem restrição para crianças até 10 anos",
-            "accessibility": "Não/restrito para dificuldade de mobilidade; norma cita idosos e PCD"
+            "accessibility": "Não/restrito para dificuldade de mobilidade; norma cita idosos e PCD",
+            "guideBriefing": "Por que conhecer Cachoeira do Tabuleiro? Queda monumental despencando de um paredão da Serra do Espinhaço. A escala da formação rochosa é o principal motivo da visita. Tabuleiro é incluída porque oferece uma mudança de escala: sai-se do patrimônio construído para uma paisagem monumental do Espinhaço. Pode justificar uma etapa inteira do roteiro. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Centro histórico",
@@ -1500,7 +1668,8 @@
             "estimatedDuration": "1h30",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Centro histórico? Igrejas e casarões registram a ocupação do antigo caminho entre as áreas mineradoras. Mantém continuidade histórica entre natureza e Estrada Real. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Serra do Espinhaço",
@@ -1510,9 +1679,11 @@
             "estimatedDuration": "meio dia",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Serra do Espinhaço? Cadeia montanhosa de campos rupestres, cânions, cachoeiras e grande biodiversidade. Faz o percurso até Diamantina ser também um roteiro paisagístico. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Conceição do Mato Dentro acrescenta ao roteiro a leitura de natureza, estrada real, história. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Catas Altas",
@@ -1526,7 +1697,8 @@
             "estimatedDuration": "2–3 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Centro Histórico? Pequeno núcleo colonial aos pés de enormes paredões da Serra do Caraça. O contraste entre casario e montanha é a principal característica da cidade. É uma parada visualmente forte e fácil de combinar com Caraça e Santa Bárbara. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Matriz de Nossa Senhora da Conceição",
@@ -1536,7 +1708,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Matriz de Nossa Senhora da Conceição? Igreja setecentista que domina a praça central e preserva elementos artísticos do período colonial. É o principal marco histórico do pequeno centro. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Serra do Caraça",
@@ -1546,9 +1719,11 @@
             "estimatedDuration": "meio dia",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Serra do Caraça? Maciço montanhoso que forma o cenário da cidade e oferece trilhas e paisagens. Liga a cidade histórica ao circuito natural do Caraça. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Catas Altas acrescenta ao roteiro a leitura de história, montanha, gastronomia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Santa Bárbara",
@@ -1562,7 +1737,8 @@
             "estimatedDuration": "45 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Matriz de Santo Antônio? Igreja setecentista cujo teto da capela-mor possui pintura de Mestre Ataíde. Coloca uma obra importante de Ataíde fora do eixo mais óbvio Ouro Preto–Mariana. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Centro Histórico",
@@ -1572,9 +1748,11 @@
             "estimatedDuration": "2–3 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Centro Histórico? Casario e igrejas ligados à expansão da mineração no início do século XVIII. Funciona como cidade histórica e porta de entrada para o Caraça. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Santa Bárbara acrescenta ao roteiro a leitura de história, barroco, natureza. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Santuário do Caraça",
@@ -1588,7 +1766,8 @@
             "estimatedDuration": "2 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Santuário e igreja neogótica? Complexo religioso isolado em um vale cercado por montanhas. A igreja neogótica contrasta com o barroco predominante nas outras cidades do roteiro. Agências reservam tempo ao Caraça porque hospedagem, santuário, história e reserva natural acontecem no mesmo lugar. É uma mudança completa de ritmo em relação aos city tours. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Ruínas do antigo colégio",
@@ -1598,7 +1777,8 @@
             "estimatedDuration": "40 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Ruínas do antigo colégio? Restos preservados do tradicional colégio destruído por incêndio em 1968, que formou figuras importantes da história brasileira. Acrescentam história educacional ao conjunto religioso. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Trilhas, cachoeiras e grutas",
@@ -1608,7 +1788,8 @@
             "estimatedDuration": "meio dia",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Trilhas, cachoeiras e grutas? A reserva particular protege milhares de hectares de Mata Atlântica e Cerrado em relevo montanhoso. Permite dedicar um ou dois dias a natureza dentro do circuito histórico. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Observação do lobo-guará",
@@ -1618,9 +1799,11 @@
             "estimatedDuration": "noite / requer pernoite",
             "publishedDuration": "A partir de 19h30; duração indeterminada",
             "oneYearOld": "Sim, acompanhada — Caraça admite crianças e isenta até 5 anos",
-            "accessibility": "Sim, mas espera é noturna e pode ser longa"
+            "accessibility": "Sim, mas espera é noturna e pode ser longa",
+            "guideBriefing": "Por que conhecer Observação do lobo-guará? O santuário tornou-se famoso pela visita noturna de lobos-guarás atraídos para a área próxima à escadaria. A aparição não é garantida, pois são animais silvestres. É uma experiência emblemática que diferencia o Caraça de qualquer outra parada do roteiro. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Santuário do Caraça acrescenta ao roteiro a leitura de história, religiosidade, natureza. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Sabará",
@@ -1634,7 +1817,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja Nossa Senhora do Ó? Pequena igreja do início do século XVIII com interior ricamente decorado e pinturas de influência oriental, incomuns no barroco mineiro. É pequena, singular e muito diferente das grandes matrizes do circuito. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja Nossa Senhora do Carmo",
@@ -1644,7 +1828,8 @@
             "estimatedDuration": "30 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja Nossa Senhora do Carmo? Igreja com elementos escultóricos associados a Aleijadinho. Permite contato com obras do artista muito perto de Belo Horizonte. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Matriz Nossa Senhora da Conceição",
@@ -1654,7 +1839,8 @@
             "estimatedDuration": "45 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Matriz Nossa Senhora da Conceição? Grande templo que reúne diferentes fases da decoração colonial e ajuda a perceber a evolução do barroco mineiro. É uma das igrejas historicamente mais importantes da antiga Vila Real de Sabará. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Teatro Municipal",
@@ -1664,7 +1850,8 @@
             "estimatedDuration": "40 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Teatro Municipal? Teatro histórico do século XIX, raro exemplar preservado desse tipo de equipamento cultural. Diversifica a visita para além de igrejas. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Solar do Padre Correia",
@@ -1674,7 +1861,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Solar do Padre Correia? Grande sobrado do século XVIII ligado à elite local e à administração da antiga vila. A arquitetura doméstica mostra como viviam famílias de posição elevada durante o ciclo do ouro. A Primotur o coloca no city tour porque acrescenta arquitetura civil a um roteiro que poderia ficar restrito a igrejas. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja Nossa Senhora do Rosário dos Pretos",
@@ -1684,7 +1872,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja Nossa Senhora do Rosário dos Pretos? Igreja iniciada pela irmandade negra e marcada por uma história construtiva longa. É testemunho material da presença e organização da população negra em Sabará. Agências a incluem para contar a cidade também pela experiência das irmandades negras e da sociedade escravista. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Chafariz do Kaquende",
@@ -1694,7 +1883,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Chafariz do Kaquende? Chafariz público histórico que abasteceu moradores da antiga vila. É um vestígio simples, mas muito concreto, da infraestrutura cotidiana colonial. Funciona como parada curta que ajuda o guia a explicar como a cidade operava no dia a dia, fora dos edifícios monumentais. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Rua Dom Pedro II",
@@ -1704,9 +1894,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Rua Dom Pedro II? Rua histórica cercada por casario e edifícios civis, usada como eixo de caminhada pelo centro. Está nos roteiros porque conecta as atrações e permite observar a escala urbana e a arquitetura civil de Sabará durante o próprio deslocamento. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Sabará acrescenta ao roteiro a leitura de barroco, história colonial. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Caeté",
@@ -1720,7 +1912,8 @@
             "estimatedDuration": "2 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Serra da Piedade? Pico com vista panorâmica excepcional sobre as montanhas mineiras; em dias claros, o horizonte alcança dezenas de quilômetros. É uma das grandes paradas paisagísticas próximas de Belo Horizonte. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Santuário Nossa Senhora da Piedade",
@@ -1730,9 +1923,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Santuário Nossa Senhora da Piedade? Pequeno santuário histórico no topo da serra, importante centro de peregrinação e sede da padroeira de Minas Gerais. Une paisagem, religiosidade e patrimônio em uma única parada. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Caeté acrescenta ao roteiro a leitura de religiosidade, montanha, história. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Capitólio",
@@ -1746,7 +1941,8 @@
             "estimatedDuration": "meio dia ou dia",
             "publishedDuration": "—",
             "oneYearOld": "Sim no passeio de lancha — operadores aceitam 1–4 anos",
-            "accessibility": "Sim, condicionado ao embarque/operador"
+            "accessibility": "Sim, condicionado ao embarque/operador",
+            "guideBriefing": "Por que conhecer Cânions de Furnas? Paredões rochosos cortados pelas águas do reservatório de Furnas. A combinação de rocha vertical e água é a imagem que tornou a região famosa. Capitólio entra quando a agência quer equilibrar muitos dias de cidades históricas com água e paisagem. Normalmente merece ao menos um dia próprio porque as atrações são espalhadas. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Passeio pelo Lago de Furnas",
@@ -1756,7 +1952,8 @@
             "estimatedDuration": "4 h / dia inteiro",
             "publishedDuration": "—",
             "oneYearOld": "Sim — operadores aceitam 1–4 anos",
-            "accessibility": "Sim, condicionado ao embarque/operador"
+            "accessibility": "Sim, condicionado ao embarque/operador",
+            "guideBriefing": "Por que conhecer Passeio pelo Lago de Furnas? Passeios de barco permitem entrar nos braços do lago e observar cânions e cachoeiras a partir da água. É a experiência central vendida pelas operadoras na região. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Mirantes dos cânions",
@@ -1766,7 +1963,8 @@
             "estimatedDuration": "2 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Mirantes dos cânions? Pontos elevados permitem compreender a escala do relevo e do reservatório de cima. Complementam a perspectiva obtida no passeio de barco. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Cachoeiras",
@@ -1776,9 +1974,11 @@
             "estimatedDuration": "meio dia",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Cachoeiras? Diversos complexos de quedas e piscinas naturais ficam espalhados pela região. Justificam mais de um dia no destino. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Capitólio acrescenta ao roteiro a leitura de cânions, água, natureza. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "São Roque de Minas / Serra da Canastra",
@@ -1792,7 +1992,8 @@
             "estimatedDuration": "1 dia",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Parque Nacional da Serra da Canastra? Chapadões, campos de altitude, cerrado e fauna formam uma das paisagens mais características do interior mineiro. A Canastra é um destino de paisagem e estrada rural; as agências organizam os dias em torno dos acessos ao parque, fauna, cachoeiras e fazendas produtoras. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Casca d'Anta",
@@ -1802,7 +2003,8 @@
             "estimatedDuration": "meio dia",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Casca d'Anta? Grande queda do rio São Francisco despencando da borda da serra. É o cartão-postal do parque. É a atração natural mais reconhecida da Canastra. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Nascente histórica do São Francisco",
@@ -1812,7 +2014,8 @@
             "estimatedDuration": "1 h + deslocamento",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Nascente histórica do São Francisco? Ponto tradicionalmente identificado como nascente do rio São Francisco dentro do parque. Dá significado geográfico e cultural à visita, além da paisagem. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Queijarias de Canastra",
@@ -1822,9 +2025,11 @@
             "estimatedDuration": "2 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Queijarias de Canastra? Fazendas mantêm métodos tradicionais de produção do queijo artesanal da Canastra, permitindo conhecer produção, maturação e degustação. Gastronomia e contato com produtores são parte essencial dos roteiros da região. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? São Roque de Minas / Serra da Canastra acrescenta ao roteiro a leitura de parque nacional, cachoeiras, gastronomia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Uberaba / Peirópolis",
@@ -1838,7 +2043,8 @@
             "estimatedDuration": "1–2 h",
             "publishedDuration": "—",
             "oneYearOld": "Sim",
-            "accessibility": "Sim — informações turísticas registram acessibilidade em estacionamento, entrada e sanitário; confirmar condições das áreas externas"
+            "accessibility": "Sim — informações turísticas registram acessibilidade em estacionamento, entrada e sanitário; confirmar condições das áreas externas",
+            "guideBriefing": "Por que conhecer Museu dos Dinossauros / Complexo Cultural e Científico de Peirópolis? Museu ligado à UFTM em uma das áreas paleontológicas mais importantes do Brasil. O acervo e as exposições apresentam fósseis encontrados na região e reconstituições da fauna do Cretáceo, permitindo entender por que o Triângulo Mineiro é referência em paleontologia. É uma parada de alto valor educativo e visual praticamente no eixo da BR-262. Acrescenta ao roteiro um tema completamente diferente do barroco e da mineração colonial: a história natural de Minas milhões de anos antes da ocupação humana. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Geossítio de Peirópolis",
@@ -1848,9 +2054,11 @@
             "estimatedDuration": "30–60 min",
             "publishedDuration": "—",
             "oneYearOld": "Sim, com acompanhamento",
-            "accessibility": "Com ressalvas — áreas externas podem ter piso irregular"
+            "accessibility": "Com ressalvas — áreas externas podem ter piso irregular",
+            "guideBriefing": "Por que conhecer Geossítio de Peirópolis? Área onde a paisagem e os achados fósseis ajudam a conectar o museu ao local real das pesquisas paleontológicas. Peirópolis reúne patrimônio científico, antiga estação ferroviária e memória da comunidade que se desenvolveu no entorno. Complementa o museu sem exigir um grande desvio rodoviário e transforma a parada em experiência de território, não apenas de exposição. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Uberaba / Peirópolis acrescenta ao roteiro a leitura de paleontologia, geologia e história científica. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Araxá",
@@ -1864,7 +2072,8 @@
             "estimatedDuration": "2 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Grande Hotel e Termas de Araxá? Complexo monumental inaugurado na década de 1940 para transformar Araxá em destino termal de luxo. Arquitetura, jardins e interiores fazem a visita valer mesmo sem usar os serviços termais. Araxá aparece como etapa porque possui infraestrutura e uma atração monumental capaz de justificar o desvio. O Grande Hotel também conta a história do auge brasileiro das estâncias hidrominerais. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Complexo do Barreiro",
@@ -1874,7 +2083,8 @@
             "estimatedDuration": "2 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Complexo do Barreiro? Área de fontes minerais, jardins e edifícios históricos que explica por que Araxá se tornou uma estância hidromineral. Dá contexto ao Grande Hotel e à origem do turismo local. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Museu Dona Beja",
@@ -1884,7 +2094,8 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Museu Dona Beja? Museu instalado em casarão histórico ligado à memória de Ana Jacinta de São José, a Dona Beja, personagem cercada por história e lendas regionais. Acrescenta narrativa histórica e personagem local ao roteiro termal. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Museu Calmon Barreto / Memorial de Araxá",
@@ -1894,7 +2105,8 @@
             "estimatedDuration": "30–60 min",
             "publishedDuration": "—",
             "oneYearOld": "Sim",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Museu Calmon Barreto / Memorial de Araxá? Equipamentos culturais dedicados à história local e à produção artística de Calmon Barreto, ajudando a entender Araxá além das termas e da figura de Dona Beja. Aparecem em roteiros turísticos oficiais como parte do núcleo histórico-cultural da cidade e dão contexto ao período anterior e paralelo ao desenvolvimento do Barreiro. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Igreja de São Domingos",
@@ -1904,7 +2116,8 @@
             "estimatedDuration": "20–30 min",
             "publishedDuration": "—",
             "oneYearOld": "Sim",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Igreja de São Domingos? Igreja histórica associada à formação religiosa e urbana de Araxá, preservando referências da arquitetura e religiosidade local. Integra circuitos culturais de Araxá e ajuda a conectar a história urbana ao restante do roteiro mineiro. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Parque do Cristo",
@@ -1914,7 +2127,8 @@
             "estimatedDuration": "30–60 min",
             "publishedDuration": "—",
             "oneYearOld": "Sim, com acompanhamento",
-            "accessibility": "Com ressalvas — confirmar acesso sem escadas"
+            "accessibility": "Com ressalvas — confirmar acesso sem escadas",
+            "guideBriefing": "Por que conhecer Parque do Cristo? Mirante elevado sobre Araxá, com vista panorâmica da cidade e do entorno. Funciona como parada curta de leitura da paisagem e orientação geográfica antes ou depois das atrações históricas. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Fontes Dona Beja e Andrade Júnior",
@@ -1924,9 +2138,11 @@
             "estimatedDuration": "20–40 min",
             "publishedDuration": "—",
             "oneYearOld": "Sim",
-            "accessibility": "Sim, condicionado ao acesso do complexo"
+            "accessibility": "Sim, condicionado ao acesso do complexo",
+            "guideBriefing": "Por que conhecer Fontes Dona Beja e Andrade Júnior? Fontes minerais do Barreiro ligadas à tradição hidrotermal que transformou Araxá em destino de águas e levou à construção do grande complexo turístico. São parte essencial da narrativa das águas minerais; explicam por que o Barreiro e o Grande Hotel existem naquele local. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Araxá acrescenta ao roteiro a leitura de termalismo, arquitetura, história. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Itabirito",
@@ -1940,7 +2156,8 @@
             "estimatedDuration": "2 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Centro histórico e igrejas? Antigo núcleo minerador entre Belo Horizonte e Ouro Preto, com patrimônio religioso e urbano ligado ao ciclo do ouro. Itabirito funciona bem como escala de baixo custo logístico no eixo BH–Ouro Preto. Agências podem acrescentar patrimônio e gastronomia sem consumir um dia inteiro. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           },
           {
             "name": "Pastel de angu",
@@ -1950,9 +2167,11 @@
             "estimatedDuration": "45 min",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Pastel de angu? Especialidade tradicional feita com massa de angu de milho e diferentes recheios, reconhecida como patrimônio cultural local. Dá uma razão gastronômica rápida para interromper o deslocamento. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Itabirito acrescenta ao roteiro a leitura de estrada real, história, gastronomia. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       },
       {
         "name": "Amarantina (Ouro Preto)",
@@ -1966,9 +2185,11 @@
             "estimatedDuration": "1 h",
             "publishedDuration": "—",
             "oneYearOld": "—",
-            "accessibility": "—"
+            "accessibility": "—",
+            "guideBriefing": "Por que conhecer Núcleo histórico? Distrito antigo no caminho de Ouro Preto, com igreja, casario e identidade própria ligada às rotas coloniais. Amarantina é útil quando o circuito quer mostrar que o patrimônio colonial não se limita às sedes municipais. Como distrito no corredor de Ouro Preto, pode ser encaixada sem transformar o dia em outro destino principal. Para o visitante, este é o ponto principal para decidir: se essa história, experiência ou paisagem fizer sentido para o seu grupo, inclua a atração; se não, ela pode ser retirada sem perder as demais possibilidades da parada."
           }
-        ]
+        ],
+        "guideBriefing": "Por que considerar esta parada? Amarantina (Ouro Preto) acrescenta ao roteiro a leitura de patrimônio, cultura popular. Em uma viagem por Minas Gerais, a parada ajuda a entender como paisagem, economia, fé, cultura e modos de vida mudam de uma região para outra. Use este briefing como introdução: se essa camada da viagem despertar seu interesse, vale incluir a cidade e então escolher os atrativos que mais combinam com o grupo."
       }
     ]
   }
