@@ -40,8 +40,11 @@ def declarations(selector):
     return rule.group(1)
 
 
-assert "display:grid" in declarations(".trip-timeline"), "route timeline must be a grid on desktop too"
-assert "text-align:center" in declarations(".trip-timeline>div"), "each route milestone should read as a separate card"
-for selector in (".trip-timeline small", ".trip-timeline strong", ".trip-timeline span"):
-    assert "display:block" in declarations(selector), f"{selector} must have its own readable line"
-print("desktop trip timeline layout regression: PASS")
+assert "display:flex" in declarations(".trip-facts"), "departure and return should share a text row on desktop"
+assert "flex-wrap:wrap" in declarations(".trip-facts"), "dates should wrap when the sidebar is narrow"
+assert 'document.querySelector(\'.mast\').appendChild(el)' in html, "the trip facts should sit beside the route title"
+summary = html.split("function drawSummary(order)", 1)[1].split("// Numeração compartilhada", 1)[0]
+assert 'class="trip-facts"' in summary
+assert '<b>Saída</b>' in summary and '<b>Retorno previsto</b>' in summary
+assert 'data fixa' not in summary.lower(), "the fixed Diamantina date belongs in the itinerary"
+print("trip header layout regression: PASS")

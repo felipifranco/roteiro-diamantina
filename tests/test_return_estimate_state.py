@@ -32,7 +32,7 @@ class ReturnEstimateStateTests(unittest.TestCase):
             "the return card must not show a date without a current route estimate",
         )
         self.assertTrue(
-            "home===null?'—':fmt(home)" in PAGE,
+            "home===null?'a estimar':" in PAGE,
             "the trip summary must not show a date without a current route estimate",
         )
         self.assertIn(
