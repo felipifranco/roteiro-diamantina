@@ -39,7 +39,7 @@ ATTRACTION_FIELDS = (
 )
 STOP_KINDS = {"inicio", "destino", "natureza", "historia", "opcional", "alerta"}
 STOP_TYPES = {"natureza", "historia"}
-LOCATION_ACCURACIES = {"exact", "street-center", "city-center"}
+LOCATION_ACCURACIES = {"exact", "street-center", "trail-point", "city-center"}
 
 
 def _valid_coordinates(lat, lon):

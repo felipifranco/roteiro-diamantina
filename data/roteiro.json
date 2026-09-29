@@ -449,11 +449,12 @@
           "oneYearOld": "—",
           "accessibility": "—",
           "guideBriefing": "Eixo tradicional do centro, cercado por sobrados que mostram a organização urbana e comercial de Vila Rica. O valor está no conjunto, não em um edifício isolado. Permite que o deslocamento entre atrações seja também parte da visita histórica.",
-          "lat": -20.38567,
-          "lon": -43.50362,
-          "locationAccuracy": "city-center",
+          "lat": -20.3853985,
+          "lon": -43.5045394,
+          "locationAccuracy": "street-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "mapQuery": "Rua Conde de Bobadela (Rua Direita), Ouro Preto MG"
         },
         {
           "name": "Casa dos Contos",
@@ -678,11 +679,12 @@
           "oneYearOld": "—",
           "accessibility": "—",
           "guideBriefing": "Eixo histórico de Mariana com sobrados coloniais que permite perceber o desenho urbano planejado da cidade e a vida civil fora das grandes igrejas. Aparece nos walking tours porque liga as atrações centrais e transforma o deslocamento em leitura da cidade colonial.",
-          "lat": -20.37783,
-          "lon": -43.41633,
-          "locationAccuracy": "city-center",
+          "lat": -20.3775358,
+          "lon": -43.417483,
+          "locationAccuracy": "street-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "mapQuery": "Rua Direita, Centro Histórico, Mariana MG"
         },
         {
           "name": "Órgão Arp Schnitger",
@@ -943,9 +945,9 @@
         },
         {
           "name": "Cachoeira da Grota Seca",
-          "lat": -18.60444,
-          "lon": -43.37945,
-          "locationAccuracy": "city-center",
+          "lat": -18.4192319,
+          "lon": -43.4610846,
+          "locationAccuracy": "exact",
           "catalogName": "Cachoeira da Grota Seca",
           "description": "Cachoeira do Serro incluída em passeio comercial da Estrada Real.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
@@ -956,7 +958,8 @@
           "accessibility": "A confirmar",
           "guideBriefing": "Cachoeira do Serro incluída em passeio comercial da Estrada Real.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "mapQuery": "Cachoeira da Grota Seca, São Gonçalo do Rio das Pedras, Serro MG"
         },
         {
           "name": "Cachoeira do Carijó",
@@ -994,9 +997,9 @@
         },
         {
           "name": "Chácara do Barão",
-          "lat": -18.60444,
-          "lon": -43.37945,
-          "locationAccuracy": "city-center",
+          "lat": -18.6024683,
+          "lon": -43.3808094,
+          "locationAccuracy": "exact",
           "catalogName": "Chácara do Barão",
           "description": "Conjunto histórico incluído no city tour comercial do Serro.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
@@ -1028,9 +1031,9 @@
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
-          "lat": -18.60444,
-          "lon": -43.37945,
-          "locationAccuracy": "city-center",
+          "lat": -18.6052766,
+          "lon": -43.3821884,
+          "locationAccuracy": "exact",
           "catalogName": "Igreja Nossa Senhora do Carmo",
           "description": "Igreja histórica incluída no roteiro comercial do Serro.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
@@ -1361,9 +1364,9 @@
         },
         {
           "name": "Caminho dos Escravos",
-          "lat": -18.24409,
-          "lon": -43.60065,
-          "locationAccuracy": "city-center",
+          "lat": -18.2165745,
+          "lon": -43.5955235,
+          "locationAccuracy": "trail-point",
           "catalogName": "Caminho dos Escravos",
           "description": "Trecho histórico associado às rotas coloniais e à mineração na Serra dos Cristais.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
@@ -1374,7 +1377,8 @@
           "accessibility": "A confirmar",
           "guideBriefing": "Trecho histórico associado às rotas coloniais e à mineração na Serra dos Cristais.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "mapQuery": "Caminho dos Escravos, acesso BR-367 Rua Salto da Divisa, Diamantina MG"
         },
         {
           "name": "Casa do Muxarabiê",
@@ -2124,9 +2128,9 @@
         },
         {
           "name": "Beco do Cotovelo",
-          "lat": -21.133576,
-          "lon": -44.258809,
-          "locationAccuracy": "city-center",
+          "lat": -21.1340616,
+          "lon": -44.2626937,
+          "locationAccuracy": "street-center",
           "catalogName": "Beco do Cotovelo",
           "description": "Passagem tradicional do centro histórico incluída em roteiro de agência.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
@@ -2141,9 +2145,9 @@
         },
         {
           "name": "Largo da Cruz",
-          "lat": -21.133576,
-          "lon": -44.258809,
-          "locationAccuracy": "city-center",
+          "lat": -21.1336337,
+          "lon": -44.2618463,
+          "locationAccuracy": "exact",
           "catalogName": "Largo da Cruz",
           "description": "Espaço urbano histórico incluído em circuito panorâmico de agência.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
@@ -2302,9 +2306,9 @@
           "oneYearOld": "—",
           "accessibility": "—",
           "guideBriefing": "Principal eixo histórico, cercado por sobrados, ateliês, lojas e restaurantes. Caminhar por ela permite observar a arquitetura doméstica e comercial, não apenas edifícios religiosos. Faz parte dos passeios porque conecta várias atrações importantes e concentra artesanato e gastronomia no próprio percurso.",
-          "lat": -21.110469,
-          "lon": -44.174294,
-          "locationAccuracy": "city-center",
+          "lat": -21.1097152,
+          "lon": -44.1762681,
+          "locationAccuracy": "street-center",
           "days": "1 h",
           "relevanceSource": "agency"
         },
@@ -2387,11 +2391,12 @@
           "oneYearOld": "—",
           "accessibility": "—",
           "guideBriefing": "Oficina que ajudou a transformar Bichinho em polo de artesanato e design, trabalhando madeira, metal, tecido e materiais reaproveitados. É um dos nomes que consolidaram a vila como extensão artística de Tiradentes.",
-          "lat": -21.099115,
-          "lon": -44.117586,
-          "locationAccuracy": "city-center",
+          "lat": -21.0915526,
+          "lon": -44.1272952,
+          "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "mapQuery": "Oficina de Agosto, Rua São Bento 668, Bichinho, Prados MG"
         },
         {
           "name": "Ateliês e oficinas",
@@ -2830,9 +2835,9 @@
           "oneYearOld": "—",
           "accessibility": "—",
           "guideBriefing": "Rua histórica cercada por casario e edifícios civis, usada como eixo de caminhada pelo centro. Está nos roteiros porque conecta as atrações e permite observar a escala urbana e a arquitetura civil de Sabará durante o próprio deslocamento.",
-          "lat": -19.890037,
-          "lon": -43.810792,
-          "locationAccuracy": "city-center",
+          "lat": -19.8924009,
+          "lon": -43.8110473,
+          "locationAccuracy": "street-center",
           "days": "1 h",
           "relevanceSource": "agency"
         }
@@ -3259,9 +3264,9 @@
         },
         {
           "name": "Memorial do Humorista Zacarias",
-          "lat": -19.4661,
-          "lon": -44.2469,
-          "locationAccuracy": "city-center",
+          "lat": -19.4660631,
+          "lon": -44.2476263,
+          "locationAccuracy": "exact",
           "catalogName": "Memorial do Humorista Zacarias",
           "description": "Espaço de memória dedicado ao humorista Zacarias, visitado em roteiro de agência.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
@@ -3272,7 +3277,8 @@
           "accessibility": "A confirmar",
           "guideBriefing": "Espaço de memória dedicado ao humorista Zacarias, visitado em roteiro de agência.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "mapQuery": "Memorial Trapalhão Zacarias, Praça Tiradentes 257, Sete Lagoas MG"
         },
         {
           "name": "Monumento Natural Estadual Gruta Rei do Mato",
@@ -3498,8 +3504,8 @@
     {
       "id": "novalima",
       "name": "Nova Lima · Honório Bicalho",
-      "lat": -19.9854,
-      "lon": -43.8471,
+      "lat": -20.021382,
+      "lon": -43.8180973,
       "kind": "opcional",
       "type": "historia",
       "days": "Parada opcional",
@@ -3512,8 +3518,8 @@
       "attractions": [
         {
           "name": "Honório Bicalho",
-          "lat": -19.9854,
-          "lon": -43.8471,
+          "lat": -20.021382,
+          "lon": -43.8180973,
           "locationAccuracy": "city-center",
           "catalogName": "Honório Bicalho",
           "description": "Distrito de Nova Lima atravessado pelo roteiro comercial ao longo do Rio das Velhas.",
@@ -3529,8 +3535,8 @@
         },
         {
           "name": "Antigo leito da Ferrovia do Sabarabuçu",
-          "lat": -19.9854,
-          "lon": -43.8471,
+          "lat": -20.021382,
+          "lon": -43.8180973,
           "locationAccuracy": "city-center",
           "catalogName": "Antigo leito da Ferrovia do Sabarabuçu",
           "description": "Trecho ferroviário desativado usado como eixo do roteiro entre Sabará, Raposos e Rio Acima.",

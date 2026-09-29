@@ -33,6 +33,6 @@ A validação também roda no GitHub Actions. Não há banco de dados: são arqu
 
 ## Precisão dos pontos no mapa
 
-Cada atração informa `locationAccuracy`: `exact` para um edifício ou entrada localizada, `street-center` para um trecho de rua ou evento distribuído nela e `city-center` quando só há uma referência aproximada da cidade. Use `mapQuery` quando a busca pelo nome da atração não levar ao lugar certo. A interface mostra a precisão e não oferece navegação por coordenada para os dois últimos casos.
+Cada atração informa `locationAccuracy`: `exact` para um local físico confirmado, `street-center` para um trecho de rua ou evento distribuído nela, `trail-point` para um ponto representativo de trilha e `city-center` quando a única coordenada disponível é uma referência genérica da cidade. Use `mapQuery` quando a busca pelo nome da atração não levar ao lugar certo. Atrações `city-center` continuam na lista de passeios, mas não ganham marcador próprio nem entram como destino individual da rota. Marcadores de rua ou trilha mostram sua precisão e oferecem busca pelo local em vez de navegação para a coordenada do trecho.
 
 Para revisar um ponto, confirme primeiro o local em fontes oficiais (prefeitura, órgão gestor ou página da atração) e depois confira a posição cartográfica. Um resultado de geocodificação com o mesmo nome em outra cidade não comprova a coordenada.
