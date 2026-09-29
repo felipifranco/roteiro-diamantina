@@ -163,6 +163,7 @@ renderList();
  const initialStops=['peiro','araxa'].filter(id=>stops.some(s=>s.id===id));initialStops.forEach(id=>{selected.add(id);dates.set(id,'2026-10-07');manual.push(id)});
  // Os dois passeios de Peirópolis já entram marcados; Araxá é o pernoite de 07 para 08/10 e o acompanha se a data mudar.
  attractionStops.filter(tour=>tour.parentId==='peiro'&&selected.has('peiro')).forEach(tour=>selected.add(tour.id));
+ attractionStops.filter(tour=>tour.parentId==='diamantina'&&tour.name==='Vesperata').forEach(tour=>selected.add(tour.id));
  const overnightStops=new Set(['araxa']);
  attractionStops.forEach(s=>{if((!selected.has(s.id)||!selected.has(s.parentId))&&map.hasLayer(markers[s.id]))map.removeLayer(markers[s.id])});
  const fmt=d=>`${d.slice(8,10)}/${d.slice(5,7)}`;
@@ -190,6 +191,7 @@ renderList();
  function syncMarker(s){const marker=markers[s.id];if(!marker)return;const show=s.kind!=='atracao'||selected.has(s.id)&&inTrip(stops.find(city=>city.id===s.parentId)||s);if(show&&!map.hasLayer(marker))marker.addTo(map);else if(!show&&map.hasLayer(marker))map.removeLayer(marker)}
  function forget(id){selected.delete(id);dates.delete(id);const i=manual.indexOf(id);if(i>=0)manual.splice(i,1)}
  function setAttractionActive(s,active){
+  if(s.schedule&&!active)return;
   if(active&&!selected.has(s.parentId))return;
   if(active)selected.add(s.id);else selected.delete(s.id);
   syncMarker(s);openCards.add(s.parentId);
@@ -211,7 +213,7 @@ renderList();
   const [effort,note,cls]=effortFor(city,tour.name),natural=tour.kind==='atracao'&&tour.type==='natureza',age=natural?` ${tour.minimumAge?`Idade mínima oficial: ${tour.minimumAge}.`:'Idade mínima oficial: não informada; confirme com o operador.'}`:'';
   const where=document.createElement('small');where.className='tour-where';where.innerHTML=`${selected.has(tour.id)?'<b class="tour-in">✓ No roteiro</b> · ':''}${tour.schedule?`📅 ${tour.schedule}`:tour.kind==='atracao'?`📍 Ponto no mapa · ${durationLabel(tour)}`:'Rota pela cidade'}${tour.schedule?'':` · <span class="effort ${cls}">Acesso: ${effort}</span>`}`;info.appendChild(where);
   const access=document.createElement('small');access.className='access-meta';access.textContent=tour.scheduleNote||`${tour.accessibility||note}${age}`;info.appendChild(access);
-  row.appendChild(info);if(editable)row.appendChild(tourActionButton(tour));return row
+  row.appendChild(info);if(editable&&!tour.schedule)row.appendChild(tourActionButton(tour));return row
  }
  // Tempo e distância entre trechos (OSRM): chegada a cada cidade, retorno a Mirassol e deslocamentos entre passeios da mesma cidade.
  const cityOf=s=>s.kind==='atracao'?s.parentId:s.id;
@@ -232,7 +234,7 @@ renderList();
   const html=`<div class="date-pin-wrap"><div class="pin ${colorClass(s)}"><span>${label}</span></div><b class="date-chip">${fmt(date)}</b></div>`;
   markers[s.id].setIcon(L.divIcon({className:'',html,iconSize:[104,34],iconAnchor:[14,33],popupAnchor:[30,-25]}));
  }
- function kindLabel(s){const type=s.type==='historia'?'HISTÓRIA':'NATUREZA';return s===origin?'MIRASSOL · ORIGEM':s===destination?'DESTINO FIXO · 09/10':s.kind==='alerta'?'AVISO DE ACESSO':s.kind==='opcional'?`↗ OPCIONAL · ${type}`:type}
+ function kindLabel(s){const type=s.type==='historia'?'HISTÓRIA':'NATUREZA';return s===origin?'MIRASSOL · ORIGEM':s===destination?'DESTINO FIXO · 09/10':s.kind==='alerta'?'AVISO DE ACESSO':s.kind==='opcional'?selected.has(s.id)?`DESVIO NO ROTEIRO · ${type}`:`↗ OPCIONAL · ${type}`:type}
  function createCard(s,num){
   const trip=inTrip(s),editable=trip&&!isFixed(s)&&s.kind!=='alerta',card=document.createElement('article');
   card.className=`stop ${trip?'route-stop':'available-stop'}${editable?' editable-stop':''}${s.kind==='opcional'?' optional-stop':''}`;card.dataset[trip?'stopId':'availableStopId']=s.id;
@@ -241,7 +243,7 @@ renderList();
   const focus=document.createElement('button');focus.type='button';focus.className='stop-focus';focus.setAttribute('aria-label',`Localizar ${s.name} no mapa`);
   const name=document.createElement('span');name.className='stop-name';name.textContent=s.name.replace(' · desvio opcional','');
   const kind=document.createElement('span');kind.className='stop-kind';kind.textContent=kindLabel(s);
-  const note=document.createElement('span');note.className='stay-note';note.textContent=s.id===origin.id?durationLabel(s):s.kind==='atracao'?`Tempo estimado de visita: ${durationLabel(s)}`:`Estadia sugerida: ${durationLabel(s)}`;
+  const note=document.createElement('span');note.className='stay-note';const fixedEvent=s===destination?attractionStops.find(t=>t.parentId===s.id&&t.schedule):null;note.textContent=fixedEvent?`${fixedEvent.name} · ${fixedEvent.schedule.split(' · ').slice(1).join(' · ')}`:s.id===origin.id?durationLabel(s):s.kind==='atracao'?`Visita · ${durationLabel(s)}`:`Estadia · ${durationLabel(s)}`;
   focus.append(name,kind,note);if(overnightLabel(s)){const sleep=document.createElement('span');sleep.className='overnight-note';sleep.textContent=overnightLabel(s);focus.appendChild(sleep)}focus.addEventListener('click',()=>focusStop(s,s.kind==='opcional'?8:9));
   head.append(numEl,focus);
   if(editable){
@@ -470,4 +472,23 @@ renderList();
 .mast h1{font-size:25px;margin:4px 0 5px}
 .mast p{font-size:12px;line-height:1.3;max-width:none}
 @media(max-width:800px){#stops .stop-head .drag-handle{display:none}.mast{padding:7px 14px 6px}.mast h1{font-size:20px}.mast p{font-size:11px;line-height:1.25;margin-top:3px}}
+
+@media(max-width:800px){
+  #stops .stop{margin-bottom:8px;border-color:#dbe3d8;border-radius:12px}
+  #stops .route-stop.optional-stop{border-style:solid;background:#fff}
+  #stops .stop-head{padding:10px;align-items:start}
+  #stops .stop-name{font-size:16px;line-height:1.22}
+  #stops .stop-kind{display:block;margin:4px 0 0;font-size:10px;line-height:1.35;letter-spacing:.07em}
+  #stops .stay-note{display:block;margin:3px 0 0;font-size:12px;line-height:1.4;color:#59665d}
+  #stops .stay-note::before{content:none}
+  #stops .stop-head .stop-focus{align-self:start}
+  #stops .day-group{padding:0 7px 7px;border-radius:13px;background:#f8faf7}
+  #stops .day-group.fixed-day{background:#f4f6fb}
+  #stops .day-header{padding:9px 11px;font-size:12px;letter-spacing:.02em}
+  #stops .editable-stop .stop-head{row-gap:6px}
+  #stops .attractions summary{font-size:12px;padding:10px 12px}
+  #stops .tour-row{padding:9px 10px}
+  #stops .tour-info>a{font-size:14px;line-height:1.35}
+  #stops .tour-where,#stops .tour-info .access-meta{font-size:11px;line-height:1.45}
+}
 </style><script>new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(map.getContainer());</script></body></html>
