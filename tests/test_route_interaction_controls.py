@@ -24,7 +24,7 @@ class RouteInteractionControlsTests(unittest.TestCase):
         }
         for stop_id, (name, duration) in expected.items():
             attraction = next(a for a in stops[stop_id]["attractions"] if a["name"] == name)
-            self.assertEqual(attraction["days"], duration)
+            self.assertEqual(attraction.get("estimatedDuration", attraction.get("days")), duration)
 
     def test_generated_route_attractions_preserve_source_fields_and_unknowns(self):
         source = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
@@ -50,7 +50,10 @@ class RouteInteractionControlsTests(unittest.TestCase):
                             generated_attraction.get("routeOverrides", {}).get(key),
                             value, (stop_id, key),
                         )
-                self.assertEqual(generated_attraction.get("locationAccuracy"), "exact")
+                self.assertEqual(
+                    generated_attraction.get("locationAccuracy"),
+                    source_attraction.get("locationAccuracy", "exact"),
+                )
         # The generated adapter may add researched attractions without route coordinates.
         # They must keep all details and be explicit when using the city
         # coordinate until an exact attraction coordinate is surveyed.

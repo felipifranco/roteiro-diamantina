@@ -34,7 +34,17 @@ window.ROTEIRO_DATA = {
           "name": "Casca d’Anta",
           "lat": -20.30191,
           "lon": -46.52234,
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "catalogName": "Casca d'Anta",
+          "description": "Grande queda do rio São Francisco despencando da borda da serra. É o cartão-postal do parque.",
+          "agencyRationale": "É a atração natural mais reconhecida da Canastra.",
+          "visitType": "Trilha / cachoeira",
+          "estimatedDuration": "meio dia",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Grande queda do rio São Francisco despencando da borda da serra. É o cartão-postal do parque. É a atração natural mais reconhecida da Canastra.",
+          "days": "meio dia"
         },
         {
           "name": "Parque Nacional da Serra da Canastra",
@@ -50,21 +60,6 @@ window.ROTEIRO_DATA = {
           "lon": -46.36583,
           "locationAccuracy": "city-center",
           "days": "1 dia"
-        },
-        {
-          "name": "Casca d'Anta",
-          "description": "Grande queda do rio São Francisco despencando da borda da serra. É o cartão-postal do parque.",
-          "agencyRationale": "É a atração natural mais reconhecida da Canastra.",
-          "visitType": "Trilha / cachoeira",
-          "estimatedDuration": "meio dia",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Grande queda do rio São Francisco despencando da borda da serra. É o cartão-postal do parque. É a atração natural mais reconhecida da Canastra.",
-          "lat": -20.24528,
-          "lon": -46.36583,
-          "locationAccuracy": "city-center",
-          "days": "meio dia"
         },
         {
           "name": "Nascente histórica do São Francisco",

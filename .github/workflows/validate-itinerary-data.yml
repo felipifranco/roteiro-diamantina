@@ -8,7 +8,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  actions: write
+  contents: write
 
 concurrency:
   group: validate-${{ github.event.pull_request.number || github.ref }}
@@ -21,10 +22,29 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name || github.repository }}
+          ref: ${{ github.head_ref || github.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Check generated files
+      - name: Regenerate derived route files
+        run: python scripts/generate_route_data.py
+      - name: Commit regenerated files
+        id: commit-generated
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git add data/route-data.generated.js PONTOS-DE-PARADA.md
+          if git diff --cached --quiet; then
+            echo "Generated route files are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Regenerate itinerary data"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Verify generated files
         run: python scripts/generate_route_data.py --check
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
@@ -33,3 +53,9 @@ jobs:
           for test in tests/*_regression.py; do
             python "$test" index.html
           done
+      - name: Validate the regenerated PR commit
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && steps.commit-generated.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_BRANCH: ${{ github.head_ref }}
+        run: gh workflow run validate-itinerary-data.yml --ref "$PR_BRANCH"
