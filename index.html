@@ -391,4 +391,63 @@ renderList();
 #stops .stop-name{font-size:15px;line-height:1.2}#stops .stop-kind,#stops .stay-note{display:inline;margin:0;font-size:10px;line-height:1.4}#stops .stop-kind{letter-spacing:.04em}#stops .stay-note{color:#68716a}#stops .stay-note::before{content:' · '}#stops .leg-connector{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;margin:-2px 0 3px 14px;padding:3px 0 3px 12px;border-left:2px dotted #9ebda3;font-size:11px;line-height:1.3}#stops .leg-time{color:var(--ink);font-weight:650}#stops .leg-connector a{color:var(--green);font-size:10.5px}#stops .overnight-note{display:block;margin-top:2px;color:#334f7a;font-size:11px;font-weight:700}#stops .attraction-links{gap:4px;padding:6px 8px 8px}#stops .day-group{margin-bottom:8px;padding:0 5px 1px;min-height:0}#stops .day-header{margin-bottom:5px;padding:5px 9px;font-size:11px}
 .tour-hint{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;margin:2px 0;color:var(--muted);font-size:11px;line-height:1.35}.tour-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;padding:6px 8px;border:1px solid #e7ece3;border-radius:8px;background:#fff}.tour-row.active{border-color:#9ebda3;background:#f1f7f0}.tour-info{display:grid;gap:1px;min-width:0}.tour-info>a{font-size:13px;font-weight:650;line-height:1.25}.tour-where,.tour-info .access-meta{margin:0;color:var(--muted);font-size:10.5px;line-height:1.35}.tour-in{color:#285b39}.tour-row .tour-route-action{width:34px;min-width:0;height:34px;min-height:0;padding:0;font-size:16px;line-height:1}.tour-route-action:focus-visible{outline:3px solid #35694f;outline-offset:2px}
 @media(max-width:800px){.mast{padding:7px 14px 6px}.mast .eyebrow,.mast p,.section-title{display:none}#stops .num:empty{visibility:hidden}.mast h1{margin:0 0 1px;font-size:20px}.mast p{font-size:11px}.scroll{padding-top:7px}.trip-summary{padding:7px 9px;margin-bottom:6px}.trip-summary>b{font-size:13px}.trip-timeline{margin:4px 0}.trip-timeline>div{padding:3px 2px}.trip-timeline strong{font-size:14px}.trip-caption{font-size:11px!important}#stops .stop-head .drag-handle{display:none}}
+
+/* Mobile reading layout: prioritize the itinerary while keeping the map available. */
+@media(max-width:800px){
+  .app{height:100svh;height:100dvh;overflow:hidden}
+  .map-wrap{height:22dvh;min-height:150px;max-height:24dvh;flex:0 0 22dvh}
+  .side{flex:1 1 auto;min-height:0}
+  .mast{padding:10px 16px 9px;background:#fffefa}
+  .mast .eyebrow{display:block;font-size:9px;margin-bottom:3px}
+  .mast h1{font-size:22px;line-height:1.1;margin:0}
+  .mast p{display:block;margin-top:4px;font-size:12px;line-height:1.35;max-width:36em}
+  .scroll{padding:10px 12px 24px;overscroll-behavior:contain}
+  .section-title{display:flex;padding:9px 2px 7px;font-size:12px}
+  .trip-summary{padding:11px 12px;margin:0 0 12px}
+  .trip-summary>b{font-size:15px}
+  .trip-timeline{gap:5px;margin:8px 0}
+  .trip-timeline>div{padding:7px 3px}
+  .trip-timeline small{font-size:9px}
+  .trip-timeline strong{font-size:17px}
+  .trip-timeline span{font-size:11px}
+  .trip-caption{font-size:12px!important;line-height:1.45}
+  .access-alert{margin-bottom:10px}
+  .mobile-legend{margin:0 0 10px}
+  .candidate-list{margin:12px 0}
+  .route-section-title{margin:14px 2px 3px;font-size:15px}
+  .route-section-help{font-size:12px;margin-bottom:8px}
+  #stops .day-group{margin-bottom:12px;padding:0 7px 7px;border-radius:12px}
+  #stops .day-header{position:static;margin:0 -7px 8px;padding:9px 11px;border-radius:11px 11px 0 0;font-size:12px;line-height:1.35}
+  #stops .stop{margin-bottom:7px;border-radius:11px}
+  #stops .stop-head{padding:10px;gap:7px 9px}
+  #stops .stop-name{font-size:16px;line-height:1.25}
+  #stops .stop-kind,#stops .stay-note{font-size:11px;line-height:1.45}
+  #stops .stop-kind{font-weight:750}
+  #stops .stop-kind:after{content:" ·"}
+  #stops .stay-note::before{content:""}
+  #stops .overnight-note{font-size:11px;margin-top:4px}
+  #stops .editable-stop .stop-head{grid-template-columns:25px minmax(0,1fr) auto;gap:8px 9px;padding:10px}
+  #stops .editable-stop .stop-head .stop-focus{grid-column:2/4;grid-row:1;min-width:0}
+  #stops .editable-stop .stop-head .num{grid-column:1;grid-row:1;align-self:start;margin-top:1px}
+  #stops .editable-stop .stop-head .drag-handle{display:none}
+  #stops .editable-stop .stop-head .stop-date{grid-column:2;grid-row:2;width:100%;max-width:150px;height:40px;font-size:14px}
+  #stops .editable-stop .stop-head .reorder-actions{grid-column:3;grid-row:2;justify-self:end;display:flex;gap:6px}
+  #stops .editable-stop .stop-head .reorder-actions button{width:40px;height:40px;font-size:18px}
+  #stops .editable-stop .stop-head .remove-stop-button{grid-column:3;grid-row:3;justify-self:end;min-height:38px}
+  #stops .attractions summary{padding:11px 12px;font-size:13px}
+  #stops .attraction-links{padding:8px;gap:7px}
+  #stops .tour-row{padding:9px;gap:9px;border-radius:10px}
+  #stops .tour-info>a{font-size:14px;line-height:1.35}
+  #stops .tour-where,#stops .tour-info .access-meta{font-size:11px;line-height:1.45}
+  #stops .tour-row .tour-route-action{width:42px;height:42px;font-size:18px}
+  #stops .leg-connector{margin:0 0 5px 13px;padding:5px 0 5px 12px;font-size:12px}
+  #stops .leg-connector a{font-size:11px}
+  .available-list .stop-head{grid-template-columns:25px minmax(0,1fr) auto!important;padding:10px!important}
+  .available-list .stop-head .stop-focus{grid-column:2!important;grid-row:1!important}
+  .available-list .stop-head .tours-toggle{grid-column:3!important;grid-row:1!important;height:40px}
+  .available-list .stop-head .add-stop-button{grid-column:3!important;grid-row:2!important;min-width:44px!important;min-height:42px!important;margin:4px 0 0;justify-self:end}
+  .available-list .stop-name{font-size:16px}
+  .sources{padding:8px 14px calc(10px + env(safe-area-inset-bottom));font-size:11px}
+}
+@media(max-width:800px) and (max-height:700px){.map-wrap{height:19dvh;min-height:135px;max-height:21dvh;flex-basis:19dvh}}
 </style><script>new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(map.getContainer());</script></body></html>
