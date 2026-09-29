@@ -270,7 +270,7 @@ renderList();
   const focus=document.createElement('button');focus.type='button';focus.className='stop-focus';focus.setAttribute('aria-label',`Localizar ${s.name} no mapa`);
   const name=document.createElement('span');name.className='stop-name';name.textContent=s.name.replace(' · desvio opcional','');
   const kind=document.createElement('span');kind.className='stop-kind';kind.textContent=kindLabel(s);
-  const note=document.createElement('span');note.className='stay-note';const fixedEvent=s===destination?attractionStops.find(t=>t.parentId===s.id&&t.schedule):null;note.textContent=s.id===origin.id?durationLabel(s):s.kind==='atracao'?`Tempo estimado de visita: ${durationLabel(s)}`:`Estadia sugerida: ${durationLabel(s)}`;if(fixedEvent)note.textContent=`${fixedEvent.name} · ${fixedEvent.schedule.split(' · ').slice(1).join(' · ')}`;
+  const note=document.createElement('span');note.className='stay-note';const fixedEvent=s===destination?attractionStops.find(t=>t.parentId===s.id&&t.schedule):null;note.textContent=s.id===origin.id?durationLabel(s):s.kind==='atracao'?`Tempo estimado de visita: ${durationLabel(s)}`:`Estadia: ${durationLabel(s)}`;if(fixedEvent)note.textContent=`${fixedEvent.name} · ${fixedEvent.schedule.split(' · ').slice(1).join(' · ')}`;
   focus.append(name,kind,note);if(overnightLabel(s)){const sleep=document.createElement('span');sleep.className='overnight-note';sleep.textContent=overnightLabel(s);focus.appendChild(sleep)}focus.addEventListener('click',()=>focusStop(s,s.kind==='opcional'?8:9));
   head.append(numEl,focus);
   if(editable){
@@ -555,4 +555,16 @@ renderList();
 #stops .available-list .stop-head .tours-toggle{grid-column:3!important;grid-row:2!important;justify-self:end;height:30px!important;padding:0 6px;font-size:10.5px}
 #stops .available-list .stop-head .add-stop-button{grid-column:4!important;grid-row:2!important;width:30px!important;min-width:30px!important;height:30px!important;min-height:30px!important;margin:0;justify-self:end;font-size:15px}
 #stops .available-list>.stop>.briefing-link{margin:0 8px 3px;font-size:10px;line-height:1.2}
+}@media(max-width:800px){
+#stops .available-list .stop{margin-bottom:3px}
+#stops .available-list .stop-head{grid-template-columns:25px minmax(0,1fr) auto 28px!important;gap:2px 5px;padding:4px 7px!important}
+#stops .available-list .stop-head .num{grid-column:1;grid-row:1;align-self:start;margin-top:1px}
+#stops .available-list .stop-head .stop-focus{grid-column:2!important;grid-row:1!important;min-width:0}
+#stops .available-list .stop-name{font-size:16px;line-height:1.12}
+#stops .available-list .stop-kind,#stops .available-list .stay-note{display:inline;margin:1px 0 0;font-size:9.5px;line-height:1.2;letter-spacing:.02em}
+#stops .available-list .stop-kind:after{content:" · "}
+#stops .available-list .stay-note:before{content:none}
+#stops .available-list .stop-head .tours-toggle{grid-column:3!important;grid-row:1!important;justify-self:end;height:28px!important;padding:0 5px;font-size:10px}
+#stops .available-list .stop-head .add-stop-button{grid-column:4!important;grid-row:1!important;width:28px!important;min-width:28px!important;height:28px!important;min-height:28px!important;margin:0;justify-self:end;font-size:14px}
+#stops .available-list>.stop>.briefing-link{margin:0 7px 2px;font-size:9.5px;line-height:1.1}
 }</style><script>new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(map.getContainer());</script></body></html>
