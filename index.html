@@ -272,7 +272,7 @@ renderList();
  function createCard(s,num,plan,forceRoute=false){
   const iconPlan=plan||routePlan(),trip=inTrip(s),routed=isFixed(s)||iconPlan.labels.has(s.id)||forceRoute,mapContext=trip&&!routed&&s.kind!=='atracao'&&toursFor(s).some(t=>selected.has(t.id)),editable=routed&&trip&&!isFixed(s)&&s.kind!=='alerta',card=document.createElement('article');
   card.className=`stop ${mapContext?'map-context-stop':routed?'route-stop':'available-stop'}${editable?' editable-stop':''}${s.kind==='opcional'?' optional-stop':''}`;card.dataset[trip?'stopId':'availableStopId']=s.id;
-  card.addEventListener('click',event=>{if(event.target.closest('.stop-focus,.attractions,button,a,input,select'))return;focusStop(s,s.kind==='opcional'?8:9)});
+  card.addEventListener('click',event=>{if(event.target.closest('button,a,input,select,.tour-row,.drag-handle'))return;focusStop(s,s.kind==='opcional'?8:9)});
   const head=document.createElement('div');head.className='stop-head';
   const numEl=document.createElement('span'),icon=routeIcon(s,iconPlan);numEl.className=`num${routed?'':' optional-num'}${s.relevanceSource==='agency'&&icon!=='★'?' agency-num':''}`;numEl.textContent=num!==undefined?String(num):icon;if(s.relevanceSource==='agency')numEl.title='Ponto de agência turística';
   const focus=document.createElement('div');focus.className='stop-focus';
