@@ -30,3 +30,9 @@ python3 -m unittest tests/test_itinerary_source_of_truth.py -v
 ```
 
 A validação também roda no GitHub Actions. Não há banco de dados: são arquivos estáticos publicados junto com a aplicação.
+
+## Precisão dos pontos no mapa
+
+Cada atração informa `locationAccuracy`: `exact` para um edifício ou entrada localizada, `street-center` para um trecho de rua ou evento distribuído nela e `city-center` quando só há uma referência aproximada da cidade. Use `mapQuery` quando a busca pelo nome da atração não levar ao lugar certo. A interface mostra a precisão e não oferece navegação por coordenada para os dois últimos casos.
+
+Para revisar um ponto, confirme primeiro o local em fontes oficiais (prefeitura, órgão gestor ou página da atração) e depois confira a posição cartográfica. Um resultado de geocodificação com o mesmo nome em outra cidade não comprova a coordenada.

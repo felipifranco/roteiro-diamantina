@@ -39,6 +39,7 @@ ATTRACTION_FIELDS = (
 )
 STOP_KINDS = {"inicio", "destino", "natureza", "historia", "opcional", "alerta"}
 STOP_TYPES = {"natureza", "historia"}
+LOCATION_ACCURACIES = {"exact", "street-center", "city-center"}
 
 
 def _valid_coordinates(lat, lon):
@@ -108,6 +109,11 @@ def validate(data):
                 raise ValueError(
                     f"routeStops[{index}].attractions[{attraction_index}] "
                     "coordinates must be valid latitude and longitude values"
+                )
+            if attraction.get("locationAccuracy") not in LOCATION_ACCURACIES:
+                raise ValueError(
+                    f"routeStops[{index}].attractions[{attraction_index}].locationAccuracy "
+                    f"must be one of {sorted(LOCATION_ACCURACIES)}"
                 )
 
         for attraction_index, attraction in enumerate(mapped_attractions):

@@ -1236,8 +1236,9 @@ window.ROTEIRO_DATA = {
       "sights": [
         "Centro histórico",
         "Casa de JK",
-        "Chica da Silva e igrejas",
-        "Vesperata (datas específicas)"
+        "Casa de Chica da Silva",
+        "Igreja Nossa Senhora do Carmo",
+        "Vesperata"
       ],
       "kid": "Base para reduzir deslocamentos; confira calendário de eventos, acesso da hospedagem e pausas.",
       "url": "https://visitediamantina.com.br/",
@@ -1300,8 +1301,8 @@ window.ROTEIRO_DATA = {
           "oneYearOld": "—",
           "accessibility": "—",
           "guideBriefing": "Residência associada a Chica da Silva, personagem central da sociedade diamantífera do século XVIII. A visita ajuda a compreender mineração, escravidão, mobilidade social e costumes da época. Acrescenta história humana e social ao roteiro, além da arquitetura colonial.",
-          "lat": -18.246506195489356,
-          "lon": -43.59676987469186,
+          "lat": -18.2467273,
+          "lon": -43.5967904,
           "locationAccuracy": "exact",
           "days": "1 h",
           "relevanceSource": "agency"
@@ -1316,25 +1317,25 @@ window.ROTEIRO_DATA = {
           "oneYearOld": "—",
           "accessibility": "—",
           "guideBriefing": "Igreja setecentista ligada à elite local e à arte sacra de Diamantina. É uma boa leitura da religiosidade e da organização social do período minerador. Integra os circuitos guiados de arte sacra do centro histórico.",
-          "lat": -18.244129,
-          "lon": -43.598605,
+          "lat": -18.2438742,
+          "lon": -43.5985499,
           "locationAccuracy": "exact",
           "days": "30 min",
           "relevanceSource": "agency"
         },
         {
-          "name": "Rua da Quitanda / Beco da Tecla",
-          "description": "Trecho de casario colonial que concentra a atmosfera mais característica do centro. A Rua da Quitanda também é o cenário tradicional da Vesperata.",
+          "name": "Rua da Quitanda",
+          "description": "Rua histórica de casario colonial, cenário tradicional da Vesperata; o Beco da Tecla fica nas proximidades.",
           "agencyRationale": "É o espaço onde patrimônio arquitetônico e vida cultural contemporânea se encontram.",
           "visitType": "Caminhada / externa",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
           "accessibility": "—",
-          "guideBriefing": "Trecho de casario colonial que concentra a atmosfera mais característica do centro. A Rua da Quitanda também é o cenário tradicional da Vesperata. É o espaço onde patrimônio arquitetônico e vida cultural contemporânea se encontram.",
-          "lat": -18.24409,
-          "lon": -43.60065,
-          "locationAccuracy": "city-center",
+          "guideBriefing": "Rua histórica de casario colonial, cenário tradicional da Vesperata; o Beco da Tecla fica nas proximidades. É o espaço onde patrimônio arquitetônico e vida cultural contemporânea se encontram.",
+          "lat": -18.2452602,
+          "lon": -43.5967276,
+          "locationAccuracy": "street-center",
           "days": "30 min",
           "relevanceSource": "agency"
         },
@@ -1351,11 +1352,12 @@ window.ROTEIRO_DATA = {
           "scheduleNote": "Sessão extra divulgada em setembro; confira ingresso e eventuais atualizações.",
           "eventUrl": "https://bileto.sympla.com.br/event/117032?share_id=1-copiarlink",
           "guideBriefing": "Concerto em que músicos se apresentam das sacadas dos casarões enquanto maestros e público ocupam a rua. Não é apenas um show: utiliza a própria arquitetura colonial como palco. É uma das experiências culturais mais características e procuradas de Diamantina.",
-          "lat": -18.24409,
-          "lon": -43.60065,
-          "locationAccuracy": "city-center",
+          "lat": -18.2452602,
+          "lon": -43.5967276,
+          "locationAccuracy": "street-center",
           "days": "2–3 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "mapQuery": "Rua da Quitanda, Centro Histórico, Diamantina MG"
         },
         {
           "name": "Caminho dos Escravos",
@@ -1461,9 +1463,9 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Igreja das Mercês",
-          "lat": -18.24409,
-          "lon": -43.60065,
-          "locationAccuracy": "city-center",
+          "lat": -18.246666,
+          "lon": -43.5983666,
+          "locationAccuracy": "exact",
           "catalogName": "Igreja das Mercês",
           "description": "Templo histórico ligado à Irmandade de Nossa Senhora das Mercês.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
@@ -3418,8 +3420,8 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Museu do Tropeiro",
-          "lat": -19.624415,
-          "lon": -43.231643,
+          "lat": -19.6216064,
+          "lon": -43.434711,
           "locationAccuracy": "exact",
           "catalogName": "Museu do Tropeiro",
           "description": "Museu dedicado à cultura tropeira e às rotas de circulação do interior mineiro.",
@@ -3431,7 +3433,8 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Museu dedicado à cultura tropeira e às rotas de circulação do interior mineiro.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "mapQuery": "Museu do Tropeiro, Travessa Professor Manoel Soares 217, Ipoema MG"
         }
       ],
       "guideBriefing": "Distrito ligado à cultura tropeira e incluído em roteiro comercial da Estrada Real entre Diamantina e Belo Horizonte.",

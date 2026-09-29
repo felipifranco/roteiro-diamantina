@@ -59,7 +59,7 @@ class RouteInteractionControlsTests(unittest.TestCase):
         # coordinate until an exact attraction coordinate is surveyed.
         for stop in generated_stops.values():
             for attraction in stop.get("attractions", []):
-                self.assertIn(attraction.get("locationAccuracy"), {"exact", "city-center"})
+                self.assertIn(attraction.get("locationAccuracy"), {"exact", "street-center", "city-center"})
                 if attraction["locationAccuracy"] == "city-center":
                     for field in (
                         "description", "agencyRationale", "visitType",
