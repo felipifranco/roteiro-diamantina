@@ -12,7 +12,8 @@
       "sights": [],
       "kid": "Organize a primeira perna com pausa planejada.",
       "url": "https://www.google.com/maps/search/?api=1&query=Mirassol+SP",
-      "guideBriefing": "Mirassol é o ponto de partida paulista do circuito. Fundada no início do século XX durante a expansão agrícola e ferroviária do noroeste de São Paulo, marca o contraste entre uma região de ocupação mais recente e os núcleos mineiros formados nos ciclos do ouro e dos diamantes."
+      "guideBriefing": "Mirassol é o ponto de partida paulista do circuito. Fundada no início do século XX durante a expansão agrícola e ferroviária do noroeste de São Paulo, marca o contraste entre uma região de ocupação mais recente e os núcleos mineiros formados nos ciclos do ouro e dos diamantes.",
+      "relevanceSource": "guide"
     },
     {
       "id": "canastra",
@@ -44,7 +45,8 @@
           "oneYearOld": "—",
           "accessibility": "—",
           "guideBriefing": "Grande queda do rio São Francisco despencando da borda da serra. É o cartão-postal do parque. É a atração natural mais reconhecida da Canastra.",
-          "days": "meio dia"
+          "days": "meio dia",
+          "relevanceSource": "agency"
         },
         {
           "name": "Parque Nacional da Serra da Canastra",
@@ -59,7 +61,8 @@
           "lat": -20.24528,
           "lon": -46.36583,
           "locationAccuracy": "city-center",
-          "days": "1 dia"
+          "days": "1 dia",
+          "relevanceSource": "agency"
         },
         {
           "name": "Nascente histórica do São Francisco",
@@ -74,7 +77,8 @@
           "lat": -20.24528,
           "lon": -46.36583,
           "locationAccuracy": "city-center",
-          "days": "1 h + deslocamento"
+          "days": "1 h + deslocamento",
+          "relevanceSource": "agency"
         },
         {
           "name": "Queijarias de Canastra",
@@ -89,11 +93,13 @@
           "lat": -20.24528,
           "lon": -46.36583,
           "locationAccuracy": "city-center",
-          "days": "2 h"
+          "days": "2 h",
+          "relevanceSource": "agency"
         }
       ],
       "guideBriefing": "A Serra da Canastra é um grande chapadão do sudoeste mineiro, protegido em parte pelo Parque Nacional criado em 1972. A região está ligada às cabeceiras do rio São Francisco, ao Cerrado e aos campos de altitude, à pecuária tradicional e ao queijo artesanal da Canastra. A visita combina geografia, conservação ambiental e uma cultura rural moldada pelo isolamento das serras.",
-      "profile": "Parque nacional · cachoeiras · gastronomia"
+      "profile": "Parque nacional · cachoeiras · gastronomia",
+      "relevanceSource": "guide"
     },
     {
       "id": "capitolio",
@@ -115,7 +121,8 @@
           "name": "Mirante dos Canyons",
           "lat": -20.6461,
           "lon": -46.26575,
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "guide"
         },
         {
           "name": "Cânions de Furnas",
@@ -130,7 +137,8 @@
           "lat": -20.6144,
           "lon": -46.04884,
           "locationAccuracy": "city-center",
-          "days": "meio dia ou dia"
+          "days": "meio dia ou dia",
+          "relevanceSource": "agency"
         },
         {
           "name": "Passeio pelo Lago de Furnas",
@@ -145,7 +153,8 @@
           "lat": -20.6144,
           "lon": -46.04884,
           "locationAccuracy": "city-center",
-          "days": "4 h / dia inteiro"
+          "days": "4 h / dia inteiro",
+          "relevanceSource": "agency"
         },
         {
           "name": "Mirantes dos cânions",
@@ -160,7 +169,8 @@
           "lat": -20.6144,
           "lon": -46.04884,
           "locationAccuracy": "city-center",
-          "days": "2 h"
+          "days": "2 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Cachoeiras",
@@ -175,11 +185,13 @@
           "lat": -20.6144,
           "lon": -46.04884,
           "locationAccuracy": "city-center",
-          "days": "meio dia"
+          "days": "meio dia",
+          "relevanceSource": "agency"
         }
       ],
       "guideBriefing": "Capitólio mudou profundamente com a formação do reservatório de Furnas, no início da década de 1960. A água inundou vales e criou a paisagem de braços de lago entre paredões rochosos que hoje caracteriza a região. O interesse histórico e geográfico está justamente nessa transformação: uma obra de geração de energia produziu uma nova paisagem e reorganizou a economia local em torno do turismo.",
-      "profile": "Cânions · água · natureza"
+      "profile": "Cânions · água · natureza",
+      "relevanceSource": "guide"
     },
     {
       "id": "congonhas",
@@ -209,7 +221,8 @@
           "catalogName": "Santuário do Bom Jesus de Matosinhos",
           "lat": -20.50753,
           "lon": -43.86053,
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         },
         {
           "name": "Doze Profetas",
@@ -224,7 +237,8 @@
           "lat": -20.50152,
           "lon": -43.85646,
           "locationAccuracy": "city-center",
-          "days": "40 min"
+          "days": "40 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Passos da Paixão / Via Crucis",
@@ -239,7 +253,8 @@
           "lat": -20.50152,
           "lon": -43.85646,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Sala dos Milagres / ex-votos",
@@ -254,7 +269,8 @@
           "lat": -20.50152,
           "lon": -43.85646,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Museu de Congonhas",
@@ -269,11 +285,13 @@
           "lat": -20.50152,
           "lon": -43.85646,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
       ],
       "guideBriefing": "Congonhas cresceu no contexto da mineração setecentista e tornou-se um dos grandes centros de peregrinação de Minas. No Santuário do Bom Jesus de Matosinhos, construído a partir do século XVIII, arquitetura, devoção e a obra de Aleijadinho formam um conjunto único. Os Profetas em pedra-sabão e os Passos da Paixão permitem compreender o barroco mineiro como narrativa religiosa e experiência espacial, não apenas como decoração.",
-      "profile": "Aleijadinho · arte sacra · história"
+      "profile": "Aleijadinho · arte sacra · história",
+      "relevanceSource": "agency"
     },
     {
       "id": "ouropreto",
@@ -306,7 +324,8 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Museu da Inconfidência",
@@ -321,7 +340,8 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "1h30"
+          "days": "1h30",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -336,7 +356,8 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Basílica de Nossa Senhora do Pilar",
@@ -351,7 +372,8 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "40 min"
+          "days": "40 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -366,7 +388,8 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário",
@@ -381,7 +404,8 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Teatro Municipal / Casa da Ópera",
@@ -396,7 +420,8 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "40 min"
+          "days": "40 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Mina de ouro visitável",
@@ -411,7 +436,8 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "1h30"
+          "days": "1h30",
+          "relevanceSource": "agency"
         },
         {
           "name": "Rua Direita e casario colonial",
@@ -426,7 +452,8 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Casa dos Contos",
@@ -441,7 +468,8 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Feira de Pedra-Sabão",
@@ -456,7 +484,8 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Museu de Mineralogia / Museu de Ciência e Técnica",
@@ -471,9 +500,11 @@
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "agency"
     },
     {
       "id": "mariana",
@@ -503,7 +534,8 @@
           "guideBriefing": "Praça monumental onde Igreja do Carmo, Igreja de São Francisco, Casa de Câmara e Cadeia e pelourinho formam um raro conjunto civil e religioso colonial. É extremamente eficiente para grupos: em uma única praça o guia consegue explicar Igreja, Estado, justiça e organização urbana colonial. Isso faz Mariana render muito conteúdo mesmo em visitas de poucas horas.",
           "lat": -20.37812,
           "lon": -43.41813,
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         },
         {
           "name": "Catedral da Sé",
@@ -518,7 +550,8 @@
           "lat": -20.37783,
           "lon": -43.41633,
           "locationAccuracy": "city-center",
-          "days": "40 min"
+          "days": "40 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -533,7 +566,8 @@
           "lat": -20.37783,
           "lon": -43.41633,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -548,7 +582,8 @@
           "lat": -20.37783,
           "lon": -43.41633,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Casa de Câmara e Cadeia",
@@ -563,7 +598,8 @@
           "lat": -20.37783,
           "lon": -43.41633,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Mina da Passagem",
@@ -578,7 +614,8 @@
           "lat": -20.37783,
           "lon": -43.41633,
           "locationAccuracy": "city-center",
-          "days": "1h15"
+          "days": "1h15",
+          "relevanceSource": "agency"
         },
         {
           "name": "Rua Direita e casario",
@@ -593,7 +630,8 @@
           "lat": -20.37783,
           "lon": -43.41633,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Órgão Arp Schnitger",
@@ -608,7 +646,8 @@
           "lat": -20.37783,
           "lon": -43.41633,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja de São Pedro dos Clérigos",
@@ -623,11 +662,13 @@
           "lat": -20.37783,
           "lon": -43.41633,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
       ],
       "guideBriefing": "Mariana surgiu no início da ocupação mineradora e foi a primeira vila, a primeira cidade e a primeira capital de Minas Gerais. Também se tornou sede do primeiro bispado da capitania. Seu traçado, igrejas, Câmara e Cadeia e antigas áreas de mineração ajudam a compreender como poder civil, Igreja e economia do ouro organizaram os primeiros centros urbanos mineiros.",
-      "profile": "História · barroco · mineração"
+      "profile": "História · barroco · mineração",
+      "relevanceSource": "agency"
     },
     {
       "id": "cipo",
@@ -644,7 +685,8 @@
       ],
       "kid": "Muitas atrações envolvem trilha, terreno irregular ou água; escolha apenas após checar acesso e estrutura.",
       "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/cerrado/lista-de-ucs/parna-da-serra-do-cipo",
-      "guideBriefing": "A Serra do Cipó integra a Serra do Espinhaço, cadeia montanhosa que condicionou caminhos, rios, biodiversidade e ocupação humana no centro de Minas. A região reúne campos rupestres, cânions e cachoeiras e foi atravessada por antigas rotas entre a área mineradora e o norte da capitania. O parque nacional protege uma das áreas de maior diversidade botânica do Espinhaço."
+      "guideBriefing": "A Serra do Cipó integra a Serra do Espinhaço, cadeia montanhosa que condicionou caminhos, rios, biodiversidade e ocupação humana no centro de Minas. A região reúne campos rupestres, cânions e cachoeiras e foi atravessada por antigas rotas entre a área mineradora e o norte da capitania. O parque nacional protege uma das áreas de maior diversidade botânica do Espinhaço.",
+      "relevanceSource": "guide"
     },
     {
       "id": "tabuleiro",
@@ -676,7 +718,8 @@
           "lat": -19.03722,
           "lon": -43.42528,
           "locationAccuracy": "city-center",
-          "days": "1 h mirante / 4 h parte baixa"
+          "days": "1 h mirante / 4 h parte baixa",
+          "relevanceSource": "agency"
         },
         {
           "name": "Centro histórico",
@@ -691,7 +734,8 @@
           "lat": -19.03722,
           "lon": -43.42528,
           "locationAccuracy": "city-center",
-          "days": "1h30"
+          "days": "1h30",
+          "relevanceSource": "agency"
         },
         {
           "name": "Serra do Espinhaço",
@@ -706,9 +750,11 @@
           "lat": -19.03722,
           "lon": -43.42528,
           "locationAccuracy": "city-center",
-          "days": "meio dia"
+          "days": "meio dia",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     },
     {
       "id": "serro",
@@ -741,7 +787,8 @@
           "lat": -18.60444,
           "lon": -43.37945,
           "locationAccuracy": "city-center",
-          "days": "2–3 h"
+          "days": "2–3 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igrejas coloniais",
@@ -756,7 +803,8 @@
           "lat": -18.60444,
           "lon": -43.37945,
           "locationAccuracy": "city-center",
-          "days": "1h30"
+          "days": "1h30",
+          "relevanceSource": "agency"
         },
         {
           "name": "Queijo do Serro",
@@ -771,9 +819,11 @@
           "lat": -18.60444,
           "lon": -43.37945,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     },
     {
       "id": "milhoverde",
@@ -806,7 +856,8 @@
           "lat": -18.47324,
           "lon": -43.49798,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Núcleo histórico",
@@ -821,7 +872,8 @@
           "lat": -18.47324,
           "lon": -43.49798,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Cachoeiras",
@@ -836,9 +888,11 @@
           "lat": -18.47324,
           "lon": -43.49798,
           "locationAccuracy": "city-center",
-          "days": "meio dia"
+          "days": "meio dia",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     },
     {
       "id": "saogoncalo",
@@ -860,7 +914,8 @@
           "name": "Cachoeira do Comércio",
           "lat": -18.41676,
           "lon": -43.49807,
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "guide"
         },
         {
           "name": "Núcleo histórico",
@@ -875,7 +930,8 @@
           "lat": -18.42003,
           "lon": -43.49561,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igrejas e capelas",
@@ -890,7 +946,8 @@
           "lat": -18.42003,
           "lon": -43.49561,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Cachoeiras e Serra do Espinhaço",
@@ -905,11 +962,13 @@
           "lat": -18.42003,
           "lon": -43.49561,
           "locationAccuracy": "city-center",
-          "days": "meio dia"
+          "days": "meio dia",
+          "relevanceSource": "agency"
         }
       ],
       "guideBriefing": "São Gonçalo do Rio das Pedras já possuía casas, roças e engenhos no início do século XVIII. Situado entre Serro e a região diamantífera, viveu sob a vigilância da Coroa sobre os caminhos e o garimpo de diamantes. O povoado preserva a escala e a paisagem dos pequenos núcleos que davam apoio à circulação colonial na Serra do Espinhaço.",
-      "profile": "Vila histórica · natureza"
+      "profile": "Vila histórica · natureza",
+      "relevanceSource": "guide"
     },
     {
       "id": "diamantina",
@@ -941,7 +1000,8 @@
           "catalogName": "Casa de Juscelino Kubitschek",
           "lat": -18.24491,
           "lon": -43.60027,
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         },
         {
           "name": "Centro Histórico",
@@ -956,7 +1016,8 @@
           "lat": -18.24409,
           "lon": -43.60065,
           "locationAccuracy": "city-center",
-          "days": "2–3 h"
+          "days": "2–3 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Passadiço da Glória",
@@ -971,7 +1032,8 @@
           "lat": -18.24409,
           "lon": -43.60065,
           "locationAccuracy": "city-center",
-          "days": "20 min"
+          "days": "20 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Casa de Chica da Silva",
@@ -986,7 +1048,8 @@
           "lat": -18.24409,
           "lon": -43.60065,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -1001,7 +1064,8 @@
           "lat": -18.24409,
           "lon": -43.60065,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Rua da Quitanda / Beco da Tecla",
@@ -1016,7 +1080,8 @@
           "lat": -18.24409,
           "lon": -43.60065,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Vesperata",
@@ -1034,11 +1099,13 @@
           "lat": -18.24409,
           "lon": -43.60065,
           "locationAccuracy": "city-center",
-          "days": "2–3 h"
+          "days": "2–3 h",
+          "relevanceSource": "agency"
         }
       ],
       "guideBriefing": "Diamantina, antigo Arraial do Tijuco, desenvolveu-se com a descoberta e o controle dos diamantes no século XVIII. A Coroa portuguesa criou uma administração especialmente rígida para a região, deixando marcas na organização social e urbana. O centro histórico, a memória de Chica da Silva, a tradição musical e a trajetória de Juscelino Kubitschek revelam diferentes períodos de uma cidade cuja identidade ultrapassou o ciclo diamantífero.",
-      "profile": "História · cultura · música"
+      "profile": "História · cultura · música",
+      "relevanceSource": "agency"
     },
     {
       "id": "biribiri",
@@ -1070,7 +1137,8 @@
           "lat": -18.14464,
           "lon": -43.61966,
           "locationAccuracy": "city-center",
-          "days": "2 h"
+          "days": "2 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Cachoeiras",
@@ -1085,7 +1153,8 @@
           "lat": -18.14464,
           "lon": -43.61966,
           "locationAccuracy": "city-center",
-          "days": "meio dia"
+          "days": "meio dia",
+          "relevanceSource": "agency"
         },
         {
           "name": "Trilhas do Parque Estadual do Biribiri",
@@ -1100,9 +1169,11 @@
           "lat": -18.14464,
           "lon": -43.61966,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     },
     {
       "id": "peruacu",
@@ -1119,7 +1190,8 @@
       ],
       "kid": "Visitas podem exigir reserva, guia e caminhada; avaliar como extensão separada, não como parada simples com bebês.",
       "url": "https://whc.unesco.org/en/list/1747",
-      "guideBriefing": "O vale do Peruaçu reúne uma história humana muito anterior às cidades coloniais do roteiro. Cavernas, abrigos e paredões guardam pinturas rupestres e vestígios de ocupações indígenas de milhares de anos, enquanto o relevo cárstico criou grandes cavernas e cânions. O conjunto permite observar, no mesmo território, arqueologia, geologia e a longa ocupação humana do norte de Minas."
+      "guideBriefing": "O vale do Peruaçu reúne uma história humana muito anterior às cidades coloniais do roteiro. Cavernas, abrigos e paredões guardam pinturas rupestres e vestígios de ocupações indígenas de milhares de anos, enquanto o relevo cárstico criou grandes cavernas e cânions. O conjunto permite observar, no mesmo território, arqueologia, geologia e a longa ocupação humana do norte de Minas.",
+      "relevanceSource": "guide"
     },
     {
       "id": "delfinopolis",
@@ -1135,7 +1207,8 @@
       ],
       "kid": "Com bebês, confirme operação, filas e embarque antes de escolher esse caminho. Não confundir essa travessia com o acesso urbano a Capitólio.",
       "url": "https://www.google.com/maps/search/?api=1&query=Balsa+Cassia+Delfinopolis",
-      "guideBriefing": "Delfinópolis ocupa a borda sudoeste da Serra da Canastra, entre serras, rios e antigas áreas rurais. A construção da represa de Peixoto, hoje Mascarenhas de Moraes, alterou acessos e paisagens e tornou a travessia por balsa uma característica local. A região funciona como outra porta de entrada para a Canastra e para seus vales e cachoeiras."
+      "guideBriefing": "Delfinópolis ocupa a borda sudoeste da Serra da Canastra, entre serras, rios e antigas áreas rurais. A construção da represa de Peixoto, hoje Mascarenhas de Moraes, alterou acessos e paisagens e tornou a travessia por balsa uma característica local. A região funciona como outra porta de entrada para a Canastra e para seus vales e cachoeiras.",
+      "relevanceSource": "guide"
     },
     {
       "id": "cordisburgo",
@@ -1167,7 +1240,8 @@
           "lat": -19.125834,
           "lon": -44.320278,
           "locationAccuracy": "city-center",
-          "days": "1h30"
+          "days": "1h30",
+          "relevanceSource": "agency"
         },
         {
           "name": "Museu Casa Guimarães Rosa",
@@ -1182,9 +1256,11 @@
           "lat": -19.125834,
           "lon": -44.320278,
           "locationAccuracy": "city-center",
-          "days": "1h30–2 h"
+          "days": "1h30–2 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "agency"
     },
     {
       "id": "belohorizonte",
@@ -1217,7 +1293,8 @@
           "lat": -19.922732,
           "lon": -43.945095,
           "locationAccuracy": "city-center",
-          "days": "meio dia"
+          "days": "meio dia",
+          "relevanceSource": "agency"
         },
         {
           "name": "Praça da Liberdade",
@@ -1232,7 +1309,8 @@
           "lat": -19.922732,
           "lon": -43.945095,
           "locationAccuracy": "city-center",
-          "days": "1–3 h"
+          "days": "1–3 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Mercado Central",
@@ -1247,9 +1325,11 @@
           "lat": -19.922732,
           "lon": -43.945095,
           "locationAccuracy": "city-center",
-          "days": "1h30–2 h"
+          "days": "1h30–2 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "agency"
     },
     {
       "id": "brumadinho",
@@ -1280,9 +1360,11 @@
           "lat": -20.143611,
           "lon": -44.2,
           "locationAccuracy": "city-center",
-          "days": "1 dia"
+          "days": "1 dia",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "agency"
     },
     {
       "id": "saojoaodelrei",
@@ -1318,7 +1400,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "2–3 h"
+          "days": "2–3 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -1333,7 +1416,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igrejas e tradição musical",
@@ -1348,7 +1432,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Estação da Estrada de Ferro Oeste de Minas",
@@ -1363,7 +1448,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Maria Fumaça São João del-Rei–Tiradentes",
@@ -1378,7 +1464,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "1h15 só ida"
+          "days": "1h15 só ida",
+          "relevanceSource": "agency"
         },
         {
           "name": "Artesanato em estanho",
@@ -1393,7 +1480,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Ponte da Cadeia",
@@ -1408,7 +1496,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Teatro Municipal",
@@ -1423,7 +1512,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "40 min"
+          "days": "40 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Museu Regional",
@@ -1438,7 +1528,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Memorial Tancredo Neves",
@@ -1453,7 +1544,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Solar dos Neves / Sobrado Lustosa",
@@ -1468,7 +1560,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Museu da FEB",
@@ -1483,7 +1576,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -1498,7 +1592,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Catedral Basílica Nossa Senhora do Pilar",
@@ -1513,7 +1608,8 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Casa de Bárbara Heliodora",
@@ -1528,9 +1624,11 @@
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "agency"
     },
     {
       "id": "tiradentes",
@@ -1566,7 +1664,8 @@
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
-          "days": "2–3 h"
+          "days": "2–3 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Matriz de Santo Antônio",
@@ -1581,7 +1680,8 @@
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
-          "days": "45 min"
+          "days": "45 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Chafariz de São José",
@@ -1596,7 +1696,8 @@
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
-          "days": "20 min"
+          "days": "20 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Museu Casa Padre Toledo",
@@ -1611,7 +1712,8 @@
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Serra de São José",
@@ -1626,7 +1728,8 @@
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
-          "days": "meio dia"
+          "days": "meio dia",
+          "relevanceSource": "agency"
         },
         {
           "name": "Gastronomia",
@@ -1641,7 +1744,8 @@
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
-          "days": "2 h"
+          "days": "2 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Largo das Forras",
@@ -1656,7 +1760,8 @@
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Rua Direita",
@@ -1671,7 +1776,8 @@
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Museu de Sant'Ana",
@@ -1686,7 +1792,8 @@
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Museu da Liturgia",
@@ -1701,7 +1808,8 @@
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário dos Pretos",
@@ -1716,9 +1824,11 @@
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "agency"
     },
     {
       "id": "bichinho",
@@ -1751,7 +1861,8 @@
           "lat": -21.099115,
           "lon": -44.117586,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Ateliês e oficinas",
@@ -1766,7 +1877,8 @@
           "lat": -21.099115,
           "lon": -44.117586,
           "locationAccuracy": "city-center",
-          "days": "1h30–2 h"
+          "days": "1h30–2 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Cachaçarias e produtos locais",
@@ -1781,9 +1893,11 @@
           "lat": -21.099115,
           "lon": -44.117586,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "agency"
     },
     {
       "id": "curralinho",
@@ -1815,7 +1929,8 @@
           "lat": -18.31002,
           "lon": -43.523591,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Experiência de garimpo",
@@ -1830,9 +1945,11 @@
           "lat": -18.31002,
           "lon": -43.523591,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     },
     {
       "id": "catasaltas",
@@ -1865,7 +1982,8 @@
           "lat": -20.074754,
           "lon": -43.408165,
           "locationAccuracy": "city-center",
-          "days": "2–3 h"
+          "days": "2–3 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Matriz de Nossa Senhora da Conceição",
@@ -1880,7 +1998,8 @@
           "lat": -20.074754,
           "lon": -43.408165,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Serra do Caraça",
@@ -1895,9 +2014,11 @@
           "lat": -20.074754,
           "lon": -43.408165,
           "locationAccuracy": "city-center",
-          "days": "meio dia"
+          "days": "meio dia",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     },
     {
       "id": "santabarbara",
@@ -1929,7 +2050,8 @@
           "lat": -19.958721,
           "lon": -43.413154,
           "locationAccuracy": "city-center",
-          "days": "45 min"
+          "days": "45 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Centro Histórico",
@@ -1944,9 +2066,11 @@
           "lat": -19.958721,
           "lon": -43.413154,
           "locationAccuracy": "city-center",
-          "days": "2–3 h"
+          "days": "2–3 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     },
     {
       "id": "caraca",
@@ -1980,7 +2104,8 @@
           "lat": -20.098103,
           "lon": -43.487693,
           "locationAccuracy": "city-center",
-          "days": "2 h"
+          "days": "2 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Ruínas do antigo colégio",
@@ -1995,7 +2120,8 @@
           "lat": -20.098103,
           "lon": -43.487693,
           "locationAccuracy": "city-center",
-          "days": "40 min"
+          "days": "40 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Trilhas, cachoeiras e grutas",
@@ -2010,7 +2136,8 @@
           "lat": -20.098103,
           "lon": -43.487693,
           "locationAccuracy": "city-center",
-          "days": "meio dia"
+          "days": "meio dia",
+          "relevanceSource": "agency"
         },
         {
           "name": "Observação do lobo-guará",
@@ -2025,9 +2152,11 @@
           "lat": -20.098103,
           "lon": -43.487693,
           "locationAccuracy": "city-center",
-          "days": "noite / requer pernoite"
+          "days": "noite / requer pernoite",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     },
     {
       "id": "sabara",
@@ -2063,7 +2192,8 @@
           "lat": -19.890037,
           "lon": -43.810792,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -2078,7 +2208,8 @@
           "lat": -19.890037,
           "lon": -43.810792,
           "locationAccuracy": "city-center",
-          "days": "30 min"
+          "days": "30 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Matriz Nossa Senhora da Conceição",
@@ -2093,7 +2224,8 @@
           "lat": -19.890037,
           "lon": -43.810792,
           "locationAccuracy": "city-center",
-          "days": "45 min"
+          "days": "45 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Teatro Municipal",
@@ -2108,7 +2240,8 @@
           "lat": -19.890037,
           "lon": -43.810792,
           "locationAccuracy": "city-center",
-          "days": "40 min"
+          "days": "40 min",
+          "relevanceSource": "agency"
         },
         {
           "name": "Solar do Padre Correia",
@@ -2123,7 +2256,8 @@
           "lat": -19.890037,
           "lon": -43.810792,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário dos Pretos",
@@ -2138,7 +2272,8 @@
           "lat": -19.890037,
           "lon": -43.810792,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Chafariz do Kaquende",
@@ -2153,7 +2288,8 @@
           "lat": -19.890037,
           "lon": -43.810792,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Rua Dom Pedro II",
@@ -2168,9 +2304,11 @@
           "lat": -19.890037,
           "lon": -43.810792,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     },
     {
       "id": "caete",
@@ -2202,7 +2340,8 @@
           "lat": -19.897777,
           "lon": -43.670278,
           "locationAccuracy": "city-center",
-          "days": "2 h"
+          "days": "2 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Santuário Nossa Senhora da Piedade",
@@ -2217,9 +2356,11 @@
           "lat": -19.897777,
           "lon": -43.670278,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     },
     {
       "id": "peiro",
@@ -2249,7 +2390,8 @@
           "lat": -19.7442903,
           "lon": -47.7424457,
           "days": "1–2 h",
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         },
         {
           "name": "Geossítio de Peirópolis",
@@ -2265,11 +2407,13 @@
           "lon": -47.743080139,
           "days": "30–60 min",
           "type": "natureza",
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         }
       ],
       "guideBriefing": "Peirópolis, distrito rural de Uberaba, tornou-se referência paleontológica a partir das pesquisas iniciadas na região na década de 1940. As rochas do Triângulo Mineiro preservaram fósseis do Cretáceo, incluindo dinossauros e outros animais. O antigo núcleo ferroviário passou a abrigar pesquisa, museu e educação científica, aproximando o visitante do território onde os fósseis são encontrados e estudados.",
-      "profile": "Paleontologia, geologia e história científica"
+      "profile": "Paleontologia, geologia e história científica",
+      "relevanceSource": "guide"
     },
     {
       "id": "araxa",
@@ -2304,7 +2448,8 @@
           "lat": -19.6469277,
           "lon": -46.9498159,
           "days": "2 h",
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         },
         {
           "name": "Complexo do Barreiro",
@@ -2319,7 +2464,8 @@
           "lat": -19.6472115,
           "lon": -46.954839,
           "days": "2 h",
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         },
         {
           "name": "Museu Dona Beja",
@@ -2334,7 +2480,8 @@
           "lat": -19.5898756,
           "lon": -46.9380426,
           "days": "1 h",
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         },
         {
           "name": "Museu Calmon Barreto / Memorial de Araxá",
@@ -2349,7 +2496,8 @@
           "lat": -19.586776,
           "lon": -46.9426564,
           "days": "30–60 min",
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         },
         {
           "name": "Igreja de São Domingos",
@@ -2364,7 +2512,8 @@
           "lat": -19.5927815,
           "lon": -46.9409702,
           "days": "20–30 min",
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         },
         {
           "name": "Parque do Cristo",
@@ -2380,7 +2529,8 @@
           "lon": -46.9345619,
           "days": "30–60 min",
           "type": "natureza",
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         },
         {
           "name": "Fontes Dona Beja e Andrade Júnior",
@@ -2396,11 +2546,13 @@
           "lon": -46.94960645,
           "days": "20–40 min",
           "type": "natureza",
-          "locationAccuracy": "exact"
+          "locationAccuracy": "exact",
+          "relevanceSource": "agency"
         }
       ],
       "guideBriefing": "Araxá se desenvolveu em torno de atividades rurais e das águas minerais do Barreiro, conhecidas muito antes da consolidação do turismo termal. No século XX, o Estado transformou essas águas em projeto turístico de grande escala, culminando no Grande Hotel e nas Termas, inaugurados na década de 1940. A cidade permite relacionar história regional, termalismo, arquitetura e a construção de uma estância de luxo no interior do país.",
-      "profile": "Termalismo · arquitetura · história"
+      "profile": "Termalismo · arquitetura · história",
+      "relevanceSource": "guide"
     },
     {
       "id": "itabirito",
@@ -2432,7 +2584,8 @@
           "lat": -20.251972,
           "lon": -43.802917,
           "locationAccuracy": "city-center",
-          "days": "2 h"
+          "days": "2 h",
+          "relevanceSource": "agency"
         },
         {
           "name": "Pastel de angu",
@@ -2447,9 +2600,11 @@
           "lat": -20.251972,
           "lon": -43.802917,
           "locationAccuracy": "city-center",
-          "days": "45 min"
+          "days": "45 min",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     },
     {
       "id": "amarantina",
@@ -2480,9 +2635,11 @@
           "lat": -20.313221,
           "lon": -43.710354,
           "locationAccuracy": "city-center",
-          "days": "1 h"
+          "days": "1 h",
+          "relevanceSource": "agency"
         }
-      ]
+      ],
+      "relevanceSource": "guide"
     }
   ],
   "intro": "Pontos e atrações recorrentes em roteiros de agências, operadoras e circuitos turísticos consolidados de Minas Gerais. A tabela procura responder duas perguntas antes de cada visita: **o que esse lugar ajuda a entender sobre Minas/Brasil** e **por que operadores profissionais gastam tempo de roteiro ali**. Há duas medidas separadas. **Estimativa de tempo** é uma faixa prática de planejamento, baseada no tipo de atração e, quando disponíveis, comentários/relatos de visitantes. **Tempo real publicado** só é preenchido quando foi localizada uma duração explicitamente informada por atração, órgão público, agência/operadora, guia turístico ou relato publicado. Quando não há referência explícita, fica **—**. Assim, estimativa e dado publicado nunca são misturados. As colunas **Criança de 1 ano** e **Idoso / mobilidade reduzida** só recebem uma conclusão quando há informação publicada suficiente sobre admissão, restrições ou acessibilidade; ausência de proibição não é tratada como confirmação de acesso."
