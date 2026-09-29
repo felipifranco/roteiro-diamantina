@@ -2835,7 +2835,7 @@ window.ROTEIRO_DATA = {
           "relevanceSource": "agency"
         }
       ],
-      "relevanceSource": "guide"
+      "relevanceSource": "agency"
     },
     {
       "id": "caete",
@@ -3131,7 +3131,7 @@ window.ROTEIRO_DATA = {
           "relevanceSource": "agency"
         }
       ],
-      "relevanceSource": "guide"
+      "relevanceSource": "agency"
     },
     {
       "id": "amarantina",
@@ -3453,6 +3453,133 @@ window.ROTEIRO_DATA = {
       "url": "",
       "attractions": [],
       "guideBriefing": "Município incluído no corredor comercial da Estrada Real entre Diamantina e Belo Horizonte.",
+      "profile": "Parada presente em roteiro comercial de agência",
+      "relevanceSource": "agency"
+    },
+    {
+      "id": "raposos",
+      "name": "Raposos",
+      "lat": -19.9672,
+      "lon": -43.8042,
+      "kind": "opcional",
+      "type": "historia",
+      "days": "Parada opcional",
+      "sights": [
+        "Passagem pelo núcleo de Raposos"
+      ],
+      "kid": "A confirmar",
+      "url": "",
+      "attractions": [
+        {
+          "name": "Núcleo de Raposos",
+          "lat": -19.9672,
+          "lon": -43.8042,
+          "locationAccuracy": "city-center",
+          "catalogName": "Núcleo de Raposos",
+          "description": "Passagem pelo município no roteiro de cicloviagem comercializado pela Primotur.",
+          "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
+          "visitType": "Histórica / percurso",
+          "estimatedDuration": "—",
+          "publishedDuration": "—",
+          "oneYearOld": "A confirmar",
+          "accessibility": "A confirmar",
+          "guideBriefing": "Passagem pelo município no roteiro de cicloviagem comercializado pela Primotur.",
+          "days": "—",
+          "relevanceSource": "agency"
+        }
+      ],
+      "guideBriefing": "Raposos integra o roteiro comercial Entre Trilhas, Sabores e Aromas da Primotur, no antigo corredor ferroviário e do Rio das Velhas entre Sabará e Rio Acima.",
+      "profile": "Parada presente em roteiro comercial de agência",
+      "relevanceSource": "agency"
+    },
+    {
+      "id": "novalima",
+      "name": "Nova Lima · Honório Bicalho",
+      "lat": -19.9854,
+      "lon": -43.8471,
+      "kind": "opcional",
+      "type": "historia",
+      "days": "Parada opcional",
+      "sights": [
+        "Honório Bicalho",
+        "Antigo leito ferroviário do Sabarabuçu"
+      ],
+      "kid": "A confirmar",
+      "url": "",
+      "attractions": [
+        {
+          "name": "Honório Bicalho",
+          "lat": -19.9854,
+          "lon": -43.8471,
+          "locationAccuracy": "city-center",
+          "catalogName": "Honório Bicalho",
+          "description": "Distrito de Nova Lima atravessado pelo roteiro comercial ao longo do Rio das Velhas.",
+          "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
+          "visitType": "Histórica / percurso",
+          "estimatedDuration": "—",
+          "publishedDuration": "—",
+          "oneYearOld": "A confirmar",
+          "accessibility": "A confirmar",
+          "guideBriefing": "Distrito de Nova Lima atravessado pelo roteiro comercial ao longo do Rio das Velhas.",
+          "days": "—",
+          "relevanceSource": "agency"
+        },
+        {
+          "name": "Antigo leito da Ferrovia do Sabarabuçu",
+          "lat": -19.9854,
+          "lon": -43.8471,
+          "locationAccuracy": "city-center",
+          "catalogName": "Antigo leito da Ferrovia do Sabarabuçu",
+          "description": "Trecho ferroviário desativado usado como eixo do roteiro entre Sabará, Raposos e Rio Acima.",
+          "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
+          "visitType": "Histórica / percurso",
+          "estimatedDuration": "—",
+          "publishedDuration": "—",
+          "oneYearOld": "A confirmar",
+          "accessibility": "A confirmar",
+          "guideBriefing": "Trecho ferroviário desativado usado como eixo do roteiro entre Sabará, Raposos e Rio Acima.",
+          "days": "—",
+          "relevanceSource": "agency"
+        }
+      ],
+      "guideBriefing": "Nova Lima aparece no roteiro comercial Entre Trilhas, Sabores e Aromas por meio de Honório Bicalho, antigo núcleo ferroviário às margens do Rio das Velhas.",
+      "profile": "Parada presente em roteiro comercial de agência",
+      "relevanceSource": "agency"
+    },
+    {
+      "id": "rioacima",
+      "name": "Rio Acima",
+      "lat": -20.0875,
+      "lon": -43.7892,
+      "kind": "opcional",
+      "type": "historia",
+      "days": "Parada opcional",
+      "sights": [
+        "Núcleo urbano",
+        "Antigo corredor ferroviário"
+      ],
+      "kid": "A confirmar",
+      "url": "",
+      "attractions": [
+        {
+          "name": "Núcleo de Rio Acima",
+          "lat": -20.0875,
+          "lon": -43.7892,
+          "locationAccuracy": "city-center",
+          "catalogName": "Núcleo de Rio Acima",
+          "description": "Parada com pernoite no roteiro comercial Entre Trilhas, Sabores e Aromas.",
+          "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
+          "visitType": "Histórica / percurso",
+          "estimatedDuration": "—",
+          "publishedDuration": "—",
+          "oneYearOld": "A confirmar",
+          "accessibility": "A confirmar",
+          "guideBriefing": "Parada com pernoite no roteiro comercial Entre Trilhas, Sabores e Aromas.",
+          "days": "—",
+          "relevanceSource": "agency"
+        }
+      ],
+      "guideBriefing": "Rio Acima é parada e pernoite do roteiro comercial Entre Trilhas, Sabores e Aromas, conectando o corredor do Rio das Velhas a Itabirito.",
       "profile": "Parada presente em roteiro comercial de agência",
       "relevanceSource": "agency"
     }
