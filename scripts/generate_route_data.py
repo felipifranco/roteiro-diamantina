@@ -7,9 +7,7 @@ Edit only data/roteiro.json, then run `python3 scripts/generate_route_data.py`.
 import argparse
 import copy
 import json
-import re
 import sys
-import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -60,8 +58,10 @@ def _valid_coordinates(lat, lon):
 def validate(data):
     if not isinstance(data, dict):
         raise ValueError("route data must be an object")
-    if type(data.get("version")) is not int or data["version"] != 1:
-        raise ValueError("version must be the integer 1")
+    if type(data.get("version")) is not int or data["version"] != 2:
+        raise ValueError("version must be the integer 2")
+    if not isinstance(data.get("intro"), str) or not data["intro"].strip():
+        raise ValueError("intro must be a non-empty string")
     route_stops = data.get("routeStops")
     if not isinstance(route_stops, list) or not route_stops:
         raise ValueError("routeStops must be a non-empty list")
@@ -90,6 +90,8 @@ def validate(data):
             raise ValueError(
                 f"routeStops[{index}] coordinates must be valid latitude and longitude values"
             )
+        if "profile" in stop and not isinstance(stop["profile"], str):
+            raise ValueError(f"routeStops[{index}].profile must be a string")
         if not isinstance(stop["sights"], list):
             raise ValueError(f"routeStops[{index}].sights must be a list")
         if any(not isinstance(sight, str) for sight in stop["sights"]):
@@ -108,38 +110,19 @@ def validate(data):
                     "coordinates must be valid latitude and longitude values"
                 )
 
-    catalog = data.get("catalog")
-    if not isinstance(catalog, dict):
-        raise ValueError("catalog must be an object")
-    if not isinstance(catalog.get("intro"), str) or not catalog["intro"].strip():
-        raise ValueError("catalog.intro must be a non-empty string")
-    cities = catalog.get("cities")
-    if not isinstance(cities, list) or not cities:
-        raise ValueError("catalog.cities must be a non-empty list")
-    city_names = set()
-    for city_index, city in enumerate(cities):
-        if not isinstance(city, dict):
-            raise ValueError(f"catalog.cities[{city_index}] must be an object")
-        if not isinstance(city.get("name"), str) or not city["name"].strip():
-            raise ValueError(f"catalog.cities[{city_index}].name must be non-empty")
-        if city["name"] in city_names:
-            raise ValueError(f"duplicate catalog city: {city['name']}")
-        city_names.add(city["name"])
-        if not isinstance(city.get("profile"), str):
-            raise ValueError(f"catalog.cities[{city_index}].profile must be a string")
-        attractions = city.get("attractions")
-        if not isinstance(attractions, list) or not attractions:
-            raise ValueError(f"catalog.cities[{city_index}].attractions must be non-empty")
-        for attraction_index, attraction in enumerate(attractions):
-            if not isinstance(attraction, dict):
+        for attraction_index, attraction in enumerate(mapped_attractions):
+            if not isinstance(attraction.get("name"), str) or not attraction["name"].strip():
                 raise ValueError(
-                    f"catalog.cities[{city_index}].attractions[{attraction_index}] must be an object"
+                    f"routeStops[{index}].attractions[{attraction_index}].name must be non-empty"
+                )
+            if "estimatedDuration" in attraction and not isinstance(attraction["estimatedDuration"], str):
+                raise ValueError(
+                    f"routeStops[{index}].attractions[{attraction_index}].estimatedDuration must be a string"
                 )
             missing = [field for field in ATTRACTION_FIELDS if field not in attraction]
-            if missing:
+            if missing and "description" in attraction:
                 raise ValueError(
-                    f"catalog.cities[{city_index}].attractions[{attraction_index}] "
-                    f"missing fields: {', '.join(missing)}"
+                    f"routeStops[{index}].attractions[{attraction_index}] missing fields: {', '.join(missing)}"
                 )
 
 
@@ -151,127 +134,8 @@ def _js_json(value):
     )
 
 
-CATALOG_ATTRACTION_ALIASES = {
-    "casa de jk": "casa de juscelino kubitschek",
-    "santuario do bom jesus": "santuario do bom jesus de matosinhos",
-}
-
-CATALOG_CITY_ALIASES = {
-    "tabuleiro conceicao do mato dentro": "conceicao do mato dentro",
-    "serra da canastra": "sao roque de minas serra da canastra",
-    "uberaba peiropolis": "uberaba peiropolis",
-    "curralinho extracao": "curralinho extracao diamantina",
-}
-
-
-def _normalized_name(value):
-    normalized_punctuation = value.translate(
-        str.maketrans({"’": "'", "‘": "'", "ʼ": "'"})
-    )
-    ascii_name = (
-        unicodedata.normalize("NFKD", normalized_punctuation)
-        .encode("ascii", "ignore")
-        .decode("ascii")
-        .lower()
-    )
-    return " ".join(re.findall(r"[a-z0-9]+", ascii_name))
-
-
-def _catalog_city_match_score(stop_name, catalog_name):
-    stop = _normalized_name(stop_name)
-    city = _normalized_name(catalog_name)
-    if stop == city:
-        return 3
-    if stop.startswith(city + " ") or city.startswith(stop + " "):
-        return 2
-    if f" {stop} " in f" {city} " or f" {city} " in f" {stop} ":
-        return 1
-    return 0
-
-
-def _matching_catalog_city(stop_name, catalog_cities):
-    normalized_stop = _normalized_name(stop_name)
-    lookup_name = CATALOG_CITY_ALIASES.get(normalized_stop, stop_name)
-    scored = [
-        (_catalog_city_match_score(lookup_name, city["name"]), city)
-        for city in catalog_cities
-    ]
-    highest = max((score for score, _ in scored), default=0)
-    matches = [city for score, city in scored if score == highest and score > 0]
-    return matches[0] if len(matches) == 1 else None
-
-
-def _enrich_route_attraction_durations(route_stops, catalog_cities):
-    for stop in route_stops:
-        attractions = stop.get("attractions", [])
-        if not attractions:
-            continue
-        city = _matching_catalog_city(stop["name"], catalog_cities)
-        if city is None:
-            continue
-        catalog_attractions = {
-            _normalized_name(item["name"]): item for item in city["attractions"]
-        }
-        for attraction in attractions:
-            if attraction.get("days") and attraction["days"] != "Duração a confirmar":
-                continue
-            route_name = _normalized_name(attraction["name"])
-            catalog_name = _normalized_name(
-                CATALOG_ATTRACTION_ALIASES.get(route_name, attraction["name"])
-            )
-            match = catalog_attractions.get(catalog_name)
-            duration = match.get("estimatedDuration") if match else None
-            if duration and duration != "—":
-                attraction["days"] = duration
-
-
-def _merge_catalog_attractions(route_stops, catalog_cities):
-    """Expose every catalog attraction to the map without duplicating catalog content.
-
-    Explicit routeStops[].attractions coordinates remain authoritative. Catalog
-    attractions that do not yet have a surveyed coordinate inherit the city
-    coordinate and are marked locationAccuracy='city-center'. This keeps every
-    researched attraction selectable while making coordinate quality explicit.
-    """
-    for stop in route_stops:
-        city = _matching_catalog_city(stop["name"], catalog_cities)
-        if city is None:
-            continue
-        mapped = stop.setdefault("attractions", [])
-        by_name = {}
-        for attraction in mapped:
-            key = _normalized_name(attraction["name"])
-            key = _normalized_name(CATALOG_ATTRACTION_ALIASES.get(key, attraction["name"]))
-            by_name[key] = attraction
-            attraction.setdefault("locationAccuracy", "exact")
-        for catalog_attraction in city["attractions"]:
-            key = _normalized_name(catalog_attraction["name"])
-            existing = by_name.get(key)
-            if existing is None:
-                existing = {
-                    "name": catalog_attraction["name"],
-                    "lat": stop["lat"],
-                    "lon": stop["lon"],
-                    "locationAccuracy": "city-center",
-                }
-                mapped.append(existing)
-                by_name[key] = existing
-            existing.setdefault("days", catalog_attraction["estimatedDuration"])
-            existing.setdefault("description", catalog_attraction["description"])
-            existing.setdefault("agencyRationale", catalog_attraction["agencyRationale"])
-            existing.setdefault("visitType", catalog_attraction["visitType"])
-            existing.setdefault("publishedDuration", catalog_attraction["publishedDuration"])
-            existing.setdefault("oneYearOld", catalog_attraction["oneYearOld"])
-            existing.setdefault("accessibility", catalog_attraction["accessibility"])
-            for field in ("schedule", "scheduleNote", "eventUrl"):
-                if field in catalog_attraction:
-                    existing.setdefault(field, catalog_attraction[field])
-
-
 def render_app_data(data):
     route_stops = copy.deepcopy(data["routeStops"])
-    _merge_catalog_attractions(route_stops, data["catalog"]["cities"])
-    _enrich_route_attraction_durations(route_stops, data["catalog"]["cities"])
     payload = {"routeStops": route_stops}
     return (
         "// Generated from data/roteiro.json by scripts/generate_route_data.py. Do not edit.\n"
@@ -293,26 +157,30 @@ def render_markdown(data):
         "",
         "<!-- Gerado por scripts/generate_route_data.py a partir de data/roteiro.json. Não edite manualmente. -->",
         "",
-        data["catalog"]["intro"],
+        data["intro"],
         "",
         _row(HEADERS),
         "|---|---|---|---|---|---|---:|---:|---|---|",
     ]
-    for city in data["catalog"]["cities"]:
-        for index, attraction in enumerate(city["attractions"]):
+    for city in data["routeStops"]:
+        detailed_index = 0
+        for attraction in city.get("attractions", []):
+            if "description" not in attraction:
+                continue
             values = [
-                f"**{city['name']}**" if index == 0 else "",
-                city["profile"] if index == 0 else "",
-                f"**{attraction['name']}**",
+                f"**{city['name']}**" if detailed_index == 0 else "",
+                city.get("profile", "") if detailed_index == 0 else "",
+                f"**{attraction.get('catalogName', attraction['name'])}**",
                 attraction["description"],
                 attraction["agencyRationale"],
                 attraction["visitType"],
-                attraction["estimatedDuration"],
+                attraction.get("estimatedDuration", attraction.get("days", "—")),
                 attraction["publishedDuration"],
                 attraction["oneYearOld"],
                 attraction["accessibility"],
             ]
             lines.append(_row(values))
+            detailed_index += 1
     return "\n".join(lines) + "\n"
 
 

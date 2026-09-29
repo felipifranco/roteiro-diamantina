@@ -40,12 +40,19 @@ class RouteInteractionControlsTests(unittest.TestCase):
                     self.assertEqual(generated_stop.get(key), value, (stop_id, key))
             generated_by_name = {a["name"]: a for a in generated_stop.get("attractions", [])}
             for source_attraction in source_stop.get("attractions", []):
-                generated_attraction = generated_by_name[source_attraction["name"]]
+                generated_attraction = generated_by_name.get(source_attraction["name"]) or next(
+                    a for a in generated_stop.get("attractions", [])
+                    if a.get("routeOverrides", {}).get("name") == source_attraction["name"]
+                )
                 for key, value in source_attraction.items():
-                    self.assertEqual(generated_attraction.get(key), value, (stop_id, key))
+                    if generated_attraction.get(key) != value:
+                        self.assertEqual(
+                            generated_attraction.get("routeOverrides", {}).get(key),
+                            value, (stop_id, key),
+                        )
                 self.assertEqual(generated_attraction.get("locationAccuracy"), "exact")
-        # The generated adapter may add catalog-only attractions. They must keep
-        # all researched catalog fields and be explicit when using the city
+        # The generated adapter may add researched attractions without route coordinates.
+        # They must keep all details and be explicit when using the city
         # coordinate until an exact attraction coordinate is surveyed.
         for stop in generated_stops.values():
             for attraction in stop.get("attractions", []):

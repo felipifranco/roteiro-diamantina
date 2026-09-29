@@ -17,18 +17,19 @@ EXPECTED_ROUTE_STOP_IDS = (
 
 
 class ItinerarySourceOfTruthTests(unittest.TestCase):
-    def test_canonical_json_contains_route_and_catalog(self):
+    def test_canonical_json_contains_unified_route_stops(self):
         source = ROOT / "data" / "roteiro.json"
         self.assertTrue(source.is_file(), "data/roteiro.json must be the canonical dataset")
         data = json.loads(source.read_text(encoding="utf-8"))
         self.assertIn("routeStops", data)
-        self.assertIn("catalog", data)
+        self.assertNotIn("catalog", data)
+        self.assertTrue(data["intro"])
         self.assertEqual(
             tuple(stop["id"] for stop in data["routeStops"]), EXPECTED_ROUTE_STOP_IDS
         )
-        self.assertGreater(len(data["catalog"]["cities"]), 0)
+        self.assertTrue(all("attractions" in stop and "profile" in stop for stop in data["routeStops"] if stop["id"] not in {"mirassol", "cipo", "peruacu", "delfinopolis"}))
 
-    def test_araxa_and_peiropolis_attractions_are_canonical_route_stops(self):
+    def test_araxa_and_peiropolis_research_is_embedded_in_route_stops(self):
         data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
         route_stops = {stop["id"]: stop for stop in data["routeStops"]}
         expected_araxa = (
@@ -52,6 +53,8 @@ class ItinerarySourceOfTruthTests(unittest.TestCase):
                 "Geossítio de Peirópolis",
             ],
         )
+        self.assertTrue(route_stops["peiro"]["profile"])
+        self.assertTrue(all("description" in item and "estimatedDuration" in item for item in peiro["attractions"]))
         self.assertTrue(
             all("lat" in item and "lon" in item for item in route_stops["araxa"]["attractions"] + peiro["attractions"])
         )
@@ -142,17 +145,14 @@ class ItinerarySourceOfTruthTests(unittest.TestCase):
             index for index, stop in enumerate(original["routeStops"]) if stop.get("attractions")
         )
         for label, path in (
-            ("catalog", ("catalog",)),
             ("route stop", ("routeStops", 0)),
-            ("city", ("catalog", "cities", 0)),
-            ("attraction", ("catalog", "cities", 0, "attractions", 0)),
             ("mapped route attraction", ("routeStops", mapped_index, "attractions", 0)),
         ):
             data = json.loads(json.dumps(original))
             target = data
             for key in path[:-1]:
                 target = target[key]
-            target[path[-1]] = [] if label == "catalog" else None
+            target[path[-1]] = None
             malformed.append((label, data))
 
         for field in ("lat", "lon"):
