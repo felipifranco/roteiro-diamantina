@@ -35,8 +35,9 @@ class ReturnEstimateStateTests(unittest.TestCase):
             "home===null?'—':fmt(home)" in PAGE,
             "the trip summary must not show a date without a current route estimate",
         )
-        self.assertIsNotNone(
-            re.search(r"home===null\?'[^']*(?:c[aá]lculo|estimativa)[^']*'", PAGE),
+        self.assertIn(
+            "home===null?'Retorno ainda não estimado.':",
+            PAGE,
             "the summary must explain why a return date is unavailable",
         )
 
