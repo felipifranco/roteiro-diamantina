@@ -50,7 +50,10 @@ class RouteInteractionControlsTests(unittest.TestCase):
                             generated_attraction.get("routeOverrides", {}).get(key),
                             value, (stop_id, key),
                         )
-                self.assertEqual(\n                    generated_attraction.get("locationAccuracy"),\n                    source_attraction.get("locationAccuracy", "exact"),\n                )
+                self.assertEqual(
+                    generated_attraction.get("locationAccuracy"),
+                    source_attraction.get("locationAccuracy", "exact"),
+                )
         # The generated adapter may add researched attractions without route coordinates.
         # They must keep all details and be explicit when using the city
         # coordinate until an exact attraction coordinate is surveyed.
