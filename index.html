@@ -204,6 +204,7 @@ renderList();
   window.renderList();window.drawLine()
  }
  function tourActionButton(tour){
+  if(tour.schedule){const fixed=document.createElement('span');fixed.className='tour-pinned';fixed.textContent='Fixo';return fixed}
   const active=selected.has(tour.id),button=document.createElement('button');button.type='button';button.className=`stop-action tour-route-action ${active?'remove-stop-button':'add-stop-button'}`;button.textContent=active?'−':'＋';button.title=active?'− Remover do roteiro':'＋ Adicionar ao roteiro';button.setAttribute('aria-pressed',String(active));button.setAttribute('aria-label',`${active?'Remover passeio':'Adicionar passeio'} ${tour.name} ${active?'do':'ao'} roteiro`);button.addEventListener('click',()=>setAttractionActive(tour,!active));return button
  }
  function tourRow(city,tour,editable){
@@ -213,7 +214,7 @@ renderList();
   const [effort,note,cls]=effortFor(city,tour.name),natural=tour.kind==='atracao'&&tour.type==='natureza',age=natural?` ${tour.minimumAge?`Idade mínima oficial: ${tour.minimumAge}.`:'Idade mínima oficial: não informada; confirme com o operador.'}`:'';
   const where=document.createElement('small');where.className='tour-where';where.innerHTML=`${selected.has(tour.id)?'<b class="tour-in">✓ No roteiro</b> · ':''}${tour.schedule?`📅 ${tour.schedule}`:tour.kind==='atracao'?`📍 Ponto no mapa · ${durationLabel(tour)}`:'Rota pela cidade'}${tour.schedule?'':` · <span class="effort ${cls}">Acesso: ${effort}</span>`}`;info.appendChild(where);
   const access=document.createElement('small');access.className='access-meta';access.textContent=tour.scheduleNote||`${tour.accessibility||note}${age}`;info.appendChild(access);
-  row.appendChild(info);if(editable&&!tour.schedule)row.appendChild(tourActionButton(tour));return row
+  row.appendChild(info);if(editable)row.appendChild(tourActionButton(tour));return row
  }
  // Tempo e distância entre trechos (OSRM): chegada a cada cidade, retorno a Mirassol e deslocamentos entre passeios da mesma cidade.
  const cityOf=s=>s.kind==='atracao'?s.parentId:s.id;
@@ -243,7 +244,7 @@ renderList();
   const focus=document.createElement('button');focus.type='button';focus.className='stop-focus';focus.setAttribute('aria-label',`Localizar ${s.name} no mapa`);
   const name=document.createElement('span');name.className='stop-name';name.textContent=s.name.replace(' · desvio opcional','');
   const kind=document.createElement('span');kind.className='stop-kind';kind.textContent=kindLabel(s);
-  const note=document.createElement('span');note.className='stay-note';const fixedEvent=s===destination?attractionStops.find(t=>t.parentId===s.id&&t.schedule):null;note.textContent=fixedEvent?`${fixedEvent.name} · ${fixedEvent.schedule.split(' · ').slice(1).join(' · ')}`:s.id===origin.id?durationLabel(s):s.kind==='atracao'?`Visita · ${durationLabel(s)}`:`Estadia · ${durationLabel(s)}`;
+  const note=document.createElement('span');note.className='stay-note';const fixedEvent=s===destination?attractionStops.find(t=>t.parentId===s.id&&t.schedule):null;note.textContent=s.id===origin.id?durationLabel(s):s.kind==='atracao'?`Tempo estimado de visita: ${durationLabel(s)}`:`Estadia sugerida: ${durationLabel(s)}`;if(fixedEvent)note.textContent=`${fixedEvent.name} · ${fixedEvent.schedule.split(' · ').slice(1).join(' · ')}`;
   focus.append(name,kind,note);if(overnightLabel(s)){const sleep=document.createElement('span');sleep.className='overnight-note';sleep.textContent=overnightLabel(s);focus.appendChild(sleep)}focus.addEventListener('click',()=>focusStop(s,s.kind==='opcional'?8:9));
   head.append(numEl,focus);
   if(editable){
@@ -491,4 +492,6 @@ renderList();
   #stops .tour-info>a{font-size:14px;line-height:1.35}
   #stops .tour-where,#stops .tour-info .access-meta{font-size:11px;line-height:1.45}
 }
+
+.tour-pinned{align-self:center;padding:5px 8px;border:1px solid #c7d9c9;border-radius:7px;background:#edf5ed;color:#285b39;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
 </style><script>new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(map.getContainer());</script></body></html>
