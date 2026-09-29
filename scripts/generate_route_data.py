@@ -156,6 +156,13 @@ CATALOG_ATTRACTION_ALIASES = {
     "santuario do bom jesus": "santuario do bom jesus de matosinhos",
 }
 
+CATALOG_CITY_ALIASES = {
+    "tabuleiro conceicao do mato dentro": "conceicao do mato dentro",
+    "serra da canastra": "sao roque de minas serra da canastra",
+    "uberaba peiropolis": "uberaba peiropolis",
+    "curralinho extracao": "curralinho extracao diamantina",
+}
+
 
 def _normalized_name(value):
     normalized_punctuation = value.translate(
@@ -183,8 +190,10 @@ def _catalog_city_match_score(stop_name, catalog_name):
 
 
 def _matching_catalog_city(stop_name, catalog_cities):
+    normalized_stop = _normalized_name(stop_name)
+    lookup_name = CATALOG_CITY_ALIASES.get(normalized_stop, stop_name)
     scored = [
-        (_catalog_city_match_score(stop_name, city["name"]), city)
+        (_catalog_city_match_score(lookup_name, city["name"]), city)
         for city in catalog_cities
     ]
     highest = max((score for score, _ in scored), default=0)
