@@ -263,6 +263,9 @@ def _merge_catalog_attractions(route_stops, catalog_cities):
             existing.setdefault("publishedDuration", catalog_attraction["publishedDuration"])
             existing.setdefault("oneYearOld", catalog_attraction["oneYearOld"])
             existing.setdefault("accessibility", catalog_attraction["accessibility"])
+            for field in ("schedule", "scheduleNote", "eventUrl"):
+                if field in catalog_attraction:
+                    existing.setdefault(field, catalog_attraction[field])
 
 
 def render_app_data(data):

@@ -207,10 +207,10 @@ renderList();
  function tourRow(city,tour,editable){
   const row=document.createElement('div');row.className=`tour-row${selected.has(tour.id)?' active':''}`;
   const info=document.createElement('div');info.className='tour-info';
-  const link=document.createElement('a');link.target='_blank';link.rel='noopener';link.href=`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(tour.name+' '+city.name)}`;link.textContent=`${tour.name} ↗`;info.appendChild(link);
+  const link=document.createElement('a');link.target='_blank';link.rel='noopener';link.href=tour.eventUrl||`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(tour.name+' '+city.name)}`;link.textContent=tour.eventUrl?`${tour.name} · ingressos ↗`:`${tour.name} ↗`;info.appendChild(link);
   const [effort,note,cls]=effortFor(city,tour.name),natural=tour.kind==='atracao'&&tour.type==='natureza',age=natural?` ${tour.minimumAge?`Idade mínima oficial: ${tour.minimumAge}.`:'Idade mínima oficial: não informada; confirme com o operador.'}`:'';
-  const where=document.createElement('small');where.className='tour-where';where.innerHTML=`${selected.has(tour.id)?'<b class="tour-in">✓ No roteiro</b> · ':''}${tour.kind==='atracao'?`📍 Ponto no mapa · ${durationLabel(tour)}`:'Rota pela cidade'} · <span class="effort ${cls}">Acesso: ${effort}</span>`;info.appendChild(where);
-  const access=document.createElement('small');access.className='access-meta';access.textContent=`${tour.accessibility||note}${age}`;info.appendChild(access);
+  const where=document.createElement('small');where.className='tour-where';where.innerHTML=`${selected.has(tour.id)?'<b class="tour-in">✓ No roteiro</b> · ':''}${tour.schedule?`📅 ${tour.schedule}`:tour.kind==='atracao'?`📍 Ponto no mapa · ${durationLabel(tour)}`:'Rota pela cidade'}${tour.schedule?'':` · <span class="effort ${cls}">Acesso: ${effort}</span>`}`;info.appendChild(where);
+  const access=document.createElement('small');access.className='access-meta';access.textContent=tour.scheduleNote||`${tour.accessibility||note}${age}`;info.appendChild(access);
   row.appendChild(info);if(editable)row.appendChild(tourActionButton(tour));return row
  }
  // Tempo e distância entre trechos (OSRM): chegada a cada cidade, retorno a Mirassol e deslocamentos entre passeios da mesma cidade.
@@ -255,14 +255,6 @@ renderList();
    const addButton=document.createElement('button');addButton.type='button';addButton.className='stop-action add-stop-button';addButton.textContent='＋';addButton.title='Adicionar ao roteiro';addButton.setAttribute('aria-label',`Adicionar ${s.name} ao roteiro`);addButton.addEventListener('click',()=>setGroupActive(s,true));head.appendChild(addButton);
   }
   card.appendChild(head);
-  if(s.event){
-   const event=document.createElement('aside');event.className='scheduled-event';
-   const title=document.createElement('strong');title.textContent=`${s.event.name} · ${s.event.date} às ${s.event.time}`;
-   const location=document.createElement('span');location.textContent=s.event.location;
-   const note=document.createElement('span');note.textContent=s.event.note;
-   const link=document.createElement('a');link.href=s.event.url;link.target='_blank';link.rel='noopener';link.textContent='Canal oficial de ingressos ↗';
-   event.append(title,location,note,link);card.appendChild(event);
-  }
   if(s.id===origin.id)return card;
   const tours=toursFor(s),chosen=tours.filter(t=>selected.has(t.id)).length,canPick=trip&&s.kind!=='alerta';
   const details=document.createElement('div');details.className='attractions';details.id=`tours-${s.id}`;details.hidden=!openCards.has(s.id);
@@ -477,9 +469,5 @@ renderList();
 .eyebrow{font-size:9px;letter-spacing:.12em}
 .mast h1{font-size:25px;margin:4px 0 5px}
 .mast p{font-size:12px;line-height:1.3;max-width:none}
-.scheduled-event{display:grid;gap:3px;margin:0 9px 9px;padding:10px 12px;border:1px solid #cbdcca;border-radius:9px;background:#f1f7f0;color:#35493c;font-size:12px;line-height:1.4}
-.scheduled-event strong{font-size:13px;color:#285b39}
-.scheduled-event span{color:#56645a}
-.scheduled-event a{justify-self:start;margin-top:2px;color:var(--green);font-weight:700;text-decoration:underline;text-underline-offset:2px}
-@media(max-width:800px){#stops .stop-head .drag-handle{display:none}.mast{padding:7px 14px 6px}.mast h1{font-size:20px}.mast p{font-size:11px;line-height:1.25;margin-top:3px}.scheduled-event{margin:0 7px 7px;padding:8px 10px;font-size:11px}}
+@media(max-width:800px){#stops .stop-head .drag-handle{display:none}.mast{padding:7px 14px 6px}.mast h1{font-size:20px}.mast p{font-size:11px;line-height:1.25;margin-top:3px}}
 </style><script>new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(map.getContainer());</script></body></html>
