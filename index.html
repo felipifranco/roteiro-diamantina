@@ -204,6 +204,7 @@ renderList();
  function suggestDate(){let last='2026-10-09';stops.forEach(s=>{const d=dates.get(s.id);if(!d||!selected.has(s.id))return;const end=add(d,Math.max(1,Math.ceil(span(s)[1]))-1);if(end>last)last=end});let next=add(last,1);if(next<'2026-10-10')next='2026-10-10';return next}
  const candidates=selectedDate=>{const out=[];for(let d='2026-10-07';d<='2026-10-31';d=add(d,1))if(d!=='2026-10-09'||d===selectedDate)out.push(d);return out};
  function syncMarker(s){const marker=markers[s.id];if(marker&&!map.hasLayer(marker))marker.addTo(map)}
+ function hideMarker(s){const marker=markers[s.id];if(marker&&map.hasLayer(marker))map.removeLayer(marker)}
  function forget(id){selected.delete(id);dates.delete(id);const i=manual.indexOf(id);if(i>=0)manual.splice(i,1)}
  function setAttractionActive(s,active){
   if(s.schedule&&!active)return;
@@ -215,7 +216,7 @@ renderList();
  function setGroupActive(group,active){
   if(isFixed(group)||group.kind==='alerta')return;
   if(active){selected.add(group.id);ensureDate(group);openCards.add(group.id)}
-  else{forget(group.id);openCards.delete(group.id);toursFor(group).forEach(tour=>{selected.delete(tour.id);syncMarker(tour)})}
+  else{forget(group.id);openCards.delete(group.id);toursFor(group).forEach(tour=>{selected.delete(tour.id);hideMarker(tour)})}
   window.renderList();if(active)requestAnimationFrame(()=>revealMapSelection(group));window.drawLine()
  }
  function tourActionButton(tour){
@@ -330,7 +331,8 @@ renderList();
   return s.relevanceSource==='agency'?'★':'+'
  }
  function refreshMarkers(plan,stopsInOrder){
-  routeStops.forEach(s=>{if(!markers[s.id])return;syncMarker(s);const routed=stopsInOrder.includes(s),parentId=s.kind==='atracao'?s.parentId:s.id,date=s===origin?'2026-10-07':s===destination?'2026-10-09':routed?routeDate(s):null,icon=routeIcon(s,plan);
+  attractionStops.forEach(s=>{if(selected.has(s.parentId))syncMarker(s);else hideMarker(s)});
+  routeStops.forEach(s=>{if(!markers[s.id])return;if(s.kind==='atracao'&&!selected.has(s.parentId)){hideMarker(s);return}syncMarker(s);const routed=stopsInOrder.includes(s),parentId=s.kind==='atracao'?s.parentId:s.id,date=s===origin?'2026-10-07':s===destination?'2026-10-09':routed?routeDate(s):null,icon=routeIcon(s,plan);
    if(s===origin)setMapIcon(s,'M','2026-10-07');else if(s===destination)setMapIcon(s,'D','2026-10-09');else setMapIcon(s,icon,routed?date:null);
    markers[s.id].setOpacity(s.kind==='atracao'||inTrip(s)||s.kind==='alerta'?1:.6);
    const parentSelected=s.kind==='atracao'&&selected.has(s.parentId),mapContext=!routed&&s.kind!=='atracao'&&selected.has(s.id)&&toursFor(s).some(t=>selected.has(t.id)),meta=s.kind==='atracao'?routed?'':parentSelected?'<div class="pop-note">Disponível em Passeios no cartão da cidade</div>':`<div class="pop-note">Adicione ${s.parent} ao roteiro para escolher este passeio</div>`:s===destination?'<div class="pop-note">Data fixa: 09/10 · Diamantina</div>':mapContext?'<div class="pop-note">Grupo de referência no mapa; os passeios selecionados entram na rota.</div>':routed&&date?`<div class="pop-note"><b>${fmt(date)}</b> · Estadia sugerida: ${durationLabel(s)}</div>`:inTrip(s)?'<div class="pop-note">Selecionado no mapa · os passeios ativos definem a rota</div>':'<div class="pop-note">Fora do roteiro · adicione pela lista</div>';
