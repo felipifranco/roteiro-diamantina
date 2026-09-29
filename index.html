@@ -197,13 +197,13 @@ renderList();
   if(active&&!selected.has(s.parentId))return;
   if(active)selected.add(s.id);else selected.delete(s.id);
   syncMarker(s);openCards.add(s.parentId);
-  window.renderList();window.drawLine()
+  window.renderList();if(active)requestAnimationFrame(()=>revealMapSelection(s));window.drawLine()
  }
  function setGroupActive(group,active){
   if(isFixed(group)||group.kind==='alerta')return;
   if(active){selected.add(group.id);ensureDate(group);openCards.add(group.id)}
   else{forget(group.id);openCards.delete(group.id);toursFor(group).forEach(tour=>{selected.delete(tour.id);syncMarker(tour)})}
-  window.renderList();window.drawLine()
+  window.renderList();if(active)requestAnimationFrame(()=>revealMapSelection(group));window.drawLine()
  }
  function tourActionButton(tour){
   if(tour.schedule){const fixed=document.createElement('span');fixed.className='tour-pinned';fixed.textContent='Fixo';return fixed}
