@@ -907,7 +907,15 @@ window.ROTEIRO_DATA = {
           "oneYearOld": "—",
           "accessibility": "—"
         }
-      ]
+      ],
+      "event": {
+        "name": "Vesperata",
+        "date": "09/10/2026",
+        "time": "20h",
+        "location": "Rua da Quitanda, Centro Histórico",
+        "note": "Sessão extra divulgada em setembro; confira ingresso e eventuais atualizações.",
+        "url": "https://bileto.sympla.com.br/event/117032?share_id=1-copiarlink"
+      }
     },
     {
       "id": "biribiri",
