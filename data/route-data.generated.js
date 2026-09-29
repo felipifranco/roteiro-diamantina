@@ -1,5 +1,4 @@
-// Generated from data/roteiro.json by scripts/generate_route_data.py. Do not edit.
-window.ROTEIRO_DATA = {
+// Generated from data/roteiro.json by scripts/generate_route_data.py. Do not edit.\nwindow.ROTEIRO_DATA = {
   "routeStops": [
     {
       "id": "mirassol",
@@ -33,7 +32,53 @@ window.ROTEIRO_DATA = {
           "name": "Casca d’Anta",
           "lat": -20.30191,
           "lon": -46.52234,
-          "days": "meio dia"
+          "locationAccuracy": "exact",
+          "days": "meio dia",
+          "description": "Grande queda do rio São Francisco despencando da borda da serra. É o cartão-postal do parque.",
+          "agencyRationale": "É a atração natural mais reconhecida da Canastra.",
+          "visitType": "Trilha / cachoeira",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Parque Nacional da Serra da Canastra",
+          "lat": -20.24528,
+          "lon": -46.36583,
+          "locationAccuracy": "city-center",
+          "days": "1 dia",
+          "description": "Chapadões, campos de altitude, cerrado e fauna formam uma das paisagens mais características do interior mineiro.",
+          "agencyRationale": "A Canastra é um destino de paisagem e estrada rural; as agências organizam os dias em torno dos acessos ao parque, fauna, cachoeiras e fazendas produtoras.",
+          "visitType": "Carro + natureza",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Nascente histórica do São Francisco",
+          "lat": -20.24528,
+          "lon": -46.36583,
+          "locationAccuracy": "city-center",
+          "days": "1 h + deslocamento",
+          "description": "Ponto tradicionalmente identificado como nascente do rio São Francisco dentro do parque.",
+          "agencyRationale": "Dá significado geográfico e cultural à visita, além da paisagem.",
+          "visitType": "Carro + caminhada curta",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Queijarias de Canastra",
+          "lat": -20.24528,
+          "lon": -46.36583,
+          "locationAccuracy": "city-center",
+          "days": "2 h",
+          "description": "Fazendas mantêm métodos tradicionais de produção do queijo artesanal da Canastra, permitindo conhecer produção, maturação e degustação.",
+          "agencyRationale": "Gastronomia e contato com produtores são parte essencial dos roteiros da região.",
+          "visitType": "Visita / degustação",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
         }
       ]
     },
@@ -56,7 +101,60 @@ window.ROTEIRO_DATA = {
         {
           "name": "Mirante dos Canyons",
           "lat": -20.6461,
-          "lon": -46.26575
+          "lon": -46.26575,
+          "locationAccuracy": "exact"
+        },
+        {
+          "name": "Cânions de Furnas",
+          "lat": -20.6144,
+          "lon": -46.04884,
+          "locationAccuracy": "city-center",
+          "days": "meio dia ou dia",
+          "description": "Paredões rochosos cortados pelas águas do reservatório de Furnas. A combinação de rocha vertical e água é a imagem que tornou a região famosa.",
+          "agencyRationale": "Capitólio entra quando a agência quer equilibrar muitos dias de cidades históricas com água e paisagem. Normalmente merece ao menos um dia próprio porque as atrações são espalhadas.",
+          "visitType": "Lancha / natureza",
+          "publishedDuration": "—",
+          "oneYearOld": "Sim no passeio de lancha — operadores aceitam 1–4 anos",
+          "accessibility": "Sim, condicionado ao embarque/operador"
+        },
+        {
+          "name": "Passeio pelo Lago de Furnas",
+          "lat": -20.6144,
+          "lon": -46.04884,
+          "locationAccuracy": "city-center",
+          "days": "4 h / dia inteiro",
+          "description": "Passeios de barco permitem entrar nos braços do lago e observar cânions e cachoeiras a partir da água.",
+          "agencyRationale": "É a experiência central vendida pelas operadoras na região.",
+          "visitType": "Lancha",
+          "publishedDuration": "—",
+          "oneYearOld": "Sim — operadores aceitam 1–4 anos",
+          "accessibility": "Sim, condicionado ao embarque/operador"
+        },
+        {
+          "name": "Mirantes dos cânions",
+          "lat": -20.6144,
+          "lon": -46.04884,
+          "locationAccuracy": "city-center",
+          "days": "2 h",
+          "description": "Pontos elevados permitem compreender a escala do relevo e do reservatório de cima.",
+          "agencyRationale": "Complementam a perspectiva obtida no passeio de barco.",
+          "visitType": "Mirante / caminhada",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Cachoeiras",
+          "lat": -20.6144,
+          "lon": -46.04884,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "description": "Diversos complexos de quedas e piscinas naturais ficam espalhados pela região.",
+          "agencyRationale": "Justificam mais de um dia no destino.",
+          "visitType": "Natureza / banho",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
         }
       ]
     },
@@ -79,7 +177,66 @@ window.ROTEIRO_DATA = {
           "name": "Santuário do Bom Jesus",
           "lat": -20.50753,
           "lon": -43.86053,
-          "days": "1 h"
+          "locationAccuracy": "exact",
+          "days": "1 h",
+          "description": "Complexo religioso setecentista construído no alto de uma colina e reconhecido como Patrimônio Mundial. O valor está no conjunto formado pela basílica, adro, profetas e capelas.",
+          "agencyRationale": "Congonhas oferece alto valor histórico com logística simples: o conjunto principal está concentrado no santuário. Por isso cabe naturalmente no deslocamento entre Ouro Preto/BH e São João del-Rei/Tiradentes.",
+          "visitType": "Complexo religioso",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Doze Profetas",
+          "lat": -20.50152,
+          "lon": -43.85646,
+          "locationAccuracy": "city-center",
+          "days": "40 min",
+          "description": "Doze esculturas monumentais em pedra-sabão executadas por Aleijadinho e sua oficina. A disposição das figuras no adro faz parte da obra e é considerada um dos ápices do barroco brasileiro.",
+          "agencyRationale": "Os Profetas são tratados como obra indispensável de Aleijadinho e como um dos símbolos do barroco brasileiro. Ver as esculturas no local e na disposição concebida para o adro é diferente de conhecê-las por fotografias.",
+          "visitType": "Externa / contemplação",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Passos da Paixão / Via Crucis",
+          "lat": -20.50152,
+          "lon": -43.85646,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Seis capelas guardam grupos de esculturas policromadas representando cenas da Paixão de Cristo. Permitem observar Aleijadinho também como escultor de figuras dramáticas em madeira.",
+          "agencyRationale": "Complementam os Profetas e formam uma narrativa artística completa.",
+          "visitType": "Capelas / caminhada",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Sala dos Milagres / ex-votos",
+          "lat": -20.50152,
+          "lon": -43.85646,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Reúne objetos deixados por fiéis em agradecimento por graças alcançadas, documentando séculos de religiosidade popular.",
+          "agencyRationale": "Acrescenta a dimensão humana e devocional ao conjunto monumental.",
+          "visitType": "Museu/devocional",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Museu de Congonhas",
+          "lat": -20.50152,
+          "lon": -43.85646,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Museu dedicado à interpretação do Santuário, da peregrinação, da devoção e da obra de Aleijadinho. Ajuda a compreender o conjunto antes ou depois de observá-lo ao ar livre.",
+          "agencyRationale": "Roteiros oficiais o incluem porque fornece contexto: explica por que o Santuário existe, como a peregrinação se desenvolveu e por que Profetas e Passos são tão importantes.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
         }
       ]
     },
@@ -97,7 +254,165 @@ window.ROTEIRO_DATA = {
         "Minas históricas"
       ],
       "kid": "Ladeiras e calçamento irregular podem dificultar carrinho; planeje pausas e hospedagem bem localizada.",
-      "url": "https://ouropreto.org.br/atracoes-turisticas"
+      "url": "https://ouropreto.org.br/atracoes-turisticas",
+      "attractions": [
+        {
+          "name": "Praça Tiradentes",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Antigo centro cívico de Vila Rica. De um lado está o antigo Palácio dos Governadores; do outro, a antiga Casa de Câmara e Cadeia. O monumento a Tiradentes marca o lugar onde sua cabeça foi exposta após a execução. É o melhor ponto para entender a relação entre Coroa, mineração e Inconfidência.",
+          "agencyRationale": "A praça funciona como aula de abertura de Ouro Preto: em poucos metros o guia apresenta Coroa, administração colonial, mineração e Inconfidência. A partir dela, quase todo o restante do centro pode ser percorrido a pé.",
+          "visitType": "Externa / caminhada",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Museu da Inconfidência",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "1h30",
+          "description": "Ocupa a antiga Casa de Câmara e Cadeia. Reúne objetos, documentos, arte sacra e os restos mortais atribuídos a inconfidentes, explicando a sociedade mineradora e a Inconfidência Mineira.",
+          "agencyRationale": "É recorrente nos pacotes porque organiza uma história complexa em objetos, edifício e personagens. Depois da visita, Tiradentes e a Inconfidência deixam de ser apenas nomes vistos nas ruas e praças.",
+          "visitType": "Museu / interna",
+          "publishedDuration": "1–1h30",
+          "oneYearOld": "Sim",
+          "accessibility": "Sim — rampas, corrimãos, cadeira de rodas e sanitário adaptado"
+        },
+        {
+          "name": "Igreja de São Francisco de Assis",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Uma das obras-primas do barroco/rococó mineiro, com projeto e esculturas associados a Aleijadinho e pintura de Mestre Ataíde.",
+          "agencyRationale": "Para os circuitos de barroco, é parada essencial: permite ver arquitetura, escultura e pintura associadas a Aleijadinho e Ataíde no mesmo edifício, tornando visível o que os guias explicam sobre o barroco mineiro.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Basílica de Nossa Senhora do Pilar",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "40 min",
+          "description": "Exterior relativamente sóbrio esconde um interior coberto por talha dourada. A quantidade de ouro aplicada na decoração materializa a riqueza produzida pela mineração.",
+          "agencyRationale": "As agências a usam para materializar a riqueza de Vila Rica. Depois de ouvir sobre ouro e impostos da Coroa, o visitante vê como parte dessa riqueza foi convertida em arte e ostentação religiosa.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igreja Nossa Senhora do Carmo",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Igreja rococó ligada à Ordem Terceira do Carmo, com elementos associados a Aleijadinho e importante conjunto artístico.",
+          "agencyRationale": "Fica no núcleo da Praça Tiradentes e complementa a leitura da arte religiosa local.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igreja Nossa Senhora do Rosário",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Igreja de planta curva singular, construída por irmandade ligada à população negra. Ajuda a compreender a organização religiosa e social de grupos que não pertenciam às elites brancas.",
+          "agencyRationale": "Acrescenta uma dimensão social que vai além das igrejas mais ricas do centro.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Teatro Municipal / Casa da Ópera",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "40 min",
+          "description": "Teatro do século XVIII ainda preservado, considerado um dos mais antigos em funcionamento nas Américas. Mostra que Vila Rica também possuía intensa vida cultural.",
+          "agencyRationale": "É uma atração histórica diferente de igrejas e mineração e aparece em city tours de agências.",
+          "visitType": "Interna / visita",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Mina de ouro visitável",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "1h30",
+          "description": "Galerias escavadas durante o ciclo do ouro permitem entrar fisicamente no ambiente de mineração. A experiência ajuda a compreender técnicas de extração e as condições de trabalho, inclusive do trabalho escravizado.",
+          "agencyRationale": "Entrar numa galeria muda a compreensão da mineração: profundidade, espaço, ferramentas e condições de trabalho deixam de ser abstratos. Por isso operadoras frequentemente reservam uma mina como experiência, em vez de visitar apenas museus.",
+          "visitType": "Mina / visita guiada",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Rua Direita e casario colonial",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Eixo tradicional do centro, cercado por sobrados que mostram a organização urbana e comercial de Vila Rica. O valor está no conjunto, não em um edifício isolado.",
+          "agencyRationale": "Permite que o deslocamento entre atrações seja também parte da visita histórica.",
+          "visitType": "Caminhada / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Casa dos Contos",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Solar do fim do século XVIII ligado à administração das finanças e à cobrança de tributos da Coroa. Além da arquitetura, permite entender para onde ia a riqueza extraída das minas, a fiscalização do ouro, a moeda e a estrutura econômica de Vila Rica.",
+          "agencyRationale": "Agências a incluem porque completa a história contada nas minas e igrejas: depois de ver onde o ouro era extraído e gasto, aqui se entende como ele era controlado e tributado pela Coroa.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Feira de Pedra-Sabão",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Feira de artesanato próxima à Igreja de São Francisco de Assis, dedicada sobretudo à pedra-sabão, material profundamente associado à escultura e à arquitetura de Ouro Preto.",
+          "agencyRationale": "É uma parada recorrente porque conecta o barroco histórico a uma tradição artesanal que continua viva e ainda oferece tempo livre para compras sem deslocamento adicional.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Museu de Mineralogia / Museu de Ciência e Técnica",
+          "lat": -20.38567,
+          "lon": -43.50362,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Acervo ligado à antiga Escola de Minas, instalado no antigo Palácio dos Governadores. Minerais, mineração e ciência ajudam a entender geologicamente por que Ouro Preto existiu e por que a região atraiu tanta riqueza.",
+          "agencyRationale": "Algumas operadoras o oferecem como alternativa ao Museu da Inconfidência porque acrescenta a explicação científica da mineração ao conteúdo histórico do circuito.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "mariana",
@@ -119,7 +434,118 @@ window.ROTEIRO_DATA = {
           "name": "Praça Minas Gerais",
           "lat": -20.37812,
           "lon": -43.41813,
-          "days": "30 min"
+          "locationAccuracy": "exact",
+          "days": "30 min",
+          "description": "Praça monumental onde Igreja do Carmo, Igreja de São Francisco, Casa de Câmara e Cadeia e pelourinho formam um raro conjunto civil e religioso colonial.",
+          "agencyRationale": "É extremamente eficiente para grupos: em uma única praça o guia consegue explicar Igreja, Estado, justiça e organização urbana colonial. Isso faz Mariana render muito conteúdo mesmo em visitas de poucas horas.",
+          "visitType": "Externa / caminhada",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Catedral da Sé",
+          "lat": -20.37783,
+          "lon": -43.41633,
+          "locationAccuracy": "city-center",
+          "days": "40 min",
+          "description": "Uma das igrejas mais antigas e importantes de Minas. Guarda um órgão Arp Schnitger do início do século XVIII, raríssimo no Brasil.",
+          "agencyRationale": "Acrescenta patrimônio musical e religioso ao circuito.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igreja de São Francisco de Assis",
+          "lat": -20.37783,
+          "lon": -43.41633,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Igreja setecentista com obras associadas a Aleijadinho e Mestre Ataíde; o próprio Ataíde está sepultado no templo.",
+          "agencyRationale": "Liga Mariana diretamente aos grandes mestres do barroco mineiro.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igreja Nossa Senhora do Carmo",
+          "lat": -20.37783,
+          "lon": -43.41633,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Igreja rococó que forma, junto com São Francisco, uma das imagens urbanas mais marcantes de Mariana.",
+          "agencyRationale": "Completa o conjunto arquitetônico da Praça Minas Gerais.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Casa de Câmara e Cadeia",
+          "lat": -20.37783,
+          "lon": -43.41633,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Edifício que reunia funções administrativas e judiciais da vila colonial. Ajuda a entender como o poder português funcionava localmente.",
+          "agencyRationale": "Complementa a visita religiosa com história política e administrativa.",
+          "visitType": "Externa/interna conforme acesso",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Mina da Passagem",
+          "lat": -20.37783,
+          "lon": -43.41633,
+          "locationAccuracy": "city-center",
+          "days": "1h15",
+          "description": "Antiga mina de ouro industrial com visita por vagonete até galerias subterrâneas. A escala e profundidade tornam a mineração muito mais compreensível do que apenas observá-la em museus.",
+          "agencyRationale": "A descida de vagonete e as galerias dão caráter de experiência ao roteiro. Agências a utilizam para explicar em escala física a atividade econômica que criou Mariana e Ouro Preto.",
+          "visitType": "Mina / visita guiada",
+          "publishedDuration": "~45 min",
+          "oneYearOld": "Não confirmado",
+          "accessibility": "Não confirmado — há meia-entrada 60+, mas isso não comprova acessibilidade física"
+        },
+        {
+          "name": "Rua Direita e casario",
+          "lat": -20.37783,
+          "lon": -43.41633,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Eixo histórico de Mariana com sobrados coloniais que permite perceber o desenho urbano planejado da cidade e a vida civil fora das grandes igrejas.",
+          "agencyRationale": "Aparece nos walking tours porque liga as atrações centrais e transforma o deslocamento em leitura da cidade colonial.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Órgão Arp Schnitger",
+          "lat": -20.37783,
+          "lon": -43.41633,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Órgão alemão do início do século XVIII instalado na Catedral da Sé, um dos raríssimos instrumentos de sua época preservados no Brasil.",
+          "agencyRationale": "Operadoras e roteiros oficiais o destacam porque oferece patrimônio musical excepcional, diferenciando Mariana das demais cidades barrocas.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igreja de São Pedro dos Clérigos",
+          "lat": -20.37783,
+          "lon": -43.41633,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Igreja iniciada no século XVIII, marcante pela implantação elevada e pela arquitetura de linhas curvas.",
+          "agencyRationale": "Entra em roteiros mais completos para ampliar a leitura da arquitetura religiosa de Mariana além do conjunto da Praça Minas Gerais.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
         }
       ]
     },
@@ -152,7 +578,48 @@ window.ROTEIRO_DATA = {
         "Poços e mirantes"
       ],
       "kid": "A cachoeira é associada a caminhada e terreno de serra; não considerar visita como passeio de carrinho. Confirmar acesso local.",
-      "url": "https://turismo.cmd.mg.gov.br/"
+      "url": "https://turismo.cmd.mg.gov.br/",
+      "attractions": [
+        {
+          "name": "Cachoeira do Tabuleiro",
+          "lat": -19.03722,
+          "lon": -43.42528,
+          "locationAccuracy": "city-center",
+          "days": "1 h mirante / 4 h parte baixa",
+          "description": "Queda monumental despencando de um paredão da Serra do Espinhaço. A escala da formação rochosa é o principal motivo da visita.",
+          "agencyRationale": "Tabuleiro é incluída porque oferece uma mudança de escala: sai-se do patrimônio construído para uma paisagem monumental do Espinhaço. Pode justificar uma etapa inteira do roteiro.",
+          "visitType": "Trilha / natureza",
+          "publishedDuration": "Mirante: 15–30 min de caminhada; parte baixa: ~3 h de passeio",
+          "oneYearOld": "Não — acesso aos atrativos tem restrição para crianças até 10 anos",
+          "accessibility": "Não/restrito para dificuldade de mobilidade; norma cita idosos e PCD"
+        },
+        {
+          "name": "Centro histórico",
+          "lat": -19.03722,
+          "lon": -43.42528,
+          "locationAccuracy": "city-center",
+          "days": "1h30",
+          "description": "Igrejas e casarões registram a ocupação do antigo caminho entre as áreas mineradoras.",
+          "agencyRationale": "Mantém continuidade histórica entre natureza e Estrada Real.",
+          "visitType": "Caminhada / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Serra do Espinhaço",
+          "lat": -19.03722,
+          "lon": -43.42528,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "description": "Cadeia montanhosa de campos rupestres, cânions, cachoeiras e grande biodiversidade.",
+          "agencyRationale": "Faz o percurso até Diamantina ser também um roteiro paisagístico.",
+          "visitType": "Paisagem / trilha",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "serro",
@@ -168,7 +635,48 @@ window.ROTEIRO_DATA = {
         "Queijo do Serro"
       ],
       "kid": "Parada cultural/gastronômica mais flexível que trilhas; verificar hospedagem e pausas.",
-      "url": "https://www.serro.mg.gov.br/portal/turismo"
+      "url": "https://www.serro.mg.gov.br/portal/turismo",
+      "attractions": [
+        {
+          "name": "Centro Histórico",
+          "lat": -18.60444,
+          "lon": -43.37945,
+          "locationAccuracy": "city-center",
+          "days": "2–3 h",
+          "description": "Conjunto de casarões, igrejas e ladeiras de uma das primeiras vilas do norte minerador de Minas. É um núcleo menos monumental e mais preservado na escala cotidiana.",
+          "agencyRationale": "O Serro é usado porque preserva um elo histórico do próprio caminho que levava às áreas diamantíferas. Também oferece patrimônio e gastronomia suficientes para que a parada tenha valor próprio.",
+          "visitType": "A pé / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igrejas coloniais",
+          "lat": -18.60444,
+          "lon": -43.37945,
+          "locationAccuracy": "city-center",
+          "days": "1h30",
+          "description": "Templos distribuídos pelas ladeiras documentam irmandades, arte sacra e a sociedade mineradora local.",
+          "agencyRationale": "Dão conteúdo histórico a uma parada que também é gastronômica.",
+          "visitType": "Circuito a pé",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Queijo do Serro",
+          "lat": -18.60444,
+          "lon": -43.37945,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Queijo artesanal produzido há séculos com técnicas tradicionais; a região é uma das referências da cultura queijeira mineira.",
+          "agencyRationale": "O queijo transforma patrimônio imaterial em experiência sensorial. Agências conseguem ligar história rural, técnica tradicional e degustação em uma mesma parada.",
+          "visitType": "Degustação / produtor",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "milhoverde",
@@ -184,7 +692,48 @@ window.ROTEIRO_DATA = {
         "Cachoeiras"
       ],
       "kid": "Estradas e acessos a cachoeiras podem ser rústicos; considerar visita à vila e evitar agenda apertada.",
-      "url": "https://www.serro.mg.gov.br/portal/turismo/0/9/748/Milho-Verde"
+      "url": "https://www.serro.mg.gov.br/portal/turismo/0/9/748/Milho-Verde",
+      "attractions": [
+        {
+          "name": "Igreja de Nossa Senhora do Rosário",
+          "lat": -18.47324,
+          "lon": -43.49798,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Pequena igreja branca isolada diante da serra, uma das imagens mais emblemáticas da Estrada Real. O valor está tanto no templo quanto na paisagem ao redor.",
+          "agencyRationale": "É um cartão-postal muito eficiente em roteiros do Caminho dos Diamantes.",
+          "visitType": "Igreja + paisagem",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Núcleo histórico",
+          "lat": -18.47324,
+          "lon": -43.49798,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Casario e ruas preservam a escala de um antigo povoado ligado à mineração de ouro e diamantes.",
+          "agencyRationale": "Oferece experiência de vila histórica mais tranquila que os grandes centros.",
+          "visitType": "Caminhada / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Cachoeiras",
+          "lat": -18.47324,
+          "lon": -43.49798,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "description": "Quedas e poços próximos ao povoado permitem alternar patrimônio e natureza no mesmo dia.",
+          "agencyRationale": "Justificam permanecer mais tempo na região em vez de apenas atravessá-la.",
+          "visitType": "Natureza / banho",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "saogoncalo",
@@ -205,7 +754,47 @@ window.ROTEIRO_DATA = {
         {
           "name": "Cachoeira do Comércio",
           "lat": -18.41676,
-          "lon": -43.49807
+          "lon": -43.49807,
+          "locationAccuracy": "exact"
+        },
+        {
+          "name": "Núcleo histórico",
+          "lat": -18.42003,
+          "lon": -43.49561,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Pequeno povoado surgido nos caminhos da mineração, preservando arquitetura simples e ritmo rural.",
+          "agencyRationale": "É uma parada autêntica no trajeto da Estrada Real entre Serro e Diamantina.",
+          "visitType": "Caminhada / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igrejas e capelas",
+          "lat": -18.42003,
+          "lon": -43.49561,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Pequenos templos ajudam a contar a formação religiosa e comunitária dos povoados mineradores.",
+          "agencyRationale": "Complementam a narrativa das grandes igrejas barrocas com patrimônio rural.",
+          "visitType": "Circuito a pé",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Cachoeiras e Serra do Espinhaço",
+          "lat": -18.42003,
+          "lon": -43.49561,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "description": "Trilhas, cursos d'água e campos rupestres cercam o distrito.",
+          "agencyRationale": "Permitem inserir natureza sem abandonar o eixo histórico da viagem.",
+          "visitType": "Natureza / trilha",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
         }
       ]
     },
@@ -230,7 +819,92 @@ window.ROTEIRO_DATA = {
           "name": "Casa de JK",
           "lat": -18.24491,
           "lon": -43.60027,
-          "days": "1 h"
+          "locationAccuracy": "exact",
+          "days": "1 h",
+          "description": "Casa onde JK viveu na juventude, hoje museu. Liga a pequena cidade colonial à trajetória do futuro presidente responsável pela construção de Brasília.",
+          "agencyRationale": "Introduz uma camada de história republicana ao roteiro colonial.",
+          "visitType": "Museu / interna",
+          "publishedDuration": "< 1 h",
+          "oneYearOld": "Sim",
+          "accessibility": "Sim — há rota externa, acesso interno por rampa e sanitário acessível"
+        },
+        {
+          "name": "Centro Histórico",
+          "lat": -18.24409,
+          "lon": -43.60065,
+          "locationAccuracy": "city-center",
+          "days": "2–3 h",
+          "description": "Conjunto urbano colonial formado durante o ciclo dos diamantes. As ruas de pedra, sobrados e igrejas permitem entender como a riqueza diamantífera moldou a cidade; é Patrimônio Mundial da UNESCO.",
+          "agencyRationale": "Diamantina é tratada como destino principal, e não simples escala: preserva a história da mineração de diamantes, da sociedade colonial e uma identidade musical própria. Nos circuitos longos, costuma justificar pernoites porque o conjunto histórico e cultural não cabe em uma parada rápida.",
+          "visitType": "A pé / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Passadiço da Glória",
+          "lat": -18.24409,
+          "lon": -43.60065,
+          "locationAccuracy": "city-center",
+          "days": "20 min",
+          "description": "Dois casarões ligados por um passadiço elevado sobre a rua, uma das imagens mais reconhecíveis de Diamantina. Vale pela arquitetura incomum e pela relação com a antiga vida religiosa e educacional da cidade.",
+          "agencyRationale": "Ícone visual do centro histórico e parada frequente nos city tours.",
+          "visitType": "Externa / caminhada",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Casa de Chica da Silva",
+          "lat": -18.24409,
+          "lon": -43.60065,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Residência associada a Chica da Silva, personagem central da sociedade diamantífera do século XVIII. A visita ajuda a compreender mineração, escravidão, mobilidade social e costumes da época.",
+          "agencyRationale": "Acrescenta história humana e social ao roteiro, além da arquitetura colonial.",
+          "visitType": "Museu / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igreja de São Francisco de Assis",
+          "lat": -18.24409,
+          "lon": -43.60065,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Igreja setecentista ligada à elite local e à arte sacra de Diamantina. É uma boa leitura da religiosidade e da organização social do período minerador.",
+          "agencyRationale": "Integra os circuitos guiados de arte sacra do centro histórico.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Rua da Quitanda / Beco da Tecla",
+          "lat": -18.24409,
+          "lon": -43.60065,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Trecho de casario colonial que concentra a atmosfera mais característica do centro. A Rua da Quitanda também é o cenário tradicional da Vesperata.",
+          "agencyRationale": "É o espaço onde patrimônio arquitetônico e vida cultural contemporânea se encontram.",
+          "visitType": "Caminhada / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Vesperata",
+          "lat": -18.24409,
+          "lon": -43.60065,
+          "locationAccuracy": "city-center",
+          "days": "2–3 h",
+          "description": "Concerto em que músicos se apresentam das sacadas dos casarões enquanto maestros e público ocupam a rua. Não é apenas um show: utiliza a própria arquitetura colonial como palco.",
+          "agencyRationale": "É uma das experiências culturais mais características e procuradas de Diamantina.",
+          "visitType": "Evento",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
         }
       ]
     },
@@ -247,7 +921,48 @@ window.ROTEIRO_DATA = {
         "Cachoeiras"
       ],
       "kid": "Passeio regional fora do centro; confirmar estrada e acesso à água para a data escolhida.",
-      "url": "https://visitediamantina.com.br/"
+      "url": "https://visitediamantina.com.br/",
+      "attractions": [
+        {
+          "name": "Vila de Biribiri",
+          "lat": -18.14464,
+          "lon": -43.61966,
+          "locationAccuracy": "city-center",
+          "days": "2 h",
+          "description": "Vila operária do século XIX criada em torno de uma fábrica têxtil, com casas, igreja e traçado preservados. É uma rara oportunidade de ver patrimônio industrial dentro de uma paisagem natural.",
+          "agencyRationale": "Biribiri acrescenta a industrialização do século XIX à viagem: depois de mineração colonial, o visitante vê uma comunidade organizada em torno de uma fábrica têxtil. A proximidade de Diamantina facilita um bate-volta.",
+          "visitType": "Vila histórica / caminhada",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Cachoeiras",
+          "lat": -18.14464,
+          "lon": -43.61966,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "description": "Poços e quedas d'água dentro do Parque Estadual do Biribiri. Depois de um city tour de ruas, igrejas e museus, oferecem uma mudança real de ritmo e contato com a paisagem do Espinhaço.",
+          "agencyRationale": "Operadoras de Vesperata combinam explicitamente city tour histórico-cultural com trilhas e cachoeiras em Biribiri, equilibrando patrimônio e natureza dentro da mesma estadia.",
+          "visitType": "Natureza / banho",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Trilhas do Parque Estadual do Biribiri",
+          "lat": -18.14464,
+          "lon": -43.61966,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Caminhos pelo cerrado e campos rupestres levam a cursos d'água, mirantes e áreas naturais em torno da antiga vila.",
+          "agencyRationale": "São incluídas para transformar Biribiri em experiência ativa, e não apenas visita fotográfica à vila histórica.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "peruacu",
@@ -293,7 +1008,35 @@ window.ROTEIRO_DATA = {
         "Museu Casa Guimarães Rosa"
       ],
       "kid": "Gruta exige caminhada monitorada; confirme restrições e acessos. O museu é alternativa mais leve.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Cordisburgo+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Cordisburgo+MG",
+      "attractions": [
+        {
+          "name": "Gruta do Maquiné",
+          "lat": -19.125834,
+          "lon": -44.320278,
+          "locationAccuracy": "city-center",
+          "days": "1h30",
+          "description": "Grande caverna calcária com salões, estalactites e estalagmites. Foi explorada cientificamente por Peter Lund no século XIX e está ligada ao nascimento da paleontologia brasileira.",
+          "agencyRationale": "Operadoras que ligam Diamantina a Belo Horizonte aproveitam Cordisburgo para transformar um dia de deslocamento em dia de visita. Maquiné acrescenta geologia, ciência e uma atração de grande escala sem exigir outro destino distante.",
+          "visitType": "Gruta / visita monitorada",
+          "publishedDuration": "60 min",
+          "oneYearOld": "Com ressalvas",
+          "accessibility": "Com ressalvas — percurso em gruta exige caminhada; confirmar condições individuais"
+        },
+        {
+          "name": "Museu Casa Guimarães Rosa",
+          "lat": -19.125834,
+          "lon": -44.320278,
+          "locationAccuracy": "city-center",
+          "days": "1h30–2 h",
+          "description": "Casa natal de João Guimarães Rosa, preservada com objetos, documentos e referências ao universo sertanejo que inspirou sua literatura.",
+          "agencyRationale": "Costuma ser combinada com Maquiné: em uma mesma parada a agência entrega natureza e literatura. Guimarães Rosa também conecta a paisagem real do sertão mineiro ao Brasil retratado em sua obra.",
+          "visitType": "Museu / interna",
+          "publishedDuration": "1–2 h",
+          "oneYearOld": "Sim",
+          "accessibility": "Sim — possui rampa móvel e atividades para terceira idade"
+        }
+      ]
     },
     {
       "id": "belohorizonte",
@@ -309,7 +1052,48 @@ window.ROTEIRO_DATA = {
         "Mercado Central"
       ],
       "kid": "A cidade tem deslocamentos urbanos; agrupe visitas por região e confira acessibilidade de cada atração.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Belo+Horizonte+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Belo+Horizonte+MG",
+      "attractions": [
+        {
+          "name": "Conjunto Moderno da Pampulha",
+          "lat": -19.922732,
+          "lon": -43.945095,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "description": "Conjunto de Oscar Niemeyer com paisagismo de Burle Marx e obras de Portinari. É um marco da arquitetura moderna brasileira e Patrimônio Mundial.",
+          "agencyRationale": "As agências incluem a Pampulha porque ela mostra outra Minas: modernista, urbana e ligada ao projeto político de JK. Depois do barroco, Niemeyer, Burle Marx e Portinari criam um contraste histórico deliberado.",
+          "visitType": "Circuito / externa + internas",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Praça da Liberdade",
+          "lat": -19.922732,
+          "lon": -43.945095,
+          "locationAccuracy": "city-center",
+          "days": "1–3 h",
+          "description": "Antigo centro do poder estadual, cercado por palácios e edifícios de diferentes períodos que hoje integram um circuito cultural.",
+          "agencyRationale": "Concentra museus e arquitetura em uma área caminhável.",
+          "visitType": "Caminhada + museus opcionais",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Mercado Central",
+          "lat": -19.922732,
+          "lon": -43.945095,
+          "locationAccuracy": "city-center",
+          "days": "1h30–2 h",
+          "description": "Mercado tradicional onde se encontram queijos, doces, cachaças, temperos e pratos mineiros. A atração é experimentar a cultura gastronômica, não apenas fazer compras.",
+          "agencyRationale": "É uma parada de experiência, não apenas de compras: permite provar em um só lugar queijo, doce, cachaça, café e pratos mineiros. Para uma agência, entrega gastronomia com logística simples e tempo previsível.",
+          "visitType": "Mercado / gastronomia",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "brumadinho",
@@ -323,7 +1107,22 @@ window.ROTEIRO_DATA = {
         "Instituto Inhotim"
       ],
       "kid": "Inhotim é extenso; há transporte interno opcional, mas planeje pausas e confirme serviços para crianças.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Instituto+Inhotim"
+      "url": "https://www.google.com/maps/search/?api=1&query=Instituto+Inhotim",
+      "attractions": [
+        {
+          "name": "Instituto Inhotim",
+          "lat": -20.143611,
+          "lon": -44.2,
+          "locationAccuracy": "city-center",
+          "days": "1 dia",
+          "description": "Museu de arte contemporânea em escala monumental, com galerias e obras espalhadas por um jardim botânico. Muitas obras foram concebidas para o próprio espaço, fazendo paisagem e arte funcionarem juntas.",
+          "agencyRationale": "Inhotim costuma receber um dia próprio porque é uma experiência de escala internacional e muito diferente das cidades históricas. A alternância entre galerias, obras ao ar livre e jardins evita que o circuito fique restrito a igrejas e casario colonial.",
+          "visitType": "Museu + jardins",
+          "publishedDuration": "—",
+          "oneYearOld": "Sim",
+          "accessibility": "Sim — cadeira de rodas disponível e transporte interno opcional"
+        }
+      ]
     },
     {
       "id": "saojoaodelrei",
@@ -342,7 +1141,204 @@ window.ROTEIRO_DATA = {
         "Memorial Tancredo Neves"
       ],
       "kid": "Centro com calçamento e desníveis; confirme operação e acessibilidade do trem antes de reservar.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Sao+Joao+del+Rei+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Sao+Joao+del+Rei+MG",
+      "attractions": [
+        {
+          "name": "Centro Histórico",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "2–3 h",
+          "description": "Pontes de pedra, casarões e igrejas mostram uma cidade colonial que continuou economicamente ativa depois do ciclo do ouro, ao contrário de núcleos que ficaram quase congelados no século XVIII.",
+          "agencyRationale": "São João del-Rei não ficou presa ao século XVIII: ouro, comércio, ferrovia, política e música continuaram moldando a cidade. As agências a usam justamente para mostrar essa continuidade histórica.",
+          "visitType": "A pé / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igreja de São Francisco de Assis",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Grande templo rococó com projeto modificado por Aleijadinho, cercado por jardim de Burle Marx. É uma das obras arquitetônicas mais marcantes da cidade.",
+          "agencyRationale": "É a principal parada artística dos city tours locais.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igrejas e tradição musical",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "A cidade mantém antigas orquestras e uma forte tradição de música sacra associada às celebrações religiosas.",
+          "agencyRationale": "A musicalidade é um dos diferenciais usados pelos roteiros oficiais de Minas.",
+          "visitType": "Igrejas / experiência cultural",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Estação da Estrada de Ferro Oeste de Minas",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Complexo ferroviário histórico com locomotivas, vagões e memória da ferrovia inaugurada no século XIX.",
+          "agencyRationale": "Prepara e contextualiza a experiência da Maria Fumaça.",
+          "visitType": "Museu/estação",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Maria Fumaça São João del-Rei–Tiradentes",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "1h15 só ida",
+          "description": "Viagem em trem histórico por cerca de 12 km entre as duas cidades, margeando o Rio das Mortes e a Serra de São José. O próprio deslocamento torna-se atração.",
+          "agencyRationale": "É popular porque resolve duas coisas ao mesmo tempo: desloca o visitante entre duas cidades históricas e transforma o trajeto em atração. A paisagem e o equipamento ferroviário histórico tornam o percurso parte do passeio.",
+          "visitType": "Trem turístico",
+          "publishedDuration": "45–50 min por trecho",
+          "oneYearOld": "Sim",
+          "accessibility": "Sim — vagões adaptados e rampas; avisar na reserva"
+        },
+        {
+          "name": "Artesanato em estanho",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "São João del-Rei tornou-se referência brasileira na produção artesanal de peças de estanho.",
+          "agencyRationale": "Acrescenta uma tradição produtiva local ao roteiro histórico.",
+          "visitType": "Lojas/oficinas",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Ponte da Cadeia",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Ponte de pedra sobre o Córrego do Lenheiro, parte da infraestrutura histórica que conectava os setores da antiga vila.",
+          "agencyRationale": "Walking tours a utilizam como ponto de leitura da formação urbana: ela permite explicar circulação, cursos d'água e expansão da cidade.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Teatro Municipal",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "40 min",
+          "description": "Teatro histórico que representa a vida cultural urbana de São João del-Rei para além das igrejas.",
+          "agencyRationale": "É incluído para mostrar que a cidade desenvolveu vida cultural e instituições urbanas importantes, especialmente no século XIX.",
+          "visitType": "Interna / visita",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Museu Regional",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Instalado em grande sobrado colonial, reúne mobiliário, arte sacra, utensílios e objetos do cotidiano dos séculos XVIII e XIX.",
+          "agencyRationale": "Dá aos guias material concreto para explicar como se vivia dentro das casas que o visitante vê pelas ruas.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Memorial Tancredo Neves",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Espaço dedicado à trajetória de Tancredo Neves, natural de São João del-Rei, e ao processo político brasileiro que culminou na redemocratização.",
+          "agencyRationale": "Leva o roteiro do período colonial ao Brasil contemporâneo e explica por que São João del-Rei também é relevante para a história política republicana.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Solar dos Neves / Sobrado Lustosa",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Casarões históricos associados à família Neves e ao tecido urbano tradicional da cidade.",
+          "agencyRationale": "Aparecem nos walking tours porque permitem contar história política e arquitetura doméstica enquanto o grupo percorre o centro.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Museu da FEB",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Acervo dedicado à participação brasileira na Segunda Guerra Mundial e aos expedicionários da região.",
+          "agencyRationale": "É incluído em roteiros locais para apresentar uma camada do século XX que normalmente não aparece nos circuitos coloniais.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igreja Nossa Senhora do Carmo",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Igreja rococó de fachada marcante e importante conjunto de arte sacra, ligada à Ordem Terceira do Carmo.",
+          "agencyRationale": "É uma das principais igrejas do walking tour e permite comparar diferentes irmandades e estilos religiosos da cidade.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Catedral Basílica Nossa Senhora do Pilar",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Matriz histórica com interior ricamente ornamentado, ligada à formação religiosa e urbana de São João del-Rei.",
+          "agencyRationale": "É parada central porque materializa a riqueza do ciclo do ouro e a continuidade das tradições religiosas locais.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Casa de Bárbara Heliodora",
+          "lat": -21.133576,
+          "lon": -44.258809,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Imóvel associado à poetisa Bárbara Heliodora, figura ligada ao ambiente intelectual e familiar da Inconfidência Mineira.",
+          "agencyRationale": "Entra nos roteiros para conectar a Inconfidência a personagens e residências concretas da cidade, ampliando a narrativa além de Tiradentes.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "tiradentes",
@@ -361,7 +1357,152 @@ window.ROTEIRO_DATA = {
         "Museu de Sant’Ana"
       ],
       "kid": "Ruas de pedra e ladeiras podem dificultar carrinhos; priorize trechos curtos e pausas.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Tiradentes+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Tiradentes+MG",
+      "attractions": [
+        {
+          "name": "Centro Histórico",
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "days": "2–3 h",
+          "description": "Núcleo colonial muito preservado, com ruas de pedra, sobrados e igrejas aos pés da Serra de São José. A escala compacta permite compreender a cidade caminhando.",
+          "agencyRationale": "Tiradentes funciona muito bem para pernoite: o centro é caminhável, há restaurantes e vida noturna tranquila, e as atrações podem ser visitadas sem veículo. Por isso aparece frequentemente como base dos circuitos.",
+          "visitType": "A pé / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Matriz de Santo Antônio",
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "days": "45 min",
+          "description": "Igreja com interior ricamente dourado e fachada atribuída a Aleijadinho. É o principal monumento religioso da cidade e domina a paisagem urbana.",
+          "agencyRationale": "Concentra arte barroca e uma vista privilegiada do núcleo histórico.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Chafariz de São José",
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "days": "20 min",
+          "description": "Chafariz setecentista que abastecia moradores, animais e viajantes. Mostra de maneira simples como funcionava a infraestrutura urbana colonial.",
+          "agencyRationale": "É uma parada rápida que ajuda o guia a explicar a vida cotidiana do século XVIII.",
+          "visitType": "Externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Museu Casa Padre Toledo",
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Solar ligado ao inconfidente Padre Toledo, onde ocorreram encontros associados à conspiração.",
+          "agencyRationale": "A casa dá endereço e ambiente doméstico à conspiração. Para agências que já passaram pelo Museu da Inconfidência, ela continua a mesma narrativa em outro cenário.",
+          "visitType": "Museu / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Serra de São José",
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "description": "Formação montanhosa que envolve a cidade, com trilhas, mirantes e áreas de preservação.",
+          "agencyRationale": "Acrescenta natureza à permanência em uma cidade predominantemente histórica.",
+          "visitType": "Trilha / natureza",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Gastronomia",
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "days": "2 h",
+          "description": "A cidade concentra restaurantes, chefs e festivais gastronômicos que reinterpretam ingredientes e pratos mineiros.",
+          "agencyRationale": "As agências conseguem combinar visita histórica com noite livre e experiência gastronômica.",
+          "visitType": "Refeição / experiência",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Largo das Forras",
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Praça central e tradicional ponto de encontro da cidade. Além do casario, restaurantes e comércio, seu nome é associado à presença de pessoas negras alforriadas e o espaço recebeu paisagismo de Burle Marx no século XX.",
+          "agencyRationale": "Agências o usam como ponto de chegada, orientação e tempo livre: dali o visitante entra a pé no centro histórico e também percebe a Tiradentes viva, não apenas monumental.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Rua Direita",
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Principal eixo histórico, cercado por sobrados, ateliês, lojas e restaurantes. Caminhar por ela permite observar a arquitetura doméstica e comercial, não apenas edifícios religiosos.",
+          "agencyRationale": "Faz parte dos passeios porque conecta várias atrações importantes e concentra artesanato e gastronomia no próprio percurso.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Museu de Sant'Ana",
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Funciona na antiga cadeia e reúne centenas de representações de Sant'Ana produzidas em diferentes regiões e períodos. O contraste entre arte sacra e o antigo espaço carcerário também faz parte da experiência.",
+          "agencyRationale": "É usado para aprofundar arte sacra sem repetir uma visita a igreja e para aproveitar um edifício histórico central da cidade.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Museu da Liturgia",
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Museu dedicado aos objetos, ritos e símbolos da liturgia católica, com centenas de peças sacras.",
+          "agencyRationale": "Ajuda o visitante a compreender para que serviam muitos objetos e práticas encontrados nas igrejas visitadas ao longo do circuito mineiro.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igreja Nossa Senhora do Rosário dos Pretos",
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Uma das igrejas mais antigas da cidade, construída pela irmandade negra. Sua história revela a organização religiosa da população negra durante a escravidão e amplia a leitura social da cidade colonial.",
+          "agencyRationale": "É incluída porque oferece uma narrativa diferente da Matriz de Santo Antônio: em vez da riqueza das elites, permite discutir irmandades negras, escravidão e devoção.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "bichinho",
@@ -377,7 +1518,48 @@ window.ROTEIRO_DATA = {
         "Cachaçarias e produtos locais"
       ],
       "kid": "O passeio é principalmente em ruas e ateliês; confirme horários e acesso local.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Bichinho+Prados+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Bichinho+Prados+MG",
+      "attractions": [
+        {
+          "name": "Oficina de Agosto",
+          "lat": -21.099115,
+          "lon": -44.117586,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Oficina que ajudou a transformar Bichinho em polo de artesanato e design, trabalhando madeira, metal, tecido e materiais reaproveitados.",
+          "agencyRationale": "É um dos nomes que consolidaram a vila como extensão artística de Tiradentes.",
+          "visitType": "Ateliê / compras",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Ateliês e oficinas",
+          "lat": -21.099115,
+          "lon": -44.117586,
+          "locationAccuracy": "city-center",
+          "days": "1h30–2 h",
+          "description": "Pequenos produtores trabalham móveis, esculturas, cerâmica, madeira e objetos decorativos; a graça é visitar os locais de produção.",
+          "agencyRationale": "Mostra uma cultura artesanal viva, e não apenas patrimônio antigo.",
+          "visitType": "Ateliês / compras",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Cachaçarias e produtos locais",
+          "lat": -21.099115,
+          "lon": -44.117586,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Produção artesanal regional que pode ser conhecida e degustada no próprio distrito.",
+          "agencyRationale": "Complementa o passeio com gastronomia e produção local.",
+          "visitType": "Degustação / compras",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "curralinho",
@@ -392,7 +1574,35 @@ window.ROTEIRO_DATA = {
         "Experiência de garimpo"
       ],
       "kid": "Acesso a gruta e garimpo pode envolver terreno irregular; confirme operação e condições com guia local.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Curralinho+Extra%C3%A7%C3%A3o+Diamantina"
+      "url": "https://www.google.com/maps/search/?api=1&query=Curralinho+Extra%C3%A7%C3%A3o+Diamantina",
+      "attractions": [
+        {
+          "name": "Gruta do Salitre",
+          "lat": -18.31002,
+          "lon": -43.523591,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Formação rochosa de grande impacto próxima a Diamantina, com paredões e cavidades associados à paisagem mineral da região. A visita ajuda a perceber que a história diamantífera nasceu de uma geologia muito particular.",
+          "agencyRationale": "Operadoras de ecoturismo de Diamantina a combinam com city tour e Biribiri para ligar a história da mineração à paisagem que a produziu.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Experiência de garimpo",
+          "lat": -18.31002,
+          "lon": -43.523591,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Atividade interpretativa ligada às técnicas e à memória da procura por ouro e diamantes na região. O interesse é compreender na prática o trabalho que deu origem aos povoados e à economia local.",
+          "agencyRationale": "Aparece em pacotes porque transforma a narrativa do ciclo dos diamantes em experiência participativa, em vez de apenas museológica.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "catasaltas",
@@ -408,7 +1618,48 @@ window.ROTEIRO_DATA = {
         "Serra do Caraça"
       ],
       "kid": "Centro tem calçamento; trilhas na serra exigem checagem individual de percurso e esforço.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Catas+Altas+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Catas+Altas+MG",
+      "attractions": [
+        {
+          "name": "Centro Histórico",
+          "lat": -20.074754,
+          "lon": -43.408165,
+          "locationAccuracy": "city-center",
+          "days": "2–3 h",
+          "description": "Pequeno núcleo colonial aos pés de enormes paredões da Serra do Caraça. O contraste entre casario e montanha é a principal característica da cidade.",
+          "agencyRationale": "É uma parada visualmente forte e fácil de combinar com Caraça e Santa Bárbara.",
+          "visitType": "A pé / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Matriz de Nossa Senhora da Conceição",
+          "lat": -20.074754,
+          "lon": -43.408165,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Igreja setecentista que domina a praça central e preserva elementos artísticos do período colonial.",
+          "agencyRationale": "É o principal marco histórico do pequeno centro.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Serra do Caraça",
+          "lat": -20.074754,
+          "lon": -43.408165,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "description": "Maciço montanhoso que forma o cenário da cidade e oferece trilhas e paisagens.",
+          "agencyRationale": "Liga a cidade histórica ao circuito natural do Caraça.",
+          "visitType": "Natureza / trilha",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "santabarbara",
@@ -423,7 +1674,35 @@ window.ROTEIRO_DATA = {
         "Centro Histórico"
       ],
       "kid": "Confirme abertura das igrejas e condições de acesso antes da visita.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Santa+Barbara+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Santa+Barbara+MG",
+      "attractions": [
+        {
+          "name": "Matriz de Santo Antônio",
+          "lat": -19.958721,
+          "lon": -43.413154,
+          "locationAccuracy": "city-center",
+          "days": "45 min",
+          "description": "Igreja setecentista cujo teto da capela-mor possui pintura de Mestre Ataíde.",
+          "agencyRationale": "Coloca uma obra importante de Ataíde fora do eixo mais óbvio Ouro Preto–Mariana.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Centro Histórico",
+          "lat": -19.958721,
+          "lon": -43.413154,
+          "locationAccuracy": "city-center",
+          "days": "2–3 h",
+          "description": "Casario e igrejas ligados à expansão da mineração no início do século XVIII.",
+          "agencyRationale": "Funciona como cidade histórica e porta de entrada para o Caraça.",
+          "visitType": "A pé / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "caraca",
@@ -440,7 +1719,61 @@ window.ROTEIRO_DATA = {
         "Observação do lobo-guará"
       ],
       "kid": "Trilhas variam em esforço; observação noturna do lobo exige espera e não é garantida. Confirme acesso e hospedagem.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Santuario+do+Caraca"
+      "url": "https://www.google.com/maps/search/?api=1&query=Santuario+do+Caraca",
+      "attractions": [
+        {
+          "name": "Santuário e igreja neogótica",
+          "lat": -20.098103,
+          "lon": -43.487693,
+          "locationAccuracy": "city-center",
+          "days": "2 h",
+          "description": "Complexo religioso isolado em um vale cercado por montanhas. A igreja neogótica contrasta com o barroco predominante nas outras cidades do roteiro.",
+          "agencyRationale": "Agências reservam tempo ao Caraça porque hospedagem, santuário, história e reserva natural acontecem no mesmo lugar. É uma mudança completa de ritmo em relação aos city tours.",
+          "visitType": "Complexo / interna + externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Ruínas do antigo colégio",
+          "lat": -20.098103,
+          "lon": -43.487693,
+          "locationAccuracy": "city-center",
+          "days": "40 min",
+          "description": "Restos preservados do tradicional colégio destruído por incêndio em 1968, que formou figuras importantes da história brasileira.",
+          "agencyRationale": "Acrescentam história educacional ao conjunto religioso.",
+          "visitType": "Histórica / caminhada",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Trilhas, cachoeiras e grutas",
+          "lat": -20.098103,
+          "lon": -43.487693,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "description": "A reserva particular protege milhares de hectares de Mata Atlântica e Cerrado em relevo montanhoso.",
+          "agencyRationale": "Permite dedicar um ou dois dias a natureza dentro do circuito histórico.",
+          "visitType": "Natureza / trilha",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Observação do lobo-guará",
+          "lat": -20.098103,
+          "lon": -43.487693,
+          "locationAccuracy": "city-center",
+          "days": "noite / requer pernoite",
+          "description": "O santuário tornou-se famoso pela visita noturna de lobos-guarás atraídos para a área próxima à escadaria. A aparição não é garantida, pois são animais silvestres.",
+          "agencyRationale": "É uma experiência emblemática que diferencia o Caraça de qualquer outra parada do roteiro.",
+          "visitType": "Observação noturna",
+          "publishedDuration": "A partir de 19h30; duração indeterminada",
+          "oneYearOld": "Sim, acompanhada — Caraça admite crianças e isenta até 5 anos",
+          "accessibility": "Sim, mas espera é noturna e pode ser longa"
+        }
+      ]
     },
     {
       "id": "sabara",
@@ -459,7 +1792,113 @@ window.ROTEIRO_DATA = {
         "Chafariz do Kaquende"
       ],
       "kid": "Centro histórico com calçamento; verifique abertura e acessibilidade de cada edifício.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Sabara+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Sabara+MG",
+      "attractions": [
+        {
+          "name": "Igreja Nossa Senhora do Ó",
+          "lat": -19.890037,
+          "lon": -43.810792,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Pequena igreja do início do século XVIII com interior ricamente decorado e pinturas de influência oriental, incomuns no barroco mineiro.",
+          "agencyRationale": "É pequena, singular e muito diferente das grandes matrizes do circuito.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igreja Nossa Senhora do Carmo",
+          "lat": -19.890037,
+          "lon": -43.810792,
+          "locationAccuracy": "city-center",
+          "days": "30 min",
+          "description": "Igreja com elementos escultóricos associados a Aleijadinho.",
+          "agencyRationale": "Permite contato com obras do artista muito perto de Belo Horizonte.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Matriz Nossa Senhora da Conceição",
+          "lat": -19.890037,
+          "lon": -43.810792,
+          "locationAccuracy": "city-center",
+          "days": "45 min",
+          "description": "Grande templo que reúne diferentes fases da decoração colonial e ajuda a perceber a evolução do barroco mineiro.",
+          "agencyRationale": "É uma das igrejas historicamente mais importantes da antiga Vila Real de Sabará.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Teatro Municipal",
+          "lat": -19.890037,
+          "lon": -43.810792,
+          "locationAccuracy": "city-center",
+          "days": "40 min",
+          "description": "Teatro histórico do século XIX, raro exemplar preservado desse tipo de equipamento cultural.",
+          "agencyRationale": "Diversifica a visita para além de igrejas.",
+          "visitType": "Interna / visita",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Solar do Padre Correia",
+          "lat": -19.890037,
+          "lon": -43.810792,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Grande sobrado do século XVIII ligado à elite local e à administração da antiga vila. A arquitetura doméstica mostra como viviam famílias de posição elevada durante o ciclo do ouro.",
+          "agencyRationale": "A Primotur o coloca no city tour porque acrescenta arquitetura civil a um roteiro que poderia ficar restrito a igrejas.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Igreja Nossa Senhora do Rosário dos Pretos",
+          "lat": -19.890037,
+          "lon": -43.810792,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Igreja iniciada pela irmandade negra e marcada por uma história construtiva longa. É testemunho material da presença e organização da população negra em Sabará.",
+          "agencyRationale": "Agências a incluem para contar a cidade também pela experiência das irmandades negras e da sociedade escravista.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Chafariz do Kaquende",
+          "lat": -19.890037,
+          "lon": -43.810792,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Chafariz público histórico que abasteceu moradores da antiga vila. É um vestígio simples, mas muito concreto, da infraestrutura cotidiana colonial.",
+          "agencyRationale": "Funciona como parada curta que ajuda o guia a explicar como a cidade operava no dia a dia, fora dos edifícios monumentais.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Rua Dom Pedro II",
+          "lat": -19.890037,
+          "lon": -43.810792,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Rua histórica cercada por casario e edifícios civis, usada como eixo de caminhada pelo centro.",
+          "agencyRationale": "Está nos roteiros porque conecta as atrações e permite observar a escala urbana e a arquitetura civil de Sabará durante o próprio deslocamento.",
+          "visitType": "Visita turística",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "caete",
@@ -474,7 +1913,35 @@ window.ROTEIRO_DATA = {
         "Santuário Nossa Senhora da Piedade"
       ],
       "kid": "A visita ao topo envolve estrada e caminhada; confirme condições de acesso e alternativas sem degraus.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Serra+da+Piedade+Caete"
+      "url": "https://www.google.com/maps/search/?api=1&query=Serra+da+Piedade+Caete",
+      "attractions": [
+        {
+          "name": "Serra da Piedade",
+          "lat": -19.897777,
+          "lon": -43.670278,
+          "locationAccuracy": "city-center",
+          "days": "2 h",
+          "description": "Pico com vista panorâmica excepcional sobre as montanhas mineiras; em dias claros, o horizonte alcança dezenas de quilômetros.",
+          "agencyRationale": "É uma das grandes paradas paisagísticas próximas de Belo Horizonte.",
+          "visitType": "Mirante + caminhada",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Santuário Nossa Senhora da Piedade",
+          "lat": -19.897777,
+          "lon": -43.670278,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Pequeno santuário histórico no topo da serra, importante centro de peregrinação e sede da padroeira de Minas Gerais.",
+          "agencyRationale": "Une paisagem, religiosidade e patrimônio em uma única parada.",
+          "visitType": "Santuário / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "peiro",
@@ -495,7 +1962,14 @@ window.ROTEIRO_DATA = {
           "name": "Museu dos Dinossauros / Complexo Cultural e Científico de Peirópolis",
           "lat": -19.7442903,
           "lon": -47.7424457,
-          "days": "1–2 h"
+          "days": "1–2 h",
+          "locationAccuracy": "exact",
+          "description": "Museu ligado à UFTM em uma das áreas paleontológicas mais importantes do Brasil. O acervo e as exposições apresentam fósseis encontrados na região e reconstituições da fauna do Cretáceo, permitindo entender por que o Triângulo Mineiro é referência em paleontologia.",
+          "agencyRationale": "É uma parada de alto valor educativo e visual praticamente no eixo da BR-262. Acrescenta ao roteiro um tema completamente diferente do barroco e da mineração colonial: a história natural de Minas milhões de anos antes da ocupação humana.",
+          "visitType": "Museu / exposição interna e externa",
+          "publishedDuration": "—",
+          "oneYearOld": "Sim",
+          "accessibility": "Sim — informações turísticas registram acessibilidade em estacionamento, entrada e sanitário; confirmar condições das áreas externas"
         },
         {
           "name": "Geossítio de Peirópolis",
@@ -503,7 +1977,13 @@ window.ROTEIRO_DATA = {
           "lon": -47.743080139,
           "days": "30–60 min",
           "type": "natureza",
-          "accessibility": "Área geológica extensa com acessos por estrada e trilhas; confirmar condições locais."
+          "accessibility": "Área geológica extensa com acessos por estrada e trilhas; confirmar condições locais.",
+          "locationAccuracy": "exact",
+          "description": "Área onde a paisagem e os achados fósseis ajudam a conectar o museu ao local real das pesquisas paleontológicas. Peirópolis reúne patrimônio científico, antiga estação ferroviária e memória da comunidade que se desenvolveu no entorno.",
+          "agencyRationale": "Complementa o museu sem exigir um grande desvio rodoviário e transforma a parada em experiência de território, não apenas de exposição.",
+          "visitType": "Área externa / caminhada",
+          "publishedDuration": "—",
+          "oneYearOld": "Sim, com acompanhamento"
         }
       ]
     },
@@ -531,31 +2011,66 @@ window.ROTEIRO_DATA = {
           "name": "Grande Hotel e Termas de Araxá",
           "lat": -19.6469277,
           "lon": -46.9498159,
-          "days": "2 h"
+          "days": "2 h",
+          "locationAccuracy": "exact",
+          "description": "Complexo monumental inaugurado na década de 1940 para transformar Araxá em destino termal de luxo. Arquitetura, jardins e interiores fazem a visita valer mesmo sem usar os serviços termais.",
+          "agencyRationale": "Araxá aparece como etapa porque possui infraestrutura e uma atração monumental capaz de justificar o desvio. O Grande Hotel também conta a história do auge brasileiro das estâncias hidrominerais.",
+          "visitType": "Tour histórico / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
         },
         {
           "name": "Complexo do Barreiro",
           "lat": -19.6472115,
           "lon": -46.954839,
-          "days": "2 h"
+          "days": "2 h",
+          "locationAccuracy": "exact",
+          "description": "Área de fontes minerais, jardins e edifícios históricos que explica por que Araxá se tornou uma estância hidromineral.",
+          "agencyRationale": "Dá contexto ao Grande Hotel e à origem do turismo local.",
+          "visitType": "Caminhada / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
         },
         {
           "name": "Museu Dona Beja",
           "lat": -19.5898756,
           "lon": -46.9380426,
-          "days": "1 h"
+          "days": "1 h",
+          "locationAccuracy": "exact",
+          "description": "Museu instalado em casarão histórico ligado à memória de Ana Jacinta de São José, a Dona Beja, personagem cercada por história e lendas regionais.",
+          "agencyRationale": "Acrescenta narrativa histórica e personagem local ao roteiro termal.",
+          "visitType": "Museu / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
         },
         {
           "name": "Museu Calmon Barreto / Memorial de Araxá",
           "lat": -19.586776,
           "lon": -46.9426564,
-          "days": "30–60 min"
+          "days": "30–60 min",
+          "locationAccuracy": "exact",
+          "description": "Equipamentos culturais dedicados à história local e à produção artística de Calmon Barreto, ajudando a entender Araxá além das termas e da figura de Dona Beja.",
+          "agencyRationale": "Aparecem em roteiros turísticos oficiais como parte do núcleo histórico-cultural da cidade e dão contexto ao período anterior e paralelo ao desenvolvimento do Barreiro.",
+          "visitType": "Museu / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "Sim",
+          "accessibility": "—"
         },
         {
           "name": "Igreja de São Domingos",
           "lat": -19.5927815,
           "lon": -46.9409702,
-          "days": "20–30 min"
+          "days": "20–30 min",
+          "locationAccuracy": "exact",
+          "description": "Igreja histórica associada à formação religiosa e urbana de Araxá, preservando referências da arquitetura e religiosidade local.",
+          "agencyRationale": "Integra circuitos culturais de Araxá e ajuda a conectar a história urbana ao restante do roteiro mineiro.",
+          "visitType": "Igreja / interna",
+          "publishedDuration": "—",
+          "oneYearOld": "Sim",
+          "accessibility": "—"
         },
         {
           "name": "Parque do Cristo",
@@ -563,7 +2078,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.9345619,
           "days": "30–60 min",
           "type": "natureza",
-          "accessibility": "Mirante em área elevada; confirme rota sem escadas e condições de acesso."
+          "accessibility": "Mirante em área elevada; confirme rota sem escadas e condições de acesso.",
+          "locationAccuracy": "exact",
+          "description": "Mirante elevado sobre Araxá, com vista panorâmica da cidade e do entorno.",
+          "agencyRationale": "Funciona como parada curta de leitura da paisagem e orientação geográfica antes ou depois das atrações históricas.",
+          "visitType": "Mirante / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "Sim, com acompanhamento"
         },
         {
           "name": "Fontes Dona Beja e Andrade Júnior",
@@ -571,7 +2092,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.94960645,
           "days": "20–40 min",
           "type": "natureza",
-          "accessibility": "Fontes dentro do complexo do Barreiro; confirme acesso e condições com o operador."
+          "accessibility": "Fontes dentro do complexo do Barreiro; confirme acesso e condições com o operador.",
+          "locationAccuracy": "exact",
+          "description": "Fontes minerais do Barreiro ligadas à tradição hidrotermal que transformou Araxá em destino de águas e levou à construção do grande complexo turístico.",
+          "agencyRationale": "São parte essencial da narrativa das águas minerais; explicam por que o Barreiro e o Grande Hotel existem naquele local.",
+          "visitType": "Fonte / parque / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "Sim"
         }
       ]
     },
@@ -588,7 +2115,35 @@ window.ROTEIRO_DATA = {
         "Pastel de angu"
       ],
       "kid": "Parada urbana flexível; confirme horário de igrejas, restaurantes e locais de venda.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Itabirito+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Itabirito+MG",
+      "attractions": [
+        {
+          "name": "Centro histórico e igrejas",
+          "lat": -20.251972,
+          "lon": -43.802917,
+          "locationAccuracy": "city-center",
+          "days": "2 h",
+          "description": "Antigo núcleo minerador entre Belo Horizonte e Ouro Preto, com patrimônio religioso e urbano ligado ao ciclo do ouro.",
+          "agencyRationale": "Itabirito funciona bem como escala de baixo custo logístico no eixo BH–Ouro Preto. Agências podem acrescentar patrimônio e gastronomia sem consumir um dia inteiro.",
+          "visitType": "Caminhada / igrejas",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        },
+        {
+          "name": "Pastel de angu",
+          "lat": -20.251972,
+          "lon": -43.802917,
+          "locationAccuracy": "city-center",
+          "days": "45 min",
+          "description": "Especialidade tradicional feita com massa de angu de milho e diferentes recheios, reconhecida como patrimônio cultural local.",
+          "agencyRationale": "Dá uma razão gastronômica rápida para interromper o deslocamento.",
+          "visitType": "Gastronomia",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     },
     {
       "id": "amarantina",
@@ -602,7 +2157,22 @@ window.ROTEIRO_DATA = {
         "Núcleo histórico"
       ],
       "kid": "Distrito pequeno; confirme serviços e horários antes de desviar da rota principal.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Amarantina+Ouro+Preto+MG"
+      "url": "https://www.google.com/maps/search/?api=1&query=Amarantina+Ouro+Preto+MG",
+      "attractions": [
+        {
+          "name": "Núcleo histórico",
+          "lat": -20.313221,
+          "lon": -43.710354,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "description": "Distrito antigo no caminho de Ouro Preto, com igreja, casario e identidade própria ligada às rotas coloniais.",
+          "agencyRationale": "Amarantina é útil quando o circuito quer mostrar que o patrimônio colonial não se limita às sedes municipais. Como distrito no corredor de Ouro Preto, pode ser encaixada sem transformar o dia em outro destino principal.",
+          "visitType": "Caminhada / externa",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—"
+        }
+      ]
     }
   ]
-};
+};\n
