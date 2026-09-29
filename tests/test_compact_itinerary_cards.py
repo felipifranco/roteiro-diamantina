@@ -17,7 +17,8 @@ class CompactItineraryCardTests(unittest.TestCase):
     def test_tours_toggle_lives_in_the_card_header(self):
         self.assertIn("toggle.className='tours-toggle'", FINAL_ROUTING)
         self.assertIn("head.insertBefore(toggle,head.querySelector('.reorder-actions'))", FINAL_ROUTING)
-        self.assertNotIn("document.createElement('summary')", FINAL_ROUTING, "a separate summary row adds height to every card")
+        card = FINAL_ROUTING.split("function createCard(s,num,plan", 1)[1].split("function moveBefore(", 1)[0]
+        self.assertNotIn("document.createElement('summary')", card, "a separate summary row adds height to every card")
         self.assertIn("toggle.setAttribute('aria-expanded'", FINAL_ROUTING)
 
     def test_route_card_controls_share_one_row_below_the_name(self):

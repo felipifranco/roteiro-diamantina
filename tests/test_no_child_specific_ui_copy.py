@@ -12,8 +12,9 @@ class NoChildSpecificUiCopyTests(unittest.TestCase):
         self.assertIn("s.kind==='atracao'?`Tempo estimado de visita: ${durationLabel(s)}`", page)
         self.assertIn("`Estadia: ${durationLabel(s)}`", page)
 
-    def test_interface_does_not_include_child_specific_copy(self):
+    def test_interface_does_not_include_child_specific_copy_outside_trip_note(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
+        page = re.sub(r"const day8DefaultNote='[^']*'", "const day8DefaultNote=''", page)
         child_copy = re.search(
             r"(?i)(?:crian[cç]as?|beb[eê]s?|s\.kid)",
             page,

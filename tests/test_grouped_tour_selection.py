@@ -24,7 +24,7 @@ class GroupedTourSelectionTests(unittest.TestCase):
         helper = re.search(r"function routeIcon\(s,plan\)\{.*?^\s*\}", FINAL_ROUTING, re.S | re.M)
         self.assertIsNotNone(helper, "cards and map markers must use one status-to-icon rule")
         marker_refresh = re.search(r"function refreshMarkers\(plan,stopsInOrder\)\{(.*?)^\s*\}", FINAL_ROUTING, re.S | re.M)
-        card_builder = re.search(r"function createCard\(s,num,plan\)\{(.*?)^\s*\}", FINAL_ROUTING, re.S | re.M)
+        card_builder = re.search(r"function createCard\(s,num,plan(?:,forceRoute=false)?\)\{(.*?)^\s*\}", FINAL_ROUTING, re.S | re.M)
         tour_row = re.search(r"function tourRow\(city,tour,editable,plan\)\{(.*?)^\s*\}", FINAL_ROUTING, re.S | re.M)
         self.assertIsNotNone(marker_refresh)
         self.assertIsNotNone(card_builder)
@@ -42,7 +42,7 @@ const plan={labels:new Map([['origem','M'],['destino','D'],['passeio','1a'],['ou
 console.log(JSON.stringify([origin,destination,city,tour,optional,alert,outside].map(s=>routeIcon(s,plan))));
 """
         result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
-        self.assertEqual(json.loads(result.stdout), ["M", "D", "⌖", "1a", "↗", "!", "2"])
+        self.assertEqual(json.loads(result.stdout), ["M", "D", "↔", "1a", "◇", "!", "2"])
 
     def test_route_plan_gives_active_tours_one_card_and_map_label_not_the_parent(self):
         if not shutil.which("node"):
@@ -108,7 +108,7 @@ console.log(JSON.stringify({cityOnly:ids(['cidade']),cityWithTour:ids(['cidade',
         )
 
     def test_tours_are_chosen_inside_their_route_card(self):
-        card_start = FINAL_ROUTING.index("function createCard(s,num,plan){")
+        card_start = FINAL_ROUTING.index("function createCard(s,num,plan")
         card_end = FINAL_ROUTING.index("function moveBefore(", card_start)
         body = FINAL_ROUTING[card_start:card_end]
         self.assertIn("toursFor(s)", body)
@@ -146,7 +146,7 @@ console.log(JSON.stringify(toursFor({id:'c',name:'Cidade',type:'historia',sights
     def test_removing_a_city_group_deactivates_its_tours_and_markers(self):
         handler = re.search(r"function setGroupActive\(group,active\)\{(.*?)^\s*\}", FINAL_ROUTING, re.S | re.M)
         self.assertIsNotNone(handler, "city group selection must have a single state handler")
-        self.assertIn("toursFor(group).forEach(tour=>{selected.delete(tour.id);syncMarker(tour)})", handler.group(1))
+        self.assertIn("toursFor(group).forEach(tour=>{selected.delete(tour.id);hideMarker(tour)})", handler.group(1))
 
     def test_tour_cannot_be_activated_without_its_city_group(self):
         handler = re.search(r"function setAttractionActive\(s,active\)\{(.*?)^\s*\}", FINAL_ROUTING, re.S | re.M)

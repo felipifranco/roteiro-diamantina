@@ -88,7 +88,8 @@ class RouteInteractionControlsTests(unittest.TestCase):
         self.assertIn("attractionStops.forEach(addAttractionMarker)", PAGE)
         self.assertIn("m.addTo(map);markers[s.id]=m", PAGE)
         self.assertIn("function routeIcon(s,plan)", FINAL_ROUTING)
-        self.assertIn("routeStops.forEach(s=>{if(!markers[s.id])return;syncMarker(s);", FINAL_ROUTING)
+        self.assertIn("syncAttractionVisibility(plan);", FINAL_ROUTING)
+        self.assertIn("if(s.kind==='atracao'&&!selected.has(s.parentId)&&!openCards.has(s.parentId)){hideMarker(s);return}syncMarker(s);", FINAL_ROUTING)
         self.assertIn("setMapIcon(s,icon,routed?date:null)", FINAL_ROUTING)
 
     def test_reorder_updates_the_list_before_route_network_finishes(self):

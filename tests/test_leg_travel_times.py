@@ -44,8 +44,8 @@ console.log(JSON.stringify({arrivals:[...r.arrival.keys()],intra:r.intra.get('a'
 
     def test_stale_leg_times_are_cleared_while_recalculating_or_after_failure(self):
         draw = FINAL_ROUTING[FINAL_ROUTING.index("window.drawLine=async function(){"):]
-        self.assertLess(draw.index("routeLegs=null;"), draw.index("await fetch("))
-        self.assertIn("catch{if(request===routeRequest){returnDriveHours=null;routeLegs=null;", draw)
+        self.assertLess(draw.index("routeLegs=routeLegLinks(stopsInOrder);"), draw.index("await fetch("))
+        self.assertIn("catch{if(request===routeRequest){returnDriveHours=null;routeLegs=routeLegLinks(stopsInOrder);", draw)
 
 
 if __name__ == "__main__":
