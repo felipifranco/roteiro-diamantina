@@ -58,11 +58,11 @@ class RouteInteractionControlsTests(unittest.TestCase):
         popup_helper = PAGE.index("function routeableAttractionInfo(s)")
         self.assertLess(popup_helper, marker_creation, "attraction popup helper must exist before marker creation")
 
-    def test_attractions_have_active_inactive_selector_with_visit_duration(self):
-        self.assertTrue("attraction-active-state" in FINAL_ROUTING, "attraction state selector missing")
-        self.assertTrue("Inativo · ${durationLabel(tour)}" in FINAL_ROUTING, "inactive option omits duration")
-        self.assertTrue("Ativo · ${durationLabel(tour)}" in FINAL_ROUTING, "active option omits duration")
-        self.assertTrue("setAttractionActive" in FINAL_ROUTING, "selector does not control attraction state")
+    def test_tour_controls_have_explicit_add_and_remove_actions(self):
+        self.assertIn("function tourActionButton(tour)", FINAL_ROUTING, "tour action helper is missing")
+        self.assertIn("＋ Adicionar ao roteiro", FINAL_ROUTING, "inactive tours need a clear add action")
+        self.assertIn("− Remover do roteiro", FINAL_ROUTING, "active tours need a clear remove action")
+        self.assertIn("setAttractionActive(tour", FINAL_ROUTING, "tour actions must update route state")
 
     def test_inactive_attraction_markers_are_hidden(self):
         self.assertIn("attractionStops.forEach(s=>{if((!selected.has(s.id)||!selected.has(s.parentId))", FINAL_ROUTING)
