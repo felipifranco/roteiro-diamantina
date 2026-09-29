@@ -54,10 +54,17 @@ console.log(JSON.stringify({cityOnly:ids(['cidade']),cityWithTour:ids(['cidade',
         group_card = re.search(r"function buildMapGroupCard\(.*?^\s*\}", FINAL_ROUTING, re.S | re.M)
         self.assertIsNotNone(group_card, "the map needs a visible city-group control")
         body = group_card.group(0)
-        self.assertIn("attractionStops.filter(tour=>tour.parentId===group.id)", body)
-        self.assertIn("attraction-active-state", body)
-        self.assertIn("Inativo · ${durationLabel(tour)}", body)
-        self.assertIn("Ativo · ${durationLabel(tour)}", body)
+        self.assertIn("tourActionButton(tour)", body)
+        self.assertIn("durationLabel(tour)", body)
+
+    def test_selected_city_stop_cards_show_controls_for_each_child_tour(self):
+        card_start = FINAL_ROUTING.index("function createCard(s,num){")
+        card_end = FINAL_ROUTING.index("function moveBefore(", card_start)
+        body = FINAL_ROUTING[card_start:card_end]
+        self.assertIn("attractionStops.filter(tour=>tour.parentId===s.id)", body)
+        self.assertIn("item.appendChild(tourActionButton(tour))", body)
+        self.assertIn("inline-tour-controls", body)
+        self.assertIn("oldCheck.replaceWith(tourActionButton(s))", body)
 
     def test_city_candidates_do_not_flatten_child_tours(self):
         self.assertIn("const groupCandidates=stops.filter", FINAL_ROUTING)
