@@ -130,6 +130,17 @@ def validate(data):
                 raise ValueError(
                     f"routeStops[{index}].attractions[{attraction_index}] missing fields: {', '.join(missing)}"
                 )
+        attraction_by_name = {attraction["name"]: attraction for attraction in mapped_attractions}
+        for attraction_index, attraction in enumerate(mapped_attractions):
+            if "sameSiteAs" not in attraction:
+                continue
+            site_name = attraction["sameSiteAs"]
+            site = attraction_by_name.get(site_name) if isinstance(site_name, str) else None
+            if site is None or site is attraction or site.get("sameSiteAs") or site.get("locationAccuracy") == "city-center":
+                raise ValueError(
+                    f"routeStops[{index}].attractions[{attraction_index}].sameSiteAs "
+                    "must name another mapped site in the same stop"
+                )
 
 
 def _js_json(value):

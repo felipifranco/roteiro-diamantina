@@ -18,8 +18,18 @@ class TouristLocationTests(unittest.TestCase):
 
     def test_unverified_city_references_do_not_get_individual_markers(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn("kind:a.locationAccuracy==='city-center'?'passeio':'atracao'", page)
+        self.assertIn("kind:a.locationAccuracy==='city-center'||a.sameSiteAs?'passeio':'atracao'", page)
         self.assertIn("attractionStops.filter(s=>s.kind==='atracao').forEach(addAttractionMarker)", page)
+
+    def test_components_share_a_site_without_losing_their_entries(self):
+        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        cities = {city["id"]: {item["name"]: item for item in city.get("attractions", [])} for city in data["routeStops"]}
+        self.assertEqual(cities["diamantina"]["Passadiço da Glória"]["sameSiteAs"], "Casa da Glória")
+        self.assertEqual(cities["mariana"]["Órgão Arp Schnitger"]["sameSiteAs"], "Catedral da Sé")
+        self.assertNotEqual(
+            (cities["ouropreto"]["Praça Tiradentes"]["lat"], cities["ouropreto"]["Praça Tiradentes"]["lon"]),
+            (cities["ouropreto"]["Museu da Inconfidência"]["lat"], cities["ouropreto"]["Museu da Inconfidência"]["lon"]),
+        )
 
     def test_diamantina_highlights_have_individual_attractions(self):
         data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))

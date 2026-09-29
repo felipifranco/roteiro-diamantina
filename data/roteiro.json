@@ -337,8 +337,8 @@
           "oneYearOld": "Sim",
           "accessibility": "Sim — rampas, corrimãos, cadeira de rodas e sanitário adaptado",
           "guideBriefing": "Ocupa a antiga Casa de Câmara e Cadeia. Reúne objetos, documentos, arte sacra e os restos mortais atribuídos a inconfidentes, explicando a sociedade mineradora e a Inconfidência Mineira. É recorrente nos pacotes porque organiza uma história complexa em objetos, edifício e personagens. Depois da visita, Tiradentes e a Inconfidência deixam de ser apenas nomes vistos nas ruas e praças.",
-          "lat": -20.385743,
-          "lon": -43.503686,
+          "lat": -20.3860981,
+          "lon": -43.5036894,
           "locationAccuracy": "exact",
           "days": "1h30",
           "relevanceSource": "agency"
@@ -700,7 +700,8 @@
           "lon": -43.416366,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "sameSiteAs": "Catedral da Sé"
         },
         {
           "name": "Igreja de São Pedro dos Clérigos",
@@ -1292,7 +1293,8 @@
           "lon": -43.60165,
           "locationAccuracy": "exact",
           "days": "20 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "sameSiteAs": "Casa da Glória"
         },
         {
           "name": "Casa de Chica da Silva",
@@ -2030,20 +2032,21 @@
           "relevanceSource": "agency"
         },
         {
-          "name": "Solar dos Neves / Sobrado Lustosa",
-          "description": "Casarões históricos associados à família Neves e ao tecido urbano tradicional da cidade.",
+          "name": "Solares dos Neves e dos Lustosa (Largo do Rosário)",
+          "description": "Dois imóveis históricos distintos no Largo do Rosário: o Solar dos Neves, ligado a Tancredo Neves, e o Solar dos Lustosa. O ponto indica apenas um trecho do largo para observar ambos.",
           "agencyRationale": "Aparecem nos walking tours porque permitem contar história política e arquitetura doméstica enquanto o grupo percorre o centro.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
           "accessibility": "—",
-          "guideBriefing": "Casarões históricos associados à família Neves e ao tecido urbano tradicional da cidade. Aparecem nos walking tours porque permitem contar história política e arquitetura doméstica enquanto o grupo percorre o centro.",
-          "lat": -21.136289,
-          "lon": -44.262586,
-          "locationAccuracy": "exact",
+          "guideBriefing": "Dois imóveis históricos distintos no Largo do Rosário: o Solar dos Neves, ligado a Tancredo Neves, e o Solar dos Lustosa. O ponto indica apenas um trecho do largo para observar ambos. Aparecem nos walking tours porque permitem contar história política e arquitetura doméstica enquanto o grupo percorre o centro.",
+          "lat": -21.1362138,
+          "lon": -44.2628311,
+          "locationAccuracy": "street-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "mapQuery": "Largo do Rosário São João del-Rei MG"
         },
         {
           "name": "Museu da FEB",
@@ -2111,8 +2114,8 @@
         },
         {
           "name": "Igreja Nossa Senhora do Rosário",
-          "lat": -21.136289,
-          "lon": -44.262586,
+          "lat": -21.1364633,
+          "lon": -44.2627521,
           "locationAccuracy": "exact",
           "catalogName": "Igreja Nossa Senhora do Rosário",
           "description": "Igreja histórica citada em city tour de agência.",
@@ -2322,8 +2325,8 @@
           "oneYearOld": "—",
           "accessibility": "—",
           "guideBriefing": "Funciona na antiga cadeia e reúne centenas de representações de Sant'Ana produzidas em diferentes regiões e períodos. O contraste entre arte sacra e o antigo espaço carcerário também faz parte da experiência. É usado para aprofundar arte sacra sem repetir uma visita a igreja e para aproveitar um edifício histórico central da cidade.",
-          "lat": -21.1095563,
-          "lon": -44.1765638,
+          "lat": -21.1093903,
+          "lon": -44.1764425,
           "locationAccuracy": "exact",
           "days": "1 h",
           "relevanceSource": "agency"
@@ -2354,8 +2357,8 @@
           "oneYearOld": "—",
           "accessibility": "—",
           "guideBriefing": "Uma das igrejas mais antigas da cidade, construída pela irmandade negra. Sua história revela a organização religiosa da população negra durante a escravidão e amplia a leitura social da cidade colonial. É incluída porque oferece uma narrativa diferente da Matriz de Santo Antônio: em vez da riqueza das elites, permite discutir irmandades negras, escravidão e devoção.",
-          "lat": -21.109524,
-          "lon": -44.176543,
+          "lat": -21.1097417,
+          "lon": -44.1767476,
           "locationAccuracy": "exact",
           "days": "1 h",
           "relevanceSource": "agency"
