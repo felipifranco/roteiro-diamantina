@@ -170,7 +170,7 @@ renderList();
 (()=>{
  const dates=new Map(),manual=[],fixedDates=new Map([[origin.id,'2026-10-07'],[destination.id,'2026-10-09']]),openCards=new Set(),tourCache=new Map();let draggedId=null,routeRequest=0,routeController=null,returnDriveHours=null,routeLegs=null;
  // Paradas iniciais: Peirópolis e Araxá em 07/10; Sete Lagoas e Cordisburgo em 08/10.
- const initialStops=['peiro','araxa','setelagoas','cordisburgo'].filter(id=>stops.some(s=>s.id===id));initialStops.forEach(id=>{selected.add(id);dates.set(id,id==='setelagoas'||id==='cordisburgo'?'2026-10-08':'2026-10-07');manual.push(id)});openCards.add('peiro');openCards.add('cordisburgo');
+ const initialStops=['peiro','araxa','setelagoas','cordisburgo'].filter(id=>stops.some(s=>s.id===id));initialStops.forEach(id=>{selected.add(id);dates.set(id,id==='setelagoas'||id==='cordisburgo'?'2026-10-08':'2026-10-07');manual.push(id)});
  // Os dois passeios de Peirópolis já entram marcados; Araxá é o pernoite de 07 para 08/10 e o acompanha se a data mudar.
  attractionStops.filter(tour=>tour.parentId==='peiro'&&selected.has('peiro')).forEach(tour=>selected.add(tour.id));
  attractionStops.filter(tour=>tour.parentId==='cordisburgo').forEach(tour=>selected.add(tour.id));
