@@ -21,10 +21,17 @@ class TouristLocationTests(unittest.TestCase):
         self.assertIn("kind:a.locationAccuracy==='city-center'||a.sameSiteAs?'passeio':'atracao'", page)
         self.assertIn("attractionStops.filter(s=>s.kind==='atracao').forEach(addAttractionMarker)", page)
 
-    def test_components_share_a_site_without_losing_their_entries(self):
+    def test_casa_da_gloria_combines_the_visit_and_links(self):
         data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
         cities = {city["id"]: {item["name"]: item for item in city.get("attractions", [])} for city in data["routeStops"]}
-        self.assertEqual(cities["diamantina"]["Passadiço da Glória"]["sameSiteAs"], "Casa da Glória")
+        diam = cities["diamantina"]
+        self.assertNotIn("Passadiço da Glória", diam)
+        self.assertNotIn("Casa da Glória", diam)
+        combined = diam["Casa da Glória e Passadiço da Glória"]
+        self.assertIn("dois casarões", combined["guideBriefing"])
+        self.assertIn("Passadiço da Glória", combined["guideBriefing"])
+        self.assertIn("Casa da Glória", combined["mapQuery"])
+        self.assertEqual(len(combined["visitLinks"]), 3)
         self.assertEqual(cities["mariana"]["Órgão Arp Schnitger"]["sameSiteAs"], "Catedral da Sé")
         self.assertNotEqual(
             (cities["ouropreto"]["Praça Tiradentes"]["lat"], cities["ouropreto"]["Praça Tiradentes"]["lon"]),

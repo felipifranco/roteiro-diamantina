@@ -38,3 +38,5 @@ Cada atração informa `locationAccuracy`: `exact` para um local físico confirm
 Para revisar um ponto, confirme primeiro o local em fontes oficiais (prefeitura, órgão gestor ou página da atração) e depois confira a posição cartográfica. Um resultado de geocodificação com o mesmo nome em outra cidade não comprova a coordenada.
 
 Quando duas fichas descrevem componentes do mesmo local físico, `sameSiteAs` recebe o nome exato da ficha principal da mesma parada. As duas fichas e seus links continuam no catálogo; o componente usa o marcador e o destino de rota da ficha principal. Não use essa relação só porque os pontos estão próximos ou compartilham um endereço de embarque. A revisão de casos próximos e pendências cartográficas está em [`location-audit.md`](location-audit.md).
+
+Quando os conteúdos realmente formam uma única visita, mantenha uma ficha com descrição e `guideBriefing` completos. `mapQuery` indica o destino principal no Google Maps; `visitLinks` pode reunir buscas de elementos da visita e fontes oficiais, com `label` e URL HTTPS em cada item. Não use links adicionais como justificativa para unir atrações independentes.

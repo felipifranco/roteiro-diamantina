@@ -141,6 +141,22 @@ def validate(data):
                     f"routeStops[{index}].attractions[{attraction_index}].sameSiteAs "
                     "must name another mapped site in the same stop"
                 )
+        for attraction_index, attraction in enumerate(mapped_attractions):
+            if "visitLinks" not in attraction:
+                continue
+            links = attraction["visitLinks"]
+            if not isinstance(links, list) or any(
+                not isinstance(link, dict)
+                or not isinstance(link.get("label"), str)
+                or not link["label"].strip()
+                or not isinstance(link.get("url"), str)
+                or not link["url"].startswith("https://")
+                for link in links
+            ):
+                raise ValueError(
+                    f"routeStops[{index}].attractions[{attraction_index}].visitLinks "
+                    "must contain labeled HTTPS links"
+                )
 
 
 def _js_json(value):

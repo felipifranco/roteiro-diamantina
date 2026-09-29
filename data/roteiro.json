@@ -1280,21 +1280,36 @@
           "relevanceSource": "agency"
         },
         {
-          "name": "Passadiço da Glória",
-          "description": "Dois casarões ligados por um passadiço elevado sobre a rua, uma das imagens mais reconhecíveis de Diamantina. Vale pela arquitetura incomum e pela relação com a antiga vida religiosa e educacional da cidade.",
-          "agencyRationale": "Ícone visual do centro histórico e parada frequente nos city tours.",
-          "visitType": "Externa / caminhada",
-          "estimatedDuration": "20 min",
+          "name": "Casa da Glória e Passadiço da Glória",
+          "description": "Conjunto de dois casarões históricos em lados opostos da Rua da Glória, ligados pelo Passadiço da Glória. O passadiço elevado é uma das imagens mais reconhecíveis de Diamantina; o conjunto abriga atividades do Instituto Casa da Glória da UFMG.",
+          "agencyRationale": "O conjunto e seu passadiço são um marco visual do centro histórico e uma parada frequente nos roteiros a pé de Diamantina.",
+          "visitType": "Arquitetura / visita externa; interior conforme funcionamento",
+          "estimatedDuration": "20 min (exterior)",
           "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Dois casarões ligados por um passadiço elevado sobre a rua, uma das imagens mais reconhecíveis de Diamantina. Vale pela arquitetura incomum e pela relação com a antiga vida religiosa e educacional da cidade. Ícone visual do centro histórico e parada frequente nos city tours.",
-          "lat": -18.24159,
-          "lon": -43.60165,
+          "oneYearOld": "A confirmar",
+          "accessibility": "Acesso ao interior a confirmar com a instituição.",
+          "guideBriefing": "A Casa da Glória é um conjunto de dois casarões em lados opostos da Rua da Glória. O Passadiço da Glória é a passagem elevada que os une; por isso, observar a casa e o passadiço compõe uma única parada a pé.\n\nDa rua, observe a ligação entre os edifícios e a arquitetura do antigo conjunto religioso e educacional. Hoje o local abriga atividades do Instituto Casa da Glória, ligado à UFMG. Reserve cerca de 20 minutos para a parte externa; consulte a instituição antes de planejar uma visita aos espaços internos ou atravessar o passadiço.",
+          "lat": -18.241529,
+          "lon": -43.601612,
           "locationAccuracy": "exact",
-          "days": "20 min",
+          "days": "20 min (exterior)",
           "relevanceSource": "agency",
-          "sameSiteAs": "Casa da Glória"
+          "catalogName": "Casa da Glória e Passadiço da Glória",
+          "mapQuery": "Casa da Glória Diamantina MG",
+          "visitLinks": [
+            {
+              "label": "Passadiço no Google Maps",
+              "url": "https://www.google.com/maps/search/?api=1&query=Passadi%C3%A7o%20da%20Gl%C3%B3ria%20Diamantina%20MG"
+            },
+            {
+              "label": "Casa da Glória · UFMG",
+              "url": "https://igc.ufmg.br/casa-da-gloria/"
+            },
+            {
+              "label": "Casa da Glória · Prefeitura",
+              "url": "https://www.diamantina.mg.gov.br/portal/turismo/0/9/724/casa-da-gloria"
+            }
+          ]
         },
         {
           "name": "Casa de Chica da Silva",
@@ -1430,23 +1445,6 @@
           "oneYearOld": "A confirmar",
           "accessibility": "A confirmar",
           "guideBriefing": "Igreja histórica do antigo Arraial do Tijuco.",
-          "days": "—",
-          "relevanceSource": "agency"
-        },
-        {
-          "name": "Casa da Glória",
-          "lat": -18.241529,
-          "lon": -43.601612,
-          "locationAccuracy": "exact",
-          "catalogName": "Casa da Glória",
-          "description": "Conjunto histórico conhecido pelo passadiço que liga dois casarões.",
-          "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
-          "visitType": "Histórica",
-          "estimatedDuration": "—",
-          "publishedDuration": "—",
-          "oneYearOld": "A confirmar",
-          "accessibility": "A confirmar",
-          "guideBriefing": "Conjunto histórico conhecido pelo passadiço que liga dois casarões.",
           "days": "—",
           "relevanceSource": "agency"
         },
