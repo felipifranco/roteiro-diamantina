@@ -173,7 +173,7 @@ renderList();
  const initialStops=['peiro','araxa','cordisburgo'].filter(id=>stops.some(s=>s.id===id));initialStops.forEach(id=>{selected.add(id);dates.set(id,id==='cordisburgo'?'2026-10-08':'2026-10-07');manual.push(id)});openCards.add('peiro');openCards.add('cordisburgo');
  // Os dois passeios de Peirópolis já entram marcados; Araxá é o pernoite de 07 para 08/10 e o acompanha se a data mudar.
  attractionStops.filter(tour=>tour.parentId==='peiro'&&selected.has('peiro')).forEach(tour=>selected.add(tour.id));
- attractionStops.filter(tour=>tour.parentId==='cordisburgo'&&tour.name==='Museu Casa Guimarães Rosa').forEach(tour=>selected.add(tour.id));
+ attractionStops.filter(tour=>tour.parentId==='cordisburgo').forEach(tour=>selected.add(tour.id));
  attractionStops.filter(tour=>tour.parentId==='diamantina'&&tour.name==='Vesperata').forEach(tour=>selected.add(tour.id));
  const overnightStops=new Set(['araxa']);
  const fmt=d=>`${d.slice(8,10)}/${d.slice(5,7)}`;
