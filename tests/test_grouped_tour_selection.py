@@ -33,16 +33,17 @@ class GroupedTourSelectionTests(unittest.TestCase):
         self.assertIn("routeIcon(s,iconPlan)", card_builder.group(1))
         self.assertIn("routeIcon(tour,plan)", tour_row.group(1))
         script = helper.group(0) + """
-const selected=new Set(['cidade','passeio']);
+const selected=new Set(['cidade','passeio','optional','optional-tour']);
 const origin={id:'origem',kind:'inicio'},destination={id:'destino',kind:'destino'};
 const city={id:'cidade',kind:'natureza'},tour={id:'passeio',kind:'atracao',parentId:'cidade'};
-const optional={id:'optional',kind:'opcional'},alert={id:'alert',kind:'alerta'},outside={id:'outside',kind:'natureza'};
-const toursFor=s=>s.id==='cidade'?[tour]:[];
+const optional={id:'optional',kind:'opcional'},optionalTour={id:'optional-tour',kind:'atracao',parentId:'optional'};
+const unselectedOptional={id:'unselected-optional',kind:'opcional'},alert={id:'alert',kind:'alerta'},outside={id:'outside',kind:'natureza'};
+const toursFor=s=>s.id==='cidade'?[tour]:s.id==='optional'?[optionalTour]:[];
 const plan={labels:new Map([['origem','M'],['destino','D'],['passeio','1a'],['outside','2']])};
-console.log(JSON.stringify([origin,destination,city,tour,optional,alert,outside].map(s=>routeIcon(s,plan))));
+console.log(JSON.stringify([origin,destination,city,tour,optional,unselectedOptional,alert,outside].map(s=>routeIcon(s,plan))));
 """
         result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
-        self.assertEqual(json.loads(result.stdout), ["M", "D", "↔", "1a", "◇", "!", "2"])
+        self.assertEqual(json.loads(result.stdout), ["M", "D", "↔", "1a", "↔", "◇", "!", "2"])
 
     def test_route_plan_gives_active_tours_one_card_and_map_label_not_the_parent(self):
         if not shutil.which("node"):
