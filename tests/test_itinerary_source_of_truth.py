@@ -12,7 +12,8 @@ EXPECTED_ROUTE_STOP_IDS = (
     "biribiri", "peruacu", "delfinopolis", "cordisburgo", "belohorizonte",
     "brumadinho", "saojoaodelrei", "tiradentes", "bichinho", "curralinho",
     "catasaltas", "santabarbara", "caraca", "sabara", "caete", "peiro", "araxa",
-    "itabirito", "amarantina",
+    "itabirito", "amarantina", "ourobranco", "setelagoas", "mendanha", "vau",
+    "presidentekubitschek", "ipoema", "itambemato", "raposos", "novalima", "rioacima",
 )
 
 

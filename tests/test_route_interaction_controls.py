@@ -84,10 +84,12 @@ class RouteInteractionControlsTests(unittest.TestCase):
         self.assertIn("− Remover do roteiro", FINAL_ROUTING, "active tours need a clear remove action")
         self.assertIn("setAttractionActive(tour", FINAL_ROUTING, "tour actions must update route state")
 
-    def test_inactive_attraction_markers_are_hidden(self):
-        self.assertIn("attractionStops.forEach(s=>{if((!selected.has(s.id)||!selected.has(s.parentId))", FINAL_ROUTING)
-        self.assertIn("map.removeLayer(markers[s.id])", FINAL_ROUTING)
-        self.assertTrue("marker.addTo(map)" in FINAL_ROUTING, "active markers cannot be added to the map")
+    def test_attraction_markers_remain_visible_with_synchronized_route_icons(self):
+        self.assertIn("attractionStops.forEach(addAttractionMarker)", PAGE)
+        self.assertIn("m.addTo(map);markers[s.id]=m", PAGE)
+        self.assertIn("function routeIcon(s,plan)", FINAL_ROUTING)
+        self.assertIn("routeStops.forEach(s=>{if(!markers[s.id])return;syncMarker(s);", FINAL_ROUTING)
+        self.assertIn("setMapIcon(s,icon,routed?date:null)", FINAL_ROUTING)
 
     def test_reorder_updates_the_list_before_route_network_finishes(self):
         move = re.search(r"function moveSameDay\(id,step\)\{(.*?)\}\s*function totalEnd", PAGE, re.S)
