@@ -1,4 +1,5 @@
-// Generated from data/roteiro.json by scripts/generate_route_data.py. Do not edit.\nwindow.ROTEIRO_DATA = {
+// Generated from data/roteiro.json by scripts/generate_route_data.py. Do not edit.
+window.ROTEIRO_DATA = {
   "routeStops": [
     {
       "id": "mirassol",
@@ -2175,4 +2176,4 @@
       ]
     }
   ]
-};\n
+};
