@@ -236,6 +236,19 @@ renderList();
   markers[s.id].setIcon(L.divIcon({className:'',html,iconSize:[104,34],iconAnchor:[14,33],popupAnchor:[30,-25]}));
  }
  function kindLabel(s){const type=s.type==='historia'?'HISTÓRIA':'NATUREZA';return s===origin?'MIRASSOL · ORIGEM':s===destination?'DESTINO FIXO · 09/10':s.kind==='alerta'?'AVISO DE ACESSO':s.kind==='opcional'?selected.has(s.id)?`DESVIO NO ROTEIRO · ${type}`:`↗ OPCIONAL · ${type}`:type}
+ function showStopBriefing(stop){
+  let dialog=document.getElementById('stopBriefingDialog');
+  if(!dialog){
+   dialog=document.createElement('dialog');dialog.id='stopBriefingDialog';dialog.className='briefing-dialog';dialog.setAttribute('aria-labelledby','stopBriefingTitle');dialog.setAttribute('aria-describedby','stopBriefingCopy');
+   dialog.innerHTML='<div class="briefing-dialog-head"><div><span class="briefing-eyebrow">Briefing da parada</span><h2 class="briefing-title" id="stopBriefingTitle"></h2></div><button type="button" class="briefing-close" aria-label="Fechar descrição">×</button></div><p class="briefing-copy" id="stopBriefingCopy"></p>';
+   document.body.appendChild(dialog);
+   dialog.querySelector('.briefing-close').addEventListener('click',()=>{if(typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open')});
+   dialog.addEventListener('click',event=>{if(event.target===dialog){if(typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open')}});
+  }
+  dialog.querySelector('.briefing-title').textContent=stop.name.replace(' · desvio opcional','');
+  dialog.querySelector('.briefing-copy').textContent=stop.guideBriefing||'';
+  if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');
+ }
  function createCard(s,num){
   const trip=inTrip(s),editable=trip&&!isFixed(s)&&s.kind!=='alerta',card=document.createElement('article');
   card.className=`stop ${trip?'route-stop':'available-stop'}${editable?' editable-stop':''}${s.kind==='opcional'?' optional-stop':''}`;card.dataset[trip?'stopId':'availableStopId']=s.id;
@@ -258,6 +271,7 @@ renderList();
    const addButton=document.createElement('button');addButton.type='button';addButton.className='stop-action add-stop-button';addButton.textContent='＋';addButton.title='Adicionar ao roteiro';addButton.setAttribute('aria-label',`Adicionar ${s.name} ao roteiro`);addButton.addEventListener('click',()=>setGroupActive(s,true));head.appendChild(addButton);
   }
   card.appendChild(head);
+  if(s.guideBriefing){const briefing=document.createElement('button');briefing.type='button';briefing.className='briefing-link';briefing.textContent='Saiba mais por IA ↗';briefing.setAttribute('aria-haspopup','dialog');briefing.addEventListener('click',()=>showStopBriefing(s));card.appendChild(briefing)}
   if(s.id===origin.id)return card;
   const tours=toursFor(s),chosen=tours.filter(t=>selected.has(t.id)).length,canPick=trip&&s.kind!=='alerta';
   const details=document.createElement('div');details.className='attractions';details.id=`tours-${s.id}`;details.hidden=!openCards.has(s.id);
@@ -494,4 +508,6 @@ renderList();
 }
 
 .tour-pinned{align-self:center;padding:5px 8px;border:1px solid #c7d9c9;border-radius:7px;background:#edf5ed;color:#285b39;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+
+.briefing-link{display:block;margin:0 10px 8px;padding:1px 0;border:0;background:transparent;color:var(--green);font:700 11px/1.4 "Segoe UI",sans-serif;text-decoration:underline;text-decoration-color:#9db9a3;text-underline-offset:3px;cursor:pointer}.briefing-link:focus-visible,.briefing-close:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}.briefing-dialog{width:min(560px,calc(100vw - 32px));max-width:none;max-height:min(78dvh,680px);padding:0;border:1px solid #d5ddd3;border-radius:16px;background:var(--panel);color:var(--ink);box-shadow:0 22px 70px #14251d38}.briefing-dialog[open]{display:flex;flex-direction:column}.briefing-dialog::backdrop{background:#15241da8;backdrop-filter:blur(2px)}.briefing-dialog-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 22px 13px;border-bottom:1px solid #e8ebe5}.briefing-eyebrow{color:var(--green);font-size:10px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}.briefing-title{margin:5px 0 0;font:600 23px/1.2 Georgia,serif}.briefing-close{flex:0 0 36px;width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:white;color:var(--muted);font-size:24px;line-height:1;cursor:pointer}.briefing-copy{flex:1;min-height:0;margin:0;padding:18px 22px 23px;overflow:auto;color:#435047;font-size:15px;line-height:1.7;white-space:pre-line}@media(max-width:600px){.briefing-dialog{width:calc(100vw - 24px);max-height:calc(100dvh - 36px);border-radius:14px}.briefing-dialog-head{padding:16px 17px 11px}.briefing-title{font-size:21px}.briefing-copy{padding:15px 17px 20px;font-size:15px;line-height:1.65}}
 </style><script>new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(map.getContainer());</script></body></html>
