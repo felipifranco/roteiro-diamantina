@@ -248,7 +248,10 @@ renderList();
    dialog.addEventListener('click',event=>{if(event.target===dialog){if(typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open')}});
   }
   dialog.querySelector('.briefing-title').textContent=stop.name.replace(' · desvio opcional','');
-  dialog.querySelector('.briefing-copy').textContent=stop.guideBriefing||'';
+  const copy=dialog.querySelector('.briefing-copy');copy.textContent=stop.guideBriefing||'';
+  dialog.style.display='flex';dialog.style.flexDirection='column';dialog.style.height='fit-content';
+  dialog.querySelector('.briefing-dialog-head').style.flex='0 0 auto';
+  copy.style.flex='0 1 auto';copy.style.minHeight='0';
   if(typeof dialog.showModal==='function'){dialog.showModal();dialog.querySelector('.briefing-title').focus()}else dialog.setAttribute('open','');
  }
  function createCard(s,num){
