@@ -156,6 +156,13 @@ CATALOG_ATTRACTION_ALIASES = {
     "santuario do bom jesus": "santuario do bom jesus de matosinhos",
 }
 
+CATALOG_CITY_ALIASES = {
+    "tabuleiro conceicao do mato dentro": "conceicao do mato dentro",
+    "serra da canastra": "sao roque de minas serra da canastra",
+    "uberaba peiropolis": "uberaba peiropolis",
+    "curralinho extracao": "curralinho extracao diamantina",
+}
+
 
 def _normalized_name(value):
     normalized_punctuation = value.translate(
@@ -183,8 +190,10 @@ def _catalog_city_match_score(stop_name, catalog_name):
 
 
 def _matching_catalog_city(stop_name, catalog_cities):
+    normalized_stop = _normalized_name(stop_name)
+    lookup_name = CATALOG_CITY_ALIASES.get(normalized_stop, stop_name)
     scored = [
-        (_catalog_city_match_score(stop_name, city["name"]), city)
+        (_catalog_city_match_score(lookup_name, city["name"]), city)
         for city in catalog_cities
     ]
     highest = max((score for score, _ in scored), default=0)
@@ -216,8 +225,49 @@ def _enrich_route_attraction_durations(route_stops, catalog_cities):
                 attraction["days"] = duration
 
 
+def _merge_catalog_attractions(route_stops, catalog_cities):
+    """Expose every catalog attraction to the map without duplicating catalog content.
+
+    Explicit routeStops[].attractions coordinates remain authoritative. Catalog
+    attractions that do not yet have a surveyed coordinate inherit the city
+    coordinate and are marked locationAccuracy='city-center'. This keeps every
+    researched attraction selectable while making coordinate quality explicit.
+    """
+    for stop in route_stops:
+        city = _matching_catalog_city(stop["name"], catalog_cities)
+        if city is None:
+            continue
+        mapped = stop.setdefault("attractions", [])
+        by_name = {}
+        for attraction in mapped:
+            key = _normalized_name(attraction["name"])
+            key = _normalized_name(CATALOG_ATTRACTION_ALIASES.get(key, attraction["name"]))
+            by_name[key] = attraction
+            attraction.setdefault("locationAccuracy", "exact")
+        for catalog_attraction in city["attractions"]:
+            key = _normalized_name(catalog_attraction["name"])
+            existing = by_name.get(key)
+            if existing is None:
+                existing = {
+                    "name": catalog_attraction["name"],
+                    "lat": stop["lat"],
+                    "lon": stop["lon"],
+                    "locationAccuracy": "city-center",
+                }
+                mapped.append(existing)
+                by_name[key] = existing
+            existing.setdefault("days", catalog_attraction["estimatedDuration"])
+            existing.setdefault("description", catalog_attraction["description"])
+            existing.setdefault("agencyRationale", catalog_attraction["agencyRationale"])
+            existing.setdefault("visitType", catalog_attraction["visitType"])
+            existing.setdefault("publishedDuration", catalog_attraction["publishedDuration"])
+            existing.setdefault("oneYearOld", catalog_attraction["oneYearOld"])
+            existing.setdefault("accessibility", catalog_attraction["accessibility"])
+
+
 def render_app_data(data):
     route_stops = copy.deepcopy(data["routeStops"])
+    _merge_catalog_attractions(route_stops, data["catalog"]["cities"])
     _enrich_route_attraction_durations(route_stops, data["catalog"]["cities"])
     payload = {"routeStops": route_stops}
     return (
