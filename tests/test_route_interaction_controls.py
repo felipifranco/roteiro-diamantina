@@ -38,20 +38,30 @@ class RouteInteractionControlsTests(unittest.TestCase):
             for key, value in source_stop.items():
                 if key != "attractions":
                     self.assertEqual(generated_stop.get(key), value, (stop_id, key))
-            self.assertEqual(len(generated_stop.get("attractions", [])), len(source_stop.get("attractions", [])))
-            for source_attraction, generated_attraction in zip(
-                source_stop.get("attractions", []), generated_stop.get("attractions", [])
-            ):
+            generated_by_name = {a["name"]: a for a in generated_stop.get("attractions", [])}
+            for source_attraction in source_stop.get("attractions", []):
+                generated_attraction = generated_by_name[source_attraction["name"]]
                 for key, value in source_attraction.items():
                     self.assertEqual(generated_attraction.get(key), value, (stop_id, key))
-                added = set(generated_attraction) - set(source_attraction)
-                self.assertLessEqual(added, {"days"}, (stop_id, added))
+                self.assertEqual(generated_attraction.get("locationAccuracy"), "exact")
+        # The generated adapter may add catalog-only attractions. They must keep
+        # all researched catalog fields and be explicit when using the city
+        # coordinate until an exact attraction coordinate is surveyed.
+        for stop in generated_stops.values():
+            for attraction in stop.get("attractions", []):
+                self.assertIn(attraction.get("locationAccuracy"), {"exact", "city-center"})
+                if attraction["locationAccuracy"] == "city-center":
+                    for field in (
+                        "description", "agencyRationale", "visitType",
+                        "publishedDuration", "oneYearOld", "accessibility",
+                    ):
+                        self.assertIn(field, attraction)
         mirante = next(
             attraction
             for attraction in generated_stops["capitolio"]["attractions"]
             if attraction["name"] == "Mirante dos Canyons"
         )
-        self.assertNotIn("days", mirante)
+        self.assertEqual(mirante["locationAccuracy"], "exact")
 
     def test_attraction_popup_helper_is_defined_before_markers_are_created(self):
         marker_creation = PAGE.index("attractionStops.forEach(addAttractionMarker)")
