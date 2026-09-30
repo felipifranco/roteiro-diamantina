@@ -24,7 +24,8 @@ HEADERS = [
     "Tipo de visita",
     "Estimativa de tempo",
     "Tempo real publicado",
-    "Criança de 1 ano",
+    "Classificação etária / 1 ano",
+    "Ingressos / agendamento",
     "Idoso / mobilidade reduzida",
 ]
 ATTRACTION_FIELDS = (
@@ -40,6 +41,43 @@ ATTRACTION_FIELDS = (
 STOP_KINDS = {"inicio", "destino", "natureza", "historia", "opcional", "alerta", "restaurante"}
 STOP_TYPES = {"natureza", "historia", "gastronomia"}
 LOCATION_ACCURACIES = {"exact", "street-center", "trail-point", "city-center"}
+AGE_STATUSES = {"livre", "idade_minima", "indeterminada"}
+TICKET_STATUSES = {"online", "bilheteria", "agendamento", "gratuito", "por_passeio", "reserva_indeterminada", "indeterminado"}
+
+
+def validate_visit_rules(item, path):
+    if not isinstance(item, dict):
+        raise ValueError(f"{path} must be an object")
+    age = item.get("ageClassification")
+    ticket = item.get("ticket")
+    if not isinstance(age, dict) or age.get("status") not in AGE_STATUSES:
+        raise ValueError(f"{path}.ageClassification must have a valid status")
+    if age["status"] == "idade_minima" and (type(age.get("minimumAge")) is not int or age["minimumAge"] < 1):
+        raise ValueError(f"{path}.ageClassification requires a positive minimumAge")
+    if age["status"] != "indeterminada" and not str(age.get("sourceUrl", "")).startswith("https://"):
+        raise ValueError(f"{path}.ageClassification requires an official sourceUrl")
+    if not isinstance(ticket, dict) or ticket.get("status") not in TICKET_STATUSES:
+        raise ValueError(f"{path}.ticket must have a valid status")
+    if ticket["status"] in {"online", "bilheteria", "agendamento", "gratuito"} and not str(ticket.get("url", "")).startswith("https://"):
+        raise ValueError(f"{path}.ticket requires a source or ticket URL")
+
+
+def age_cell(item):
+    age = item["ageClassification"]
+    if age["status"] == "livre":
+        label = "Livre — 1 ano permitido com responsável"
+    elif age["status"] == "idade_minima":
+        label = f"Mínimo {age['minimumAge']} anos — 1 ano não permitido"
+    else:
+        label = "Indeterminada"
+    return f"{label} ([fonte]({age['sourceUrl']}))" if age.get("sourceUrl") else label
+
+
+def ticket_cell(item):
+    ticket = item["ticket"]
+    labels = {"online": "Ingressos on-line", "bilheteria": "Bilheteria local", "agendamento": "Agendamento obrigatório", "gratuito": "Entrada gratuita", "por_passeio": "Ingressos variam por passeio", "reserva_indeterminada": "Reserva não confirmada", "indeterminado": "Ingresso/agendamento não confirmado"}
+    label = labels[ticket["status"]]
+    return f"[{label}]({ticket['url']})" if ticket.get("url") else label
 
 
 def _valid_coordinates(lat, lon):
@@ -77,6 +115,7 @@ def validate(data):
         if not isinstance(stop["id"], str) or not stop["id"] or stop["id"] in ids:
             raise ValueError(f"routeStops[{index}].id must be unique and non-empty")
         ids.add(stop["id"])
+        validate_visit_rules(stop, f"routeStops[{index}]")
         if not isinstance(stop["name"], str) or not stop["name"].strip():
             raise ValueError(f"routeStops[{index}].name must be a non-empty string")
         if not isinstance(stop["kind"], str) or stop["kind"] not in STOP_KINDS:
@@ -110,6 +149,7 @@ def validate(data):
         if not isinstance(mapped_attractions, list):
             raise ValueError(f"routeStops[{index}].attractions must be a list")
         for attraction_index, attraction in enumerate(mapped_attractions):
+            validate_visit_rules(attraction, f"routeStops[{index}].attractions[{attraction_index}]")
             if not isinstance(attraction, dict):
                 raise ValueError(
                     f"routeStops[{index}].attractions[{attraction_index}] must be an object"
@@ -201,8 +241,10 @@ def render_markdown(data):
         "",
         data["intro"],
         "",
+        "A classificação é de cada passeio. **Livre** indica fonte oficial que admite crianças de 0 a 5 anos; **idade mínima** reproduz a regra publicada; **indeterminada** significa que não foi encontrada regra etária verificável. Paradas que agrupam passeios não herdam automaticamente a restrição de um deles. Links de ingresso aparecem somente quando existe uma página oficial identificada; os demais casos ficam marcados sem link confirmado.",
+        "",
         _row(HEADERS),
-        "|---|---|---|---|---|---|---:|---:|---|---|",
+        "|---|---|---|---|---|---|---:|---:|---|---|---|",
     ]
     for city in data["routeStops"]:
         if city["kind"] == "restaurante":
@@ -211,9 +253,14 @@ def render_markdown(data):
                 f"**{city['name']}**", city["address"],
                 f"**{dish['name']} (Boa Lembrança 2026)**",
                 f"{dish['description']} [Prato e imagem]({dish['url']})",
-                "—", "Restaurante / refeição", city["days"], "—", "A confirmar", "A confirmar",
+                "—", "Restaurante / refeição", city["days"], "—", age_cell(city), ticket_cell(city), "A confirmar",
             ]))
             continue
+        lines.append(_row([
+            f"**{city['name']}**", city.get("profile", ""), "**Parada / grupo**",
+            city.get("guideBriefing", ""), "—", "Parada de referência",
+            city["days"], "—", age_cell(city), ticket_cell(city), "—",
+        ]))
         detailed_index = 0
         for attraction in city.get("attractions", []):
             if "description" not in attraction:
@@ -227,7 +274,8 @@ def render_markdown(data):
                 attraction["visitType"],
                 attraction.get("estimatedDuration", attraction.get("days", "—")),
                 attraction["publishedDuration"],
-                attraction["oneYearOld"],
+                age_cell(attraction),
+                ticket_cell(attraction),
                 attraction["accessibility"],
             ]
             lines.append(_row(values))

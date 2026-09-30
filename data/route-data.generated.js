@@ -13,7 +13,13 @@ window.ROTEIRO_DATA = {
       "kid": "Organize a primeira perna com pausa planejada.",
       "url": "https://www.google.com/maps/search/?api=1&query=Mirassol+SP",
       "guideBriefing": "Mirassol é o ponto de partida paulista do circuito. Fundada no início do século XX durante a expansão agrícola e ferroviária do noroeste de São Paulo, marca o contraste entre uma região de ocupação mais recente e os núcleos mineiros formados nos ciclos do ouro e dos diamantes.",
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "indeterminado"
+      }
     },
     {
       "id": "canastra",
@@ -46,7 +52,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "—",
           "guideBriefing": "Grande queda do rio São Francisco despencando da borda da serra. É o cartão-postal do parque. É a atração natural mais reconhecida da Canastra.",
           "days": "meio dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Parque Nacional da Serra da Canastra",
@@ -62,7 +74,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.36583,
           "locationAccuracy": "city-center",
           "days": "1 dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Nascente histórica do São Francisco",
@@ -78,7 +96,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.446873,
           "locationAccuracy": "exact",
           "days": "1 h + deslocamento",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Queijarias de Canastra",
@@ -94,12 +118,24 @@ window.ROTEIRO_DATA = {
           "lon": -46.36583,
           "locationAccuracy": "city-center",
           "days": "2 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "A Serra da Canastra é um grande chapadão do sudoeste mineiro, protegido em parte pelo Parque Nacional criado em 1972. A região está ligada às cabeceiras do rio São Francisco, ao Cerrado e aos campos de altitude, à pecuária tradicional e ao queijo artesanal da Canastra. A visita combina geografia, conservação ambiental e uma cultura rural moldada pelo isolamento das serras.",
       "profile": "Parque nacional · cachoeiras · gastronomia",
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "capitolio",
@@ -122,7 +158,13 @@ window.ROTEIRO_DATA = {
           "lat": -20.6461,
           "lon": -46.26575,
           "locationAccuracy": "exact",
-          "relevanceSource": "guide"
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Cânions de Furnas",
@@ -138,7 +180,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.04884,
           "locationAccuracy": "city-center",
           "days": "meio dia ou dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Passeio pelo Lago de Furnas",
@@ -154,7 +202,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.04884,
           "locationAccuracy": "city-center",
           "days": "4 h / dia inteiro",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Mirantes dos cânions",
@@ -170,7 +224,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.04884,
           "locationAccuracy": "city-center",
           "days": "2 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Cachoeiras",
@@ -186,12 +246,24 @@ window.ROTEIRO_DATA = {
           "lon": -46.04884,
           "locationAccuracy": "city-center",
           "days": "meio dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Capitólio mudou profundamente com a formação do reservatório de Furnas, no início da década de 1960. A água inundou vales e criou a paisagem de braços de lago entre paredões rochosos que hoje caracteriza a região. O interesse histórico e geográfico está justamente nessa transformação: uma obra de geração de energia produziu uma nova paisagem e reorganizou a economia local em torno do turismo.",
       "profile": "Cânions · água · natureza",
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "congonhas",
@@ -222,7 +294,13 @@ window.ROTEIRO_DATA = {
           "lat": -20.50753,
           "lon": -43.86053,
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Doze Profetas",
@@ -238,7 +316,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.860643,
           "locationAccuracy": "exact",
           "days": "40 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Passos da Paixão / Via Crucis",
@@ -254,7 +338,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.860643,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Sala dos Milagres / ex-votos",
@@ -270,7 +360,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.860643,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu de Congonhas",
@@ -286,12 +382,24 @@ window.ROTEIRO_DATA = {
           "lon": -43.861204,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Congonhas cresceu no contexto da mineração setecentista e tornou-se um dos grandes centros de peregrinação de Minas. No Santuário do Bom Jesus de Matosinhos, construído a partir do século XVIII, arquitetura, devoção e a obra de Aleijadinho formam um conjunto único. Os Profetas em pedra-sabão e os Passos da Paixão permitem compreender o barroco mineiro como narrativa religiosa e experiência espacial, não apenas como decoração.",
       "profile": "Aleijadinho · arte sacra · história",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "ouropreto",
@@ -325,7 +433,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.503686,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu da Inconfidência",
@@ -341,7 +455,14 @@ window.ROTEIRO_DATA = {
           "lon": -43.5036894,
           "locationAccuracy": "exact",
           "days": "1h30",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "gratuito",
+            "url": "https://www.gov.br/museus/pt-br/museus-ibram/museu-da-inconfidencia"
+          }
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -357,7 +478,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.5029,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Basílica de Nossa Senhora do Pilar",
@@ -373,7 +500,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.508,
           "locationAccuracy": "exact",
           "days": "40 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -389,7 +522,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.50424,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Rosário",
@@ -405,7 +544,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.50981,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Teatro Municipal / Casa da Ópera",
@@ -421,7 +566,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.504947,
           "locationAccuracy": "exact",
           "days": "40 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Mina de ouro visitável",
@@ -437,7 +588,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.50362,
           "locationAccuracy": "city-center",
           "days": "1h30",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Rua Direita e casario colonial",
@@ -454,7 +611,13 @@ window.ROTEIRO_DATA = {
           "locationAccuracy": "street-center",
           "days": "1 h",
           "relevanceSource": "agency",
-          "mapQuery": "Rua Conde de Bobadela (Rua Direita), Ouro Preto MG"
+          "mapQuery": "Rua Conde de Bobadela (Rua Direita), Ouro Preto MG",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Casa dos Contos",
@@ -470,7 +633,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.506206,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Feira de Pedra-Sabão",
@@ -486,7 +655,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.502794,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu de Mineralogia / Museu de Ciência e Técnica",
@@ -502,7 +677,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.50366,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora da Conceição",
@@ -519,7 +700,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Templo histórico incluído em roteiro comercial do Circuito do Ouro.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu Aleijadinho",
@@ -536,7 +723,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Museu dedicado à obra e ao contexto de Aleijadinho.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu do Oratório",
@@ -553,10 +746,23 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Museu dedicado à tradição dos oratórios brasileiros.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "bilheteria",
+            "url": "https://museudooratorio.org.br/visite/planeje-sua-visita/"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "mariana",
@@ -587,7 +793,13 @@ window.ROTEIRO_DATA = {
           "lat": -20.37812,
           "lon": -43.41813,
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Catedral da Sé",
@@ -603,7 +815,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.416413,
           "locationAccuracy": "exact",
           "days": "40 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -619,7 +837,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.418028,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -635,7 +859,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.418098,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Casa de Câmara e Cadeia",
@@ -651,7 +881,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.417849,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Mina da Passagem",
@@ -667,7 +903,16 @@ window.ROTEIRO_DATA = {
           "lon": -43.438774,
           "locationAccuracy": "exact",
           "days": "1h15",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "livre",
+            "sourceUrl": "https://mariana.minasdapassagem.com.br/visitacao/",
+            "note": "Crianças de até 5 anos entram gratuitamente, acompanhadas de responsável."
+          },
+          "ticket": {
+            "status": "bilheteria",
+            "url": "https://mariana.minasdapassagem.com.br/visitacao/"
+          }
         },
         {
           "name": "Rua Direita e casario",
@@ -684,7 +929,13 @@ window.ROTEIRO_DATA = {
           "locationAccuracy": "street-center",
           "days": "1 h",
           "relevanceSource": "agency",
-          "mapQuery": "Rua Direita, Centro Histórico, Mariana MG"
+          "mapQuery": "Rua Direita, Centro Histórico, Mariana MG",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Órgão Arp Schnitger",
@@ -701,7 +952,13 @@ window.ROTEIRO_DATA = {
           "locationAccuracy": "exact",
           "days": "1 h",
           "relevanceSource": "agency",
-          "sameSiteAs": "Catedral da Sé"
+          "sameSiteAs": "Catedral da Sé",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja de São Pedro dos Clérigos",
@@ -717,7 +974,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.418777,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Rosário dos Pretos",
@@ -734,7 +997,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Igreja histórica de Mariana incluída em roteiro comercial.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu Arquidiocesano de Arte Sacra",
@@ -751,7 +1020,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Museu com acervo ligado à arte sacra mineira, incluído em roteiro comercial.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Pelourinho de Mariana",
@@ -768,12 +1043,24 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Marco urbano do conjunto histórico de Mariana incluído em roteiro comercial.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Mariana surgiu no início da ocupação mineradora e foi a primeira vila, a primeira cidade e a primeira capital de Minas Gerais. Também se tornou sede do primeiro bispado da capitania. Seu traçado, igrejas, Câmara e Cadeia e antigas áreas de mineração ajudam a compreender como poder civil, Igreja e economia do ouro organizaram os primeiros centros urbanos mineiros.",
       "profile": "História · barroco · mineração",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "cipo",
@@ -791,7 +1078,13 @@ window.ROTEIRO_DATA = {
       "kid": "Muitas atrações envolvem trilha, terreno irregular ou água; escolha apenas após checar acesso e estrutura.",
       "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/cerrado/lista-de-ucs/parna-da-serra-do-cipo",
       "guideBriefing": "A Serra do Cipó integra a Serra do Espinhaço, cadeia montanhosa que condicionou caminhos, rios, biodiversidade e ocupação humana no centro de Minas. A região reúne campos rupestres, cânions e cachoeiras e foi atravessada por antigas rotas entre a área mineradora e o norte da capitania. O parque nacional protege uma das áreas de maior diversidade botânica do Espinhaço.",
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "indeterminado"
+      }
     },
     {
       "id": "tabuleiro",
@@ -817,14 +1110,22 @@ window.ROTEIRO_DATA = {
           "visitType": "Trilha / natureza",
           "estimatedDuration": "1 h mirante / 4 h parte baixa",
           "publishedDuration": "Mirante: 15–30 min de caminhada; parte baixa: ~3 h de passeio",
-          "oneYearOld": "Não — acesso aos atrativos tem restrição para crianças até 10 anos",
+          "oneYearOld": "A confirmar",
           "accessibility": "Não/restrito para dificuldade de mobilidade; norma cita idosos e PCD",
           "guideBriefing": "Queda monumental despencando de um paredão da Serra do Espinhaço. A escala da formação rochosa é o principal motivo da visita. Tabuleiro é incluída porque oferece uma mudança de escala: sai-se do patrimônio construído para uma paisagem monumental do Espinhaço. Pode justificar uma etapa inteira do roteiro.",
           "lat": -19.08936,
           "lon": -43.55158,
           "locationAccuracy": "exact",
           "days": "1 h mirante / 4 h parte baixa",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "bilheteria",
+            "url": "https://www.turismo.cmd.mg.gov.br/turismo/cachoeira-do-tabuleiro/17",
+            "note": "Taxa de visitação informada pela prefeitura; confirme valor e acesso atual."
+          }
         },
         {
           "name": "Centro histórico",
@@ -840,7 +1141,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.42528,
           "locationAccuracy": "city-center",
           "days": "1h30",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Serra do Espinhaço",
@@ -856,7 +1163,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.42528,
           "locationAccuracy": "city-center",
           "days": "meio dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Matriz de Nossa Senhora da Conceição",
@@ -873,10 +1186,22 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Matriz histórica de Conceição do Mato Dentro incluída em roteiro comercial Diamantina–BH.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "serro",
@@ -910,7 +1235,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.37945,
           "locationAccuracy": "city-center",
           "days": "2–3 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igrejas coloniais",
@@ -926,7 +1257,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.37945,
           "locationAccuracy": "city-center",
           "days": "1h30",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Queijo do Serro",
@@ -942,7 +1279,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.37945,
           "locationAccuracy": "city-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Cachoeira da Grota Seca",
@@ -960,7 +1303,13 @@ window.ROTEIRO_DATA = {
           "guideBriefing": "Cachoeira do Serro incluída em passeio comercial da Estrada Real.",
           "days": "—",
           "relevanceSource": "agency",
-          "mapQuery": "Cachoeira da Grota Seca, São Gonçalo do Rio das Pedras, Serro MG"
+          "mapQuery": "Cachoeira da Grota Seca, São Gonçalo do Rio das Pedras, Serro MG",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Cachoeira do Carijó",
@@ -977,7 +1326,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Cachoeira do Serro incluída em passeio comercial da Estrada Real.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Casa dos Ottoni",
@@ -994,7 +1349,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Casarão histórico incluído no city tour comercial do Serro.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Chácara do Barão",
@@ -1011,7 +1372,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Conjunto histórico incluído no city tour comercial do Serro.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja de Santa Rita",
@@ -1028,7 +1395,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Templo histórico incluído no roteiro comercial do Serro.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -1045,7 +1418,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Igreja histórica incluída no roteiro comercial do Serro.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Rosário",
@@ -1062,7 +1441,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Igreja histórica incluída no roteiro comercial do Serro.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Fazenda produtora de Queijo do Serro",
@@ -1079,10 +1464,22 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Experiência rural ligada ao modo tradicional de produção do Queijo do Serro.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "milhoverde",
@@ -1116,7 +1513,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.4985745087,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Núcleo histórico",
@@ -1132,7 +1535,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.49798,
           "locationAccuracy": "city-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Cachoeiras",
@@ -1148,10 +1557,22 @@ window.ROTEIRO_DATA = {
           "lon": -43.49798,
           "locationAccuracy": "city-center",
           "days": "meio dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "saogoncalo",
@@ -1174,7 +1595,13 @@ window.ROTEIRO_DATA = {
           "lat": -18.41676,
           "lon": -43.49807,
           "locationAccuracy": "exact",
-          "relevanceSource": "guide"
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Núcleo histórico",
@@ -1190,7 +1617,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.49561,
           "locationAccuracy": "city-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igrejas e capelas",
@@ -1206,7 +1639,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.49561,
           "locationAccuracy": "city-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Cachoeiras e Serra do Espinhaço",
@@ -1222,12 +1661,24 @@ window.ROTEIRO_DATA = {
           "lon": -43.49561,
           "locationAccuracy": "city-center",
           "days": "meio dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "São Gonçalo do Rio das Pedras já possuía casas, roças e engenhos no início do século XVIII. Situado entre Serro e a região diamantífera, viveu sob a vigilância da Coroa sobre os caminhos e o garimpo de diamantes. O povoado preserva a escala e a paisagem dos pequenos núcleos que davam apoio à circulação colonial na Serra do Espinhaço.",
       "profile": "Vila histórica · natureza",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "diamantina",
@@ -1261,7 +1712,13 @@ window.ROTEIRO_DATA = {
           "lat": -18.244848,
           "lon": -43.600277,
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Centro Histórico",
@@ -1277,7 +1734,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.60065,
           "locationAccuracy": "city-center",
           "days": "2–3 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Casa da Glória e Passadiço da Glória",
@@ -1309,7 +1772,13 @@ window.ROTEIRO_DATA = {
               "label": "Casa da Glória · Prefeitura",
               "url": "https://www.diamantina.mg.gov.br/portal/turismo/0/9/724/casa-da-gloria"
             }
-          ]
+          ],
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Casa de Chica da Silva",
@@ -1325,7 +1794,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.5967904,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -1341,7 +1816,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.5985499,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Rua da Quitanda",
@@ -1357,7 +1838,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.5967276,
           "locationAccuracy": "street-center",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Vesperata",
@@ -1377,7 +1864,14 @@ window.ROTEIRO_DATA = {
           "locationAccuracy": "street-center",
           "days": "2–3 h",
           "relevanceSource": "agency",
-          "mapQuery": "Rua da Quitanda, Centro Histórico, Diamantina MG"
+          "mapQuery": "Rua da Quitanda, Centro Histórico, Diamantina MG",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "online",
+            "url": "https://bileto.sympla.com.br/event/117032?share_id=1-copiarlink"
+          }
         },
         {
           "name": "Caminho dos Escravos",
@@ -1395,7 +1889,13 @@ window.ROTEIRO_DATA = {
           "guideBriefing": "Trecho histórico associado às rotas coloniais e à mineração na Serra dos Cristais.",
           "days": "—",
           "relevanceSource": "agency",
-          "mapQuery": "Caminho dos Escravos, acesso BR-367 Rua Salto da Divisa, Diamantina MG"
+          "mapQuery": "Caminho dos Escravos, acesso BR-367 Rua Salto da Divisa, Diamantina MG",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Casa do Muxarabiê",
@@ -1412,7 +1912,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Casarão histórico de Diamantina conhecido pelo muxarabiê.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Catedral Metropolitana de Santo Antônio",
@@ -1429,7 +1935,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Principal templo católico do centro de Diamantina.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -1446,7 +1958,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Igreja histórica do antigo Arraial do Tijuco.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Garimpo Real",
@@ -1463,7 +1981,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Experiência de garimpo artesanal ligada à história dos diamantes.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja das Mercês",
@@ -1480,7 +2004,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Templo histórico ligado à Irmandade de Nossa Senhora das Mercês.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Rosário",
@@ -1497,7 +2027,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Igreja histórica ligada à irmandade de negros.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Prédio da Prefeitura / Antiga Casa da Intendência",
@@ -1514,7 +2050,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Edifício associado à administração histórica do Distrito Diamantino.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Cruzeiro da Serra",
@@ -1531,7 +2073,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Ponto panorâmico na Serra dos Cristais.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Cachoeira da Sentinela",
@@ -1548,12 +2096,24 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Cachoeira incluída em roteiros turísticos de Diamantina.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Diamantina, antigo Arraial do Tijuco, desenvolveu-se com a descoberta e o controle dos diamantes no século XVIII. A Coroa portuguesa criou uma administração especialmente rígida para a região, deixando marcas na organização social e urbana. O centro histórico, a memória de Chica da Silva, a tradição musical e a trajetória de Juscelino Kubitschek revelam diferentes períodos de uma cidade cuja identidade ultrapassou o ciclo diamantífero.",
       "profile": "História · cultura · música",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "biribiri",
@@ -1586,7 +2146,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.61966,
           "locationAccuracy": "city-center",
           "days": "2 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Cachoeiras",
@@ -1602,7 +2168,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.61966,
           "locationAccuracy": "city-center",
           "days": "meio dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Trilhas do Parque Estadual do Biribiri",
@@ -1618,10 +2190,22 @@ window.ROTEIRO_DATA = {
           "lon": -43.61966,
           "locationAccuracy": "city-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "peruacu",
@@ -1639,7 +2223,13 @@ window.ROTEIRO_DATA = {
       "kid": "Visitas podem exigir reserva, guia e caminhada; avaliar como extensão separada, não como parada simples com bebês.",
       "url": "https://whc.unesco.org/en/list/1747",
       "guideBriefing": "O vale do Peruaçu reúne uma história humana muito anterior às cidades coloniais do roteiro. Cavernas, abrigos e paredões guardam pinturas rupestres e vestígios de ocupações indígenas de milhares de anos, enquanto o relevo cárstico criou grandes cavernas e cânions. O conjunto permite observar, no mesmo território, arqueologia, geologia e a longa ocupação humana do norte de Minas.",
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "indeterminado"
+      }
     },
     {
       "id": "delfinopolis",
@@ -1656,7 +2246,13 @@ window.ROTEIRO_DATA = {
       "kid": "Com bebês, confirme operação, filas e embarque antes de escolher esse caminho. Não confundir essa travessia com o acesso urbano a Capitólio.",
       "url": "https://www.google.com/maps/search/?api=1&query=Balsa+Cassia+Delfinopolis",
       "guideBriefing": "Delfinópolis ocupa a borda sudoeste da Serra da Canastra, entre serras, rios e antigas áreas rurais. A construção da represa de Peixoto, hoje Mascarenhas de Moraes, alterou acessos e paisagens e tornou a travessia por balsa uma característica local. A região funciona como outra porta de entrada para a Canastra e para seus vales e cachoeiras.",
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "indeterminado"
+      }
     },
     {
       "id": "cordisburgo",
@@ -1682,14 +2278,25 @@ window.ROTEIRO_DATA = {
           "visitType": "Gruta / visita monitorada",
           "estimatedDuration": "1h30",
           "publishedDuration": "60 min",
-          "oneYearOld": "Com ressalvas",
+          "oneYearOld": "Não — idade mínima 4 anos",
           "accessibility": "Com ressalvas — percurso em gruta exige caminhada; confirmar condições individuais",
           "guideBriefing": "Grande caverna calcária com salões, estalactites e estalagmites. Foi explorada cientificamente por Peter Lund no século XIX e está ligada ao nascimento da paleontologia brasileira. Roteiros organizados que ligam Diamantina a Belo Horizonte aproveitam Cordisburgo para transformar um dia de deslocamento em dia de visita. Maquiné acrescenta geologia, ciência e uma atração de grande escala sem exigir outro destino distante.",
           "lat": -19.1251,
           "lon": -44.35217,
           "locationAccuracy": "exact",
           "days": "1h30",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "idade_minima",
+            "sourceUrl": "https://ingressos.urbanesparques.com.br/unit/4212/gruta-do-maquine/",
+            "note": "Visita à gruta exige idade mínima de 4 anos.",
+            "minimumAge": 4
+          },
+          "ticket": {
+            "status": "online",
+            "url": "https://ingressos.urbanesparques.com.br/unit/4212/gruta-do-maquine/",
+            "note": "Compra on-line com pelo menos 48 h de antecedência, segundo a bilheteria oficial."
+          }
         },
         {
           "name": "Museu Casa Guimarães Rosa",
@@ -1705,7 +2312,14 @@ window.ROTEIRO_DATA = {
           "lon": -44.322836,
           "locationAccuracy": "exact",
           "days": "1h30–2 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "gratuito",
+            "url": "https://www.mg.gov.br/servico/visitar-o-museu-casa-guimaraes-rosa"
+          }
         },
         {
           "name": "Portal Grande Sertão",
@@ -1722,7 +2336,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Espaço cultural dedicado ao universo de Guimarães Rosa e ao sertão mineiro.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Casa Elefante",
@@ -1739,10 +2359,22 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Construção escultórica incluída em roteiro cultural de agência em Cordisburgo.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "belohorizonte",
@@ -1776,7 +2408,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.973611,
           "locationAccuracy": "exact",
           "days": "meio dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Praça da Liberdade",
@@ -1792,7 +2430,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.938064,
           "locationAccuracy": "exact",
           "days": "1–3 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Mercado Central",
@@ -1808,10 +2452,22 @@ window.ROTEIRO_DATA = {
           "lon": -43.94302,
           "locationAccuracy": "exact",
           "days": "1h30–2 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "brumadinho",
@@ -1843,10 +2499,25 @@ window.ROTEIRO_DATA = {
           "lon": -44.221551,
           "locationAccuracy": "exact",
           "days": "1 dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "livre",
+            "sourceUrl": "https://www.inhotim.org.br/visite/ingressos/inhotim_gratuito/",
+            "note": "Crianças de 0 a 5 anos entram gratuitamente, acompanhadas de responsável e com documento."
+          },
+          "ticket": {
+            "status": "online",
+            "url": "https://www.inhotim.org.br/visite/ingressos/"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "saojoaodelrei",
@@ -1883,7 +2554,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.258809,
           "locationAccuracy": "city-center",
           "days": "2–3 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -1899,7 +2576,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.260274,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igrejas e tradição musical",
@@ -1915,7 +2598,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.258809,
           "locationAccuracy": "city-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Estação da Estrada de Ferro Oeste de Minas",
@@ -1931,7 +2620,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.263584,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Maria Fumaça São João del-Rei–Tiradentes",
@@ -1947,7 +2642,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.263584,
           "locationAccuracy": "exact",
           "days": "1h15 só ida",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Artesanato em estanho",
@@ -1963,7 +2664,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.258809,
           "locationAccuracy": "city-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Ponte da Cadeia",
@@ -1979,7 +2686,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.259123,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Teatro Municipal",
@@ -1995,7 +2708,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.258771,
           "locationAccuracy": "exact",
           "days": "40 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu Regional",
@@ -2011,7 +2730,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.26123380661011,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Memorial Tancredo Neves",
@@ -2027,7 +2752,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.262308,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Solares dos Neves e dos Lustosa (Largo do Rosário)",
@@ -2044,7 +2775,13 @@ window.ROTEIRO_DATA = {
           "locationAccuracy": "street-center",
           "days": "1 h",
           "relevanceSource": "agency",
-          "mapQuery": "Largo do Rosário São João del-Rei MG"
+          "mapQuery": "Largo do Rosário São João del-Rei MG",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu da FEB",
@@ -2060,7 +2797,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.259016,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -2076,7 +2819,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.260836,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Catedral Basílica Nossa Senhora do Pilar",
@@ -2092,7 +2841,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.261786,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Casa de Bárbara Heliodora",
@@ -2108,7 +2863,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.260962,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Rosário",
@@ -2125,7 +2886,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Igreja histórica citada em city tour de agência.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Beco do Cotovelo",
@@ -2142,7 +2909,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Passagem tradicional do centro histórico incluída em roteiro de agência.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Largo da Cruz",
@@ -2159,10 +2932,22 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Espaço urbano histórico incluído em circuito panorâmico de agência.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "tiradentes",
@@ -2199,7 +2984,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.174294,
           "locationAccuracy": "city-center",
           "days": "2–3 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Matriz de Santo Antônio",
@@ -2215,7 +3006,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.178145,
           "locationAccuracy": "exact",
           "days": "45 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Chafariz de São José",
@@ -2231,7 +3028,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.176274,
           "locationAccuracy": "exact",
           "days": "20 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu Casa Padre Toledo",
@@ -2247,7 +3050,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.177223,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Serra de São José",
@@ -2263,7 +3072,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.174294,
           "locationAccuracy": "city-center",
           "days": "meio dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Gastronomia",
@@ -2279,7 +3094,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.174294,
           "locationAccuracy": "city-center",
           "days": "2 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Largo das Forras",
@@ -2295,7 +3116,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.173649,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Rua Direita",
@@ -2311,7 +3138,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.1762681,
           "locationAccuracy": "street-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu de Sant'Ana",
@@ -2327,7 +3160,14 @@ window.ROTEIRO_DATA = {
           "lon": -44.1764425,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "bilheteria",
+            "url": "https://museudesantana.org.br/visite/planeje-sua-visita/"
+          }
         },
         {
           "name": "Museu da Liturgia",
@@ -2343,7 +3183,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.1774604,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Rosário dos Pretos",
@@ -2359,10 +3205,22 @@ window.ROTEIRO_DATA = {
           "lon": -44.1767476,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "bichinho",
@@ -2397,7 +3255,13 @@ window.ROTEIRO_DATA = {
           "locationAccuracy": "exact",
           "days": "1 h",
           "relevanceSource": "agency",
-          "mapQuery": "Oficina de Agosto, Rua São Bento 668, Bichinho, Prados MG"
+          "mapQuery": "Oficina de Agosto, Rua São Bento 668, Bichinho, Prados MG",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Ateliês e oficinas",
@@ -2413,7 +3277,13 @@ window.ROTEIRO_DATA = {
           "lon": -44.117586,
           "locationAccuracy": "city-center",
           "days": "1h30–2 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Cachaçarias e produtos locais",
@@ -2429,10 +3299,22 @@ window.ROTEIRO_DATA = {
           "lon": -44.117586,
           "locationAccuracy": "city-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "curralinho",
@@ -2465,7 +3347,14 @@ window.ROTEIRO_DATA = {
           "lon": -43.53615,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "agendamento",
+            "url": "https://www.diamantina.mg.gov.br/portal/turismo/0/9/738/gruta-do-salitre"
+          }
         },
         {
           "name": "Experiência de garimpo",
@@ -2481,10 +3370,22 @@ window.ROTEIRO_DATA = {
           "lon": -43.523591,
           "locationAccuracy": "city-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "catasaltas",
@@ -2518,7 +3419,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.408165,
           "locationAccuracy": "city-center",
           "days": "2–3 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Matriz de Nossa Senhora da Conceição",
@@ -2534,7 +3441,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.408285,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Serra do Caraça",
@@ -2550,10 +3463,22 @@ window.ROTEIRO_DATA = {
           "lon": -43.408165,
           "locationAccuracy": "city-center",
           "days": "meio dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "santabarbara",
@@ -2586,7 +3511,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.41726,
           "locationAccuracy": "exact",
           "days": "45 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Centro Histórico",
@@ -2602,10 +3533,22 @@ window.ROTEIRO_DATA = {
           "lon": -43.413154,
           "locationAccuracy": "city-center",
           "days": "2–3 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "caraca",
@@ -2640,7 +3583,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.48842,
           "locationAccuracy": "exact",
           "days": "2 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Ruínas do antigo colégio",
@@ -2656,7 +3605,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.48842,
           "locationAccuracy": "exact",
           "days": "40 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Trilhas, cachoeiras e grutas",
@@ -2672,7 +3627,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.487693,
           "locationAccuracy": "city-center",
           "days": "meio dia",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Observação do lobo-guará",
@@ -2688,10 +3649,22 @@ window.ROTEIRO_DATA = {
           "lon": -43.48842,
           "locationAccuracy": "exact",
           "days": "noite / requer pernoite",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "sabara",
@@ -2728,7 +3701,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.796257,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -2744,7 +3723,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.806539,
           "locationAccuracy": "exact",
           "days": "30 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Matriz Nossa Senhora da Conceição",
@@ -2760,7 +3745,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.799944,
           "locationAccuracy": "exact",
           "days": "45 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Teatro Municipal",
@@ -2776,7 +3767,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.810676,
           "locationAccuracy": "exact",
           "days": "40 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Solar do Padre Correia",
@@ -2792,7 +3789,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.810985,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja Nossa Senhora do Rosário dos Pretos",
@@ -2808,7 +3811,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.810838,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Chafariz do Kaquende",
@@ -2824,7 +3833,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.812866,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Rua Dom Pedro II",
@@ -2840,10 +3855,22 @@ window.ROTEIRO_DATA = {
           "lon": -43.8110473,
           "locationAccuracy": "street-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "caete",
@@ -2876,7 +3903,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.675617,
           "locationAccuracy": "exact",
           "days": "2 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Santuário Nossa Senhora da Piedade",
@@ -2892,10 +3925,22 @@ window.ROTEIRO_DATA = {
           "lon": -43.675617,
           "locationAccuracy": "exact",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "peiro",
@@ -2926,7 +3971,13 @@ window.ROTEIRO_DATA = {
           "lon": -47.7424457,
           "days": "1–2 h",
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Geossítio de Peirópolis",
@@ -2943,12 +3994,24 @@ window.ROTEIRO_DATA = {
           "days": "30–60 min",
           "type": "natureza",
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Peirópolis, distrito rural de Uberaba, tornou-se referência paleontológica a partir das pesquisas iniciadas na região na década de 1940. As rochas do Triângulo Mineiro preservaram fósseis do Cretáceo, incluindo dinossauros e outros animais. O antigo núcleo ferroviário passou a abrigar pesquisa, museu e educação científica, aproximando o visitante do território onde os fósseis são encontrados e estudados.",
       "profile": "Paleontologia, geologia e história científica",
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "araxa",
@@ -2984,7 +4047,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.9498159,
           "days": "2 h",
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Complexo do Barreiro",
@@ -3000,7 +4069,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.954839,
           "days": "2 h",
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu Dona Beja",
@@ -3016,7 +4091,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.9380426,
           "days": "1 h",
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Museu Calmon Barreto / Memorial de Araxá",
@@ -3032,7 +4113,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.9426564,
           "days": "30–60 min",
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Igreja de São Domingos",
@@ -3048,7 +4135,13 @@ window.ROTEIRO_DATA = {
           "lon": -46.9409702,
           "days": "20–30 min",
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Parque do Cristo",
@@ -3065,7 +4158,13 @@ window.ROTEIRO_DATA = {
           "days": "30–60 min",
           "type": "natureza",
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Fontes Dona Beja e Andrade Júnior",
@@ -3082,12 +4181,24 @@ window.ROTEIRO_DATA = {
           "days": "20–40 min",
           "type": "natureza",
           "locationAccuracy": "exact",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Araxá se desenvolveu em torno de atividades rurais e das águas minerais do Barreiro, conhecidas muito antes da consolidação do turismo termal. No século XX, o Estado transformou essas águas em projeto turístico de grande escala, culminando no Grande Hotel e nas Termas, inaugurados na década de 1940. A cidade permite relacionar história regional, termalismo, arquitetura e a construção de uma estância de luxo no interior do país.",
       "profile": "Termalismo · arquitetura · história",
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "itabirito",
@@ -3120,7 +4231,13 @@ window.ROTEIRO_DATA = {
           "lon": -43.802917,
           "locationAccuracy": "city-center",
           "days": "2 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Pastel de angu",
@@ -3136,10 +4253,22 @@ window.ROTEIRO_DATA = {
           "lon": -43.802917,
           "locationAccuracy": "city-center",
           "days": "45 min",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "amarantina",
@@ -3171,10 +4300,22 @@ window.ROTEIRO_DATA = {
           "lon": -43.710354,
           "locationAccuracy": "city-center",
           "days": "1 h",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
-      "relevanceSource": "guide"
+      "relevanceSource": "guide",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "ourobranco",
@@ -3206,7 +4347,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Igreja matriz histórica de Ouro Branco destacada em roteiro comercial do Circuito do Ouro.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Capela Nossa Senhora Mãe dos Homens",
@@ -3223,12 +4370,24 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Capela histórica de Ouro Branco citada pela Primotur entre os atrativos da cidade.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Ouro Branco integra o Circuito do Ouro entre Congonhas e Ouro Preto e aparece em roteiro comercial da Primotur.",
       "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "setelagoas",
@@ -3261,7 +4420,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Mirante e área serrana usada como parada de pôr do sol por roteiro comercial.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Memorial do Humorista Zacarias",
@@ -3279,7 +4444,13 @@ window.ROTEIRO_DATA = {
           "guideBriefing": "Espaço de memória dedicado ao humorista Zacarias, visitado em roteiro de agência.",
           "days": "—",
           "relevanceSource": "agency",
-          "mapQuery": "Memorial Trapalhão Zacarias, Praça Tiradentes 257, Sete Lagoas MG"
+          "mapQuery": "Memorial Trapalhão Zacarias, Praça Tiradentes 257, Sete Lagoas MG",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Monumento Natural Estadual Gruta Rei do Mato",
@@ -3292,16 +4463,33 @@ window.ROTEIRO_DATA = {
           "visitType": "Natureza / geologia",
           "estimatedDuration": "—",
           "publishedDuration": "—",
-          "oneYearOld": "A confirmar",
+          "oneYearOld": "Não — idade mínima 6 anos",
           "accessibility": "A confirmar",
           "guideBriefing": "Gruta calcária de Sete Lagoas incluída entre atrações de roteiro comercial.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "idade_minima",
+            "sourceUrl": "https://ingressos.urbanesparques.com.br/unit/4213/gruta-rei-do-mato/",
+            "note": "Menores de 6 anos não podem subir à gruta, inclusive bebês no colo ou canguru.",
+            "minimumAge": 6
+          },
+          "ticket": {
+            "status": "online",
+            "url": "https://ingressos.urbanesparques.com.br/unit/4213/gruta-rei-do-mato/",
+            "note": "Compra on-line com pelo menos 48 h de antecedência, segundo a bilheteria oficial."
+          }
         }
       ],
       "guideBriefing": "Sete Lagoas aparece em roteiro comercial ligado à Vesperata de Diamantina, com paradas culturais, geológicas e panorâmicas.",
       "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "mendanha",
@@ -3332,12 +4520,24 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Parada cultural no distrito de Mendanha incluída em roteiro de agência.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Distrito histórico visitado por agência em roteiro de Diamantina, com artesanato e ligação aos antigos caminhos regionais.",
       "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "vau",
@@ -3368,12 +4568,24 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Antigo ponto de travessia do Rio Jequitinhonha no Caminho dos Diamantes.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Povoado histórico no Caminho dos Diamantes, usado como parada em roteiro comercial entre Diamantina e Serro.",
       "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "presidentekubitschek",
@@ -3404,12 +4616,24 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Cânion na zona rural de Presidente Kubitschek explorado em passeio comercial a partir de Diamantina.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Município usado como acesso ao Cânion do Funil em passeio comercializado a partir de Diamantina.",
       "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "ipoema",
@@ -3441,12 +4665,24 @@ window.ROTEIRO_DATA = {
           "guideBriefing": "Museu dedicado à cultura tropeira e às rotas de circulação do interior mineiro.",
           "days": "—",
           "relevanceSource": "agency",
-          "mapQuery": "Museu do Tropeiro, Travessa Professor Manoel Soares 217, Ipoema MG"
+          "mapQuery": "Museu do Tropeiro, Travessa Professor Manoel Soares 217, Ipoema MG",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Distrito ligado à cultura tropeira e incluído em roteiro comercial da Estrada Real entre Diamantina e Belo Horizonte.",
       "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "itambemato",
@@ -3464,7 +4700,13 @@ window.ROTEIRO_DATA = {
       "attractions": [],
       "guideBriefing": "Município incluído no corredor comercial da Estrada Real entre Diamantina e Belo Horizonte.",
       "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "indeterminado"
+      }
     },
     {
       "id": "raposos",
@@ -3495,12 +4737,24 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Passagem pelo município no roteiro de cicloviagem comercializado pela Primotur.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Raposos integra o roteiro comercial Entre Trilhas, Sabores e Aromas da Primotur, no antigo corredor ferroviário e do Rio das Velhas entre Sabará e Rio Acima.",
       "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "novalima",
@@ -3532,7 +4786,13 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Distrito de Nova Lima atravessado pelo roteiro comercial ao longo do Rio das Velhas.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         },
         {
           "name": "Antigo leito da Ferrovia do Sabarabuçu",
@@ -3549,12 +4809,24 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Trecho ferroviário desativado usado como eixo do roteiro entre Sabará, Raposos e Rio Acima.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Nova Lima aparece no roteiro comercial Entre Trilhas, Sabores e Aromas por meio de Honório Bicalho, antigo núcleo ferroviário às margens do Rio das Velhas.",
       "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "rioacima",
@@ -3586,12 +4858,24 @@ window.ROTEIRO_DATA = {
           "accessibility": "A confirmar",
           "guideBriefing": "Parada com pernoite no roteiro comercial Entre Trilhas, Sabores e Aromas.",
           "days": "—",
-          "relevanceSource": "agency"
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          }
         }
       ],
       "guideBriefing": "Rio Acima é parada e pernoite do roteiro comercial Entre Trilhas, Sabores e Aromas, conectando o corredor do Rio das Velhas a Itabirito.",
       "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency"
+      "relevanceSource": "agency",
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "por_passeio"
+      }
     },
     {
       "id": "boa-casa-do-rei-bistro",
@@ -3617,7 +4901,13 @@ window.ROTEIRO_DATA = {
         "image": "assets/dishes/2026/casa-do-rei-bistro.png",
         "credit": "Associação dos Restaurantes da Boa Lembrança"
       },
-      "attractions": []
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "reserva_indeterminada"
+      }
     },
     {
       "id": "boa-dartagnan",
@@ -3643,7 +4933,13 @@ window.ROTEIRO_DATA = {
         "image": "assets/dishes/2026/dartagnan.png",
         "credit": "Associação dos Restaurantes da Boa Lembrança"
       },
-      "attractions": []
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "reserva_indeterminada"
+      }
     },
     {
       "id": "boa-divinorestaurante",
@@ -3669,7 +4965,13 @@ window.ROTEIRO_DATA = {
         "image": "assets/dishes/2026/divinorestaurante.png",
         "credit": "Associação dos Restaurantes da Boa Lembrança"
       },
-      "attractions": []
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "reserva_indeterminada"
+      }
     },
     {
       "id": "boa-domenico-pizzeria-e-trattoria",
@@ -3695,7 +4997,13 @@ window.ROTEIRO_DATA = {
         "image": "assets/dishes/2026/domenico-pizzeria-e-trattoria.png",
         "credit": "Associação dos Restaurantes da Boa Lembrança"
       },
-      "attractions": []
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "reserva_indeterminada"
+      }
     },
     {
       "id": "boa-maria-das-trancas",
@@ -3721,7 +5029,13 @@ window.ROTEIRO_DATA = {
         "image": "assets/dishes/2026/maria-das-trancas.png",
         "credit": "Associação dos Restaurantes da Boa Lembrança"
       },
-      "attractions": []
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "reserva_indeterminada"
+      }
     },
     {
       "id": "boa-relicario-gastronomia",
@@ -3747,7 +5061,13 @@ window.ROTEIRO_DATA = {
         "image": "assets/dishes/2026/relicario-gastronomia.png",
         "credit": "Associação dos Restaurantes da Boa Lembrança"
       },
-      "attractions": []
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "reserva_indeterminada"
+      }
     },
     {
       "id": "boa-taste-vin",
@@ -3773,7 +5093,13 @@ window.ROTEIRO_DATA = {
         "image": "assets/dishes/2026/taste-vin.png",
         "credit": "Associação dos Restaurantes da Boa Lembrança"
       },
-      "attractions": []
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "reserva_indeterminada"
+      }
     },
     {
       "id": "boa-xapuri-2",
@@ -3799,7 +5125,13 @@ window.ROTEIRO_DATA = {
         "image": "assets/dishes/2026/xapuri-2.png",
         "credit": "Associação dos Restaurantes da Boa Lembrança"
       },
-      "attractions": []
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "reserva_indeterminada"
+      }
     }
   ]
 };

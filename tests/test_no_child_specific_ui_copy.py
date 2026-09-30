@@ -1,4 +1,3 @@
-import re
 import unittest
 from pathlib import Path
 
@@ -12,19 +11,17 @@ class NoChildSpecificUiCopyTests(unittest.TestCase):
         self.assertIn("s.kind==='atracao'?`Tempo estimado de visita: ${durationLabel(s)}`", page)
         self.assertIn("`Estadia: ${durationLabel(s)}`", page)
 
-    def test_interface_does_not_include_child_specific_copy_outside_trip_note(self):
+    def test_interface_distinguishes_age_rules_from_unknowns(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
-        page = re.sub(r"const day8DefaultNote='[^']*'", "const day8DefaultNote=''", page)
-        child_copy = re.search(
-            r"(?i)(?:crian[cç]as?|beb[eê]s?|s\.kid)",
-            page,
-        )
-        self.assertIsNone(child_copy, "child-specific content must not appear in the interface")
+        self.assertIn("1 ano não entra", page)
+        self.assertIn("Indeterminada", page)
+        self.assertIn("Regra oficial ↗", page)
 
-    def test_natural_attractions_show_official_minimum_age_or_confirmation_fallback(self):
+    def test_all_attractions_show_age_and_ticket_status(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn("Idade mínima oficial:", page)
-        self.assertIn("confirme com o operador", page)
+        self.assertIn("visitRuleMarkup(tour)", page)
+        self.assertIn("visitRuleMarkup(s)", page)
+        self.assertIn("Ingresso/agendamento não confirmado", page)
 
 
 if __name__ == "__main__":
