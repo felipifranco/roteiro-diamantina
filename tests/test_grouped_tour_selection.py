@@ -119,11 +119,12 @@ console.log(JSON.stringify({cityOnly:ids(['cidade']),cityWithTour:ids(['cidade',
         self.assertIn("if(editable&&tour.kind==='atracao')row.appendChild(tourActionButton(tour))", row.group(1))
         self.assertIn("tourCardMeta(tour,city", row.group(1))
 
-    def test_itinerary_has_one_split_between_route_and_available_stops(self):
+    def test_itinerary_splits_available_restaurants_from_other_stops(self):
         for old in ("mapGroupPicker", "Cidades e regiões no mapa", "Desvios opcionais e avisos", "buildMapGroupCard"):
             self.assertNotIn(old, FINAL_ROUTING)
         self.assertIn("sectionTitle('No roteiro'", FINAL_ROUTING)
-        self.assertIn("sectionTitle('Fora do roteiro'", FINAL_ROUTING)
+        self.assertIn("sectionTitle('🍽 Restaurantes Boa Lembrança 2026'", FINAL_ROUTING)
+        self.assertIn("sectionTitle('Outras paradas fora do roteiro'", FINAL_ROUTING)
         self.assertIn("const available=stops.filter(s=>!inTrip(s))", FINAL_ROUTING)
         self.assertIn("addButton.addEventListener('click',()=>setGroupActive(s,true))", FINAL_ROUTING)
 
