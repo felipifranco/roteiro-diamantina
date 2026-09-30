@@ -111,7 +111,7 @@ class RouteInteractionControlsTests(unittest.TestCase):
 
     def test_attraction_cards_show_visit_duration_or_explicit_unknown(self):
         self.assertIn("days:a.days||'Duração a confirmar'", PAGE)
-        self.assertIn("Tempo estimado de visita: ${durationLabel(s)}", PAGE)
+        self.assertIn("Tempo estimado de visita: ${time}", PAGE)
 
     def test_fixed_diamantina_day_tours_are_included_in_the_route(self):
         draw_start = FINAL_ROUTING.index("window.drawLine=async function(){")

@@ -7,9 +7,10 @@ ROOT = Path(__file__).resolve().parents[1]
 class NoChildSpecificUiCopyTests(unittest.TestCase):
     def test_origin_note_is_not_mislabeled_as_stay_duration(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn("s.id===origin.id?durationLabel(s)", page)
-        self.assertIn("s.kind==='atracao'?`Tempo estimado de visita: ${durationLabel(s)}`", page)
-        self.assertIn("`Estadia: ${durationLabel(s)}`", page)
+        self.assertIn("s.id===origin.id?time", page)
+        self.assertIn("s.kind==='atracao'?`Tempo estimado de visita: ${time}`", page)
+        self.assertIn("`Estadia: ${time}`", page)
+        self.assertIn("if(note.textContent)focus.appendChild(note)", page)
 
     def test_cards_are_compact_and_popups_keep_unknown_rules(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
