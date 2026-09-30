@@ -45,7 +45,7 @@ assert "const attractionStops=stops.flatMap" in html, "geolocated attractions mu
 assert "const routeStops=[...stops,...attractionStops.filter(s=>s.kind==='atracao')]" in html, "city and attraction stops must share routing"
 assert "function effectiveRouteStops(allStops,selectedIds)" in html and "parentsWithTours" in html, "selected attractions should replace their selected city group in the route"
 assert "attractionStops.filter(s=>s.kind==='atracao').forEach(addAttractionMarker)" in html, "attractions need clickable map markers"
-assert "function routeableAttractionInfo(s)" in html and "visitRuleMarkup(s,true)" in html and "knownAge=age.status==='livre'||age.status==='idade_minima'" in html, "route cards must stay compact while popups retain visit rules"
+assert "function routeableAttractionInfo(s)" in html and "ageSummaryMarkup(tour)" in html and "knownAge=age.status==='livre'||age.status==='idade_minima'" in html, "tour cards must show brief age rules while popups retain visit details"
 assert "Tempo estimado de visita:" in html, "attraction stops must label their own visit duration, not a city stay"
 assert "fixedDates=new Map([[origin.id,'2026-10-07'],[destination.id,'2026-10-09']])" in html, "fixed stop dates should be available to child attractions"
 assert "const routeDate=s=>dates.get(s.id)||(s.kind==='atracao'?dates.get(s.parentId)||fixedDates.get(s.parentId):fixedDates.get(s.id))" in html, "attraction markers should prefer their own date, then inherit their city's or fixed parent's date"

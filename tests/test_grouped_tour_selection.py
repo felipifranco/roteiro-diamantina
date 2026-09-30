@@ -117,7 +117,9 @@ console.log(JSON.stringify({cityOnly:ids(['cidade']),cityWithTour:ids(['cidade',
         row = re.search(r"function tourRow\(city,tour,editable,plan\)\{(.*?)^\s*\}", FINAL_ROUTING, re.S | re.M)
         self.assertIsNotNone(row)
         self.assertIn("if(editable&&tour.kind==='atracao')row.appendChild(tourActionButton(tour))", row.group(1))
-        self.assertIn("tourCardMeta(tour,city", row.group(1))
+        self.assertIn("tourLocation(tour)", row.group(1))
+        self.assertIn("ageSummaryMarkup(tour)", row.group(1))
+        self.assertNotIn("tourCardMeta(tour,city", row.group(1))
 
     def test_itinerary_has_one_split_between_route_and_available_stops(self):
         for old in ("mapGroupPicker", "Cidades e regiões no mapa", "Desvios opcionais e avisos", "buildMapGroupCard"):
