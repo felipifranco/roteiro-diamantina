@@ -11,10 +11,11 @@ class NoChildSpecificUiCopyTests(unittest.TestCase):
         self.assertIn("s.kind==='atracao'?`Tempo estimado de visita: ${durationLabel(s)}`", page)
         self.assertIn("`Estadia: ${durationLabel(s)}`", page)
 
-    def test_interface_distinguishes_age_rules_from_unknowns(self):
+    def test_interface_only_shows_confirmed_age_rules(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("1 ano não entra", page)
-        self.assertIn("Indeterminada", page)
+        self.assertIn("knownAge=age.status==='livre'||age.status==='idade_minima'", page)
+        self.assertNotIn("Idade: Indeterminada", page)
         self.assertIn("Regra oficial ↗", page)
 
     def test_all_attractions_show_age_and_ticket_status(self):
