@@ -1,6 +1,6 @@
 # Revisão de localização dos pontos turísticos
 
-Revisão em 29/09/2026. O cadastro tem 169 atrações em 41 paradas: 115 classificados como pontos físicos (`exact`), 8 em trechos de rua (`street-center`), 1 em trecho de trilha (`trail-point`) e 45 que ainda têm apenas referência genérica da cidade (`city-center`). Os pontos foram cruzados por nome e município com fontes turísticas, OpenStreetMap/Nominatim e resultados de lugar do Google Maps. Resultados vazios, genéricos ou homônimos em outros distritos não foram usados para mover marcadores.
+Revisão em 29/09/2026. O cadastro tem 169 atrações em 41 paradas de localidades, além de oito restaurantes independentes (49 paradas no total): 115 atrações classificadas como pontos físicos (`exact`), 8 em trechos de rua (`street-center`), 1 em trecho de trilha (`trail-point`) e 45 que ainda têm apenas referência genérica da cidade (`city-center`). Os pontos foram cruzados por nome e município com fontes turísticas, OpenStreetMap/Nominatim e resultados de lugar do Google Maps. Resultados vazios, genéricos ou homônimos em outros distritos não foram usados para mover marcadores.
 
 ## Correções confirmadas
 

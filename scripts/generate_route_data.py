@@ -37,8 +37,8 @@ ATTRACTION_FIELDS = (
     "oneYearOld",
     "accessibility",
 )
-STOP_KINDS = {"inicio", "destino", "natureza", "historia", "opcional", "alerta"}
-STOP_TYPES = {"natureza", "historia"}
+STOP_KINDS = {"inicio", "destino", "natureza", "historia", "opcional", "alerta", "restaurante"}
+STOP_TYPES = {"natureza", "historia", "gastronomia"}
 LOCATION_ACCURACIES = {"exact", "street-center", "trail-point", "city-center"}
 
 
@@ -83,6 +83,15 @@ def validate(data):
             raise ValueError(f"routeStops[{index}].kind must be one of {sorted(STOP_KINDS)}")
         if not isinstance(stop["type"], str) or stop["type"] not in STOP_TYPES:
             raise ValueError(f"routeStops[{index}].type must be one of {sorted(STOP_TYPES)}")
+        if stop["kind"] == "restaurante":
+            dish = stop.get("dish2026")
+            if stop["type"] != "gastronomia" or not isinstance(dish, dict) or any(
+                not isinstance(dish.get(field), str) or not dish[field].strip()
+                for field in ("name", "description", "url", "image", "credit")
+            ):
+                raise ValueError(f"routeStops[{index}] restaurant must have a 2026 dish")
+            if not dish["url"].startswith("https://boalembranca.com.br/pratos/") or not dish["image"].startswith("assets/dishes/2026/") or not (ROOT / dish["image"]).is_file():
+                raise ValueError(f"routeStops[{index}] restaurant dish links or image are invalid")
         for field in ("days", "kid", "url"):
             if not isinstance(stop[field], str):
                 raise ValueError(f"routeStops[{index}].{field} must be a string")
@@ -196,6 +205,15 @@ def render_markdown(data):
         "|---|---|---|---|---|---|---:|---:|---|---|",
     ]
     for city in data["routeStops"]:
+        if city["kind"] == "restaurante":
+            dish = city["dish2026"]
+            lines.append(_row([
+                f"**{city['name']}**", city["address"],
+                f"**{dish['name']} (Boa Lembrança 2026)**",
+                f"{dish['description']} [Prato e imagem]({dish['url']})",
+                "—", "Restaurante / refeição", city["days"], "—", "A confirmar", "A confirmar",
+            ]))
+            continue
         detailed_index = 0
         for attraction in city.get("attractions", []):
             if "description" not in attraction:

@@ -14,6 +14,9 @@ EXPECTED_ROUTE_STOP_IDS = (
     "catasaltas", "santabarbara", "caraca", "sabara", "caete", "peiro", "araxa",
     "itabirito", "amarantina", "ourobranco", "setelagoas", "mendanha", "vau",
     "presidentekubitschek", "ipoema", "itambemato", "raposos", "novalima", "rioacima",
+    "boa-casa-do-rei-bistro", "boa-dartagnan", "boa-divinorestaurante",
+    "boa-domenico-pizzeria-e-trattoria", "boa-maria-das-trancas",
+    "boa-relicario-gastronomia", "boa-taste-vin", "boa-xapuri-2",
 )
 
 
