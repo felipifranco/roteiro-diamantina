@@ -264,9 +264,11 @@ renderList();
   const row=document.createElement('div');row.className=`tour-row has-tour-icon${editable&&tour.kind==='atracao'?' has-tour-control':''}${selected.has(tour.id)?' active':''}`;row.dataset.tourId=tour.id;row.addEventListener('click',event=>{if(event.target.closest('a,button,input,select'))return;if(tour.kind==='atracao'){moveMapToStop(tour);return}const site=tour.sameSiteAs?attractionStops.find(item=>item.parentId===city.id&&item.name===tour.sameSiteAs):null;focusUnmappedTour(tour,city,row,site||city)});
   const hasOwnPoint=tour.kind==='atracao',icon=hasOwnPoint&&selected.has(tour.id)?routeIcon(tour,plan):'•',marker=document.createElement('span');marker.className=`num tour-map-icon${hasOwnPoint?'':' reference-num'}${tour.relevanceSource==='agency'?' agency-num':''}`;marker.textContent=icon;marker.setAttribute('role','img');marker.setAttribute('aria-label',hasOwnPoint?selected.has(tour.id)?`Ordem no roteiro: ${icon}`:'Ponto fora do roteiro':'Passeio sem ponto próprio no mapa');if(tour.relevanceSource==='agency')marker.title='Ponto de agência turística';row.appendChild(marker);
   const info=document.createElement('div');info.className='tour-info';
-  const titleLine=document.createElement('span');titleLine.className='tour-title-line';const link=document.createElement('a');link.target='_blank';link.rel='noopener';link.href=mapSearchUrl(tour,city.name);link.textContent=`${tour.name} ↗`;titleLine.appendChild(link);if(tour.guideBriefing){const briefing=document.createElement('button');briefing.type='button';briefing.className='briefing-link';briefing.textContent='Guia de visita';briefing.setAttribute('aria-haspopup','dialog');briefing.setAttribute('aria-label',`Abrir guia de visita de ${tour.name}`);briefing.addEventListener('click',()=>showStopBriefing(tour));titleLine.appendChild(briefing)}info.appendChild(titleLine);
-  const location=tourLocation(tour);if(location){const where=document.createElement('small');where.className='tour-where';where.textContent=location;info.appendChild(where)}
-  const age=ageSummaryMarkup(tour);if(age){const rules=document.createElement('div');rules.innerHTML=age;info.appendChild(rules.firstElementChild)}
+  const titleLine=document.createElement('span');titleLine.className='tour-title-line';const link=document.createElement('a');link.target='_blank';link.rel='noopener';link.href=mapSearchUrl(tour,city.name);link.textContent=`${tour.name} ↗`;titleLine.appendChild(link);info.appendChild(titleLine);
+  const metaLine=document.createElement('div');metaLine.className='tour-meta-line';if(tour.guideBriefing){const briefing=document.createElement('button');briefing.type='button';briefing.className='briefing-link';briefing.textContent='Guia de visita';briefing.setAttribute('aria-haspopup','dialog');briefing.setAttribute('aria-label',`Abrir guia de visita de ${tour.name}`);briefing.addEventListener('click',()=>showStopBriefing(tour));metaLine.appendChild(briefing)}
+  const location=tourLocation(tour);if(location){const where=document.createElement('small');where.className='tour-where';where.textContent=location;metaLine.appendChild(where)}
+  const age=ageSummaryMarkup(tour);if(age){const rules=document.createElement('div');rules.innerHTML=age;metaLine.appendChild(rules.firstElementChild)}
+  if(metaLine.childNodes.length)info.appendChild(metaLine);
   row.appendChild(info);if(editable&&tour.kind==='atracao')row.appendChild(tourActionButton(tour));return row
  }
  // Tempo e distância entre trechos (OSRM): chegada a cada cidade, retorno a Mirassol e deslocamentos entre passeios da mesma cidade.
@@ -738,6 +740,12 @@ renderList();
 #stops .available-list .stop-head{background:#fff;border-bottom:0}
 #stops .available-list .attraction-links{margin-left:0;padding-left:6px!important;border-left:2px solid #b9d0ba;background:#f7f8f6}
 #stops .available-list .tour-row:not(.active){border-color:#dce5da;border-left:1px solid #dce5da;background:#fff}
-#stops .available-list .tour-row .tour-title-line .briefing-link{padding:2px 5px;border:1px solid #d4e2d2;border-radius:5px;background:#edf3eb;text-decoration:none}
+#stops .tour-row.has-tour-icon .tour-info{display:grid!important;gap:2px;align-content:start}
+#stops .tour-row .tour-title-line{display:block;min-width:0}
+#stops .tour-row .tour-meta-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;min-width:0}
+#stops .tour-row .tour-meta-line .briefing-link{flex:0 0 auto!important;margin:0!important;padding:1px 5px;border:1px solid #d4e2d2;border-radius:5px;background:#f4f8f2;text-decoration:none;white-space:nowrap}
+#stops .tour-row .tour-meta-line .visit-rules{margin:0;display:inline-flex}
+#stops .tour-row.has-tour-icon .tour-route-action{position:static!important;grid-column:3!important;grid-row:1!important;align-self:center!important;justify-self:center!important;width:36px;min-width:36px;height:36px;min-height:36px;margin:0;padding:0}
+#stops .tour-row.has-tour-icon .tour-pinned{grid-column:3;grid-row:1;align-self:center;justify-self:center;min-width:36px;padding:4px 5px;font-size:9px;text-align:center}
 @media(max-width:360px){#stops .available-list .attraction-links{padding-left:4px!important}}
 </style><script>new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(map.getContainer());</script></body></html>
