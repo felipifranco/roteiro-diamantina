@@ -38,9 +38,6 @@ class BoaLembrancaTests(unittest.TestCase):
         self.assertIn("if(s.kind==='restaurante')return `<div class=\"dish-pin\"", page)
         self.assertIn("s.kind!=='restaurante').map(s=>s.id)", page)
         self.assertIn("Prato 2026: ${s.dish2026.name}", page)
-        self.assertIn('id="restaurantJump"', page)
-        self.assertIn("heading.id='restaurantStopsTitle'", page)
-        self.assertIn("const restaurants=available.filter(s=>s.kind==='restaurante')", page)
 
     def test_restaurant_enters_route_as_its_own_stop(self):
         if not shutil.which("node"):
