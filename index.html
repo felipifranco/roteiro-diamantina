@@ -701,10 +701,11 @@ renderList();
 #stops .stop-focus .stay-note::before{content:none}
 #stops .stop-focus:has(.stop-kind) .stay-note::before{content:' · '}
 #stops .stop-head{row-gap:4px}
+#stops .editable-stop .stop-head .stop-date,#stops .editable-stop .stop-head .tours-toggle{height:29px}
 #stops .briefing-link{font-size:10.5px;line-height:1.3}
 #stops .overnight-note{margin-top:2px;font-size:11px;line-height:1.35}
 #stops .visit-rules{margin-top:4px;font-size:11px;line-height:1.35}
-#stops .attraction-links{gap:5px;padding:7px 8px 8px}
+#stops .attraction-links{gap:6px;padding:7px 8px 9px}
 #stops .tour-row{padding:7px 8px;gap:7px}
 #stops .tour-row:not(.active){border-left:3px solid #dbe3d9;background:#fff}
 #stops .tour-row.active{border-color:var(--day-accent,var(--green));border-left:3px solid var(--day-accent,var(--green));background:var(--day-surface,#edf5ed)}
@@ -718,31 +719,28 @@ renderList();
 #stops .tour-row.has-tour-icon:not(.has-tour-control){grid-template-columns:24px minmax(0,1fr)!important}
 #stops .tour-row .tour-map-icon.reference-num{background:#eef0ea;color:#66736a;font-size:17px;line-height:1}
 #stops .tour-row.active .tour-map-icon{background:var(--day-accent,var(--green))!important;color:#fff!important}
-#stops .tour-hint{margin:0 2px 2px;font-size:11px;line-height:1.35}
-#stops .tour-source{justify-self:end;padding:2px 2px 0;color:var(--green);font-size:11px;line-height:1.35;font-weight:650;text-decoration:underline;text-underline-offset:2px}
+#stops .tour-hint{margin:0 2px 1px;font-size:11px;line-height:1.35}
+#stops .tour-source{justify-self:end;padding:3px 2px 0;color:var(--green);font-size:11px;line-height:1.35;font-weight:650;text-decoration:underline;text-underline-offset:2px}
 .accessibility-icon{display:inline-block;font-size:13px;line-height:1;vertical-align:-1px}
 @media(max-width:800px){
   #stops .day-group{margin-bottom:7px;padding:0 6px 4px}
   #stops .day-header{margin:0 -6px 5px;padding:7px 9px;font-size:11.5px}
   #stops .stop{margin-bottom:5px}
-  #stops .stop-head,#stops .editable-stop .stop-head,#stops .available-list .stop-head{padding:7px 8px!important;row-gap:4px}
+  #stops .day-group>.stop:last-of-type{margin-bottom:0}
+  #stops .stop-head,#stops .editable-stop .stop-head,#stops .available-list .stop-head{padding:7px 8px!important;row-gap:4px;column-gap:6px}
   #stops .stop-name,#stops .editable-stop .stop-name,#stops .available-list .stop-name{font-size:15.5px;line-height:1.2}
   #stops .editable-stop .stop-kind,#stops .editable-stop .stay-note,#stops .available-list .stop-kind,#stops .available-list .stay-note{display:inline;margin:0;font-size:11px;line-height:1.35;letter-spacing:0}
   #stops .editable-stop .stop-kind::after,#stops .available-list .stop-kind::after{content:none}
-  #stops .editable-stop .stop-head .stop-date,#stops .editable-stop .stop-head .tours-toggle{height:28px}
-  #stops .attraction-links{padding:7px 8px 8px;gap:5px}
-  #stops .tour-row{padding:7px 8px;gap:7px}
-  #stops .tour-info>a:not(.tour-ticket),#stops .tour-title-line>a{font-size:13px;line-height:1.3}
-  #stops .tour-where,#stops .tour-info .access-meta{font-size:11px;line-height:1.35}
   #stops .leg-connector{font-size:11px;line-height:1.3}
 }
 /* Fora do roteiro: a cidade é o cabeçalho; os passeios ficam em um nível visual abaixo. */
 #stops .available-list .stop-head{background:#fff;border-bottom:0}
+#stops .available-list .stop{margin-bottom:5px}
 #stops .available-list .attraction-links{margin-left:0;padding-left:6px!important;border-left:2px solid #b9d0ba;background:#f7f8f6}
 #stops .available-list .tour-row:not(.active){border-color:#dce5da;border-left:1px solid #dce5da;background:#fff}
 #stops .tour-row.has-tour-icon .tour-info{display:grid!important;gap:2px;align-content:start}
 #stops .tour-row .tour-title-line{display:block;min-width:0}
-#stops .tour-row .tour-meta-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;min-width:0}
+#stops .tour-row .tour-meta-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 8px;min-width:0}
 #stops .tour-row .tour-meta-line .briefing-link{flex:0 0 auto!important;margin:0!important;padding:1px 5px;border:1px solid #d4e2d2;border-radius:5px;background:#f4f8f2;text-decoration:none;white-space:nowrap}
 #stops .tour-row .tour-meta-line .visit-rules{margin:0;display:inline-flex}
 #stops .tour-row.has-tour-icon .tour-route-action{position:static!important;grid-column:3!important;grid-row:1!important;align-self:center!important;justify-self:center!important;width:36px;min-width:36px;height:36px;min-height:36px;margin:0;padding:0}
