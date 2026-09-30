@@ -21,7 +21,8 @@ class NoChildSpecificUiCopyTests(unittest.TestCase):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("visitRuleMarkup(tour)", page)
         self.assertIn("visitRuleMarkup(s)", page)
-        self.assertIn("Ingresso/agendamento não confirmado", page)
+        self.assertIn("${ticket.url?`<span><a", page)
+        self.assertNotIn("Ingresso/agendamento não confirmado", page)
 
 
 if __name__ == "__main__":
