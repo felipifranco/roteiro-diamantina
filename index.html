@@ -193,13 +193,13 @@ renderList();
  const dates=new Map(),manual=[],fixedDates=new Map([[origin.id,'2026-10-07'],[destination.id,'2026-10-09']]),openCards=new Set(),tourCache=new Map(),dayNotes={};let draggedId=null,routeRequest=0,routeController=null,returnDriveHours=null,routeMetrics=null,routeLegs=null;
  const dayNotesStorageKey='roteiro-diamantina:day-notes:v1';
  try{const savedNotes=JSON.parse(localStorage.getItem(dayNotesStorageKey)||'{}');if(savedNotes&&typeof savedNotes==='object'&&!Array.isArray(savedNotes))Object.assign(dayNotes,savedNotes)}catch{}
- const day8DefaultNote='Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base. A Gruta Rei do Mato exige idade mínima de 6 anos.',previousDay8Note='Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base.',outdatedDay8Note='Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base. Na Gruta Rei do Mato, confirme a idade mínima para crianças.';if(!Object.prototype.hasOwnProperty.call(dayNotes,'2026-10-08')||[previousDay8Note,outdatedDay8Note].includes(dayNotes['2026-10-08'])){dayNotes['2026-10-08']=day8DefaultNote;try{localStorage.setItem(dayNotesStorageKey,JSON.stringify(dayNotes))}catch{}}
- // Paradas iniciais: Peirópolis e Araxá em 07/10; Sete Lagoas e Cordisburgo em 08/10.
- const initialStops=['peiro','araxa','setelagoas','cordisburgo'].filter(id=>stops.some(s=>s.id===id));initialStops.forEach(id=>{selected.add(id);dates.set(id,id==='setelagoas'||id==='cordisburgo'?'2026-10-08':'2026-10-07');manual.push(id)});
+ const day8DefaultNote='Curvelo tem mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base.',previousDay8Note='Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base.',outdatedDay8Note='Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base. Na Gruta Rei do Mato, confirme a idade mínima para crianças.';if(!Object.prototype.hasOwnProperty.call(dayNotes,'2026-10-08')||[previousDay8Note,outdatedDay8Note].includes(dayNotes['2026-10-08'])){dayNotes['2026-10-08']=day8DefaultNote;try{localStorage.setItem(dayNotesStorageKey,JSON.stringify(dayNotes))}catch{}}
+ // Paradas iniciais: Peirópolis e Araxá em 07/10; Cordisburgo em 08/10.
+ selected.delete('setelagoas');
+ const initialStops=['peiro','araxa','cordisburgo'].filter(id=>stops.some(s=>s.id===id));initialStops.forEach(id=>{selected.add(id);dates.set(id,id==='cordisburgo'?'2026-10-08':'2026-10-07');manual.push(id)});
  // Os dois passeios de Peirópolis já entram marcados; Araxá é o pernoite de 07 para 08/10 e o acompanha se a data mudar.
  attractionStops.filter(tour=>tour.parentId==='peiro'&&selected.has('peiro')).forEach(tour=>selected.add(tour.id));
- attractionStops.filter(tour=>tour.parentId==='cordisburgo').forEach(tour=>selected.add(tour.id));
- attractionStops.filter(tour=>tour.parentId==='setelagoas'&&tour.name==='Monumento Natural Estadual Gruta Rei do Mato').forEach(tour=>selected.add(tour.id));
+ attractionStops.filter(tour=>tour.parentId==='cordisburgo'&&tour.name!=='Gruta do Maquiné').forEach(tour=>selected.add(tour.id));
  attractionStops.filter(tour=>tour.parentId==='diamantina'&&tour.name==='Vesperata').forEach(tour=>selected.add(tour.id));
  const overnightStops=new Set(['araxa','cordisburgo']);
  const fmt=d=>`${d.slice(8,10)}/${d.slice(5,7)}`;
@@ -377,7 +377,7 @@ renderList();
   syncAttractionVisibility(plan);
   routeStops.forEach(s=>{if(!markers[s.id])return;if(s.kind==='atracao'&&!selected.has(s.parentId)&&!openCards.has(s.parentId)){hideMarker(s);return}syncMarker(s);const routed=stopsInOrder.includes(s),parentId=s.kind==='atracao'?s.parentId:s.id,date=s===origin?'2026-10-07':s===destination?'2026-10-09':routed?routeDate(s):null,icon=routeIcon(s,plan);
    if(s===origin)setMapIcon(s,'M','2026-10-07');else if(s===destination)setMapIcon(s,'D','2026-10-09');else setMapIcon(s,icon,routed?date:null);
-   markers[s.id].setOpacity(s.kind==='atracao'||inTrip(s)||s.kind==='alerta'?1:.6);
+   markers[s.id].setOpacity(s.kind==='atracao'||s.kind==='restaurante'||inTrip(s)||s.kind==='alerta'?1:.6);
    const parentSelected=s.kind==='atracao'&&selected.has(s.parentId),mapContext=!routed&&s.kind!=='atracao'&&selected.has(s.id)&&toursFor(s).some(t=>selected.has(t.id)),meta=s.kind==='atracao'?routed?'':parentSelected?'<div class="pop-note">Disponível em Passeios no cartão da cidade</div>':`<div class="pop-note">Adicione ${s.parent} ao roteiro para escolher este passeio</div>`:s===destination?'<div class="pop-note">Data fixa: 09/10 · Diamantina</div>':mapContext?'<div class="pop-note">Grupo de referência no mapa; os passeios selecionados entram na rota.</div>':routed&&date?`<div class="pop-note"><b>${fmt(date)}</b> · ${s.kind==='restaurante'?`Parada para refeição: ${durationLabel(s)}`:`Estadia sugerida: ${durationLabel(s)}`}</div>`:inTrip(s)?'<div class="pop-note">Selecionado no mapa · os passeios ativos definem a rota</div>':'<div class="pop-note">Fora do roteiro · adicione pela lista</div>';
    if(s!==origin)markers[s.id].bindPopup(popup(s,false,routed,date)+meta+(overnightLabel(s)?`<div class="pop-note"><b>${overnightLabel(s)}</b></div>`:''),{autoPan:false})})
  }
