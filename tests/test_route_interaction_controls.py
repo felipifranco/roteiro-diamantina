@@ -78,6 +78,11 @@ class RouteInteractionControlsTests(unittest.TestCase):
         popup_helper = PAGE.index("function routeableAttractionInfo(s)")
         self.assertLess(popup_helper, marker_creation, "attraction popup helper must exist before marker creation")
 
+    def test_city_popup_helper_is_defined_before_city_markers_are_created(self):
+        marker_creation = PAGE.index("stops.forEach(addMarker)")
+        popup_helper = PAGE.index("function visitRuleMarkup(s,compact=false)")
+        self.assertLess(popup_helper, marker_creation, "city popup helper must exist before marker creation")
+
     def test_tour_controls_have_explicit_add_and_remove_actions(self):
         self.assertIn("function tourActionButton(tour)", FINAL_ROUTING, "tour action helper is missing")
         self.assertIn("＋ Adicionar ao roteiro", FINAL_ROUTING, "inactive tours need a clear add action")
