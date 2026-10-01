@@ -75,7 +75,6 @@ renderList();document.getElementById('allStops').onclick=()=>{stops.filter(s=>s.
 const tripStart=new Date('2026-10-07T12:00:00');
 const baselineArrival=new Date('2026-10-09T12:00:00');
 const origin=stops.find(s=>s.kind==='inicio'), destination=stops.find(s=>s.kind==='destino');
-selected.clear();selected.add(origin.id);selected.add(destination.id);
 let itineraryOrder=[];
 const stayRanges={canastra:[1,2],capitolio:[1,1],congonhas:[.5,1],ouropreto:[1,2],mariana:[.5,1],cipo:[1,2],tabuleiro:[1,1],serro:[.5,.5],milhoverde:[.5,1],saogoncalo:[.5,.5],biribiri:[.5,1],peruacu:[1,2],delfinopolis:[0,1],cordisburgo:[.5,1],belohorizonte:[1,2],brumadinho:[1,1],saojoaodelrei:[1,2],tiradentes:[1,2],bichinho:[.5,1],curralinho:[.5,.5],catasaltas:[.5,1],santabarbara:[.5,1],caraca:[1,2],sabara:[.5,1],caete:[.5,1],araxa:[1,1],itabirito:[.5,.5],amarantina:[.5,.5]};
 const accessNotes={

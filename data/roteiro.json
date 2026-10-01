@@ -136,8 +136,7 @@
       },
       "ticket": {
         "status": "por_passeio"
-      },
-      "selectedByDefault": true
+      }
     },
     {
       "id": "capitolio",
@@ -265,8 +264,7 @@
       },
       "ticket": {
         "status": "por_passeio"
-      },
-      "selectedByDefault": true
+      }
     },
     {
       "id": "congonhas",
@@ -402,8 +400,7 @@
       },
       "ticket": {
         "status": "por_passeio"
-      },
-      "selectedByDefault": true
+      }
     },
     {
       "id": "ouropreto",
@@ -766,8 +763,7 @@
       },
       "ticket": {
         "status": "por_passeio"
-      },
-      "selectedByDefault": true
+      }
     },
     {
       "id": "mariana",
@@ -1065,8 +1061,7 @@
       },
       "ticket": {
         "status": "por_passeio"
-      },
-      "selectedByDefault": true
+      }
     },
     {
       "id": "cipo",
@@ -1090,8 +1085,7 @@
       },
       "ticket": {
         "status": "indeterminado"
-      },
-      "selectedByDefault": true
+      }
     },
     {
       "id": "tabuleiro",
@@ -1208,8 +1202,7 @@
       },
       "ticket": {
         "status": "por_passeio"
-      },
-      "selectedByDefault": true
+      }
     },
     {
       "id": "serro",
@@ -1487,8 +1480,7 @@
       },
       "ticket": {
         "status": "por_passeio"
-      },
-      "selectedByDefault": true
+      }
     },
     {
       "id": "milhoverde",
@@ -1581,8 +1573,7 @@
       },
       "ticket": {
         "status": "por_passeio"
-      },
-      "selectedByDefault": true
+      }
     },
     {
       "id": "saogoncalo",
@@ -1688,8 +1679,7 @@
       },
       "ticket": {
         "status": "por_passeio"
-      },
-      "selectedByDefault": true
+      }
     },
     {
       "id": "diamantina",
@@ -2218,8 +2208,7 @@
       },
       "ticket": {
         "status": "por_passeio"
-      },
-      "selectedByDefault": true
+      }
     },
     {
       "id": "peruacu",
