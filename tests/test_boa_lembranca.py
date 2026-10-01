@@ -36,7 +36,7 @@ class BoaLembrancaTests(unittest.TestCase):
     def test_dish_photo_replaces_agency_star(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("if(s.kind==='restaurante')return `<div class=\"dish-pin\"", page)
-        self.assertIn("s.kind!=='restaurante').map(s=>s.id)", page)
+        self.assertIn("routeStops.filter(s=>s.selectedByDefault).map(s=>s.id)", page)
         self.assertIn("Prato 2026: ${s.dish2026.name}", page)
 
     def test_restaurant_enters_route_as_its_own_stop(self):

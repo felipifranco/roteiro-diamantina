@@ -54,9 +54,13 @@ assert "candidates(date).map" in html, "date options should include the inherite
 assert "routeStops.forEach(s=>" in html, "selected attractions must update markers and popups"
 assert "const initialStops=['peiro','araxa','cordisburgo']" in html, "the initial cities must keep their road order without Sete Lagoas"
 assert "dates.set(id,id==='cordisburgo'?'2026-10-08':'2026-10-07')" in html, "initial stops must keep their assigned travel dates"
-assert "attractionStops.filter(tour=>tour.parentId==='peiro'&&selected.has('peiro')).forEach(tour=>selected.add(tour.id))" in html, "both Peirópolis tours must start selected"
-assert "attractionStops.filter(tour=>tour.parentId==='cordisburgo'&&tour.name!=='Gruta do Maquiné').forEach(tour=>selected.add(tour.id))" in html, "Cordisburgo attractions except Gruta do Maquiné must start selected"
-assert "tour.parentId==='setelagoas'&&tour.name==='Monumento Natural Estadual Gruta Rei do Mato').forEach(tour=>selected.add(tour.id))" not in html, "Sete Lagoas attractions must not start selected"
+defaults = {stop["id"]: stop.get("selectedByDefault", False) for stop in data["routeStops"]}
+assert all(defaults.get(stop_id) for stop_id in ('mirassol', 'diamantina', 'peiro', 'araxa', 'cordisburgo')), "origin, destination, and the three initial cities must be configured in the JSON"
+assert not defaults.get('setelagoas', False), "Sete Lagoas must not start selected"
+attractions = {stop["id"]: {item["name"]: item.get("selectedByDefault", False) for item in stop.get("attractions", [])} for stop in data["routeStops"]}
+assert all(attractions['peiro'].values()), "both Peirópolis tours must start selected"
+assert all(selected for name, selected in attractions['cordisburgo'].items() if name != 'Gruta do Maquiné'), "Cordisburgo attractions except Gruta do Maquiné must start selected"
+assert not any(attractions['setelagoas'].values()), "Sete Lagoas attractions must not start selected"
 assert "const overnightStops=new Set(['araxa','cordisburgo'])" in html, "Araxá and Cordisburgo must remain overnight stops"
 assert "🛏 Pernoite ${fmt(dates.get(s.id))} → ${fmt(add(dates.get(s.id),1))}" in html, "overnight label must follow the stop's date"
 assert "if(routed.has(city.id))labels.set(city.id,String(i+1))" in html, "map sequence markers must number the first intermediate stop as 1"
