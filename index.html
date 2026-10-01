@@ -22,7 +22,7 @@ const stops=window.ROTEIRO_DATA.routeStops;
 const attractionStops=stops.flatMap(city=>(city.attractions||[]).map((a,i)=>({...a,id:`${city.id}-poi-${i+1}`,name:a.name,parent:city.name,parentId:city.id,kind:a.locationAccuracy==='city-center'||a.sameSiteAs?'passeio':'atracao',type:a.type||city.type,days:a.days||'Duração a confirmar',sights:[],url:city.url})));
 const routeStops=[...stops,...attractionStops.filter(s=>s.kind==='atracao')];
 const map=L.map('map',{zoomControl:true,scrollWheelZoom:true}).setView([-19.4,-45.9],7);L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
-const selected=new Set(stops.filter(s=>s.kind!=='opcional'&&s.kind!=='alerta'&&s.kind!=='restaurante').map(s=>s.id));const markers={};let line=null;let activeFilter='all';
+const selected=new Set(routeStops.filter(s=>s.selectedByDefault).map(s=>s.id));const markers={};let line=null;let activeFilter='all';
 function colorClass(s){const isAgency=s.relevanceSource==='agency',typeClass=s.kind==='alerta'?'warning':s.kind==='opcional'?'optional':s.type==='historia'?'history':'';return [isAgency?'agency':'',typeClass].filter(Boolean).join(' ')}
 function pinMarkup(s,label){if(s.kind==='restaurante')return `<div class="dish-pin"><img src="${s.dish2026.image}" alt=""><span class="dish-pin-order">${label==='+'?'':label}</span></div>`;const isAgency=s.relevanceSource==='agency',badge=isAgency?'<i class="pin-agency-badge" aria-hidden="true">★</i>':'';return `<div class="pin ${colorClass(s)}"><span>${label}</span>${badge}</div>`}
 function pin(s,label){return L.divIcon({className:'',html:pinMarkup(s,label),iconSize:s.kind==='restaurante'?[42,42]:[28,34],iconAnchor:s.kind==='restaurante'?[21,40]:[14,33],popupAnchor:s.kind==='restaurante'?[0,-38]:[0,-25]})}
@@ -194,13 +194,8 @@ renderList();
  const dayNotesStorageKey='roteiro-diamantina:day-notes:v1';
  try{const savedNotes=JSON.parse(localStorage.getItem(dayNotesStorageKey)||'{}');if(savedNotes&&typeof savedNotes==='object'&&!Array.isArray(savedNotes))Object.assign(dayNotes,savedNotes)}catch{}
  const day8DefaultNote='Curvelo tem mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base.',previousDay8Note='Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base.',outdatedDay8Note='Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base. Na Gruta Rei do Mato, confirme a idade mínima para crianças.';if(!Object.prototype.hasOwnProperty.call(dayNotes,'2026-10-08')||[previousDay8Note,outdatedDay8Note].includes(dayNotes['2026-10-08'])){dayNotes['2026-10-08']=day8DefaultNote;try{localStorage.setItem(dayNotesStorageKey,JSON.stringify(dayNotes))}catch{}}
- // Paradas iniciais: Peirópolis e Araxá em 07/10; Cordisburgo em 08/10.
- selected.delete('setelagoas');
- const initialStops=['peiro','araxa','cordisburgo'].filter(id=>stops.some(s=>s.id===id));initialStops.forEach(id=>{selected.add(id);dates.set(id,id==='cordisburgo'?'2026-10-08':'2026-10-07');manual.push(id)});
- // Os dois passeios de Peirópolis já entram marcados; Araxá é o pernoite de 07 para 08/10 e o acompanha se a data mudar.
- attractionStops.filter(tour=>tour.parentId==='peiro'&&selected.has('peiro')).forEach(tour=>selected.add(tour.id));
- attractionStops.filter(tour=>tour.parentId==='cordisburgo'&&tour.name!=='Gruta do Maquiné').forEach(tour=>selected.add(tour.id));
- attractionStops.filter(tour=>tour.parentId==='diamantina'&&tour.name==='Vesperata').forEach(tour=>selected.add(tour.id));
+ // Datas iniciais das paradas opcionais que vêm selecionadas no catálogo JSON.
+ const initialStops=['peiro','araxa','cordisburgo'].filter(id=>stops.some(s=>s.id===id));initialStops.forEach(id=>{dates.set(id,id==='cordisburgo'?'2026-10-08':'2026-10-07');manual.push(id)});
  const overnightStops=new Set(['araxa','cordisburgo']);
  const fmt=d=>`${d.slice(8,10)}/${d.slice(5,7)}`;
  const parse=d=>new Date(`${d}T12:00:00`);

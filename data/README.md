@@ -2,6 +2,8 @@
 
 Edite somente [`roteiro.json`](roteiro.json). O arquivo mantém cada parada em `routeStops`, com perfil e atrações detalhadas no próprio registro. Assim, os dados de rota e as fichas detalhadas ficam juntos, sem listas paralelas de cidades. Se um campo pesquisado divergir de um valor específico da rota, o valor anterior da rota fica registrado em `routeOverrides`.
 
+O campo `selectedByDefault` em cada parada ou atração define se ela começa selecionada na página. A seleção feita na interface altera somente o estado em memória do navegador; para mudar o padrão permanente, edite esse campo no JSON e regenere os arquivos.
+
 Após alterar o JSON, regenere os arquivos derivados:
 
 ```bash

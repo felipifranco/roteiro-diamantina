@@ -19,7 +19,8 @@
       },
       "ticket": {
         "status": "indeterminado"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "canastra",
@@ -135,7 +136,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "capitolio",
@@ -263,7 +265,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "congonhas",
@@ -399,7 +402,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "ouropreto",
@@ -762,7 +766,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "mariana",
@@ -1060,7 +1065,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "cipo",
@@ -1084,7 +1090,8 @@
       },
       "ticket": {
         "status": "indeterminado"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "tabuleiro",
@@ -1201,7 +1208,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "serro",
@@ -1479,7 +1487,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "milhoverde",
@@ -1572,7 +1581,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "saogoncalo",
@@ -1678,7 +1688,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "diamantina",
@@ -1871,7 +1882,8 @@
           "ticket": {
             "status": "online",
             "url": "https://bileto.sympla.com.br/event/117032?share_id=1-copiarlink"
-          }
+          },
+          "selectedByDefault": true
         },
         {
           "name": "Caminho dos Escravos",
@@ -2113,7 +2125,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "biribiri",
@@ -2205,7 +2218,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "peruacu",
@@ -2319,7 +2333,8 @@
           "ticket": {
             "status": "gratuito",
             "url": "https://www.mg.gov.br/servico/visitar-o-museu-casa-guimaraes-rosa"
-          }
+          },
+          "selectedByDefault": true
         },
         {
           "name": "Portal Grande Sertão",
@@ -2342,7 +2357,8 @@
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "selectedByDefault": true
         },
         {
           "name": "Casa Elefante",
@@ -2365,7 +2381,8 @@
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "selectedByDefault": true
         }
       ],
       "relevanceSource": "agency",
@@ -2374,7 +2391,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "belohorizonte",
@@ -3977,7 +3995,8 @@
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "selectedByDefault": true
         },
         {
           "name": "Geossítio de Peirópolis",
@@ -4000,7 +4019,8 @@
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "selectedByDefault": true
         }
       ],
       "guideBriefing": "Peirópolis, distrito rural de Uberaba, tornou-se referência paleontológica a partir das pesquisas iniciadas na região na década de 1940. As rochas do Triângulo Mineiro preservaram fósseis do Cretáceo, incluindo dinossauros e outros animais. O antigo núcleo ferroviário passou a abrigar pesquisa, museu e educação científica, aproximando o visitante do território onde os fósseis são encontrados e estudados.",
@@ -4011,7 +4031,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "araxa",
@@ -4198,7 +4219,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "selectedByDefault": true
     },
     {
       "id": "itabirito",
