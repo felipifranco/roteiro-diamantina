@@ -7,7 +7,6 @@
  function changeNight(stays,day,stopId,rangeEnd){
   const checkOut=addDays(day,1);
   if(checkOut>rangeEnd)throw new Error('A saída deve estar dentro do período de planejamento.');
-  if(stays.some(stay=>stay.fixed&&stay.checkIn<=day&&day<stay.checkOut))throw new Error('Este pernoite é fixo no roteiro.');
   const remaining=stays.flatMap(stay=>{
    if(stay.checkOut<=day||stay.checkIn>=checkOut)return [stay];
    const parts=[];
@@ -19,7 +18,7 @@
   const merged=[];
   remaining.sort((a,b)=>a.checkIn.localeCompare(b.checkIn)).forEach(stay=>{
    const previous=merged.at(-1);
-   if(previous&&previous.stopId===stay.stopId&&Boolean(previous.fixed)===Boolean(stay.fixed)&&previous.checkOut===stay.checkIn)previous.checkOut=stay.checkOut;
+   if(previous&&previous.stopId===stay.stopId&&previous.checkOut===stay.checkIn)previous.checkOut=stay.checkOut;
    else merged.push({...stay});
   });
   return merged;
