@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "routing": {"endpoint": "https://router.project-osrm.org/route/v1", "profile": "driving", "timeoutMs": 20000},
   "schedule": {
     "startDate": "2026-10-07",
     "destinationId": "diamantina",

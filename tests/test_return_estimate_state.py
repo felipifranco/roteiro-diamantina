@@ -16,13 +16,13 @@ class ReturnEstimateStateTests(unittest.TestCase):
     def test_route_recalculation_clears_the_previous_duration_before_fetch(self):
         draw_line = PAGE.rsplit("window.drawLine=async function(){", 1)[1]
         clear = draw_line.find("returnDriveHours=null;")
-        fetch = draw_line.find("await fetch(")
+        fetch = draw_line.find("await router.calculate(")
         self.assertGreaterEqual(clear, 0, "each route request must invalidate its old return duration")
         self.assertGreater(fetch, clear, "the old estimate must be cleared before the network request")
 
     def test_failed_current_request_clears_duration_even_after_late_success_error(self):
         self.assertIsNotNone(
-            re.search(r"catch\{if\(request===routeRequest\)\{returnDriveHours=null;", PAGE),
+            re.search(r"catch\{returnDriveHours=null;", PAGE),
             "a post-fetch error must not expose a partially calculated return estimate",
         )
 

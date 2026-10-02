@@ -76,7 +76,9 @@ Quando os conteúdos realmente formam uma única visita, mantenha uma ficha com 
 
 Em `selectedAttractions`, `required: true` torna um passeio obrigatório nesta viagem e protege também a remoção de seu grupo. O padrão é `false`: ter `schedule` no catálogo informa um evento agendado, não uma obrigação. A Vesperata mantém `required: true` explicitamente, preservando o compromisso atual. Os conflitos com o destino usam somente hospedagens efetivamente planejadas em outra parada que atravessam sua data; sugestões de duração não geram conflitos.
 
-`assets/trip-calendar.js` concentra cálculos de calendário, noites, retorno, conflitos e ordenação. O HTML chama essas funções e renderiza os controles. O gerador valida as políticas e produz o adaptador para o navegador.
+`assets/trip-calendar.js` concentra cálculos de calendário, noites, retorno, conflitos e ordenação. `assets/trip-route.js` reúne seleção e dependência de grupos/passeios, pontos efetivos da rota, combinação das fichas de passeios, agregação de trechos e requisições OSRM com cancelamento e descarte de respostas antigas. O HTML mantém a renderização e os eventos dos controles.
+
+`routing` em `roteiro.json` configura `endpoint` (URL HTTPS da API de rotas OSRM), `profile` (atualmente `driving`) e `timeoutMs` (atualmente 20000). Esses parâmetros não mudam a ordem das visitas; o serviço calcula o trajeto na sequência planejada. O gerador valida as políticas e os parâmetros de rota e produz o adaptador para o navegador.
 
 ## Restaurantes Boa Lembrança
 

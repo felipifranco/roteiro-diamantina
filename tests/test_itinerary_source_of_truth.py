@@ -158,7 +158,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
             all("lat" in item and "lon" in item for item in route_stops["araxa"]["attractions"] + peiro["attractions"])
         )
         page = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn("const attractionStops=stops.flatMap", page)
+        self.assertIn("const attractionStops=TripRoute.attractionStops(stops)", page)
         self.assertIn("const routeStops=[...stops,...attractionStops.filter(s=>s.routeable)]", page)
 
     def test_route_coordinates_stay_within_geographic_ranges(self):

@@ -20,10 +20,9 @@ class LegTravelTimeTests(unittest.TestCase):
     def test_legs_are_grouped_by_arrival_city_intra_city_and_return(self):
         if not shutil.which("node"):
             self.skipTest("Node.js is required for the leg-grouping runtime test")
-        city_of = re.search(r"const cityOf=.*?;\n", FINAL_ROUTING).group(0)
-        script = "const origin={id:'m'};" + city_of + block("travelText") + block("legsByCity") + """
+        script = "const TripRoute=require(" + json.dumps(str(ROOT / "assets/trip-route.js")) + ");" + block("travelText") + """
 const m={id:'m'},a={id:'a-poi-1',kind:'atracao',parentId:'a'},b={id:'a-poi-2',kind:'atracao',parentId:'a'},d={id:'d'};
-const r=legsByCity([m,a,b,d,m],[{duration:3600,distance:100000},{duration:60,distance:300},{duration:5400,distance:120000},{duration:9000,distance:200000}]);
+const r=TripRoute.legsByCity([m,a,b,d,m],[{duration:3600,distance:100000},{duration:60,distance:300},{duration:5400,distance:120000},{duration:9000,distance:200000}],'m');
 console.log(JSON.stringify({arrivals:[...r.arrival.keys()],intra:r.intra.get('a'),toA:r.arrival.get('a').from.id,text:[travelText(3600,100000),travelText(5400,9500),travelText(1500,300)]}));
 """
         result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
@@ -44,8 +43,8 @@ console.log(JSON.stringify({arrivals:[...r.arrival.keys()],intra:r.intra.get('a'
 
     def test_stale_leg_times_are_cleared_while_recalculating_or_after_failure(self):
         draw = FINAL_ROUTING[FINAL_ROUTING.index("window.drawLine=async function(){"):]
-        self.assertLess(draw.index("routeLegs=routeLegLinks(stopsInOrder);"), draw.index("await fetch("))
-        self.assertIn("catch{if(request===routeRequest){returnDriveHours=null;routeMetrics=null;routeLegs=routeLegLinks(stopsInOrder);", draw)
+        self.assertLess(draw.index("routeLegs=TripRoute.routeLegLinks(stopsInOrder,origin.id);"), draw.index("await router.calculate("))
+        self.assertIn("catch{returnDriveHours=null;routeMetrics=null;routeLegs=TripRoute.routeLegLinks(stopsInOrder,origin.id);", draw)
 
 
 if __name__ == "__main__":

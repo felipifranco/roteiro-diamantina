@@ -37,11 +37,15 @@ console.log(JSON.stringify({before,after}));
     def test_cities_and_regions_are_selectable_groups_without_fixed_route_status(self):
         if not shutil.which("node"):
             self.skipTest("Node.js is required for the group-classification runtime test")
-        helper = re.search(r"function isMapGroup\(s\)\{([^}]*)\}", PAGE)
-        assert helper is not None, "city/tour groups must be classified explicitly"
-        script = f"const schedule={{originId:'origem'}}; function isMapGroup(s){{{helper.group(1)}}}; console.log(JSON.stringify([isMapGroup({{kind:'cidade',attractions:[{{name:'tour'}}]}}),isMapGroup({{kind:'cidade',attractions:[]}}),isMapGroup({{kind:'regiao'}})]))"
+        self.assertNotIn("function isMapGroup(", PAGE, "unused legacy classification should not survive")
+        script = "const TripRoute=require('./assets/trip-route.js');" + """
+const groups=[{id:'a',kind:'cidade',attractions:[{name:'tour'}]},{id:'b',kind:'cidade',attractions:[]},{id:'c',kind:'regiao'}];
+const selected=new Set();
+console.log(JSON.stringify(groups.map(group=>TripRoute.setGroupActive(group,true,[],selected,new Map(),[],()=>false))));
+"""
         result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
         self.assertEqual(json.loads(result.stdout), [True, True, True])
+        self.assertIn("setGroupActive(s,true)", FINAL_ROUTING)
 
     def test_map_and_card_icons_share_one_route_state(self):
         helper = re.search(r"function routeIcon\(s,plan\)\{.*?^\s*\}", FINAL_ROUTING, re.S | re.M)
@@ -71,19 +75,13 @@ console.log(JSON.stringify([origin,destination,city,tour,optional,unselectedOpti
     def test_route_plan_gives_active_tours_one_card_and_map_label_not_the_parent(self):
         if not shutil.which("node"):
             self.skipTest("Node.js is required for the route-plan runtime test")
-        effective = re.search(
-            r"function effectiveRouteStops\(allStops,selectedIds\)\{.*?^\s*\}",
-            PAGE,
-            re.S | re.M,
-        )
         planner = re.search(
             r"function routePlan\(\)\{.*?^\s*\}",
             FINAL_ROUTING,
             re.S | re.M,
         )
-        self.assertIsNotNone(effective)
         self.assertIsNotNone(planner)
-        script = effective.group(0) + """
+        script = "const TripRoute=require('./assets/trip-route.js');" + """
 const schedule={destinationId:'diamantina',destinationDate:'2026-10-09'};
 const origin={id:'mirassol',kind:'cidade'},destination={id:'diamantina',kind:'cidade'};
 const city={id:'cidade',kind:'regiao'},tour={id:'passeio',kind:'atracao',parentId:'cidade'};
@@ -108,13 +106,7 @@ console.log(JSON.stringify({labels:Object.fromEntries(plan.labels),points:[...pl
     def test_route_replaces_selected_city_with_its_active_tours(self):
         if not shutil.which("node"):
             self.skipTest("Node.js is required for the route-selection runtime test")
-        helper = re.search(
-            r"function effectiveRouteStops\(allStops,selectedIds\)\{.*?^\s*\}",
-            PAGE,
-            re.S | re.M,
-        )
-        self.assertIsNotNone(helper, "route selection must account for grouped attractions")
-        script = helper.group(0) + """
+        script = "const TripRoute=require('./assets/trip-route.js');" + """
 const schedule={destinationId:'diamantina'};
 const stops=[
  {id:'cidade',kind:'regiao'},
@@ -122,7 +114,7 @@ const stops=[
  {id:'diamantina',kind:'cidade'},
  {id:'casa-jk',kind:'atracao',parentId:'diamantina'}
 ];
-const ids=values=>effectiveRouteStops(stops,new Set(values)).map(s=>s.id);
+const ids=values=>TripRoute.effectiveRouteStops(stops,new Set(values),schedule).map(s=>s.id);
 console.log(JSON.stringify({cityOnly:ids(['cidade']),cityWithTour:ids(['cidade','passeio']),orphanTour:ids(['passeio']),fixedDestination:ids(['diamantina','casa-jk'])}));
 """
         result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
@@ -160,12 +152,7 @@ console.log(JSON.stringify({cityOnly:ids(['cidade']),cityWithTour:ids(['cidade',
     def test_city_tours_merge_sights_and_mapped_attractions_without_duplicates(self):
         if not shutil.which("node"):
             self.skipTest("Node.js is required for the tour-list runtime test")
-        helpers = [
-            re.search(r"const normalizeName=.*?;\n", FINAL_ROUTING).group(0),
-            re.search(r"const sameName=.*?;\n", FINAL_ROUTING).group(0),
-            re.search(r"function toursFor\(city\)\{.*?^\s*\}", FINAL_ROUTING, re.S | re.M).group(0),
-        ]
-        script = "const tourCache=new Map();const attractionStops=[{id:'c-poi-1',name:'Casa de JK',parentId:'c',kind:'atracao'},{id:'c-poi-2',name:'Mirante novo',parentId:'c',kind:'atracao'}];" + "".join(helpers) + """
+        script = "const TripRoute=require('./assets/trip-route.js');const attractionStops=[{id:'c-poi-1',name:'Casa de JK',parentId:'c',kind:'atracao'},{id:'c-poi-2',name:'Mirante novo',parentId:'c',kind:'atracao'}];const toursFor=city=>TripRoute.toursFor(city,attractionStops);" + """
 console.log(JSON.stringify(toursFor({id:'c',name:'Cidade',type:'historia',sights:['Centro histórico','Casa de JK']}).map(t=>[t.id,t.kind])));
 """
         result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
@@ -177,12 +164,13 @@ console.log(JSON.stringify(toursFor({id:'c',name:'Cidade',type:'historia',sights
     def test_removing_a_city_group_deactivates_its_tours_and_markers(self):
         handler = re.search(r"function setGroupActive\(group,active\)\{(.*?)^\s*\}", FINAL_ROUTING, re.S | re.M)
         self.assertIsNotNone(handler, "city group selection must have a single state handler")
-        self.assertIn("toursFor(group).forEach(tour=>{selected.delete(tour.id);hideMarker(tour)})", handler.group(1))
+        self.assertIn("TripRoute.setGroupActive(group,active,tours,selected,dates,manual,isRequired)", handler.group(1))
+        self.assertIn("tours.forEach(hideMarker)", handler.group(1))
 
     def test_tour_cannot_be_activated_without_its_city_group(self):
         handler = re.search(r"function setAttractionActive\(s,active\)\{(.*?)^\s*\}", FINAL_ROUTING, re.S | re.M)
         self.assertIsNotNone(handler)
-        self.assertIn("selected.has(s.parentId)", handler.group(1))
+        self.assertIn("TripRoute.setAttractionActive(s,active,selected,isRequired)", handler.group(1))
 
 
 if __name__ == "__main__":

@@ -1,5 +1,10 @@
 // Generated from data/pontos-de-parada.json and data/roteiro.json by scripts/generate_route_data.py. Do not edit.
 window.ROTEIRO_DATA = {
+  "routing": {
+    "endpoint": "https://router.project-osrm.org/route/v1",
+    "profile": "driving",
+    "timeoutMs": 20000
+  },
   "policies": {
     "maxDrivingHoursPerDay": 8,
     "destination": {

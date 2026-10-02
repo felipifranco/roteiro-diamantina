@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = (ROOT / "index.html").read_text(encoding="utf-8")
+ROUTE_MODULE = (ROOT / "assets/trip-route.js").read_text(encoding="utf-8")
 FINAL_ROUTING = PAGE.rsplit("// Datas individuais, estadias sugeridas e reordenação dos cartões.", 1)[1]
 
 
@@ -106,17 +107,13 @@ class RouteInteractionControlsTests(unittest.TestCase):
         self.assertLess(move_body.index("window.renderList()"), move_body.index("window.drawLine()"))
 
     def test_final_route_draw_has_local_request_counter_and_bounded_fetch(self):
-        draw_start = FINAL_ROUTING.index("window.drawLine=async function(){")
-        before_draw = FINAL_ROUTING[:draw_start]
-        draw = FINAL_ROUTING[draw_start:]
-        self.assertRegex(before_draw, r"let[^;]*routeRequest=0")
-        self.assertIn("new AbortController()", draw)
-        self.assertIn("setTimeout", draw)
-        self.assertIn("signal:controller.signal", draw)
-        self.assertIn("response.ok", draw)
+        self.assertIn("await router.calculate(plan)", FINAL_ROUTING)
+        self.assertIn("let sequence=0,controller=null", ROUTE_MODULE)
+        for part in ("new AbortController()", "setTimeout", "signal:current.signal", "response.ok"):
+            self.assertIn(part, ROUTE_MODULE)
 
     def test_attraction_cards_show_visit_duration_or_explicit_unknown(self):
-        self.assertIn("days:a.days||'Duração a confirmar'", PAGE)
+        self.assertIn("days:a.days||'Duração a confirmar'", ROUTE_MODULE)
         self.assertIn("Tempo estimado de visita: ${time}", PAGE)
 
     def test_fixed_diamantina_day_tours_are_included_in_the_route(self):
@@ -126,10 +123,8 @@ class RouteInteractionControlsTests(unittest.TestCase):
         self.assertIn("stopsInOrder=plan.routePoints", draw)
 
     def test_route_request_is_invalidated_before_aborting_previous_fetch(self):
-        draw_start = FINAL_ROUTING.index("window.drawLine=async function(){")
-        draw = FINAL_ROUTING[draw_start:]
-        request_id = draw.index("request=++routeRequest")
-        previous_abort = draw.index("if(routeController)routeController.abort()")
+        request_id = ROUTE_MODULE.index("request=++sequence")
+        previous_abort = ROUTE_MODULE.index("if(controller)controller.abort()")
         self.assertLess(request_id, previous_abort, "mark the previous request stale before aborting it")
 
 

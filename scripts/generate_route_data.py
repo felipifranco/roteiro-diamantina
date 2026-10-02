@@ -61,6 +61,7 @@ def assemble_data(catalog, plan):
     if type(plan.get("version")) is not int or plan["version"] != 1:
         raise ValueError("trip plan version must be the integer 1")
     data = copy.deepcopy(catalog)
+    data["routing"] = copy.deepcopy(plan.get("routing"))
     data["policies"] = copy.deepcopy(plan.get("policies"))
     schedule = copy.deepcopy(plan.get("schedule"))
     if not isinstance(schedule, dict):
@@ -214,6 +215,12 @@ def validate(data):
     route_stops = data.get("routeStops")
     if not isinstance(route_stops, list) or not route_stops:
         raise ValueError("routeStops must be a non-empty list")
+    routing = data.get("routing")
+    if (not isinstance(routing, dict)
+            or not isinstance(routing.get("endpoint"), str) or not routing["endpoint"].startswith("https://")
+            or not isinstance(routing.get("profile"), str) or not re.fullmatch(r"[a-zA-Z0-9_-]+", routing["profile"])
+            or type(routing.get("timeoutMs")) is not int or routing["timeoutMs"] <= 0):
+        raise ValueError("routing requires HTTPS endpoint, profile and positive integer timeoutMs")
     policies = data.get("policies")
     if not isinstance(policies, dict):
         raise ValueError("policies must be an object")
@@ -411,7 +418,7 @@ def _js_json(value):
 
 def render_app_data(data):
     route_stops = copy.deepcopy(data["routeStops"])
-    payload = {"policies": copy.deepcopy(data["policies"]), "schedule": copy.deepcopy(data["schedule"]), "routeStops": route_stops,
+    payload = {"routing": copy.deepcopy(data["routing"]), "policies": copy.deepcopy(data["policies"]), "schedule": copy.deepcopy(data["schedule"]), "routeStops": route_stops,
                "accessAlerts": copy.deepcopy(data.get("accessAlerts", [])),
                "sources": copy.deepcopy(data.get("sources", []))}
     return (

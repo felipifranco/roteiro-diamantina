@@ -20,6 +20,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="./data/route-data.generated.js"></script>
 <script src="./assets/trip-calendar.js"></script>
+<script src="./assets/trip-route.js"></script>
 <script>
 const schedule=window.ROTEIRO_DATA.schedule;
 const policies=window.ROTEIRO_DATA.policies;
@@ -28,7 +29,7 @@ function dataLink(item){const link=document.createElement('a');link.href=item.ur
 (window.ROTEIRO_DATA.sources||[]).forEach(item=>document.getElementById('routeSources').appendChild(dataLink(item)));
 
 const stops=window.ROTEIRO_DATA.routeStops;
-const attractionStops=stops.flatMap(city=>(city.attractions||[]).map((a,i)=>({...a,id:`${city.id}-poi-${i+1}`,name:a.name,parent:city.name,parentId:city.id,kind:'atracao',routeable:a.locationAccuracy!=='city-center'&&!a.sameSiteAs,type:a.type||city.type,days:a.days||'Duração a confirmar',sights:[],url:city.url})));
+const attractionStops=TripRoute.attractionStops(stops);
 const routeStops=[...stops,...attractionStops.filter(s=>s.routeable)];
 const map=L.map('map',{zoomControl:true,scrollWheelZoom:true}).setView([-19.4,-45.9],7);L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 const selected=new Set(routeStops.filter(s=>s.selectedByDefault).map(s=>s.id));const markers={};let line=null;let activeFilter='all';
@@ -92,44 +93,20 @@ function popup(s,extra=false,inRoute=false,date=''){
 function addMarker(s){const idx=stops.indexOf(s)+1,label=s.id===schedule.originId?'M':s.kind==='alerta'?'!':idx;const m=L.marker([s.lat,s.lon],{icon:pin(s,label)}).bindPopup(popup(s),{autoPan:false});m.on('click',()=>revealMapSelection(s));m.on('popupopen',()=>markMapRouteLink(s,m));m.on('popupclose',clearMapRouteLink);m.addTo(map);markers[s.id]=m}
 function addAttractionMarker(s){const m=L.marker([s.lat,s.lon],{icon:pin(s,'•')}).bindPopup(popup(s,true),{autoPan:false});m.on('click',()=>{revealMapSelection(s);focusStop(s,stopMapZoom(s))});m.on('popupopen',()=>markMapRouteLink(s,m));m.on('popupclose',clearMapRouteLink);m.addTo(map);markers[s.id]=m}
 stops.forEach(addMarker);
-function buildStopCard(s){const isOptional=!selected.has(s.id);const number=stops.indexOf(s)+1;const card=document.createElement('article');card.className=`stop ${isOptional?'optional-stop':''}`;const attractionLinks=s.sights.length?s.sights.map(name=>`<a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name+' '+s.name)}">${name} ↗</a>`).join(''):'<span class="origin-note">Ponto de partida e retorno.</span>';const checkbox=s.id!==schedule.originId&&s.kind!=='alerta'?`<input class="stop-check" type="checkbox" aria-label="Incluir ${s.name} na rota" ${selected.has(s.id)?'checked':''}>`:'';card.innerHTML=`<div class="stop-head"><span class="num ${isOptional?'optional-num':''}">${isOptional?'↗':number}</span><button class="stop-focus" type="button"><span class="stop-name">${s.name}</span><span class="stop-kind">${isOptional?'DESVIO OPCIONAL':s.type==='historia'?'HISTÓRIA':'NATUREZA'}</span></button>${checkbox}</div><details class="attractions"><summary>${s.sights.length?'Atrações e links':'Início e retorno'}</summary><div class="attraction-links">${attractionLinks}<a target="_blank" rel="noopener" href="${s.url}">Página da cidade ↗</a></div></details>`;card.querySelector('.stop-focus').addEventListener('click',()=>focusStop(s,isOptional?8:9));const input=card.querySelector('.stop-check');if(input)input.addEventListener('change',()=>{if(input.checked)selected.add(s.id);else selected.delete(s.id);drawLine()});return card}
-function renderList(){const root=document.getElementById('stops');root.innerHTML='';stops.filter(s=>s.kind!=='alerta').forEach(s=>root.appendChild(buildStopCard(s)))}
-let routeRequest=0;async function drawLine(){if(line)map.removeLayer(line);const ordered=stops.filter(s=>selected.has(s.id));const status=document.getElementById('routeStatus');if(ordered.length<2){status.textContent='Marque ao menos duas paradas para traçar a rota.';return}const request=++routeRequest;status.textContent='Calculando rota rodoviária…';const routePoints=[...ordered,ordered[0]];const coords=routePoints.map(s=>`${s.lon},${s.lat}`).join(';');try{const response=await fetch(`https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson&steps=false`);const result=await response.json();if(request!==routeRequest)return;if(!result.routes?.length)throw new Error('Rota não encontrada');const route=result.routes[0];line=L.geoJSON(route.geometry,{style:{color:'#35694f',weight:4,opacity:.82}}).addTo(map);const km=Math.round(route.distance/1000).toLocaleString('pt-BR');const hours=Math.round(route.duration/3600);status.textContent=`Rota estimada: ${km} km · ${hours} h ao volante, ida e volta`; }catch{if(request===routeRequest)status.textContent='Não foi possível carregar o traçado rodoviário agora; os pontos continuam disponíveis.'}}
-renderList();document.getElementById('allStops').onclick=()=>{stops.filter(s=>s.kind!=='alerta').forEach(s=>selected.add(s.id));renderList();drawLine()};map.fitBounds(L.latLngBounds(stops.filter(s=>s.kind!=='alerta').map(s=>[s.lat,s.lon])),{padding:[40,40]});window.addEventListener('resize',()=>map.invalidateSize());
+map.fitBounds(L.latLngBounds(stops.filter(s=>s.kind!=='alerta').map(s=>[s.lat,s.lon])),{padding:[40,40]});window.addEventListener('resize',()=>map.invalidateSize());
 </script>
 <style>
 /* Ajustes de rota dinâmica e legibilidade */
 .map-label{top:16px;left:auto;right:62px;min-width:270px;max-width:min(440px,calc(100% - 90px));pointer-events:none}.map-label b{display:block;margin-bottom:3px}.map-label #routeStatus{font-size:12px;line-height:1.35}.trip-summary{padding:11px 13px;margin:0 0 12px;background:#edf3e9;border-radius:11px;color:#35493c;font-size:12px}.trip-summary b{display:block;font-size:14px;margin-bottom:3px}.trip-summary p{margin:3px 0}.stop{cursor:default!important}.stop-head{grid-template-columns:29px 1fr 24px}.stop-focus{width:100%}.attraction-links{padding:8px 10px 11px;background:#fbfcf8}.attraction-item{padding:7px 8px;border:1px solid #e7ece3;border-radius:8px;background:#fff}.attraction-item>a{font-weight:650}.access-meta{margin-top:5px;color:#5c665e;font-size:10px;line-height:1.4}.access-meta strong{color:#6b4b20}.effort{font-size:9px!important;font-weight:800;text-transform:uppercase;letter-spacing:.05em}.effort.easy{color:#24623e}.effort.moderate{color:#8a6418}.effort.hard{color:#a33d2d}.effort.unknown{color:#626b64}.route-order{background:var(--green)!important;color:white!important}.optional-heading{padding:6px 2px;border-top:1px solid var(--line)}.map-label{background:#fffefaee}.map-label #routeStatus{color:var(--ink)}@media(max-width:800px){.map-label{top:9px;right:58px;max-width:calc(100% - 70px);min-width:0;padding:8px 10px}.map-label b{font-size:13px}.map-label #routeStatus{font-size:10px}.trip-summary{padding:8px 10px;margin-bottom:8px}.trip-summary b{font-size:12px}.stop-head{grid-template-columns:25px 1fr 23px}.stop .num{width:23px;height:23px}}
 </style>
 <script>
-// Rota otimizada: origem e destino fixos; demais paradas reordenadas pelo OSRM.
-const tripStart=new Date(`${schedule.startDate}T12:00:00`);
-const baselineArrival=new Date(`${schedule.destinationDate}T12:00:00`);
 const origin=stops.find(s=>s.id===schedule.originId), destination=stops.find(s=>s.id===schedule.destinationId);
-let itineraryOrder=[];
-const stayRanges=Object.fromEntries(stops.filter(s=>s.stayDays).map(s=>[s.id,s.stayDays]));
 function effortFor(item){const effort=item.accessEffort;return effort?[effort.label,effort.note,effort.level]:['A confirmar','Acesso e esforço não confirmados; consultar o responsável antes de ir.','unknown']}
 function accessDetail(value){const text=(value||'').trim(),normalized=text.toLocaleLowerCase('pt-BR');return text&&!['—','a confirmar','não confirmado','acesso ao interior a confirmar com a instituição.'].some(placeholder=>normalized===placeholder||normalized.startsWith(`${placeholder} —`))?text:''}
 function accessMeta(s){const note=accessDetail(s.scheduleNote),access=accessDetail(s.accessibility);return {text:note||access,isAccessibility:!note&&!!access}}
 function routeableAttractionInfo(s){const access=accessMeta(s),links=(s.visitLinks||[]).map(item=>`<a target="_blank" rel="noopener" href="${item.url}">${item.label} ↗</a>`).join('');return `${access.text?`<div class="access-meta">${access.isAccessibility?'<span class="visually-hidden">Acessibilidade: </span><span class="accessibility-icon" aria-hidden="true">♿</span> ':''}${access.text}</div>`:''}${visitRuleMarkup(s)}${links?`<div class="tour-visit-links">${links}</div>`:''}`}
 attractionStops.filter(s=>s.routeable).forEach(addAttractionMarker);
-const formatDate=d=>d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'});
 function ensureTripSummary(){if(!document.getElementById('tripSummary')){const el=document.createElement('section');el.id='tripSummary';el.className='trip-summary';document.querySelector('.mast').appendChild(el)}}
-function isMapGroup(s){return s.id!==schedule.originId&&(s.kind==='cidade'||s.kind==='regiao')}
-function effectiveRouteStops(allStops,selectedIds){
- const active=allStops.filter(s=>selectedIds.has(s.id)&&(s.kind!=='atracao'||selectedIds.has(s.parentId)));
- const parentsWithTours=new Set(active.filter(s=>s.kind==='atracao'&&s.parentId).map(s=>s.parentId));
- return active.filter(s=>s.kind==='atracao'||s.id===schedule.originId||s.id===schedule.destinationId||!parentsWithTours.has(s.id));
-}
-function selectedStops(){return effectiveRouteStops(routeStops,selected).filter(s=>s.id!==origin.id&&s.id!==destination.id&&s.kind!=='alerta')}
-function rangeText([lo,hi]){return lo===hi?`${lo} dia${lo===1?'':'s'}`:`${lo}–${hi} dias`}
-function updateTripSummary(){ensureTripSummary();const chosen=selectedStops();const low=chosen.reduce((n,s)=>n+(stayRanges[s.id]?.[0]||0),0),high=chosen.reduce((n,s)=>n+(stayRanges[s.id]?.[1]||0),0);const from=new Date(baselineArrival);from.setDate(from.getDate()+Math.ceil(low));const to=new Date(baselineArrival);to.setDate(to.getDate()+Math.ceil(high));const sum=document.getElementById('tripSummary');sum.innerHTML=`<b>Calendário estimado</b><p>Saída: <strong>${formatDate(tripStart)}</strong> · ${destination.name} sem paradas extras: <strong>${formatDate(baselineArrival)}</strong></p><p>${chosen.length?`Paradas selecionadas acrescentam ${rangeText([low,high])} de visita.`:'Nenhuma parada intermediária selecionada.'}</p><p>Chegada estimada a ${destination.name}: <strong>${formatDate(from)}${formatDate(to)!==formatDate(from)?' a '+formatDate(to):''}</strong>. Estimativa soma noites/dias das paradas marcadas, não os horários de check-in; dirigir e descansar pode alterar as datas.</p>`}
-function orderedStops(){return [origin,...itineraryOrder.filter(s=>s.id!==origin.id&&s.id!==destination.id),destination]}
-function renderList(){const root=document.getElementById('stops');root.innerHTML='';const ordered=orderedStops();const picked=new Set(ordered.map(s=>s.id));ordered.forEach((s,i)=>{const card=buildStopCard(s);const num=card.querySelector('.num');if(num&&s.id!==schedule.originId)num.textContent=String(i+1);if(selected.has(s.id)||s===origin||s===destination)root.appendChild(card)});const remaining=stops.filter(s=>!picked.has(s.id)&&s.kind!=='alerta');if(remaining.length){const heading=document.createElement('div');heading.className='optional-heading';heading.textContent='Outras paradas · marque para incluir';root.appendChild(heading);remaining.forEach(s=>root.appendChild(buildStopCard(s)))}stops.filter(s=>s.kind==='alerta'&&!selected.has(s.id)).forEach(s=>root.appendChild(buildStopCard(s)));updateTripSummary()}
-async function drawLine(){if(line)map.removeLayer(line);const status=document.getElementById('routeStatus');const chosen=selectedStops();if(!selected.has(origin.id)||!selected.has(destination.id)){status.textContent=`Origem e ${destination.name} são fixas; mantenha ambas marcadas.`;return}const request=++routeRequest;status.textContent='Reordenando paradas e calculando estrada…';const points=[origin,...chosen,destination];const coords=points.map(s=>`${s.lon},${s.lat}`).join(';');try{const url=`https://router.project-osrm.org/trip/v1/driving/${coords}?roundtrip=false&source=first&destination=last&overview=full&geometries=geojson&steps=false`;const response=await fetch(url);const result=await response.json();if(request!==routeRequest)return;if(!result.trips?.length)throw new Error('Rota não encontrada');const indexed=result.waypoints.map((w,i)=>({order:w.waypoint_index,input:points[i]})).sort((a,b)=>a.order-b.order);itineraryOrder=indexed.map(x=>x.input).filter(s=>s.id!==origin.id&&s.id!==destination.id);orderedStops().forEach((s,i)=>markers[s.id].setIcon(pin(s,s===origin?'I':i+1)));stops.filter(s=>!selected.has(s.id)&&markers[s.id]).forEach(s=>markers[s.id].setIcon(pin(s,s.kind==='alerta'?'!':'+')));const trip=result.trips[0];line=L.geoJSON(trip.geometry,{style:{color:'#35694f',weight:5,opacity:.86}}).addTo(map);const km=Math.round(trip.distance/1000).toLocaleString('pt-BR'),hours=Math.round(trip.duration/3600);status.textContent=`${itineraryOrder.length+2} pontos · ${km} km · ${hours} h ao volante · sequência otimizada`;renderList()}catch{if(request===routeRequest){itineraryOrder=chosen;status.textContent='Rota indisponível agora · sequência provisória exibida.';renderList()}}}
-// Links em blocos independentes, com nível de esforço e notas de acesso.
-function buildStopCard(s){const isOptional=!selected.has(s.id),isAttraction=s.kind==='atracao';const card=document.createElement('article');card.className=`stop ${isOptional?'optional-stop':''} ${isAttraction?'attraction-stop':''}`;const checkbox=s.id!==schedule.originId&&s.kind!=='alerta'&&s.id!==schedule.destinationId?`<input class="stop-check" type="checkbox" aria-label="Incluir ${s.name} na rota" ${selected.has(s.id)?'checked':''}>`:'';const sights=s.sights.length?s.sights.map((name,i)=>{const [effort,note,cls]=effortFor((s.attractions||[]).find(a=>a.name===name)||{});return `<div class="attraction-item"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name+' '+s.name)}">${name} ↗</a>${cls==='unknown'?'':`<div class="access-meta"><span class="effort ${cls}">Acesso: ${effort}</span><br>${note}</div>`}</div>`}).join(''):'<span class="origin-note">Início da viagem.</span>';const details=isAttraction?`<div class="attraction-item"><span>Parada turística em ${s.parent}</span>${routeableAttractionInfo(s)}</div>`:sights;card.innerHTML=`<div class="stop-head"><span class="num ${isOptional?'optional-num':''}">${s===origin?'M':isOptional?'↗':selected.has(s.id)?orderedStops().findIndex(x=>x.id===s.id)+1:'+'}</span><button class="stop-focus" type="button"><span class="stop-name">${s.name}</span><span class="stop-kind">${isAttraction?`PONTO TURÍSTICO · ${s.parent}`:s===origin?`${origin.name.split(' · ')[0].toUpperCase()} · ORIGEM`:isOptional?'DESVIO OPCIONAL':s.type==='historia'?'HISTÓRIA / CULTURA':'NATUREZA'}${s===destination?' · DESTINO FIXO':''}</span></button>${checkbox}</div><details class="attractions"><summary>${isAttraction?'Sobre o ponto turístico':s.sights.length?'Passeios e acesso':'Início / destino'}</summary><div class="attraction-links">${details}<div class="attraction-item"><a target="_blank" rel="noopener" href="${s.url}">Informações oficiais / cidade ↗</a></div></div></details>`;card.querySelector('.stop-focus').addEventListener('click',()=>focusStop(s,isOptional?8:9));const input=card.querySelector('.stop-check');if(input)input.addEventListener('change',()=>{if(input.checked)selected.add(s.id);else selected.delete(s.id);drawLine()});return card}
-renderList();
 </script>
 <style>
 .schedule-heading{margin:12px 0 6px;padding:8px 9px;border-radius:8px;background:#edf3e9;color:#365c44;font-size:11px;font-weight:800;letter-spacing:.04em}.fixed-heading{background:#eaf0fb;color:#334f7a;border:1px solid #cdd9ef}.schedule-warning{padding:8px;border-radius:7px;background:#fff0e8;color:#8b432b}.stop-head:has(.stop-phase){grid-template-columns:25px minmax(0,1fr) 22px auto}.stop-phase{max-width:132px;border:1px solid var(--line);border-radius:7px;padding:5px 6px;background:#fff;color:var(--ink);font:10px/1.2 "Segoe UI",sans-serif}.trip-summary{line-height:1.45}.trip-summary p{margin:5px 0}@media(max-width:800px){.schedule-heading{margin:7px 0 4px;padding:6px 8px;font-size:10px}.stop-head:has(.stop-phase){grid-template-columns:24px minmax(0,1fr) 22px}.stop-phase{grid-column:2/-1;grid-row:2;max-width:140px;margin:0 0 3px}.trip-summary p{font-size:10px}}
@@ -143,7 +120,9 @@ renderList();
 // Roteiro principal: paradas efetivas da rota, referências de grupos no mapa e itens fora do roteiro.
 (()=>{
  let stays=structuredClone(schedule.stays||[]);
- const dates=new Map(),manual=[],fixedDates=new Map([[origin.id,schedule.startDate],[destination.id,schedule.destinationDate]]),openCards=new Set(),tourCache=new Map(),dayNotes={};let draggedId=null,routeRequest=0,routeController=null,returnDriveHours=null,routeMetrics=null,routeLegs=null;
+ const dates=new Map(),manual=[],fixedDates=new Map([[origin.id,schedule.startDate],[destination.id,schedule.destinationDate]]),openCards=new Set(),tourCache=new Map(),dayNotes={};let draggedId=null,returnDriveHours=null,routeMetrics=null,routeLegs=null;
+ const router=TripRoute.createRouter(window.ROTEIRO_DATA.routing);
+ ensureTripSummary();
  const dayNotesStorageKey='roteiro-diamantina:day-notes:v2';
  try{localStorage.removeItem('roteiro-diamantina:day-notes:v1');const savedNotes=JSON.parse(localStorage.getItem(dayNotesStorageKey)||'{}');if(savedNotes&&typeof savedNotes==='object'&&!Array.isArray(savedNotes))Object.assign(dayNotes,savedNotes)}catch{}
  // Datas iniciais resolvidas a partir das visitas do planejamento JSON.
@@ -173,15 +152,10 @@ renderList();
  const isFixed=s=>TripCalendar.isFixedStop(s,schedule,policies.destination);
  const isRequired=s=>TripCalendar.isRequiredStop(s,schedule,policies.destination);
  const inTrip=s=>isRequired(s)||selected.has(s.id);
- const normalizeName=value=>value.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
- const sameName=(a,b)=>{const x=normalizeName(a),y=normalizeName(b);return !!x&&!!y&&(x===y||(x.length>4&&y.length>4&&(x.includes(y)||y.includes(x))))};
- // Passeios de uma cidade: componentes do mesmo local compartilham o ponto da ficha principal.
+ // Cache the catalog-derived tour list for DOM rendering.
  function toursFor(city){
-  if(tourCache.has(city.id))return tourCache.get(city.id);
-  const mapped=attractionStops.filter(tour=>tour.parentId===city.id),placed=new Set(),list=[];
-  (city.sights||[]).forEach((name,i)=>{const tour=mapped.find(t=>!placed.has(t.id)&&sameName(t.name,name));if(tour){placed.add(tour.id);list.push(tour)}else list.push({id:`${city.id}-sight-${i+1}`,name,parent:city.name,parentId:city.id,kind:'atracao',routeable:false,type:city.type})});
-  mapped.filter(t=>!placed.has(t.id)).forEach(t=>list.push(t));
-  tourCache.set(city.id,list);return list
+  if(!tourCache.has(city.id))tourCache.set(city.id,TripRoute.toursFor(city,attractionStops));
+  return tourCache.get(city.id)
  }
  const hasSelectedTours=city=>toursFor(city).some(t=>selected.has(t.id));
  const orderedSelected=()=>TripCalendar.orderVisits(stops.filter(s=>!isFixed(s)&&s.kind!=='alerta'&&selected.has(s.id)).map(s=>{ensureDate(s);return s}),routeDate,manual);
@@ -193,18 +167,16 @@ renderList();
  function syncAttractionVisibility(plan=routePlan()){
   attractionStops.filter(s=>s.routeable).forEach(s=>{if(selected.has(s.parentId)||openCards.has(s.parentId)){syncMarker(s);const routed=plan.order.includes(s);setMapIcon(s,routeIcon(s,plan),routed?routeDate(s):null)}else hideMarker(s)})
  }
- function forget(id){selected.delete(id);dates.delete(id);const i=manual.indexOf(id);if(i>=0)manual.splice(i,1)}
  function setAttractionActive(s,active){
-  if(isRequired(s)&&!active)return;
-  if(active&&(!s.routeable||!selected.has(s.parentId)))return;
-  if(active)selected.add(s.id);else selected.delete(s.id);
+  if(!TripRoute.setAttractionActive(s,active,selected,isRequired))return;
   syncMarker(s);openCards.add(s.parentId);
   window.renderList();if(active)requestAnimationFrame(()=>revealMapSelection(s));window.drawLine()
  }
  function setGroupActive(group,active){
-  if(group.kind==='alerta'||(!active&&(isRequired(group)||toursFor(group).some(isRequired))))return;
-  if(active){selected.add(group.id);ensureDate(group);openCards.add(group.id)}
-  else{forget(group.id);openCards.delete(group.id);toursFor(group).forEach(tour=>{selected.delete(tour.id);hideMarker(tour)})}
+  const tours=toursFor(group);
+  if(!TripRoute.setGroupActive(group,active,tours,selected,dates,manual,isRequired))return;
+  if(active){ensureDate(group);openCards.add(group.id)}
+  else{openCards.delete(group.id);tours.forEach(hideMarker)}
   window.renderList();if(active)requestAnimationFrame(()=>revealMapSelection(group));window.drawLine()
  }
  function tourActionButton(tour){
@@ -230,14 +202,7 @@ renderList();
   row.appendChild(info);if(editable&&tour.routeable)row.appendChild(tourActionButton(tour));return row
  }
  // Tempo e distância entre trechos (OSRM): chegada a cada cidade, retorno a Mirassol e deslocamentos entre passeios da mesma cidade.
- const cityOf=s=>s.kind==='atracao'?s.parentId:s.id;
  function travelText(seconds,meters){const minutes=Math.max(1,Math.round(seconds/60)),h=Math.floor(minutes/60),m=minutes%60,km=meters/1000;return `${h?`${h} h${m?` ${m} min`:''}`:`${m} min`} · ${km<10?km.toLocaleString('pt-BR',{maximumFractionDigits:1}):Math.round(km).toLocaleString('pt-BR')} km`}
- function legsByCity(points,legs){
-  const arrival=new Map(),intra=new Map();
-  legs.forEach((leg,i)=>{const from=points[i],to=points[i+1];if(!from||!to)return;const item={from,to,duration:leg.duration,distance:leg.distance};if(i===legs.length-1&&to.id===origin.id)arrival.set('return',item);else if(cityOf(from)===cityOf(to)){const sum=intra.get(cityOf(to))||{duration:0,distance:0};intra.set(cityOf(to),{duration:sum.duration+leg.duration,distance:sum.distance+leg.distance})}else arrival.set(cityOf(to),item)});
-  return {arrival,intra}
- }
- function routeLegLinks(points){const arrival=new Map();points.slice(1).forEach((to,i)=>{const from=points[i];if(!from||!to)return;if(to.id===origin.id)arrival.set('return',{from,to});else if(cityOf(from)!==cityOf(to))arrival.set(cityOf(to),{from,to})});return {arrival,intra:new Map()}}
  function legConnector(leg){
   const row=document.createElement('div');row.className='leg-connector';
   if(Number.isFinite(leg.duration)&&Number.isFinite(leg.distance)){const time=document.createElement('span');time.className='leg-time';time.textContent=`🚗 ${travelText(leg.duration,leg.distance)}`;row.appendChild(time)}
@@ -321,7 +286,7 @@ renderList();
  function drawSummary(order){const home=returnDate(order),days=home===null?null:TripCalendar.calendarDays(schedule.startDate,home).length;const conflict=inTrip(destination)&&isFixed(destination)&&TripCalendar.hasDestinationConflict(stays,routeDate(destination),destination.id);const sum=document.getElementById('tripSummary');sum.innerHTML=`<div class="trip-facts"><span><b>Saída</b> ${fmt(schedule.startDate)}</span><span><b>Retorno previsto</b> ${home===null?'a estimar':fmt(home)}</span></div><p class="trip-caption"><span>${home===null?'Retorno ainda não estimado.':`${days} dias estimados · ${order.length} parada${order.length===1?'':'s'} selecionada${order.length===1?'':'s'}`}</span>${routeMetrics?`<span>${routeMetrics.km} km · ${routeMetrics.hours} h ao volante</span>`:''}</p>${conflict?`<p class="schedule-warning"><strong>Atenção:</strong> a hospedagem em outra parada ultrapassa ${fmt(schedule.destinationDate)}. Ajuste a hospedagem; ${destination.name} permanece fixa.</p>`:''}`}
  // Numeração compartilhada entre cartões e mapa: cidades recebem 1, 2, 3…; seus passeios com ponto próprio, 3a, 3b…
  function routePlan(){
-  const groups=orderedSelected().filter(s=>s.kind!=='atracao'&&s!==destination),routed=new Set(effectiveRouteStops(routeStops,selected).map(s=>s.id));
+  const groups=orderedSelected().filter(s=>s.kind!=='atracao'&&s!==destination),routed=new Set(TripRoute.effectiveRouteStops(routeStops,selected,schedule).map(s=>s.id));
   return TripCalendar.planRoute(groups,origin,destination,routeDate,toursFor,routed,policies.destination,inTrip(destination));
  }
  function routeIcon(s,plan){
@@ -355,15 +320,12 @@ renderList();
   if(scroller)scroller.scrollTop=scrollTop;
  };
  window.drawLine=async function(){
-  const request=++routeRequest;
-  if(routeController)routeController.abort();
-  const controller=new AbortController();routeController=controller;
-  const timeout=setTimeout(()=>controller.abort(),20000);
   if(line){map.removeLayer(line);line=null}
   const status=document.getElementById('routeStatus'),plan=routePlan(),order=plan.order,stopsInOrder=plan.routePoints;
-  returnDriveHours=null;routeMetrics=null;routeLegs=routeLegLinks(stopsInOrder);refreshMarkers(plan,stopsInOrder);setOriginReturnNote('Recalculando rota; estimativa indisponível.');drawSummary(order);const returnTitle=document.querySelector('.return-day .day-header');if(returnTitle)returnTitle.textContent=returnDateLabel(order);window.renderList();
+  returnDriveHours=null;routeMetrics=null;routeLegs=TripRoute.routeLegLinks(stopsInOrder,origin.id);refreshMarkers(plan,stopsInOrder);setOriginReturnNote('Recalculando rota; estimativa indisponível.');drawSummary(order);const returnTitle=document.querySelector('.return-day .day-header');if(returnTitle)returnTitle.textContent=returnDateLabel(order);window.renderList();
   status.textContent='Calculando trajeto rodoviário…';
-  try{const coords=stopsInOrder.map(s=>`${s.lon},${s.lat}`).join(';'),response=await fetch(`https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson&steps=false`,{signal:controller.signal});if(!response.ok)throw new Error(`OSRM HTTP ${response.status}`);const j=await response.json();if(request!==routeRequest)return;if(!j.routes?.length)throw new Error('sem rota');const route=j.routes[0];const returnStart=plan.returnStart;routeLegs=legsByCity(stopsInOrder,route.legs||[]);returnDriveHours=(route.legs||[]).slice(returnStart).reduce((n,l)=>n+l.duration,0)/3600;line=L.geoJSON(route.geometry,{style:{color:'#35694f',weight:5,opacity:.86}}).addTo(map);const km=Math.round(route.distance/1000).toLocaleString('pt-BR'),hours=Math.round(route.duration/3600);routeMetrics={km,hours};setOriginReturnNote(`Saída ${fmt(schedule.startDate)} · retorno estimado a ${origin.name.split(' · ')[0]} em ${fmt(returnDate(order))}`);status.textContent=`${km} km · ${hours} h ao volante`;drawSummary(order);window.renderList()}catch{if(request===routeRequest){returnDriveHours=null;routeMetrics=null;routeLegs=routeLegLinks(stopsInOrder);setOriginReturnNote('Rota indisponível; estimativa de retorno não calculada.');status.textContent=`Rota indisponível; as datas selecionadas e ${fmt(schedule.destinationDate)} fixo permanecem.`;window.renderList()}}finally{clearTimeout(timeout);if(routeController===controller)routeController=null}
+  const result=await router.calculate(plan);if(!result)return;
+  try{if(result.error)throw result.error;const route=result.route;routeLegs=TripRoute.legsByCity(stopsInOrder,route.legs||[],origin.id);returnDriveHours=result.returnDriveHours;line=L.geoJSON(route.geometry,{style:{color:'#35694f',weight:5,opacity:.86}}).addTo(map);const km=Math.round(route.distance/1000).toLocaleString('pt-BR'),hours=Math.round(route.duration/3600);routeMetrics={km,hours};setOriginReturnNote(`Saída ${fmt(schedule.startDate)} · retorno estimado a ${origin.name.split(' · ')[0]} em ${fmt(returnDate(order))}`);status.textContent=`${km} km · ${hours} h ao volante`;drawSummary(order);window.renderList()}catch{returnDriveHours=null;routeMetrics=null;routeLegs=TripRoute.routeLegLinks(stopsInOrder,origin.id);setOriginReturnNote('Rota indisponível; estimativa de retorno não calculada.');status.textContent='Rota indisponível; as datas selecionadas permanecem.';window.renderList()}
  };
  // "Selecionar todas" ignorava datas e passeios; a inclusão agora é feita cidade a cidade.
  document.getElementById('allStops')?.remove();

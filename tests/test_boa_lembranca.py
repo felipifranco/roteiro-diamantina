@@ -44,16 +44,14 @@ class BoaLembrancaTests(unittest.TestCase):
         if not shutil.which("node"):
             self.skipTest("Node.js is required for route behavior")
         page = (ROOT / "index.html").read_text(encoding="utf-8")
-        helper = re.search(r"function effectiveRouteStops\(allStops,selectedIds\)\{.*?^\s*\}", page, re.S | re.M)
-        self.assertIsNotNone(helper)
-        script = helper.group(0) + """
+        script = "const TripRoute=require(" + json.dumps(str(ROOT / "assets/trip-route.js")) + ");" + """
 const schedule={destinationId:'diamantina'};
 const restaurant={id:'boa-relicario-gastronomia',kind:'restaurante'};
 const city={id:'diamantina',kind:'cidade'};
 const stops=[city,restaurant];
 console.log(JSON.stringify([
- effectiveRouteStops(stops,new Set(['diamantina'])).map(s=>s.id),
- effectiveRouteStops(stops,new Set(['diamantina','boa-relicario-gastronomia'])).map(s=>s.id)
+ TripRoute.effectiveRouteStops(stops,new Set(['diamantina']),schedule).map(s=>s.id),
+ TripRoute.effectiveRouteStops(stops,new Set(['diamantina','boa-relicario-gastronomia']),schedule).map(s=>s.id)
 ]));
 """
         result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
