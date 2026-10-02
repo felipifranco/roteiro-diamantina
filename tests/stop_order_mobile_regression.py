@@ -53,12 +53,11 @@ assert "d!==schedule.destinationDate||d===selectedDate" in html, "city date opti
 assert "candidates(date).map" in html, "date options should include the inherited date"
 assert "routeStops.forEach(s=>" in html, "selected attractions must update markers and popups"
 schedule = data["schedule"]
-assert schedule["initialStopOrder"] == ['peiro', 'araxa', 'cordisburgo'], "initial stop order should be configured in the JSON"
+assert schedule["initialStopOrder"] == ['peiro', 'araxa', 'cordisburgo', 'setelagoas', 'belohorizonte'], "initial stop order should be configured in the JSON"
 assert "const initialStops=schedule.initialStopOrder" in html, "the page should read the initial stop order from generated data"
 assert "if(s.initialDate)dates.set(s.id,s.initialDate)" in html, "initial stop dates should come from the JSON"
 defaults = {stop["id"]: stop.get("selectedByDefault", False) for stop in data["routeStops"]}
-assert all(defaults.get(stop_id) for stop_id in ('mirassol', 'diamantina', 'peiro', 'araxa', 'cordisburgo')), "origin, destination, and the three initial cities must be configured in the JSON"
-assert not defaults.get('setelagoas', False), "Sete Lagoas must not start selected"
+assert all(defaults.get(stop_id) for stop_id in ('mirassol', 'diamantina', 'peiro', 'araxa', 'cordisburgo', 'setelagoas', 'belohorizonte')), "origin, destination, and the selected route cities must be configured in the JSON"
 attractions = {stop["id"]: {item["name"]: item.get("selectedByDefault", False) for item in stop.get("attractions", [])} for stop in data["routeStops"]}
 assert all(attractions['peiro'].values()), "both Peirópolis tours must start selected"
 assert all(selected for name, selected in attractions['cordisburgo'].items() if name != 'Gruta do Maquiné'), "Cordisburgo attractions except Gruta do Maquiné must start selected"

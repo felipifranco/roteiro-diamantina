@@ -8,12 +8,14 @@ window.ROTEIRO_DATA = {
     "initialStopOrder": [
       "peiro",
       "araxa",
-      "cordisburgo"
+      "cordisburgo",
+      "setelagoas",
+      "belohorizonte"
     ],
     "originId": "mirassol",
     "dayNotes": [
       {
-        "date": "2026-10-08",
+        "date": "2026-10-11",
         "text": "Curvelo tem mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base.",
         "replaces": [
           "Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base.",
@@ -3026,7 +3028,7 @@ window.ROTEIRO_DATA = {
         0.5,
         1
       ],
-      "initialDate": "2026-10-08",
+      "initialDate": "2026-10-11",
       "overnight": true
     },
     {
@@ -3129,7 +3131,9 @@ window.ROTEIRO_DATA = {
       "stayDays": [
         1,
         2
-      ]
+      ],
+      "initialDate": "2026-10-11",
+      "selectedByDefault": true
     },
     {
       "id": "brumadinho",
@@ -5170,7 +5174,9 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "initialDate": "2026-10-11",
+      "selectedByDefault": true
     },
     {
       "id": "presidentekubitschek",
