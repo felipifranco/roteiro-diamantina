@@ -65,7 +65,7 @@ class RouteInteractionControlsTests(unittest.TestCase):
                 if attraction["locationAccuracy"] == "city-center":
                     for field in (
                         "description", "agencyRationale", "visitType",
-                        "publishedDuration", "oneYearOld", "accessibility",
+                        "publishedDuration", "oneYearOld", "access",
                     ):
                         self.assertIn(field, attraction)
         mirante = next(

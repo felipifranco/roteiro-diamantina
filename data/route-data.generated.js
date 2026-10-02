@@ -99,17 +99,17 @@ window.ROTEIRO_DATA = {
           "lon": -46.52234,
           "locationAccuracy": "exact",
           "catalogName": "Casca d'Anta",
-          "description": "Grande queda do rio São Francisco despencando da borda da serra. É o cartão-postal do parque.",
+          "description": "Grande queda do rio São Francisco despencando da borda da serra. É o cartão-postal do parque e a atração natural mais reconhecida da Canastra.",
           "agencyRationale": "É a atração natural mais reconhecida da Canastra.",
           "visitType": "Trilha / cachoeira",
           "estimatedDuration": "meio dia",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "hard",
+            "label": "Exigente",
+            "description": "Visita à cachoeira por trilha, com possibilidade de degraus e terreno irregular. Confirme o trecho escolhido, duração, desnível e alternativas de acesso."
           },
-          "guideBriefing": "Grande queda do rio São Francisco despencando da borda da serra. É o cartão-postal do parque. É a atração natural mais reconhecida da Canastra.",
           "days": "meio dia",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -118,27 +118,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Exigente",
-            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
-            "level": "hard"
-          },
           "kind": "atracao",
           "type": "natureza"
         },
         {
           "name": "Parque Nacional da Serra da Canastra",
-          "description": "Chapadões, campos de altitude, cerrado e fauna formam uma das paisagens mais características do interior mineiro.",
+          "description": "Chapadões, campos de altitude, cerrado e fauna formam uma das paisagens mais características do interior mineiro. A Canastra é um destino de paisagem e estrada rural; as agências organizam os dias em torno dos acessos ao parque, fauna, cachoeiras e fazendas produtoras.",
           "agencyRationale": "A Canastra é um destino de paisagem e estrada rural; as agências organizam os dias em torno dos acessos ao parque, fauna, cachoeiras e fazendas produtoras.",
           "visitType": "Carro + natureza",
           "estimatedDuration": "1 dia",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "hard",
+            "label": "Exigente / variável",
+            "description": "Visita combina deslocamento de carro e percursos de natureza. Distância e terreno variam entre trilhas e cachoeiras; confirme o roteiro e as condições de acesso ao parque."
           },
-          "guideBriefing": "Chapadões, campos de altitude, cerrado e fauna formam uma das paisagens mais características do interior mineiro. A Canastra é um destino de paisagem e estrada rural; as agências organizam os dias em torno dos acessos ao parque, fauna, cachoeiras e fazendas produtoras.",
           "lat": -20.24528,
           "lon": -46.36583,
           "locationAccuracy": "city-center",
@@ -150,27 +145,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Exigente / variável",
-            "note": "Cachoeira Casca d’Anta e trilhas: terreno e distância variam; confirmar trecho e acesso local.",
-            "level": "hard"
-          },
           "kind": "atracao",
           "type": "natureza"
         },
         {
           "name": "Nascente histórica do São Francisco",
-          "description": "Ponto tradicionalmente identificado como nascente do rio São Francisco dentro do parque.",
+          "description": "Ponto tradicionalmente identificado como nascente do rio São Francisco dentro do parque. Dá significado geográfico e cultural à visita, além da paisagem.",
           "agencyRationale": "Dá significado geográfico e cultural à visita, além da paisagem.",
           "visitType": "Carro + caminhada curta",
           "estimatedDuration": "1 h + deslocamento",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita de carro com caminhada curta, conforme o tipo de visita cadastrado. Confirme a estrada, o trecho a pé e seus desníveis; a dificuldade não está documentada para a nascente."
           },
-          "guideBriefing": "Ponto tradicionalmente identificado como nascente do rio São Francisco dentro do parque. Dá significado geográfico e cultural à visita, além da paisagem.",
           "lat": -20.243269,
           "lon": -46.446873,
           "locationAccuracy": "exact",
@@ -182,27 +172,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Exigente / variável",
-            "note": "Cachoeira Casca d’Anta e trilhas: terreno e distância variam; confirmar trecho e acesso local.",
-            "level": "hard"
-          },
           "kind": "atracao",
           "type": "natureza"
         },
         {
           "name": "Queijarias de Canastra",
-          "description": "Fazendas mantêm métodos tradicionais de produção do queijo artesanal da Canastra, permitindo conhecer produção, maturação e degustação.",
+          "description": "Fazendas mantêm métodos tradicionais de produção do queijo artesanal da Canastra, permitindo conhecer produção, maturação e degustação. Gastronomia e contato com produtores são parte essencial dos roteiros da região.",
           "agencyRationale": "Gastronomia e contato com produtores são parte essencial dos roteiros da região.",
           "visitType": "Visita / degustação",
           "estimatedDuration": "2 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita e degustação dependem da queijaria escolhida. Confirme estrada de acesso, entrada e circulação com o produtor."
           },
-          "guideBriefing": "Fazendas mantêm métodos tradicionais de produção do queijo artesanal da Canastra, permitindo conhecer produção, maturação e degustação. Gastronomia e contato com produtores são parte essencial dos roteiros da região.",
           "lat": -20.24528,
           "lon": -46.36583,
           "locationAccuracy": "city-center",
@@ -213,11 +198,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Exigente / variável",
-            "note": "Cachoeira Casca d’Anta e trilhas: terreno e distância variam; confirmar trecho e acesso local.",
-            "level": "hard"
           },
           "kind": "atracao",
           "type": "gastronomia"
@@ -236,10 +216,10 @@ window.ROTEIRO_DATA = {
         1,
         2
       ],
-      "accessEffort": {
+      "access": {
+        "level": "hard",
         "label": "Exigente / variável",
-        "note": "Cachoeira Casca d’Anta e trilhas: terreno e distância variam; confirmar trecho e acesso local.",
-        "level": "hard"
+        "description": "Cachoeira Casca d’Anta e trilhas têm terreno e distância variáveis. Confirme o trecho e o acesso local; visitas à nascente e a queijarias precisam ser avaliadas separadamente."
       }
     },
     {
@@ -272,23 +252,19 @@ window.ROTEIRO_DATA = {
             "status": "online",
             "url": "https://ingressos.pauaparque.com.br/"
           },
-          "accessEffort": {
+          "access": {
+            "level": "moderate",
             "label": "Variável",
-            "note": "Mirantes podem ter escadarias; lancha exige embarque. Pergunte ao operador sobre degraus e apoio.",
-            "level": "moderate"
+            "description": "Visita ao mirante com caminhada; pode haver escadarias. Confirme o percurso, os degraus e a disponibilidade de acesso sem escadas."
           },
           "kind": "atracao",
           "type": "natureza",
-          "description": "Parque de contemplação dos cânions de Furnas, com mirantes, deck suspenso, trilhas e piscinas naturais.",
+          "description": "Parque de contemplação dos cânions de Furnas, com mirantes, deck suspenso, trilhas e piscinas naturais. A duração e as condições de acesso dependem das atividades escolhidas; confirme com o parque.",
           "agencyRationale": "Complemento documentado na página oficial do parque; inclusão em roteiro comercial de agência não confirmada.",
           "visitType": "Mirante / caminhada",
           "estimatedDuration": "Duração a confirmar",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
-          },
           "days": "Duração a confirmar",
           "sourceUrl": "https://cataguacapitolio.com.br/mirante",
           "researchedAt": "2026-10-02",
@@ -298,22 +274,21 @@ window.ROTEIRO_DATA = {
               "label": "Parque · fonte oficial",
               "url": "https://cataguacapitolio.com.br/mirante"
             }
-          ],
-          "guideBriefing": "Parque de contemplação dos cânions de Furnas, com mirantes, deck suspenso, trilhas e piscinas naturais. A duração e as condições de acesso dependem das atividades escolhidas; confirme com o parque."
+          ]
         },
         {
           "name": "Cânions de Furnas",
-          "description": "Paredões rochosos cortados pelas águas do reservatório de Furnas. A combinação de rocha vertical e água é a imagem que tornou a região famosa.",
+          "description": "Paredões rochosos cortados pelas águas do reservatório de Furnas. A combinação de rocha vertical e água é a imagem que tornou a região famosa. Capitólio entra quando a agência quer equilibrar muitos dias de cidades históricas com água e paisagem. Normalmente merece ao menos um dia próprio porque as atrações são espalhadas.",
           "agencyRationale": "Capitólio entra quando a agência quer equilibrar muitos dias de cidades históricas com água e paisagem. Normalmente merece ao menos um dia próprio porque as atrações são espalhadas.",
           "visitType": "Lancha / natureza",
           "estimatedDuration": "meio dia ou dia",
           "publishedDuration": "—",
           "oneYearOld": "Sim no passeio de lancha — operadores aceitam 1–4 anos",
-          "accessibility": {
-            "status": "conditional",
-            "description": "Sim, condicionado ao embarque/operador"
+          "access": {
+            "level": "unknown",
+            "label": "Embarque a combinar",
+            "description": "Visita de lancha. As condições de acesso dependem da embarcação e do embarque; confirme degraus, apoio e adaptações com o operador. O cadastro não informa o esforço físico desse passeio."
           },
-          "guideBriefing": "Paredões rochosos cortados pelas águas do reservatório de Furnas. A combinação de rocha vertical e água é a imagem que tornou a região famosa. Capitólio entra quando a agência quer equilibrar muitos dias de cidades históricas com água e paisagem. Normalmente merece ao menos um dia próprio porque as atrações são espalhadas.",
           "lat": -20.6144,
           "lon": -46.04884,
           "locationAccuracy": "city-center",
@@ -325,27 +300,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Exigente",
-            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
-            "level": "hard"
-          },
           "kind": "atracao",
           "type": "natureza"
         },
         {
           "name": "Passeio pelo Lago de Furnas",
-          "description": "Passeios de barco permitem entrar nos braços do lago e observar cânions e cachoeiras a partir da água.",
+          "description": "Passeios de barco permitem entrar nos braços do lago e observar cânions e cachoeiras a partir da água. É a experiência central vendida pelas operadoras na região.",
           "agencyRationale": "É a experiência central vendida pelas operadoras na região.",
           "visitType": "Lancha",
           "estimatedDuration": "4 h / dia inteiro",
           "publishedDuration": "—",
           "oneYearOld": "Sim — operadores aceitam 1–4 anos",
-          "accessibility": {
-            "status": "conditional",
-            "description": "Sim, condicionado ao embarque/operador"
+          "access": {
+            "level": "moderate",
+            "label": "Embarque com condições",
+            "description": "Passeio de lancha cujo acesso depende do embarque e da embarcação. Confirme degraus, apoio e condições para mobilidade reduzida com o operador."
           },
-          "guideBriefing": "Passeios de barco permitem entrar nos braços do lago e observar cânions e cachoeiras a partir da água. É a experiência central vendida pelas operadoras na região.",
           "lat": -20.6144,
           "lon": -46.04884,
           "locationAccuracy": "city-center",
@@ -357,27 +327,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Mirantes podem ter escadarias; lancha exige embarque. Pergunte ao operador sobre degraus e apoio.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "natureza"
         },
         {
           "name": "Mirantes dos cânions",
-          "description": "Pontos elevados permitem compreender a escala do relevo e do reservatório de cima.",
+          "description": "Pontos elevados permitem compreender a escala do relevo e do reservatório de cima. Complementam a perspectiva obtida no passeio de barco.",
           "agencyRationale": "Complementam a perspectiva obtida no passeio de barco.",
           "visitType": "Mirante / caminhada",
           "estimatedDuration": "2 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "hard",
+            "label": "Exigente",
+            "description": "Percursos de mirante e caminhada podem envolver degraus e terreno irregular. A estimativa de esforço depende do mirante escolhido; confirme distância, desnível e alternativas de acesso."
           },
-          "guideBriefing": "Pontos elevados permitem compreender a escala do relevo e do reservatório de cima. Complementam a perspectiva obtida no passeio de barco.",
           "lat": -20.6144,
           "lon": -46.04884,
           "locationAccuracy": "city-center",
@@ -389,27 +354,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Exigente",
-            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
-            "level": "hard"
-          },
           "kind": "atracao",
           "type": "natureza"
         },
         {
           "name": "Cachoeiras",
-          "description": "Diversos complexos de quedas e piscinas naturais ficam espalhados pela região.",
+          "description": "Diversos complexos de quedas e piscinas naturais ficam espalhados pela região. Justificam mais de um dia no destino.",
           "agencyRationale": "Justificam mais de um dia no destino.",
           "visitType": "Natureza / banho",
           "estimatedDuration": "meio dia",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Variável",
+            "description": "As cachoeiras têm percursos diferentes. Confirme estrada, distância da caminhada, terreno e condições de banho para a cachoeira escolhida."
           },
-          "guideBriefing": "Diversos complexos de quedas e piscinas naturais ficam espalhados pela região. Justificam mais de um dia no destino.",
           "lat": -20.6144,
           "lon": -46.04884,
           "locationAccuracy": "city-center",
@@ -420,11 +380,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Mirantes podem ter escadarias; lancha exige embarque. Pergunte ao operador sobre degraus e apoio.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "natureza"
@@ -443,10 +398,10 @@ window.ROTEIRO_DATA = {
         1,
         1
       ],
-      "accessEffort": {
+      "access": {
+        "level": "moderate",
         "label": "Variável",
-        "note": "Mirantes podem ter escadarias; lancha exige embarque. Pergunte ao operador sobre degraus e apoio.",
-        "level": "moderate"
+        "description": "Mirantes podem ter escadarias; passeios de lancha dependem do embarque. Confirme degraus, apoio e percurso com o responsável por cada passeio."
       }
     },
     {
@@ -467,17 +422,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Santuário do Bom Jesus",
-          "description": "Complexo religioso setecentista construído no alto de uma colina e reconhecido como Patrimônio Mundial. O valor está no conjunto formado pela basílica, adro, profetas e capelas.",
+          "description": "Complexo religioso setecentista construído no alto de uma colina e reconhecido como Patrimônio Mundial. O valor está no conjunto formado pela basílica, adro, profetas e capelas. Congonhas oferece alto valor histórico com logística simples: o conjunto principal está concentrado no santuário. Por isso cabe naturalmente no deslocamento entre Ouro Preto/BH e São João del-Rei/Tiradentes.",
           "agencyRationale": "Congonhas oferece alto valor histórico com logística simples: o conjunto principal está concentrado no santuário. Por isso cabe naturalmente no deslocamento entre Ouro Preto/BH e São João del-Rei/Tiradentes.",
           "visitType": "Complexo religioso",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Escadaria e calçamento",
+            "description": "Visita ao conjunto do santuário, com escadaria e calçamento no percurso. Verifique alternativas sem degraus e planeje pausas."
           },
-          "guideBriefing": "Complexo religioso setecentista construído no alto de uma colina e reconhecido como Patrimônio Mundial. O valor está no conjunto formado pela basílica, adro, profetas e capelas. Congonhas oferece alto valor histórico com logística simples: o conjunto principal está concentrado no santuário. Por isso cabe naturalmente no deslocamento entre Ouro Preto/BH e São João del-Rei/Tiradentes.",
           "catalogName": "Santuário do Bom Jesus de Matosinhos",
           "lat": -20.50753,
           "lon": -43.86053,
@@ -489,28 +444,23 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia",
           "days": "1 h"
         },
         {
           "name": "Doze Profetas",
-          "description": "Doze esculturas monumentais em pedra-sabão executadas por Aleijadinho e sua oficina. A disposição das figuras no adro faz parte da obra e é considerada um dos ápices do barroco brasileiro.",
+          "description": "Doze esculturas monumentais em pedra-sabão executadas por Aleijadinho e sua oficina, consideradas um dos ápices e símbolos do barroco brasileiro. A disposição das figuras no adro faz parte da obra; observar as esculturas no local e no conjunto concebido para elas é diferente de conhecê-las por fotografias.",
           "agencyRationale": "Os Profetas são tratados como obra indispensável de Aleijadinho e como um dos símbolos do barroco brasileiro. Ver as esculturas no local e na disposição concebida para o adro é diferente de conhecê-las por fotografias.",
           "visitType": "Externa / contemplação",
           "estimatedDuration": "40 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Escadaria e calçamento",
+            "description": "Visita ao conjunto do santuário, com escadaria e calçamento no percurso. Verifique alternativas sem degraus e planeje pausas."
           },
-          "guideBriefing": "Doze esculturas monumentais em pedra-sabão executadas por Aleijadinho e sua oficina. A disposição das figuras no adro faz parte da obra e é considerada um dos ápices do barroco brasileiro. Os Profetas são tratados como obra indispensável de Aleijadinho e como um dos símbolos do barroco brasileiro. Ver as esculturas no local e na disposição concebida para o adro é diferente de conhecê-las por fotografias.",
           "lat": -20.508574,
           "lon": -43.860643,
           "locationAccuracy": "exact",
@@ -522,27 +472,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Passos da Paixão / Via Crucis",
-          "description": "Seis capelas guardam grupos de esculturas policromadas representando cenas da Paixão de Cristo. Permitem observar Aleijadinho também como escultor de figuras dramáticas em madeira.",
+          "description": "Seis capelas guardam grupos de esculturas policromadas representando cenas da Paixão de Cristo. Permitem observar Aleijadinho também como escultor de figuras dramáticas em madeira. Complementam os Profetas e formam uma narrativa artística completa.",
           "agencyRationale": "Complementam os Profetas e formam uma narrativa artística completa.",
           "visitType": "Capelas / caminhada",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Caminhada entre capelas",
+            "description": "Percurso a pé entre as capelas do conjunto religioso. Considere o calçamento e as escadarias do entorno; confirme o trecho e alternativas sem degraus."
           },
-          "guideBriefing": "Seis capelas guardam grupos de esculturas policromadas representando cenas da Paixão de Cristo. Permitem observar Aleijadinho também como escultor de figuras dramáticas em madeira. Complementam os Profetas e formam uma narrativa artística completa.",
           "lat": -20.508574,
           "lon": -43.860643,
           "locationAccuracy": "exact",
@@ -554,27 +499,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Sala dos Milagres / ex-votos",
-          "description": "Reúne objetos deixados por fiéis em agradecimento por graças alcançadas, documentando séculos de religiosidade popular.",
+          "description": "Reúne objetos deixados por fiéis em agradecimento por graças alcançadas, documentando séculos de religiosidade popular. Acrescenta a dimensão humana e devocional ao conjunto monumental.",
           "agencyRationale": "Acrescenta a dimensão humana e devocional ao conjunto monumental.",
           "visitType": "Museu/devocional",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao percurso",
+            "description": "O entorno do santuário tem escadaria e calçamento; essa estimativa não descreve a circulação interna. Confirme a entrada, os desníveis e os recursos de apoio do espaço visitado."
           },
-          "guideBriefing": "Reúne objetos deixados por fiéis em agradecimento por graças alcançadas, documentando séculos de religiosidade popular. Acrescenta a dimensão humana e devocional ao conjunto monumental.",
           "lat": -20.508574,
           "lon": -43.860643,
           "locationAccuracy": "exact",
@@ -586,27 +526,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Museu de Congonhas",
-          "description": "Museu dedicado à interpretação do Santuário, da peregrinação, da devoção e da obra de Aleijadinho. Ajuda a compreender o conjunto antes ou depois de observá-lo ao ar livre.",
+          "description": "Museu dedicado à interpretação do Santuário, da peregrinação, da devoção e da obra de Aleijadinho. Ajuda a compreender o conjunto antes ou depois de observá-lo ao ar livre. Roteiros oficiais o incluem porque fornece contexto: explica por que o Santuário existe, como a peregrinação se desenvolveu e por que Profetas e Passos são tão importantes.",
           "agencyRationale": "Roteiros oficiais o incluem porque fornece contexto: explica por que o Santuário existe, como a peregrinação se desenvolveu e por que Profetas e Passos são tão importantes.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao percurso",
+            "description": "O entorno do santuário tem escadaria e calçamento; essa estimativa não descreve a circulação interna. Confirme a entrada, os desníveis e os recursos de apoio do espaço visitado."
           },
-          "guideBriefing": "Museu dedicado à interpretação do Santuário, da peregrinação, da devoção e da obra de Aleijadinho. Ajuda a compreender o conjunto antes ou depois de observá-lo ao ar livre. Roteiros oficiais o incluem porque fornece contexto: explica por que o Santuário existe, como a peregrinação se desenvolveu e por que Profetas e Passos são tão importantes.",
           "lat": -20.506946,
           "lon": -43.861204,
           "locationAccuracy": "exact",
@@ -617,11 +552,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "historia"
@@ -640,10 +570,10 @@ window.ROTEIRO_DATA = {
         0.5,
         1
       ],
-      "accessEffort": {
+      "access": {
+        "level": "moderate",
         "label": "Atenção a ladeiras",
-        "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
-        "level": "moderate"
+        "description": "O entorno do santuário tem escadaria e calçamento. Confirme percursos sem degraus e planeje pausas; os acessos internos dos museus precisam ser verificados separadamente."
       }
     },
     {
@@ -668,17 +598,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Praça Tiradentes",
-          "description": "Antigo centro cívico de Vila Rica. De um lado está o antigo Palácio dos Governadores; do outro, a antiga Casa de Câmara e Cadeia. O monumento a Tiradentes marca o lugar onde sua cabeça foi exposta após a execução. É o melhor ponto para entender a relação entre Coroa, mineração e Inconfidência.",
+          "description": "Antigo centro cívico de Vila Rica. De um lado está o antigo Palácio dos Governadores; do outro, a antiga Casa de Câmara e Cadeia. O monumento a Tiradentes marca o lugar onde sua cabeça foi exposta após a execução.\n\nA praça funciona como abertura da visita a Ouro Preto: em poucos metros, o guia apresenta a relação entre Coroa, administração colonial, mineração e Inconfidência. A partir dela, quase todo o restante do centro pode ser percorrido a pé.",
           "agencyRationale": "A praça funciona como aula de abertura de Ouro Preto: em poucos metros o guia apresenta Coroa, administração colonial, mineração e Inconfidência. A partir dela, quase todo o restante do centro pode ser percorrido a pé.",
           "visitType": "Externa / caminhada",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil",
+            "description": "Visita externa com caminhada pela praça. A estimativa considera um trecho curto; confirme calçamento, degraus e ladeiras no percurso escolhido."
           },
-          "guideBriefing": "Antigo centro cívico de Vila Rica. De um lado está o antigo Palácio dos Governadores; do outro, a antiga Casa de Câmara e Cadeia. O monumento a Tiradentes marca o lugar onde sua cabeça foi exposta após a execução. É o melhor ponto para entender a relação entre Coroa, mineração e Inconfidência. A praça funciona como aula de abertura de Ouro Preto: em poucos metros o guia apresenta Coroa, administração colonial, mineração e Inconfidência. A partir dela, quase todo o restante do centro pode ser percorrido a pé.",
           "lat": -20.385743,
           "lon": -43.503686,
           "locationAccuracy": "exact",
@@ -690,27 +620,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Museu da Inconfidência",
-          "description": "Ocupa a antiga Casa de Câmara e Cadeia. Reúne objetos, documentos, arte sacra e os restos mortais atribuídos a inconfidentes, explicando a sociedade mineradora e a Inconfidência Mineira.",
+          "description": "Ocupa a antiga Casa de Câmara e Cadeia. Reúne objetos, documentos, arte sacra e os restos mortais atribuídos a inconfidentes, explicando a sociedade mineradora e a Inconfidência Mineira. É recorrente nos pacotes porque organiza uma história complexa em objetos, edifício e personagens. Depois da visita, Tiradentes e a Inconfidência deixam de ser apenas nomes vistos nas ruas e praças.",
           "agencyRationale": "É recorrente nos pacotes porque organiza uma história complexa em objetos, edifício e personagens. Depois da visita, Tiradentes e a Inconfidência deixam de ser apenas nomes vistos nas ruas e praças.",
           "visitType": "Museu / interna",
           "estimatedDuration": "1h30",
           "publishedDuration": "1–1h30",
           "oneYearOld": "Sim",
-          "accessibility": {
-            "status": "accessible",
-            "description": "Sim — rampas, corrimãos, cadeira de rodas e sanitário adaptado"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O percurso pelo centro histórico tem ladeiras e calçamento irregular. No museu, o cadastro registra rampas, corrimãos, cadeira de rodas e sanitário adaptado; confirme a entrada e o uso desses recursos na visita."
           },
-          "guideBriefing": "Ocupa a antiga Casa de Câmara e Cadeia. Reúne objetos, documentos, arte sacra e os restos mortais atribuídos a inconfidentes, explicando a sociedade mineradora e a Inconfidência Mineira. É recorrente nos pacotes porque organiza uma história complexa em objetos, edifício e personagens. Depois da visita, Tiradentes e a Inconfidência deixam de ser apenas nomes vistos nas ruas e praças.",
           "lat": -20.3860981,
           "lon": -43.5036894,
           "locationAccuracy": "exact",
@@ -723,27 +648,22 @@ window.ROTEIRO_DATA = {
             "status": "gratuito",
             "url": "https://www.gov.br/museus/pt-br/museus-ibram/museu-da-inconfidencia"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Igreja de São Francisco de Assis",
-          "description": "Uma das obras-primas do barroco/rococó mineiro, com projeto e esculturas associados a Aleijadinho e pintura de Mestre Ataíde.",
+          "description": "Uma das obras-primas do barroco/rococó mineiro, com projeto e esculturas associados a Aleijadinho e pintura de Mestre Ataíde. Para os circuitos de barroco, é uma parada essencial por reunir arquitetura, escultura e pintura desses mestres no mesmo edifício, tornando visível o que os guias explicam sobre a arte religiosa mineira.",
           "agencyRationale": "Para os circuitos de barroco, é parada essencial: permite ver arquitetura, escultura e pintura associadas a Aleijadinho e Ataíde no mesmo edifício, tornando visível o que os guias explicam sobre o barroco mineiro.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Uma das obras-primas do barroco/rococó mineiro, com projeto e esculturas associados a Aleijadinho e pintura de Mestre Ataíde. Para os circuitos de barroco, é parada essencial: permite ver arquitetura, escultura e pintura associadas a Aleijadinho e Ataíde no mesmo edifício, tornando visível o que os guias explicam sobre o barroco mineiro.",
           "lat": -20.3866,
           "lon": -43.5029,
           "locationAccuracy": "exact",
@@ -755,27 +675,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Basílica de Nossa Senhora do Pilar",
-          "description": "Exterior relativamente sóbrio esconde um interior coberto por talha dourada. A quantidade de ouro aplicada na decoração materializa a riqueza produzida pela mineração.",
+          "description": "Exterior relativamente sóbrio esconde um interior coberto por talha dourada. A quantidade de ouro aplicada na decoração materializa a riqueza produzida pela mineração de Vila Rica. Roteiros organizados a usam para mostrar como parte dessa riqueza, apresentada nas histórias sobre ouro e impostos da Coroa, foi convertida em arte e ostentação religiosa.",
           "agencyRationale": "As agências a usam para materializar a riqueza de Vila Rica. Depois de ouvir sobre ouro e impostos da Coroa, o visitante vê como parte dessa riqueza foi convertida em arte e ostentação religiosa.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "40 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O percurso pelo centro histórico pode envolver ladeiras e calçamento irregular. Os acessos e a circulação interna desta atração não estão detalhados; confirme entrada, degraus e alternativas sem escadas."
           },
-          "guideBriefing": "Exterior relativamente sóbrio esconde um interior coberto por talha dourada. A quantidade de ouro aplicada na decoração materializa a riqueza produzida pela mineração. Roteiros organizados a usam para materializar a riqueza de Vila Rica. Depois de ouvir sobre ouro e impostos da Coroa, o visitante vê como parte dessa riqueza foi convertida em arte e ostentação religiosa.",
           "lat": -20.386489,
           "lon": -43.508,
           "locationAccuracy": "exact",
@@ -787,27 +702,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
-          "description": "Igreja rococó ligada à Ordem Terceira do Carmo, com elementos associados a Aleijadinho e importante conjunto artístico.",
+          "description": "Igreja rococó ligada à Ordem Terceira do Carmo, com elementos associados a Aleijadinho e importante conjunto artístico. Fica no núcleo da Praça Tiradentes e complementa a leitura da arte religiosa local.",
           "agencyRationale": "Fica no núcleo da Praça Tiradentes e complementa a leitura da arte religiosa local.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja rococó ligada à Ordem Terceira do Carmo, com elementos associados a Aleijadinho e importante conjunto artístico. Fica no núcleo da Praça Tiradentes e complementa a leitura da arte religiosa local.",
           "lat": -20.38613,
           "lon": -43.50424,
           "locationAccuracy": "exact",
@@ -819,27 +729,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário",
-          "description": "Igreja de planta curva singular, construída por irmandade ligada à população negra. Ajuda a compreender a organização religiosa e social de grupos que não pertenciam às elites brancas.",
+          "description": "Igreja de planta curva singular, construída por irmandade ligada à população negra. Ajuda a compreender a organização religiosa e social de grupos que não pertenciam às elites brancas. Acrescenta uma dimensão social que vai além das igrejas mais ricas do centro.",
           "agencyRationale": "Acrescenta uma dimensão social que vai além das igrejas mais ricas do centro.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja de planta curva singular, construída por irmandade ligada à população negra. Ajuda a compreender a organização religiosa e social de grupos que não pertenciam às elites brancas. Acrescenta uma dimensão social que vai além das igrejas mais ricas do centro.",
           "lat": -20.383909,
           "lon": -43.50981,
           "locationAccuracy": "exact",
@@ -851,27 +756,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Teatro Municipal / Casa da Ópera",
-          "description": "Teatro do século XVIII ainda preservado, considerado um dos mais antigos em funcionamento nas Américas. Mostra que Vila Rica também possuía intensa vida cultural.",
+          "description": "Teatro do século XVIII ainda preservado, considerado um dos mais antigos em funcionamento nas Américas. Mostra que Vila Rica também possuía intensa vida cultural. É uma atração histórica diferente de igrejas e mineração e aparece em city tours de agências.",
           "agencyRationale": "É uma atração histórica diferente de igrejas e mineração e aparece em city tours de agências.",
           "visitType": "Interna / visita",
           "estimatedDuration": "40 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O percurso pelo centro histórico pode envolver ladeiras e calçamento irregular. Os acessos e a circulação interna desta atração não estão detalhados; confirme entrada, degraus e alternativas sem escadas."
           },
-          "guideBriefing": "Teatro do século XVIII ainda preservado, considerado um dos mais antigos em funcionamento nas Américas. Mostra que Vila Rica também possuía intensa vida cultural. É uma atração histórica diferente de igrejas e mineração e aparece em city tours de agências.",
           "lat": -20.38592,
           "lon": -43.504947,
           "locationAccuracy": "exact",
@@ -883,27 +783,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Mina de ouro visitável",
-          "description": "Galerias escavadas durante o ciclo do ouro permitem entrar fisicamente no ambiente de mineração. A experiência ajuda a compreender técnicas de extração e as condições de trabalho, inclusive do trabalho escravizado.",
+          "description": "Galerias escavadas durante o ciclo do ouro permitem entrar fisicamente no ambiente de mineração. Profundidade, espaço, ferramentas e condições de trabalho, inclusive do trabalho escravizado, deixam de ser abstratos. Por isso, operadoras frequentemente reservam uma mina como experiência para compreender as técnicas de extração, em vez de visitar apenas museus.",
           "agencyRationale": "Entrar numa galeria muda a compreensão da mineração: profundidade, espaço, ferramentas e condições de trabalho deixam de ser abstratos. Por isso operadoras frequentemente reservam uma mina como experiência, em vez de visitar apenas museus.",
           "visitType": "Mina / visita guiada",
           "estimatedDuration": "1h30",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "hard",
+            "label": "Exigente",
+            "description": "Visita guiada a uma mina; o cadastro não identifica um percurso único. A estimativa de planejamento prevê degraus ou terreno irregular. Confirme a mina escolhida, a forma de entrada, a duração e as restrições com o operador."
           },
-          "guideBriefing": "Galerias escavadas durante o ciclo do ouro permitem entrar fisicamente no ambiente de mineração. A experiência ajuda a compreender técnicas de extração e as condições de trabalho, inclusive do trabalho escravizado. Entrar numa galeria muda a compreensão da mineração: profundidade, espaço, ferramentas e condições de trabalho deixam de ser abstratos. Por isso operadoras frequentemente reservam uma mina como experiência, em vez de visitar apenas museus.",
           "lat": -20.38567,
           "lon": -43.50362,
           "locationAccuracy": "city-center",
@@ -915,27 +810,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Exigente",
-            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
-            "level": "hard"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Rua Direita e casario colonial",
-          "description": "Eixo tradicional do centro, cercado por sobrados que mostram a organização urbana e comercial de Vila Rica. O valor está no conjunto, não em um edifício isolado.",
+          "description": "Eixo tradicional do centro, cercado por sobrados que mostram a organização urbana e comercial de Vila Rica. O valor está no conjunto, não em um edifício isolado. Permite que o deslocamento entre atrações seja também parte da visita histórica.",
           "agencyRationale": "Permite que o deslocamento entre atrações seja também parte da visita histórica.",
           "visitType": "Caminhada / externa",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao calçamento",
+            "description": "Caminhada pelo centro histórico, com ladeiras e calçamento irregular no entorno. Confirme o trecho escolhido e planeje pausas."
           },
-          "guideBriefing": "Eixo tradicional do centro, cercado por sobrados que mostram a organização urbana e comercial de Vila Rica. O valor está no conjunto, não em um edifício isolado. Permite que o deslocamento entre atrações seja também parte da visita histórica.",
           "lat": -20.3853985,
           "lon": -43.5045394,
           "locationAccuracy": "street-center",
@@ -948,27 +838,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Casa dos Contos",
-          "description": "Solar do fim do século XVIII ligado à administração das finanças e à cobrança de tributos da Coroa. Além da arquitetura, permite entender para onde ia a riqueza extraída das minas, a fiscalização do ouro, a moeda e a estrutura econômica de Vila Rica.",
+          "description": "Solar do fim do século XVIII ligado à administração das finanças e à cobrança de tributos da Coroa. Além da arquitetura, permite entender para onde ia a riqueza extraída das minas, a fiscalização do ouro, a moeda e a estrutura econômica de Vila Rica. Roteiros organizados a incluem porque completa a história contada nas minas e igrejas: depois de ver onde o ouro era extraído e gasto, aqui se entende como ele era controlado e tributado pela Coroa.",
           "agencyRationale": "Agências a incluem porque completa a história contada nas minas e igrejas: depois de ver onde o ouro era extraído e gasto, aqui se entende como ele era controlado e tributado pela Coroa.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O percurso pelo centro histórico pode envolver ladeiras e calçamento irregular. Os acessos e a circulação interna desta atração não estão detalhados; confirme entrada, degraus e alternativas sem escadas."
           },
-          "guideBriefing": "Solar do fim do século XVIII ligado à administração das finanças e à cobrança de tributos da Coroa. Além da arquitetura, permite entender para onde ia a riqueza extraída das minas, a fiscalização do ouro, a moeda e a estrutura econômica de Vila Rica. Roteiros organizados a incluem porque completa a história contada nas minas e igrejas: depois de ver onde o ouro era extraído e gasto, aqui se entende como ele era controlado e tributado pela Coroa.",
           "lat": -20.38442,
           "lon": -43.506206,
           "locationAccuracy": "exact",
@@ -980,27 +865,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Feira de Pedra-Sabão",
-          "description": "Feira de artesanato próxima à Igreja de São Francisco de Assis, dedicada sobretudo à pedra-sabão, material profundamente associado à escultura e à arquitetura de Ouro Preto.",
+          "description": "Feira de artesanato próxima à Igreja de São Francisco de Assis, dedicada sobretudo à pedra-sabão, material profundamente associado à escultura e à arquitetura de Ouro Preto. É uma parada recorrente porque conecta o barroco histórico a uma tradição artesanal que continua viva e ainda oferece tempo livre para compras sem deslocamento adicional.",
           "agencyRationale": "É uma parada recorrente porque conecta o barroco histórico a uma tradição artesanal que continua viva e ainda oferece tempo livre para compras sem deslocamento adicional.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao calçamento",
+            "description": "Caminhada pelo centro histórico, com ladeiras e calçamento irregular no entorno. Confirme o trecho escolhido e planeje pausas."
           },
-          "guideBriefing": "Feira de artesanato próxima à Igreja de São Francisco de Assis, dedicada sobretudo à pedra-sabão, material profundamente associado à escultura e à arquitetura de Ouro Preto. É uma parada recorrente porque conecta o barroco histórico a uma tradição artesanal que continua viva e ainda oferece tempo livre para compras sem deslocamento adicional.",
           "lat": -20.386259,
           "lon": -43.502794,
           "locationAccuracy": "exact",
@@ -1012,27 +892,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Museu de Mineralogia / Museu de Ciência e Técnica",
-          "description": "Acervo ligado à antiga Escola de Minas, instalado no antigo Palácio dos Governadores. Minerais, mineração e ciência ajudam a entender geologicamente por que Ouro Preto existiu e por que a região atraiu tanta riqueza.",
+          "description": "Acervo ligado à antiga Escola de Minas, instalado no antigo Palácio dos Governadores. Minerais, mineração e ciência ajudam a entender geologicamente por que Ouro Preto existiu e por que a região atraiu tanta riqueza. Algumas operadoras o oferecem como alternativa ao Museu da Inconfidência porque acrescenta a explicação científica da mineração ao conteúdo histórico do circuito.",
           "agencyRationale": "Algumas operadoras o oferecem como alternativa ao Museu da Inconfidência porque acrescenta a explicação científica da mineração ao conteúdo histórico do circuito.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O percurso pelo centro histórico pode envolver ladeiras e calçamento irregular. Os acessos e a circulação interna desta atração não estão detalhados; confirme entrada, degraus e alternativas sem escadas."
           },
-          "guideBriefing": "Acervo ligado à antiga Escola de Minas, instalado no antigo Palácio dos Governadores. Minerais, mineração e ciência ajudam a entender geologicamente por que Ouro Preto existiu e por que a região atraiu tanta riqueza. Algumas operadoras o oferecem como alternativa ao Museu da Inconfidência porque acrescenta a explicação científica da mineração ao conteúdo histórico do circuito.",
           "lat": -20.384846,
           "lon": -43.50366,
           "locationAccuracy": "exact",
@@ -1043,11 +918,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "historia"
@@ -1064,11 +934,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Templo histórico incluído em roteiro comercial do Circuito do Ouro.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -1076,11 +946,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -1097,11 +962,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O percurso pelo centro histórico pode envolver ladeiras e calçamento irregular. Os acessos e a circulação interna desta atração não estão detalhados; confirme entrada, degraus e alternativas sem escadas."
           },
-          "guideBriefing": "Museu dedicado à obra e ao contexto de Aleijadinho.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -1109,11 +974,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "historia"
@@ -1130,11 +990,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O percurso pelo centro histórico pode envolver ladeiras e calçamento irregular. Os acessos e a circulação interna desta atração não estão detalhados; confirme entrada, degraus e alternativas sem escadas."
           },
-          "guideBriefing": "Museu dedicado à tradição dos oratórios brasileiros.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -1144,27 +1004,22 @@ window.ROTEIRO_DATA = {
             "status": "bilheteria",
             "url": "https://museudooratorio.org.br/visite/planeje-sua-visita/"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Núcleo histórico · Amarantina",
-          "description": "Distrito antigo no caminho de Ouro Preto, com igreja, casario e identidade própria ligada às rotas coloniais.",
+          "description": "Localidade: Amarantina, município de Ouro Preto. Distrito antigo no caminho de Ouro Preto, com igreja, casario e identidade própria ligada às rotas coloniais. Amarantina é útil quando o circuito quer mostrar que o patrimônio colonial não se limita às sedes municipais. Como distrito no corredor de Ouro Preto, pode ser encaixada sem transformar o dia em outro destino principal.",
           "agencyRationale": "Amarantina é útil quando o circuito quer mostrar que o patrimônio colonial não se limita às sedes municipais. Como distrito no corredor de Ouro Preto, pode ser encaixada sem transformar o dia em outro destino principal.",
           "visitType": "Caminhada / externa",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita externa com caminhada pelo núcleo histórico. Distância, desníveis e condições do calçamento não estão documentados para o percurso."
           },
-          "guideBriefing": "Localidade: Amarantina, município de Ouro Preto. Distrito antigo no caminho de Ouro Preto, com igreja, casario e identidade própria ligada às rotas coloniais. Amarantina é útil quando o circuito quer mostrar que o patrimônio colonial não se limita às sedes municipais. Como distrito no corredor de Ouro Preto, pode ser encaixada sem transformar o dia em outro destino principal.",
           "lat": -20.313221,
           "lon": -43.710354,
           "locationAccuracy": "city-center",
@@ -1194,10 +1049,10 @@ window.ROTEIRO_DATA = {
         1,
         2
       ],
-      "accessEffort": {
+      "access": {
+        "level": "moderate",
         "label": "Atenção a ladeiras",
-        "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
-        "level": "moderate"
+        "description": "O centro histórico tem ladeiras e calçamento irregular. Escolha o percurso a pé e confirme os acessos internos de cada atração."
       },
       "municipality": "Ouro Preto"
     },
@@ -1220,17 +1075,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Praça Minas Gerais",
-          "description": "Praça monumental onde Igreja do Carmo, Igreja de São Francisco, Casa de Câmara e Cadeia e pelourinho formam um raro conjunto civil e religioso colonial.",
+          "description": "Praça monumental onde Igreja do Carmo, Igreja de São Francisco, Casa de Câmara e Cadeia e pelourinho formam um raro conjunto civil e religioso colonial. É extremamente eficiente para grupos: em uma única praça o guia consegue explicar Igreja, Estado, justiça e organização urbana colonial. Isso faz Mariana render muito conteúdo mesmo em visitas de poucas horas.",
           "agencyRationale": "É extremamente eficiente para grupos: em uma única praça o guia consegue explicar Igreja, Estado, justiça e organização urbana colonial. Isso faz Mariana render muito conteúdo mesmo em visitas de poucas horas.",
           "visitType": "Externa / caminhada",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita externa com caminhada pela praça histórica. Confirme calçamento e desníveis do trecho escolhido. A dificuldade desse percurso não está confirmada."
           },
-          "guideBriefing": "Praça monumental onde Igreja do Carmo, Igreja de São Francisco, Casa de Câmara e Cadeia e pelourinho formam um raro conjunto civil e religioso colonial. É extremamente eficiente para grupos: em uma única praça o guia consegue explicar Igreja, Estado, justiça e organização urbana colonial. Isso faz Mariana render muito conteúdo mesmo em visitas de poucas horas.",
           "lat": -20.37812,
           "lon": -43.41813,
           "locationAccuracy": "exact",
@@ -1241,28 +1096,23 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Exigente",
-            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
-            "level": "hard"
-          },
           "kind": "atracao",
           "type": "historia",
           "days": "30 min"
         },
         {
           "name": "Catedral da Sé",
-          "description": "Uma das igrejas mais antigas e importantes de Minas. Guarda um órgão Arp Schnitger do início do século XVIII, raríssimo no Brasil.",
+          "description": "Uma das igrejas mais antigas e importantes de Minas. Guarda um órgão Arp Schnitger do início do século XVIII, raríssimo no Brasil. Acrescenta patrimônio musical e religioso ao circuito.",
           "agencyRationale": "Acrescenta patrimônio musical e religioso ao circuito.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "40 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao percurso",
+            "description": "O centro histórico pode ter calçamento e desníveis no trajeto até a atração. Confirme entrada e circulação interna."
           },
-          "guideBriefing": "Uma das igrejas mais antigas e importantes de Minas. Guarda um órgão Arp Schnitger do início do século XVIII, raríssimo no Brasil. Acrescenta patrimônio musical e religioso ao circuito.",
           "lat": -20.378172,
           "lon": -43.416413,
           "locationAccuracy": "exact",
@@ -1274,27 +1124,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Igreja de São Francisco de Assis",
-          "description": "Igreja setecentista com obras associadas a Aleijadinho e Mestre Ataíde; o próprio Ataíde está sepultado no templo.",
+          "description": "Igreja setecentista com obras associadas a Aleijadinho e Mestre Ataíde; o próprio Ataíde está sepultado no templo. Liga Mariana diretamente aos grandes mestres do barroco mineiro.",
           "agencyRationale": "Liga Mariana diretamente aos grandes mestres do barroco mineiro.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja setecentista com obras associadas a Aleijadinho e Mestre Ataíde; o próprio Ataíde está sepultado no templo. Liga Mariana diretamente aos grandes mestres do barroco mineiro.",
           "lat": -20.378199,
           "lon": -43.418028,
           "locationAccuracy": "exact",
@@ -1306,27 +1151,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
-          "description": "Igreja rococó que forma, junto com São Francisco, uma das imagens urbanas mais marcantes de Mariana.",
+          "description": "Igreja rococó que forma, junto com São Francisco, uma das imagens urbanas mais marcantes de Mariana. Completa o conjunto arquitetônico da Praça Minas Gerais.",
           "agencyRationale": "Completa o conjunto arquitetônico da Praça Minas Gerais.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja rococó que forma, junto com São Francisco, uma das imagens urbanas mais marcantes de Mariana. Completa o conjunto arquitetônico da Praça Minas Gerais.",
           "lat": -20.378541,
           "lon": -43.418098,
           "locationAccuracy": "exact",
@@ -1338,27 +1178,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Casa de Câmara e Cadeia",
-          "description": "Edifício que reunia funções administrativas e judiciais da vila colonial. Ajuda a entender como o poder português funcionava localmente.",
+          "description": "Edifício que reunia funções administrativas e judiciais da vila colonial. Ajuda a entender como o poder português funcionava localmente. Complementa a visita religiosa com história política e administrativa.",
           "agencyRationale": "Complementa a visita religiosa com história política e administrativa.",
           "visitType": "Externa/interna conforme acesso",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao percurso",
+            "description": "O centro histórico pode ter calçamento e desníveis no trajeto até a atração. Confirme entrada e circulação interna."
           },
-          "guideBriefing": "Edifício que reunia funções administrativas e judiciais da vila colonial. Ajuda a entender como o poder português funcionava localmente. Complementa a visita religiosa com história política e administrativa.",
           "lat": -20.378101,
           "lon": -43.417849,
           "locationAccuracy": "exact",
@@ -1370,27 +1205,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Mina da Passagem",
-          "description": "Antiga mina de ouro industrial com visita por vagonete até galerias subterrâneas. A escala e profundidade tornam a mineração muito mais compreensível do que apenas observá-la em museus.",
+          "description": "Antiga mina de ouro industrial com visita por vagonete até galerias subterrâneas. A descida, a escala e a profundidade tornam a mineração mais compreensível do que apenas observá-la em museus. Roteiros organizados usam essa experiência para explicar em escala física a atividade econômica que criou Mariana e Ouro Preto.",
           "agencyRationale": "A descida de vagonete e as galerias dão caráter de experiência ao roteiro. Agências a utilizam para explicar em escala física a atividade econômica que criou Mariana e Ouro Preto.",
           "visitType": "Mina / visita guiada",
           "estimatedDuration": "1h15",
           "publishedDuration": "~45 min",
           "oneYearOld": "Sim, com responsável — conforme fonte da classificação etária",
-          "accessibility": {
-            "status": "unknown",
-            "description": "Não confirmado — há meia-entrada 60+, mas isso não comprova acessibilidade física"
+          "access": {
+            "level": "unknown",
+            "label": "Vagonete e galerias",
+            "description": "A visita guiada desce por vagonete até galerias subterrâneas. Confirme embarque, circulação, degraus e restrições com o operador; a meia-entrada para maiores de 60 anos não comprova condições de mobilidade."
           },
-          "guideBriefing": "Antiga mina de ouro industrial com visita por vagonete até galerias subterrâneas. A escala e profundidade tornam a mineração muito mais compreensível do que apenas observá-la em museus. A descida de vagonete e as galerias dão caráter de experiência ao roteiro. Roteiros organizados a utilizam para explicar em escala física a atividade econômica que criou Mariana e Ouro Preto.",
           "lat": -20.392408,
           "lon": -43.438774,
           "locationAccuracy": "exact",
@@ -1405,27 +1235,22 @@ window.ROTEIRO_DATA = {
             "status": "bilheteria",
             "url": "https://mariana.minasdapassagem.com.br/visitacao/"
           },
-          "accessEffort": {
-            "label": "Exigente",
-            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
-            "level": "hard"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Rua Direita e casario",
-          "description": "Eixo histórico de Mariana com sobrados coloniais que permite perceber o desenho urbano planejado da cidade e a vida civil fora das grandes igrejas.",
+          "description": "Eixo histórico de Mariana com sobrados coloniais que permite perceber o desenho urbano planejado da cidade e a vida civil fora das grandes igrejas. Aparece nos walking tours porque liga as atrações centrais e transforma o deslocamento em leitura da cidade colonial.",
           "agencyRationale": "Aparece nos walking tours porque liga as atrações centrais e transforma o deslocamento em leitura da cidade colonial.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao calçamento",
+            "description": "Visita ao centro histórico com caminhada. Confirme calçamento, desníveis e extensão do trecho escolhido."
           },
-          "guideBriefing": "Eixo histórico de Mariana com sobrados coloniais que permite perceber o desenho urbano planejado da cidade e a vida civil fora das grandes igrejas. Aparece nos walking tours porque liga as atrações centrais e transforma o deslocamento em leitura da cidade colonial.",
           "lat": -20.3775358,
           "lon": -43.417483,
           "locationAccuracy": "street-center",
@@ -1438,27 +1263,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Órgão Arp Schnitger",
-          "description": "Órgão alemão do início do século XVIII instalado na Catedral da Sé, um dos raríssimos instrumentos de sua época preservados no Brasil.",
+          "description": "Órgão alemão do início do século XVIII instalado na Catedral da Sé, um dos raríssimos instrumentos de sua época preservados no Brasil. Roteiros organizados e roteiros oficiais o destacam porque oferece patrimônio musical excepcional, diferenciando Mariana das demais cidades barrocas.",
           "agencyRationale": "Operadoras e roteiros oficiais o destacam porque oferece patrimônio musical excepcional, diferenciando Mariana das demais cidades barrocas.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao percurso",
+            "description": "O centro histórico pode ter calçamento e desníveis no trajeto até a atração. Confirme entrada e circulação interna."
           },
-          "guideBriefing": "Órgão alemão do início do século XVIII instalado na Catedral da Sé, um dos raríssimos instrumentos de sua época preservados no Brasil. Roteiros organizados e roteiros oficiais o destacam porque oferece patrimônio musical excepcional, diferenciando Mariana das demais cidades barrocas.",
           "lat": -20.378193,
           "lon": -43.416366,
           "locationAccuracy": "exact",
@@ -1471,27 +1291,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Igreja de São Pedro dos Clérigos",
-          "description": "Igreja iniciada no século XVIII, marcante pela implantação elevada e pela arquitetura de linhas curvas.",
+          "description": "Igreja iniciada no século XVIII, marcante pela implantação elevada e pela arquitetura de linhas curvas. Entra em roteiros mais completos para ampliar a leitura da arquitetura religiosa de Mariana além do conjunto da Praça Minas Gerais.",
           "agencyRationale": "Entra em roteiros mais completos para ampliar a leitura da arquitetura religiosa de Mariana além do conjunto da Praça Minas Gerais.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja iniciada no século XVIII, marcante pela implantação elevada e pela arquitetura de linhas curvas. Entra em roteiros mais completos para ampliar a leitura da arquitetura religiosa de Mariana além do conjunto da Praça Minas Gerais.",
           "lat": -20.38358,
           "lon": -43.418777,
           "locationAccuracy": "exact",
@@ -1502,11 +1317,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -1523,11 +1333,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja histórica de Mariana incluída em roteiro comercial.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -1535,11 +1345,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -1556,11 +1361,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao percurso",
+            "description": "O centro histórico pode ter calçamento e desníveis no trajeto até a atração. Confirme entrada e circulação interna."
           },
-          "guideBriefing": "Museu com acervo ligado à arte sacra mineira, incluído em roteiro comercial.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -1568,11 +1373,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "historia"
@@ -1589,11 +1389,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao calçamento",
+            "description": "Visita ao centro histórico com caminhada. Confirme calçamento, desníveis e extensão do trecho escolhido."
           },
-          "guideBriefing": "Marco urbano do conjunto histórico de Mariana incluído em roteiro comercial.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -1601,11 +1401,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "historia"
@@ -1624,10 +1419,10 @@ window.ROTEIRO_DATA = {
         0.5,
         1
       ],
-      "accessEffort": {
+      "access": {
+        "level": "moderate",
         "label": "Variável",
-        "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
-        "level": "moderate"
+        "description": "A caminhada pelo centro histórico pode envolver calçamento e desníveis. A visita subterrânea à Mina da Passagem tem condições próprias, a confirmar com o operador."
       }
     },
     {
@@ -1658,10 +1453,10 @@ window.ROTEIRO_DATA = {
         1,
         2
       ],
-      "accessEffort": {
+      "access": {
+        "level": "hard",
         "label": "Exigente nas trilhas",
-        "note": "O ICMBio classifica roteiros com caminhadas de vários quilômetros; escolha só atrativo com acesso curto confirmado.",
-        "level": "hard"
+        "description": "O cadastro cita roteiros do ICMBio com caminhadas de vários quilômetros. Escolha um percurso compatível com o grupo e confirme distância, terreno e possibilidade de acesso curto."
       },
       "profile": "Parque nacional · serras · cachoeiras",
       "attractions": []
@@ -1686,17 +1481,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Cachoeira do Tabuleiro",
-          "description": "Queda monumental despencando de um paredão da Serra do Espinhaço. A escala da formação rochosa é o principal motivo da visita.",
+          "description": "Queda monumental despencando de um paredão da Serra do Espinhaço. A escala da formação rochosa é o principal motivo da visita. Tabuleiro é incluída porque oferece uma mudança de escala: sai-se do patrimônio construído para uma paisagem monumental do Espinhaço. Pode justificar uma etapa inteira do roteiro.",
           "agencyRationale": "Tabuleiro é incluída porque oferece uma mudança de escala: sai-se do patrimônio construído para uma paisagem monumental do Espinhaço. Pode justificar uma etapa inteira do roteiro.",
           "visitType": "Trilha / natureza",
           "estimatedDuration": "1 h mirante / 4 h parte baixa",
           "publishedDuration": "Mirante: 15–30 min de caminhada; parte baixa: ~3 h de passeio",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "restricted",
-            "description": "Não/restrito para dificuldade de mobilidade; norma cita idosos e PCD"
+          "access": {
+            "level": "hard",
+            "label": "Trilha com restrições",
+            "description": "Acesso por trilha, com possibilidade de degraus e terreno irregular. A norma citada no cadastro prevê restrições para dificuldade de mobilidade e menciona idosos e pessoas com deficiência; confirme o percurso e as regras atuais na portaria."
           },
-          "guideBriefing": "Queda monumental despencando de um paredão da Serra do Espinhaço. A escala da formação rochosa é o principal motivo da visita. Tabuleiro é incluída porque oferece uma mudança de escala: sai-se do patrimônio construído para uma paisagem monumental do Espinhaço. Pode justificar uma etapa inteira do roteiro.",
           "lat": -19.08936,
           "lon": -43.55158,
           "locationAccuracy": "exact",
@@ -1710,28 +1505,23 @@ window.ROTEIRO_DATA = {
             "url": "https://www.turismo.cmd.mg.gov.br/turismo/cachoeira-do-tabuleiro/17",
             "note": "Taxa de visitação informada pela prefeitura; confirme valor e acesso atual."
           },
-          "accessEffort": {
-            "label": "Exigente",
-            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
-            "level": "hard"
-          },
           "mapQuery": "Cachoeira do Tabuleiro, Conceição do Mato Dentro MG",
           "kind": "atracao",
           "type": "natureza"
         },
         {
           "name": "Centro histórico",
-          "description": "Igrejas e casarões registram a ocupação do antigo caminho entre as áreas mineradoras.",
+          "description": "Igrejas e casarões registram a ocupação do antigo caminho entre as áreas mineradoras. Mantém continuidade histórica entre natureza e Estrada Real.",
           "agencyRationale": "Mantém continuidade histórica entre natureza e Estrada Real.",
           "visitType": "Caminhada / externa",
           "estimatedDuration": "1h30",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil",
+            "description": "Visita externa com caminhada entre igrejas e casarões. A estimativa considera um trecho curto; confirme calçamento, degraus e ladeiras no percurso escolhido."
           },
-          "guideBriefing": "Igrejas e casarões registram a ocupação do antigo caminho entre as áreas mineradoras. Mantém continuidade histórica entre natureza e Estrada Real.",
           "lat": -19.03722,
           "lon": -43.42528,
           "locationAccuracy": "city-center",
@@ -1743,28 +1533,23 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "mapQuery": "Centro histórico, Conceição do Mato Dentro MG",
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Serra do Espinhaço",
-          "description": "Cadeia montanhosa de campos rupestres, cânions, cachoeiras e grande biodiversidade.",
+          "description": "Cadeia montanhosa de campos rupestres, cânions, cachoeiras e grande biodiversidade. Faz o percurso até Diamantina ser também um roteiro paisagístico.",
           "agencyRationale": "Faz o percurso até Diamantina ser também um roteiro paisagístico.",
           "visitType": "Paisagem / trilha",
           "estimatedDuration": "meio dia",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "hard",
+            "label": "Exigente / variável",
+            "description": "Visita de paisagem e trilha na serra. O esforço depende do percurso escolhido; confirme distância, desnível, terreno e condições com o responsável pelo roteiro."
           },
-          "guideBriefing": "Cadeia montanhosa de campos rupestres, cânions, cachoeiras e grande biodiversidade. Faz o percurso até Diamantina ser também um roteiro paisagístico.",
           "lat": -19.03722,
           "lon": -43.42528,
           "locationAccuracy": "city-center",
@@ -1775,11 +1560,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Exigente",
-            "note": "Cachoeira e parte baixa envolvem trilha; confirmar percurso, desnível e condições na portaria.",
-            "level": "hard"
           },
           "mapQuery": "Serra do Espinhaço, Conceição do Mato Dentro MG",
           "kind": "atracao",
@@ -1797,11 +1577,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Matriz histórica de Conceição do Mato Dentro incluída em roteiro comercial Diamantina–BH.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -1809,11 +1589,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "mapQuery": "Igreja Matriz de Nossa Senhora da Conceição, Conceição do Mato Dentro MG",
           "kind": "atracao",
@@ -1831,10 +1606,10 @@ window.ROTEIRO_DATA = {
         1,
         1
       ],
-      "accessEffort": {
-        "label": "Exigente",
-        "note": "Cachoeira e parte baixa envolvem trilha; confirmar percurso, desnível e condições na portaria.",
-        "level": "hard"
+      "access": {
+        "level": "hard",
+        "label": "Exigente nas trilhas",
+        "description": "A cachoeira e a parte baixa envolvem trilha. Confirme percurso, desnível e condições na portaria; a visita urbana ao centro histórico tem outro contexto de acesso."
       },
       "municipality": "Conceição do Mato Dentro",
       "mapQuery": "Tabuleiro, Conceição do Mato Dentro MG"
@@ -1867,17 +1642,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Centro Histórico",
-          "description": "Conjunto de casarões, igrejas e ladeiras de uma das primeiras vilas do norte minerador de Minas. É um núcleo menos monumental e mais preservado na escala cotidiana.",
+          "description": "Conjunto de casarões, igrejas e ladeiras de uma das primeiras vilas do norte minerador de Minas. É um núcleo menos monumental e mais preservado na escala cotidiana. O Serro é usado porque preserva um elo histórico do próprio caminho que levava às áreas diamantíferas. Também oferece patrimônio e gastronomia suficientes para que a parada tenha valor próprio.",
           "agencyRationale": "O Serro é usado porque preserva um elo histórico do próprio caminho que levava às áreas diamantíferas. Também oferece patrimônio e gastronomia suficientes para que a parada tenha valor próprio.",
           "visitType": "A pé / externa",
           "estimatedDuration": "2–3 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil em trecho curto",
+            "description": "Circuito a pé entre casarões e igrejas, distribuídos pelas ladeiras. A estimativa de menor esforço vale para trechos curtos; confirme calçamento, desníveis e duração do circuito escolhido."
           },
-          "guideBriefing": "Conjunto de casarões, igrejas e ladeiras de uma das primeiras vilas do norte minerador de Minas. É um núcleo menos monumental e mais preservado na escala cotidiana. O Serro é usado porque preserva um elo histórico do próprio caminho que levava às áreas diamantíferas. Também oferece patrimônio e gastronomia suficientes para que a parada tenha valor próprio.",
           "lat": -18.60444,
           "lon": -43.37945,
           "locationAccuracy": "city-center",
@@ -1889,27 +1664,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Igrejas coloniais",
-          "description": "Templos distribuídos pelas ladeiras documentam irmandades, arte sacra e a sociedade mineradora local.",
+          "description": "Templos distribuídos pelas ladeiras documentam irmandades, arte sacra e a sociedade mineradora local. Dão conteúdo histórico a uma parada que também é gastronômica.",
           "agencyRationale": "Dão conteúdo histórico a uma parada que também é gastronômica.",
           "visitType": "Circuito a pé",
           "estimatedDuration": "1h30",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil em trecho curto",
+            "description": "Circuito a pé entre casarões e igrejas, distribuídos pelas ladeiras. A estimativa de menor esforço vale para trechos curtos; confirme calçamento, desníveis e duração do circuito escolhido."
           },
-          "guideBriefing": "Templos distribuídos pelas ladeiras documentam irmandades, arte sacra e a sociedade mineradora local. Dão conteúdo histórico a uma parada que também é gastronômica.",
           "lat": -18.60444,
           "lon": -43.37945,
           "locationAccuracy": "city-center",
@@ -1921,27 +1691,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Queijo do Serro",
-          "description": "Queijo artesanal produzido há séculos com técnicas tradicionais; a região é uma das referências da cultura queijeira mineira.",
+          "description": "Queijo artesanal produzido há séculos com técnicas tradicionais; a região é uma das referências da cultura queijeira mineira. O queijo transforma patrimônio imaterial em experiência sensorial. Roteiros organizados conseguem ligar história rural, técnica tradicional e degustação em uma mesma parada.",
           "agencyRationale": "O queijo transforma patrimônio imaterial em experiência sensorial. Agências conseguem ligar história rural, técnica tradicional e degustação em uma mesma parada.",
           "visitType": "Degustação / produtor",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "Degustação e visita a um produtor. A estimativa de menor esforço se refere à visita; confirme estrada de acesso, entrada, degraus e circulação na propriedade escolhida."
           },
-          "guideBriefing": "Queijo artesanal produzido há séculos com técnicas tradicionais; a região é uma das referências da cultura queijeira mineira. O queijo transforma patrimônio imaterial em experiência sensorial. Roteiros organizados conseguem ligar história rural, técnica tradicional e degustação em uma mesma parada.",
           "lat": -18.60444,
           "lon": -43.37945,
           "locationAccuracy": "city-center",
@@ -1952,11 +1717,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "gastronomia"
@@ -1973,11 +1733,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "O cadastro identifica a cachoeira, mas não detalha estrada, caminhada nem desnível. Confirme o acesso e o percurso local."
           },
-          "guideBriefing": "Cachoeira do Serro incluída em passeio comercial da Estrada Real.",
           "days": "—",
           "relevanceSource": "agency",
           "mapQuery": "Cachoeira da Grota Seca, São Gonçalo do Rio das Pedras, Serro MG",
@@ -1986,11 +1746,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "natureza"
@@ -2007,11 +1762,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "O cadastro identifica a cachoeira, mas não detalha estrada, caminhada nem desnível. Confirme o acesso e o percurso local."
           },
-          "guideBriefing": "Cachoeira do Serro incluída em passeio comercial da Estrada Real.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2019,11 +1774,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "natureza"
@@ -2040,11 +1790,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao percurso",
+            "description": "O percurso pelo centro histórico pode envolver calçamento e desníveis. Confirme entrada, áreas abertas à visita e circulação no imóvel."
           },
-          "guideBriefing": "Casarão histórico incluído no city tour comercial do Serro.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2052,11 +1802,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "historia"
@@ -2073,11 +1818,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao percurso",
+            "description": "O percurso pelo centro histórico pode envolver calçamento e desníveis. Confirme entrada, áreas abertas à visita e circulação no imóvel."
           },
-          "guideBriefing": "Conjunto histórico incluído no city tour comercial do Serro.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2085,11 +1830,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "historia"
@@ -2106,11 +1846,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Templo histórico incluído no roteiro comercial do Serro.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2118,11 +1858,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -2139,11 +1874,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja histórica incluída no roteiro comercial do Serro.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2151,11 +1886,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -2172,11 +1902,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja histórica incluída no roteiro comercial do Serro.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2184,11 +1914,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -2205,11 +1930,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "Degustação e visita a um produtor. A estimativa de menor esforço se refere à visita; confirme estrada de acesso, entrada, degraus e circulação na propriedade escolhida."
           },
-          "guideBriefing": "Experiência rural ligada ao modo tradicional de produção do Queijo do Serro.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2218,27 +1943,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "gastronomia"
         },
         {
           "name": "Igreja de Nossa Senhora do Rosário · Milho Verde",
-          "description": "Pequena igreja branca isolada diante da serra, uma das imagens mais emblemáticas da Estrada Real. O valor está tanto no templo quanto na paisagem ao redor.",
+          "description": "Localidade: Milho Verde, município de Serro. Pequena igreja branca isolada diante da serra, uma das imagens mais emblemáticas da Estrada Real. O valor está tanto no templo quanto na paisagem ao redor. É um cartão-postal muito eficiente em roteiros do Caminho dos Diamantes.",
           "agencyRationale": "É um cartão-postal muito eficiente em roteiros do Caminho dos Diamantes.",
           "visitType": "Igreja + paisagem",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Localidade: Milho Verde, município de Serro. Pequena igreja branca isolada diante da serra, uma das imagens mais emblemáticas da Estrada Real. O valor está tanto no templo quanto na paisagem ao redor. É um cartão-postal muito eficiente em roteiros do Caminho dos Diamantes.",
           "lat": -18.4730041335,
           "lon": -43.4985745087,
           "locationAccuracy": "exact",
@@ -2250,11 +1970,6 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "locality": "Milho Verde",
           "mapQuery": "Igreja de Nossa Senhora do Rosário, Milho Verde, Serro MG",
           "catalogName": "Igreja de Nossa Senhora do Rosário · Milho Verde",
@@ -2263,17 +1978,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Núcleo histórico · Milho Verde",
-          "description": "Casario e ruas preservam a escala de um antigo povoado ligado à mineração de ouro e diamantes.",
+          "description": "Localidade: Milho Verde, município de Serro. Casario e ruas preservam a escala de um antigo povoado ligado à mineração de ouro e diamantes. Oferece experiência de vila histórica mais tranquila que os grandes centros.",
           "agencyRationale": "Oferece experiência de vila histórica mais tranquila que os grandes centros.",
           "visitType": "Caminhada / externa",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao núcleo histórico de Milho Verde, sem incluir os percursos das cachoeiras. Confirme calçamento, degraus e desníveis do trecho a pé; o esforço não está documentado para a vila."
           },
-          "guideBriefing": "Localidade: Milho Verde, município de Serro. Casario e ruas preservam a escala de um antigo povoado ligado à mineração de ouro e diamantes. Oferece experiência de vila histórica mais tranquila que os grandes centros.",
           "lat": -18.47324,
           "lon": -43.49798,
           "locationAccuracy": "city-center",
@@ -2285,11 +2000,6 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Vila pode ser visitada sem trilha; cachoeiras têm acessos distintos, alguns irregulares.",
-            "level": "moderate"
-          },
           "locality": "Milho Verde",
           "mapQuery": "Núcleo histórico, Milho Verde, Serro MG",
           "catalogName": "Núcleo histórico · Milho Verde",
@@ -2298,17 +2008,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Cachoeiras · Milho Verde",
-          "description": "Quedas e poços próximos ao povoado permitem alternar patrimônio e natureza no mesmo dia.",
+          "description": "Localidade: Milho Verde, município de Serro. Quedas e poços próximos ao povoado permitem alternar patrimônio e natureza no mesmo dia. Justificam permanecer mais tempo na região em vez de apenas atravessá-la.",
           "agencyRationale": "Justificam permanecer mais tempo na região em vez de apenas atravessá-la.",
           "visitType": "Natureza / banho",
           "estimatedDuration": "meio dia",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Variável",
+            "description": "As cachoeiras têm acessos distintos, alguns irregulares. Confirme estrada, caminhada, terreno e condições da água para o local escolhido."
           },
-          "guideBriefing": "Localidade: Milho Verde, município de Serro. Quedas e poços próximos ao povoado permitem alternar patrimônio e natureza no mesmo dia. Justificam permanecer mais tempo na região em vez de apenas atravessá-la.",
           "lat": -18.47324,
           "lon": -43.49798,
           "locationAccuracy": "city-center",
@@ -2319,11 +2029,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Vila pode ser visitada sem trilha; cachoeiras têm acessos distintos, alguns irregulares.",
-            "level": "moderate"
           },
           "locality": "Milho Verde",
           "mapQuery": "Cachoeiras, Milho Verde, Serro MG",
@@ -2345,27 +2050,22 @@ window.ROTEIRO_DATA = {
             "url": "https://www.minasgerais.com.br/pt/atracoes/serro/cachoeira/cachoeira-do-comercio",
             "note": "Entrada franca informada pelo portal estadual; confirme condições atuais."
           },
-          "accessEffort": {
+          "access": {
+            "level": "moderate",
             "label": "Variável",
-            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
-            "level": "moderate"
+            "description": "A cachoeira pode exigir caminhada. Confirme distância, terreno e condições do percurso com guia local."
           },
           "locality": "São Gonçalo do Rio das Pedras",
           "mapQuery": "Cachoeira do Comércio, São Gonçalo do Rio das Pedras, Serro MG",
           "catalogName": "Cachoeira do Comércio · São Gonçalo do Rio das Pedras",
-          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Cachoeira em São Gonçalo do Rio das Pedras, distrito do Serro, com queda d’água, paredão e moinhos tradicionais de pau-a-pique nas proximidades. Confirme o percurso e as condições de visita localmente.",
           "kind": "atracao",
           "type": "natureza",
-          "description": "Cachoeira em São Gonçalo do Rio das Pedras, distrito do Serro, com queda d’água, paredão e moinhos tradicionais de pau-a-pique nas proximidades.",
+          "description": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Cachoeira em São Gonçalo do Rio das Pedras, distrito do Serro, com queda d’água, paredão e moinhos tradicionais de pau-a-pique nas proximidades. Confirme o percurso e as condições de visita localmente.",
           "agencyRationale": "Complemento documentado no portal turístico estadual; inclusão em roteiro comercial de agência não confirmada.",
           "visitType": "Cachoeira / paisagem",
           "estimatedDuration": "Duração a confirmar",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
-          },
           "days": "Duração a confirmar",
           "sourceUrl": "https://www.minasgerais.com.br/pt/atracoes/serro/cachoeira/cachoeira-do-comercio",
           "researchedAt": "2026-10-02",
@@ -2378,17 +2078,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Núcleo histórico · São Gonçalo do Rio das Pedras",
-          "description": "Pequeno povoado surgido nos caminhos da mineração, preservando arquitetura simples e ritmo rural.",
+          "description": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Pequeno povoado surgido nos caminhos da mineração, preservando arquitetura simples e ritmo rural. É uma parada autêntica no trajeto da Estrada Real entre Serro e Diamantina.",
           "agencyRationale": "É uma parada autêntica no trajeto da Estrada Real entre Serro e Diamantina.",
           "visitType": "Caminhada / externa",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao núcleo histórico. Confirme o percurso a pé, calçamento e desníveis."
           },
-          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Pequeno povoado surgido nos caminhos da mineração, preservando arquitetura simples e ritmo rural. É uma parada autêntica no trajeto da Estrada Real entre Serro e Diamantina.",
           "lat": -18.42003,
           "lon": -43.49561,
           "locationAccuracy": "city-center",
@@ -2399,11 +2099,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
-            "level": "moderate"
           },
           "locality": "São Gonçalo do Rio das Pedras",
           "mapQuery": "Núcleo histórico, São Gonçalo do Rio das Pedras, Serro MG",
@@ -2413,17 +2108,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Igrejas e capelas · São Gonçalo do Rio das Pedras",
-          "description": "Pequenos templos ajudam a contar a formação religiosa e comunitária dos povoados mineradores.",
+          "description": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Pequenos templos ajudam a contar a formação religiosa e comunitária dos povoados mineradores. Complementam a narrativa das grandes igrejas barrocas com patrimônio rural.",
           "agencyRationale": "Complementam a narrativa das grandes igrejas barrocas com patrimônio rural.",
           "visitType": "Circuito a pé",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Pequenos templos ajudam a contar a formação religiosa e comunitária dos povoados mineradores. Complementam a narrativa das grandes igrejas barrocas com patrimônio rural.",
           "lat": -18.42003,
           "lon": -43.49561,
           "locationAccuracy": "city-center",
@@ -2435,11 +2130,6 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "locality": "São Gonçalo do Rio das Pedras",
           "mapQuery": "Igrejas e capelas, São Gonçalo do Rio das Pedras, Serro MG",
           "catalogName": "Igrejas e capelas · São Gonçalo do Rio das Pedras",
@@ -2448,17 +2138,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Cachoeiras e Serra do Espinhaço · São Gonçalo do Rio das Pedras",
-          "description": "Trilhas, cursos d'água e campos rupestres cercam o distrito.",
+          "description": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Trilhas, cursos d'água e campos rupestres cercam o distrito. Permitem inserir natureza sem abandonar o eixo histórico da viagem.",
           "agencyRationale": "Permitem inserir natureza sem abandonar o eixo histórico da viagem.",
           "visitType": "Natureza / trilha",
           "estimatedDuration": "meio dia",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Variável",
+            "description": "Os passeios de natureza podem exigir caminhada. Confirme a cachoeira ou trilha escolhida, distância e terreno com guia local."
           },
-          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Trilhas, cursos d'água e campos rupestres cercam o distrito. Permitem inserir natureza sem abandonar o eixo histórico da viagem.",
           "lat": -18.42003,
           "lon": -43.49561,
           "locationAccuracy": "city-center",
@@ -2469,11 +2159,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
-            "level": "moderate"
           },
           "locality": "São Gonçalo do Rio das Pedras",
           "mapQuery": "Cachoeiras e Serra do Espinhaço, São Gonçalo do Rio das Pedras, Serro MG",
@@ -2493,10 +2178,10 @@ window.ROTEIRO_DATA = {
         0.5,
         0.5
       ],
-      "accessEffort": {
+      "access": {
+        "level": "moderate",
         "label": "Atenção a ladeiras",
-        "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
-        "level": "moderate"
+        "description": "O centro histórico tem calçamento e desníveis; escolha trechos curtos. Visitas a produtores de queijo e cachoeiras precisam de confirmação própria de estrada e percurso."
       },
       "municipality": "Serro"
     },
@@ -2528,17 +2213,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Casa de JK",
-          "description": "Casa onde JK viveu na juventude, hoje museu. Liga a pequena cidade colonial à trajetória do futuro presidente responsável pela construção de Brasília.",
+          "description": "Casa onde JK viveu na juventude, hoje museu. Liga a pequena cidade colonial à trajetória do futuro presidente responsável pela construção de Brasília. Introduz uma camada de história republicana ao roteiro colonial.",
           "agencyRationale": "Introduz uma camada de história republicana ao roteiro colonial.",
           "visitType": "Museu / interna",
           "estimatedDuration": "1 h",
           "publishedDuration": "< 1 h",
           "oneYearOld": "Sim",
-          "accessibility": {
-            "status": "accessible",
-            "description": "Sim — há rota externa, acesso interno por rampa e sanitário acessível"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O percurso no centro histórico tem calçamento e desníveis. A Casa de JK registra rota externa, entrada interna por rampa e sanitário acessível; confirme o trajeto e a disponibilidade desses acessos."
           },
-          "guideBriefing": "Casa onde JK viveu na juventude, hoje museu. Liga a pequena cidade colonial à trajetória do futuro presidente responsável pela construção de Brasília. Introduz uma camada de história republicana ao roteiro colonial.",
           "catalogName": "Casa de Juscelino Kubitschek",
           "lat": -18.244848,
           "lon": -43.600277,
@@ -2550,28 +2235,23 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia",
           "days": "1 h"
         },
         {
           "name": "Centro Histórico",
-          "description": "Conjunto urbano colonial formado durante o ciclo dos diamantes. As ruas de pedra, sobrados e igrejas permitem entender como a riqueza diamantífera moldou a cidade; é Patrimônio Mundial da UNESCO.",
+          "description": "Conjunto urbano colonial formado durante o ciclo dos diamantes. As ruas de pedra, sobrados e igrejas permitem entender como a riqueza diamantífera moldou a cidade; é Patrimônio Mundial da UNESCO. O conjunto histórico reúne a memória da mineração de diamantes, da sociedade colonial e uma tradição musical própria. Nos circuitos longos, costuma justificar pernoites porque não cabe em uma parada rápida.",
           "agencyRationale": "O conjunto histórico reúne a memória da mineração de diamantes, da sociedade colonial e uma tradição musical própria. Nos circuitos longos, costuma justificar pernoites porque não cabe em uma parada rápida.",
           "visitType": "A pé / externa",
           "estimatedDuration": "2–3 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil em trecho curto",
+            "description": "Visita a pé pelo centro histórico. A estimativa considera um trecho curto; calçamento, degraus e ladeiras podem aumentar o esforço conforme o circuito escolhido."
           },
-          "guideBriefing": "Conjunto urbano colonial formado durante o ciclo dos diamantes. As ruas de pedra, sobrados e igrejas permitem entender como a riqueza diamantífera moldou a cidade; é Patrimônio Mundial da UNESCO. O conjunto histórico reúne a memória da mineração de diamantes, da sociedade colonial e uma tradição musical própria. Nos circuitos longos, costuma justificar pernoites porque não cabe em uma parada rápida.",
           "lat": -18.24409,
           "lon": -43.60065,
           "locationAccuracy": "city-center",
@@ -2583,27 +2263,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Casa da Glória e Passadiço da Glória",
-          "description": "Conjunto de dois casarões históricos em lados opostos da Rua da Glória, ligados pelo Passadiço da Glória. O passadiço elevado é uma das imagens mais reconhecíveis de Diamantina; o conjunto abriga atividades do Instituto Casa da Glória da UFMG.",
+          "description": "Conjunto de dois casarões históricos em lados opostos da Rua da Glória, ligados pelo Passadiço da Glória, uma das imagens mais reconhecíveis de Diamantina. Observar a casa e a passagem elevada compõe uma única parada a pé.\n\nDa rua, observe a ligação entre os edifícios e a arquitetura do antigo conjunto religioso e educacional. Hoje o local abriga atividades do Instituto Casa da Glória, ligado à UFMG. Reserve cerca de 20 minutos para a parte externa; consulte a instituição antes de planejar uma visita aos espaços internos ou atravessar o passadiço.",
           "agencyRationale": "O conjunto e seu passadiço são um marco visual do centro histórico e uma parada frequente nos roteiros a pé de Diamantina.",
           "visitType": "Arquitetura / visita externa; interior conforme funcionamento",
           "estimatedDuration": "20 min (exterior)",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "Acesso ao interior a confirmar com a instituição."
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao percurso",
+            "description": "Visita externa ao conjunto na Rua da Glória, em área de calçamento e desníveis. A visita ao interior e ao passadiço depende do funcionamento da instituição; confirme entrada e circulação interna."
           },
-          "guideBriefing": "A Casa da Glória é um conjunto de dois casarões em lados opostos da Rua da Glória. O Passadiço da Glória é a passagem elevada que os une; por isso, observar a casa e o passadiço compõe uma única parada a pé.\n\nDa rua, observe a ligação entre os edifícios e a arquitetura do antigo conjunto religioso e educacional. Hoje o local abriga atividades do Instituto Casa da Glória, ligado à UFMG. Reserve cerca de 20 minutos para a parte externa; consulte a instituição antes de planejar uma visita aos espaços internos ou atravessar o passadiço.",
           "lat": -18.241529,
           "lon": -43.601612,
           "locationAccuracy": "exact",
@@ -2631,27 +2306,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Casa de Chica da Silva",
-          "description": "Residência associada a Chica da Silva, personagem central da sociedade diamantífera do século XVIII. A visita ajuda a compreender mineração, escravidão, mobilidade social e costumes da época.",
+          "description": "Residência associada a Chica da Silva, personagem central da sociedade diamantífera do século XVIII. A visita ajuda a compreender mineração, escravidão, mobilidade social e costumes da época. Acrescenta história humana e social ao roteiro, além da arquitetura colonial.",
           "agencyRationale": "Acrescenta história humana e social ao roteiro, além da arquitetura colonial.",
           "visitType": "Museu / interna",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O trajeto pelo centro histórico pode envolver calçamento e desníveis. Confirme entrada, degraus e circulação interna deste imóvel; o cadastro não detalha esses acessos."
           },
-          "guideBriefing": "Residência associada a Chica da Silva, personagem central da sociedade diamantífera do século XVIII. A visita ajuda a compreender mineração, escravidão, mobilidade social e costumes da época. Acrescenta história humana e social ao roteiro, além da arquitetura colonial.",
           "lat": -18.2467273,
           "lon": -43.5967904,
           "locationAccuracy": "exact",
@@ -2663,27 +2333,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Igreja de São Francisco de Assis",
-          "description": "Igreja setecentista ligada à elite local e à arte sacra de Diamantina. É uma boa leitura da religiosidade e da organização social do período minerador.",
+          "description": "Igreja setecentista ligada à elite local e à arte sacra de Diamantina. É uma boa leitura da religiosidade e da organização social do período minerador. Integra os circuitos guiados de arte sacra do centro histórico.",
           "agencyRationale": "Integra os circuitos guiados de arte sacra do centro histórico.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja setecentista ligada à elite local e à arte sacra de Diamantina. É uma boa leitura da religiosidade e da organização social do período minerador. Integra os circuitos guiados de arte sacra do centro histórico.",
           "lat": -18.2438742,
           "lon": -43.5985499,
           "locationAccuracy": "exact",
@@ -2695,27 +2360,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Rua da Quitanda",
-          "description": "Rua histórica de casario colonial, cenário tradicional da Vesperata; o Beco da Tecla fica nas proximidades.",
+          "description": "Rua histórica de casario colonial, cenário tradicional da Vesperata; o Beco da Tecla fica nas proximidades. É o espaço onde patrimônio arquitetônico e vida cultural contemporânea se encontram.",
           "agencyRationale": "É o espaço onde patrimônio arquitetônico e vida cultural contemporânea se encontram.",
           "visitType": "Caminhada / externa",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao calçamento",
+            "description": "Caminhada pela rua do centro histórico, com calçamento e desníveis no percurso. Confirme o trecho e planeje pausas."
           },
-          "guideBriefing": "Rua histórica de casario colonial, cenário tradicional da Vesperata; o Beco da Tecla fica nas proximidades. É o espaço onde patrimônio arquitetônico e vida cultural contemporânea se encontram.",
           "lat": -18.2452602,
           "lon": -43.5967276,
           "locationAccuracy": "street-center",
@@ -2727,30 +2387,25 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Vesperata",
-          "description": "Concerto em que músicos se apresentam das sacadas dos casarões enquanto maestros e público ocupam a rua. Não é apenas um show: utiliza a própria arquitetura colonial como palco.",
+          "description": "Concerto em que músicos se apresentam das sacadas dos casarões enquanto maestros e público ocupam a rua. Não é apenas um show: utiliza a própria arquitetura colonial como palco. É uma das experiências culturais mais características e procuradas de Diamantina.",
           "agencyRationale": "É uma das experiências culturais mais características e procuradas de Diamantina.",
           "visitType": "Evento",
           "estimatedDuration": "2–3 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil no evento",
+            "description": "Evento no centro histórico. A estimativa se refere à permanência no evento; confirme o local, o percurso pelo calçamento, os degraus e as condições de acomodação."
           },
           "schedule": "09/10/2026 · 20h · Rua da Quitanda",
           "scheduleNote": "Sessão extra divulgada em setembro; confira ingresso e eventuais atualizações.",
           "eventUrl": "https://bileto.sympla.com.br/event/117032?share_id=1-copiarlink",
-          "guideBriefing": "Concerto em que músicos se apresentam das sacadas dos casarões enquanto maestros e público ocupam a rua. Não é apenas um show: utiliza a própria arquitetura colonial como palco. É uma das experiências culturais mais características e procuradas de Diamantina.",
           "lat": -18.2452602,
           "lon": -43.5967276,
           "locationAccuracy": "street-center",
@@ -2763,11 +2418,6 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "online",
             "url": "https://bileto.sympla.com.br/event/117032?share_id=1-copiarlink"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia",
@@ -2786,11 +2436,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita histórica com trilha. O cadastro não detalha o trecho, a distância ou o desnível; confirme o percurso."
           },
-          "guideBriefing": "Trecho histórico associado às rotas coloniais e à mineração na Serra dos Cristais.",
           "days": "—",
           "relevanceSource": "agency",
           "mapQuery": "Caminho dos Escravos, acesso BR-367 Rua Salto da Divisa, Diamantina MG",
@@ -2799,11 +2449,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "historia"
@@ -2820,11 +2465,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O trajeto pelo centro histórico pode envolver calçamento e desníveis. Confirme entrada, degraus e circulação interna deste imóvel; o cadastro não detalha esses acessos."
           },
-          "guideBriefing": "Casarão histórico de Diamantina conhecido pelo muxarabiê.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2832,11 +2477,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "historia"
@@ -2853,11 +2493,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O trajeto pelo centro histórico pode envolver calçamento e desníveis. Confirme entrada, degraus e circulação interna deste imóvel; o cadastro não detalha esses acessos."
           },
-          "guideBriefing": "Principal templo católico do centro de Diamantina.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2865,11 +2505,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "historia"
@@ -2886,11 +2521,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja histórica do antigo Arraial do Tijuco.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2898,11 +2533,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -2913,17 +2543,17 @@ window.ROTEIRO_DATA = {
           "lon": -43.60065,
           "locationAccuracy": "city-center",
           "catalogName": "Garimpo Real",
-          "description": "Experiência de garimpo artesanal ligada à história dos diamantes, próximo ao aeroporto de Diamantina, conforme o portal turístico de Minas Gerais.",
+          "description": "Experiência de garimpo artesanal ligada à história dos diamantes, próximo ao aeroporto de Diamantina, conforme o portal turístico de Minas Gerais. O portal descreve práticas com bateias e peneiras e conversa com trabalhadores. Confirme funcionamento, agendamento e ponto de encontro com o responsável. A coordenada deste cadastro continua sendo uma referência genérica de Diamantina. Não foi comprovada equivalência com a opção Experiência de garimpo cadastrada em Curralinho/Extração.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
           "visitType": "Experiência / histórica",
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Experiência de garimpo com condições próprias de visita. Confirme forma de entrada, terreno e deslocamento com o responsável."
           },
-          "guideBriefing": "Experiência de garimpo artesanal ligada à história dos diamantes, próximo ao aeroporto de Diamantina, conforme o portal turístico de Minas Gerais. O portal descreve práticas com bateias e peneiras e conversa com trabalhadores. Confirme funcionamento, agendamento e ponto de encontro com o responsável. A coordenada deste cadastro continua sendo uma referência genérica de Diamantina. Não foi comprovada equivalência com a opção Experiência de garimpo cadastrada em Curralinho/Extração.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2931,11 +2561,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-            "level": "moderate"
           },
           "mapQuery": "Garimpo Real Diamantina MG",
           "visitLinks": [
@@ -2959,11 +2584,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Templo histórico ligado à Irmandade de Nossa Senhora das Mercês.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2971,11 +2596,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -2992,11 +2612,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja histórica ligada à irmandade de negros.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -3004,11 +2624,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -3025,11 +2640,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "moderate",
+            "label": "Atenção ao entorno",
+            "description": "O trajeto pelo centro histórico pode envolver calçamento e desníveis. Confirme entrada, degraus e circulação interna deste imóvel; o cadastro não detalha esses acessos."
           },
-          "guideBriefing": "Edifício associado à administração histórica do Distrito Diamantino.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -3037,11 +2652,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "historia"
@@ -3058,11 +2668,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita a um mirante. Confirme estrada, extensão da caminhada, terreno e desnível."
           },
-          "guideBriefing": "Ponto panorâmico na Serra dos Cristais.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -3070,11 +2680,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-            "level": "moderate"
           },
           "kind": "atracao",
           "type": "natureza"
@@ -3091,11 +2696,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "O cadastro não detalha estrada, caminhada nem desnível até a cachoeira. Confirme o percurso e as condições da água."
           },
-          "guideBriefing": "Cachoeira incluída em roteiros turísticos de Diamantina.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -3104,27 +2709,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Atenção a ladeiras",
-            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-            "level": "moderate"
-          },
           "kind": "atracao",
           "type": "natureza"
         },
         {
           "name": "Gruta do Salitre · Extração / Curralinho",
-          "description": "Formação rochosa de grande impacto próxima a Diamantina, com paredões e cavidades associados à paisagem mineral da região. A visita ajuda a perceber que a história diamantífera nasceu de uma geologia muito particular.",
+          "description": "Localidade: Extração / Curralinho, município de Diamantina. Formação rochosa de grande impacto próxima a Diamantina, com paredões e cavidades associados à paisagem mineral da região. A visita ajuda a perceber que a história diamantífera nasceu de uma geologia muito particular. Roteiros organizados de ecoturismo de Diamantina a combinam com city tour e Biribiri para ligar a história da mineração à paisagem que a produziu.",
           "agencyRationale": "Operadoras de ecoturismo de Diamantina a combinam com city tour e Biribiri para ligar a história da mineração à paisagem que a produziu.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita à gruta em Extração / Curralinho. Confirme percurso de entrada, terreno e condições da visita; distância e desnível não estão documentados no cadastro."
           },
-          "guideBriefing": "Localidade: Extração / Curralinho, município de Diamantina. Formação rochosa de grande impacto próxima a Diamantina, com paredões e cavidades associados à paisagem mineral da região. A visita ajuda a perceber que a história diamantífera nasceu de uma geologia muito particular. Roteiros organizados de ecoturismo de Diamantina a combinam com city tour e Biribiri para ligar a história da mineração à paisagem que a produziu.",
           "lat": -18.27952,
           "lon": -43.53615,
           "locationAccuracy": "exact",
@@ -3145,17 +2745,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Experiência de garimpo · Extração / Curralinho",
-          "description": "Atividade interpretativa ligada às técnicas e à memória da procura por ouro e diamantes na região. O interesse é compreender na prática o trabalho que deu origem aos povoados e à economia local.",
+          "description": "Localidade: Extração / Curralinho, município de Diamantina. Atividade interpretativa ligada às técnicas e à memória da procura por ouro e diamantes na região. O interesse é compreender na prática o trabalho que deu origem aos povoados e à economia local. Aparece em pacotes porque transforma a narrativa do ciclo dos diamantes em experiência participativa, em vez de apenas museológica.",
           "agencyRationale": "Aparece em pacotes porque transforma a narrativa do ciclo dos diamantes em experiência participativa, em vez de apenas museológica.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Experiência de garimpo na localidade de Extração / Curralinho. Confirme o local da atividade, terreno e forma de acesso com o responsável."
           },
-          "guideBriefing": "Localidade: Extração / Curralinho, município de Diamantina. Atividade interpretativa ligada às técnicas e à memória da procura por ouro e diamantes na região. O interesse é compreender na prática o trabalho que deu origem aos povoados e à economia local. Aparece em pacotes porque transforma a narrativa do ciclo dos diamantes em experiência participativa, em vez de apenas museológica.",
           "lat": -18.31002,
           "lon": -43.523591,
           "locationAccuracy": "city-center",
@@ -3175,17 +2775,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Vila de Biribiri · Biribiri",
-          "description": "Vila operária do século XIX criada em torno de uma fábrica têxtil, com casas, igreja e traçado preservados. É uma rara oportunidade de ver patrimônio industrial dentro de uma paisagem natural.",
+          "description": "Localidade: Biribiri, município de Diamantina. Vila operária do século XIX criada em torno de uma fábrica têxtil, com casas, igreja e traçado preservados. É uma rara oportunidade de ver patrimônio industrial dentro de uma paisagem natural. Biribiri acrescenta a industrialização do século XIX à viagem: depois de mineração colonial, o visitante vê uma comunidade organizada em torno de uma fábrica têxtil. A proximidade de Diamantina facilita um bate-volta.",
           "agencyRationale": "Biribiri acrescenta a industrialização do século XIX à viagem: depois de mineração colonial, o visitante vê uma comunidade organizada em torno de uma fábrica têxtil. A proximidade de Diamantina facilita um bate-volta.",
           "visitType": "Vila histórica / caminhada",
           "estimatedDuration": "2 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na vila",
+            "description": "Visita à vila histórica com caminhada curta como estimativa de planejamento. Confirme estrada, calçamento e degraus do trecho; os acessos às cachoeiras e trilhas são separados."
           },
-          "guideBriefing": "Localidade: Biribiri, município de Diamantina. Vila operária do século XIX criada em torno de uma fábrica têxtil, com casas, igreja e traçado preservados. É uma rara oportunidade de ver patrimônio industrial dentro de uma paisagem natural. Biribiri acrescenta a industrialização do século XIX à viagem: depois de mineração colonial, o visitante vê uma comunidade organizada em torno de uma fábrica têxtil. A proximidade de Diamantina facilita um bate-volta.",
           "lat": -18.14464,
           "lon": -43.61966,
           "locationAccuracy": "city-center",
@@ -3197,11 +2797,6 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "locality": "Biribiri",
           "mapQuery": "Vila de Biribiri, Biribiri, Diamantina MG",
           "catalogName": "Vila de Biribiri · Biribiri",
@@ -3210,17 +2805,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Cachoeiras · Biribiri",
-          "description": "Poços e quedas d'água dentro do Parque Estadual do Biribiri. Depois de um city tour de ruas, igrejas e museus, oferecem uma mudança real de ritmo e contato com a paisagem do Espinhaço.",
+          "description": "Localidade: Biribiri, município de Diamantina. Poços e quedas d'água dentro do Parque Estadual do Biribiri. Depois de um city tour de ruas, igrejas e museus, oferecem uma mudança real de ritmo e contato com a paisagem do Espinhaço. Roteiros organizados de Vesperata combinam explicitamente city tour histórico-cultural com trilhas e cachoeiras em Biribiri, equilibrando patrimônio e natureza dentro da mesma estadia.",
           "agencyRationale": "Operadoras de Vesperata combinam explicitamente city tour histórico-cultural com trilhas e cachoeiras em Biribiri, equilibrando patrimônio e natureza dentro da mesma estadia.",
           "visitType": "Natureza / banho",
           "estimatedDuration": "meio dia",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Variável",
+            "description": "As cachoeiras têm acessos diferentes da visita à vila. Confirme estrada, caminhada, terreno e condições da água para a cachoeira escolhida."
           },
-          "guideBriefing": "Localidade: Biribiri, município de Diamantina. Poços e quedas d'água dentro do Parque Estadual do Biribiri. Depois de um city tour de ruas, igrejas e museus, oferecem uma mudança real de ritmo e contato com a paisagem do Espinhaço. Roteiros organizados de Vesperata combinam explicitamente city tour histórico-cultural com trilhas e cachoeiras em Biribiri, equilibrando patrimônio e natureza dentro da mesma estadia.",
           "lat": -18.14464,
           "lon": -43.61966,
           "locationAccuracy": "city-center",
@@ -3232,11 +2827,6 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Vila e cachoeiras têm acessos diferentes; checar estrada e caminhada antes de sair.",
-            "level": "moderate"
-          },
           "locality": "Biribiri",
           "mapQuery": "Cachoeiras, Biribiri, Diamantina MG",
           "catalogName": "Cachoeiras · Biribiri",
@@ -3245,17 +2835,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Trilhas do Parque Estadual do Biribiri · Biribiri",
-          "description": "Caminhos pelo cerrado e campos rupestres levam a cursos d'água, mirantes e áreas naturais em torno da antiga vila.",
+          "description": "Localidade: Biribiri, município de Diamantina. Caminhos pelo cerrado e campos rupestres levam a cursos d'água, mirantes e áreas naturais em torno da antiga vila. São incluídas para transformar Biribiri em experiência ativa, e não apenas visita fotográfica à vila histórica.",
           "agencyRationale": "São incluídas para transformar Biribiri em experiência ativa, e não apenas visita fotográfica à vila histórica.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "moderate",
+            "label": "Variável",
+            "description": "O esforço depende da trilha escolhida. Confirme acesso ao parque, distância, terreno e desnível antes de sair; a visita à vila não caracteriza o percurso de trilha."
           },
-          "guideBriefing": "Localidade: Biribiri, município de Diamantina. Caminhos pelo cerrado e campos rupestres levam a cursos d'água, mirantes e áreas naturais em torno da antiga vila. São incluídas para transformar Biribiri em experiência ativa, e não apenas visita fotográfica à vila histórica.",
           "lat": -18.14464,
           "lon": -43.61966,
           "locationAccuracy": "city-center",
@@ -3266,11 +2856,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Vila e cachoeiras têm acessos diferentes; checar estrada e caminhada antes de sair.",
-            "level": "moderate"
           },
           "locality": "Biribiri",
           "mapQuery": "Trilhas do Parque Estadual do Biribiri, Biribiri, Diamantina MG",
@@ -3284,17 +2869,17 @@ window.ROTEIRO_DATA = {
           "lon": -43.52785,
           "locationAccuracy": "city-center",
           "catalogName": "Núcleo histórico e artesanato de Mendanha · Mendanha",
-          "description": "Parada cultural no distrito de Mendanha incluída em roteiro de agência.",
+          "description": "Localidade: Mendanha, município de Diamantina. Parada cultural no distrito de Mendanha incluída em roteiro de agência.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
           "visitType": "Cultural",
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao núcleo da localidade. Estrada, percurso a pé e desníveis não estão detalhados no cadastro; confirme as condições locais."
           },
-          "guideBriefing": "Localidade: Mendanha, município de Diamantina. Parada cultural no distrito de Mendanha incluída em roteiro de agência.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -3314,17 +2899,17 @@ window.ROTEIRO_DATA = {
           "lon": -43.5333,
           "locationAccuracy": "city-center",
           "catalogName": "Povoado histórico do Vau · Vau",
-          "description": "Antigo ponto de travessia do Rio Jequitinhonha no Caminho dos Diamantes.",
+          "description": "Localidade: Vau, município de Diamantina. Antigo ponto de travessia do Rio Jequitinhonha no Caminho dos Diamantes.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
           "visitType": "Histórica",
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao núcleo da localidade. Estrada, percurso a pé e desníveis não estão detalhados no cadastro; confirme as condições locais."
           },
-          "guideBriefing": "Localidade: Vau, município de Diamantina. Antigo ponto de travessia do Rio Jequitinhonha no Caminho dos Diamantes.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -3348,10 +2933,10 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "por_passeio"
       },
-      "accessEffort": {
+      "access": {
+        "level": "moderate",
         "label": "Atenção a ladeiras",
-        "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-        "level": "moderate"
+        "description": "O centro histórico tem calçamento e desníveis. Confirme o percurso urbano e os acessos de cada museu; cachoeiras, trilhas e distritos têm condições próprias."
       },
       "municipality": "Diamantina",
       "selectedByDefault": true
@@ -3384,10 +2969,10 @@ window.ROTEIRO_DATA = {
         1,
         2
       ],
-      "accessEffort": {
+      "access": {
+        "level": "hard",
         "label": "Exigente",
-        "note": "Cavernas e trilhas podem ter escadas e terreno irregular; confirmar percurso guiado e restrições.",
-        "level": "hard"
+        "description": "Cavernas e trilhas podem ter escadas e terreno irregular. Confirme o percurso guiado, a distância e as restrições antes de incluir a visita."
       },
       "profile": "Cavernas · cânion · pinturas rupestres",
       "attractions": []
@@ -3419,10 +3004,10 @@ window.ROTEIRO_DATA = {
         0,
         1
       ],
-      "accessEffort": {
+      "access": {
+        "level": "moderate",
         "label": "Variável",
-        "note": "Balsa e cachoeiras: confirmar operação, embarque e caminhada antes de incluir.",
-        "level": "moderate"
+        "description": "Acesso à região pode envolver balsa; os passeios às cachoeiras têm condições próprias. Confirme operação, embarque e caminhada para o roteiro escolhido."
       },
       "profile": "Acesso à Canastra · travessia do Rio Grande",
       "attractions": []
@@ -3447,17 +3032,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Gruta do Maquiné",
-          "description": "Grande caverna calcária com salões, estalactites e estalagmites. Foi explorada cientificamente por Peter Lund no século XIX e está ligada ao nascimento da paleontologia brasileira.",
+          "description": "Grande caverna calcária com salões, estalactites e estalagmites. Foi explorada cientificamente por Peter Lund no século XIX e está ligada ao nascimento da paleontologia brasileira. Roteiros organizados que ligam Diamantina a Belo Horizonte aproveitam Cordisburgo para transformar um dia de deslocamento em dia de visita. Maquiné acrescenta geologia, ciência e uma atração de grande escala sem exigir outro destino distante.",
           "agencyRationale": "Operadoras que ligam Diamantina a Belo Horizonte aproveitam Cordisburgo para transformar um dia de deslocamento em dia de visita. Maquiné acrescenta geologia, ciência e uma atração de grande escala sem exigir outro destino distante.",
           "visitType": "Gruta / visita monitorada",
           "estimatedDuration": "1h30",
           "publishedDuration": "60 min",
           "oneYearOld": "Não — idade mínima 4 anos",
-          "accessibility": {
-            "status": "conditional",
-            "description": "Com ressalvas — percurso em gruta exige caminhada; confirmar condições individuais"
+          "access": {
+            "level": "unknown",
+            "label": "Caminhada em gruta",
+            "description": "A visita monitorada percorre a gruta a pé. Confirme extensão do trajeto, desníveis, pausas e condições para o grupo; o cadastro não informa um nível de esforço físico."
           },
-          "guideBriefing": "Grande caverna calcária com salões, estalactites e estalagmites. Foi explorada cientificamente por Peter Lund no século XIX e está ligada ao nascimento da paleontologia brasileira. Roteiros organizados que ligam Diamantina a Belo Horizonte aproveitam Cordisburgo para transformar um dia de deslocamento em dia de visita. Maquiné acrescenta geologia, ciência e uma atração de grande escala sem exigir outro destino distante.",
           "lat": -19.1251,
           "lon": -44.35217,
           "locationAccuracy": "exact",
@@ -3479,17 +3064,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Museu Casa Guimarães Rosa",
-          "description": "Casa natal de João Guimarães Rosa, preservada com objetos, documentos e referências ao universo sertanejo que inspirou sua literatura.",
+          "description": "Casa natal de João Guimarães Rosa, preservada com objetos, documentos e referências ao universo sertanejo que inspirou sua literatura. Costuma ser combinada com Maquiné: em uma mesma parada a agência entrega natureza e literatura. Guimarães Rosa também conecta a paisagem real do sertão mineiro ao Brasil retratado em sua obra.",
           "agencyRationale": "Costuma ser combinada com Maquiné: em uma mesma parada a agência entrega natureza e literatura. Guimarães Rosa também conecta a paisagem real do sertão mineiro ao Brasil retratado em sua obra.",
           "visitType": "Museu / interna",
           "estimatedDuration": "1h30–2 h",
           "publishedDuration": "1–2 h",
           "oneYearOld": "Sim",
-          "accessibility": {
-            "status": "accessible",
-            "description": "Sim — possui rampa móvel e atividades para terceira idade"
+          "access": {
+            "level": "unknown",
+            "label": "Rampa móvel disponível",
+            "description": "O museu registra rampa móvel e atividades para a terceira idade. Confirme entrada e circulação interna; esses recursos não estabelecem o esforço físico de toda a visita."
           },
-          "guideBriefing": "Casa natal de João Guimarães Rosa, preservada com objetos, documentos e referências ao universo sertanejo que inspirou sua literatura. Costuma ser combinada com Maquiné: em uma mesma parada a agência entrega natureza e literatura. Guimarães Rosa também conecta a paisagem real do sertão mineiro ao Brasil retratado em sua obra.",
           "lat": -19.122867,
           "lon": -44.322836,
           "locationAccuracy": "exact",
@@ -3519,11 +3104,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "As condições de entrada, circulação e desníveis não estão documentadas para esta atração. Confirme o percurso com o responsável pela visita."
           },
-          "guideBriefing": "Espaço cultural dedicado ao universo de Guimarães Rosa e ao sertão mineiro.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -3549,11 +3134,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "As condições de entrada, circulação e desníveis não estão documentadas para esta atração. Confirme o percurso com o responsável pela visita."
           },
-          "guideBriefing": "Construção escultórica incluída em roteiro cultural de agência em Cordisburgo.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -3603,17 +3188,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Conjunto Moderno da Pampulha",
-          "description": "Conjunto de Oscar Niemeyer com paisagismo de Burle Marx e obras de Portinari. É um marco da arquitetura moderna brasileira e Patrimônio Mundial.",
+          "description": "Conjunto de Oscar Niemeyer com paisagismo de Burle Marx e obras de Portinari. É um marco da arquitetura moderna brasileira e Patrimônio Mundial. Roteiros organizados incluem a Pampulha porque ela mostra outra Minas: modernista, urbana e ligada ao projeto político de JK. Depois do barroco, Niemeyer, Burle Marx e Portinari criam um contraste histórico deliberado.",
           "agencyRationale": "As agências incluem a Pampulha porque ela mostra outra Minas: modernista, urbana e ligada ao projeto político de JK. Depois do barroco, Niemeyer, Burle Marx e Portinari criam um contraste histórico deliberado.",
           "visitType": "Circuito / externa + internas",
           "estimatedDuration": "meio dia",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Circuito com áreas externas e visitas internas. Confirme quais espaços serão visitados, os deslocamentos entre eles e os acessos de cada edifício; o esforço do conjunto não está documentado."
           },
-          "guideBriefing": "Conjunto de Oscar Niemeyer com paisagismo de Burle Marx e obras de Portinari. É um marco da arquitetura moderna brasileira e Patrimônio Mundial. Roteiros organizados incluem a Pampulha porque ela mostra outra Minas: modernista, urbana e ligada ao projeto político de JK. Depois do barroco, Niemeyer, Burle Marx e Portinari criam um contraste histórico deliberado.",
           "lat": -19.851944,
           "lon": -43.973611,
           "locationAccuracy": "exact",
@@ -3630,17 +3215,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Praça da Liberdade",
-          "description": "Antigo centro do poder estadual, cercado por palácios e edifícios de diferentes períodos que hoje integram um circuito cultural.",
+          "description": "Antigo centro do poder estadual, cercado por palácios e edifícios de diferentes períodos que hoje integram um circuito cultural. Concentra museus e arquitetura em uma área caminhável.",
           "agencyRationale": "Concentra museus e arquitetura em uma área caminhável.",
           "visitType": "Caminhada + museus opcionais",
           "estimatedDuration": "1–3 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil",
+            "description": "Visita à praça com caminhada curta como estimativa de planejamento. Confirme o trajeto e eventuais degraus; os acessos internos dos espaços culturais do entorno são separados."
           },
-          "guideBriefing": "Antigo centro do poder estadual, cercado por palácios e edifícios de diferentes períodos que hoje integram um circuito cultural. Concentra museus e arquitetura em uma área caminhável.",
           "lat": -19.932067,
           "lon": -43.938064,
           "locationAccuracy": "exact",
@@ -3652,27 +3237,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Mercado Central",
-          "description": "Mercado tradicional onde se encontram queijos, doces, cachaças, temperos e pratos mineiros. A atração é experimentar a cultura gastronômica, não apenas fazer compras.",
+          "description": "Mercado tradicional onde se encontram queijos, doces, cachaças, temperos e pratos mineiros. A atração é experimentar a cultura gastronômica, não apenas fazer compras. É uma parada de experiência, não apenas de compras: permite provar em um só lugar queijo, doce, cachaça, café e pratos mineiros. Para uma agência, entrega gastronomia com logística simples e tempo previsível.",
           "agencyRationale": "É uma parada de experiência, não apenas de compras: permite provar em um só lugar queijo, doce, cachaça, café e pratos mineiros. Para uma agência, entrega gastronomia com logística simples e tempo previsível.",
           "visitType": "Mercado / gastronomia",
           "estimatedDuration": "1h30–2 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao mercado para gastronomia e compras. Confirme entrada, circulação e condições do percurso; o cadastro não documenta o esforço físico da visita."
           },
-          "guideBriefing": "Mercado tradicional onde se encontram queijos, doces, cachaças, temperos e pratos mineiros. A atração é experimentar a cultura gastronômica, não apenas fazer compras. É uma parada de experiência, não apenas de compras: permite provar em um só lugar queijo, doce, cachaça, café e pratos mineiros. Para uma agência, entrega gastronomia com logística simples e tempo previsível.",
           "lat": -19.92258,
           "lon": -43.94302,
           "locationAccuracy": "exact",
@@ -3721,17 +3301,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Instituto Inhotim",
-          "description": "Museu de arte contemporânea em escala monumental, com galerias e obras espalhadas por um jardim botânico. Muitas obras foram concebidas para o próprio espaço, fazendo paisagem e arte funcionarem juntas.",
+          "description": "Museu de arte contemporânea em escala monumental, com galerias e obras espalhadas por um jardim botânico. Muitas obras foram concebidas para o próprio espaço, fazendo paisagem e arte funcionarem juntas. Inhotim costuma receber um dia próprio porque é uma experiência de escala internacional e muito diferente das cidades históricas. A alternância entre galerias, obras ao ar livre e jardins evita que o circuito fique restrito a igrejas e casario colonial.",
           "agencyRationale": "Inhotim costuma receber um dia próprio porque é uma experiência de escala internacional e muito diferente das cidades históricas. A alternância entre galerias, obras ao ar livre e jardins evita que o circuito fique restrito a igrejas e casario colonial.",
           "visitType": "Museu + jardins",
           "estimatedDuration": "1 dia",
           "publishedDuration": "—",
           "oneYearOld": "Sim",
-          "accessibility": {
-            "status": "accessible",
-            "description": "Sim — cadeira de rodas disponível e transporte interno opcional"
+          "access": {
+            "level": "unknown",
+            "label": "Circuito a escolher",
+            "description": "A visita reúne galerias e jardins distribuídos pelo espaço. Há cadeira de rodas disponível e transporte interno opcional no cadastro; confirme o circuito e o uso desses recursos, pois o esforço varia com o trajeto."
           },
-          "guideBriefing": "Museu de arte contemporânea em escala monumental, com galerias e obras espalhadas por um jardim botânico. Muitas obras foram concebidas para o próprio espaço, fazendo paisagem e arte funcionarem juntas. Inhotim costuma receber um dia próprio porque é uma experiência de escala internacional e muito diferente das cidades históricas. A alternância entre galerias, obras ao ar livre e jardins evita que o circuito fique restrito a igrejas e casario colonial.",
           "lat": -20.122893,
           "lon": -44.221551,
           "locationAccuracy": "exact",
@@ -3786,17 +3366,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Centro Histórico",
-          "description": "Pontes de pedra, casarões e igrejas mostram uma cidade colonial que continuou economicamente ativa depois do ciclo do ouro, ao contrário de núcleos que ficaram quase congelados no século XVIII.",
+          "description": "Pontes de pedra, casarões e igrejas mostram uma cidade colonial que continuou economicamente ativa depois do ciclo do ouro, ao contrário de núcleos que ficaram quase congelados no século XVIII. São João del-Rei não ficou presa ao século XVIII: ouro, comércio, ferrovia, política e música continuaram moldando a cidade. Roteiros organizados a usam justamente para mostrar essa continuidade histórica.",
           "agencyRationale": "São João del-Rei não ficou presa ao século XVIII: ouro, comércio, ferrovia, política e música continuaram moldando a cidade. As agências a usam justamente para mostrar essa continuidade histórica.",
           "visitType": "A pé / externa",
           "estimatedDuration": "2–3 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil em trecho curto",
+            "description": "Circuito a pé no centro histórico. A estimativa considera trechos curtos; confirme calçamento, degraus, ladeiras e distância entre os pontos escolhidos."
           },
-          "guideBriefing": "Pontes de pedra, casarões e igrejas mostram uma cidade colonial que continuou economicamente ativa depois do ciclo do ouro, ao contrário de núcleos que ficaram quase congelados no século XVIII. São João del-Rei não ficou presa ao século XVIII: ouro, comércio, ferrovia, política e música continuaram moldando a cidade. Roteiros organizados a usam justamente para mostrar essa continuidade histórica.",
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
@@ -3808,27 +3388,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Igreja de São Francisco de Assis",
-          "description": "Grande templo rococó com projeto modificado por Aleijadinho, cercado por jardim de Burle Marx. É uma das obras arquitetônicas mais marcantes da cidade.",
+          "description": "Grande templo rococó com projeto modificado por Aleijadinho, cercado por jardim de Burle Marx. É uma das obras arquitetônicas mais marcantes da cidade. É a principal parada artística dos city tours locais.",
           "agencyRationale": "É a principal parada artística dos city tours locais.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Grande templo rococó com projeto modificado por Aleijadinho, cercado por jardim de Burle Marx. É uma das obras arquitetônicas mais marcantes da cidade. É a principal parada artística dos city tours locais.",
           "lat": -21.138733,
           "lon": -44.260274,
           "locationAccuracy": "exact",
@@ -3840,27 +3415,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Igrejas e tradição musical",
-          "description": "A cidade mantém antigas orquestras e uma forte tradição de música sacra associada às celebrações religiosas.",
+          "description": "A cidade mantém antigas orquestras e uma forte tradição de música sacra associada às celebrações religiosas. A musicalidade é um dos diferenciais usados pelos roteiros oficiais de Minas.",
           "agencyRationale": "A musicalidade é um dos diferenciais usados pelos roteiros oficiais de Minas.",
           "visitType": "Igrejas / experiência cultural",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil em trecho curto",
+            "description": "Circuito a pé no centro histórico. A estimativa considera trechos curtos; confirme calçamento, degraus, ladeiras e distância entre os pontos escolhidos."
           },
-          "guideBriefing": "A cidade mantém antigas orquestras e uma forte tradição de música sacra associada às celebrações religiosas. A musicalidade é um dos diferenciais usados pelos roteiros oficiais de Minas.",
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
@@ -3872,27 +3442,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Estação da Estrada de Ferro Oeste de Minas",
-          "description": "Complexo ferroviário histórico com locomotivas, vagões e memória da ferrovia inaugurada no século XIX.",
+          "description": "Complexo ferroviário histórico com locomotivas, vagões e memória da ferrovia inaugurada no século XIX. Prepara e contextualiza a experiência da Maria Fumaça.",
           "agencyRationale": "Prepara e contextualiza a experiência da Maria Fumaça.",
           "visitType": "Museu/estação",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita à estação e ao espaço de memória ferroviária. Confirme áreas abertas ao público, entrada e circulação; desníveis e esforço não estão documentados."
           },
-          "guideBriefing": "Complexo ferroviário histórico com locomotivas, vagões e memória da ferrovia inaugurada no século XIX. Prepara e contextualiza a experiência da Maria Fumaça.",
           "lat": -21.136897,
           "lon": -44.263584,
           "locationAccuracy": "exact",
@@ -3909,17 +3474,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Maria Fumaça São João del-Rei–Tiradentes",
-          "description": "Viagem em trem histórico por cerca de 12 km entre as duas cidades, margeando o Rio das Mortes e a Serra de São José. O próprio deslocamento torna-se atração.",
+          "description": "Viagem em trem histórico por cerca de 12 km entre as duas cidades, margeando o Rio das Mortes e a Serra de São José. O próprio deslocamento torna-se atração. É popular porque resolve duas coisas ao mesmo tempo: desloca o visitante entre duas cidades históricas e transforma o trajeto em atração. A paisagem e o equipamento ferroviário histórico tornam o percurso parte do passeio.",
           "agencyRationale": "É popular porque resolve duas coisas ao mesmo tempo: desloca o visitante entre duas cidades históricas e transforma o trajeto em atração. A paisagem e o equipamento ferroviário histórico tornam o percurso parte do passeio.",
           "visitType": "Trem turístico",
           "estimatedDuration": "1h15 só ida",
           "publishedDuration": "45–50 min por trecho",
           "oneYearOld": "Sim",
-          "accessibility": {
-            "status": "conditional",
-            "description": "Sim — vagões adaptados e rampas; avisar na reserva"
+          "access": {
+            "level": "unknown",
+            "label": "Embarque a combinar",
+            "description": "O trem turístico registra vagões adaptados e rampas. Avise sobre as necessidades do grupo na reserva e confirme embarque e desembarque; o esforço físico da visita não está documentado."
           },
-          "guideBriefing": "Viagem em trem histórico por cerca de 12 km entre as duas cidades, margeando o Rio das Mortes e a Serra de São José. O próprio deslocamento torna-se atração. É popular porque resolve duas coisas ao mesmo tempo: desloca o visitante entre duas cidades históricas e transforma o trajeto em atração. A paisagem e o equipamento ferroviário histórico tornam o percurso parte do passeio.",
           "lat": -21.136897,
           "lon": -44.263584,
           "locationAccuracy": "exact",
@@ -3936,17 +3501,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Artesanato em estanho",
-          "description": "São João del-Rei tornou-se referência brasileira na produção artesanal de peças de estanho.",
+          "description": "São João del-Rei tornou-se referência brasileira na produção artesanal de peças de estanho. Acrescenta uma tradição produtiva local ao roteiro histórico.",
           "agencyRationale": "Acrescenta uma tradição produtiva local ao roteiro histórico.",
           "visitType": "Lojas/oficinas",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita a lojas ou oficinas de artesanato. Confirme endereço, entrada e circulação no estabelecimento escolhido; não há um percurso único de acesso."
           },
-          "guideBriefing": "São João del-Rei tornou-se referência brasileira na produção artesanal de peças de estanho. Acrescenta uma tradição produtiva local ao roteiro histórico.",
           "lat": -21.133576,
           "lon": -44.258809,
           "locationAccuracy": "city-center",
@@ -3963,17 +3528,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Ponte da Cadeia",
-          "description": "Ponte de pedra sobre o Córrego do Lenheiro, parte da infraestrutura histórica que conectava os setores da antiga vila.",
+          "description": "Ponte de pedra sobre o Córrego do Lenheiro, parte da infraestrutura histórica que conectava os setores da antiga vila. Walking tours a utilizam como ponto de leitura da formação urbana: ela permite explicar circulação, cursos d'água e expansão da cidade.",
           "agencyRationale": "Walking tours a utilizam como ponto de leitura da formação urbana: ela permite explicar circulação, cursos d'água e expansão da cidade.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita externa ao ponto histórico. Confirme extensão da caminhada e condições do calçamento; o cadastro não detalha desníveis ou esforço do percurso."
           },
-          "guideBriefing": "Ponte de pedra sobre o Córrego do Lenheiro, parte da infraestrutura histórica que conectava os setores da antiga vila. Walking tours a utilizam como ponto de leitura da formação urbana: ela permite explicar circulação, cursos d'água e expansão da cidade.",
           "lat": -21.134313,
           "lon": -44.259123,
           "locationAccuracy": "exact",
@@ -3990,17 +3555,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Teatro Municipal",
-          "description": "Teatro histórico que representa a vida cultural urbana de São João del-Rei para além das igrejas.",
+          "description": "Teatro histórico que representa a vida cultural urbana de São João del-Rei para além das igrejas. É incluído para mostrar que a cidade desenvolveu vida cultural e instituições urbanas importantes, especialmente no século XIX.",
           "agencyRationale": "É incluído para mostrar que a cidade desenvolveu vida cultural e instituições urbanas importantes, especialmente no século XIX.",
           "visitType": "Interna / visita",
           "estimatedDuration": "40 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita a um espaço cultural. Confirme entrada, degraus, circulação interna e áreas abertas ao público; o cadastro não detalha o esforço da visita."
           },
-          "guideBriefing": "Teatro histórico que representa a vida cultural urbana de São João del-Rei para além das igrejas. É incluído para mostrar que a cidade desenvolveu vida cultural e instituições urbanas importantes, especialmente no século XIX.",
           "lat": -21.134624,
           "lon": -44.258771,
           "locationAccuracy": "exact",
@@ -4017,17 +3582,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Museu Regional",
-          "description": "Instalado em grande sobrado colonial, reúne mobiliário, arte sacra, utensílios e objetos do cotidiano dos séculos XVIII e XIX.",
+          "description": "Instalado em grande sobrado colonial, reúne mobiliário, arte sacra, utensílios e objetos do cotidiano dos séculos XVIII e XIX. Dá aos guias material concreto para explicar como se vivia dentro das casas que o visitante vê pelas ruas.",
           "agencyRationale": "Dá aos guias material concreto para explicar como se vivia dentro das casas que o visitante vê pelas ruas.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita a um espaço cultural. Confirme entrada, degraus, circulação interna e áreas abertas ao público; o cadastro não detalha o esforço da visita."
           },
-          "guideBriefing": "Instalado em grande sobrado colonial, reúne mobiliário, arte sacra, utensílios e objetos do cotidiano dos séculos XVIII e XIX. Dá aos guias material concreto para explicar como se vivia dentro das casas que o visitante vê pelas ruas.",
           "lat": -21.13597541801312,
           "lon": -44.26123380661011,
           "locationAccuracy": "exact",
@@ -4044,17 +3609,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Memorial Tancredo Neves",
-          "description": "Espaço dedicado à trajetória de Tancredo Neves, natural de São João del-Rei, e ao processo político brasileiro que culminou na redemocratização.",
+          "description": "Espaço dedicado à trajetória de Tancredo Neves, natural de São João del-Rei, e ao processo político brasileiro que culminou na redemocratização. Leva o roteiro do período colonial ao Brasil contemporâneo e explica por que São João del-Rei também é relevante para a história política republicana.",
           "agencyRationale": "Leva o roteiro do período colonial ao Brasil contemporâneo e explica por que São João del-Rei também é relevante para a história política republicana.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita a um espaço cultural. Confirme entrada, degraus, circulação interna e áreas abertas ao público; o cadastro não detalha o esforço da visita."
           },
-          "guideBriefing": "Espaço dedicado à trajetória de Tancredo Neves, natural de São João del-Rei, e ao processo político brasileiro que culminou na redemocratização. Leva o roteiro do período colonial ao Brasil contemporâneo e explica por que São João del-Rei também é relevante para a história política republicana.",
           "lat": -21.137423,
           "lon": -44.262308,
           "locationAccuracy": "exact",
@@ -4071,17 +3636,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Solares dos Neves e dos Lustosa (Largo do Rosário)",
-          "description": "Dois imóveis históricos distintos no Largo do Rosário: o Solar dos Neves, ligado a Tancredo Neves, e o Solar dos Lustosa. O ponto indica apenas um trecho do largo para observar ambos.",
+          "description": "Dois imóveis históricos distintos no Largo do Rosário: o Solar dos Neves, ligado a Tancredo Neves, e o Solar dos Lustosa. O ponto indica apenas um trecho do largo para observar ambos. Aparecem nos walking tours porque permitem contar história política e arquitetura doméstica enquanto o grupo percorre o centro.",
           "agencyRationale": "Aparecem nos walking tours porque permitem contar história política e arquitetura doméstica enquanto o grupo percorre o centro.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita aos imóveis históricos do Largo do Rosário. Confirme possibilidade de visita interna, entrada e condições do percurso externo."
           },
-          "guideBriefing": "Dois imóveis históricos distintos no Largo do Rosário: o Solar dos Neves, ligado a Tancredo Neves, e o Solar dos Lustosa. O ponto indica apenas um trecho do largo para observar ambos. Aparecem nos walking tours porque permitem contar história política e arquitetura doméstica enquanto o grupo percorre o centro.",
           "lat": -21.1362138,
           "lon": -44.2628311,
           "locationAccuracy": "street-center",
@@ -4099,17 +3664,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Museu da FEB",
-          "description": "Acervo dedicado à participação brasileira na Segunda Guerra Mundial e aos expedicionários da região.",
+          "description": "Acervo dedicado à participação brasileira na Segunda Guerra Mundial e aos expedicionários da região. É incluído em roteiros locais para apresentar uma camada do século XX que normalmente não aparece nos circuitos coloniais.",
           "agencyRationale": "É incluído em roteiros locais para apresentar uma camada do século XX que normalmente não aparece nos circuitos coloniais.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita a um espaço cultural. Confirme entrada, degraus, circulação interna e áreas abertas ao público; o cadastro não detalha o esforço da visita."
           },
-          "guideBriefing": "Acervo dedicado à participação brasileira na Segunda Guerra Mundial e aos expedicionários da região. É incluído em roteiros locais para apresentar uma camada do século XX que normalmente não aparece nos circuitos coloniais.",
           "lat": -21.135503,
           "lon": -44.259016,
           "locationAccuracy": "exact",
@@ -4126,17 +3691,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
-          "description": "Igreja rococó de fachada marcante e importante conjunto de arte sacra, ligada à Ordem Terceira do Carmo.",
+          "description": "Igreja rococó de fachada marcante e importante conjunto de arte sacra, ligada à Ordem Terceira do Carmo. É uma das principais igrejas do walking tour e permite comparar diferentes irmandades e estilos religiosos da cidade.",
           "agencyRationale": "É uma das principais igrejas do walking tour e permite comparar diferentes irmandades e estilos religiosos da cidade.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja rococó de fachada marcante e importante conjunto de arte sacra, ligada à Ordem Terceira do Carmo. É uma das principais igrejas do walking tour e permite comparar diferentes irmandades e estilos religiosos da cidade.",
           "lat": -21.133649,
           "lon": -44.260836,
           "locationAccuracy": "exact",
@@ -4148,27 +3713,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Catedral Basílica Nossa Senhora do Pilar",
-          "description": "Matriz histórica com interior ricamente ornamentado, ligada à formação religiosa e urbana de São João del-Rei.",
+          "description": "Matriz histórica com interior ricamente ornamentado, ligada à formação religiosa e urbana de São João del-Rei. É parada central porque materializa a riqueza do ciclo do ouro e a continuidade das tradições religiosas locais.",
           "agencyRationale": "É parada central porque materializa a riqueza do ciclo do ouro e a continuidade das tradições religiosas locais.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita à catedral. Confirme entrada, degraus e circulação interna; as condições de acesso não estão detalhadas no cadastro."
           },
-          "guideBriefing": "Matriz histórica com interior ricamente ornamentado, ligada à formação religiosa e urbana de São João del-Rei. É parada central porque materializa a riqueza do ciclo do ouro e a continuidade das tradições religiosas locais.",
           "lat": -21.135335,
           "lon": -44.261786,
           "locationAccuracy": "exact",
@@ -4185,17 +3745,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Casa de Bárbara Heliodora",
-          "description": "Imóvel associado à poetisa Bárbara Heliodora, figura ligada ao ambiente intelectual e familiar da Inconfidência Mineira.",
+          "description": "Imóvel associado à poetisa Bárbara Heliodora, figura ligada ao ambiente intelectual e familiar da Inconfidência Mineira. Entra nos roteiros para conectar a Inconfidência a personagens e residências concretas da cidade, ampliando a narrativa além de Tiradentes.",
           "agencyRationale": "Entra nos roteiros para conectar a Inconfidência a personagens e residências concretas da cidade, ampliando a narrativa além de Tiradentes.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita a um espaço cultural. Confirme entrada, degraus, circulação interna e áreas abertas ao público; o cadastro não detalha o esforço da visita."
           },
-          "guideBriefing": "Imóvel associado à poetisa Bárbara Heliodora, figura ligada ao ambiente intelectual e familiar da Inconfidência Mineira. Entra nos roteiros para conectar a Inconfidência a personagens e residências concretas da cidade, ampliando a narrativa além de Tiradentes.",
           "lat": -21.138609,
           "lon": -44.260962,
           "locationAccuracy": "exact",
@@ -4222,11 +3782,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja histórica citada em city tour de agência.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -4234,11 +3794,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -4255,11 +3810,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita externa ao ponto histórico. Confirme extensão da caminhada e condições do calçamento; o cadastro não detalha desníveis ou esforço do percurso."
           },
-          "guideBriefing": "Passagem tradicional do centro histórico incluída em roteiro de agência.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -4283,11 +3838,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita externa ao ponto histórico. Confirme extensão da caminhada e condições do calçamento; o cadastro não detalha desníveis ou esforço do percurso."
           },
-          "guideBriefing": "Espaço urbano histórico incluído em circuito panorâmico de agência.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -4336,17 +3891,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Centro Histórico",
-          "description": "Núcleo colonial muito preservado, com ruas de pedra, sobrados e igrejas aos pés da Serra de São José. A escala compacta permite compreender a cidade caminhando.",
+          "description": "Núcleo colonial muito preservado, com ruas de pedra, sobrados e igrejas aos pés da Serra de São José. A escala compacta permite compreender a cidade caminhando. Tiradentes funciona muito bem para pernoite: o centro é caminhável, há restaurantes e vida noturna tranquila, e as atrações podem ser visitadas sem veículo. Por isso aparece frequentemente como base dos circuitos.",
           "agencyRationale": "Tiradentes funciona muito bem para pernoite: o centro é caminhável, há restaurantes e vida noturna tranquila, e as atrações podem ser visitadas sem veículo. Por isso aparece frequentemente como base dos circuitos.",
           "visitType": "A pé / externa",
           "estimatedDuration": "2–3 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil em trecho curto",
+            "description": "Circuito a pé no centro histórico. A estimativa considera trechos curtos; confirme calçamento, degraus, ladeiras e distância entre os pontos escolhidos."
           },
-          "guideBriefing": "Núcleo colonial muito preservado, com ruas de pedra, sobrados e igrejas aos pés da Serra de São José. A escala compacta permite compreender a cidade caminhando. Tiradentes funciona muito bem para pernoite: o centro é caminhável, há restaurantes e vida noturna tranquila, e as atrações podem ser visitadas sem veículo. Por isso aparece frequentemente como base dos circuitos.",
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
@@ -4358,27 +3913,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Matriz de Santo Antônio",
-          "description": "Igreja com interior ricamente dourado e fachada atribuída a Aleijadinho. É o principal monumento religioso da cidade e domina a paisagem urbana.",
+          "description": "Igreja com interior ricamente dourado e fachada atribuída a Aleijadinho. É o principal monumento religioso da cidade e domina a paisagem urbana. Concentra arte barroca e uma vista privilegiada do núcleo histórico.",
           "agencyRationale": "Concentra arte barroca e uma vista privilegiada do núcleo histórico.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "45 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita interna à igreja. Confirme entrada, degraus e alternativas sem escadas; o esforço do percurso não está documentado."
           },
-          "guideBriefing": "Igreja com interior ricamente dourado e fachada atribuída a Aleijadinho. É o principal monumento religioso da cidade e domina a paisagem urbana. Concentra arte barroca e uma vista privilegiada do núcleo histórico.",
           "lat": -21.109993,
           "lon": -44.178145,
           "locationAccuracy": "exact",
@@ -4395,17 +3945,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Chafariz de São José",
-          "description": "Chafariz setecentista que abastecia moradores, animais e viajantes. Mostra de maneira simples como funcionava a infraestrutura urbana colonial.",
+          "description": "Chafariz setecentista que abastecia moradores, animais e viajantes. Mostra de maneira simples como funcionava a infraestrutura urbana colonial. É uma parada rápida que ajuda o guia a explicar a vida cotidiana do século XVIII.",
           "agencyRationale": "É uma parada rápida que ajuda o guia a explicar a vida cotidiana do século XVIII.",
           "visitType": "Externa",
           "estimatedDuration": "20 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita externa ao ponto histórico. Confirme calçamento, desníveis e extensão do trecho a pé; o esforço não está documentado no cadastro."
           },
-          "guideBriefing": "Chafariz setecentista que abastecia moradores, animais e viajantes. Mostra de maneira simples como funcionava a infraestrutura urbana colonial. É uma parada rápida que ajuda o guia a explicar a vida cotidiana do século XVIII.",
           "lat": -21.107439,
           "lon": -44.176274,
           "locationAccuracy": "exact",
@@ -4422,17 +3972,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Museu Casa Padre Toledo",
-          "description": "Solar ligado ao inconfidente Padre Toledo, onde ocorreram encontros associados à conspiração.",
+          "description": "Solar ligado ao inconfidente Padre Toledo, onde ocorreram encontros associados à conspiração. A casa dá endereço e ambiente doméstico à conspiração. Para agências que já passaram pelo Museu da Inconfidência, ela continua a mesma narrativa em outro cenário.",
           "agencyRationale": "A casa dá endereço e ambiente doméstico à conspiração. Para agências que já passaram pelo Museu da Inconfidência, ela continua a mesma narrativa em outro cenário.",
           "visitType": "Museu / interna",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao museu. Confirme entrada, circulação interna, degraus e alternativas sem escadas; o cadastro não documenta o esforço do percurso."
           },
-          "guideBriefing": "Solar ligado ao inconfidente Padre Toledo, onde ocorreram encontros associados à conspiração. A casa dá endereço e ambiente doméstico à conspiração. Para agências que já passaram pelo Museu da Inconfidência, ela continua a mesma narrativa em outro cenário.",
           "lat": -21.110304,
           "lon": -44.177223,
           "locationAccuracy": "exact",
@@ -4449,17 +3999,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Serra de São José",
-          "description": "Formação montanhosa que envolve a cidade, com trilhas, mirantes e áreas de preservação.",
+          "description": "Formação montanhosa que envolve a cidade, com trilhas, mirantes e áreas de preservação. Acrescenta natureza à permanência em uma cidade predominantemente histórica.",
           "agencyRationale": "Acrescenta natureza à permanência em uma cidade predominantemente histórica.",
           "visitType": "Trilha / natureza",
           "estimatedDuration": "meio dia",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Passeio de trilha e natureza. Confirme o percurso escolhido, distância, terreno e desnível; o cadastro não documenta a dificuldade de uma trilha específica."
           },
-          "guideBriefing": "Formação montanhosa que envolve a cidade, com trilhas, mirantes e áreas de preservação. Acrescenta natureza à permanência em uma cidade predominantemente histórica.",
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
@@ -4476,17 +4026,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Gastronomia",
-          "description": "A cidade concentra restaurantes, chefs e festivais gastronômicos que reinterpretam ingredientes e pratos mineiros.",
+          "description": "A cidade concentra restaurantes, chefs e festivais gastronômicos que reinterpretam ingredientes e pratos mineiros. Roteiros organizados conseguem combinar visita histórica com noite livre e experiência gastronômica.",
           "agencyRationale": "As agências conseguem combinar visita histórica com noite livre e experiência gastronômica.",
           "visitType": "Refeição / experiência",
           "estimatedDuration": "2 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Refeição ou experiência gastronômica no estabelecimento escolhido. Confirme entrada e circulação; o cadastro não define um local único nem o esforço de acesso."
           },
-          "guideBriefing": "A cidade concentra restaurantes, chefs e festivais gastronômicos que reinterpretam ingredientes e pratos mineiros. Roteiros organizados conseguem combinar visita histórica com noite livre e experiência gastronômica.",
           "lat": -21.110469,
           "lon": -44.174294,
           "locationAccuracy": "city-center",
@@ -4503,17 +4053,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Largo das Forras",
-          "description": "Praça central e tradicional ponto de encontro da cidade. Além do casario, restaurantes e comércio, seu nome é associado à presença de pessoas negras alforriadas e o espaço recebeu paisagismo de Burle Marx no século XX.",
+          "description": "Praça central e tradicional ponto de encontro da cidade. Além do casario, restaurantes e comércio, seu nome é associado à presença de pessoas negras alforriadas e o espaço recebeu paisagismo de Burle Marx no século XX. Roteiros organizados o usam como ponto de chegada, orientação e tempo livre: dali o visitante entra a pé no centro histórico e também percebe a Tiradentes viva, não apenas monumental.",
           "agencyRationale": "Agências o usam como ponto de chegada, orientação e tempo livre: dali o visitante entra a pé no centro histórico e também percebe a Tiradentes viva, não apenas monumental.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita externa ao ponto histórico. Confirme calçamento, desníveis e extensão do trecho a pé; o esforço não está documentado no cadastro."
           },
-          "guideBriefing": "Praça central e tradicional ponto de encontro da cidade. Além do casario, restaurantes e comércio, seu nome é associado à presença de pessoas negras alforriadas e o espaço recebeu paisagismo de Burle Marx no século XX. Roteiros organizados o usam como ponto de chegada, orientação e tempo livre: dali o visitante entra a pé no centro histórico e também percebe a Tiradentes viva, não apenas monumental.",
           "lat": -21.11058,
           "lon": -44.173649,
           "locationAccuracy": "exact",
@@ -4530,17 +4080,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Rua Direita",
-          "description": "Principal eixo histórico, cercado por sobrados, ateliês, lojas e restaurantes. Caminhar por ela permite observar a arquitetura doméstica e comercial, não apenas edifícios religiosos.",
+          "description": "Principal eixo histórico, cercado por sobrados, ateliês, lojas e restaurantes. Caminhar por ela permite observar a arquitetura doméstica e comercial, não apenas edifícios religiosos. Faz parte dos passeios porque conecta várias atrações importantes e concentra artesanato e gastronomia no próprio percurso.",
           "agencyRationale": "Faz parte dos passeios porque conecta várias atrações importantes e concentra artesanato e gastronomia no próprio percurso.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita externa ao ponto histórico. Confirme calçamento, desníveis e extensão do trecho a pé; o esforço não está documentado no cadastro."
           },
-          "guideBriefing": "Principal eixo histórico, cercado por sobrados, ateliês, lojas e restaurantes. Caminhar por ela permite observar a arquitetura doméstica e comercial, não apenas edifícios religiosos. Faz parte dos passeios porque conecta várias atrações importantes e concentra artesanato e gastronomia no próprio percurso.",
           "lat": -21.1097152,
           "lon": -44.1762681,
           "locationAccuracy": "street-center",
@@ -4557,17 +4107,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Museu de Sant'Ana",
-          "description": "Funciona na antiga cadeia e reúne centenas de representações de Sant'Ana produzidas em diferentes regiões e períodos. O contraste entre arte sacra e o antigo espaço carcerário também faz parte da experiência.",
+          "description": "Funciona na antiga cadeia e reúne centenas de representações de Sant'Ana produzidas em diferentes regiões e períodos. O contraste entre arte sacra e o antigo espaço carcerário também faz parte da experiência. É usado para aprofundar arte sacra sem repetir uma visita a igreja e para aproveitar um edifício histórico central da cidade.",
           "agencyRationale": "É usado para aprofundar arte sacra sem repetir uma visita a igreja e para aproveitar um edifício histórico central da cidade.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao museu. Confirme entrada, circulação interna, degraus e alternativas sem escadas; o cadastro não documenta o esforço do percurso."
           },
-          "guideBriefing": "Funciona na antiga cadeia e reúne centenas de representações de Sant'Ana produzidas em diferentes regiões e períodos. O contraste entre arte sacra e o antigo espaço carcerário também faz parte da experiência. É usado para aprofundar arte sacra sem repetir uma visita a igreja e para aproveitar um edifício histórico central da cidade.",
           "lat": -21.1093903,
           "lon": -44.1764425,
           "locationAccuracy": "exact",
@@ -4585,17 +4135,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Museu da Liturgia",
-          "description": "Museu dedicado aos objetos, ritos e símbolos da liturgia católica, com centenas de peças sacras.",
+          "description": "Museu dedicado aos objetos, ritos e símbolos da liturgia católica, com centenas de peças sacras. Ajuda o visitante a compreender para que serviam muitos objetos e práticas encontrados nas igrejas visitadas ao longo do circuito mineiro.",
           "agencyRationale": "Ajuda o visitante a compreender para que serviam muitos objetos e práticas encontrados nas igrejas visitadas ao longo do circuito mineiro.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao museu. Confirme entrada, circulação interna, degraus e alternativas sem escadas; o cadastro não documenta o esforço do percurso."
           },
-          "guideBriefing": "Museu dedicado aos objetos, ritos e símbolos da liturgia católica, com centenas de peças sacras. Ajuda o visitante a compreender para que serviam muitos objetos e práticas encontrados nas igrejas visitadas ao longo do circuito mineiro.",
           "lat": -21.1089727,
           "lon": -44.1774604,
           "locationAccuracy": "exact",
@@ -4612,17 +4162,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Igreja Nossa Senhora do Rosário dos Pretos",
-          "description": "Uma das igrejas mais antigas da cidade, construída pela irmandade negra. Sua história revela a organização religiosa da população negra durante a escravidão e amplia a leitura social da cidade colonial.",
+          "description": "Uma das igrejas mais antigas da cidade, construída pela irmandade negra. Sua história revela a organização religiosa da população negra durante a escravidão e amplia a leitura social da cidade colonial. É incluída porque oferece uma narrativa diferente da Matriz de Santo Antônio: em vez da riqueza das elites, permite discutir irmandades negras, escravidão e devoção.",
           "agencyRationale": "É incluída porque oferece uma narrativa diferente da Matriz de Santo Antônio: em vez da riqueza das elites, permite discutir irmandades negras, escravidão e devoção.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Uma das igrejas mais antigas da cidade, construída pela irmandade negra. Sua história revela a organização religiosa da população negra durante a escravidão e amplia a leitura social da cidade colonial. É incluída porque oferece uma narrativa diferente da Matriz de Santo Antônio: em vez da riqueza das elites, permite discutir irmandades negras, escravidão e devoção.",
           "lat": -21.1097417,
           "lon": -44.1767476,
           "locationAccuracy": "exact",
@@ -4633,11 +4183,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -4676,17 +4221,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Oficina de Agosto",
-          "description": "Oficina que ajudou a transformar Bichinho em polo de artesanato e design, trabalhando madeira, metal, tecido e materiais reaproveitados.",
+          "description": "Oficina que ajudou a transformar Bichinho em polo de artesanato e design, trabalhando madeira, metal, tecido e materiais reaproveitados. É um dos nomes que consolidaram a vila como extensão artística de Tiradentes.",
           "agencyRationale": "É um dos nomes que consolidaram a vila como extensão artística de Tiradentes.",
           "visitType": "Ateliê / compras",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita a ateliê para conhecer o trabalho e fazer compras. Confirme o estabelecimento, entrada, degraus e circulação; as condições de acesso não estão detalhadas."
           },
-          "guideBriefing": "Oficina que ajudou a transformar Bichinho em polo de artesanato e design, trabalhando madeira, metal, tecido e materiais reaproveitados. É um dos nomes que consolidaram a vila como extensão artística de Tiradentes.",
           "lat": -21.0915526,
           "lon": -44.1272952,
           "locationAccuracy": "exact",
@@ -4705,17 +4250,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Ateliês e oficinas",
-          "description": "Pequenos produtores trabalham móveis, esculturas, cerâmica, madeira e objetos decorativos; a graça é visitar os locais de produção.",
+          "description": "Pequenos produtores trabalham móveis, esculturas, cerâmica, madeira e objetos decorativos; a graça é visitar os locais de produção. Mostra uma cultura artesanal viva, e não apenas patrimônio antigo.",
           "agencyRationale": "Mostra uma cultura artesanal viva, e não apenas patrimônio antigo.",
           "visitType": "Ateliês / compras",
           "estimatedDuration": "1h30–2 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita a ateliê para conhecer o trabalho e fazer compras. Confirme o estabelecimento, entrada, degraus e circulação; as condições de acesso não estão detalhadas."
           },
-          "guideBriefing": "Pequenos produtores trabalham móveis, esculturas, cerâmica, madeira e objetos decorativos; a graça é visitar os locais de produção. Mostra uma cultura artesanal viva, e não apenas patrimônio antigo.",
           "lat": -21.099115,
           "lon": -44.117586,
           "locationAccuracy": "city-center",
@@ -4734,17 +4279,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Cachaçarias e produtos locais",
-          "description": "Produção artesanal regional que pode ser conhecida e degustada no próprio distrito.",
+          "description": "Produção artesanal regional que pode ser conhecida e degustada no próprio distrito. Complementa o passeio com gastronomia e produção local.",
           "agencyRationale": "Complementa o passeio com gastronomia e produção local.",
           "visitType": "Degustação / compras",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Degustação e compras no produtor ou estabelecimento escolhido. Confirme estrada, entrada e circulação; não há um percurso único documentado."
           },
-          "guideBriefing": "Produção artesanal regional que pode ser conhecida e degustada no próprio distrito. Complementa o passeio com gastronomia e produção local.",
           "lat": -21.099115,
           "lon": -44.117586,
           "locationAccuracy": "city-center",
@@ -4801,17 +4346,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Centro Histórico",
-          "description": "Pequeno núcleo colonial aos pés de enormes paredões da Serra do Caraça. O contraste entre casario e montanha é a principal característica da cidade.",
+          "description": "Pequeno núcleo colonial aos pés de enormes paredões da Serra do Caraça. O contraste entre casario e montanha é a principal característica da cidade. É uma parada visualmente forte e fácil de combinar com Caraça e Santa Bárbara.",
           "agencyRationale": "É uma parada visualmente forte e fácil de combinar com Caraça e Santa Bárbara.",
           "visitType": "A pé / externa",
           "estimatedDuration": "2–3 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil em trecho curto",
+            "description": "Visita externa ao centro histórico. A estimativa considera caminhada curta; confirme calçamento, degraus e desníveis do circuito escolhido."
           },
-          "guideBriefing": "Pequeno núcleo colonial aos pés de enormes paredões da Serra do Caraça. O contraste entre casario e montanha é a principal característica da cidade. É uma parada visualmente forte e fácil de combinar com Caraça e Santa Bárbara.",
           "lat": -20.074754,
           "lon": -43.408165,
           "locationAccuracy": "city-center",
@@ -4823,27 +4368,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Matriz de Nossa Senhora da Conceição",
-          "description": "Igreja setecentista que domina a praça central e preserva elementos artísticos do período colonial.",
+          "description": "Igreja setecentista que domina a praça central e preserva elementos artísticos do período colonial. É o principal marco histórico do pequeno centro.",
           "agencyRationale": "É o principal marco histórico do pequeno centro.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita interna à igreja. Confirme entrada, degraus e circulação; o cadastro não documenta as condições de acesso."
           },
-          "guideBriefing": "Igreja setecentista que domina a praça central e preserva elementos artísticos do período colonial. É o principal marco histórico do pequeno centro.",
           "lat": -20.075071,
           "lon": -43.408285,
           "locationAccuracy": "exact",
@@ -4860,17 +4400,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Serra do Caraça",
-          "description": "Maciço montanhoso que forma o cenário da cidade e oferece trilhas e paisagens.",
+          "description": "Maciço montanhoso que forma o cenário da cidade e oferece trilhas e paisagens. Liga a cidade histórica ao circuito natural do Caraça.",
           "agencyRationale": "Liga a cidade histórica ao circuito natural do Caraça.",
           "visitType": "Natureza / trilha",
           "estimatedDuration": "meio dia",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Passeio de natureza com percursos diferentes. Confirme trilha ou atrativo escolhido, distância, terreno, desnível e condições da visita; não há uma dificuldade única documentada."
           },
-          "guideBriefing": "Maciço montanhoso que forma o cenário da cidade e oferece trilhas e paisagens. Liga a cidade histórica ao circuito natural do Caraça.",
           "lat": -20.074754,
           "lon": -43.408165,
           "locationAccuracy": "city-center",
@@ -4887,17 +4427,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Santuário e igreja neogótica · Caraça",
-          "description": "Complexo religioso isolado em um vale cercado por montanhas. A igreja neogótica contrasta com o barroco predominante nas outras cidades do roteiro.",
+          "description": "Localidade: Caraça, município de Catas Altas. Complexo religioso isolado em um vale cercado por montanhas. A igreja neogótica contrasta com o barroco predominante nas outras cidades do roteiro. Roteiros organizados reservam tempo ao Caraça porque hospedagem, santuário, história e reserva natural acontecem no mesmo lugar. É uma mudança completa de ritmo em relação aos city tours.",
           "agencyRationale": "Agências reservam tempo ao Caraça porque hospedagem, santuário, história e reserva natural acontecem no mesmo lugar. É uma mudança completa de ritmo em relação aos city tours.",
           "visitType": "Complexo / interna + externa",
           "estimatedDuration": "2 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil no santuário",
+            "description": "A estimativa considera a visita ao santuário e à igreja, sem incluir trilhas da serra. Confirme entrada, degraus e circulação interna; a classificação não comprova acesso sem barreiras."
           },
-          "guideBriefing": "Localidade: Caraça, município de Catas Altas. Complexo religioso isolado em um vale cercado por montanhas. A igreja neogótica contrasta com o barroco predominante nas outras cidades do roteiro. Roteiros organizados reservam tempo ao Caraça porque hospedagem, santuário, história e reserva natural acontecem no mesmo lugar. É uma mudança completa de ritmo em relação aos city tours.",
           "lat": -20.0975,
           "lon": -43.48842,
           "locationAccuracy": "exact",
@@ -4909,11 +4449,6 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "locality": "Caraça",
           "mapQuery": "Santuário e igreja neogótica, Caraça, Catas Altas MG",
           "catalogName": "Santuário e igreja neogótica · Caraça",
@@ -4922,17 +4457,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Ruínas do antigo colégio · Caraça",
-          "description": "Restos preservados do tradicional colégio destruído por incêndio em 1968, que formou figuras importantes da história brasileira.",
+          "description": "Localidade: Caraça, município de Catas Altas. Restos preservados do tradicional colégio destruído por incêndio em 1968, que formou figuras importantes da história brasileira. Acrescentam história educacional ao conjunto religioso.",
           "agencyRationale": "Acrescentam história educacional ao conjunto religioso.",
           "visitType": "Histórica / caminhada",
           "estimatedDuration": "40 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita histórica com caminhada pelas áreas permitidas. Confirme terreno, desníveis e limites da visita; as condições de acesso não estão detalhadas."
           },
-          "guideBriefing": "Localidade: Caraça, município de Catas Altas. Restos preservados do tradicional colégio destruído por incêndio em 1968, que formou figuras importantes da história brasileira. Acrescentam história educacional ao conjunto religioso.",
           "lat": -20.0975,
           "lon": -43.48842,
           "locationAccuracy": "exact",
@@ -4952,17 +4487,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Trilhas, cachoeiras e grutas · Caraça",
-          "description": "A reserva particular protege milhares de hectares de Mata Atlântica e Cerrado em relevo montanhoso.",
+          "description": "Localidade: Caraça, município de Catas Altas. A reserva particular protege milhares de hectares de Mata Atlântica e Cerrado em relevo montanhoso. Permite dedicar um ou dois dias a natureza dentro do circuito histórico.",
           "agencyRationale": "Permite dedicar um ou dois dias a natureza dentro do circuito histórico.",
           "visitType": "Natureza / trilha",
           "estimatedDuration": "meio dia",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Passeio de natureza com percursos diferentes. Confirme trilha ou atrativo escolhido, distância, terreno, desnível e condições da visita; não há uma dificuldade única documentada."
           },
-          "guideBriefing": "Localidade: Caraça, município de Catas Altas. A reserva particular protege milhares de hectares de Mata Atlântica e Cerrado em relevo montanhoso. Permite dedicar um ou dois dias a natureza dentro do circuito histórico.",
           "lat": -20.098103,
           "lon": -43.487693,
           "locationAccuracy": "city-center",
@@ -4982,17 +4517,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Observação do lobo-guará · Caraça",
-          "description": "O santuário tornou-se famoso pela visita noturna de lobos-guarás atraídos para a área próxima à escadaria. A aparição não é garantida, pois são animais silvestres.",
+          "description": "Localidade: Caraça, município de Catas Altas. O santuário tornou-se famoso pela visita noturna de lobos-guarás atraídos para a área próxima à escadaria. A aparição não é garantida, pois são animais silvestres. É uma experiência emblemática que diferencia o Caraça de qualquer outra parada do roteiro.",
           "agencyRationale": "É uma experiência emblemática que diferencia o Caraça de qualquer outra parada do roteiro.",
           "visitType": "Observação noturna",
           "estimatedDuration": "noite / requer pernoite",
           "publishedDuration": "A partir de 19h30; duração indeterminada",
           "oneYearOld": "Sim, acompanhada — Caraça admite crianças e isenta até 5 anos",
-          "accessibility": {
-            "status": "conditional",
-            "description": "Sim, mas espera é noturna e pode ser longa"
+          "access": {
+            "level": "unknown",
+            "label": "Espera noturna",
+            "description": "Observação noturna próxima à escadaria do santuário, com espera que pode ser longa e aparição não garantida. Confirme percurso, acomodação e possibilidade de permanecer durante a espera; o esforço físico não está documentado."
           },
-          "guideBriefing": "Localidade: Caraça, município de Catas Altas. O santuário tornou-se famoso pela visita noturna de lobos-guarás atraídos para a área próxima à escadaria. A aparição não é garantida, pois são animais silvestres. É uma experiência emblemática que diferencia o Caraça de qualquer outra parada do roteiro.",
           "lat": -20.0975,
           "lon": -43.48842,
           "locationAccuracy": "exact",
@@ -5044,17 +4579,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Matriz de Santo Antônio",
-          "description": "Igreja setecentista cujo teto da capela-mor possui pintura de Mestre Ataíde.",
+          "description": "Igreja setecentista cujo teto da capela-mor possui pintura de Mestre Ataíde. Coloca uma obra importante de Ataíde fora do eixo mais óbvio Ouro Preto–Mariana.",
           "agencyRationale": "Coloca uma obra importante de Ataíde fora do eixo mais óbvio Ouro Preto–Mariana.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "45 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita interna à igreja. Confirme entrada, degraus e circulação; o cadastro não documenta as condições de acesso."
           },
-          "guideBriefing": "Igreja setecentista cujo teto da capela-mor possui pintura de Mestre Ataíde. Coloca uma obra importante de Ataíde fora do eixo mais óbvio Ouro Preto–Mariana.",
           "lat": -19.95968,
           "lon": -43.41726,
           "locationAccuracy": "exact",
@@ -5071,17 +4606,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Centro Histórico",
-          "description": "Casario e igrejas ligados à expansão da mineração no início do século XVIII.",
+          "description": "Casario e igrejas ligados à expansão da mineração no início do século XVIII. Funciona como cidade histórica e porta de entrada para o Caraça.",
           "agencyRationale": "Funciona como cidade histórica e porta de entrada para o Caraça.",
           "visitType": "A pé / externa",
           "estimatedDuration": "2–3 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil em trecho curto",
+            "description": "Visita externa ao centro histórico. A estimativa considera caminhada curta; confirme calçamento, degraus e desníveis do circuito escolhido."
           },
-          "guideBriefing": "Casario e igrejas ligados à expansão da mineração no início do século XVIII. Funciona como cidade histórica e porta de entrada para o Caraça.",
           "lat": -19.958721,
           "lon": -43.413154,
           "locationAccuracy": "city-center",
@@ -5092,11 +4627,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
           },
           "kind": "atracao",
           "type": "historia"
@@ -5138,17 +4668,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Igreja Nossa Senhora do Ó",
-          "description": "Pequena igreja do início do século XVIII com interior ricamente decorado e pinturas de influência oriental, incomuns no barroco mineiro.",
+          "description": "Pequena igreja do início do século XVIII com interior ricamente decorado e pinturas de influência oriental, incomuns no barroco mineiro. É pequena, singular e muito diferente das grandes matrizes do circuito.",
           "agencyRationale": "É pequena, singular e muito diferente das grandes matrizes do circuito.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Pequena igreja do início do século XVIII com interior ricamente decorado e pinturas de influência oriental, incomuns no barroco mineiro. É pequena, singular e muito diferente das grandes matrizes do circuito.",
           "lat": -19.884687,
           "lon": -43.796257,
           "locationAccuracy": "exact",
@@ -5160,27 +4690,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
-          "description": "Igreja com elementos escultóricos associados a Aleijadinho.",
+          "description": "Igreja com elementos escultóricos associados a Aleijadinho. Permite contato com obras do artista muito perto de Belo Horizonte.",
           "agencyRationale": "Permite contato com obras do artista muito perto de Belo Horizonte.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja com elementos escultóricos associados a Aleijadinho. Permite contato com obras do artista muito perto de Belo Horizonte.",
           "lat": -19.889894,
           "lon": -43.806539,
           "locationAccuracy": "exact",
@@ -5192,27 +4717,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Matriz Nossa Senhora da Conceição",
-          "description": "Grande templo que reúne diferentes fases da decoração colonial e ajuda a perceber a evolução do barroco mineiro.",
+          "description": "Grande templo que reúne diferentes fases da decoração colonial e ajuda a perceber a evolução do barroco mineiro. É uma das igrejas historicamente mais importantes da antiga Vila Real de Sabará.",
           "agencyRationale": "É uma das igrejas historicamente mais importantes da antiga Vila Real de Sabará.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "45 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita interna à igreja. Confirme entrada, degraus e circulação; o cadastro não documenta as condições de acesso."
           },
-          "guideBriefing": "Grande templo que reúne diferentes fases da decoração colonial e ajuda a perceber a evolução do barroco mineiro. É uma das igrejas historicamente mais importantes da antiga Vila Real de Sabará.",
           "lat": -19.885272,
           "lon": -43.799944,
           "locationAccuracy": "exact",
@@ -5229,17 +4749,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Teatro Municipal",
-          "description": "Teatro histórico do século XIX, raro exemplar preservado desse tipo de equipamento cultural.",
+          "description": "Teatro histórico do século XIX, raro exemplar preservado desse tipo de equipamento cultural. Diversifica a visita para além de igrejas.",
           "agencyRationale": "Diversifica a visita para além de igrejas.",
           "visitType": "Interna / visita",
           "estimatedDuration": "40 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao imóvel histórico. Confirme áreas abertas ao público, entrada, degraus e circulação interna; as condições de acesso não estão detalhadas."
           },
-          "guideBriefing": "Teatro histórico do século XIX, raro exemplar preservado desse tipo de equipamento cultural. Diversifica a visita para além de igrejas.",
           "lat": -19.891088,
           "lon": -43.810676,
           "locationAccuracy": "exact",
@@ -5256,17 +4776,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Solar do Padre Correia",
-          "description": "Grande sobrado do século XVIII ligado à elite local e à administração da antiga vila. A arquitetura doméstica mostra como viviam famílias de posição elevada durante o ciclo do ouro.",
+          "description": "Grande sobrado do século XVIII ligado à elite local e à administração da antiga vila. A arquitetura doméstica mostra como viviam famílias de posição elevada durante o ciclo do ouro. A Primotur o coloca no city tour porque acrescenta arquitetura civil a um roteiro que poderia ficar restrito a igrejas.",
           "agencyRationale": "A Primotur o coloca no city tour porque acrescenta arquitetura civil a um roteiro que poderia ficar restrito a igrejas.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao imóvel histórico. Confirme áreas abertas ao público, entrada, degraus e circulação interna; as condições de acesso não estão detalhadas."
           },
-          "guideBriefing": "Grande sobrado do século XVIII ligado à elite local e à administração da antiga vila. A arquitetura doméstica mostra como viviam famílias de posição elevada durante o ciclo do ouro. A Primotur o coloca no city tour porque acrescenta arquitetura civil a um roteiro que poderia ficar restrito a igrejas.",
           "lat": -19.892271,
           "lon": -43.810985,
           "locationAccuracy": "exact",
@@ -5283,17 +4803,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Igreja Nossa Senhora do Rosário dos Pretos",
-          "description": "Igreja iniciada pela irmandade negra e marcada por uma história construtiva longa. É testemunho material da presença e organização da população negra em Sabará.",
+          "description": "Igreja iniciada pela irmandade negra e marcada por uma história construtiva longa. É testemunho material da presença e organização da população negra em Sabará. Roteiros organizados a incluem para contar a cidade também pela experiência das irmandades negras e da sociedade escravista.",
           "agencyRationale": "Agências a incluem para contar a cidade também pela experiência das irmandades negras e da sociedade escravista.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja iniciada pela irmandade negra e marcada por uma história construtiva longa. É testemunho material da presença e organização da população negra em Sabará. Roteiros organizados a incluem para contar a cidade também pela experiência das irmandades negras e da sociedade escravista.",
           "lat": -19.889975,
           "lon": -43.810838,
           "locationAccuracy": "exact",
@@ -5305,27 +4825,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Chafariz do Kaquende",
-          "description": "Chafariz público histórico que abasteceu moradores da antiga vila. É um vestígio simples, mas muito concreto, da infraestrutura cotidiana colonial.",
+          "description": "Chafariz público histórico que abasteceu moradores da antiga vila. É um vestígio simples, mas muito concreto, da infraestrutura cotidiana colonial. Funciona como parada curta que ajuda o guia a explicar como a cidade operava no dia a dia, fora dos edifícios monumentais.",
           "agencyRationale": "Funciona como parada curta que ajuda o guia a explicar como a cidade operava no dia a dia, fora dos edifícios monumentais.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita externa ao ponto histórico. Confirme calçamento, desníveis e extensão da caminhada; o cadastro não documenta o esforço do percurso."
           },
-          "guideBriefing": "Chafariz público histórico que abasteceu moradores da antiga vila. É um vestígio simples, mas muito concreto, da infraestrutura cotidiana colonial. Funciona como parada curta que ajuda o guia a explicar como a cidade operava no dia a dia, fora dos edifícios monumentais.",
           "lat": -19.89292,
           "lon": -43.812866,
           "locationAccuracy": "exact",
@@ -5342,17 +4857,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Rua Dom Pedro II",
-          "description": "Rua histórica cercada por casario e edifícios civis, usada como eixo de caminhada pelo centro.",
+          "description": "Rua histórica cercada por casario e edifícios civis, usada como eixo de caminhada pelo centro. Está nos roteiros porque conecta as atrações e permite observar a escala urbana e a arquitetura civil de Sabará durante o próprio deslocamento.",
           "agencyRationale": "Está nos roteiros porque conecta as atrações e permite observar a escala urbana e a arquitetura civil de Sabará durante o próprio deslocamento.",
           "visitType": "Visita turística",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita externa ao ponto histórico. Confirme calçamento, desníveis e extensão da caminhada; o cadastro não documenta o esforço do percurso."
           },
-          "guideBriefing": "Rua histórica cercada por casario e edifícios civis, usada como eixo de caminhada pelo centro. Está nos roteiros porque conecta as atrações e permite observar a escala urbana e a arquitetura civil de Sabará durante o próprio deslocamento.",
           "lat": -19.8924009,
           "lon": -43.8110473,
           "locationAccuracy": "street-center",
@@ -5400,17 +4915,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Serra da Piedade",
-          "description": "Pico com vista panorâmica excepcional sobre as montanhas mineiras; em dias claros, o horizonte alcança dezenas de quilômetros.",
+          "description": "Pico com vista panorâmica excepcional sobre as montanhas mineiras; em dias claros, o horizonte alcança dezenas de quilômetros. É uma das grandes paradas paisagísticas próximas de Belo Horizonte.",
           "agencyRationale": "É uma das grandes paradas paisagísticas próximas de Belo Horizonte.",
           "visitType": "Mirante + caminhada",
           "estimatedDuration": "2 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao mirante com caminhada. Confirme estrada, trecho a pé, desníveis e condições do percurso; a dificuldade não está documentada no cadastro."
           },
-          "guideBriefing": "Pico com vista panorâmica excepcional sobre as montanhas mineiras; em dias claros, o horizonte alcança dezenas de quilômetros. É uma das grandes paradas paisagísticas próximas de Belo Horizonte.",
           "lat": -19.822779,
           "lon": -43.675617,
           "locationAccuracy": "exact",
@@ -5427,17 +4942,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Santuário Nossa Senhora da Piedade",
-          "description": "Pequeno santuário histórico no topo da serra, importante centro de peregrinação e sede da padroeira de Minas Gerais.",
+          "description": "Pequeno santuário histórico no topo da serra, importante centro de peregrinação e sede da padroeira de Minas Gerais. Une paisagem, religiosidade e patrimônio em uma única parada.",
           "agencyRationale": "Une paisagem, religiosidade e patrimônio em uma única parada.",
           "visitType": "Santuário / interna",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita interna ao santuário. Confirme chegada, entrada, degraus e circulação; o cadastro não detalha o esforço de acesso."
           },
-          "guideBriefing": "Pequeno santuário histórico no topo da serra, importante centro de peregrinação e sede da padroeira de Minas Gerais. Une paisagem, religiosidade e patrimônio em uma única parada.",
           "lat": -19.822779,
           "lon": -43.675617,
           "locationAccuracy": "exact",
@@ -5496,17 +5011,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Museu dos Dinossauros / Complexo Cultural e Científico de Peirópolis",
-          "description": "Museu ligado à UFTM em uma das áreas paleontológicas mais importantes do Brasil. O acervo e as exposições apresentam fósseis encontrados na região e reconstituições da fauna do Cretáceo, permitindo entender por que o Triângulo Mineiro é referência em paleontologia.",
+          "description": "Museu ligado à UFTM em uma das áreas paleontológicas mais importantes do Brasil. O acervo e as exposições apresentam fósseis encontrados na região e reconstituições da fauna do Cretáceo, permitindo entender por que o Triângulo Mineiro é referência em paleontologia. É uma parada de alto valor educativo e visual praticamente no eixo da BR-262. Acrescenta ao roteiro um tema completamente diferente do barroco e da mineração colonial: a história natural de Minas milhões de anos antes da ocupação humana.",
           "agencyRationale": "É uma parada de alto valor educativo e visual praticamente no eixo da BR-262. Acrescenta ao roteiro um tema completamente diferente do barroco e da mineração colonial: a história natural de Minas milhões de anos antes da ocupação humana.",
           "visitType": "Museu / exposição interna e externa",
           "estimatedDuration": "1–2 h",
           "publishedDuration": "—",
           "oneYearOld": "Sim",
-          "accessibility": {
-            "status": "conditional",
-            "description": "Sim — informações turísticas registram acessibilidade em estacionamento, entrada e sanitário; confirmar condições das áreas externas"
+          "access": {
+            "level": "unknown",
+            "label": "Áreas internas e externas",
+            "description": "O cadastro registra recursos de acessibilidade no estacionamento, na entrada e no sanitário. A exposição inclui áreas internas e externas; confirme circulação e terreno das áreas externas. O esforço físico do conjunto não está documentado."
           },
-          "guideBriefing": "Museu ligado à UFTM em uma das áreas paleontológicas mais importantes do Brasil. O acervo e as exposições apresentam fósseis encontrados na região e reconstituições da fauna do Cretáceo, permitindo entender por que o Triângulo Mineiro é referência em paleontologia. É uma parada de alto valor educativo e visual praticamente no eixo da BR-262. Acrescenta ao roteiro um tema completamente diferente do barroco e da mineração colonial: a história natural de Minas milhões de anos antes da ocupação humana.",
           "lat": -19.7442903,
           "lon": -47.7424457,
           "days": "1–2 h",
@@ -5527,17 +5042,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Geossítio de Peirópolis",
-          "description": "Área onde a paisagem e os achados fósseis ajudam a conectar o museu ao local real das pesquisas paleontológicas. Peirópolis reúne patrimônio científico, antiga estação ferroviária e memória da comunidade que se desenvolveu no entorno.",
+          "description": "Área onde a paisagem e os achados fósseis ajudam a conectar o museu ao local real das pesquisas paleontológicas. Peirópolis reúne patrimônio científico, antiga estação ferroviária e memória da comunidade que se desenvolveu no entorno. Complementa o museu sem exigir um grande desvio rodoviário e transforma a parada em experiência de território, não apenas de exposição.",
           "agencyRationale": "Complementa o museu sem exigir um grande desvio rodoviário e transforma a parada em experiência de território, não apenas de exposição.",
           "visitType": "Área externa / caminhada",
           "estimatedDuration": "30–60 min",
           "publishedDuration": "—",
           "oneYearOld": "Sim, com acompanhamento",
-          "accessibility": {
-            "status": "unknown",
-            "description": "Área geológica extensa com acessos por estrada e trilhas; confirmar condições locais."
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Área geológica extensa, com acessos por estrada e trilhas. Confirme o ponto de visita, extensão da caminhada, terreno e condições locais; não há esforço único documentado para toda a área."
           },
-          "guideBriefing": "Área onde a paisagem e os achados fósseis ajudam a conectar o museu ao local real das pesquisas paleontológicas. Peirópolis reúne patrimônio científico, antiga estação ferroviária e memória da comunidade que se desenvolveu no entorno. Complementa o museu sem exigir um grande desvio rodoviário e transforma a parada em experiência de território, não apenas de exposição.",
           "lat": -19.742990494,
           "lon": -47.743080139,
           "days": "30–60 min",
@@ -5594,17 +5109,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Grande Hotel e Termas de Araxá",
-          "description": "Complexo monumental inaugurado na década de 1940 para transformar Araxá em destino termal de luxo. Arquitetura, jardins e interiores fazem a visita valer mesmo sem usar os serviços termais.",
+          "description": "Complexo monumental inaugurado na década de 1940 para transformar Araxá em destino termal de luxo. Arquitetura, jardins e interiores fazem a visita valer mesmo sem usar os serviços termais. Araxá aparece como etapa porque possui infraestrutura e uma atração monumental capaz de justificar o desvio. O Grande Hotel também conta a história do auge brasileiro das estâncias hidrominerais.",
           "agencyRationale": "Araxá aparece como etapa porque possui infraestrutura e uma atração monumental capaz de justificar o desvio. O Grande Hotel também conta a história do auge brasileiro das estâncias hidrominerais.",
           "visitType": "Tour histórico / interna",
           "estimatedDuration": "2 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita histórica interna ao complexo. Confirme entrada, espaços abertos ao público, degraus e circulação; o cadastro não documenta o esforço físico da visita."
           },
-          "guideBriefing": "Complexo monumental inaugurado na década de 1940 para transformar Araxá em destino termal de luxo. Arquitetura, jardins e interiores fazem a visita valer mesmo sem usar os serviços termais. Araxá aparece como etapa porque possui infraestrutura e uma atração monumental capaz de justificar o desvio. O Grande Hotel também conta a história do auge brasileiro das estâncias hidrominerais.",
           "lat": -19.6469277,
           "lon": -46.9498159,
           "days": "2 h",
@@ -5621,17 +5136,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Complexo do Barreiro",
-          "description": "Área de fontes minerais, jardins e edifícios históricos que explica por que Araxá se tornou uma estância hidromineral.",
+          "description": "Área de fontes minerais, jardins e edifícios históricos que explica por que Araxá se tornou uma estância hidromineral. Dá contexto ao Grande Hotel e à origem do turismo local.",
           "agencyRationale": "Dá contexto ao Grande Hotel e à origem do turismo local.",
           "visitType": "Caminhada / externa",
           "estimatedDuration": "2 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita externa com caminhada pelo complexo. Confirme o circuito, sua extensão, terreno e desníveis; o esforço depende das áreas escolhidas."
           },
-          "guideBriefing": "Área de fontes minerais, jardins e edifícios históricos que explica por que Araxá se tornou uma estância hidromineral. Dá contexto ao Grande Hotel e à origem do turismo local.",
           "lat": -19.6472115,
           "lon": -46.954839,
           "days": "2 h",
@@ -5648,17 +5163,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Museu Dona Beja",
-          "description": "Museu instalado em casarão histórico ligado à memória de Ana Jacinta de São José, a Dona Beja, personagem cercada por história e lendas regionais.",
+          "description": "Museu instalado em casarão histórico ligado à memória de Ana Jacinta de São José, a Dona Beja, personagem cercada por história e lendas regionais. Acrescenta narrativa histórica e personagem local ao roteiro termal.",
           "agencyRationale": "Acrescenta narrativa histórica e personagem local ao roteiro termal.",
           "visitType": "Museu / interna",
           "estimatedDuration": "1 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita interna ao museu. Confirme entrada, degraus e circulação; o cadastro não documenta o esforço do percurso."
           },
-          "guideBriefing": "Museu instalado em casarão histórico ligado à memória de Ana Jacinta de São José, a Dona Beja, personagem cercada por história e lendas regionais. Acrescenta narrativa histórica e personagem local ao roteiro termal.",
           "lat": -19.5898756,
           "lon": -46.9380426,
           "days": "1 h",
@@ -5675,17 +5190,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Museu Calmon Barreto / Memorial de Araxá",
-          "description": "Equipamentos culturais dedicados à história local e à produção artística de Calmon Barreto, ajudando a entender Araxá além das termas e da figura de Dona Beja.",
+          "description": "Equipamentos culturais dedicados à história local e à produção artística de Calmon Barreto, ajudando a entender Araxá além das termas e da figura de Dona Beja. Aparecem em roteiros turísticos oficiais como parte do núcleo histórico-cultural da cidade e dão contexto ao período anterior e paralelo ao desenvolvimento do Barreiro.",
           "agencyRationale": "Aparecem em roteiros turísticos oficiais como parte do núcleo histórico-cultural da cidade e dão contexto ao período anterior e paralelo ao desenvolvimento do Barreiro.",
           "visitType": "Museu / interna",
           "estimatedDuration": "30–60 min",
           "publishedDuration": "—",
           "oneYearOld": "Sim",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita interna ao museu. Confirme entrada, degraus e circulação; o cadastro não documenta o esforço do percurso."
           },
-          "guideBriefing": "Equipamentos culturais dedicados à história local e à produção artística de Calmon Barreto, ajudando a entender Araxá além das termas e da figura de Dona Beja. Aparecem em roteiros turísticos oficiais como parte do núcleo histórico-cultural da cidade e dão contexto ao período anterior e paralelo ao desenvolvimento do Barreiro.",
           "lat": -19.586776,
           "lon": -46.9426564,
           "days": "30–60 min",
@@ -5702,17 +5217,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Igreja de São Domingos",
-          "description": "Igreja histórica associada à formação religiosa e urbana de Araxá, preservando referências da arquitetura e religiosidade local.",
+          "description": "Igreja histórica associada à formação religiosa e urbana de Araxá, preservando referências da arquitetura e religiosidade local. Integra circuitos culturais de Araxá e ajuda a conectar a história urbana ao restante do roteiro mineiro.",
           "agencyRationale": "Integra circuitos culturais de Araxá e ajuda a conectar a história urbana ao restante do roteiro mineiro.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "20–30 min",
           "publishedDuration": "—",
           "oneYearOld": "Sim",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil na visita",
+            "description": "A estimativa considera uma visita curta ao templo. Confirme degraus, entrada e circulação interna, além de calçamento e ladeiras no trajeto; o cadastro não comprova um percurso sem barreiras."
           },
-          "guideBriefing": "Igreja histórica associada à formação religiosa e urbana de Araxá, preservando referências da arquitetura e religiosidade local. Integra circuitos culturais de Araxá e ajuda a conectar a história urbana ao restante do roteiro mineiro.",
           "lat": -19.5927815,
           "lon": -46.9409702,
           "days": "20–30 min",
@@ -5724,27 +5239,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Parque do Cristo",
-          "description": "Mirante elevado sobre Araxá, com vista panorâmica da cidade e do entorno.",
+          "description": "Mirante elevado sobre Araxá, com vista panorâmica da cidade e do entorno. Funciona como parada curta de leitura da paisagem e orientação geográfica antes ou depois das atrações históricas.",
           "agencyRationale": "Funciona como parada curta de leitura da paisagem e orientação geográfica antes ou depois das atrações históricas.",
           "visitType": "Mirante / externa",
           "estimatedDuration": "30–60 min",
           "publishedDuration": "—",
           "oneYearOld": "Sim, com acompanhamento",
-          "accessibility": {
-            "status": "unknown",
-            "description": "Mirante em área elevada; confirme rota sem escadas e condições de acesso."
+          "access": {
+            "level": "unknown",
+            "label": "Mirante elevado",
+            "description": "Mirante em área elevada. Confirme a forma de chegada, a rota sem escadas e as condições do trecho a pé; o esforço não está documentado."
           },
-          "guideBriefing": "Mirante elevado sobre Araxá, com vista panorâmica da cidade e do entorno. Funciona como parada curta de leitura da paisagem e orientação geográfica antes ou depois das atrações históricas.",
           "lat": -19.5837868,
           "lon": -46.9345619,
           "days": "30–60 min",
@@ -5761,17 +5271,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Fontes Dona Beja e Andrade Júnior",
-          "description": "Fontes minerais do Barreiro ligadas à tradição hidrotermal que transformou Araxá em destino de águas e levou à construção do grande complexo turístico.",
+          "description": "Fontes minerais do Barreiro ligadas à tradição hidrotermal que transformou Araxá em destino de águas e levou à construção do grande complexo turístico. São parte essencial da narrativa das águas minerais; explicam por que o Barreiro e o Grande Hotel existem naquele local.",
           "agencyRationale": "São parte essencial da narrativa das águas minerais; explicam por que o Barreiro e o Grande Hotel existem naquele local.",
           "visitType": "Fonte / parque / externa",
           "estimatedDuration": "20–40 min",
           "publishedDuration": "—",
           "oneYearOld": "Sim",
-          "accessibility": {
-            "status": "unknown",
-            "description": "Fontes dentro do complexo do Barreiro; confirme acesso e condições com o operador."
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Fontes dentro do complexo do Barreiro. Confirme o percurso, a entrada e as condições de circulação com o operador; o esforço não está documentado."
           },
-          "guideBriefing": "Fontes minerais do Barreiro ligadas à tradição hidrotermal que transformou Araxá em destino de águas e levou à construção do grande complexo turístico. São parte essencial da narrativa das águas minerais; explicam por que o Barreiro e o Grande Hotel existem naquele local.",
           "lat": -19.64819425,
           "lon": -46.94960645,
           "days": "20–40 min",
@@ -5828,17 +5338,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Santuário de Nossa Senhora Aparecida",
-          "description": "Complexo religioso e mirante situado no alto de um morro, com capelas de diferentes épocas.",
+          "description": "Complexo religioso e mirante no alto de um morro, com capelas de diferentes épocas. A primeira capela surgiu em 1951; o conjunto reúne templos, sala de ex-votos e uma imagem monumental de Nossa Senhora Aparecida. A visita permite conhecer a devoção local e observar a cidade.\n\nA festa tradicional ocorre em outubro; consulte os horários de visita e celebrações para a data da viagem.",
           "agencyRationale": "Complemento documentado em fonte oficial; inclusão em roteiro comercial de agência não confirmada.",
           "visitType": "Templos / mirante",
           "estimatedDuration": "30–60 min (estimativa de planejamento)",
           "publishedDuration": "—",
           "oneYearOld": "Regra etária não publicada; confirmar com o responsável.",
-          "accessibility": {
-            "status": "unknown",
-            "description": "Acessibilidade e horários não confirmados. Verifique rampas, escadas e acesso aos diferentes templos com o santuário."
+          "access": {
+            "level": "unknown",
+            "label": "Templos e mirante",
+            "description": "Complexo de templos e mirante no alto de um morro. Confirme chegada, rampas, escadas e acesso aos diferentes templos com o santuário; as condições e os horários não estão confirmados."
           },
-          "guideBriefing": "A primeira capela surgiu em 1951. O conjunto reúne templos, sala de ex-votos e uma imagem monumental de Nossa Senhora Aparecida. A visita permite conhecer a devoção local e observar a cidade. A festa tradicional ocorre em outubro; horários de visita e celebrações devem ser consultados para a data da viagem.\n\nAcessibilidade e horários não confirmados. Verifique rampas, escadas e acesso aos diferentes templos com o santuário.",
           "lat": -19.6855953,
           "lon": -46.1806676,
           "locationAccuracy": "exact",
@@ -5868,17 +5378,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Estação Ferroviária de Campos Altos",
-          "description": "Estação do início da década de 1910 ligada à formação da cidade; a ferrovia permanece voltada ao transporte de cargas.",
+          "description": "Estação do início da década de 1910 ligada à origem ferroviária e à formação de Campos Altos. O prédio e o armazém podem ser apreciados em uma passagem pelo centro, na Praça Benedito Valadares. A linha permanece usada por trens de carga, sem serviço de passageiros; não há confirmação de visita interna.",
           "agencyRationale": "Complemento documentado em fonte oficial; inclusão em roteiro comercial de agência não confirmada.",
           "visitType": "Patrimônio ferroviário / contemplação externa",
           "estimatedDuration": "20–30 min (estimativa de planejamento)",
           "publishedDuration": "—",
           "oneYearOld": "Regra etária não publicada; confirmar com o responsável.",
-          "accessibility": {
-            "status": "unknown",
-            "description": "Praça Benedito Valadares, Centro. Acessibilidade não publicada; mantenha-se nas áreas públicas, sem entrar na linha ou em áreas operacionais."
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Contemplação externa na Praça Benedito Valadares, Centro. Mantenha-se nas áreas públicas, sem entrar na linha ou em áreas operacionais; calçamento e desníveis do percurso não estão documentados."
           },
-          "guideBriefing": "A estação representa a origem ferroviária de Campos Altos. O prédio e o armazém podem ser apreciados em uma passagem pelo centro. A linha é usada por trens de carga, sem serviço de passageiros; não há confirmação de visita interna.\n\nPraça Benedito Valadares, Centro. Acessibilidade não publicada; mantenha-se nas áreas públicas, sem entrar na linha ou em áreas operacionais.",
           "lat": -19.7005625,
           "lon": -46.1730625,
           "locationAccuracy": "exact",
@@ -5914,17 +5424,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Oficina e exposição de Dito Leandro",
-          "description": "Oficina de artesanato em sucata metálica com esculturas de animais e figuras de grande porte.",
+          "description": "Oficina de artesanato em sucata metálica onde Dito Leandro transforma metal descartado em esculturas de animais e figuras de grande porte. O espaço reúne produção e exposição, oferecendo contato com o trabalho do artesão.\n\nNa Rua Tiradentes, 175, Centro, o portal estadual informa visita guiada; combine previamente a disponibilidade com o responsável.",
           "agencyRationale": "Complemento documentado em fonte oficial; inclusão em roteiro comercial de agência não confirmada.",
           "visitType": "Oficina / exposição de artesanato",
           "estimatedDuration": "30–60 min (estimativa de planejamento)",
           "publishedDuration": "—",
           "oneYearOld": "Regra etária não publicada; confirmar com o responsável.",
-          "accessibility": {
-            "status": "unknown",
-            "description": "Rua Tiradentes, 175, Centro. Horários e acessibilidade não publicados; confirme a visita com o responsável."
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Oficina na Rua Tiradentes, 175, Centro. Confirme a visita, entrada, degraus e circulação com o responsável; horários e condições de acesso não estão publicados."
           },
-          "guideBriefing": "Dito Leandro transforma metal descartado em esculturas. O espaço reúne produção e exposição, oferecendo contato com o trabalho do artesão. O portal estadual informa visita guiada; combine previamente a disponibilidade.\n\nRua Tiradentes, 175, Centro. Horários e acessibilidade não publicados; confirme a visita com o responsável.",
           "lat": -19.6971875,
           "lon": -46.1731875,
           "locationAccuracy": "exact",
@@ -5956,17 +5466,17 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Cachoeira Olho do Sol",
-          "description": "Quedas e corredeiras do rio Mutuca em área rural, com poço e vegetação nativa.",
+          "description": "Quedas e corredeiras do rio Mutuca em área rural, com poço e vegetação nativa. O portal estadual situa a cachoeira a aproximadamente 14,3 km do centro de Campos Altos e descreve acesso por estrada de terra, com trilhas junto ao rio, rochas e desníveis.\n\nReserve tempo próprio para o deslocamento; o tempo publicado de visita não foi encontrado.",
           "agencyRationale": "Complemento documentado em fonte oficial; inclusão em roteiro comercial de agência não confirmada.",
           "visitType": "Estrada rural / caminhada / cachoeira",
           "estimatedDuration": "Duração a confirmar",
           "publishedDuration": "—",
           "oneYearOld": "Regra etária não publicada; confirmar com o responsável.",
-          "accessibility": {
-            "status": "unknown",
-            "description": "Acesso rural com trilhas, rochas e desníveis. Acessibilidade não publicada; confirme estrada, percurso e condições da água antes de visitar."
+          "access": {
+            "level": "hard",
+            "label": "Terreno irregular",
+            "description": "Acesso rural com trilhas, rochas e desníveis descritos na fonte oficial cadastrada. Confirme estrada, percurso, condições da água e alternativas para o grupo antes de visitar."
           },
-          "guideBriefing": "O portal estadual situa a cachoeira a aproximadamente 14,3 km do centro e descreve acesso por estrada de terra. Há trilhas junto ao rio, rochas e desníveis. Reserve tempo próprio para o deslocamento; o tempo publicado de visita não foi encontrado.\n\nAcesso rural com trilhas, rochas e desníveis. Acessibilidade não publicada; confirme estrada, percurso e condições da água antes de visitar.",
           "lat": -19.7852832,
           "lon": -46.2362161,
           "locationAccuracy": "exact",
@@ -5992,28 +5502,23 @@ window.ROTEIRO_DATA = {
               "url": "https://www.minasgerais.com.br/pt/atracoes/campos-altos/cachoeira-olho-do-sol"
             }
           ],
-          "accessEffort": {
-            "level": "hard",
-            "label": "Terreno irregular",
-            "note": "A fonte oficial descreve trilhas e rochas com desníveis; confirme o percurso e suas condições."
-          },
           "locationSourceUrl": "https://www.google.com/maps/search/Cachoeira+Olho+do+Sol+Campos+Altos/",
           "locationPlusCode": "58GM6Q77+VG",
           "locationCrossCheckUrl": "https://www.buser.com.br/destinos/pontos-turisticos/mg/campos-altos-mg/cachoeira-olho-do-sol"
         },
         {
           "name": "Parque Estadual dos Campos Altos",
-          "description": "Unidade de conservação criada em 2004, com 782,67 hectares e diversidade de florestas, campos e cerrado.",
+          "description": "Unidade de conservação criada em 2004, com 782,67 hectares, que protege ambientes e fauna do município em florestas, campos e cerrado. O IEF a relaciona entre os demais parques, fora da lista com infraestrutura para visitação. Sua existência como atrativo não confirma acesso turístico regular; consulte o órgão gestor antes de planejar a visita. Não há horário de visita publicado nas fontes consultadas.",
           "agencyRationale": "Complemento documentado em fonte oficial; inclusão em roteiro comercial de agência não confirmada.",
           "visitType": "Unidade de conservação / visitação a confirmar",
           "estimatedDuration": "Duração a confirmar",
           "publishedDuration": "—",
           "oneYearOld": "Regra etária não publicada; confirmar com o responsável.",
-          "accessibility": {
-            "status": "unknown",
-            "description": "Visitação, autorização, infraestrutura e acessibilidade precisam ser confirmadas com o IEF. Não há horário de visita publicado nas fontes consultadas."
+          "access": {
+            "level": "unknown",
+            "label": "Visitação a confirmar",
+            "description": "Confirme com o IEF a possibilidade de visita, autorização, infraestrutura e condições dos percursos. Não há horário de visita publicado nas fontes cadastradas, nem esforço físico documentado."
           },
-          "guideBriefing": "O parque protege ambientes e fauna do município. O IEF o relaciona entre os demais parques, fora da lista com infraestrutura para visitação. Sua existência como atrativo não confirma acesso turístico regular; consulte o órgão gestor antes de planejar a visita.\n\nVisitação, autorização, infraestrutura e acessibilidade precisam ser confirmadas com o IEF. Não há horário de visita publicado nas fontes consultadas.",
           "lat": -19.696,
           "lon": -46.171,
           "locationAccuracy": "city-center",
@@ -6089,17 +5594,17 @@ window.ROTEIRO_DATA = {
       "attractions": [
         {
           "name": "Centro histórico e igrejas",
-          "description": "Antigo núcleo minerador entre Belo Horizonte e Ouro Preto, com patrimônio religioso e urbano ligado ao ciclo do ouro.",
+          "description": "Antigo núcleo minerador entre Belo Horizonte e Ouro Preto, com patrimônio religioso e urbano ligado ao ciclo do ouro. Itabirito funciona bem como escala de baixo custo logístico no eixo BH–Ouro Preto. Roteiros organizados podem acrescentar patrimônio e gastronomia sem consumir um dia inteiro.",
           "agencyRationale": "Itabirito funciona bem como escala de baixo custo logístico no eixo BH–Ouro Preto. Agências podem acrescentar patrimônio e gastronomia sem consumir um dia inteiro.",
           "visitType": "Caminhada / igrejas",
           "estimatedDuration": "2 h",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "easy",
+            "label": "Mais fácil em trecho curto",
+            "description": "Circuito a pé pelo centro histórico e igrejas. A estimativa considera trechos curtos; confirme calçamento e desníveis, além da entrada e circulação de cada igreja."
           },
-          "guideBriefing": "Antigo núcleo minerador entre Belo Horizonte e Ouro Preto, com patrimônio religioso e urbano ligado ao ciclo do ouro. Itabirito funciona bem como escala de baixo custo logístico no eixo BH–Ouro Preto. Roteiros organizados podem acrescentar patrimônio e gastronomia sem consumir um dia inteiro.",
           "lat": -20.251972,
           "lon": -43.802917,
           "locationAccuracy": "city-center",
@@ -6111,27 +5616,22 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          },
           "kind": "atracao",
           "type": "historia"
         },
         {
           "name": "Pastel de angu",
-          "description": "Especialidade tradicional feita com massa de angu de milho e diferentes recheios, reconhecida como patrimônio cultural local.",
+          "description": "Especialidade tradicional feita com massa de angu de milho e diferentes recheios, reconhecida como patrimônio cultural local. Dá uma razão gastronômica rápida para interromper o deslocamento.",
           "agencyRationale": "Dá uma razão gastronômica rápida para interromper o deslocamento.",
           "visitType": "Gastronomia",
           "estimatedDuration": "45 min",
           "publishedDuration": "—",
           "oneYearOld": "—",
-          "accessibility": {
-            "status": "unknown",
-            "description": "—"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Experiência gastronômica no estabelecimento escolhido. Confirme endereço, entrada e circulação; o cadastro não define um local único nem condições de acesso."
           },
-          "guideBriefing": "Especialidade tradicional feita com massa de angu de milho e diferentes recheios, reconhecida como patrimônio cultural local. Dá uma razão gastronômica rápida para interromper o deslocamento.",
           "lat": -20.251972,
           "lon": -43.802917,
           "locationAccuracy": "city-center",
@@ -6187,11 +5687,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita religiosa. Confirme entrada, degraus e circulação interna; as condições de acesso não estão detalhadas no cadastro."
           },
-          "guideBriefing": "Igreja matriz histórica de Ouro Branco destacada em roteiro comercial do Circuito do Ouro.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -6215,11 +5715,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita religiosa. Confirme entrada, degraus e circulação interna; as condições de acesso não estão detalhadas no cadastro."
           },
-          "guideBriefing": "Capela histórica de Ouro Branco citada pela Primotur entre os atrativos da cidade.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -6271,11 +5771,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita a mirante e área de natureza. Confirme estrada, trecho a pé, terreno e desníveis; a dificuldade não está documentada no cadastro."
           },
-          "guideBriefing": "Mirante e área serrana usada como parada de pôr do sol por roteiro comercial.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -6299,11 +5799,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao memorial. Confirme entrada, degraus, circulação e áreas abertas ao público; as condições de acesso não estão detalhadas."
           },
-          "guideBriefing": "Espaço de memória dedicado ao humorista Zacarias, visitado em roteiro de agência.",
           "days": "—",
           "relevanceSource": "agency",
           "mapQuery": "Memorial Trapalhão Zacarias, Praça Tiradentes 257, Sete Lagoas MG",
@@ -6328,11 +5828,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "Não — idade mínima 6 anos",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita à gruta. Confirme percurso, distância, degraus e restrições com o responsável; o esforço não está documentado no cadastro."
           },
-          "guideBriefing": "Gruta calcária de Sete Lagoas incluída entre atrações de roteiro comercial.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -6389,11 +5889,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "hard",
+            "label": "Exigente",
+            "description": "Passeio de natureza com possibilidade de trilha, degraus e terreno irregular. A dificuldade cadastrada é uma estimativa; confirme o trecho, a duração, o desnível e alternativas de acesso."
           },
-          "guideBriefing": "Cânion na zona rural de Presidente Kubitschek explorado em passeio comercial a partir de Diamantina.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -6401,11 +5901,6 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Exigente",
-            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
-            "level": "hard"
           },
           "kind": "atracao",
           "type": "natureza"
@@ -6448,11 +5943,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Visita ao museu em Ipoema. Confirme entrada, degraus e circulação interna; as condições de acesso não estão detalhadas no cadastro."
           },
-          "guideBriefing": "Museu dedicado à cultura tropeira e às rotas de circulação do interior mineiro.",
           "days": "—",
           "relevanceSource": "agency",
           "mapQuery": "Museu do Tropeiro, Travessa Professor Manoel Soares 217, Ipoema MG",
@@ -6531,11 +6026,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Percurso histórico pelo núcleo de Raposos. Confirme o trecho escolhido, extensão da caminhada, calçamento e desníveis; o esforço não está documentado."
           },
-          "guideBriefing": "Passagem pelo município no roteiro de cicloviagem comercializado pela Primotur.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -6586,11 +6081,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Percurso histórico pela localidade de Honório Bicalho. Confirme o trecho escolhido, extensão da caminhada e terreno; o esforço não está documentado."
           },
-          "guideBriefing": "Distrito de Nova Lima atravessado pelo roteiro comercial ao longo do Rio das Velhas.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -6614,11 +6109,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Percurso histórico no antigo leito ferroviário. Confirme o trecho visitável, terreno, extensão e condições locais; o cadastro não documenta o esforço físico."
           },
-          "guideBriefing": "Trecho ferroviário desativado usado como eixo do roteiro entre Sabará, Raposos e Rio Acima.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -6670,11 +6165,11 @@ window.ROTEIRO_DATA = {
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
-          "accessibility": {
-            "status": "unknown",
-            "description": "A confirmar"
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Percurso histórico pelo núcleo de Rio Acima. Confirme o trecho escolhido, extensão da caminhada, calçamento e desníveis; o esforço não está documentado."
           },
-          "guideBriefing": "Parada com pernoite no roteiro comercial Entre Trilhas, Sabores e Aromas.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {

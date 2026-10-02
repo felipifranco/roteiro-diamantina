@@ -26,7 +26,7 @@ HEADERS = [
     "Tempo real publicado",
     "Classificação etária / 1 ano",
     "Ingressos / agendamento",
-    "Idoso / mobilidade reduzida",
+    "Acesso / esforço físico",
 ]
 ATTRACTION_FIELDS = (
     "name",
@@ -36,7 +36,7 @@ ATTRACTION_FIELDS = (
     "estimatedDuration",
     "publishedDuration",
     "oneYearOld",
-    "accessibility",
+    "access",
 )
 STOP_KINDS = {"cidade", "regiao", "atracao", "alerta", "restaurante"}
 STOP_TYPES = {"natureza", "historia", "gastronomia"}
@@ -152,21 +152,18 @@ def load_data():
 def validate_visit_rules(item, path):
     if not isinstance(item, dict):
         raise ValueError(f"{path} must be an object")
-    accessibility = item.get("accessibility")
-    if "accessibility" in item or item.get("kind") == "atracao":
-        if (not isinstance(accessibility, dict)
-                or not isinstance(accessibility.get("status"), str)
-                or accessibility.get("status") not in {"accessible", "conditional", "restricted", "unknown"}
-                or not isinstance(accessibility.get("description"), str)
-                or not accessibility["description"].strip()):
-            raise ValueError(f"{path}.accessibility must have a valid status and non-empty description")
-    effort = item.get("accessEffort")
-    if effort is not None and (
-        not isinstance(effort, dict)
-        or effort.get("level") not in {"easy", "moderate", "hard", "unknown"}
-        or any(not isinstance(effort.get(field), str) or not effort[field].strip() for field in ("label", "note"))
-    ):
-        raise ValueError(f"{path}.accessEffort must have a valid level, label, and note")
+    if "accessEffort" in item or "accessibility" in item:
+        raise ValueError(f"{path} must store access metadata inside access")
+    if "access" in item or item.get("kind") == "atracao":
+        access = item.get("access")
+        if not isinstance(access, dict):
+            raise ValueError(f"{path}.access must be an object")
+        if (set(access) != {"level", "label", "description"}
+                or not isinstance(access.get("level"), str)
+                or access["level"] not in {"easy", "moderate", "hard", "unknown"}
+                or any(not isinstance(access.get(field), str) or not access[field].strip()
+                       for field in ("label", "description"))):
+            raise ValueError(f"{path}.access must have a valid level, label, and description")
     age = item.get("ageClassification")
     ticket = item.get("ticket")
     if not isinstance(age, dict) or age.get("status") not in AGE_STATUSES:
@@ -373,6 +370,15 @@ def validate(data):
                 raise ValueError(
                     f"routeStops[{index}].attractions[{attraction_index}].name must be non-empty"
                 )
+            if "guideBriefing" in attraction:
+                raise ValueError(
+                    f"routeStops[{index}].attractions[{attraction_index}] "
+                    "must store the full visit text in description, without guideBriefing"
+                )
+            if not isinstance(attraction.get("description"), str) or not attraction["description"].strip():
+                raise ValueError(
+                    f"routeStops[{index}].attractions[{attraction_index}].description must be non-empty"
+                )
             if "estimatedDuration" in attraction and not isinstance(attraction["estimatedDuration"], str):
                 raise ValueError(
                     f"routeStops[{index}].attractions[{attraction_index}].estimatedDuration must be a string"
@@ -488,7 +494,7 @@ def render_markdown(data):
                 attraction["publishedDuration"],
                 age_cell(attraction),
                 ticket_cell(attraction),
-                attraction["accessibility"]["description"],
+                f"{attraction['access']['label']} — {attraction['access']['description']}",
             ]
             lines.append(_row(values))
             detailed_index += 1

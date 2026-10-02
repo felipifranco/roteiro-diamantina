@@ -62,12 +62,10 @@ function tourCardMeta(tour,city,inRoute=false,date=''){
 }
 function ageLabel(s){const age=s.ageClassification||{};return age.status==='livre'?'Livre':age.status==='idade_minima'?`Mínimo ${age.minimumAge} anos`:'Indeterminada'}
 function ageSummaryMarkup(s){const age=s.ageClassification||{};return age.status==='livre'||age.status==='idade_minima'?`<div class="visit-rules"><strong>Idade: ${ageLabel(s)}</strong></div>`:''}
-function accessibilitySummaryMarkup(s){
- if(s.id===schedule.originId)return '';
- const text=(s.accessibility?.description||'').trim();
- const label=({accessible:'Sim',conditional:'Com condições',restricted:'Restrita',unknown:'A confirmar'})[s.accessibility?.status]||'A confirmar';
- if(s.kind!=='atracao'&&!text)return '';
- return `<small class="accessibility-summary"${text&&text!=='—'?` title="${escapeCardText(text)}"`:''}><span aria-hidden="true">♿</span> Acessibilidade: ${label}</small>`
+function accessSummaryMarkup(s){
+ if(s.id===schedule.originId||!s.access)return '';
+ const {label,description,level}=s.access;
+ return `<small class="access-summary ${level}" title="${escapeCardText(description)}">Acesso: ${escapeCardText(label)}</small>`
 }
 function ticketLabel(s){return ({online:'Ingressos on-line',bilheteria:'Ingresso na bilheteria',agendamento:'Agendamento obrigatório',gratuito:'Entrada gratuita',por_passeio:'Ingressos variam por passeio',reserva_indeterminada:'Reserva não confirmada',indeterminado:'Ingresso/agendamento não confirmado'})[s.ticket?.status]||'Ingresso/agendamento não confirmado'}
 function ageWarnings(s){return (s.attractions||[]).filter(a=>a.ageClassification?.status==='idade_minima').map(a=>`${a.name}: mínimo ${a.ageClassification.minimumAge} anos`)}
@@ -78,14 +76,15 @@ function placeLabel(s,date=schedule.destinationDate){
  return s.id===schedule.originId?`${s.name.split(' · ')[0].toUpperCase()} · ORIGEM`:s.id===schedule.destinationId?`DESTINO${policies.destination.fixedDate?' FIXO':''} · ${formatMapDate(date)}`:s.kind==='restaurante'?`RESTAURANTE · BOA LEMBRANÇA ${s.dish.year}`:s.kind==='alerta'?'AVISO DE ACESSO':s.kind==='atracao'?`PASSEIO · ${s.parent||''}`:theme
 }
 function escapeCardText(value){return String(value||'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]))}
-function popupGuide(s){return s.guideBriefing?`<details class="pop-guide"><summary>Guia de visita</summary><p>${escapeCardText(s.guideBriefing)}</p></details>`:''}
+function guideContent(s){return s.kind==='atracao'?s.description||'':s.guideBriefing||''}
+function popupGuide(s){const text=guideContent(s);return text?`<details class="pop-guide"><summary>Guia de visita</summary><p>${escapeCardText(text)}</p></details>`:''}
 function popup(s,extra=false,inRoute=false,date=''){
  const isAttraction=extra||s.kind==='atracao',city=isAttraction?stops.find(item=>item.id===s.parentId)||s:null;
  const titleUrl=s.kind==='restaurante'?s.url:isAttraction?mapSearchUrl(s,s.parent||''):null;
  const title=titleUrl?`<a class="pop-title pop-title-link" target="_blank" rel="noopener" href="${titleUrl}">${s.name} ↗</a>`:`<div class="pop-title">${s.name}</div>`;
  const header=`<div class="pop-head">${title}<span class="pop-tag">${placeLabel(s,date||schedule.destinationDate)}</span></div>`;
  if(s.kind==='restaurante')return `${header}<section class="pop-section"><img class="pop-dish-photo" src="${s.dish.image}" alt="Prato comemorativo ${s.dish.name}"><small class="dish-credit">Imagem do prato: ${s.dish.credit}</small><b>${s.dish.name}</b><p class="pop-dish-description">${s.dish.description}</p><div class="tour-where">${s.address}</div></section>${popupGuide(s)}<section class="pop-section">${visitRuleMarkup(s)}</section><div class="pop-actions"><a target="_blank" rel="noopener" href="${s.dish.url}">Ver prato ↗</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lon}">Navegar ↗</a></div>`;
- const body=isAttraction?`<div class="tour-where">${tourCardMeta(s,city,inRoute,date)}</div>${routeableAttractionInfo(s)}`:`${s.sights.length?`<ul class="pop-sights">${s.sights.map(name=>{const item=(s.attractions||[]).find(a=>a.name.toLowerCase()===name.toLowerCase())||{name};return `<li><a target="_blank" rel="noopener" href="${mapSearchUrl(item,s.name)}">${name} ↗</a></li>`}).join('')}</ul>`:''}${visitRuleMarkup(s)}`;
+ const body=isAttraction?`<div class="tour-where">${tourCardMeta(s,city,inRoute,date)}</div>${routeableAttractionInfo(s)}`:`${s.sights.length?`<ul class="pop-sights">${s.sights.map(name=>{const item=(s.attractions||[]).find(a=>a.name.toLowerCase()===name.toLowerCase())||{name};return `<li><a target="_blank" rel="noopener" href="${mapSearchUrl(item,s.name)}">${name} ↗</a></li>`}).join('')}</ul>`:''}${accessDetailMarkup(s)}${visitRuleMarkup(s)}`;
  const actions=isAttraction?`<a target="_blank" rel="noopener" href="${s.url}">Página da cidade ↗</a><a target="_blank" rel="noopener" href="${s.locationAccuracy!=='exact'?mapSearchUrl(s,s.parent||''):`https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lon}`}">${s.locationAccuracy!=='exact'?'Buscar local':'Navegar'} ↗</a>`:`<a target="_blank" rel="noopener" href="${s.url}">Mais informações ↗</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lon}">Navegar ↗</a>`;
  return `${header}<section class="pop-section">${body}</section>${popupGuide(s)}<div class="pop-actions">${actions}</div>`
 }
@@ -100,10 +99,11 @@ map.fitBounds(L.latLngBounds(stops.filter(s=>s.kind!=='alerta').map(s=>[s.lat,s.
 </style>
 <script>
 const origin=stops.find(s=>s.id===schedule.originId), destination=stops.find(s=>s.id===schedule.destinationId);
-function effortFor(item){const effort=item.accessEffort;return effort?[effort.label,effort.note,effort.level]:['A confirmar','Acesso e esforço não confirmados; consultar o responsável antes de ir.','unknown']}
+function effortFor(item){const access=item.access;return access?[access.label,access.description,access.level]:['A confirmar','Acesso e esforço não confirmados; consultar o responsável antes de ir.','unknown']}
 function accessDetail(value){const text=(value||'').trim(),normalized=text.toLocaleLowerCase('pt-BR');return text&&!['—','a confirmar','não confirmado','acesso ao interior a confirmar com a instituição.'].some(placeholder=>normalized===placeholder||normalized.startsWith(`${placeholder} —`))?text:''}
-function accessMeta(s){const note=accessDetail(s.scheduleNote),access=(s.accessibility?.description||'').trim();return {text:note||access,isAccessibility:!note&&!!access}}
-function routeableAttractionInfo(s){const access=accessMeta(s),links=(s.visitLinks||[]).map(item=>`<a target="_blank" rel="noopener" href="${item.url}">${item.label} ↗</a>`).join('');return `${access.text?`<div class="access-meta">${access.isAccessibility?'<span class="visually-hidden">Acessibilidade: </span><span class="accessibility-icon" aria-hidden="true">♿</span> ':''}${access.text}</div>`:''}${visitRuleMarkup(s)}${links?`<div class="tour-visit-links">${links}</div>`:''}`}
+function accessMeta(s){return {text:(s.access?.description||'').trim(),note:accessDetail(s.scheduleNote)}}
+function accessDetailMarkup(s){const access=accessMeta(s);return `${access.text?`<div class="access-meta"><strong>Acesso:</strong> ${escapeCardText(access.text)}</div>`:''}${access.note?`<div class="access-meta">${escapeCardText(access.note)}</div>`:''}`}
+function routeableAttractionInfo(s){const links=(s.visitLinks||[]).map(item=>`<a target="_blank" rel="noopener" href="${item.url}">${item.label} ↗</a>`).join('');return `${accessDetailMarkup(s)}${visitRuleMarkup(s)}${links?`<div class="tour-visit-links">${links}</div>`:''}`}
 attractionStops.filter(s=>s.routeable).forEach(addAttractionMarker);
 function ensureTripSummary(){if(!document.getElementById('tripSummary')){const el=document.createElement('section');el.id='tripSummary';el.className='trip-summary';document.querySelector('.mast').appendChild(el)}}
 </script>
@@ -195,9 +195,9 @@ function ensureTripSummary(){if(!document.getElementById('tripSummary')){const e
   const metaLine=document.createElement('div');metaLine.className='tour-meta-line';
   const location=tourLocation(tour);if(location){const where=document.createElement('small');where.className='tour-where';where.textContent=location;metaLine.appendChild(where)}
   const age=ageSummaryMarkup(tour);if(age){const rules=document.createElement('div');rules.innerHTML=age;metaLine.appendChild(rules.firstElementChild)}
-  const accessibility=accessibilitySummaryMarkup(tour);if(accessibility){const summary=document.createElement('div');summary.innerHTML=accessibility;metaLine.appendChild(summary.firstElementChild)}
+  const access=accessSummaryMarkup(tour);if(access){const summary=document.createElement('div');summary.innerHTML=access;metaLine.appendChild(summary.firstElementChild)}
   if(metaLine.childNodes.length)info.appendChild(metaLine);
-  if(tour.guideBriefing){const briefing=document.createElement('button');briefing.type='button';briefing.className='briefing-link tour-briefing';briefing.textContent='Guia de visita';briefing.setAttribute('aria-haspopup','dialog');briefing.setAttribute('aria-label',`Abrir guia de visita de ${tour.name}`);briefing.addEventListener('click',()=>showStopBriefing(tour));info.appendChild(briefing)}
+  if(guideContent(tour)){const briefing=document.createElement('button');briefing.type='button';briefing.className='briefing-link tour-briefing';briefing.textContent='Guia de visita';briefing.setAttribute('aria-haspopup','dialog');briefing.setAttribute('aria-label',`Abrir guia de visita de ${tour.name}`);briefing.addEventListener('click',()=>showStopBriefing(tour));info.appendChild(briefing)}
   row.appendChild(info);if(editable&&tour.routeable)row.appendChild(tourActionButton(tour));return row
  }
  // Tempo e distância entre trechos (OSRM): chegada a cada cidade, retorno a Mirassol e deslocamentos entre passeios da mesma cidade.
@@ -224,7 +224,7 @@ function ensureTripSummary(){if(!document.getElementById('tripSummary')){const e
    dialog.addEventListener('click',event=>{if(event.target===dialog){if(typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open')}});
   }
   dialog.querySelector('.briefing-title').textContent=stop.name;
-  const copy=dialog.querySelector('.briefing-copy');copy.textContent=stop.guideBriefing||'';
+  const copy=dialog.querySelector('.briefing-copy');copy.textContent=guideContent(stop);
   const links=dialog.querySelector('.briefing-links');links.replaceChildren();links.hidden=!stop.visitLinks?.length;
   if(stop.visitLinks?.length){[{label:'Casa no Google Maps',url:mapSearchUrl(stop,stop.parent||'')},...stop.visitLinks].forEach(item=>{const anchor=document.createElement('a');anchor.href=item.url;anchor.target='_blank';anchor.rel='noopener';anchor.textContent=`${item.label} ↗`;links.appendChild(anchor)})}
   dialog.style.display='flex';dialog.style.flexDirection='column';dialog.style.height='fit-content';
@@ -242,8 +242,8 @@ function ensureTripSummary(){if(!document.getElementById('tripSummary')){const e
   const titleLine=document.createElement('span');titleLine.className='stop-title-line';const name=document.createElement('button');name.type='button';name.className='stop-name';name.setAttribute('aria-label',`Localizar ${s.name} no mapa`);name.textContent=s.name;name.addEventListener('click',()=>focusStop(s,stopMapZoom(s)));titleLine.appendChild(name);
   const kind=document.createElement('span');kind.className='stop-kind';kind.textContent=mapContext?'GRUPO NO MAPA':kindLabel(s);
   const note=document.createElement('span');note.className='stay-note';const fixedEvent=s===destination?attractionStops.find(t=>t.parentId===s.id&&t.required&&t.schedule):null,time=durationLabel(s);note.textContent=mapContext?'':s.id===origin.id?time:s.kind==='restaurante'?`Prato ${s.dish.year}: ${s.dish.name}`:time?s.kind==='atracao'?`Tempo estimado de visita: ${time}`:`Estadia: ${time}`:'';if(fixedEvent)note.textContent=`${fixedEvent.name} · ${fixedEvent.schedule.split(' · ').slice(1).join(' · ')}`;
-  focus.append(titleLine,kind);if(note.textContent)focus.appendChild(note);const rules=document.createElement('div');rules.innerHTML=ageSummaryMarkup(s);if(rules.firstElementChild)focus.appendChild(rules.firstElementChild);const accessibility=accessibilitySummaryMarkup(s);if(accessibility){const summary=document.createElement('div');summary.innerHTML=accessibility;focus.appendChild(summary.firstElementChild)}if(overnightLabel(s)){const sleep=document.createElement('span');sleep.className='overnight-note';sleep.textContent=overnightLabel(s);focus.appendChild(sleep)}
-  if(s.guideBriefing){const briefing=document.createElement('button');briefing.type='button';briefing.className='briefing-link';briefing.textContent='Guia de visita';briefing.setAttribute('aria-haspopup','dialog');briefing.setAttribute('aria-label',`Abrir guia de visita de ${s.name}`);briefing.addEventListener('click',event=>{event.stopPropagation();showStopBriefing(s)});focus.appendChild(briefing)}
+  focus.append(titleLine,kind);if(note.textContent)focus.appendChild(note);const rules=document.createElement('div');rules.innerHTML=ageSummaryMarkup(s);if(rules.firstElementChild)focus.appendChild(rules.firstElementChild);const access=accessSummaryMarkup(s);if(access){const summary=document.createElement('div');summary.innerHTML=access;focus.appendChild(summary.firstElementChild)}if(overnightLabel(s)){const sleep=document.createElement('span');sleep.className='overnight-note';sleep.textContent=overnightLabel(s);focus.appendChild(sleep)}
+  if(guideContent(s)){const briefing=document.createElement('button');briefing.type='button';briefing.className='briefing-link';briefing.textContent='Guia de visita';briefing.setAttribute('aria-haspopup','dialog');briefing.setAttribute('aria-label',`Abrir guia de visita de ${s.name}`);briefing.addEventListener('click',event=>{event.stopPropagation();showStopBriefing(s)});focus.appendChild(briefing)}
   head.append(numEl,focus);
   if(editable){
    const handle=document.createElement('button');handle.type='button';handle.className='drag-handle';handle.textContent='⠿';handle.title='Arraste para reorganizar';handle.setAttribute('aria-label',`Arraste ${s.name} para reorganizar`);handle.draggable=true;head.prepend(handle);
@@ -656,7 +656,6 @@ function ensureTripSummary(){if(!document.getElementById('tripSummary')){const e
 #stops .tour-row.active .tour-map-icon{background:var(--day-accent,var(--green))!important;color:#fff!important}
 #stops .tour-hint{margin:0 2px 1px;font-size:11px;line-height:1.35}
 #stops .tour-source{justify-self:end;padding:3px 2px 0;color:var(--green);font-size:11px;line-height:1.35;font-weight:650;text-decoration:underline;text-underline-offset:2px}
-.accessibility-icon{display:inline-block;font-size:13px;line-height:1;vertical-align:-1px}
 @media(max-width:800px){
   #stops .day-group{margin-bottom:7px;padding:0 6px 4px}
   #stops .day-header{margin:0 -6px 5px;padding:7px 9px;font-size:11.5px}
@@ -679,8 +678,8 @@ function ensureTripSummary(){if(!document.getElementById('tripSummary')){const e
 #stops .tour-row .tour-info .tour-briefing{display:inline-flex;align-items:center;justify-self:start;width:auto;min-height:24px;margin:0;padding:3px 0;border:0;background:transparent;color:#305b7a;font-size:10.5px;font-weight:700;line-height:1.2;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
 #stops .tour-row .tour-info .tour-briefing:hover{color:#21445f}
 #stops .tour-row .tour-meta-line .visit-rules{margin:0;display:inline-flex}
-#stops .accessibility-summary{display:block;color:var(--muted);font-size:11px;line-height:1.35}
-#stops .tour-meta-line .accessibility-summary{flex-basis:100%}
+#stops .access-summary{display:block;color:var(--muted);font-size:11px;line-height:1.35}
+#stops .tour-meta-line .access-summary{flex-basis:100%}
 #stops .tour-row.has-tour-icon .tour-route-action{position:static!important;grid-column:3!important;grid-row:1!important;align-self:center!important;justify-self:center!important;width:36px;min-width:36px;height:36px;min-height:36px;margin:0;padding:0}
 #stops .tour-row.has-tour-icon .tour-pinned{grid-column:3;grid-row:1;align-self:center;justify-self:center;min-width:36px;padding:4px 5px;font-size:9px;text-align:center}
 @media(max-width:360px){#stops .available-list .attraction-links{padding-left:4px!important}}

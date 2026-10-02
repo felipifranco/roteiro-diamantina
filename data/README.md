@@ -11,6 +11,8 @@ Agrupe os passeios de distritos, bairros e comunidades na parada do município q
 
 `visits` no planejamento define as paradas inicialmente selecionadas, na ordem desejada, com `stopId` e `date`. `selectedAttractions` define os passeios selecionados com `stopId` e `name` (nome exato da atração no catálogo). Origem e destino começam selecionados. As políticas de obrigatoriedade e data fixa são explícitas em `policies.destination`. Alterações de seleção, datas e hospedagens na interface ficam em memória do navegador; para mudar o padrão permanente, edite o planejamento e regenere os arquivos.
 
+Nas atrações, `description` é o único texto descritivo: reúne o que é o lugar, o contexto histórico ou natural, o interesse da visita e as orientações complementares. O antigo `guideBriefing` foi incorporado por contexto, removendo repetições; ele não é aceito nas fichas de `attractions`. O popup, o botão **Guia de visita** e o catálogo Markdown consultam a mesma descrição. Informações de acesso continuam em `access`. Nas paradas de `routeStops`, `guideBriefing` continua sendo o texto do grupo ou da cidade.
+
 `kind` descreve a entidade (`cidade`, `regiao`, `atracao`, `restaurante` ou `alerta`); `type` descreve o tema (`historia`, `natureza` ou `gastronomia`). Origem e destino são definidos por `schedule.originId` e `schedule.destinationId`, não por `kind`. Não use `opcional` como classificação: a participação na rota é calculada a partir da seleção atual. O tema determina a cor base do marcador; o símbolo mostra sua participação e ordem na rota. A interface calcula `routeable` para atrações conforme `locationAccuracy` e `sameSiteAs`; uma atração sem destino próprio continua com `kind: atracao`, mas não entra sozinha no traçado.
 
 O objeto `schedule` do planejamento guarda `startDate`, `endDate`, `destinationDate`, `originId`, `destinationId` e `dateRangeEnd`. O calendário mostra todos os dias entre `startDate` e `endDate`, inclusive, independentemente das visitas e hospedagens. Nesta viagem, o período é de 7 a 13 de outubro de 2026: os dias 12 e 13 continuam visíveis mesmo sem programação. `dateRangeEnd` é apenas o limite máximo permitido para configurar o período; não define os dias exibidos. As opções de visita, hospedagem e notas respeitam `endDate`. A estimativa de retorno é calculada separadamente e não encurta nem estende o calendário. As faixas `stayDays` do catálogo continuam sendo sugestões de duração de visita; não definem noites de hospedagem.
@@ -25,9 +27,21 @@ O objeto `schedule` do planejamento guarda `startDate`, `endDate`, `destinationD
 
 Isso representa as noites de 7 e 8, com saída no dia 9. É possível voltar ao mesmo lugar em outro intervalo, sem duplicar sua ficha. Intervalos não podem se sobrepor e devem ficar dentro das datas de planejamento. As hospedagens não dependem da data nem da seleção de uma visita. Na página, escolha **Onde dormir?** no rodapé de cada dia, depois das notas. Para duas noites no mesmo lugar, selecione esse lugar nos dois dias. A quantidade de noites é calculada pelas datas; editar ou limpar um dia preserva as outras noites. Dias consecutivos no mesmo lugar formam uma única estadia. O último dia da viagem não oferece hospedagem, pois a noite ultrapassaria o término do período. A estadia também entra no cálculo do retorno estimado. O cadastro indica a cidade/região de hospedagem; não define hotel ou reserva. Para incluir esse lugar no trajeto rodoviário, adicione-o também como parada de visita.
 
-Cada parada e atração pode ter `accessEffort`, com `level` (`easy`, `moderate`, `hard` ou `unknown`), `label` e `note`. O acesso exibido para uma atração consulta o registro dela; a página não deduz esforço pelo nome nem aplica a nota da cidade aos passeios. Os valores migrados preservam as estimativas anteriores e devem ser revisados com as fontes de cada local.
+As condições de visita ficam em um único objeto `access`, com `level` (`easy`, `moderate`, `hard` ou `unknown`), `label` e `description`. O nível indica a estimativa de esforço físico; a descrição reúne terreno, caminhada, desníveis, embarque, recursos de mobilidade e restrições relevantes ao lugar. Ter rampa, cadeira de rodas ou sanitário adaptado não determina automaticamente um nível `easy`. Quando não há informação suficiente para estimar esforço, use `unknown` e descreva apenas as condições conhecidas.
 
-`accessibility` nas atrações é um objeto com `status` e `description` integral. Os estados são `accessible` (Sim), `conditional` (Com condições), `restricted` (Restrita) e `unknown` (A confirmar). A interface consulta o estado, sem inferir palavras da descrição nem herdar a acessibilidade da cidade. A descrição original permanece no catálogo, no Markdown e no detalhe da interface. Ausência de confirmação, textos “—” ou “A confirmar” permanecem `unknown`; ressalvas explícitas de embarque, reserva, espera noturna, percurso ou áreas externas permanecem `conditional`. A migração não acrescenta fatos nem fontes e não transforma condições parciais em acesso irrestrito. `accessEffort` continua independente de acessibilidade.
+`access` é obrigatório nas atrações e opcional nas demais paradas. A interface consulta a ficha de cada lugar, sem deduzir esforço pelo nome nem herdar condições da cidade. A descrição integral aparece no detalhe da interface e no catálogo Markdown; os cartões mostram `label`, com a descrição no título. Os antigos `accessEffort`, `accessibility` e os subobjetos `access.effort` / `access.accessibility` não são aceitos pelo gerador.
+
+A revisão dos textos foi feita por contexto da visita, sem converter estados de acessibilidade em níveis de esforço. Notas copiadas de outros passeios foram retiradas, recursos e restrições concretos foram preservados e lacunas não receberam fatos novos. Os níveis mantidos de esforço continuam sendo estimativas de planejamento. As decisões e limitações estão em [`access-review.md`](access-review.md).
+
+```json
+{
+  "access": {
+    "level": "moderate",
+    "label": "Atenção ao entorno",
+    "description": "O percurso tem calçamento e desníveis. No espaço visitado, há entrada por rampa e sanitário acessível; confirme o trajeto."
+  }
+}
+```
 
 `dayNotes` no planejamento define as notas iniciais por data (`date` e `text`). O campo opcional `replaces` lista textos antigos que podem ser atualizados no navegador; notas personalizadas são preservadas. `accessAlerts` guarda os avisos de estrada e `sources` os links de fontes. Origem e destino são identificados pelos registros indicados em `schedule`.
 
@@ -68,7 +82,7 @@ Para revisar um ponto, confirme primeiro o local em fontes oficiais (prefeitura,
 
 Quando duas fichas descrevem componentes do mesmo local físico, `sameSiteAs` recebe o nome exato da ficha principal da mesma parada. As duas fichas e seus links continuam no catálogo; o componente usa o marcador e o destino de rota da ficha principal. Não use essa relação só porque os pontos estão próximos ou compartilham um endereço de embarque. A revisão de casos próximos e pendências cartográficas está em [`location-audit.md`](location-audit.md).
 
-Quando os conteúdos realmente formam uma única visita, mantenha uma ficha com descrição e `guideBriefing` completos. `mapQuery` indica o destino principal no Google Maps; `visitLinks` pode reunir buscas de elementos da visita e fontes oficiais, com `label` e URL HTTPS em cada item. Não use links adicionais como justificativa para unir atrações independentes.
+Quando os conteúdos realmente formam uma única visita, mantenha uma ficha com `description` completa. `mapQuery` indica o destino principal no Google Maps; `visitLinks` pode reunir buscas de elementos da visita e fontes oficiais, com `label` e URL HTTPS em cada item. Não use links adicionais como justificativa para unir atrações independentes.
 
 ## Políticas do planejamento
 

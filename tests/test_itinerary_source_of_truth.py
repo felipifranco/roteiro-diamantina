@@ -46,8 +46,8 @@ console.log(JSON.stringify([overnightLabel({id:'city'}),overnightLabel({id:'othe
         helpers += re.search(r"function tourCardMeta\(tour,city,inRoute=false,date=''\)\{.*?\n\}", page, re.S).group(0)
         script = helpers + """
 const knownDuration=()=>'',tourLocation=()=>'';
-const city={id:'cipo',accessEffort:{level:'hard',label:'Cidade exigente',note:'Nota da cidade'}};
-const tour={name:'Cachoeira do Tabuleiro',accessEffort:{level:'easy',label:'Acesso próprio',note:'Nota do passeio'}};
+const city={id:'cipo',access:{level:'hard',label:'Cidade exigente',description:'Nota da cidade'}};
+const tour={name:'Cachoeira do Tabuleiro',access:{level:'easy',label:'Acesso próprio',description:'Nota do passeio'}};
 console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name},city),effortFor(tour)]));
 """
         result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
@@ -77,15 +77,15 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
     def test_validator_rejects_invalid_individual_access_metadata(self):
         from scripts.generate_route_data import validate
         original = load_data()
-        for value in ("easy", {}, {"level": "wrong", "label": "Teste", "note": "Teste"}, {"level": "easy", "label": "Teste", "note": 1}):
+        for value in ("easy", {}, {"level": "wrong", "label": "Teste", "description": "Teste"}, {"level": "easy", "label": "Teste", "description": 1}):
             for target in ("stop", "attraction"):
                 with self.subTest(value=value, target=target):
                     data = json.loads(json.dumps(original))
                     item = next(s for s in data["routeStops"] if s.get("attractions"))
                     if target == "attraction":
                         item = item["attractions"][0]
-                    item["accessEffort"] = value
-                    with self.assertRaisesRegex(ValueError, "accessEffort"):
+                    item["access"] = value
+                    with self.assertRaisesRegex(ValueError, "access"):
                         validate(data)
 
     def test_canonical_json_contains_unified_route_stops(self):

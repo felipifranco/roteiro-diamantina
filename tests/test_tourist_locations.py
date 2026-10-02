@@ -81,8 +81,8 @@ class TouristLocationTests(unittest.TestCase):
         self.assertNotIn("Passadiço da Glória", diam)
         self.assertNotIn("Casa da Glória", diam)
         combined = diam["Casa da Glória e Passadiço da Glória"]
-        self.assertIn("dois casarões", combined["guideBriefing"])
-        self.assertIn("Passadiço da Glória", combined["guideBriefing"])
+        self.assertIn("dois casarões", combined["description"])
+        self.assertIn("Passadiço da Glória", combined["description"])
         self.assertIn("Casa da Glória", combined["mapQuery"])
         self.assertEqual(len(combined["visitLinks"]), 3)
         self.assertEqual(cities["mariana"]["Órgão Arp Schnitger"]["sameSiteAs"], "Catedral da Sé")
