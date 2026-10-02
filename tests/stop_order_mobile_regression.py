@@ -50,7 +50,7 @@ assert "attractionStops.filter(s=>s.routeable).forEach(addAttractionMarker)" in 
 assert "function routeableAttractionInfo(s)" in html and "ageSummaryMarkup(tour)" in html and "knownAge=age.status==='livre'||age.status==='idade_minima'" in html, "tour cards must show brief age rules while popups retain visit details"
 assert "Tempo estimado de visita:" in html, "attraction stops must label their own visit duration, not a city stay"
 assert "fixedDates=new Map([[origin.id,schedule.startDate],[destination.id,schedule.destinationDate]])" in html, "fixed stop dates should come from itinerary data"
-assert "const routeDate=s=>dates.get(s.id)||(s.kind==='atracao'?dates.get(s.parentId)||fixedDates.get(s.parentId):fixedDates.get(s.id))" in html, "attraction markers should prefer their own date, then inherit their city's or fixed parent's date"
+assert "const routeDate=s=>TripCalendar.routeDate(s,dates,fixedDates)" in html, "attraction markers should prefer their own date, then inherit their city's or fixed parent's date"
 assert "TripCalendar.calendarDays(schedule.startDate,schedule.endDate)" in html, "visits can share the fixed destination day"
 assert "candidates(date).map" in html, "date options should include the inherited date"
 assert "routeStops.forEach(s=>" in html, "selected attractions must update markers and popups"

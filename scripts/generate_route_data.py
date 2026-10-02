@@ -126,8 +126,8 @@ def assemble_data(catalog, plan):
     for stay in sorted(stays, key=lambda item: str(item.get("checkIn", "")) if isinstance(item, dict) else ""):
         if not isinstance(stay, dict) or not isinstance(stay.get("stopId"), str) or stay["stopId"] not in by_id:
             raise ValueError("stays.stopId must refer to a catalog place")
-        if by_id[stay["stopId"]].get("kind") not in {"cidade", "regiao"}:
-            raise ValueError("stays must refer to a city or region")
+        if by_id[stay["stopId"]].get("canHostStay") is not True:
+            raise ValueError("stays must refer to a place with canHostStay true")
         check_in = planning_date(stay.get("checkIn"), "stays.checkIn")
         check_out = planning_date(stay.get("checkOut"), "stays.checkOut")
         if check_out <= check_in:
@@ -152,6 +152,14 @@ def load_data():
 def validate_visit_rules(item, path):
     if not isinstance(item, dict):
         raise ValueError(f"{path} must be an object")
+    accessibility = item.get("accessibility")
+    if "accessibility" in item or item.get("kind") == "atracao":
+        if (not isinstance(accessibility, dict)
+                or not isinstance(accessibility.get("status"), str)
+                or accessibility.get("status") not in {"accessible", "conditional", "restricted", "unknown"}
+                or not isinstance(accessibility.get("description"), str)
+                or not accessibility["description"].strip()):
+            raise ValueError(f"{path}.accessibility must have a valid status and non-empty description")
     effort = item.get("accessEffort")
     if effort is not None and (
         not isinstance(effort, dict)
@@ -302,6 +310,8 @@ def validate(data):
             or stay_days[0] > stay_days[1]
         ):
             raise ValueError(f"routeStops[{index}].stayDays must be an ordered pair of non-negative numbers")
+        if type(stop.get("canHostStay")) is not bool:
+            raise ValueError(f"routeStops[{index}].canHostStay must be a boolean")
         validate_visit_rules(stop, f"routeStops[{index}]")
         if not isinstance(stop["name"], str) or not stop["name"].strip():
             raise ValueError(f"routeStops[{index}].name must be a non-empty string")
@@ -478,7 +488,7 @@ def render_markdown(data):
                 attraction["publishedDuration"],
                 age_cell(attraction),
                 ticket_cell(attraction),
-                attraction["accessibility"],
+                attraction["accessibility"]["description"],
             ]
             lines.append(_row(values))
             detailed_index += 1

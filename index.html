@@ -64,9 +64,8 @@ function ageLabel(s){const age=s.ageClassification||{};return age.status==='livr
 function ageSummaryMarkup(s){const age=s.ageClassification||{};return age.status==='livre'||age.status==='idade_minima'?`<div class="visit-rules"><strong>Idade: ${ageLabel(s)}</strong></div>`:''}
 function accessibilitySummaryMarkup(s){
  if(s.id===schedule.originId)return '';
- const text=(s.accessibility||'').trim();
- // Só o campo de acessibilidade do próprio local define o resumo.
- const label=/^sim\b/i.test(text)?/^sim(?:\s*[—–-]|$)/i.test(text)?'Sim':'Com condições':/^não(?:\/restrito|$)/i.test(text)?'Restrita':/^com ressalvas/i.test(text)?'Com ressalvas':'A confirmar';
+ const text=(s.accessibility?.description||'').trim();
+ const label=({accessible:'Sim',conditional:'Com condições',restricted:'Restrita',unknown:'A confirmar'})[s.accessibility?.status]||'A confirmar';
  if(s.kind!=='atracao'&&!text)return '';
  return `<small class="accessibility-summary"${text&&text!=='—'?` title="${escapeCardText(text)}"`:''}><span aria-hidden="true">♿</span> Acessibilidade: ${label}</small>`
 }
@@ -103,7 +102,7 @@ map.fitBounds(L.latLngBounds(stops.filter(s=>s.kind!=='alerta').map(s=>[s.lat,s.
 const origin=stops.find(s=>s.id===schedule.originId), destination=stops.find(s=>s.id===schedule.destinationId);
 function effortFor(item){const effort=item.accessEffort;return effort?[effort.label,effort.note,effort.level]:['A confirmar','Acesso e esforço não confirmados; consultar o responsável antes de ir.','unknown']}
 function accessDetail(value){const text=(value||'').trim(),normalized=text.toLocaleLowerCase('pt-BR');return text&&!['—','a confirmar','não confirmado','acesso ao interior a confirmar com a instituição.'].some(placeholder=>normalized===placeholder||normalized.startsWith(`${placeholder} —`))?text:''}
-function accessMeta(s){const note=accessDetail(s.scheduleNote),access=accessDetail(s.accessibility);return {text:note||access,isAccessibility:!note&&!!access}}
+function accessMeta(s){const note=accessDetail(s.scheduleNote),access=(s.accessibility?.description||'').trim();return {text:note||access,isAccessibility:!note&&!!access}}
 function routeableAttractionInfo(s){const access=accessMeta(s),links=(s.visitLinks||[]).map(item=>`<a target="_blank" rel="noopener" href="${item.url}">${item.label} ↗</a>`).join('');return `${access.text?`<div class="access-meta">${access.isAccessibility?'<span class="visually-hidden">Acessibilidade: </span><span class="accessibility-icon" aria-hidden="true">♿</span> ':''}${access.text}</div>`:''}${visitRuleMarkup(s)}${links?`<div class="tour-visit-links">${links}</div>`:''}`}
 attractionStops.filter(s=>s.routeable).forEach(addAttractionMarker);
 function ensureTripSummary(){if(!document.getElementById('tripSummary')){const el=document.createElement('section');el.id='tripSummary';el.className='trip-summary';document.querySelector('.mast').appendChild(el)}}
@@ -141,12 +140,12 @@ function ensureTripSummary(){if(!document.getElementById('tripSummary')){const e
   const icon=document.createElement('span');icon.textContent='🛏';icon.setAttribute('aria-hidden','true');
   const place=document.createElement('select');place.className='stay-place';place.setAttribute('aria-label',`Dormir em ${fmt(day)}`);
   const blank=document.createElement('option');blank.value='';blank.textContent='Onde dormir?';place.appendChild(blank);
-  stops.filter(s=>s.kind==='cidade'||s.kind==='regiao').forEach(city=>{const option=document.createElement('option');option.value=city.id;option.textContent=city.name;place.appendChild(option)});place.value=stay?.stopId||'';
+  stops.filter(s=>s.canHostStay).forEach(city=>{const option=document.createElement('option');option.value=city.id;option.textContent=city.name;place.appendChild(option)});place.value=stay?.stopId||'';
   place.addEventListener('change',()=>{stays=TripCalendar.changeNight(stays,day,place.value,schedule.endDate);window.renderList();window.drawLine()});
   row.append(icon,place);group.appendChild(row);
  }
  function appendDayNotes(group,day){const details=document.createElement('details');details.className='day-notes';details.open=Boolean(dayNotes[day]);const summary=document.createElement('summary');summary.textContent='Notas do dia';const input=document.createElement('textarea');input.rows=2;input.value=dayNotes[day]||'';input.setAttribute('aria-label',`Notas do dia ${day}`);const resize=(maxHeight=Infinity)=>{input.style.height='auto';input.style.height=`${Math.min(input.scrollHeight,maxHeight)}px`};input.addEventListener('input',()=>{resize();dayNotes[day]=input.value;try{localStorage.setItem(dayNotesStorageKey,JSON.stringify(dayNotes))}catch{}});details.append(summary,input);group.appendChild(details);if(details.open)requestAnimationFrame(()=>resize(88))}
- const routeDate=s=>dates.get(s.id)||(s.kind==='atracao'?dates.get(s.parentId)||fixedDates.get(s.parentId):fixedDates.get(s.id));
+ const routeDate=s=>TripCalendar.routeDate(s,dates,fixedDates);
  const durationLabel=s=>knownDuration(s);
  const overnightLabel=s=>stays.filter(stay=>stay.stopId===s.id).map(stay=>`🛏 ${fmt(stay.checkIn)} → ${fmt(stay.checkOut)} · ${TripCalendar.nightCount(stay)} noite${TripCalendar.nightCount(stay)===1?'':'s'}`).join(' · ');
  const isFixed=s=>TripCalendar.isFixedStop(s,schedule,policies.destination);
