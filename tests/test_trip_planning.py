@@ -104,6 +104,14 @@ assert.deepEqual(dayKeys,['2026-10-07','2026-10-08','2026-10-09','2026-10-10','2
 """
         subprocess.run(['node', '-e', script], cwd=ROOT, capture_output=True, text=True, check=True)
 
+    def test_sleep_controls_are_in_day_footer_after_notes(self):
+        page = (ROOT / 'index.html').read_text()
+        rendering = page.split('dayKeys.forEach(day=>', 1)[1].split('const retGroup=', 1)[0]
+        self.assertNotIn('appendStayControls(title,day)', rendering)
+        self.assertIn("footer.className='day-footer'", rendering)
+        self.assertLess(rendering.index('appendDayNotes(group,day)'), rendering.index('appendStayControls(footer,day)'))
+        self.assertIn('group.appendChild(footer)', rendering)
+
     def test_visits_and_stays_cannot_fall_outside_calendar(self):
         for field, items in (
             ('visits', [{'stopId': 'araxa', 'date': '2026-10-14'}]),
