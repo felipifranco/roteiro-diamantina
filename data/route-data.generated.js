@@ -30,7 +30,7 @@ window.ROTEIRO_DATA = {
       "name": "Mirassol · origem",
       "lat": -20.81414,
       "lon": -49.50745,
-      "kind": "inicio",
+      "kind": "cidade",
       "type": "historia",
       "days": "Ponto de partida e retorno",
       "sights": [],
@@ -51,7 +51,7 @@ window.ROTEIRO_DATA = {
       "name": "Serra da Canastra",
       "lat": -20.24528,
       "lon": -46.36583,
-      "kind": "natureza",
+      "kind": "regiao",
       "type": "natureza",
       "days": "1–2 dias",
       "sights": [
@@ -88,7 +88,9 @@ window.ROTEIRO_DATA = {
             "label": "Exigente",
             "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
             "level": "hard"
-          }
+          },
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Parque Nacional da Serra da Canastra",
@@ -115,7 +117,9 @@ window.ROTEIRO_DATA = {
             "label": "Exigente / variável",
             "note": "Cachoeira Casca d’Anta e trilhas: terreno e distância variam; confirmar trecho e acesso local.",
             "level": "hard"
-          }
+          },
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Nascente histórica do São Francisco",
@@ -142,7 +146,9 @@ window.ROTEIRO_DATA = {
             "label": "Exigente / variável",
             "note": "Cachoeira Casca d’Anta e trilhas: terreno e distância variam; confirmar trecho e acesso local.",
             "level": "hard"
-          }
+          },
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Queijarias de Canastra",
@@ -169,7 +175,9 @@ window.ROTEIRO_DATA = {
             "label": "Exigente / variável",
             "note": "Cachoeira Casca d’Anta e trilhas: terreno e distância variam; confirmar trecho e acesso local.",
             "level": "hard"
-          }
+          },
+          "kind": "atracao",
+          "type": "natureza"
         }
       ],
       "guideBriefing": "A Serra da Canastra é um grande chapadão do sudoeste mineiro, protegido em parte pelo Parque Nacional criado em 1972. A região está ligada às cabeceiras do rio São Francisco, ao Cerrado e aos campos de altitude, à pecuária tradicional e ao queijo artesanal da Canastra. A visita combina geografia, conservação ambiental e uma cultura rural moldada pelo isolamento das serras.",
@@ -196,13 +204,13 @@ window.ROTEIRO_DATA = {
       "name": "Capitólio",
       "lat": -20.6144,
       "lon": -46.04884,
-      "kind": "natureza",
+      "kind": "cidade",
       "type": "natureza",
       "days": "1 dia",
       "sights": [
         "Cânions e Lago de Furnas",
         "Mirante dos Canyons",
-        "Passeio de lancha (opcional)"
+        "Passeio de lancha"
       ],
       "kid": "Prefira atrações de acesso simples; confirmar colete, idade mínima e política para bebês antes de reservar lancha.",
       "url": "https://www.capitolio.mg.gov.br/portal/turismo",
@@ -223,7 +231,9 @@ window.ROTEIRO_DATA = {
             "label": "Variável",
             "note": "Mirantes podem ter escadarias; lancha exige embarque. Pergunte ao operador sobre degraus e apoio.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Cânions de Furnas",
@@ -250,7 +260,9 @@ window.ROTEIRO_DATA = {
             "label": "Exigente",
             "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
             "level": "hard"
-          }
+          },
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Passeio pelo Lago de Furnas",
@@ -277,7 +289,9 @@ window.ROTEIRO_DATA = {
             "label": "Variável",
             "note": "Mirantes podem ter escadarias; lancha exige embarque. Pergunte ao operador sobre degraus e apoio.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Mirantes dos cânions",
@@ -304,7 +318,9 @@ window.ROTEIRO_DATA = {
             "label": "Exigente",
             "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
             "level": "hard"
-          }
+          },
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Cachoeiras",
@@ -331,7 +347,9 @@ window.ROTEIRO_DATA = {
             "label": "Variável",
             "note": "Mirantes podem ter escadarias; lancha exige embarque. Pergunte ao operador sobre degraus e apoio.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "natureza"
         }
       ],
       "guideBriefing": "Capitólio mudou profundamente com a formação do reservatório de Furnas, no início da década de 1960. A água inundou vales e criou a paisagem de braços de lago entre paredões rochosos que hoje caracteriza a região. O interesse histórico e geográfico está justamente nessa transformação: uma obra de geração de energia produziu uma nova paisagem e reorganizou a economia local em torno do turismo.",
@@ -358,7 +376,7 @@ window.ROTEIRO_DATA = {
       "name": "Congonhas",
       "lat": -20.50152,
       "lon": -43.85646,
-      "kind": "historia",
+      "kind": "cidade",
       "type": "historia",
       "days": "½–1 dia",
       "sights": [
@@ -393,7 +411,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Doze Profetas",
@@ -420,7 +440,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Passos da Paixão / Via Crucis",
@@ -447,7 +469,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Sala dos Milagres / ex-votos",
@@ -474,7 +498,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu de Congonhas",
@@ -501,7 +527,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "guideBriefing": "Congonhas cresceu no contexto da mineração setecentista e tornou-se um dos grandes centros de peregrinação de Minas. No Santuário do Bom Jesus de Matosinhos, construído a partir do século XVIII, arquitetura, devoção e a obra de Aleijadinho formam um conjunto único. Os Profetas em pedra-sabão e os Passos da Paixão permitem compreender o barroco mineiro como narrativa religiosa e experiência espacial, não apenas como decoração.",
@@ -528,7 +556,7 @@ window.ROTEIRO_DATA = {
       "name": "Ouro Preto",
       "lat": -20.38567,
       "lon": -43.50362,
-      "kind": "historia",
+      "kind": "cidade",
       "type": "historia",
       "days": "1–2 dias",
       "sights": [
@@ -567,7 +595,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu da Inconfidência",
@@ -595,7 +625,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -622,7 +654,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Basílica de Nossa Senhora do Pilar",
@@ -649,7 +683,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -676,7 +712,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário",
@@ -703,7 +741,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Teatro Municipal / Casa da Ópera",
@@ -730,7 +770,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Mina de ouro visitável",
@@ -757,7 +799,9 @@ window.ROTEIRO_DATA = {
             "label": "Exigente",
             "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
             "level": "hard"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Rua Direita e casario colonial",
@@ -785,7 +829,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Casa dos Contos",
@@ -812,7 +858,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Feira de Pedra-Sabão",
@@ -839,7 +887,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu de Mineralogia / Museu de Ciência e Técnica",
@@ -866,7 +916,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora da Conceição",
@@ -894,7 +946,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu Aleijadinho",
@@ -922,7 +976,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu do Oratório",
@@ -951,7 +1007,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Núcleo histórico · Amarantina",
@@ -976,7 +1034,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Amarantina",
           "mapQuery": "Núcleo histórico, Amarantina, Ouro Preto MG",
-          "catalogName": "Núcleo histórico · Amarantina"
+          "catalogName": "Núcleo histórico · Amarantina",
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "relevanceSource": "agency",
@@ -1002,7 +1062,7 @@ window.ROTEIRO_DATA = {
       "name": "Mariana",
       "lat": -20.37783,
       "lon": -43.41633,
-      "kind": "historia",
+      "kind": "cidade",
       "type": "historia",
       "days": "½–1 dia",
       "sights": [
@@ -1037,7 +1097,9 @@ window.ROTEIRO_DATA = {
             "label": "Exigente",
             "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
             "level": "hard"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Catedral da Sé",
@@ -1064,7 +1126,9 @@ window.ROTEIRO_DATA = {
             "label": "Variável",
             "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -1091,7 +1155,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -1118,7 +1184,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Casa de Câmara e Cadeia",
@@ -1145,7 +1213,9 @@ window.ROTEIRO_DATA = {
             "label": "Variável",
             "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Mina da Passagem",
@@ -1175,7 +1245,9 @@ window.ROTEIRO_DATA = {
             "label": "Exigente",
             "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
             "level": "hard"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Rua Direita e casario",
@@ -1203,7 +1275,9 @@ window.ROTEIRO_DATA = {
             "label": "Variável",
             "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Órgão Arp Schnitger",
@@ -1231,7 +1305,9 @@ window.ROTEIRO_DATA = {
             "label": "Variável",
             "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja de São Pedro dos Clérigos",
@@ -1258,7 +1334,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário dos Pretos",
@@ -1286,7 +1364,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu Arquidiocesano de Arte Sacra",
@@ -1314,7 +1394,9 @@ window.ROTEIRO_DATA = {
             "label": "Variável",
             "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Pelourinho de Mariana",
@@ -1342,7 +1424,9 @@ window.ROTEIRO_DATA = {
             "label": "Variável",
             "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "guideBriefing": "Mariana surgiu no início da ocupação mineradora e foi a primeira vila, a primeira cidade e a primeira capital de Minas Gerais. Também se tornou sede do primeiro bispado da capitania. Seu traçado, igrejas, Câmara e Cadeia e antigas áreas de mineração ajudam a compreender como poder civil, Igreja e economia do ouro organizaram os primeiros centros urbanos mineiros.",
@@ -1369,7 +1453,7 @@ window.ROTEIRO_DATA = {
       "name": "Serra do Cipó",
       "lat": -19.33555,
       "lon": -43.62559,
-      "kind": "natureza",
+      "kind": "regiao",
       "type": "natureza",
       "days": "1–2 dias",
       "sights": [
@@ -1402,7 +1486,7 @@ window.ROTEIRO_DATA = {
       "name": "Conceição do Mato Dentro · Tabuleiro",
       "lat": -19.03722,
       "lon": -43.42528,
-      "kind": "natureza",
+      "kind": "cidade",
       "type": "natureza",
       "days": "1 dia",
       "sights": [
@@ -1442,7 +1526,9 @@ window.ROTEIRO_DATA = {
             "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
             "level": "hard"
           },
-          "mapQuery": "Cachoeira do Tabuleiro, Conceição do Mato Dentro MG"
+          "mapQuery": "Cachoeira do Tabuleiro, Conceição do Mato Dentro MG",
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Centro histórico",
@@ -1470,7 +1556,9 @@ window.ROTEIRO_DATA = {
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
           },
-          "mapQuery": "Centro histórico, Conceição do Mato Dentro MG"
+          "mapQuery": "Centro histórico, Conceição do Mato Dentro MG",
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Serra do Espinhaço",
@@ -1498,7 +1586,9 @@ window.ROTEIRO_DATA = {
             "note": "Cachoeira e parte baixa envolvem trilha; confirmar percurso, desnível e condições na portaria.",
             "level": "hard"
           },
-          "mapQuery": "Serra do Espinhaço, Conceição do Mato Dentro MG"
+          "mapQuery": "Serra do Espinhaço, Conceição do Mato Dentro MG",
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Igreja Matriz de Nossa Senhora da Conceição",
@@ -1527,7 +1617,9 @@ window.ROTEIRO_DATA = {
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
           },
-          "mapQuery": "Igreja Matriz de Nossa Senhora da Conceição, Conceição do Mato Dentro MG"
+          "mapQuery": "Igreja Matriz de Nossa Senhora da Conceição, Conceição do Mato Dentro MG",
+          "kind": "atracao",
+          "type": "natureza"
         }
       ],
       "relevanceSource": "agency",
@@ -1554,7 +1646,7 @@ window.ROTEIRO_DATA = {
       "name": "Serro",
       "lat": -18.60444,
       "lon": -43.37945,
-      "kind": "historia",
+      "kind": "cidade",
       "type": "historia",
       "days": "½ dia",
       "sights": [
@@ -1599,7 +1691,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igrejas coloniais",
@@ -1626,7 +1720,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Queijo do Serro",
@@ -1653,7 +1749,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Cachoeira da Grota Seca",
@@ -1682,7 +1780,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Cachoeira do Carijó",
@@ -1710,7 +1810,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Casa dos Ottoni",
@@ -1738,7 +1840,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Chácara do Barão",
@@ -1766,7 +1870,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja de Santa Rita",
@@ -1794,7 +1900,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -1822,7 +1930,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário",
@@ -1850,7 +1960,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Fazenda produtora de Queijo do Serro",
@@ -1878,7 +1990,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja de Nossa Senhora do Rosário · Milho Verde",
@@ -1908,7 +2022,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Milho Verde",
           "mapQuery": "Igreja de Nossa Senhora do Rosário, Milho Verde, Serro MG",
-          "catalogName": "Igreja de Nossa Senhora do Rosário · Milho Verde"
+          "catalogName": "Igreja de Nossa Senhora do Rosário · Milho Verde",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Núcleo histórico · Milho Verde",
@@ -1938,7 +2054,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Milho Verde",
           "mapQuery": "Núcleo histórico, Milho Verde, Serro MG",
-          "catalogName": "Núcleo histórico · Milho Verde"
+          "catalogName": "Núcleo histórico · Milho Verde",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Cachoeiras · Milho Verde",
@@ -1968,7 +2086,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Milho Verde",
           "mapQuery": "Cachoeiras, Milho Verde, Serro MG",
-          "catalogName": "Cachoeiras · Milho Verde"
+          "catalogName": "Cachoeiras · Milho Verde",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Cachoeira do Comércio · São Gonçalo do Rio das Pedras",
@@ -1990,7 +2110,9 @@ window.ROTEIRO_DATA = {
           "locality": "São Gonçalo do Rio das Pedras",
           "mapQuery": "Cachoeira do Comércio, São Gonçalo do Rio das Pedras, Serro MG",
           "catalogName": "Cachoeira do Comércio · São Gonçalo do Rio das Pedras",
-          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. "
+          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. ",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Núcleo histórico · São Gonçalo do Rio das Pedras",
@@ -2020,7 +2142,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "São Gonçalo do Rio das Pedras",
           "mapQuery": "Núcleo histórico, São Gonçalo do Rio das Pedras, Serro MG",
-          "catalogName": "Núcleo histórico · São Gonçalo do Rio das Pedras"
+          "catalogName": "Núcleo histórico · São Gonçalo do Rio das Pedras",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igrejas e capelas · São Gonçalo do Rio das Pedras",
@@ -2050,7 +2174,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "São Gonçalo do Rio das Pedras",
           "mapQuery": "Igrejas e capelas, São Gonçalo do Rio das Pedras, Serro MG",
-          "catalogName": "Igrejas e capelas · São Gonçalo do Rio das Pedras"
+          "catalogName": "Igrejas e capelas · São Gonçalo do Rio das Pedras",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Cachoeiras e Serra do Espinhaço · São Gonçalo do Rio das Pedras",
@@ -2080,7 +2206,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "São Gonçalo do Rio das Pedras",
           "mapQuery": "Cachoeiras e Serra do Espinhaço, São Gonçalo do Rio das Pedras, Serro MG",
-          "catalogName": "Cachoeiras e Serra do Espinhaço · São Gonçalo do Rio das Pedras"
+          "catalogName": "Cachoeiras e Serra do Espinhaço · São Gonçalo do Rio das Pedras",
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "relevanceSource": "agency",
@@ -2106,7 +2234,7 @@ window.ROTEIRO_DATA = {
       "name": "Diamantina · destino principal",
       "lat": -18.24409,
       "lon": -43.60065,
-      "kind": "destino",
+      "kind": "cidade",
       "type": "historia",
       "days": "2–3 dias",
       "sights": [
@@ -2151,7 +2279,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Centro Histórico",
@@ -2178,7 +2308,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Casa da Glória e Passadiço da Glória",
@@ -2221,7 +2353,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Casa de Chica da Silva",
@@ -2248,7 +2382,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -2275,7 +2411,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Rua da Quitanda",
@@ -2302,7 +2440,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Vesperata",
@@ -2335,7 +2475,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Caminho dos Escravos",
@@ -2364,7 +2506,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Casa do Muxarabiê",
@@ -2392,7 +2536,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Catedral Metropolitana de Santo Antônio",
@@ -2420,7 +2566,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -2448,7 +2596,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Garimpo Real",
@@ -2483,7 +2633,9 @@ window.ROTEIRO_DATA = {
               "label": "Garimpo Real · Turismo de Minas Gerais",
               "url": "https://www.minasgerais.com.br/pt/atracoes/diamantina/garimpo-real"
             }
-          ]
+          ],
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja das Mercês",
@@ -2511,7 +2663,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário",
@@ -2539,7 +2693,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Prédio da Prefeitura / Antiga Casa da Intendência",
@@ -2567,7 +2723,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Cruzeiro da Serra",
@@ -2595,7 +2753,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Cachoeira da Sentinela",
@@ -2623,7 +2783,9 @@ window.ROTEIRO_DATA = {
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Gruta do Salitre · Extração / Curralinho",
@@ -2649,7 +2811,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Extração / Curralinho",
           "mapQuery": "Gruta do Salitre, Extração / Curralinho, Diamantina MG",
-          "catalogName": "Gruta do Salitre · Extração / Curralinho"
+          "catalogName": "Gruta do Salitre · Extração / Curralinho",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Experiência de garimpo · Extração / Curralinho",
@@ -2674,7 +2838,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Extração / Curralinho",
           "mapQuery": "Experiência de garimpo, Extração / Curralinho, Diamantina MG",
-          "catalogName": "Experiência de garimpo · Extração / Curralinho"
+          "catalogName": "Experiência de garimpo · Extração / Curralinho",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Vila de Biribiri · Biribiri",
@@ -2704,7 +2870,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Biribiri",
           "mapQuery": "Vila de Biribiri, Biribiri, Diamantina MG",
-          "catalogName": "Vila de Biribiri · Biribiri"
+          "catalogName": "Vila de Biribiri · Biribiri",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Cachoeiras · Biribiri",
@@ -2734,7 +2902,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Biribiri",
           "mapQuery": "Cachoeiras, Biribiri, Diamantina MG",
-          "catalogName": "Cachoeiras · Biribiri"
+          "catalogName": "Cachoeiras · Biribiri",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Trilhas do Parque Estadual do Biribiri · Biribiri",
@@ -2764,7 +2934,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Biribiri",
           "mapQuery": "Trilhas do Parque Estadual do Biribiri, Biribiri, Diamantina MG",
-          "catalogName": "Trilhas do Parque Estadual do Biribiri · Biribiri"
+          "catalogName": "Trilhas do Parque Estadual do Biribiri · Biribiri",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Núcleo histórico e artesanato de Mendanha · Mendanha",
@@ -2789,7 +2961,9 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "locality": "Mendanha",
-          "mapQuery": "Núcleo histórico e artesanato de Mendanha, Mendanha, Diamantina MG"
+          "mapQuery": "Núcleo histórico e artesanato de Mendanha, Mendanha, Diamantina MG",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Povoado histórico do Vau · Vau",
@@ -2814,7 +2988,9 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "locality": "Vau",
-          "mapQuery": "Povoado histórico do Vau, Vau, Diamantina MG"
+          "mapQuery": "Povoado histórico do Vau, Vau, Diamantina MG",
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "guideBriefing": "Diamantina, antigo Arraial do Tijuco, desenvolveu-se com a descoberta e o controle dos diamantes no século XVIII. A Coroa portuguesa criou uma administração especialmente rígida para a região, deixando marcas na organização social e urbana. O centro histórico, a memória de Chica da Silva, a tradição musical e a trajetória de Juscelino Kubitschek revelam diferentes períodos de uma cidade cuja identidade ultrapassou o ciclo diamantífero.\n\nExtração / Curralinho: Curralinho, hoje Extração, é um distrito de Diamantina inserido na antiga região diamantífera. Sua história está ligada ao garimpo e aos pequenos núcleos formados ao redor das áreas de extração. A paisagem rochosa e a Gruta do Salitre ajudam a relacionar geologia e mineração com a ocupação humana do entorno de Diamantina.\n\nBiribiri: Biribiri representa a industrialização mineira do século XIX. A vila surgiu em torno da fábrica de tecidos criada em 1876 por iniciativa da família do bispo de Diamantina, aproveitando a força hidráulica dos cursos d’água. Casas, capela e estruturas fabris formavam uma comunidade organizada em torno do trabalho têxtil. Hoje a vila está inserida no Parque Estadual do Biribiri, unindo patrimônio industrial e paisagem do Espinhaço.\n\nMendanha: Distrito histórico visitado por agência em roteiro de Diamantina, com artesanato e ligação aos antigos caminhos regionais.\n\nVau: Povoado histórico no Caminho dos Diamantes, usado como parada em roteiro comercial entre Diamantina e Serro.",
@@ -2836,10 +3012,10 @@ window.ROTEIRO_DATA = {
     },
     {
       "id": "peruacu",
-      "name": "Peruaçu · desvio opcional",
+      "name": "Peruaçu",
       "lat": -15.08943,
       "lon": -44.2287,
-      "kind": "opcional",
+      "kind": "regiao",
       "type": "natureza",
       "days": "1–2 dias + grande desvio",
       "sights": [
@@ -2904,7 +3080,7 @@ window.ROTEIRO_DATA = {
       "name": "Cordisburgo",
       "lat": -19.125834,
       "lon": -44.320278,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
       "days": "½–1 dia",
       "sights": [
@@ -2941,7 +3117,9 @@ window.ROTEIRO_DATA = {
             "status": "online",
             "url": "https://ingressos.urbanesparques.com.br/unit/4212/gruta-do-maquine/",
             "note": "Compra on-line com pelo menos 48 h de antecedência, segundo a bilheteria oficial."
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu Casa Guimarães Rosa",
@@ -2965,7 +3143,9 @@ window.ROTEIRO_DATA = {
             "status": "gratuito",
             "url": "https://www.mg.gov.br/servico/visitar-o-museu-casa-guimaraes-rosa"
           },
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Portal Grande Sertão",
@@ -2989,7 +3169,9 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Casa Elefante",
@@ -3013,7 +3195,9 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "relevanceSource": "agency",
@@ -3036,7 +3220,7 @@ window.ROTEIRO_DATA = {
       "name": "Belo Horizonte",
       "lat": -19.922732,
       "lon": -43.945095,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
       "days": "1–2 dias",
       "sights": [
@@ -3069,7 +3253,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Praça da Liberdade",
@@ -3096,7 +3282,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Mercado Central",
@@ -3118,7 +3306,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "relevanceSource": "agency",
@@ -3140,7 +3330,7 @@ window.ROTEIRO_DATA = {
       "name": "Brumadinho",
       "lat": -20.143611,
       "lon": -44.2,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "natureza",
       "days": "1 dia",
       "sights": [
@@ -3174,7 +3364,9 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "online",
             "url": "https://www.inhotim.org.br/visite/ingressos/"
-          }
+          },
+          "kind": "atracao",
+          "type": "natureza"
         }
       ],
       "relevanceSource": "agency",
@@ -3194,7 +3386,7 @@ window.ROTEIRO_DATA = {
       "name": "São João del-Rei",
       "lat": -21.133576,
       "lon": -44.258809,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
       "days": "1–2 dias",
       "sights": [
@@ -3235,7 +3427,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja de São Francisco de Assis",
@@ -3262,7 +3456,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igrejas e tradição musical",
@@ -3289,7 +3485,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Estação da Estrada de Ferro Oeste de Minas",
@@ -3311,7 +3509,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Maria Fumaça São João del-Rei–Tiradentes",
@@ -3333,7 +3533,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Artesanato em estanho",
@@ -3355,7 +3557,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Ponte da Cadeia",
@@ -3377,7 +3581,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Teatro Municipal",
@@ -3399,7 +3605,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu Regional",
@@ -3421,7 +3629,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Memorial Tancredo Neves",
@@ -3443,7 +3653,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Solares dos Neves e dos Lustosa (Largo do Rosário)",
@@ -3466,7 +3678,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu da FEB",
@@ -3488,7 +3702,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -3515,7 +3731,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Catedral Basílica Nossa Senhora do Pilar",
@@ -3537,7 +3755,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Casa de Bárbara Heliodora",
@@ -3559,7 +3779,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário",
@@ -3587,7 +3809,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Beco do Cotovelo",
@@ -3610,7 +3834,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Largo da Cruz",
@@ -3633,7 +3859,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "relevanceSource": "agency",
@@ -3653,7 +3881,7 @@ window.ROTEIRO_DATA = {
       "name": "Tiradentes",
       "lat": -21.110469,
       "lon": -44.174294,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
       "days": "1–2 dias",
       "sights": [
@@ -3694,7 +3922,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Matriz de Santo Antônio",
@@ -3716,7 +3946,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Chafariz de São José",
@@ -3738,7 +3970,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu Casa Padre Toledo",
@@ -3760,7 +3994,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Serra de São José",
@@ -3782,7 +4018,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Gastronomia",
@@ -3804,7 +4042,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Largo das Forras",
@@ -3826,7 +4066,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Rua Direita",
@@ -3848,7 +4090,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu de Sant'Ana",
@@ -3871,7 +4115,9 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "bilheteria",
             "url": "https://museudesantana.org.br/visite/planeje-sua-visita/"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu da Liturgia",
@@ -3893,7 +4139,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário dos Pretos",
@@ -3920,7 +4168,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "relevanceSource": "agency",
@@ -3940,7 +4190,7 @@ window.ROTEIRO_DATA = {
       "name": "Prados · Bichinho",
       "lat": -21.099115,
       "lon": -44.117586,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
       "days": "½–1 dia",
       "sights": [
@@ -3975,7 +4225,9 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "locality": "Bichinho"
+          "locality": "Bichinho",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Ateliês e oficinas",
@@ -3999,7 +4251,9 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "locality": "Bichinho",
-          "mapQuery": "Ateliês e oficinas, Prados MG"
+          "mapQuery": "Ateliês e oficinas, Prados MG",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Cachaçarias e produtos locais",
@@ -4023,7 +4277,9 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "locality": "Bichinho",
-          "mapQuery": "Cachaçarias e produtos locais, Prados MG"
+          "mapQuery": "Cachaçarias e produtos locais, Prados MG",
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "relevanceSource": "agency",
@@ -4045,7 +4301,7 @@ window.ROTEIRO_DATA = {
       "name": "Catas Altas",
       "lat": -20.074754,
       "lon": -43.408165,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
       "days": "½–1 dia",
       "sights": [
@@ -4087,7 +4343,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Matriz de Nossa Senhora da Conceição",
@@ -4109,7 +4367,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Serra do Caraça",
@@ -4131,7 +4391,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Santuário e igreja neogótica · Caraça",
@@ -4161,7 +4423,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Caraça",
           "mapQuery": "Santuário e igreja neogótica, Caraça, Catas Altas MG",
-          "catalogName": "Santuário e igreja neogótica · Caraça"
+          "catalogName": "Santuário e igreja neogótica · Caraça",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Ruínas do antigo colégio · Caraça",
@@ -4186,7 +4450,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Caraça",
           "mapQuery": "Ruínas do antigo colégio, Caraça, Catas Altas MG",
-          "catalogName": "Ruínas do antigo colégio · Caraça"
+          "catalogName": "Ruínas do antigo colégio · Caraça",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Trilhas, cachoeiras e grutas · Caraça",
@@ -4211,7 +4477,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Caraça",
           "mapQuery": "Trilhas, cachoeiras e grutas, Caraça, Catas Altas MG",
-          "catalogName": "Trilhas, cachoeiras e grutas · Caraça"
+          "catalogName": "Trilhas, cachoeiras e grutas · Caraça",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Observação do lobo-guará · Caraça",
@@ -4236,7 +4504,9 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Caraça",
           "mapQuery": "Observação do lobo-guará, Caraça, Catas Altas MG",
-          "catalogName": "Observação do lobo-guará · Caraça"
+          "catalogName": "Observação do lobo-guará · Caraça",
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "relevanceSource": "guide",
@@ -4257,7 +4527,7 @@ window.ROTEIRO_DATA = {
       "name": "Santa Bárbara",
       "lat": -19.958721,
       "lon": -43.413154,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
       "days": "½–1 dia",
       "sights": [
@@ -4289,7 +4559,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Centro Histórico",
@@ -4316,7 +4588,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "relevanceSource": "guide",
@@ -4336,7 +4610,7 @@ window.ROTEIRO_DATA = {
       "name": "Sabará",
       "lat": -19.890037,
       "lon": -43.810792,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
       "days": "½–1 dia",
       "sights": [
@@ -4377,7 +4651,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Carmo",
@@ -4404,7 +4680,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Matriz Nossa Senhora da Conceição",
@@ -4426,7 +4704,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Teatro Municipal",
@@ -4448,7 +4728,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Solar do Padre Correia",
@@ -4470,7 +4752,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário dos Pretos",
@@ -4497,7 +4781,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Chafariz do Kaquende",
@@ -4519,7 +4805,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Rua Dom Pedro II",
@@ -4541,7 +4829,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "relevanceSource": "agency",
@@ -4561,7 +4851,7 @@ window.ROTEIRO_DATA = {
       "name": "Caeté · Serra da Piedade",
       "lat": -19.897777,
       "lon": -43.670278,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "natureza",
       "days": "½–1 dia",
       "sights": [
@@ -4593,7 +4883,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Santuário Nossa Senhora da Piedade",
@@ -4627,7 +4919,9 @@ window.ROTEIRO_DATA = {
               "label": "Visitação e agendamento · Santuário",
               "url": "https://santuarionossasenhoradapiedade.arquidiocesebh.org.br/santuario/visitas/"
             }
-          ]
+          ],
+          "kind": "atracao",
+          "type": "natureza"
         }
       ],
       "relevanceSource": "guide",
@@ -4648,7 +4942,7 @@ window.ROTEIRO_DATA = {
       "name": "Uberaba · Peirópolis",
       "lat": -19.74364,
       "lon": -47.74276,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
       "days": "1–2 h",
       "sights": [
@@ -4681,7 +4975,9 @@ window.ROTEIRO_DATA = {
           },
           "selectedByDefault": true,
           "locality": "Peirópolis",
-          "mapQuery": "Museu dos Dinossauros / Complexo Cultural e Científico de Peirópolis, Uberaba MG"
+          "mapQuery": "Museu dos Dinossauros / Complexo Cultural e Científico de Peirópolis, Uberaba MG",
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Geossítio de Peirópolis",
@@ -4707,7 +5003,8 @@ window.ROTEIRO_DATA = {
           },
           "selectedByDefault": true,
           "locality": "Peirópolis",
-          "mapQuery": "Geossítio de Peirópolis, Uberaba MG"
+          "mapQuery": "Geossítio de Peirópolis, Uberaba MG",
+          "kind": "atracao"
         }
       ],
       "guideBriefing": "Peirópolis, distrito rural de Uberaba, tornou-se referência paleontológica a partir das pesquisas iniciadas na região na década de 1940. As rochas do Triângulo Mineiro preservaram fósseis do Cretáceo, incluindo dinossauros e outros animais. O antigo núcleo ferroviário passou a abrigar pesquisa, museu e educação científica, aproximando o visitante do território onde os fósseis são encontrados e estudados.",
@@ -4729,7 +5026,7 @@ window.ROTEIRO_DATA = {
       "name": "Araxá",
       "lat": -19.600915,
       "lon": -46.940923,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
       "days": "1 dia",
       "sights": [
@@ -4764,7 +5061,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Complexo do Barreiro",
@@ -4786,7 +5085,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu Dona Beja",
@@ -4808,7 +5109,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Museu Calmon Barreto / Memorial de Araxá",
@@ -4830,7 +5133,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Igreja de São Domingos",
@@ -4857,7 +5162,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Parque do Cristo",
@@ -4880,7 +5187,8 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao"
         },
         {
           "name": "Fontes Dona Beja e Andrade Júnior",
@@ -4903,7 +5211,8 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao"
         }
       ],
       "guideBriefing": "Araxá se desenvolveu em torno de atividades rurais e das águas minerais do Barreiro, conhecidas muito antes da consolidação do turismo termal. No século XX, o Estado transformou essas águas em projeto turístico de grande escala, culminando no Grande Hotel e nas Termas, inaugurados na década de 1940. A cidade permite relacionar história regional, termalismo, arquitetura e a construção de uma estância de luxo no interior do país.",
@@ -4928,7 +5237,7 @@ window.ROTEIRO_DATA = {
       "name": "Itabirito",
       "lat": -20.251972,
       "lon": -43.802917,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
       "days": "½ dia",
       "sights": [
@@ -4965,7 +5274,9 @@ window.ROTEIRO_DATA = {
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Pastel de angu",
@@ -4987,7 +5298,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "relevanceSource": "agency",
@@ -5007,9 +5320,9 @@ window.ROTEIRO_DATA = {
       "name": "Ouro Branco",
       "lat": -20.5222,
       "lon": -43.6917,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
-      "days": "Parada opcional",
+      "days": "Duração a confirmar",
       "sights": [
         "Matriz de Santo Antônio",
         "Capela Nossa Senhora Mãe dos Homens"
@@ -5038,7 +5351,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Capela Nossa Senhora Mãe dos Homens",
@@ -5061,7 +5376,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "guideBriefing": "Ouro Branco integra o Circuito do Ouro entre Congonhas e Ouro Preto e aparece em roteiro comercial da Primotur.",
@@ -5079,9 +5396,9 @@ window.ROTEIRO_DATA = {
       "name": "Sete Lagoas",
       "lat": -19.4661,
       "lon": -44.2469,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
-      "days": "Parada opcional",
+      "days": "Duração a confirmar",
       "sights": [
         "Serra de Santa Helena",
         "Memorial do Humorista Zacarias",
@@ -5111,7 +5428,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Memorial do Humorista Zacarias",
@@ -5135,7 +5454,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Monumento Natural Estadual Gruta Rei do Mato",
@@ -5163,7 +5484,9 @@ window.ROTEIRO_DATA = {
             "status": "online",
             "url": "https://ingressos.urbanesparques.com.br/unit/4213/gruta-rei-do-mato/",
             "note": "Compra on-line com pelo menos 48 h de antecedência, segundo a bilheteria oficial."
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "guideBriefing": "Sete Lagoas aparece em roteiro comercial ligado à Vesperata de Diamantina, com paradas culturais, geológicas e panorâmicas.",
@@ -5183,9 +5506,9 @@ window.ROTEIRO_DATA = {
       "name": "Presidente Kubitschek · Cânion do Funil",
       "lat": -18.61417,
       "lon": -43.56167,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
-      "days": "Parada opcional",
+      "days": "Duração a confirmar",
       "sights": [
         "Cânion do Funil"
       ],
@@ -5218,7 +5541,9 @@ window.ROTEIRO_DATA = {
             "label": "Exigente",
             "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
             "level": "hard"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "guideBriefing": "Município usado como acesso ao Cânion do Funil em passeio comercializado a partir de Diamantina.",
@@ -5236,9 +5561,9 @@ window.ROTEIRO_DATA = {
       "name": "Itabira · Ipoema",
       "lat": -19.62142,
       "lon": -43.43524,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
-      "days": "Parada opcional",
+      "days": "Duração a confirmar",
       "sights": [
         "Museu do Tropeiro"
       ],
@@ -5268,7 +5593,9 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "indeterminado"
           },
-          "locality": "Ipoema"
+          "locality": "Ipoema",
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "guideBriefing": "Distrito ligado à cultura tropeira e incluído em roteiro comercial da Estrada Real entre Diamantina e Belo Horizonte.",
@@ -5288,9 +5615,9 @@ window.ROTEIRO_DATA = {
       "name": "Itambé do Mato Dentro",
       "lat": -19.41444,
       "lon": -43.32231,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
-      "days": "Parada opcional",
+      "days": "Duração a confirmar",
       "sights": [
         "Núcleo histórico e paisagem do Espinhaço"
       ],
@@ -5312,9 +5639,9 @@ window.ROTEIRO_DATA = {
       "name": "Raposos",
       "lat": -19.9672,
       "lon": -43.8042,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
-      "days": "Parada opcional",
+      "days": "Duração a confirmar",
       "sights": [
         "Passagem pelo núcleo de Raposos"
       ],
@@ -5342,7 +5669,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "guideBriefing": "Raposos integra o roteiro comercial Entre Trilhas, Sabores e Aromas da Primotur, no antigo corredor ferroviário e do Rio das Velhas entre Sabará e Rio Acima.",
@@ -5360,9 +5689,9 @@ window.ROTEIRO_DATA = {
       "name": "Nova Lima · Honório Bicalho",
       "lat": -20.021382,
       "lon": -43.8180973,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
-      "days": "Parada opcional",
+      "days": "Duração a confirmar",
       "sights": [
         "Honório Bicalho",
         "Antigo leito ferroviário do Sabarabuçu"
@@ -5391,7 +5720,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         },
         {
           "name": "Antigo leito da Ferrovia do Sabarabuçu",
@@ -5414,7 +5745,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "guideBriefing": "Nova Lima aparece no roteiro comercial Entre Trilhas, Sabores e Aromas por meio de Honório Bicalho, antigo núcleo ferroviário às margens do Rio das Velhas.",
@@ -5433,9 +5766,9 @@ window.ROTEIRO_DATA = {
       "name": "Rio Acima",
       "lat": -20.0875,
       "lon": -43.7892,
-      "kind": "opcional",
+      "kind": "cidade",
       "type": "historia",
-      "days": "Parada opcional",
+      "days": "Duração a confirmar",
       "sights": [
         "Núcleo urbano",
         "Antigo corredor ferroviário"
@@ -5464,7 +5797,9 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "kind": "atracao",
+          "type": "historia"
         }
       ],
       "guideBriefing": "Rio Acima é parada e pernoite do roteiro comercial Entre Trilhas, Sabores e Aromas, conectando o corredor do Rio das Velhas a Itabirito.",

@@ -139,7 +139,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         )
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("const attractionStops=stops.flatMap", page)
-        self.assertIn("const routeStops=[...stops,...attractionStops.filter(s=>s.kind==='atracao')]", page)
+        self.assertIn("const routeStops=[...stops,...attractionStops.filter(s=>s.routeable)]", page)
 
     def test_route_coordinates_stay_within_geographic_ranges(self):
         from scripts.generate_route_data import validate

@@ -11,14 +11,36 @@ FINAL_ROUTING = PAGE.rsplit("// Datas individuais, estadias sugeridas e reordena
 
 
 class GroupedTourSelectionTests(unittest.TestCase):
-    def test_optional_city_groups_with_tours_are_selectable_groups(self):
+    def test_ouro_preto_and_ouro_branco_share_theme_and_dynamic_route_symbols(self):
+        if not shutil.which("node"):
+            self.skipTest("Node.js is required for marker behavior")
+        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        cities = [s for s in data["routeStops"] if s["id"] in {"ouropreto", "ourobranco"}]
+        self.assertTrue(all(s["kind"] == "cidade" for s in cities))
+        helpers = re.search(r"function colorClass\(s\)\{[^\n]+", PAGE).group(0)
+        helpers += "\n" + re.search(r"function routeIcon\(s,plan\)\{.*?^\s*\}", FINAL_ROUTING, re.S | re.M).group(0)
+        script = helpers + "\nconst cities=" + json.dumps(cities) + ";" + """
+const origin={id:'mirassol',kind:'cidade'},destination={id:'diamantina',kind:'cidade'};
+const selected=new Set(),toursFor=()=>[];
+const before=cities.map(s=>[colorClass(s),routeIcon(s,{labels:new Map()})]);
+selected.add('ourobranco');
+const after=cities.map(s=>[colorClass(s),routeIcon(s,{labels:new Map([['ourobranco','1']])})]);
+console.log(JSON.stringify({before,after}));
+"""
+        result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
+        self.assertEqual(json.loads(result.stdout), {
+            "before": [["agency history", "+"], ["agency history", "+"]],
+            "after": [["agency history", "+"], ["agency history", "1"]],
+        })
+
+    def test_cities_and_regions_are_selectable_groups_without_fixed_route_status(self):
         if not shutil.which("node"):
             self.skipTest("Node.js is required for the group-classification runtime test")
         helper = re.search(r"function isMapGroup\(s\)\{([^}]*)\}", PAGE)
         assert helper is not None, "city/tour groups must be classified explicitly"
-        script = f"function isMapGroup(s){{{helper.group(1)}}}; console.log(JSON.stringify([isMapGroup({{kind:'opcional',attractions:[{{name:'tour'}}]}}),isMapGroup({{kind:'opcional',attractions:[]}}),isMapGroup({{kind:'natureza'}})]))"
+        script = f"const schedule={{originId:'origem'}}; function isMapGroup(s){{{helper.group(1)}}}; console.log(JSON.stringify([isMapGroup({{kind:'cidade',attractions:[{{name:'tour'}}]}}),isMapGroup({{kind:'cidade',attractions:[]}}),isMapGroup({{kind:'regiao'}})]))"
         result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
-        self.assertEqual(json.loads(result.stdout), [True, False, True])
+        self.assertEqual(json.loads(result.stdout), [True, True, True])
 
     def test_map_and_card_icons_share_one_route_state(self):
         helper = re.search(r"function routeIcon\(s,plan\)\{.*?^\s*\}", FINAL_ROUTING, re.S | re.M)
@@ -34,16 +56,16 @@ class GroupedTourSelectionTests(unittest.TestCase):
         self.assertIn("routeIcon(tour,plan)", tour_row.group(1))
         script = helper.group(0) + """
 const selected=new Set(['cidade','passeio','optional','optional-tour']);
-const origin={id:'origem',kind:'inicio'},destination={id:'destino',kind:'destino'};
-const city={id:'cidade',kind:'natureza'},tour={id:'passeio',kind:'atracao',parentId:'cidade'};
-const optional={id:'optional',kind:'opcional'},optionalTour={id:'optional-tour',kind:'atracao',parentId:'optional'};
-const unselectedOptional={id:'unselected-optional',kind:'opcional'},alert={id:'alert',kind:'alerta'},outside={id:'outside',kind:'natureza'};
+const origin={id:'origem',kind:'cidade'},destination={id:'destino',kind:'cidade'};
+const city={id:'cidade',kind:'regiao'},tour={id:'passeio',kind:'atracao',parentId:'cidade'};
+const optional={id:'optional',kind:'cidade'},optionalTour={id:'optional-tour',kind:'atracao',parentId:'optional'};
+const unselectedOptional={id:'unselected-optional',kind:'cidade'},alert={id:'alert',kind:'alerta'},outside={id:'outside',kind:'regiao'};
 const toursFor=s=>s.id==='cidade'?[tour]:s.id==='optional'?[optionalTour]:[];
 const plan={labels:new Map([['origem','M'],['destino','D'],['passeio','1a'],['outside','2']])};
 console.log(JSON.stringify([origin,destination,city,tour,optional,unselectedOptional,alert,outside].map(s=>routeIcon(s,plan))));
 """
         result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
-        self.assertEqual(json.loads(result.stdout), ["M", "D", "↔", "1a", "↔", "◇", "!", "2"])
+        self.assertEqual(json.loads(result.stdout), ["M", "D", "↔", "1a", "↔", "+", "!", "2"])
 
     def test_route_plan_gives_active_tours_one_card_and_map_label_not_the_parent(self):
         if not shutil.which("node"):
@@ -61,9 +83,9 @@ console.log(JSON.stringify([origin,destination,city,tour,optional,unselectedOpti
         self.assertIsNotNone(effective)
         self.assertIsNotNone(planner)
         script = effective.group(0) + """
-const schedule={destinationDate:'2026-10-09'};
-const origin={id:'mirassol',kind:'inicio'},destination={id:'diamantina',kind:'destino'};
-const city={id:'cidade',kind:'natureza'},tour={id:'passeio',kind:'atracao',parentId:'cidade'};
+const schedule={destinationId:'diamantina',destinationDate:'2026-10-09'};
+const origin={id:'mirassol',kind:'cidade'},destination={id:'diamantina',kind:'cidade'};
+const city={id:'cidade',kind:'regiao'},tour={id:'passeio',kind:'atracao',parentId:'cidade'};
 const routeStops=[origin,city,tour,destination],selected=new Set(['cidade','passeio']);
 const dates=new Map([['cidade','2026-10-08'],['passeio','2026-10-08']]);
 const orderedSelected=()=>[city],ensureDate=()=>{};
@@ -89,10 +111,11 @@ console.log(JSON.stringify({labels:Object.fromEntries(plan.labels),points:[...pl
         )
         self.assertIsNotNone(helper, "route selection must account for grouped attractions")
         script = helper.group(0) + """
+const schedule={destinationId:'diamantina'};
 const stops=[
- {id:'cidade',kind:'natureza'},
+ {id:'cidade',kind:'regiao'},
  {id:'passeio',kind:'atracao',parentId:'cidade'},
- {id:'diamantina',kind:'destino'},
+ {id:'diamantina',kind:'cidade'},
  {id:'casa-jk',kind:'atracao',parentId:'diamantina'}
 ];
 const ids=values=>effectiveRouteStops(stops,new Set(values)).map(s=>s.id);
@@ -117,7 +140,7 @@ console.log(JSON.stringify({cityOnly:ids(['cidade']),cityWithTour:ids(['cidade',
         self.assertIn("tourRow(s,tour,canPick,iconPlan)", body)
         row = re.search(r"function tourRow\(city,tour,editable,plan\)\{(.*?)^\s*\}", FINAL_ROUTING, re.S | re.M)
         self.assertIsNotNone(row)
-        self.assertIn("if(editable&&tour.kind==='atracao')row.appendChild(tourActionButton(tour))", row.group(1))
+        self.assertIn("if(editable&&tour.routeable)row.appendChild(tourActionButton(tour))", row.group(1))
         self.assertIn("tourLocation(tour)", row.group(1))
         self.assertIn("ageSummaryMarkup(tour)", row.group(1))
         self.assertNotIn("tourCardMeta(tour,city", row.group(1))
@@ -144,7 +167,7 @@ console.log(JSON.stringify(toursFor({id:'c',name:'Cidade',type:'historia',sights
         result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
         self.assertEqual(
             json.loads(result.stdout),
-            [["c-sight-1", "passeio"], ["c-poi-1", "atracao"], ["c-poi-2", "atracao"]],
+            [["c-sight-1", "atracao"], ["c-poi-1", "atracao"], ["c-poi-2", "atracao"]],
         )
 
     def test_removing_a_city_group_deactivates_its_tours_and_markers(self):

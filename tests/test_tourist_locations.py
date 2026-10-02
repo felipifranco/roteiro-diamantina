@@ -47,8 +47,8 @@ class TouristLocationTests(unittest.TestCase):
 
     def test_unverified_city_references_do_not_get_individual_markers(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn("kind:a.locationAccuracy==='city-center'||a.sameSiteAs?'passeio':'atracao'", page)
-        self.assertIn("attractionStops.filter(s=>s.kind==='atracao').forEach(addAttractionMarker)", page)
+        self.assertIn("kind:'atracao',routeable:a.locationAccuracy!=='city-center'&&!a.sameSiteAs", page)
+        self.assertIn("attractionStops.filter(s=>s.routeable).forEach(addAttractionMarker)", page)
 
     def test_casa_da_gloria_combines_the_visit_and_links(self):
         data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))

@@ -42,9 +42,9 @@ assert fixed_head, "fixed destination card needs its own grid layout"
 assert re.search(r"grid-template-columns\s*:\s*32px\s+minmax\(0,1fr\)", fixed_head.group(1)), "destination number must have its own leading column"
 
 assert "const attractionStops=stops.flatMap" in html, "geolocated attractions must become independent route stops"
-assert "const routeStops=[...stops,...attractionStops.filter(s=>s.kind==='atracao')]" in html, "city and attraction stops must share routing"
+assert "const routeStops=[...stops,...attractionStops.filter(s=>s.routeable)]" in html, "city and attraction stops must share routing"
 assert "function effectiveRouteStops(allStops,selectedIds)" in html and "parentsWithTours" in html, "selected attractions should replace their selected city group in the route"
-assert "attractionStops.filter(s=>s.kind==='atracao').forEach(addAttractionMarker)" in html, "attractions need clickable map markers"
+assert "attractionStops.filter(s=>s.routeable).forEach(addAttractionMarker)" in html, "attractions need clickable map markers"
 assert "function routeableAttractionInfo(s)" in html and "ageSummaryMarkup(tour)" in html and "knownAge=age.status==='livre'||age.status==='idade_minima'" in html, "tour cards must show brief age rules while popups retain visit details"
 assert "Tempo estimado de visita:" in html, "attraction stops must label their own visit duration, not a city stay"
 assert "fixedDates=new Map([[origin.id,schedule.startDate],[destination.id,schedule.destinationDate]])" in html, "fixed stop dates should come from itinerary data"
@@ -71,7 +71,7 @@ assert "setMapIcon(s,'M',schedule.startDate)" in html, "Mirassol origin marker s
 assert "const icon=routeIcon(s,plan)" in html and "createCard(s,icon,plan,!plan.labels.has(s.id)&&hasSelectedTours(s))" in html, "cards should use the same route marker icon as the map"
 assert "s===origin?`${origin.name.split(' · ')[0].toUpperCase()} · ORIGEM`" in html, "origin card should name Mirassol as the origin rather than show its city category"
 assert "setMapIcon(s,'I',schedule.startDate)" not in html, "origin map marker should not use the ambiguous I label"
-assert "s.kind==='inicio'?`${s.name.split(' · ')[0].toUpperCase()} · ORIGEM`" in html, "origin card and popup should identify Mirassol instead of misclassifying it as history"
+assert "s.id===schedule.originId?`${s.name.split(' · ')[0].toUpperCase()} · ORIGEM`" in html, "origin card and popup should identify Mirassol instead of misclassifying it as history"
 assert "M é a origem" in html, "marker legend should explain the origin symbol"
 route_stops = {stop["id"]: stop for stop in data["routeStops"]}
 for name in ('Museu Calmon Barreto / Memorial de Araxá','Igreja de São Domingos','Parque do Cristo','Fontes Dona Beja e Andrade Júnior'):

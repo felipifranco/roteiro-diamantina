@@ -74,7 +74,7 @@ class RouteInteractionControlsTests(unittest.TestCase):
         self.assertEqual(mirante["locationAccuracy"], "exact")
 
     def test_attraction_popup_helper_is_defined_before_markers_are_created(self):
-        marker_creation = PAGE.index("attractionStops.filter(s=>s.kind==='atracao').forEach(addAttractionMarker)")
+        marker_creation = PAGE.index("attractionStops.filter(s=>s.routeable).forEach(addAttractionMarker)")
         popup_helper = PAGE.index("function routeableAttractionInfo(s)")
         self.assertLess(popup_helper, marker_creation, "attraction popup helper must exist before marker creation")
 
@@ -90,7 +90,7 @@ class RouteInteractionControlsTests(unittest.TestCase):
         self.assertIn("setAttractionActive(tour", FINAL_ROUTING, "tour actions must update route state")
 
     def test_attraction_markers_remain_visible_with_synchronized_route_icons(self):
-        self.assertIn("attractionStops.filter(s=>s.kind==='atracao').forEach(addAttractionMarker)", PAGE)
+        self.assertIn("attractionStops.filter(s=>s.routeable).forEach(addAttractionMarker)", PAGE)
         self.assertIn("m.addTo(map);markers[s.id]=m", PAGE)
         self.assertIn("function routeIcon(s,plan)", FINAL_ROUTING)
         self.assertIn("syncAttractionVisibility(plan);", FINAL_ROUTING)

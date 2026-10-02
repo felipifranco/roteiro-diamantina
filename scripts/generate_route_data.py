@@ -40,7 +40,7 @@ ATTRACTION_FIELDS = (
     "oneYearOld",
     "accessibility",
 )
-STOP_KINDS = {"inicio", "destino", "natureza", "historia", "opcional", "alerta", "restaurante"}
+STOP_KINDS = {"cidade", "regiao", "atracao", "alerta", "restaurante"}
 STOP_TYPES = {"natureza", "historia", "gastronomia"}
 LOCATION_ACCURACIES = {"exact", "street-center", "trail-point", "city-center"}
 AGE_STATUSES = {"livre", "idade_minima", "indeterminada"}
@@ -220,6 +220,10 @@ def validate(data):
                 raise ValueError(
                     f"routeStops[{index}].attractions[{attraction_index}] must be an object"
                 )
+            if attraction.get("kind") != "atracao":
+                raise ValueError(f"routeStops[{index}].attractions[{attraction_index}].kind must be atracao")
+            if not isinstance(attraction.get("type"), str) or attraction["type"] not in STOP_TYPES:
+                raise ValueError(f"routeStops[{index}].attractions[{attraction_index}].type must be one of {sorted(STOP_TYPES)}")
             if not _valid_coordinates(attraction.get("lat"), attraction.get("lon")):
                 raise ValueError(
                     f"routeStops[{index}].attractions[{attraction_index}] "

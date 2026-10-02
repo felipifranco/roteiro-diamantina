@@ -46,8 +46,9 @@ class BoaLembrancaTests(unittest.TestCase):
         helper = re.search(r"function effectiveRouteStops\(allStops,selectedIds\)\{.*?^\s*\}", page, re.S | re.M)
         self.assertIsNotNone(helper)
         script = helper.group(0) + """
+const schedule={destinationId:'diamantina'};
 const restaurant={id:'boa-relicario-gastronomia',kind:'restaurante'};
-const city={id:'diamantina',kind:'destino'};
+const city={id:'diamantina',kind:'cidade'};
 const stops=[city,restaurant];
 console.log(JSON.stringify([
  effectiveRouteStops(stops,new Set(['diamantina'])).map(s=>s.id),
