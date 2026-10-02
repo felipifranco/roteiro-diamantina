@@ -37,7 +37,7 @@ console.log(JSON.stringify({arrivals:[...r.arrival.keys()],intra:r.intra.get('a'
         )
 
     def test_connectors_render_between_cards_and_before_the_return(self):
-        self.assertIn("leg=s===origin?null:routeLegs?.arrival.get(s.id);if(leg)group.appendChild(legConnector(leg))", FINAL_ROUTING)
+        self.assertIn("leg=s===origin||day!==routeDate(s)?null:routeLegs?.arrival.get(s.id);if(leg)group.appendChild(legConnector(leg))", FINAL_ROUTING)
         self.assertIn("const homeLeg=routeLegs?.arrival.get('return');if(homeLeg)retGroup.appendChild(legConnector(homeLeg))", FINAL_ROUTING)
         self.assertIn("https://www.google.com/maps/dir/?api=1&origin=", block("legConnector"))
 

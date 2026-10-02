@@ -76,7 +76,7 @@ def assemble_data(catalog, plan):
         raise ValueError("catalog place IDs must be unique non-empty strings")
     by_id = dict(zip(ids, stops))
     for stop in stops:
-        if any(field in stop for field in ("initialDate", "overnight", "selectedByDefault")):
+        if any(field in stop for field in ("initialDate", "availableDates", "overnight", "selectedByDefault")):
             raise ValueError("catalog places must not contain trip dates, overnight or selection")
         if not isinstance(stop.get("attractions", []), list):
             raise ValueError("catalog attractions must be a list")
@@ -98,6 +98,11 @@ def assemble_data(catalog, plan):
         selected_keys.add(key)
         if type(item.get("required", False)) is not bool:
             raise ValueError("selectedAttractions.required must be a boolean")
+        if "date" in item:
+            planning_date(item["date"], "selectedAttractions.date")
+            if not schedule["startDate"] <= item["date"] <= schedule["endDate"]:
+                raise ValueError("selectedAttractions.date must be within the trip")
+            attraction["initialDate"] = item["date"]
         attraction["selectedByDefault"] = True
         attraction["required"] = item.get("required", False)
     visits, stays = plan.get("visits"), plan.get("stays")
@@ -107,6 +112,8 @@ def assemble_data(catalog, plan):
     for visit in visits:
         if not isinstance(visit, dict) or not isinstance(visit.get("stopId"), str) or visit["stopId"] not in by_id:
             raise ValueError("visits.stopId must refer to a catalog place")
+        if "availableDates" in visit:
+            raise ValueError("configure availableDates in the trip plan, not in visits")
         stop_id = visit["stopId"]
         if stop_id in schedule["initialStopOrder"] or stop_id in (schedule.get("originId"), schedule.get("destinationId")):
             raise ValueError("visits must not repeat places or include fixed endpoints")
@@ -119,6 +126,17 @@ def assemble_data(catalog, plan):
     for stop_id in (schedule.get("originId"), schedule.get("destinationId")):
         if isinstance(stop_id, str) and stop_id in by_id:
             by_id[stop_id]["selectedByDefault"] = True
+    available_dates = plan.get("availableDates", {})
+    if not isinstance(available_dates, dict):
+        raise ValueError("availableDates must map catalog place IDs to date lists")
+    for stop_id, days in available_dates.items():
+        if stop_id not in by_id or not isinstance(days, list):
+            raise ValueError("availableDates must map catalog place IDs to date lists")
+        for day in days:
+            planning_date(day, "availableDates")
+            if not schedule["startDate"] <= day <= schedule["endDate"]:
+                raise ValueError("availableDates must be within the trip")
+        by_id[stop_id]["availableDates"] = sorted(set(days))
     for item in selected_attractions:
         if item.get("required") and not by_id[item["stopId"]].get("selectedByDefault"):
             raise ValueError("required attraction must have a selected parent")

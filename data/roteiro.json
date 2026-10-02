@@ -4,7 +4,7 @@
   "schedule": {
     "startDate": "2026-10-07",
     "destinationId": "diamantina",
-    "destinationDate": "2026-10-09",
+    "destinationDate": "2026-10-08",
     "dateRangeEnd": "2026-10-31",
     "originId": "mirassol",
     "endDate": "2026-10-13"
@@ -29,17 +29,21 @@
     },
     {
       "stopId": "cordisburgo",
-      "date": "2026-10-11"
+      "date": "2026-10-10"
     },
     {
       "stopId": "setelagoas",
-      "date": "2026-10-11"
+      "date": "2026-10-10"
     },
     {
       "stopId": "belohorizonte",
-      "date": "2026-10-11"
+      "date": "2026-10-10"
     }
   ],
+  "availableDates": {
+    "diamantina": ["2026-10-09"],
+    "belohorizonte": ["2026-10-11"]
+  },
   "stays": [
     {
       "stopId": "camposaltos",
@@ -53,8 +57,8 @@
     },
     {
       "stopId": "belohorizonte",
-      "checkIn": "2026-10-11",
-      "checkOut": "2026-10-12"
+      "checkIn": "2026-10-10",
+      "checkOut": "2026-10-11"
     }
   ],
   "dayNotes": [],
@@ -62,6 +66,7 @@
     {
       "stopId": "diamantina",
       "name": "Vesperata",
+      "date": "2026-10-09",
       "required": true
     },
     {
@@ -83,6 +88,23 @@
     {
       "stopId": "peiro",
       "name": "Geossítio de Peirópolis"
+    },
+    {
+      "stopId": "cordisburgo",
+      "name": "Gruta do Maquiné"
+    },
+    {
+      "stopId": "setelagoas",
+      "name": "Memorial do Humorista Zacarias"
+    },
+    {
+      "stopId": "setelagoas",
+      "name": "Monumento Natural Estadual Gruta Rei do Mato"
+    },
+    {
+      "stopId": "belohorizonte",
+      "name": "Mercado Central",
+      "date": "2026-10-11"
     }
   ]
 }

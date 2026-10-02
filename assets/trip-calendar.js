@@ -3,6 +3,10 @@
  const addDays=(day,count)=>{const date=new Date(`${day}T12:00:00Z`);date.setUTCDate(date.getUTCDate()+count);return date.toISOString().slice(0,10)};
  const calendarDays=(start,end)=>{const days=[];for(let day=start;day<=end;day=addDays(day,1))days.push(day);return days};
  const stayOnDay=(stays,day)=>stays.find(stay=>stay.checkIn<=day&&day<stay.checkOut);
+ function visitDays(stop,date,tourDates,schedule){
+  const days=new Set([date,...(stop.availableDates||[]),...tourDates]);
+  return [...days].filter(day=>day>=schedule.startDate&&day<=schedule.endDate).sort();
+ }
  const nightCount=stay=>Math.round((new Date(`${stay.checkOut}T12:00:00Z`)-new Date(`${stay.checkIn}T12:00:00Z`))/86400000);
  function changeNight(stays,day,stopId,rangeEnd){
   const checkOut=addDays(day,1);
@@ -41,10 +45,10 @@
  function planRoute(groups,origin,destination,date,tours,routed,policy,includeDestination){
   const cities=orderGroups(groups,destination,date,policy,includeDestination),labels=new Map([[origin.id,'M']]);
   const points=city=>[city,...tours(city)].filter(s=>routed.has(s.id));
-  cities.forEach((city,i)=>{if(routed.has(city.id))labels.set(city.id,String(i+1));tours(city).filter(t=>t.kind==='atracao'&&routed.has(t.id)).forEach((t,j)=>labels.set(t.id,`${i+1}${String.fromCharCode(97+j)}`))});
-  const routePoints=[origin,...cities.flatMap(points),origin],order=routePoints.slice(1,-1).filter(s=>s.id!==destination.id),destinationIndex=routePoints.indexOf(destination);
+  cities.forEach((city,i)=>{if(routed.has(city.id))labels.set(city.id,String(i+1));tours(city).filter(t=>t.kind==='atracao'&&routed.has(t.id)).sort((a,b)=>date(a).localeCompare(date(b))).forEach((t,j)=>labels.set(t.id,`${i+1}${String.fromCharCode(97+j)}`))});
+  const routePoints=[origin,...cities.flatMap(points).sort((a,b)=>date(a).localeCompare(date(b))),origin],order=routePoints.slice(1,-1).filter(s=>s.id!==destination.id),destinationIndex=routePoints.indexOf(destination);
   const before=groups.filter(s=>date(s)<date(destination)),after=groups.filter(s=>date(s)>date(destination));
-  return {order,labels,before,after,beforePoints:before.flatMap(points),sameDay:cities.filter(s=>date(s)===date(destination)).flatMap(points).filter(s=>s!==destination),afterPoints:after.flatMap(points),routePoints,returnStart:destinationIndex<0?0:destinationIndex};
+  return {order,labels,before,after,beforePoints:routePoints.slice(1,-1).filter(s=>date(s)<date(destination)),sameDay:routePoints.slice(1,-1).filter(s=>date(s)===date(destination)&&s!==destination),afterPoints:routePoints.slice(1,-1).filter(s=>date(s)>date(destination)),routePoints,returnStart:destinationIndex<0?0:destinationIndex};
  }
  const routeDate=(stop,dates,fixedDates)=>dates.get(stop.id)||(stop.kind==='atracao'?dates.get(stop.parentId)||fixedDates.get(stop.parentId):fixedDates.get(stop.id));
  const orderVisits=(stops,date,manual)=>[...stops].sort((a,b)=>date(a).localeCompare(date(b))||manual.indexOf(a.id)-manual.indexOf(b.id));
@@ -56,7 +60,7 @@
   if(currentDate===nextDate){const a=manual.indexOf(current.id),b=manual.indexOf(adjacent.id);[manual[a],manual[b]]=[manual[b],manual[a]]}
   else{dates.set(current.id,nextDate);dates.set(adjacent.id,currentDate)}
  }
- const api={addDays,calendarDays,stayOnDay,nightCount,changeNight,estimateReturn,plannedEnd,suggestDate,hasDestinationConflict,isFixedStop,isRequiredStop,orderGroups,planRoute,routeDate,orderVisits,moveBefore,reorderVisit};
+ const api={addDays,calendarDays,visitDays,stayOnDay,nightCount,changeNight,estimateReturn,plannedEnd,suggestDate,hasDestinationConflict,isFixedStop,isRequiredStop,orderGroups,planRoute,routeDate,orderVisits,moveBefore,reorderVisit};
  if(typeof module!=='undefined'&&module.exports)module.exports=api;
  else root.TripCalendar=api;
 })(typeof window!=='undefined'?window:globalThis);

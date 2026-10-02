@@ -71,7 +71,7 @@ assert "if(routed.has(city.id))labels.set(city.id,String(i+1))" in (root / "asse
 assert "`${i+1}${String.fromCharCode(97+j)}`" in (root / "assets/trip-calendar.js").read_text(), "tour markers should share their city's number (3a, 3b…)"
 assert "String(stopsInOrder.indexOf(s)+1)" not in html, "map marker numbering must not count the origin as a numbered stop"
 assert "setMapIcon(s,'M',schedule.startDate)" in html, "Mirassol origin marker should identify the city, not look like stop 1"
-assert "const icon=routeIcon(s,plan)" in html and "createCard(s,icon,plan,!plan.labels.has(s.id)&&hasSelectedTours(s))" in html, "cards should use the same route marker icon as the map"
+assert "const icon=routeIcon(s,plan)" in html and "createCard(s,icon,plan,!plan.labels.has(s.id)&&hasSelectedTours(s),day)" in html, "cards should use the same route marker icon as the map"
 assert "function kindLabel(s){return placeLabel(s,routeDate(s)||schedule.destinationDate)}" in html and "kind.textContent=mapContext?'GRUPO NO MAPA':kindLabel(s)" in html, "origin card must use the same origin label as its popup"
 assert "setMapIcon(s,'I',schedule.startDate)" not in html, "origin map marker should not use the ambiguous I label"
 assert "s.id===schedule.originId?`${s.name.split(' · ')[0].toUpperCase()} · ORIGEM`" in html, "origin card and popup should identify Mirassol instead of misclassifying it as history"

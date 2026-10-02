@@ -20,7 +20,7 @@ window.ROTEIRO_DATA = {
   "schedule": {
     "startDate": "2026-10-07",
     "destinationId": "diamantina",
-    "destinationDate": "2026-10-09",
+    "destinationDate": "2026-10-08",
     "dateRangeEnd": "2026-10-31",
     "originId": "mirassol",
     "endDate": "2026-10-13",
@@ -45,8 +45,8 @@ window.ROTEIRO_DATA = {
       },
       {
         "stopId": "belohorizonte",
-        "checkIn": "2026-10-11",
-        "checkOut": "2026-10-12"
+        "checkIn": "2026-10-10",
+        "checkOut": "2026-10-11"
       }
     ],
     "dayNotes": []
@@ -2421,6 +2421,7 @@ window.ROTEIRO_DATA = {
           },
           "kind": "atracao",
           "type": "historia",
+          "initialDate": "2026-10-09",
           "selectedByDefault": true,
           "required": true
         },
@@ -2939,7 +2940,10 @@ window.ROTEIRO_DATA = {
         "description": "O centro histórico tem calçamento e desníveis. Confirme o percurso urbano e os acessos de cada museu; cachoeiras, trilhas e distritos têm condições próprias."
       },
       "municipality": "Diamantina",
-      "selectedByDefault": true
+      "selectedByDefault": true,
+      "availableDates": [
+        "2026-10-09"
+      ]
     },
     {
       "id": "peruacu",
@@ -3060,7 +3064,9 @@ window.ROTEIRO_DATA = {
             "note": "Compra on-line com pelo menos 48 h de antecedência, segundo a bilheteria oficial."
           },
           "kind": "atracao",
-          "type": "natureza"
+          "type": "natureza",
+          "selectedByDefault": true,
+          "required": false
         },
         {
           "name": "Museu Casa Guimarães Rosa",
@@ -3164,7 +3170,7 @@ window.ROTEIRO_DATA = {
         0.5,
         1
       ],
-      "initialDate": "2026-10-11",
+      "initialDate": "2026-10-10",
       "selectedByDefault": true
     },
     {
@@ -3265,7 +3271,10 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "kind": "atracao",
-          "type": "gastronomia"
+          "type": "gastronomia",
+          "initialDate": "2026-10-11",
+          "selectedByDefault": true,
+          "required": false
         }
       ],
       "relevanceSource": "agency",
@@ -3279,8 +3288,11 @@ window.ROTEIRO_DATA = {
         1,
         2
       ],
-      "initialDate": "2026-10-11",
-      "selectedByDefault": true
+      "initialDate": "2026-10-10",
+      "selectedByDefault": true,
+      "availableDates": [
+        "2026-10-11"
+      ]
     },
     {
       "id": "brumadinho",
@@ -5814,7 +5826,9 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "historia",
+          "selectedByDefault": true,
+          "required": false
         },
         {
           "name": "Monumento Natural Estadual Gruta Rei do Mato",
@@ -5847,7 +5861,9 @@ window.ROTEIRO_DATA = {
             "note": "Compra on-line com pelo menos 48 h de antecedência, segundo a bilheteria oficial."
           },
           "kind": "atracao",
-          "type": "natureza"
+          "type": "natureza",
+          "selectedByDefault": true,
+          "required": false
         }
       ],
       "guideBriefing": "Sete Lagoas aparece em roteiro comercial ligado à Vesperata de Diamantina, com paradas culturais, geológicas e panorâmicas.",
@@ -5859,7 +5875,7 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "por_passeio"
       },
-      "initialDate": "2026-10-11",
+      "initialDate": "2026-10-10",
       "selectedByDefault": true
     },
     {

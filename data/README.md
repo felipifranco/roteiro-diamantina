@@ -9,7 +9,16 @@ O gerador valida as referências e reúne os dois arquivos no adaptador usado pe
 
 Agrupe os passeios de distritos, bairros e comunidades na parada do município quando esse vínculo estiver confirmado. `municipality` identifica o município dos grupos revisados; `locality` identifica a localidade de uma atração. Passeios transferidos recebem a localidade também no nome e em `catalogName`, para que ela apareça na página e no catálogo. Preserve as coordenadas do passeio e use `mapQuery` com a localidade correta: reunir fichas não desloca atrações para a sede municipal nem comprova duplicação. Grupos regionais que abrangem vários municípios e restaurantes independentes podem permanecer como paradas próprias. A revisão está em [`location-audit.md`](location-audit.md).
 
-`visits` no planejamento define as paradas inicialmente selecionadas, na ordem desejada, com `stopId` e `date`. `selectedAttractions` define os passeios selecionados com `stopId` e `name` (nome exato da atração no catálogo). Origem e destino começam selecionados. As políticas de obrigatoriedade e data fixa são explícitas em `policies.destination`. Alterações de seleção, datas e hospedagens na interface ficam em memória do navegador; para mudar o padrão permanente, edite o planejamento e regenere os arquivos.
+`visits` no planejamento define as paradas inicialmente selecionadas, na ordem desejada, com `stopId` e `date`. O objeto opcional `availableDates`, na raiz de `roteiro.json`, define os dias adicionais por ID da parada. Todas as cidades, inclusive o destino, usam uma única regra: data da visita + dias adicionais configurados + datas dos passeios selecionados. Hospedagens não determinam esses dias nem criam cartões de visita. Diamantina tem chegada em 08/10 e dia adicional 09/10; Belo Horizonte tem chegada em 10/10 e dia adicional 11/10. Os cartões adicionais não criam uma segunda parada no trajeto. `selectedAttractions` define os passeios selecionados com `stopId` e `name` (nome exato da atração no catálogo). O campo opcional `date` define o dia do passeio; sem ele, o passeio herda a data da cidade. Diamantina tem chegada em 08/10, seus passeios ficam disponíveis também em 09/10 por `availableDates` e a Vesperata permanece em 09/10. Adicionar um passeio em outro dia transfere sua programação para esse dia. Origem e destino começam selecionados. As políticas de obrigatoriedade e data fixa são explícitas em `policies.destination`. Alterações de seleção, datas e hospedagens na interface ficam em memória do navegador; para mudar o padrão permanente, edite o planejamento e regenere os arquivos.
+
+Exemplo da configuração compartilhada de dias adicionais:
+
+```json
+"availableDates": {
+  "diamantina": ["2026-10-09"],
+  "belohorizonte": ["2026-10-11"]
+}
+```
 
 Nas atrações, `description` é o único texto descritivo: reúne o que é o lugar, o contexto histórico ou natural, o interesse da visita e as orientações complementares. O antigo `guideBriefing` foi incorporado por contexto, removendo repetições; ele não é aceito nas fichas de `attractions`. O popup, o botão **Guia de visita** e o catálogo Markdown consultam a mesma descrição. Informações de acesso continuam em `access`. Nas paradas de `routeStops`, `guideBriefing` continua sendo o texto do grupo ou da cidade.
 
@@ -89,7 +98,7 @@ Quando os conteúdos realmente formam uma única visita, mantenha uma ficha com 
 `policies` em `roteiro.json` reúne os parâmetros de negócio:
 
 - `maxDrivingHoursPerDay`: limite diário usado na estimativa de retorno (atualmente 8 horas); a estimativa só existe após uma resposta válida de rota.
-- `destination.required`: impede remover o destino; `fixedDate`: impede alterar sua data; são regras independentes. `sameDayOrder` (`before` ou `after`) posiciona o destino antes ou depois das demais paradas do mesmo dia, tanto nos cartões quanto no traçado. Os valores atuais preservam Diamantina obrigatória, fixa e antes das outras paradas de 09/10.
+- `destination.required`: impede remover o destino; `fixedDate`: impede alterar sua data; são regras independentes. `sameDayOrder` (`before` ou `after`) posiciona o destino antes ou depois das demais paradas do mesmo dia, tanto nos cartões quanto no traçado. Os valores atuais preservam Diamantina obrigatória, fixa e antes das outras paradas de 08/10.
 - `newStopDate.anchor` (`destination` ou `start`) e `offsetDays`: sugerem uma data depois do último dia efetivamente planejado (visitas e noites), tomando a âncora como mínimo e limitando a sugestão ao calendário. A configuração atual usa o destino e mais 1 dia. `stayDays` continua apenas uma recomendação do catálogo e nunca prolonga uma visita nem cria hospedagem.
 
 Em `selectedAttractions`, `required: true` torna um passeio obrigatório nesta viagem e protege também a remoção de seu grupo. O padrão é `false`: ter `schedule` no catálogo informa um evento agendado, não uma obrigação. A Vesperata mantém `required: true` explicitamente, preservando o compromisso atual. Os conflitos com o destino usam somente hospedagens efetivamente planejadas em outra parada que atravessam sua data; sugestões de duração não geram conflitos.

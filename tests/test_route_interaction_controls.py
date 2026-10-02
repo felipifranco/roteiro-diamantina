@@ -86,7 +86,7 @@ class RouteInteractionControlsTests(unittest.TestCase):
         self.assertLess(popup_helper, marker_creation, "city popup helper must exist before marker creation")
 
     def test_tour_controls_have_explicit_add_and_remove_actions(self):
-        self.assertIn("function tourActionButton(tour)", FINAL_ROUTING, "tour action helper is missing")
+        self.assertIn("function tourActionButton(tour,day)", FINAL_ROUTING, "tour action helper is missing")
         self.assertIn("＋ Adicionar ao roteiro", FINAL_ROUTING, "inactive tours need a clear add action")
         self.assertIn("− Remover do roteiro", FINAL_ROUTING, "active tours need a clear remove action")
         self.assertIn("setAttractionActive(tour", FINAL_ROUTING, "tour actions must update route state")

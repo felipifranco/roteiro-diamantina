@@ -25,7 +25,7 @@ class NoChildSpecificUiCopyTests(unittest.TestCase):
 
     def test_tour_cards_show_age_while_popups_keep_ticket_details(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
-        tour_row = page.split("function tourRow(city,tour,editable,plan){", 1)[1].split("// Tempo e distância", 1)[0]
+        tour_row = page.split("function tourRow(city,tour,editable,plan,day){", 1)[1].split("// Tempo e distância", 1)[0]
         self.assertIn("ageSummaryMarkup(tour)", tour_row)
         self.assertNotIn("visitRuleMarkup(tour,true)", tour_row)
         self.assertIn("${visitRuleMarkup(s)}", page)
