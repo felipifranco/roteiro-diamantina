@@ -38,7 +38,7 @@ class TripPlanningTests(unittest.TestCase):
                 original_app = app_path.read_bytes()
                 sentinel = 1_700_000_000_000_000_000
                 os.utime(markdown_path, ns=(sentinel, sentinel))
-                self.plan['stays'][0]['checkOut'] = '2026-10-09'
+                self.plan['stays'][-1]['checkOut'] = '2026-10-13'
                 plan_path.write_text(json.dumps(self.plan))
                 self.assertEqual(generator.main([]), 0)
                 self.assertNotEqual(app_path.read_bytes(), original_app)
@@ -55,10 +55,10 @@ class TripPlanningTests(unittest.TestCase):
             for attraction in stop.get('attractions', []):
                 self.assertNotIn('selectedByDefault', attraction)
         original = copy.deepcopy(self.catalog)
-        self.plan['stays'][0]['checkOut'] = '2026-10-09'
+        self.plan['stays'][-1]['checkOut'] = '2026-10-13'
         data = assemble_data(self.catalog, self.plan)
         self.assertEqual(self.catalog, original)
-        self.assertEqual(data['schedule']['stays'][0]['checkOut'], '2026-10-09')
+        self.assertEqual(data['schedule']['stays'][-1]['checkOut'], '2026-10-13')
         self.assertNotIn('overnight', data['routeStops'][0])
 
     def test_lodging_can_be_repeated_and_does_not_require_a_visit(self):
