@@ -4,6 +4,12 @@ Edite somente [`roteiro.json`](roteiro.json). O arquivo mantém cada parada em `
 
 O campo `selectedByDefault` em cada parada ou atração define se ela começa selecionada na página. A seleção feita na interface altera somente o estado em memória do navegador; para mudar o padrão permanente, edite esse campo no JSON e regenere os arquivos.
 
+O objeto `schedule` guarda as datas da viagem e a ordem inicial das paradas. Em cada cidade, `initialDate` define a data inicial, `stayDays` a faixa de duração sugerida e `overnight` indica pernoite. A página usa esses valores como padrão; mudanças feitas durante a navegação ficam somente em memória.
+
+Cada parada e atração pode ter `accessEffort`, com `level` (`easy`, `moderate`, `hard` ou `unknown`), `label` e `note`. O acesso exibido para uma atração consulta o registro dela; a página não deduz esforço pelo nome nem aplica a nota da cidade aos passeios. Os valores migrados preservam as estimativas anteriores e devem ser revisados com as fontes de cada local.
+
+`schedule.dayNotes` define as notas iniciais por data (`date` e `text`). O campo opcional `replaces` lista textos antigos que podem ser atualizados no navegador; notas personalizadas são preservadas. `accessAlerts` guarda os avisos de estrada e `sources` os links de fontes. Origem e destino são identificados pelos registros indicados em `schedule`.
+
 Após alterar o JSON, regenere os arquivos derivados:
 
 ```bash

@@ -1,5 +1,27 @@
 // Generated from data/roteiro.json by scripts/generate_route_data.py. Do not edit.
 window.ROTEIRO_DATA = {
+  "schedule": {
+    "startDate": "2026-10-07",
+    "destinationId": "diamantina",
+    "destinationDate": "2026-10-09",
+    "dateRangeEnd": "2026-10-31",
+    "initialStopOrder": [
+      "peiro",
+      "araxa",
+      "cordisburgo"
+    ],
+    "originId": "mirassol",
+    "dayNotes": [
+      {
+        "date": "2026-10-08",
+        "text": "Curvelo tem mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base.",
+        "replaces": [
+          "Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base.",
+          "Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base. Na Gruta Rei do Mato, confirme a idade mínima para crianças."
+        ]
+      }
+    ]
+  },
   "routeStops": [
     {
       "id": "mirassol",
@@ -59,6 +81,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Exigente",
+            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
+            "level": "hard"
           }
         },
         {
@@ -81,6 +108,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Exigente / variável",
+            "note": "Cachoeira Casca d’Anta e trilhas: terreno e distância variam; confirmar trecho e acesso local.",
+            "level": "hard"
           }
         },
         {
@@ -103,6 +135,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Exigente / variável",
+            "note": "Cachoeira Casca d’Anta e trilhas: terreno e distância variam; confirmar trecho e acesso local.",
+            "level": "hard"
           }
         },
         {
@@ -125,6 +162,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Exigente / variável",
+            "note": "Cachoeira Casca d’Anta e trilhas: terreno e distância variam; confirmar trecho e acesso local.",
+            "level": "hard"
           }
         }
       ],
@@ -136,6 +178,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
+      },
+      "stayDays": [
+        1,
+        2
+      ],
+      "accessEffort": {
+        "label": "Exigente / variável",
+        "note": "Cachoeira Casca d’Anta e trilhas: terreno e distância variam; confirmar trecho e acesso local.",
+        "level": "hard"
       }
     },
     {
@@ -165,6 +216,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Mirantes podem ter escadarias; lancha exige embarque. Pergunte ao operador sobre degraus e apoio.",
+            "level": "moderate"
           }
         },
         {
@@ -187,6 +243,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Exigente",
+            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
+            "level": "hard"
           }
         },
         {
@@ -209,6 +270,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Mirantes podem ter escadarias; lancha exige embarque. Pergunte ao operador sobre degraus e apoio.",
+            "level": "moderate"
           }
         },
         {
@@ -231,6 +297,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Exigente",
+            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
+            "level": "hard"
           }
         },
         {
@@ -253,6 +324,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Mirantes podem ter escadarias; lancha exige embarque. Pergunte ao operador sobre degraus e apoio.",
+            "level": "moderate"
           }
         }
       ],
@@ -264,6 +340,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
+      },
+      "stayDays": [
+        1,
+        1
+      ],
+      "accessEffort": {
+        "label": "Variável",
+        "note": "Mirantes podem ter escadarias; lancha exige embarque. Pergunte ao operador sobre degraus e apoio.",
+        "level": "moderate"
       }
     },
     {
@@ -301,6 +386,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
+            "level": "moderate"
           }
         },
         {
@@ -323,6 +413,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
+            "level": "moderate"
           }
         },
         {
@@ -345,6 +440,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
+            "level": "moderate"
           }
         },
         {
@@ -367,6 +467,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
+            "level": "moderate"
           }
         },
         {
@@ -389,6 +494,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
+            "level": "moderate"
           }
         }
       ],
@@ -400,6 +510,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
+      },
+      "stayDays": [
+        0.5,
+        1
+      ],
+      "accessEffort": {
+        "label": "Atenção a ladeiras",
+        "note": "Santuário com escadaria e calçamento; verificar acessos sem degraus e pausas.",
+        "level": "moderate"
       }
     },
     {
@@ -440,6 +559,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -463,6 +587,11 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "gratuito",
             "url": "https://www.gov.br/museus/pt-br/museus-ibram/museu-da-inconfidencia"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
+            "level": "moderate"
           }
         },
         {
@@ -485,6 +614,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -507,6 +641,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
+            "level": "moderate"
           }
         },
         {
@@ -529,6 +668,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -551,6 +695,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -573,6 +722,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
+            "level": "moderate"
           }
         },
         {
@@ -595,6 +749,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Exigente",
+            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
+            "level": "hard"
           }
         },
         {
@@ -618,6 +777,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
+            "level": "moderate"
           }
         },
         {
@@ -640,6 +804,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
+            "level": "moderate"
           }
         },
         {
@@ -662,6 +831,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
+            "level": "moderate"
           }
         },
         {
@@ -684,6 +858,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
+            "level": "moderate"
           }
         },
         {
@@ -707,6 +886,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -730,6 +914,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
+            "level": "moderate"
           }
         },
         {
@@ -754,6 +943,11 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "bilheteria",
             "url": "https://museudooratorio.org.br/visite/planeje-sua-visita/"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
+            "level": "moderate"
           }
         }
       ],
@@ -763,6 +957,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
+      },
+      "stayDays": [
+        1,
+        2
+      ],
+      "accessEffort": {
+        "label": "Atenção a ladeiras",
+        "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
+        "level": "moderate"
       }
     },
     {
@@ -800,6 +1003,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Exigente",
+            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
+            "level": "hard"
           }
         },
         {
@@ -822,6 +1030,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
+            "level": "moderate"
           }
         },
         {
@@ -844,6 +1057,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -866,6 +1084,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -888,6 +1111,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
+            "level": "moderate"
           }
         },
         {
@@ -913,6 +1141,11 @@ window.ROTEIRO_DATA = {
           "ticket": {
             "status": "bilheteria",
             "url": "https://mariana.minasdapassagem.com.br/visitacao/"
+          },
+          "accessEffort": {
+            "label": "Exigente",
+            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
+            "level": "hard"
           }
         },
         {
@@ -936,6 +1169,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
+            "level": "moderate"
           }
         },
         {
@@ -959,6 +1197,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
+            "level": "moderate"
           }
         },
         {
@@ -981,6 +1224,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1004,6 +1252,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1027,6 +1280,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
+            "level": "moderate"
           }
         },
         {
@@ -1050,6 +1308,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
+            "level": "moderate"
           }
         }
       ],
@@ -1061,6 +1324,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
+      },
+      "stayDays": [
+        0.5,
+        1
+      ],
+      "accessEffort": {
+        "label": "Variável",
+        "note": "Centro histórico pode ter calçamento; Mina da Passagem requer confirmação de acessibilidade.",
+        "level": "moderate"
       }
     },
     {
@@ -1085,6 +1357,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "indeterminado"
+      },
+      "stayDays": [
+        1,
+        2
+      ],
+      "accessEffort": {
+        "label": "Exigente nas trilhas",
+        "note": "O ICMBio classifica roteiros com caminhadas de vários quilômetros; escolha só atrativo com acesso curto confirmado.",
+        "level": "hard"
       }
     },
     {
@@ -1126,6 +1407,11 @@ window.ROTEIRO_DATA = {
             "status": "bilheteria",
             "url": "https://www.turismo.cmd.mg.gov.br/turismo/cachoeira-do-tabuleiro/17",
             "note": "Taxa de visitação informada pela prefeitura; confirme valor e acesso atual."
+          },
+          "accessEffort": {
+            "label": "Exigente",
+            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
+            "level": "hard"
           }
         },
         {
@@ -1148,6 +1434,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1170,6 +1461,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Exigente",
+            "note": "Cachoeira e parte baixa envolvem trilha; confirmar percurso, desnível e condições na portaria.",
+            "level": "hard"
           }
         },
         {
@@ -1193,6 +1489,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         }
       ],
@@ -1202,6 +1503,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
+      },
+      "stayDays": [
+        1,
+        1
+      ],
+      "accessEffort": {
+        "label": "Exigente",
+        "note": "Cachoeira e parte baixa envolvem trilha; confirmar percurso, desnível e condições na portaria.",
+        "level": "hard"
       }
     },
     {
@@ -1242,6 +1552,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1264,6 +1579,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1286,6 +1606,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1310,6 +1635,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
+            "level": "moderate"
           }
         },
         {
@@ -1333,6 +1663,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
+            "level": "moderate"
           }
         },
         {
@@ -1356,6 +1691,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
+            "level": "moderate"
           }
         },
         {
@@ -1379,6 +1719,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
+            "level": "moderate"
           }
         },
         {
@@ -1402,6 +1747,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1425,6 +1775,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1448,6 +1803,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1471,6 +1831,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         }
       ],
@@ -1480,6 +1845,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
+      },
+      "stayDays": [
+        0.5,
+        0.5
+      ],
+      "accessEffort": {
+        "label": "Atenção a ladeiras",
+        "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
+        "level": "moderate"
       }
     },
     {
@@ -1520,6 +1894,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1542,6 +1921,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Vila pode ser visitada sem trilha; cachoeiras têm acessos distintos, alguns irregulares.",
+            "level": "moderate"
           }
         },
         {
@@ -1564,6 +1948,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Vila pode ser visitada sem trilha; cachoeiras têm acessos distintos, alguns irregulares.",
+            "level": "moderate"
           }
         }
       ],
@@ -1573,6 +1962,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
+      },
+      "stayDays": [
+        0.5,
+        1
+      ],
+      "accessEffort": {
+        "label": "Variável",
+        "note": "Vila pode ser visitada sem trilha; cachoeiras têm acessos distintos, alguns irregulares.",
+        "level": "moderate"
       }
     },
     {
@@ -1602,6 +2000,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
+            "level": "moderate"
           }
         },
         {
@@ -1624,6 +2027,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
+            "level": "moderate"
           }
         },
         {
@@ -1646,6 +2054,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1668,6 +2081,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
+            "level": "moderate"
           }
         }
       ],
@@ -1679,6 +2097,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
+      },
+      "stayDays": [
+        0.5,
+        0.5
+      ],
+      "accessEffort": {
+        "label": "Variável",
+        "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
+        "level": "moderate"
       }
     },
     {
@@ -1719,6 +2146,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+            "level": "moderate"
           }
         },
         {
@@ -1741,6 +2173,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1779,6 +2216,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+            "level": "moderate"
           }
         },
         {
@@ -1801,6 +2243,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+            "level": "moderate"
           }
         },
         {
@@ -1823,6 +2270,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1845,6 +2297,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+            "level": "moderate"
           }
         },
         {
@@ -1873,7 +2330,12 @@ window.ROTEIRO_DATA = {
             "status": "online",
             "url": "https://bileto.sympla.com.br/event/117032?share_id=1-copiarlink"
           },
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
+          }
         },
         {
           "name": "Caminho dos Escravos",
@@ -1897,6 +2359,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+            "level": "moderate"
           }
         },
         {
@@ -1920,6 +2387,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+            "level": "moderate"
           }
         },
         {
@@ -1943,6 +2415,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+            "level": "moderate"
           }
         },
         {
@@ -1966,6 +2443,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -1989,6 +2471,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+            "level": "moderate"
           }
         },
         {
@@ -2012,6 +2499,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -2035,6 +2527,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -2058,6 +2555,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+            "level": "moderate"
           }
         },
         {
@@ -2081,6 +2583,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+            "level": "moderate"
           }
         },
         {
@@ -2104,6 +2611,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Atenção a ladeiras",
+            "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+            "level": "moderate"
           }
         }
       ],
@@ -2116,7 +2628,12 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "por_passeio"
       },
-      "selectedByDefault": true
+      "selectedByDefault": true,
+      "accessEffort": {
+        "label": "Atenção a ladeiras",
+        "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
+        "level": "moderate"
+      }
     },
     {
       "id": "biribiri",
@@ -2155,6 +2672,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -2177,6 +2699,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Vila e cachoeiras têm acessos diferentes; checar estrada e caminhada antes de sair.",
+            "level": "moderate"
           }
         },
         {
@@ -2199,6 +2726,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Vila e cachoeiras têm acessos diferentes; checar estrada e caminhada antes de sair.",
+            "level": "moderate"
           }
         }
       ],
@@ -2208,6 +2740,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
+      },
+      "stayDays": [
+        0.5,
+        1
+      ],
+      "accessEffort": {
+        "label": "Variável",
+        "note": "Vila e cachoeiras têm acessos diferentes; checar estrada e caminhada antes de sair.",
+        "level": "moderate"
       }
     },
     {
@@ -2232,6 +2773,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "indeterminado"
+      },
+      "stayDays": [
+        1,
+        2
+      ],
+      "accessEffort": {
+        "label": "Exigente",
+        "note": "Cavernas e trilhas podem ter escadas e terreno irregular; confirmar percurso guiado e restrições.",
+        "level": "hard"
       }
     },
     {
@@ -2255,6 +2805,15 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "indeterminado"
+      },
+      "stayDays": [
+        0,
+        1
+      ],
+      "accessEffort": {
+        "label": "Variável",
+        "note": "Balsa e cachoeiras: confirmar operação, embarque e caminhada antes de incluir.",
+        "level": "moderate"
       }
     },
     {
@@ -2381,7 +2940,13 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "por_passeio"
       },
-      "selectedByDefault": true
+      "selectedByDefault": true,
+      "stayDays": [
+        0.5,
+        1
+      ],
+      "initialDate": "2026-10-08",
+      "overnight": true
     },
     {
       "id": "belohorizonte",
@@ -2443,6 +3008,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -2474,7 +3044,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        1,
+        2
+      ]
     },
     {
       "id": "brumadinho",
@@ -2524,7 +3098,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        1,
+        1
+      ]
     },
     {
       "id": "saojoaodelrei",
@@ -2567,6 +3145,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -2589,6 +3172,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -2611,6 +3199,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -2832,6 +3425,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -2899,6 +3497,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -2954,7 +3557,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        1,
+        2
+      ]
     },
     {
       "id": "tiradentes",
@@ -2997,6 +3604,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -3218,6 +3830,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         }
       ],
@@ -3227,7 +3844,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        1,
+        2
+      ]
     },
     {
       "id": "bichinho",
@@ -3321,7 +3942,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        0.5,
+        1
+      ]
     },
     {
       "id": "curralinho",
@@ -3392,7 +4017,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        0.5,
+        0.5
+      ]
     },
     {
       "id": "catasaltas",
@@ -3432,6 +4061,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -3485,7 +4119,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        0.5,
+        1
+      ]
     },
     {
       "id": "santabarbara",
@@ -3546,6 +4184,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         }
       ],
@@ -3555,7 +4198,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        0.5,
+        1
+      ]
     },
     {
       "id": "caraca",
@@ -3596,6 +4243,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -3671,7 +4323,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        1,
+        2
+      ]
     },
     {
       "id": "sabara",
@@ -3714,6 +4370,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -3736,6 +4397,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -3824,6 +4490,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -3877,7 +4548,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        0.5,
+        1
+      ]
     },
     {
       "id": "caete",
@@ -3947,7 +4622,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        0.5,
+        1
+      ]
     },
     {
       "id": "peiro",
@@ -4021,7 +4700,8 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "por_passeio"
       },
-      "selectedByDefault": true
+      "selectedByDefault": true,
+      "initialDate": "2026-10-07"
     },
     {
       "id": "araxa",
@@ -4151,6 +4831,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -4209,7 +4894,13 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "por_passeio"
       },
-      "selectedByDefault": true
+      "selectedByDefault": true,
+      "stayDays": [
+        1,
+        1
+      ],
+      "initialDate": "2026-10-07",
+      "overnight": true
     },
     {
       "id": "itabirito",
@@ -4248,6 +4939,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
           }
         },
         {
@@ -4279,7 +4975,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        0.5,
+        0.5
+      ]
     },
     {
       "id": "amarantina",
@@ -4326,7 +5026,11 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "stayDays": [
+        0.5,
+        0.5
+      ]
     },
     {
       "id": "ourobranco",
@@ -4633,6 +5337,11 @@ window.ROTEIRO_DATA = {
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Exigente",
+            "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
+            "level": "hard"
           }
         }
       ],
@@ -5143,6 +5852,32 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "reserva_indeterminada"
       }
+    }
+  ],
+  "accessAlerts": [
+    {
+      "title": "⚠ Acesso à Canastra e Capitólio",
+      "text": "Capitólio tem acesso pela MG‑050. A balsa fica entre Cássia e Delfinópolis; a ponte da BR‑464 tem desvio provisório informado pelo DNIT em 11/09/2026.",
+      "url": "https://www.gov.br/dnit/pt-br/central-de-conteudos/noticias-alerta-de-servicos/dnit-alerta-para-desvio-provisorio-na-br-464-mg-entre-sacramento-e-delfinopolis",
+      "linkLabel": "Aviso do DNIT ↗"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.gov.br/dnit/pt-br/central-de-conteudos/noticias-alerta-de-servicos/dnit-alerta-para-desvio-provisorio-na-br-464-mg-entre-sacramento-e-delfinopolis",
+      "label": "DNIT"
+    },
+    {
+      "url": "https://www.der.mg.gov.br/",
+      "label": "DER‑MG"
+    },
+    {
+      "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/cerrado/lista-de-ucs/parna-da-serra-da-canastra",
+      "label": "ICMBio"
+    },
+    {
+      "url": "https://visitediamantina.com.br/",
+      "label": "Visit Diamantina"
     }
   ]
 };

@@ -61,6 +61,7 @@ console.log(JSON.stringify([origin,destination,city,tour,optional,unselectedOpti
         self.assertIsNotNone(effective)
         self.assertIsNotNone(planner)
         script = effective.group(0) + """
+const schedule={destinationDate:'2026-10-09'};
 const origin={id:'mirassol',kind:'inicio'},destination={id:'diamantina',kind:'destino'};
 const city={id:'cidade',kind:'natureza'},tour={id:'passeio',kind:'atracao',parentId:'cidade'};
 const routeStops=[origin,city,tour,destination],selected=new Set(['cidade','passeio']);

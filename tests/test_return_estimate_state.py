@@ -28,7 +28,7 @@ class ReturnEstimateStateTests(unittest.TestCase):
 
     def test_unknown_return_date_is_not_rendered_as_an_estimate(self):
         self.assertTrue(
-            "date===null?'RETORNO A MIRASSOL · DATA NÃO ESTIMADA'" in PAGE,
+            "date===null?`RETORNO A ${origin.name.split(' · ')[0].toUpperCase()} · DATA NÃO ESTIMADA`" in PAGE,
             "the return card must not show a date without a current route estimate",
         )
         self.assertTrue(
@@ -55,7 +55,7 @@ class ReturnEstimateStateTests(unittest.TestCase):
             "a failed route must not leave an old estimate in the origin popup",
         )
         self.assertTrue(
-            "setOriginReturnNote(`Saída 07/10 · retorno estimado" in PAGE,
+            "setOriginReturnNote(`Saída ${fmt(schedule.startDate)} · retorno estimado" in PAGE,
             "a successful route must restore its newly calculated origin-popup estimate",
         )
 

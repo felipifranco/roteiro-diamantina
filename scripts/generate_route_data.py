@@ -6,7 +6,9 @@ Edit only data/roteiro.json, then run `python3 scripts/generate_route_data.py`.
 
 import argparse
 import copy
+from datetime import date
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -48,6 +50,13 @@ TICKET_STATUSES = {"online", "bilheteria", "agendamento", "gratuito", "por_passe
 def validate_visit_rules(item, path):
     if not isinstance(item, dict):
         raise ValueError(f"{path} must be an object")
+    effort = item.get("accessEffort")
+    if effort is not None and (
+        not isinstance(effort, dict)
+        or effort.get("level") not in {"easy", "moderate", "hard", "unknown"}
+        or any(not isinstance(effort.get(field), str) or not effort[field].strip() for field in ("label", "note"))
+    ):
+        raise ValueError(f"{path}.accessEffort must have a valid level, label, and note")
     age = item.get("ageClassification")
     ticket = item.get("ticket")
     if not isinstance(age, dict) or age.get("status") not in AGE_STATUSES:
@@ -104,6 +113,46 @@ def validate(data):
     route_stops = data.get("routeStops")
     if not isinstance(route_stops, list) or not route_stops:
         raise ValueError("routeStops must be a non-empty list")
+    schedule = data.get("schedule")
+    if not isinstance(schedule, dict):
+        raise ValueError("schedule must be an object")
+    for field in ("startDate", "destinationDate", "dateRangeEnd"):
+        value = schedule.get(field)
+        if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+            raise ValueError(f"schedule.{field} must be a YYYY-MM-DD date")
+        try:
+            date.fromisoformat(value)
+        except ValueError as error:
+            raise ValueError(f"schedule.{field} must be a real calendar date") from error
+    if schedule["startDate"] > schedule["destinationDate"] or schedule["destinationDate"] > schedule["dateRangeEnd"]:
+        raise ValueError("schedule dates must be ordered startDate <= destinationDate <= dateRangeEnd")
+    if any(not isinstance(schedule.get(field), str) for field in ("originId", "destinationId")) or not isinstance(schedule.get("initialStopOrder"), list):
+        raise ValueError("schedule must have originId, destinationId, and initialStopOrder")
+    day_notes = schedule.get("dayNotes", [])
+    if not isinstance(day_notes, list):
+        raise ValueError("schedule.dayNotes must be a list")
+    note_dates = set()
+    for note in day_notes:
+        if not isinstance(note, dict) or not isinstance(note.get("date"), str):
+            raise ValueError("schedule.dayNotes must contain dated notes")
+        try:
+            date.fromisoformat(note["date"])
+        except ValueError as error:
+            raise ValueError("schedule.dayNotes requires real calendar dates") from error
+        if note["date"] in note_dates or not schedule["startDate"] <= note["date"] <= schedule["dateRangeEnd"]:
+            raise ValueError("schedule.dayNotes dates must be unique and within the trip")
+        note_dates.add(note["date"])
+        if not isinstance(note.get("text"), str) or not isinstance(note.get("replaces", []), list) or any(not isinstance(value, str) for value in note.get("replaces", [])):
+            raise ValueError("schedule.dayNotes requires text and optional replacement strings")
+    for field, labels in (("accessAlerts", ("title", "text", "linkLabel")), ("sources", ("label",))):
+        items = data.get(field, [])
+        if not isinstance(items, list) or any(
+            not isinstance(item, dict)
+            or not isinstance(item.get("url"), str) or not item["url"].startswith("https://")
+            or any(not isinstance(item.get(label), str) or not item[label].strip() for label in labels)
+            for item in items
+        ):
+            raise ValueError(f"{field} must contain labeled HTTPS links")
     ids = set()
     required_stop_fields = ("id", "name", "lat", "lon", "kind", "type", "days", "sights", "kid", "url")
     for index, stop in enumerate(route_stops):
@@ -115,6 +164,23 @@ def validate(data):
         if not isinstance(stop["id"], str) or not stop["id"] or stop["id"] in ids:
             raise ValueError(f"routeStops[{index}].id must be unique and non-empty")
         ids.add(stop["id"])
+        initial_date = stop.get("initialDate")
+        if initial_date is not None and (not isinstance(initial_date, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", initial_date)):
+            raise ValueError(f"routeStops[{index}].initialDate must be a YYYY-MM-DD date")
+        if initial_date is not None:
+            try:
+                date.fromisoformat(initial_date)
+            except ValueError as error:
+                raise ValueError(f"routeStops[{index}].initialDate must be a real calendar date") from error
+        stay_days = stop.get("stayDays")
+        if stay_days is not None and (
+            not isinstance(stay_days, list) or len(stay_days) != 2
+            or any(type(days) not in (int, float) or days < 0 for days in stay_days)
+            or stay_days[0] > stay_days[1]
+        ):
+            raise ValueError(f"routeStops[{index}].stayDays must be an ordered pair of non-negative numbers")
+        if "overnight" in stop and type(stop["overnight"]) is not bool:
+            raise ValueError(f"routeStops[{index}].overnight must be a boolean")
         validate_visit_rules(stop, f"routeStops[{index}]")
         if not isinstance(stop["name"], str) or not stop["name"].strip():
             raise ValueError(f"routeStops[{index}].name must be a non-empty string")
@@ -207,6 +273,13 @@ def validate(data):
                     "must contain labeled HTTPS links"
                 )
 
+    if schedule["originId"] not in ids or schedule["destinationId"] not in ids:
+        raise ValueError("schedule originId and destinationId must refer to route stops")
+    if len(set(schedule["initialStopOrder"])) != len(schedule["initialStopOrder"]):
+        raise ValueError("schedule.initialStopOrder must not repeat stop IDs")
+    if any(not isinstance(stop_id, str) or stop_id not in ids for stop_id in schedule["initialStopOrder"]):
+        raise ValueError("schedule.initialStopOrder must contain route stop IDs")
+
 
 def _js_json(value):
     return (
@@ -218,7 +291,9 @@ def _js_json(value):
 
 def render_app_data(data):
     route_stops = copy.deepcopy(data["routeStops"])
-    payload = {"routeStops": route_stops}
+    payload = {"schedule": copy.deepcopy(data["schedule"]), "routeStops": route_stops,
+               "accessAlerts": copy.deepcopy(data.get("accessAlerts", [])),
+               "sources": copy.deepcopy(data.get("sources", []))}
     return (
         "// Generated from data/roteiro.json by scripts/generate_route_data.py. Do not edit.\n"
         "window.ROTEIRO_DATA = " + _js_json(payload) + ";\n"

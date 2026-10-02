@@ -1,4 +1,6 @@
 import json
+import re
+import shutil
 import subprocess
 import sys
 import unittest
@@ -21,6 +23,56 @@ EXPECTED_ROUTE_STOP_IDS = (
 
 
 class ItinerarySourceOfTruthTests(unittest.TestCase):
+    def test_attraction_access_uses_its_record_independently_of_city_and_name(self):
+        if not shutil.which("node"):
+            self.skipTest("Node.js is required for the access metadata runtime test")
+        page = (ROOT / "index.html").read_text(encoding="utf-8")
+        helpers = re.search(r"function effortFor\(item\)\{.*?\}\n", page).group(0)
+        helpers += re.search(r"function tourCardMeta\(tour,city,inRoute=false,date=''\)\{.*?\n\}", page, re.S).group(0)
+        script = helpers + """
+const knownDuration=()=>'',tourLocation=()=>'';
+const city={id:'cipo',accessEffort:{level:'hard',label:'Cidade exigente',note:'Nota da cidade'}};
+const tour={name:'Cachoeira do Tabuleiro',accessEffort:{level:'easy',label:'Acesso próprio',note:'Nota do passeio'}};
+console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name},city),effortFor(tour)]));
+"""
+        result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
+        label, unknown, effort = json.loads(result.stdout)
+        self.assertIn("Acesso próprio", label)
+        self.assertIn("effort easy", label)
+        self.assertNotIn("Cidade exigente", label)
+        self.assertEqual(unknown, "")
+        self.assertEqual(effort, ["Acesso próprio", "Nota do passeio", "easy"])
+
+    def test_itinerary_notes_alerts_and_sources_are_in_json(self):
+        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        page = (ROOT / "index.html").read_text(encoding="utf-8")
+        for note in data["schedule"]["dayNotes"]:
+            self.assertNotIn(note["text"], page)
+        for alert in data["accessAlerts"]:
+            self.assertNotIn(alert["text"], page)
+        for source in data["sources"]:
+            self.assertNotIn(source["url"], page)
+        self.assertNotIn("const accessNotes=", page)
+        self.assertNotIn("s.id==='cipo'", page)
+        from scripts.generate_route_data import render_app_data
+        generated = render_app_data(data)
+        for field in ("accessAlerts", "sources"):
+            self.assertIn(f'"{field}"', generated)
+
+    def test_validator_rejects_invalid_individual_access_metadata(self):
+        from scripts.generate_route_data import validate
+        original = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        for value in ("easy", {}, {"level": "wrong", "label": "Teste", "note": "Teste"}, {"level": "easy", "label": "Teste", "note": 1}):
+            for target in ("stop", "attraction"):
+                with self.subTest(value=value, target=target):
+                    data = json.loads(json.dumps(original))
+                    item = next(s for s in data["routeStops"] if s.get("attractions"))
+                    if target == "attraction":
+                        item = item["attractions"][0]
+                    item["accessEffort"] = value
+                    with self.assertRaisesRegex(ValueError, "accessEffort"):
+                        validate(data)
+
     def test_canonical_json_contains_unified_route_stops(self):
         source = ROOT / "data" / "roteiro.json"
         self.assertTrue(source.is_file(), "data/roteiro.json must be the canonical dataset")
@@ -32,6 +84,23 @@ class ItinerarySourceOfTruthTests(unittest.TestCase):
             tuple(stop["id"] for stop in data["routeStops"]), EXPECTED_ROUTE_STOP_IDS
         )
         self.assertTrue(all("attractions" in stop and "profile" in stop for stop in data["routeStops"] if stop["id"] not in {"mirassol", "cipo", "peruacu", "delfinopolis"}))
+
+    def test_schedule_and_default_stop_dates_are_in_canonical_data(self):
+        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        schedule = data["schedule"]
+        self.assertEqual(schedule["startDate"], "2026-10-07")
+        self.assertEqual(schedule["destinationId"], "diamantina")
+        self.assertEqual(schedule["destinationDate"], "2026-10-09")
+        self.assertEqual(schedule["initialStopOrder"], ["peiro", "araxa", "cordisburgo"])
+        stops = {stop["id"]: stop for stop in data["routeStops"]}
+        self.assertEqual(stops["peiro"]["initialDate"], "2026-10-07")
+        self.assertEqual(stops["araxa"]["initialDate"], "2026-10-07")
+        self.assertEqual(stops["cordisburgo"]["initialDate"], "2026-10-08")
+        self.assertTrue(stops["araxa"]["overnight"])
+        self.assertEqual(stops["araxa"]["stayDays"], [1, 1])
+        generated = (ROOT / "data" / "route-data.generated.js").read_text(encoding="utf-8")
+        self.assertIn('"schedule"', generated)
+        self.assertIn('"initialDate": "2026-10-08"', generated)
 
     def test_araxa_and_peiropolis_research_is_embedded_in_route_stops(self):
         data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
