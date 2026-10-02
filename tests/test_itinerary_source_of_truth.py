@@ -13,7 +13,7 @@ EXPECTED_ROUTE_STOP_IDS = (
     "cipo", "tabuleiro", "serro", "diamantina",
     "peruacu", "delfinopolis", "cordisburgo", "belohorizonte",
     "brumadinho", "saojoaodelrei", "tiradentes", "bichinho",
-    "catasaltas", "santabarbara", "sabara", "caete", "peiro", "araxa",
+    "catasaltas", "santabarbara", "sabara", "caete", "peiro", "araxa", "camposaltos",
     "itabirito", "ourobranco", "setelagoas",
     "presidentekubitschek", "ipoema", "itambemato", "raposos", "novalima", "rioacima",
     "boa-casa-do-rei-bistro", "boa-dartagnan", "boa-divinorestaurante",
@@ -23,6 +23,37 @@ EXPECTED_ROUTE_STOP_IDS = (
 
 
 class ItinerarySourceOfTruthTests(unittest.TestCase):
+    def test_overnight_text_and_duration_follow_json(self):
+        if not shutil.which("node"):
+            self.skipTest("Node.js is required for the overnight runtime test")
+        page = (ROOT / "index.html").read_text(encoding="utf-8")
+        helper = re.search(r"const overnightLabel=.*?;\n", page).group(0)
+        script = """
+const selected=new Set(['city']),dates=new Map([['city','2026-10-07']]);
+const fmt=date=>date.slice(8,10)+'/'+date.slice(5,7);
+const add=(date,n)=>{const value=new Date(date+'T12:00:00Z');value.setUTCDate(value.getUTCDate()+n);return value.toISOString().slice(0,10)};
+""" + helper + """
+const stop={id:'city',overnight:{nights:3,label:'Hospedagem {start} até {end}',dayLabel:'Hospedagem em {name}'}};
+const first=overnightLabel(stop);
+dates.set('city','2026-10-08');const changed=overnightLabel(stop);
+selected.delete('city');const removed=overnightLabel(stop);
+console.log(JSON.stringify([first,changed,removed,overnightLabel({id:'city'})]));
+"""
+        result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
+        self.assertEqual(json.loads(result.stdout), ["Hospedagem 07/10 até 10/10", "Hospedagem 08/10 até 11/10", "", ""])
+        self.assertNotIn("Pernoite", page)
+        self.assertNotIn("PERNOITE", page)
+
+    def test_validator_rejects_invalid_overnight_definitions(self):
+        from scripts.generate_route_data import validate
+        original = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        for value in (True, {}, {"nights": 0, "label": "Teste", "dayLabel": "Teste"}, {"nights": True, "label": "Teste", "dayLabel": "Teste"}, {"nights": 1.5, "label": "Teste", "dayLabel": "Teste"}, {"nights": 2, "label": None, "dayLabel": "Teste"}):
+            with self.subTest(value=value):
+                data = json.loads(json.dumps(original))
+                data["routeStops"][0]["overnight"] = value
+                with self.assertRaisesRegex(ValueError, "overnight"):
+                    validate(data)
+
     def test_attraction_access_uses_its_record_independently_of_city_and_name(self):
         if not shutil.which("node"):
             self.skipTest("Node.js is required for the access metadata runtime test")
@@ -91,7 +122,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         self.assertEqual(schedule["startDate"], "2026-10-07")
         self.assertEqual(schedule["destinationId"], "diamantina")
         self.assertEqual(schedule["destinationDate"], "2026-10-09")
-        self.assertEqual(schedule["initialStopOrder"], ["peiro", "araxa", "cordisburgo", "setelagoas", "belohorizonte"])
+        self.assertEqual(schedule["initialStopOrder"], ["peiro", "araxa", "camposaltos", "cordisburgo", "setelagoas", "belohorizonte"])
         stops = {stop["id"]: stop for stop in data["routeStops"]}
         self.assertEqual(stops["peiro"]["initialDate"], "2026-10-07")
         self.assertEqual(stops["araxa"]["initialDate"], "2026-10-07")
@@ -101,7 +132,12 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         self.assertTrue(stops["cordisburgo"]["selectedByDefault"])
         self.assertTrue(stops["setelagoas"]["selectedByDefault"])
         self.assertTrue(stops["belohorizonte"]["selectedByDefault"])
-        self.assertTrue(stops["araxa"]["overnight"])
+        self.assertNotIn("overnight", stops["araxa"])
+        self.assertNotIn("overnight", stops["cordisburgo"])
+        self.assertEqual(stops["camposaltos"]["overnight"]["nights"], 1)
+        self.assertEqual(stops["camposaltos"]["initialDate"], "2026-10-07")
+        self.assertTrue(stops["camposaltos"]["selectedByDefault"])
+        self.assertEqual(stops["belohorizonte"]["overnight"]["nights"], 1)
         self.assertEqual(stops["araxa"]["stayDays"], [1, 1])
         generated = (ROOT / "data" / "route-data.generated.js").read_text(encoding="utf-8")
         self.assertIn('"schedule"', generated)

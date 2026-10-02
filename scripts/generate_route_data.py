@@ -179,8 +179,14 @@ def validate(data):
             or stay_days[0] > stay_days[1]
         ):
             raise ValueError(f"routeStops[{index}].stayDays must be an ordered pair of non-negative numbers")
-        if "overnight" in stop and type(stop["overnight"]) is not bool:
-            raise ValueError(f"routeStops[{index}].overnight must be a boolean")
+        if "overnight" in stop:
+            overnight = stop["overnight"]
+            if (
+                not isinstance(overnight, dict)
+                or type(overnight.get("nights")) is not int or overnight["nights"] < 1
+                or any(not isinstance(overnight.get(field), str) or not overnight[field].strip() for field in ("label", "dayLabel"))
+            ):
+                raise ValueError(f"routeStops[{index}].overnight must define positive integer nights, label, and dayLabel")
         validate_visit_rules(stop, f"routeStops[{index}]")
         if not isinstance(stop["name"], str) or not stop["name"].strip():
             raise ValueError(f"routeStops[{index}].name must be a non-empty string")

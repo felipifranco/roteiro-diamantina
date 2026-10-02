@@ -53,17 +53,18 @@ assert "d!==schedule.destinationDate||d===selectedDate" in html, "city date opti
 assert "candidates(date).map" in html, "date options should include the inherited date"
 assert "routeStops.forEach(s=>" in html, "selected attractions must update markers and popups"
 schedule = data["schedule"]
-assert schedule["initialStopOrder"] == ['peiro', 'araxa', 'cordisburgo', 'setelagoas', 'belohorizonte'], "initial stop order should be configured in the JSON"
+assert schedule["initialStopOrder"] == ['peiro', 'araxa', 'camposaltos', 'cordisburgo', 'setelagoas', 'belohorizonte'], "initial stop order should be configured in the JSON"
 assert "const initialStops=schedule.initialStopOrder" in html, "the page should read the initial stop order from generated data"
 assert "if(s.initialDate)dates.set(s.id,s.initialDate)" in html, "initial stop dates should come from the JSON"
 defaults = {stop["id"]: stop.get("selectedByDefault", False) for stop in data["routeStops"]}
-assert all(defaults.get(stop_id) for stop_id in ('mirassol', 'diamantina', 'peiro', 'araxa', 'cordisburgo', 'setelagoas', 'belohorizonte')), "origin, destination, and the selected route cities must be configured in the JSON"
+assert all(defaults.get(stop_id) for stop_id in ('mirassol', 'diamantina', 'peiro', 'araxa', 'camposaltos', 'cordisburgo', 'setelagoas', 'belohorizonte')), "origin, destination, and the selected route cities must be configured in the JSON"
 attractions = {stop["id"]: {item["name"]: item.get("selectedByDefault", False) for item in stop.get("attractions", [])} for stop in data["routeStops"]}
 assert all(attractions['peiro'].values()), "both Peirópolis tours must start selected"
 assert all(selected for name, selected in attractions['cordisburgo'].items() if name != 'Gruta do Maquiné'), "Cordisburgo attractions except Gruta do Maquiné must start selected"
 assert not any(attractions['setelagoas'].values()), "Sete Lagoas attractions must not start selected"
-assert "new Set(stops.filter(s=>s.overnight).map(s=>s.id))" in html, "overnight stops should come from the JSON"
-assert "🛏 Pernoite ${fmt(dates.get(s.id))} → ${fmt(add(dates.get(s.id),1))}" in html, "overnight label must follow the stop's date"
+assert "s.overnight&&selected.has(s.id)" in html, "overnight stops should come from the JSON"
+assert "fmt(add(dates.get(s.id),s.overnight.nights))" in html, "overnight duration must come from the JSON"
+assert "Pernoite" not in html and "PERNOITE" not in html, "overnight text must come from the JSON"
 assert "if(routed.has(city.id))labels.set(city.id,String(i+1))" in html, "map sequence markers must number the first intermediate stop as 1"
 assert "`${i+1}${String.fromCharCode(97+j)}`" in html, "tour markers should share their city's number (3a, 3b…)"
 assert "String(stopsInOrder.indexOf(s)+1)" not in html, "map marker numbering must not count the origin as a numbered stop"
