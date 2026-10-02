@@ -6240,7 +6240,8 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "São Joaquim de Bicas"
     },
     {
       "id": "boa-dartagnan",
@@ -6274,7 +6275,8 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Belo Horizonte"
     },
     {
       "id": "boa-divinorestaurante",
@@ -6308,7 +6310,8 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Nova Lima"
     },
     {
       "id": "boa-domenico-pizzeria-e-trattoria",
@@ -6342,7 +6345,8 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Belo Horizonte"
     },
     {
       "id": "boa-maria-das-trancas",
@@ -6376,7 +6380,8 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Belo Horizonte"
     },
     {
       "id": "boa-relicario-gastronomia",
@@ -6410,7 +6415,8 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Diamantina"
     },
     {
       "id": "boa-taste-vin",
@@ -6444,7 +6450,8 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Belo Horizonte"
     },
     {
       "id": "boa-xapuri-2",
@@ -6478,7 +6485,8 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Belo Horizonte"
     }
   ],
   "accessAlerts": [

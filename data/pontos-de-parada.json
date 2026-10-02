@@ -6147,7 +6147,8 @@
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "São Joaquim de Bicas"
     },
     {
       "id": "boa-dartagnan",
@@ -6181,7 +6182,8 @@
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Belo Horizonte"
     },
     {
       "id": "boa-divinorestaurante",
@@ -6215,7 +6217,8 @@
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Nova Lima"
     },
     {
       "id": "boa-domenico-pizzeria-e-trattoria",
@@ -6249,7 +6252,8 @@
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Belo Horizonte"
     },
     {
       "id": "boa-maria-das-trancas",
@@ -6283,7 +6287,8 @@
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Belo Horizonte"
     },
     {
       "id": "boa-relicario-gastronomia",
@@ -6317,7 +6322,8 @@
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Diamantina"
     },
     {
       "id": "boa-taste-vin",
@@ -6351,7 +6357,8 @@
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Belo Horizonte"
     },
     {
       "id": "boa-xapuri-2",
@@ -6385,7 +6392,8 @@
       },
       "ticket": {
         "status": "reserva_indeterminada"
-      }
+      },
+      "city": "Belo Horizonte"
     }
   ],
   "intro": "Paradas e atrações de Minas Gerais reunidas a partir de roteiros comerciais de agências, guias e fontes oficiais. O cadastro descreve o interesse de cada visita e sua relação com o circuito; a estrela identifica pontos com inclusão comprovada em roteiro comercial. Estimativa de tempo é uma referência de planejamento. Tempo real publicado reúne durações atribuídas às fontes consultadas, separadas das estimativas; registros antigos sem link individual ainda precisam de conferência da fonte. Valores sem duração ficam como — ou Duração a confirmar. A classificação etária e o ingresso/agendamento são definidos para cada passeio, sem herdar as regras da cidade. Acessibilidade e esforço de acesso são informações distintas; A confirmar indica que a condição individual ainda precisa ser verificada.",

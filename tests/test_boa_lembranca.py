@@ -38,7 +38,7 @@ class BoaLembrancaTests(unittest.TestCase):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("if(s.kind==='restaurante')return `<div class=\"dish-pin\"", page)
         self.assertIn("routeStops.filter(s=>s.selectedByDefault).map(s=>s.id)", page)
-        self.assertIn("Prato ${s.dish.year}: ${s.dish.name}", page)
+        self.assertIn("Prato: ${s.dish.name}", page)
 
     def test_restaurant_enters_route_as_its_own_stop(self):
         if not shutil.which("node"):
