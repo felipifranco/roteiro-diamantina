@@ -510,11 +510,12 @@
       "sights": [
         "Centro histórico",
         "Igrejas e museus",
-        "Minas históricas"
+        "Minas históricas",
+        "Núcleo histórico · Amarantina"
       ],
       "kid": "Ladeiras e calçamento irregular podem dificultar carrinho; planeje pausas e hospedagem bem localizada.",
       "url": "https://ouropreto.org.br/atracoes-turisticas",
-      "guideBriefing": "Ouro Preto, antiga Vila Rica, foi um dos centros mais ricos e politicamente importantes da América portuguesa durante o ciclo do ouro. A cidade permite acompanhar a mineração, a fiscalização da Coroa, a escravidão, as irmandades religiosas, a Inconfidência Mineira e o florescimento do barroco. Minas, igrejas, repartições e casarões são partes de uma mesma estrutura econômica e social do século XVIII.",
+      "guideBriefing": "Ouro Preto, antiga Vila Rica, foi um dos centros mais ricos e politicamente importantes da América portuguesa durante o ciclo do ouro. A cidade permite acompanhar a mineração, a fiscalização da Coroa, a escravidão, as irmandades religiosas, a Inconfidência Mineira e o florescimento do barroco. Minas, igrejas, repartições e casarões são partes de uma mesma estrutura econômica e social do século XVIII.\n\nAmarantina: Amarantina é um antigo distrito de Ouro Preto situado em um corredor histórico de circulação entre os núcleos mineradores. Seu casario, igreja e traçado preservam a escala de um povoado colonial fora da sede de Vila Rica. A parada ajuda a perceber que a ocupação do ciclo do ouro produziu uma rede de pequenos núcleos conectados por caminhos, e não apenas as grandes cidades hoje mais conhecidas.",
       "profile": "História · barroco · mineração",
       "attractions": [
         {
@@ -927,6 +928,31 @@
             "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
             "level": "moderate"
           }
+        },
+        {
+          "name": "Núcleo histórico · Amarantina",
+          "description": "Distrito antigo no caminho de Ouro Preto, com igreja, casario e identidade própria ligada às rotas coloniais.",
+          "agencyRationale": "Amarantina é útil quando o circuito quer mostrar que o patrimônio colonial não se limita às sedes municipais. Como distrito no corredor de Ouro Preto, pode ser encaixada sem transformar o dia em outro destino principal.",
+          "visitType": "Caminhada / externa",
+          "estimatedDuration": "1 h",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: Amarantina, município de Ouro Preto. Distrito antigo no caminho de Ouro Preto, com igreja, casario e identidade própria ligada às rotas coloniais. Amarantina é útil quando o circuito quer mostrar que o patrimônio colonial não se limita às sedes municipais. Como distrito no corredor de Ouro Preto, pode ser encaixada sem transformar o dia em outro destino principal.",
+          "lat": -20.313221,
+          "lon": -43.710354,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "locality": "Amarantina",
+          "mapQuery": "Núcleo histórico, Amarantina, Ouro Preto MG",
+          "catalogName": "Núcleo histórico · Amarantina"
         }
       ],
       "relevanceSource": "agency",
@@ -944,7 +970,8 @@
         "label": "Atenção a ladeiras",
         "note": "Centro histórico tem ladeiras e calçamento irregular; atrativos variam.",
         "level": "moderate"
-      }
+      },
+      "municipality": "Ouro Preto"
     },
     {
       "id": "mariana",
@@ -1348,7 +1375,7 @@
     },
     {
       "id": "tabuleiro",
-      "name": "Tabuleiro · Conceição do Mato Dentro",
+      "name": "Conceição do Mato Dentro · Tabuleiro",
       "lat": -19.03722,
       "lon": -43.42528,
       "kind": "natureza",
@@ -1390,7 +1417,8 @@
             "label": "Exigente",
             "note": "Trilha, degraus ou terreno irregular podem ser necessários; confirme duração, desnível e alternativa de acesso.",
             "level": "hard"
-          }
+          },
+          "mapQuery": "Cachoeira do Tabuleiro, Conceição do Mato Dentro MG"
         },
         {
           "name": "Centro histórico",
@@ -1417,7 +1445,8 @@
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "mapQuery": "Centro histórico, Conceição do Mato Dentro MG"
         },
         {
           "name": "Serra do Espinhaço",
@@ -1444,7 +1473,8 @@
             "label": "Exigente",
             "note": "Cachoeira e parte baixa envolvem trilha; confirmar percurso, desnível e condições na portaria.",
             "level": "hard"
-          }
+          },
+          "mapQuery": "Serra do Espinhaço, Conceição do Mato Dentro MG"
         },
         {
           "name": "Igreja Matriz de Nossa Senhora da Conceição",
@@ -1472,7 +1502,8 @@
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "mapQuery": "Igreja Matriz de Nossa Senhora da Conceição, Conceição do Mato Dentro MG"
         }
       ],
       "relevanceSource": "agency",
@@ -1490,7 +1521,9 @@
         "label": "Exigente",
         "note": "Cachoeira e parte baixa envolvem trilha; confirmar percurso, desnível e condições na portaria.",
         "level": "hard"
-      }
+      },
+      "municipality": "Conceição do Mato Dentro",
+      "mapQuery": "Tabuleiro, Conceição do Mato Dentro MG"
     },
     {
       "id": "serro",
@@ -1503,11 +1536,18 @@
       "sights": [
         "Centro histórico",
         "Arquitetura colonial",
-        "Queijo do Serro"
+        "Queijo do Serro",
+        "Igreja de Nossa Senhora do Rosário · Milho Verde",
+        "Núcleo histórico · Milho Verde",
+        "Cachoeiras · Milho Verde",
+        "Cachoeira do Comércio · São Gonçalo do Rio das Pedras",
+        "Núcleo histórico · São Gonçalo do Rio das Pedras",
+        "Igrejas e capelas · São Gonçalo do Rio das Pedras",
+        "Cachoeiras e Serra do Espinhaço · São Gonçalo do Rio das Pedras"
       ],
       "kid": "Parada cultural/gastronômica mais flexível que trilhas; verificar hospedagem e pausas.",
       "url": "https://www.serro.mg.gov.br/portal/turismo",
-      "guideBriefing": "O Serro, antigo Arraial do Ribeirão das Minas de Santo Antônio do Bom Retiro do Serro do Frio, formou-se no começo do século XVIII com a mineração. Tornou-se centro administrativo de uma vasta região que depois se ligaria à exploração de diamantes. O casario e as igrejas preservam essa origem, enquanto o Queijo do Serro representa uma tradição rural desenvolvida paralelamente à economia mineradora.",
+      "guideBriefing": "O Serro, antigo Arraial do Ribeirão das Minas de Santo Antônio do Bom Retiro do Serro do Frio, formou-se no começo do século XVIII com a mineração. Tornou-se centro administrativo de uma vasta região que depois se ligaria à exploração de diamantes. O casario e as igrejas preservam essa origem, enquanto o Queijo do Serro representa uma tradição rural desenvolvida paralelamente à economia mineradora.\n\nMilho Verde: Milho Verde surgiu no antigo território do Serro Frio, em meio aos caminhos da mineração e dos diamantes. O pequeno núcleo preserva a escala dos arraiais que serviam às rotas coloniais, com capelas, casario e caminhos inseridos na Serra do Espinhaço. Sua história também se cruza com personagens e tradições da região diamantífera, enquanto cachoeiras e campos rupestres mostram a paisagem que condicionava esses deslocamentos.\n\nSão Gonçalo do Rio das Pedras: São Gonçalo do Rio das Pedras já possuía casas, roças e engenhos no início do século XVIII. Situado entre Serro e a região diamantífera, viveu sob a vigilância da Coroa sobre os caminhos e o garimpo de diamantes. O povoado preserva a escala e a paisagem dos pequenos núcleos que davam apoio à circulação colonial na Serra do Espinhaço.",
       "profile": "História · Estrada Real · gastronomia",
       "attractions": [
         {
@@ -1815,6 +1855,208 @@
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
           }
+        },
+        {
+          "name": "Igreja de Nossa Senhora do Rosário · Milho Verde",
+          "description": "Pequena igreja branca isolada diante da serra, uma das imagens mais emblemáticas da Estrada Real. O valor está tanto no templo quanto na paisagem ao redor.",
+          "agencyRationale": "É um cartão-postal muito eficiente em roteiros do Caminho dos Diamantes.",
+          "visitType": "Igreja + paisagem",
+          "estimatedDuration": "30 min",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: Milho Verde, município de Serro. Pequena igreja branca isolada diante da serra, uma das imagens mais emblemáticas da Estrada Real. O valor está tanto no templo quanto na paisagem ao redor. É um cartão-postal muito eficiente em roteiros do Caminho dos Diamantes.",
+          "lat": -18.4730041335,
+          "lon": -43.4985745087,
+          "locationAccuracy": "exact",
+          "days": "30 min",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
+          },
+          "locality": "Milho Verde",
+          "mapQuery": "Igreja de Nossa Senhora do Rosário, Milho Verde, Serro MG",
+          "catalogName": "Igreja de Nossa Senhora do Rosário · Milho Verde"
+        },
+        {
+          "name": "Núcleo histórico · Milho Verde",
+          "description": "Casario e ruas preservam a escala de um antigo povoado ligado à mineração de ouro e diamantes.",
+          "agencyRationale": "Oferece experiência de vila histórica mais tranquila que os grandes centros.",
+          "visitType": "Caminhada / externa",
+          "estimatedDuration": "1 h",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: Milho Verde, município de Serro. Casario e ruas preservam a escala de um antigo povoado ligado à mineração de ouro e diamantes. Oferece experiência de vila histórica mais tranquila que os grandes centros.",
+          "lat": -18.47324,
+          "lon": -43.49798,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Vila pode ser visitada sem trilha; cachoeiras têm acessos distintos, alguns irregulares.",
+            "level": "moderate"
+          },
+          "locality": "Milho Verde",
+          "mapQuery": "Núcleo histórico, Milho Verde, Serro MG",
+          "catalogName": "Núcleo histórico · Milho Verde"
+        },
+        {
+          "name": "Cachoeiras · Milho Verde",
+          "description": "Quedas e poços próximos ao povoado permitem alternar patrimônio e natureza no mesmo dia.",
+          "agencyRationale": "Justificam permanecer mais tempo na região em vez de apenas atravessá-la.",
+          "visitType": "Natureza / banho",
+          "estimatedDuration": "meio dia",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: Milho Verde, município de Serro. Quedas e poços próximos ao povoado permitem alternar patrimônio e natureza no mesmo dia. Justificam permanecer mais tempo na região em vez de apenas atravessá-la.",
+          "lat": -18.47324,
+          "lon": -43.49798,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "Vila pode ser visitada sem trilha; cachoeiras têm acessos distintos, alguns irregulares.",
+            "level": "moderate"
+          },
+          "locality": "Milho Verde",
+          "mapQuery": "Cachoeiras, Milho Verde, Serro MG",
+          "catalogName": "Cachoeiras · Milho Verde"
+        },
+        {
+          "name": "Cachoeira do Comércio · São Gonçalo do Rio das Pedras",
+          "lat": -18.41676,
+          "lon": -43.49807,
+          "locationAccuracy": "exact",
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
+            "level": "moderate"
+          },
+          "locality": "São Gonçalo do Rio das Pedras",
+          "mapQuery": "Cachoeira do Comércio, São Gonçalo do Rio das Pedras, Serro MG",
+          "catalogName": "Cachoeira do Comércio · São Gonçalo do Rio das Pedras",
+          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. "
+        },
+        {
+          "name": "Núcleo histórico · São Gonçalo do Rio das Pedras",
+          "description": "Pequeno povoado surgido nos caminhos da mineração, preservando arquitetura simples e ritmo rural.",
+          "agencyRationale": "É uma parada autêntica no trajeto da Estrada Real entre Serro e Diamantina.",
+          "visitType": "Caminhada / externa",
+          "estimatedDuration": "1 h",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Pequeno povoado surgido nos caminhos da mineração, preservando arquitetura simples e ritmo rural. É uma parada autêntica no trajeto da Estrada Real entre Serro e Diamantina.",
+          "lat": -18.42003,
+          "lon": -43.49561,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
+            "level": "moderate"
+          },
+          "locality": "São Gonçalo do Rio das Pedras",
+          "mapQuery": "Núcleo histórico, São Gonçalo do Rio das Pedras, Serro MG",
+          "catalogName": "Núcleo histórico · São Gonçalo do Rio das Pedras"
+        },
+        {
+          "name": "Igrejas e capelas · São Gonçalo do Rio das Pedras",
+          "description": "Pequenos templos ajudam a contar a formação religiosa e comunitária dos povoados mineradores.",
+          "agencyRationale": "Complementam a narrativa das grandes igrejas barrocas com patrimônio rural.",
+          "visitType": "Circuito a pé",
+          "estimatedDuration": "1 h",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Pequenos templos ajudam a contar a formação religiosa e comunitária dos povoados mineradores. Complementam a narrativa das grandes igrejas barrocas com patrimônio rural.",
+          "lat": -18.42003,
+          "lon": -43.49561,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
+          },
+          "locality": "São Gonçalo do Rio das Pedras",
+          "mapQuery": "Igrejas e capelas, São Gonçalo do Rio das Pedras, Serro MG",
+          "catalogName": "Igrejas e capelas · São Gonçalo do Rio das Pedras"
+        },
+        {
+          "name": "Cachoeiras e Serra do Espinhaço · São Gonçalo do Rio das Pedras",
+          "description": "Trilhas, cursos d'água e campos rupestres cercam o distrito.",
+          "agencyRationale": "Permitem inserir natureza sem abandonar o eixo histórico da viagem.",
+          "visitType": "Natureza / trilha",
+          "estimatedDuration": "meio dia",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Trilhas, cursos d'água e campos rupestres cercam o distrito. Permitem inserir natureza sem abandonar o eixo histórico da viagem.",
+          "lat": -18.42003,
+          "lon": -43.49561,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Variável",
+            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
+            "level": "moderate"
+          },
+          "locality": "São Gonçalo do Rio das Pedras",
+          "mapQuery": "Cachoeiras e Serra do Espinhaço, São Gonçalo do Rio das Pedras, Serro MG",
+          "catalogName": "Cachoeiras e Serra do Espinhaço · São Gonçalo do Rio das Pedras"
         }
       ],
       "relevanceSource": "agency",
@@ -1832,259 +2074,8 @@
         "label": "Atenção a ladeiras",
         "note": "Centro histórico tem calçamento e desníveis; escolher trechos curtos.",
         "level": "moderate"
-      }
-    },
-    {
-      "id": "milhoverde",
-      "name": "Milho Verde",
-      "lat": -18.47324,
-      "lon": -43.49798,
-      "kind": "natureza",
-      "type": "natureza",
-      "days": "½–1 dia",
-      "sights": [
-        "Igreja do Rosário",
-        "Vila histórica",
-        "Cachoeiras"
-      ],
-      "kid": "Estradas e acessos a cachoeiras podem ser rústicos; considerar visita à vila e evitar agenda apertada.",
-      "url": "https://www.serro.mg.gov.br/portal/turismo/0/9/748/Milho-Verde",
-      "guideBriefing": "Milho Verde surgiu no antigo território do Serro Frio, em meio aos caminhos da mineração e dos diamantes. O pequeno núcleo preserva a escala dos arraiais que serviam às rotas coloniais, com capelas, casario e caminhos inseridos na Serra do Espinhaço. Sua história também se cruza com personagens e tradições da região diamantífera, enquanto cachoeiras e campos rupestres mostram a paisagem que condicionava esses deslocamentos.",
-      "profile": "Vila histórica · natureza",
-      "attractions": [
-        {
-          "name": "Igreja de Nossa Senhora do Rosário",
-          "description": "Pequena igreja branca isolada diante da serra, uma das imagens mais emblemáticas da Estrada Real. O valor está tanto no templo quanto na paisagem ao redor.",
-          "agencyRationale": "É um cartão-postal muito eficiente em roteiros do Caminho dos Diamantes.",
-          "visitType": "Igreja + paisagem",
-          "estimatedDuration": "30 min",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Pequena igreja branca isolada diante da serra, uma das imagens mais emblemáticas da Estrada Real. O valor está tanto no templo quanto na paisagem ao redor. É um cartão-postal muito eficiente em roteiros do Caminho dos Diamantes.",
-          "lat": -18.4730041335,
-          "lon": -43.4985745087,
-          "locationAccuracy": "exact",
-          "days": "30 min",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          }
-        },
-        {
-          "name": "Núcleo histórico",
-          "description": "Casario e ruas preservam a escala de um antigo povoado ligado à mineração de ouro e diamantes.",
-          "agencyRationale": "Oferece experiência de vila histórica mais tranquila que os grandes centros.",
-          "visitType": "Caminhada / externa",
-          "estimatedDuration": "1 h",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Casario e ruas preservam a escala de um antigo povoado ligado à mineração de ouro e diamantes. Oferece experiência de vila histórica mais tranquila que os grandes centros.",
-          "lat": -18.47324,
-          "lon": -43.49798,
-          "locationAccuracy": "city-center",
-          "days": "1 h",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Vila pode ser visitada sem trilha; cachoeiras têm acessos distintos, alguns irregulares.",
-            "level": "moderate"
-          }
-        },
-        {
-          "name": "Cachoeiras",
-          "description": "Quedas e poços próximos ao povoado permitem alternar patrimônio e natureza no mesmo dia.",
-          "agencyRationale": "Justificam permanecer mais tempo na região em vez de apenas atravessá-la.",
-          "visitType": "Natureza / banho",
-          "estimatedDuration": "meio dia",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Quedas e poços próximos ao povoado permitem alternar patrimônio e natureza no mesmo dia. Justificam permanecer mais tempo na região em vez de apenas atravessá-la.",
-          "lat": -18.47324,
-          "lon": -43.49798,
-          "locationAccuracy": "city-center",
-          "days": "meio dia",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "Vila pode ser visitada sem trilha; cachoeiras têm acessos distintos, alguns irregulares.",
-            "level": "moderate"
-          }
-        }
-      ],
-      "relevanceSource": "agency",
-      "ageClassification": {
-        "status": "indeterminada"
       },
-      "ticket": {
-        "status": "por_passeio"
-      },
-      "stayDays": [
-        0.5,
-        1
-      ],
-      "accessEffort": {
-        "label": "Variável",
-        "note": "Vila pode ser visitada sem trilha; cachoeiras têm acessos distintos, alguns irregulares.",
-        "level": "moderate"
-      }
-    },
-    {
-      "id": "saogoncalo",
-      "name": "São Gonçalo do Rio das Pedras",
-      "lat": -18.42003,
-      "lon": -43.49561,
-      "kind": "natureza",
-      "type": "natureza",
-      "days": "½ dia",
-      "sights": [
-        "Povoado histórico",
-        "Cachoeira do Comércio",
-        "Paisagem do Espinhaço"
-      ],
-      "kid": "Povoado pequeno; confirme estrutura, hospedagem e acesso às cachoeiras.",
-      "url": "https://www.serro.mg.gov.br/portal/turismo",
-      "attractions": [
-        {
-          "name": "Cachoeira do Comércio",
-          "lat": -18.41676,
-          "lon": -43.49807,
-          "locationAccuracy": "exact",
-          "relevanceSource": "guide",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
-            "level": "moderate"
-          }
-        },
-        {
-          "name": "Núcleo histórico",
-          "description": "Pequeno povoado surgido nos caminhos da mineração, preservando arquitetura simples e ritmo rural.",
-          "agencyRationale": "É uma parada autêntica no trajeto da Estrada Real entre Serro e Diamantina.",
-          "visitType": "Caminhada / externa",
-          "estimatedDuration": "1 h",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Pequeno povoado surgido nos caminhos da mineração, preservando arquitetura simples e ritmo rural. É uma parada autêntica no trajeto da Estrada Real entre Serro e Diamantina.",
-          "lat": -18.42003,
-          "lon": -43.49561,
-          "locationAccuracy": "city-center",
-          "days": "1 h",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
-            "level": "moderate"
-          }
-        },
-        {
-          "name": "Igrejas e capelas",
-          "description": "Pequenos templos ajudam a contar a formação religiosa e comunitária dos povoados mineradores.",
-          "agencyRationale": "Complementam a narrativa das grandes igrejas barrocas com patrimônio rural.",
-          "visitType": "Circuito a pé",
-          "estimatedDuration": "1 h",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Pequenos templos ajudam a contar a formação religiosa e comunitária dos povoados mineradores. Complementam a narrativa das grandes igrejas barrocas com patrimônio rural.",
-          "lat": -18.42003,
-          "lon": -43.49561,
-          "locationAccuracy": "city-center",
-          "days": "1 h",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          }
-        },
-        {
-          "name": "Cachoeiras e Serra do Espinhaço",
-          "description": "Trilhas, cursos d'água e campos rupestres cercam o distrito.",
-          "agencyRationale": "Permitem inserir natureza sem abandonar o eixo histórico da viagem.",
-          "visitType": "Natureza / trilha",
-          "estimatedDuration": "meio dia",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Trilhas, cursos d'água e campos rupestres cercam o distrito. Permitem inserir natureza sem abandonar o eixo histórico da viagem.",
-          "lat": -18.42003,
-          "lon": -43.49561,
-          "locationAccuracy": "city-center",
-          "days": "meio dia",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Variável",
-            "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
-            "level": "moderate"
-          }
-        }
-      ],
-      "guideBriefing": "São Gonçalo do Rio das Pedras já possuía casas, roças e engenhos no início do século XVIII. Situado entre Serro e a região diamantífera, viveu sob a vigilância da Coroa sobre os caminhos e o garimpo de diamantes. O povoado preserva a escala e a paisagem dos pequenos núcleos que davam apoio à circulação colonial na Serra do Espinhaço.",
-      "profile": "Vila histórica · natureza",
-      "relevanceSource": "agency",
-      "ageClassification": {
-        "status": "indeterminada"
-      },
-      "ticket": {
-        "status": "por_passeio"
-      },
-      "stayDays": [
-        0.5,
-        0.5
-      ],
-      "accessEffort": {
-        "label": "Variável",
-        "note": "A cachoeira pode exigir caminhada; confirmar distância e terreno com guia local.",
-        "level": "moderate"
-      }
+      "municipality": "Serro"
     },
     {
       "id": "diamantina",
@@ -2099,7 +2090,14 @@
         "Casa de JK",
         "Casa de Chica da Silva",
         "Igreja Nossa Senhora do Carmo",
-        "Vesperata"
+        "Vesperata",
+        "Gruta do Salitre · Extração / Curralinho",
+        "Experiência de garimpo · Extração / Curralinho",
+        "Vila de Biribiri · Biribiri",
+        "Cachoeiras · Biribiri",
+        "Trilhas do Parque Estadual do Biribiri · Biribiri",
+        "Núcleo histórico e artesanato de Mendanha · Mendanha",
+        "Povoado histórico do Vau · Vau"
       ],
       "kid": "Base para reduzir deslocamentos; confira calendário de eventos, acesso da hospedagem e pausas.",
       "url": "https://visitediamantina.com.br/",
@@ -2434,14 +2432,14 @@
           "lon": -43.60065,
           "locationAccuracy": "city-center",
           "catalogName": "Garimpo Real",
-          "description": "Experiência de garimpo artesanal ligada à história dos diamantes.",
+          "description": "Experiência de garimpo artesanal ligada à história dos diamantes, próximo ao aeroporto de Diamantina, conforme o portal turístico de Minas Gerais.",
           "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
           "visitType": "Experiência / histórica",
           "estimatedDuration": "—",
           "publishedDuration": "—",
           "oneYearOld": "A confirmar",
           "accessibility": "A confirmar",
-          "guideBriefing": "Experiência de garimpo artesanal ligada à história dos diamantes.",
+          "guideBriefing": "Experiência de garimpo artesanal ligada à história dos diamantes, próximo ao aeroporto de Diamantina, conforme o portal turístico de Minas Gerais. O portal descreve práticas com bateias e peneiras e conversa com trabalhadores. Confirme funcionamento, agendamento e ponto de encontro com o responsável. A coordenada deste cadastro continua sendo uma referência genérica de Diamantina. Não foi comprovada equivalência com a opção Experiência de garimpo cadastrada em Curralinho/Extração.",
           "days": "—",
           "relevanceSource": "agency",
           "ageClassification": {
@@ -2454,7 +2452,14 @@
             "label": "Atenção a ladeiras",
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
-          }
+          },
+          "mapQuery": "Garimpo Real Diamantina MG",
+          "visitLinks": [
+            {
+              "label": "Garimpo Real · Turismo de Minas Gerais",
+              "url": "https://www.minasgerais.com.br/pt/atracoes/diamantina/garimpo-real"
+            }
+          ]
         },
         {
           "name": "Igreja das Mercês",
@@ -2595,43 +2600,60 @@
             "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
             "level": "moderate"
           }
-        }
-      ],
-      "guideBriefing": "Diamantina, antigo Arraial do Tijuco, desenvolveu-se com a descoberta e o controle dos diamantes no século XVIII. A Coroa portuguesa criou uma administração especialmente rígida para a região, deixando marcas na organização social e urbana. O centro histórico, a memória de Chica da Silva, a tradição musical e a trajetória de Juscelino Kubitschek revelam diferentes períodos de uma cidade cuja identidade ultrapassou o ciclo diamantífero.",
-      "profile": "História · cultura · música",
-      "relevanceSource": "agency",
-      "ageClassification": {
-        "status": "indeterminada"
-      },
-      "ticket": {
-        "status": "por_passeio"
-      },
-      "selectedByDefault": true,
-      "accessEffort": {
-        "label": "Atenção a ladeiras",
-        "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
-        "level": "moderate"
-      }
-    },
-    {
-      "id": "biribiri",
-      "name": "Biribiri",
-      "lat": -18.14464,
-      "lon": -43.61966,
-      "kind": "natureza",
-      "type": "natureza",
-      "days": "½–1 dia",
-      "sights": [
-        "Vila histórica",
-        "Cachoeiras"
-      ],
-      "kid": "Passeio regional fora do centro; confirmar estrada e acesso à água para a data escolhida.",
-      "url": "https://visitediamantina.com.br/",
-      "guideBriefing": "Biribiri representa a industrialização mineira do século XIX. A vila surgiu em torno da fábrica de tecidos criada em 1876 por iniciativa da família do bispo de Diamantina, aproveitando a força hidráulica dos cursos d’água. Casas, capela e estruturas fabris formavam uma comunidade organizada em torno do trabalho têxtil. Hoje a vila está inserida no Parque Estadual do Biribiri, unindo patrimônio industrial e paisagem do Espinhaço.",
-      "profile": "História industrial · natureza",
-      "attractions": [
+        },
         {
-          "name": "Vila de Biribiri",
+          "name": "Gruta do Salitre · Extração / Curralinho",
+          "description": "Formação rochosa de grande impacto próxima a Diamantina, com paredões e cavidades associados à paisagem mineral da região. A visita ajuda a perceber que a história diamantífera nasceu de uma geologia muito particular.",
+          "agencyRationale": "Operadoras de ecoturismo de Diamantina a combinam com city tour e Biribiri para ligar a história da mineração à paisagem que a produziu.",
+          "visitType": "Visita turística",
+          "estimatedDuration": "1 h",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: Extração / Curralinho, município de Diamantina. Formação rochosa de grande impacto próxima a Diamantina, com paredões e cavidades associados à paisagem mineral da região. A visita ajuda a perceber que a história diamantífera nasceu de uma geologia muito particular. Roteiros organizados de ecoturismo de Diamantina a combinam com city tour e Biribiri para ligar a história da mineração à paisagem que a produziu.",
+          "lat": -18.27952,
+          "lon": -43.53615,
+          "locationAccuracy": "exact",
+          "days": "1 h",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "agendamento",
+            "url": "https://www.diamantina.mg.gov.br/portal/turismo/0/9/738/gruta-do-salitre"
+          },
+          "locality": "Extração / Curralinho",
+          "mapQuery": "Gruta do Salitre, Extração / Curralinho, Diamantina MG",
+          "catalogName": "Gruta do Salitre · Extração / Curralinho"
+        },
+        {
+          "name": "Experiência de garimpo · Extração / Curralinho",
+          "description": "Atividade interpretativa ligada às técnicas e à memória da procura por ouro e diamantes na região. O interesse é compreender na prática o trabalho que deu origem aos povoados e à economia local.",
+          "agencyRationale": "Aparece em pacotes porque transforma a narrativa do ciclo dos diamantes em experiência participativa, em vez de apenas museológica.",
+          "visitType": "Visita turística",
+          "estimatedDuration": "1 h",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: Extração / Curralinho, município de Diamantina. Atividade interpretativa ligada às técnicas e à memória da procura por ouro e diamantes na região. O interesse é compreender na prática o trabalho que deu origem aos povoados e à economia local. Aparece em pacotes porque transforma a narrativa do ciclo dos diamantes em experiência participativa, em vez de apenas museológica.",
+          "lat": -18.31002,
+          "lon": -43.523591,
+          "locationAccuracy": "city-center",
+          "days": "1 h",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "locality": "Extração / Curralinho",
+          "mapQuery": "Experiência de garimpo, Extração / Curralinho, Diamantina MG",
+          "catalogName": "Experiência de garimpo · Extração / Curralinho"
+        },
+        {
+          "name": "Vila de Biribiri · Biribiri",
           "description": "Vila operária do século XIX criada em torno de uma fábrica têxtil, com casas, igreja e traçado preservados. É uma rara oportunidade de ver patrimônio industrial dentro de uma paisagem natural.",
           "agencyRationale": "Biribiri acrescenta a industrialização do século XIX à viagem: depois de mineração colonial, o visitante vê uma comunidade organizada em torno de uma fábrica têxtil. A proximidade de Diamantina facilita um bate-volta.",
           "visitType": "Vila histórica / caminhada",
@@ -2639,7 +2661,7 @@
           "publishedDuration": "—",
           "oneYearOld": "—",
           "accessibility": "—",
-          "guideBriefing": "Vila operária do século XIX criada em torno de uma fábrica têxtil, com casas, igreja e traçado preservados. É uma rara oportunidade de ver patrimônio industrial dentro de uma paisagem natural. Biribiri acrescenta a industrialização do século XIX à viagem: depois de mineração colonial, o visitante vê uma comunidade organizada em torno de uma fábrica têxtil. A proximidade de Diamantina facilita um bate-volta.",
+          "guideBriefing": "Localidade: Biribiri, município de Diamantina. Vila operária do século XIX criada em torno de uma fábrica têxtil, com casas, igreja e traçado preservados. É uma rara oportunidade de ver patrimônio industrial dentro de uma paisagem natural. Biribiri acrescenta a industrialização do século XIX à viagem: depois de mineração colonial, o visitante vê uma comunidade organizada em torno de uma fábrica têxtil. A proximidade de Diamantina facilita um bate-volta.",
           "lat": -18.14464,
           "lon": -43.61966,
           "locationAccuracy": "city-center",
@@ -2655,10 +2677,13 @@
             "label": "Mais fácil",
             "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
             "level": "easy"
-          }
+          },
+          "locality": "Biribiri",
+          "mapQuery": "Vila de Biribiri, Biribiri, Diamantina MG",
+          "catalogName": "Vila de Biribiri · Biribiri"
         },
         {
-          "name": "Cachoeiras",
+          "name": "Cachoeiras · Biribiri",
           "description": "Poços e quedas d'água dentro do Parque Estadual do Biribiri. Depois de um city tour de ruas, igrejas e museus, oferecem uma mudança real de ritmo e contato com a paisagem do Espinhaço.",
           "agencyRationale": "Operadoras de Vesperata combinam explicitamente city tour histórico-cultural com trilhas e cachoeiras em Biribiri, equilibrando patrimônio e natureza dentro da mesma estadia.",
           "visitType": "Natureza / banho",
@@ -2666,7 +2691,7 @@
           "publishedDuration": "—",
           "oneYearOld": "—",
           "accessibility": "—",
-          "guideBriefing": "Poços e quedas d'água dentro do Parque Estadual do Biribiri. Depois de um city tour de ruas, igrejas e museus, oferecem uma mudança real de ritmo e contato com a paisagem do Espinhaço. Roteiros organizados de Vesperata combinam explicitamente city tour histórico-cultural com trilhas e cachoeiras em Biribiri, equilibrando patrimônio e natureza dentro da mesma estadia.",
+          "guideBriefing": "Localidade: Biribiri, município de Diamantina. Poços e quedas d'água dentro do Parque Estadual do Biribiri. Depois de um city tour de ruas, igrejas e museus, oferecem uma mudança real de ritmo e contato com a paisagem do Espinhaço. Roteiros organizados de Vesperata combinam explicitamente city tour histórico-cultural com trilhas e cachoeiras em Biribiri, equilibrando patrimônio e natureza dentro da mesma estadia.",
           "lat": -18.14464,
           "lon": -43.61966,
           "locationAccuracy": "city-center",
@@ -2682,10 +2707,13 @@
             "label": "Variável",
             "note": "Vila e cachoeiras têm acessos diferentes; checar estrada e caminhada antes de sair.",
             "level": "moderate"
-          }
+          },
+          "locality": "Biribiri",
+          "mapQuery": "Cachoeiras, Biribiri, Diamantina MG",
+          "catalogName": "Cachoeiras · Biribiri"
         },
         {
-          "name": "Trilhas do Parque Estadual do Biribiri",
+          "name": "Trilhas do Parque Estadual do Biribiri · Biribiri",
           "description": "Caminhos pelo cerrado e campos rupestres levam a cursos d'água, mirantes e áreas naturais em torno da antiga vila.",
           "agencyRationale": "São incluídas para transformar Biribiri em experiência ativa, e não apenas visita fotográfica à vila histórica.",
           "visitType": "Visita turística",
@@ -2693,7 +2721,7 @@
           "publishedDuration": "—",
           "oneYearOld": "—",
           "accessibility": "—",
-          "guideBriefing": "Caminhos pelo cerrado e campos rupestres levam a cursos d'água, mirantes e áreas naturais em torno da antiga vila. São incluídas para transformar Biribiri em experiência ativa, e não apenas visita fotográfica à vila histórica.",
+          "guideBriefing": "Localidade: Biribiri, município de Diamantina. Caminhos pelo cerrado e campos rupestres levam a cursos d'água, mirantes e áreas naturais em torno da antiga vila. São incluídas para transformar Biribiri em experiência ativa, e não apenas visita fotográfica à vila histórica.",
           "lat": -18.14464,
           "lon": -43.61966,
           "locationAccuracy": "city-center",
@@ -2709,9 +2737,64 @@
             "label": "Variável",
             "note": "Vila e cachoeiras têm acessos diferentes; checar estrada e caminhada antes de sair.",
             "level": "moderate"
-          }
+          },
+          "locality": "Biribiri",
+          "mapQuery": "Trilhas do Parque Estadual do Biribiri, Biribiri, Diamantina MG",
+          "catalogName": "Trilhas do Parque Estadual do Biribiri · Biribiri"
+        },
+        {
+          "name": "Núcleo histórico e artesanato de Mendanha · Mendanha",
+          "lat": -18.11224,
+          "lon": -43.52785,
+          "locationAccuracy": "city-center",
+          "catalogName": "Núcleo histórico e artesanato de Mendanha · Mendanha",
+          "description": "Parada cultural no distrito de Mendanha incluída em roteiro de agência.",
+          "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
+          "visitType": "Cultural",
+          "estimatedDuration": "—",
+          "publishedDuration": "—",
+          "oneYearOld": "A confirmar",
+          "accessibility": "A confirmar",
+          "guideBriefing": "Localidade: Mendanha, município de Diamantina. Parada cultural no distrito de Mendanha incluída em roteiro de agência.",
+          "days": "—",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "locality": "Mendanha",
+          "mapQuery": "Núcleo histórico e artesanato de Mendanha, Mendanha, Diamantina MG"
+        },
+        {
+          "name": "Povoado histórico do Vau · Vau",
+          "lat": -18.4167,
+          "lon": -43.5333,
+          "locationAccuracy": "city-center",
+          "catalogName": "Povoado histórico do Vau · Vau",
+          "description": "Antigo ponto de travessia do Rio Jequitinhonha no Caminho dos Diamantes.",
+          "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
+          "visitType": "Histórica",
+          "estimatedDuration": "—",
+          "publishedDuration": "—",
+          "oneYearOld": "A confirmar",
+          "accessibility": "A confirmar",
+          "guideBriefing": "Localidade: Vau, município de Diamantina. Antigo ponto de travessia do Rio Jequitinhonha no Caminho dos Diamantes.",
+          "days": "—",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "locality": "Vau",
+          "mapQuery": "Povoado histórico do Vau, Vau, Diamantina MG"
         }
       ],
+      "guideBriefing": "Diamantina, antigo Arraial do Tijuco, desenvolveu-se com a descoberta e o controle dos diamantes no século XVIII. A Coroa portuguesa criou uma administração especialmente rígida para a região, deixando marcas na organização social e urbana. O centro histórico, a memória de Chica da Silva, a tradição musical e a trajetória de Juscelino Kubitschek revelam diferentes períodos de uma cidade cuja identidade ultrapassou o ciclo diamantífero.\n\nExtração / Curralinho: Curralinho, hoje Extração, é um distrito de Diamantina inserido na antiga região diamantífera. Sua história está ligada ao garimpo e aos pequenos núcleos formados ao redor das áreas de extração. A paisagem rochosa e a Gruta do Salitre ajudam a relacionar geologia e mineração com a ocupação humana do entorno de Diamantina.\n\nBiribiri: Biribiri representa a industrialização mineira do século XIX. A vila surgiu em torno da fábrica de tecidos criada em 1876 por iniciativa da família do bispo de Diamantina, aproveitando a força hidráulica dos cursos d’água. Casas, capela e estruturas fabris formavam uma comunidade organizada em torno do trabalho têxtil. Hoje a vila está inserida no Parque Estadual do Biribiri, unindo patrimônio industrial e paisagem do Espinhaço.\n\nMendanha: Distrito histórico visitado por agência em roteiro de Diamantina, com artesanato e ligação aos antigos caminhos regionais.\n\nVau: Povoado histórico no Caminho dos Diamantes, usado como parada em roteiro comercial entre Diamantina e Serro.",
+      "profile": "História · cultura · música",
       "relevanceSource": "agency",
       "ageClassification": {
         "status": "indeterminada"
@@ -2719,15 +2802,13 @@
       "ticket": {
         "status": "por_passeio"
       },
-      "stayDays": [
-        0.5,
-        1
-      ],
+      "selectedByDefault": true,
       "accessEffort": {
-        "label": "Variável",
-        "note": "Vila e cachoeiras têm acessos diferentes; checar estrada e caminhada antes de sair.",
+        "label": "Atenção a ladeiras",
+        "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
         "level": "moderate"
-      }
+      },
+      "municipality": "Diamantina"
     },
     {
       "id": "peruacu",
@@ -3830,7 +3911,7 @@
     },
     {
       "id": "bichinho",
-      "name": "Bichinho / Prados",
+      "name": "Prados · Bichinho",
       "lat": -21.099115,
       "lon": -44.117586,
       "kind": "opcional",
@@ -3867,7 +3948,8 @@
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "locality": "Bichinho"
         },
         {
           "name": "Ateliês e oficinas",
@@ -3889,7 +3971,9 @@
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "locality": "Bichinho",
+          "mapQuery": "Ateliês e oficinas, Prados MG"
         },
         {
           "name": "Cachaçarias e produtos locais",
@@ -3911,7 +3995,9 @@
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "locality": "Bichinho",
+          "mapQuery": "Cachaçarias e produtos locais, Prados MG"
         }
       ],
       "relevanceSource": "agency",
@@ -3924,82 +4010,9 @@
       "stayDays": [
         0.5,
         1
-      ]
-    },
-    {
-      "id": "curralinho",
-      "name": "Curralinho / Extração",
-      "lat": -18.31002,
-      "lon": -43.523591,
-      "kind": "opcional",
-      "type": "natureza",
-      "days": "½ dia",
-      "sights": [
-        "Gruta do Salitre",
-        "Experiência de garimpo"
       ],
-      "kid": "Acesso a gruta e garimpo pode envolver terreno irregular; confirme operação e condições com guia local.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Curralinho+Extra%C3%A7%C3%A3o+Diamantina",
-      "guideBriefing": "Curralinho, hoje Extração, é um distrito de Diamantina inserido na antiga região diamantífera. Sua história está ligada ao garimpo e aos pequenos núcleos formados ao redor das áreas de extração. A paisagem rochosa e a Gruta do Salitre ajudam a relacionar geologia e mineração com a ocupação humana do entorno de Diamantina.",
-      "profile": "Geologia · garimpo · natureza",
-      "attractions": [
-        {
-          "name": "Gruta do Salitre",
-          "description": "Formação rochosa de grande impacto próxima a Diamantina, com paredões e cavidades associados à paisagem mineral da região. A visita ajuda a perceber que a história diamantífera nasceu de uma geologia muito particular.",
-          "agencyRationale": "Operadoras de ecoturismo de Diamantina a combinam com city tour e Biribiri para ligar a história da mineração à paisagem que a produziu.",
-          "visitType": "Visita turística",
-          "estimatedDuration": "1 h",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Formação rochosa de grande impacto próxima a Diamantina, com paredões e cavidades associados à paisagem mineral da região. A visita ajuda a perceber que a história diamantífera nasceu de uma geologia muito particular. Roteiros organizados de ecoturismo de Diamantina a combinam com city tour e Biribiri para ligar a história da mineração à paisagem que a produziu.",
-          "lat": -18.27952,
-          "lon": -43.53615,
-          "locationAccuracy": "exact",
-          "days": "1 h",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "agendamento",
-            "url": "https://www.diamantina.mg.gov.br/portal/turismo/0/9/738/gruta-do-salitre"
-          }
-        },
-        {
-          "name": "Experiência de garimpo",
-          "description": "Atividade interpretativa ligada às técnicas e à memória da procura por ouro e diamantes na região. O interesse é compreender na prática o trabalho que deu origem aos povoados e à economia local.",
-          "agencyRationale": "Aparece em pacotes porque transforma a narrativa do ciclo dos diamantes em experiência participativa, em vez de apenas museológica.",
-          "visitType": "Visita turística",
-          "estimatedDuration": "1 h",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Atividade interpretativa ligada às técnicas e à memória da procura por ouro e diamantes na região. O interesse é compreender na prática o trabalho que deu origem aos povoados e à economia local. Aparece em pacotes porque transforma a narrativa do ciclo dos diamantes em experiência participativa, em vez de apenas museológica.",
-          "lat": -18.31002,
-          "lon": -43.523591,
-          "locationAccuracy": "city-center",
-          "days": "1 h",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          }
-        }
-      ],
-      "relevanceSource": "guide",
-      "ageClassification": {
-        "status": "indeterminada"
-      },
-      "ticket": {
-        "status": "por_passeio"
-      },
-      "stayDays": [
-        0.5,
-        0.5
-      ]
+      "municipality": "Prados",
+      "mapQuery": "Bichinho, Prados MG"
     },
     {
       "id": "catasaltas",
@@ -4012,11 +4025,15 @@
       "sights": [
         "Centro Histórico",
         "Matriz de Nossa Senhora da Conceição",
-        "Serra do Caraça"
+        "Serra do Caraça",
+        "Santuário e igreja neogótica · Caraça",
+        "Ruínas do antigo colégio · Caraça",
+        "Trilhas, cachoeiras e grutas · Caraça",
+        "Observação do lobo-guará · Caraça"
       ],
       "kid": "Centro tem calçamento; trilhas na serra exigem checagem individual de percurso e esforço.",
       "url": "https://www.google.com/maps/search/?api=1&query=Catas+Altas+MG",
-      "guideBriefing": "Catas Altas surgiu no início do século XVIII com a exploração de ouro aos pés da Serra do Caraça. O núcleo histórico preserva a relação entre mineração, religiosidade e uma paisagem montanhosa que sempre condicionou a cidade. A proximidade do Caraça e a tradição posterior de produção de vinho e outros produtos rurais ampliam essa leitura histórica.",
+      "guideBriefing": "Catas Altas surgiu no início do século XVIII com a exploração de ouro aos pés da Serra do Caraça. O núcleo histórico preserva a relação entre mineração, religiosidade e uma paisagem montanhosa que sempre condicionou a cidade. A proximidade do Caraça e a tradição posterior de produção de vinho e outros produtos rurais ampliam essa leitura histórica.\n\nCaraça: O Caraça reúne história religiosa, educação e conservação ambiental em uma antiga propriedade transformada em centro de formação no século XIX. O colégio recebeu gerações de alunos até o incêndio de 1968, cujas ruínas permanecem preservadas. Ao redor do santuário, a reserva protege Mata Atlântica, Cerrado e campos rupestres; a presença do lobo-guará tornou-se uma das imagens mais conhecidas do lugar.",
       "profile": "História · montanha · gastronomia",
       "attractions": [
         {
@@ -4089,6 +4106,111 @@
           "ticket": {
             "status": "indeterminado"
           }
+        },
+        {
+          "name": "Santuário e igreja neogótica · Caraça",
+          "description": "Complexo religioso isolado em um vale cercado por montanhas. A igreja neogótica contrasta com o barroco predominante nas outras cidades do roteiro.",
+          "agencyRationale": "Agências reservam tempo ao Caraça porque hospedagem, santuário, história e reserva natural acontecem no mesmo lugar. É uma mudança completa de ritmo em relação aos city tours.",
+          "visitType": "Complexo / interna + externa",
+          "estimatedDuration": "2 h",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: Caraça, município de Catas Altas. Complexo religioso isolado em um vale cercado por montanhas. A igreja neogótica contrasta com o barroco predominante nas outras cidades do roteiro. Roteiros organizados reservam tempo ao Caraça porque hospedagem, santuário, história e reserva natural acontecem no mesmo lugar. É uma mudança completa de ritmo em relação aos city tours.",
+          "lat": -20.0975,
+          "lon": -43.48842,
+          "locationAccuracy": "exact",
+          "days": "2 h",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "accessEffort": {
+            "label": "Mais fácil",
+            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
+            "level": "easy"
+          },
+          "locality": "Caraça",
+          "mapQuery": "Santuário e igreja neogótica, Caraça, Catas Altas MG",
+          "catalogName": "Santuário e igreja neogótica · Caraça"
+        },
+        {
+          "name": "Ruínas do antigo colégio · Caraça",
+          "description": "Restos preservados do tradicional colégio destruído por incêndio em 1968, que formou figuras importantes da história brasileira.",
+          "agencyRationale": "Acrescentam história educacional ao conjunto religioso.",
+          "visitType": "Histórica / caminhada",
+          "estimatedDuration": "40 min",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: Caraça, município de Catas Altas. Restos preservados do tradicional colégio destruído por incêndio em 1968, que formou figuras importantes da história brasileira. Acrescentam história educacional ao conjunto religioso.",
+          "lat": -20.0975,
+          "lon": -43.48842,
+          "locationAccuracy": "exact",
+          "days": "40 min",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "locality": "Caraça",
+          "mapQuery": "Ruínas do antigo colégio, Caraça, Catas Altas MG",
+          "catalogName": "Ruínas do antigo colégio · Caraça"
+        },
+        {
+          "name": "Trilhas, cachoeiras e grutas · Caraça",
+          "description": "A reserva particular protege milhares de hectares de Mata Atlântica e Cerrado em relevo montanhoso.",
+          "agencyRationale": "Permite dedicar um ou dois dias a natureza dentro do circuito histórico.",
+          "visitType": "Natureza / trilha",
+          "estimatedDuration": "meio dia",
+          "publishedDuration": "—",
+          "oneYearOld": "—",
+          "accessibility": "—",
+          "guideBriefing": "Localidade: Caraça, município de Catas Altas. A reserva particular protege milhares de hectares de Mata Atlântica e Cerrado em relevo montanhoso. Permite dedicar um ou dois dias a natureza dentro do circuito histórico.",
+          "lat": -20.098103,
+          "lon": -43.487693,
+          "locationAccuracy": "city-center",
+          "days": "meio dia",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "locality": "Caraça",
+          "mapQuery": "Trilhas, cachoeiras e grutas, Caraça, Catas Altas MG",
+          "catalogName": "Trilhas, cachoeiras e grutas · Caraça"
+        },
+        {
+          "name": "Observação do lobo-guará · Caraça",
+          "description": "O santuário tornou-se famoso pela visita noturna de lobos-guarás atraídos para a área próxima à escadaria. A aparição não é garantida, pois são animais silvestres.",
+          "agencyRationale": "É uma experiência emblemática que diferencia o Caraça de qualquer outra parada do roteiro.",
+          "visitType": "Observação noturna",
+          "estimatedDuration": "noite / requer pernoite",
+          "publishedDuration": "A partir de 19h30; duração indeterminada",
+          "oneYearOld": "Sim, acompanhada — Caraça admite crianças e isenta até 5 anos",
+          "accessibility": "Sim, mas espera é noturna e pode ser longa",
+          "guideBriefing": "Localidade: Caraça, município de Catas Altas. O santuário tornou-se famoso pela visita noturna de lobos-guarás atraídos para a área próxima à escadaria. A aparição não é garantida, pois são animais silvestres. É uma experiência emblemática que diferencia o Caraça de qualquer outra parada do roteiro.",
+          "lat": -20.0975,
+          "lon": -43.48842,
+          "locationAccuracy": "exact",
+          "days": "noite / requer pernoite",
+          "relevanceSource": "agency",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "locality": "Caraça",
+          "mapQuery": "Observação do lobo-guará, Caraça, Catas Altas MG",
+          "catalogName": "Observação do lobo-guará · Caraça"
         }
       ],
       "relevanceSource": "guide",
@@ -4101,7 +4223,8 @@
       "stayDays": [
         0.5,
         1
-      ]
+      ],
+      "municipality": "Catas Altas"
     },
     {
       "id": "santabarbara",
@@ -4180,131 +4303,6 @@
       "stayDays": [
         0.5,
         1
-      ]
-    },
-    {
-      "id": "caraca",
-      "name": "Santuário do Caraça",
-      "lat": -20.098103,
-      "lon": -43.487693,
-      "kind": "opcional",
-      "type": "natureza",
-      "days": "1–2 dias",
-      "sights": [
-        "Santuário e igreja neogótica",
-        "Ruínas do antigo colégio",
-        "Trilhas, cachoeiras e grutas",
-        "Observação do lobo-guará"
-      ],
-      "kid": "Trilhas variam em esforço; observação noturna do lobo exige espera e não é garantida. Confirme acesso e hospedagem.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Santuario+do+Caraca",
-      "guideBriefing": "O Caraça reúne história religiosa, educação e conservação ambiental em uma antiga propriedade transformada em centro de formação no século XIX. O colégio recebeu gerações de alunos até o incêndio de 1968, cujas ruínas permanecem preservadas. Ao redor do santuário, a reserva protege Mata Atlântica, Cerrado e campos rupestres; a presença do lobo-guará tornou-se uma das imagens mais conhecidas do lugar.",
-      "profile": "História · religiosidade · natureza",
-      "attractions": [
-        {
-          "name": "Santuário e igreja neogótica",
-          "description": "Complexo religioso isolado em um vale cercado por montanhas. A igreja neogótica contrasta com o barroco predominante nas outras cidades do roteiro.",
-          "agencyRationale": "Agências reservam tempo ao Caraça porque hospedagem, santuário, história e reserva natural acontecem no mesmo lugar. É uma mudança completa de ritmo em relação aos city tours.",
-          "visitType": "Complexo / interna + externa",
-          "estimatedDuration": "2 h",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Complexo religioso isolado em um vale cercado por montanhas. A igreja neogótica contrasta com o barroco predominante nas outras cidades do roteiro. Roteiros organizados reservam tempo ao Caraça porque hospedagem, santuário, história e reserva natural acontecem no mesmo lugar. É uma mudança completa de ritmo em relação aos city tours.",
-          "lat": -20.0975,
-          "lon": -43.48842,
-          "locationAccuracy": "exact",
-          "days": "2 h",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          },
-          "accessEffort": {
-            "label": "Mais fácil",
-            "note": "Em geral, passeio sem trilha longa; pode haver calçamento, degraus ou ladeiras. Confirme o trecho.",
-            "level": "easy"
-          }
-        },
-        {
-          "name": "Ruínas do antigo colégio",
-          "description": "Restos preservados do tradicional colégio destruído por incêndio em 1968, que formou figuras importantes da história brasileira.",
-          "agencyRationale": "Acrescentam história educacional ao conjunto religioso.",
-          "visitType": "Histórica / caminhada",
-          "estimatedDuration": "40 min",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Restos preservados do tradicional colégio destruído por incêndio em 1968, que formou figuras importantes da história brasileira. Acrescentam história educacional ao conjunto religioso.",
-          "lat": -20.0975,
-          "lon": -43.48842,
-          "locationAccuracy": "exact",
-          "days": "40 min",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          }
-        },
-        {
-          "name": "Trilhas, cachoeiras e grutas",
-          "description": "A reserva particular protege milhares de hectares de Mata Atlântica e Cerrado em relevo montanhoso.",
-          "agencyRationale": "Permite dedicar um ou dois dias a natureza dentro do circuito histórico.",
-          "visitType": "Natureza / trilha",
-          "estimatedDuration": "meio dia",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "A reserva particular protege milhares de hectares de Mata Atlântica e Cerrado em relevo montanhoso. Permite dedicar um ou dois dias a natureza dentro do circuito histórico.",
-          "lat": -20.098103,
-          "lon": -43.487693,
-          "locationAccuracy": "city-center",
-          "days": "meio dia",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          }
-        },
-        {
-          "name": "Observação do lobo-guará",
-          "description": "O santuário tornou-se famoso pela visita noturna de lobos-guarás atraídos para a área próxima à escadaria. A aparição não é garantida, pois são animais silvestres.",
-          "agencyRationale": "É uma experiência emblemática que diferencia o Caraça de qualquer outra parada do roteiro.",
-          "visitType": "Observação noturna",
-          "estimatedDuration": "noite / requer pernoite",
-          "publishedDuration": "A partir de 19h30; duração indeterminada",
-          "oneYearOld": "Sim, acompanhada — Caraça admite crianças e isenta até 5 anos",
-          "accessibility": "Sim, mas espera é noturna e pode ser longa",
-          "guideBriefing": "O santuário tornou-se famoso pela visita noturna de lobos-guarás atraídos para a área próxima à escadaria. A aparição não é garantida, pois são animais silvestres. É uma experiência emblemática que diferencia o Caraça de qualquer outra parada do roteiro.",
-          "lat": -20.0975,
-          "lon": -43.48842,
-          "locationAccuracy": "exact",
-          "days": "noite / requer pernoite",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          }
-        }
-      ],
-      "relevanceSource": "guide",
-      "ageClassification": {
-        "status": "indeterminada"
-      },
-      "ticket": {
-        "status": "por_passeio"
-      },
-      "stayDays": [
-        1,
-        2
       ]
     },
     {
@@ -4591,7 +4589,19 @@
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "sameSiteAs": "Serra da Piedade",
+          "mapQuery": "Santuário Nossa Senhora da Piedade Caeté MG",
+          "visitLinks": [
+            {
+              "label": "Santuário · Arquidiocese de Belo Horizonte",
+              "url": "https://arquidiocesebh.org.br/arquidiocese/santuarios/santuario-basilica-nossa-senhora-da-piedade/"
+            },
+            {
+              "label": "Visitação e agendamento · Santuário",
+              "url": "https://santuarionossasenhoradapiedade.arquidiocesebh.org.br/santuario/visitas/"
+            }
+          ]
         }
       ],
       "relevanceSource": "guide",
@@ -4604,7 +4614,8 @@
       "stayDays": [
         0.5,
         1
-      ]
+      ],
+      "municipality": "Caeté"
     },
     {
       "id": "peiro",
@@ -4642,7 +4653,9 @@
           "ticket": {
             "status": "indeterminado"
           },
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "locality": "Peirópolis",
+          "mapQuery": "Museu dos Dinossauros / Complexo Cultural e Científico de Peirópolis, Uberaba MG"
         },
         {
           "name": "Geossítio de Peirópolis",
@@ -4666,7 +4679,9 @@
           "ticket": {
             "status": "indeterminado"
           },
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "locality": "Peirópolis",
+          "mapQuery": "Geossítio de Peirópolis, Uberaba MG"
         }
       ],
       "guideBriefing": "Peirópolis, distrito rural de Uberaba, tornou-se referência paleontológica a partir das pesquisas iniciadas na região na década de 1940. As rochas do Triângulo Mineiro preservaram fósseis do Cretáceo, incluindo dinossauros e outros animais. O antigo núcleo ferroviário passou a abrigar pesquisa, museu e educação científica, aproximando o visitante do território onde os fósseis são encontrados e estudados.",
@@ -4679,7 +4694,9 @@
         "status": "por_passeio"
       },
       "selectedByDefault": true,
-      "initialDate": "2026-10-07"
+      "initialDate": "2026-10-07",
+      "municipality": "Uberaba",
+      "mapQuery": "Peirópolis, Uberaba MG"
     },
     {
       "id": "araxa",
@@ -4960,57 +4977,6 @@
       ]
     },
     {
-      "id": "amarantina",
-      "name": "Amarantina · Ouro Preto",
-      "lat": -20.313221,
-      "lon": -43.710354,
-      "kind": "opcional",
-      "type": "historia",
-      "days": "½ dia",
-      "sights": [
-        "Núcleo histórico"
-      ],
-      "kid": "Distrito pequeno; confirme serviços e horários antes de desviar da rota principal.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Amarantina+Ouro+Preto+MG",
-      "guideBriefing": "Amarantina é um antigo distrito de Ouro Preto situado em um corredor histórico de circulação entre os núcleos mineradores. Seu casario, igreja e traçado preservam a escala de um povoado colonial fora da sede de Vila Rica. A parada ajuda a perceber que a ocupação do ciclo do ouro produziu uma rede de pequenos núcleos conectados por caminhos, e não apenas as grandes cidades hoje mais conhecidas.",
-      "profile": "Patrimônio · cultura popular",
-      "attractions": [
-        {
-          "name": "Núcleo histórico",
-          "description": "Distrito antigo no caminho de Ouro Preto, com igreja, casario e identidade própria ligada às rotas coloniais.",
-          "agencyRationale": "Amarantina é útil quando o circuito quer mostrar que o patrimônio colonial não se limita às sedes municipais. Como distrito no corredor de Ouro Preto, pode ser encaixada sem transformar o dia em outro destino principal.",
-          "visitType": "Caminhada / externa",
-          "estimatedDuration": "1 h",
-          "publishedDuration": "—",
-          "oneYearOld": "—",
-          "accessibility": "—",
-          "guideBriefing": "Distrito antigo no caminho de Ouro Preto, com igreja, casario e identidade própria ligada às rotas coloniais. Amarantina é útil quando o circuito quer mostrar que o patrimônio colonial não se limita às sedes municipais. Como distrito no corredor de Ouro Preto, pode ser encaixada sem transformar o dia em outro destino principal.",
-          "lat": -20.313221,
-          "lon": -43.710354,
-          "locationAccuracy": "city-center",
-          "days": "1 h",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          }
-        }
-      ],
-      "relevanceSource": "guide",
-      "ageClassification": {
-        "status": "indeterminada"
-      },
-      "ticket": {
-        "status": "por_passeio"
-      },
-      "stayDays": [
-        0.5,
-        0.5
-      ]
-    },
-    {
       "id": "ourobranco",
       "name": "Ouro Branco",
       "lat": -20.5222,
@@ -5185,102 +5151,6 @@
       }
     },
     {
-      "id": "mendanha",
-      "name": "Mendanha · Diamantina",
-      "lat": -18.11224,
-      "lon": -43.52785,
-      "kind": "opcional",
-      "type": "historia",
-      "days": "Parada opcional",
-      "sights": [
-        "Núcleo histórico e artesanato"
-      ],
-      "kid": "A confirmar",
-      "url": "",
-      "attractions": [
-        {
-          "name": "Núcleo histórico e artesanato de Mendanha",
-          "lat": -18.11224,
-          "lon": -43.52785,
-          "locationAccuracy": "city-center",
-          "catalogName": "Núcleo histórico e artesanato de Mendanha",
-          "description": "Parada cultural no distrito de Mendanha incluída em roteiro de agência.",
-          "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
-          "visitType": "Cultural",
-          "estimatedDuration": "—",
-          "publishedDuration": "—",
-          "oneYearOld": "A confirmar",
-          "accessibility": "A confirmar",
-          "guideBriefing": "Parada cultural no distrito de Mendanha incluída em roteiro de agência.",
-          "days": "—",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          }
-        }
-      ],
-      "guideBriefing": "Distrito histórico visitado por agência em roteiro de Diamantina, com artesanato e ligação aos antigos caminhos regionais.",
-      "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency",
-      "ageClassification": {
-        "status": "indeterminada"
-      },
-      "ticket": {
-        "status": "por_passeio"
-      }
-    },
-    {
-      "id": "vau",
-      "name": "Vau · Estrada Real",
-      "lat": -18.4167,
-      "lon": -43.5333,
-      "kind": "opcional",
-      "type": "historia",
-      "days": "Parada opcional",
-      "sights": [
-        "Povoado histórico do Vau"
-      ],
-      "kid": "A confirmar",
-      "url": "",
-      "attractions": [
-        {
-          "name": "Povoado histórico do Vau",
-          "lat": -18.4167,
-          "lon": -43.5333,
-          "locationAccuracy": "city-center",
-          "catalogName": "Povoado histórico do Vau",
-          "description": "Antigo ponto de travessia do Rio Jequitinhonha no Caminho dos Diamantes.",
-          "agencyRationale": "Parada explicitamente incluída em roteiro comercializado por agência de turismo.",
-          "visitType": "Histórica",
-          "estimatedDuration": "—",
-          "publishedDuration": "—",
-          "oneYearOld": "A confirmar",
-          "accessibility": "A confirmar",
-          "guideBriefing": "Antigo ponto de travessia do Rio Jequitinhonha no Caminho dos Diamantes.",
-          "days": "—",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          }
-        }
-      ],
-      "guideBriefing": "Povoado histórico no Caminho dos Diamantes, usado como parada em roteiro comercial entre Diamantina e Serro.",
-      "profile": "Parada presente em roteiro comercial de agência",
-      "relevanceSource": "agency",
-      "ageClassification": {
-        "status": "indeterminada"
-      },
-      "ticket": {
-        "status": "por_passeio"
-      }
-    },
-    {
       "id": "presidentekubitschek",
       "name": "Presidente Kubitschek · Cânion do Funil",
       "lat": -18.61417,
@@ -5335,7 +5205,7 @@
     },
     {
       "id": "ipoema",
-      "name": "Ipoema · Itabira",
+      "name": "Itabira · Ipoema",
       "lat": -19.62142,
       "lon": -43.43524,
       "kind": "opcional",
@@ -5369,7 +5239,8 @@
           },
           "ticket": {
             "status": "indeterminado"
-          }
+          },
+          "locality": "Ipoema"
         }
       ],
       "guideBriefing": "Distrito ligado à cultura tropeira e incluído em roteiro comercial da Estrada Real entre Diamantina e Belo Horizonte.",
@@ -5380,7 +5251,9 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "municipality": "Itabira",
+      "mapQuery": "Ipoema, Itabira MG"
     },
     {
       "id": "itambemato",
@@ -5524,7 +5397,8 @@
       },
       "ticket": {
         "status": "por_passeio"
-      }
+      },
+      "municipality": "Nova Lima"
     },
     {
       "id": "rioacima",

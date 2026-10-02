@@ -10,11 +10,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 EXPECTED_ROUTE_STOP_IDS = (
     "mirassol", "canastra", "capitolio", "congonhas", "ouropreto", "mariana",
-    "cipo", "tabuleiro", "serro", "milhoverde", "saogoncalo", "diamantina",
-    "biribiri", "peruacu", "delfinopolis", "cordisburgo", "belohorizonte",
-    "brumadinho", "saojoaodelrei", "tiradentes", "bichinho", "curralinho",
-    "catasaltas", "santabarbara", "caraca", "sabara", "caete", "peiro", "araxa",
-    "itabirito", "amarantina", "ourobranco", "setelagoas", "mendanha", "vau",
+    "cipo", "tabuleiro", "serro", "diamantina",
+    "peruacu", "delfinopolis", "cordisburgo", "belohorizonte",
+    "brumadinho", "saojoaodelrei", "tiradentes", "bichinho",
+    "catasaltas", "santabarbara", "sabara", "caete", "peiro", "araxa",
+    "itabirito", "ourobranco", "setelagoas",
     "presidentekubitschek", "ipoema", "itambemato", "raposos", "novalima", "rioacima",
     "boa-casa-do-rei-bistro", "boa-dartagnan", "boa-divinorestaurante",
     "boa-domenico-pizzeria-e-trattoria", "boa-maria-das-trancas",

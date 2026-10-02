@@ -9,6 +9,35 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class TouristLocationTests(unittest.TestCase):
+    def test_municipal_groups_preserve_district_visits_and_locations(self):
+        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        groups = {stop["id"]: stop for stop in data["routeStops"]}
+        self.assertEqual(sum(len(stop.get("attractions", [])) for stop in groups.values()), 169)
+        for old_id in ("curralinho", "biribiri", "mendanha", "vau", "milhoverde", "saogoncalo", "amarantina", "caraca"):
+            self.assertNotIn(old_id, groups)
+        expected = {
+            "diamantina": {"Extração / Curralinho": 2, "Biribiri": 3, "Mendanha": 1, "Vau": 1},
+            "serro": {"Milho Verde": 3, "São Gonçalo do Rio das Pedras": 4},
+            "ouropreto": {"Amarantina": 1},
+            "catasaltas": {"Caraça": 4},
+        }
+        for group_id, localities in expected.items():
+            for locality, count in localities.items():
+                visits = [a for a in groups[group_id]["attractions"] if a.get("locality") == locality]
+                self.assertEqual(len(visits), count)
+                for visit in visits:
+                    self.assertIn(locality, visit["name"])
+                    self.assertIn(visit["name"], groups[group_id]["sights"])
+                    self.assertFalse(visit.get("selectedByDefault", False))
+                    self.assertIn("mapQuery", visit)
+        diam = {a["name"]: a for a in groups["diamantina"]["attractions"]}
+        salitre = diam["Gruta do Salitre · Extração / Curralinho"]
+        self.assertEqual((salitre["lat"], salitre["lon"]), (-18.27952, -43.53615))
+        self.assertEqual(salitre["locationAccuracy"], "exact")
+        self.assertEqual(salitre["ticket"]["status"], "agendamento")
+        self.assertIn("Garimpo Real", diam)
+        self.assertIn("Experiência de garimpo · Extração / Curralinho", diam)
+
     def test_memorial_has_its_own_map_point(self):
         data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
         city = next(stop for stop in data["routeStops"] if stop["id"] == "setelagoas")

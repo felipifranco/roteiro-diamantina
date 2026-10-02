@@ -1,6 +1,6 @@
 # Revisão de localização dos pontos turísticos
 
-Revisão em 29/09/2026. O cadastro tem 169 atrações em 41 paradas de localidades, além de oito restaurantes independentes (49 paradas no total): 115 atrações classificadas como pontos físicos (`exact`), 8 em trechos de rua (`street-center`), 1 em trecho de trilha (`trail-point`) e 45 que ainda têm apenas referência genérica da cidade (`city-center`). Os pontos foram cruzados por nome e município com fontes turísticas, OpenStreetMap/Nominatim e resultados de lugar do Google Maps. Resultados vazios, genéricos ou homônimos em outros distritos não foram usados para mover marcadores.
+Revisão cartográfica em 29/09/2026 e de agrupamento municipal em 01/10/2026. O cadastro tem 169 atrações em 33 paradas de localidades e regiões, além de oito restaurantes independentes (41 paradas no total): 115 atrações classificadas como pontos físicos (`exact`), 8 em trechos de rua (`street-center`), 1 em trecho de trilha (`trail-point`) e 45 que ainda têm apenas referência genérica da cidade (`city-center`). Os pontos foram cruzados por nome e município com fontes turísticas, OpenStreetMap/Nominatim e resultados de lugar do Google Maps. Resultados vazios, genéricos ou homônimos em outros distritos não foram usados para mover marcadores.
 
 ## Correções confirmadas
 
@@ -39,3 +39,34 @@ A proximidade das coordenadas é apenas um sinal para revisão. Ela não prova q
 | Santuário, ruínas do colégio e observação do lobo-guará (Caraça) | Locais e atividades relacionados ao complexo, mas visitas diferentes. | Fichas mantidas. Coordenada comum é a base do santuário; não identifica cada experiência. |
 
 Outros pares próximos, como Igreja do Carmo e Museu do Oratório (Ouro Preto), Igreja de São Francisco e feira de pedra-sabão (Ouro Preto), Casa do Muxarabiê e Rua da Quitanda (Diamantina), e Museu de Sant'Ana e Igreja do Rosário (Tiradentes) não devem ser agrupados por distância. As posições repetidas de componentes do Santuário de Congonhas e do Caraça são pendências de precisão cartográfica, não autorização para mesclar as fichas.
+
+
+## Revisão de sobreposições em 01/10/2026
+
+As 169 fichas foram preservadas: sem identificação do estabelecimento, operador ou percurso, semelhança de nomes e descrições não comprova duplicação.
+
+| Par | Evidência e tratamento |
+| --- | --- |
+| Serra da Piedade / Santuário Nossa Senhora da Piedade (Caeté) | A [Arquidiocese de Belo Horizonte](https://arquidiocesebh.org.br/arquidiocese/santuarios/santuario-basilica-nossa-senhora-da-piedade/) confirma o santuário no alto da serra. Mantidas as fichas de paisagem e visita religiosa; `sameSiteAs` faz o santuário compartilhar o marcador e o destino de rota da serra. |
+| Garimpo Real (Diamantina) / Experiência de garimpo (Curralinho/Extração) | O [portal turístico de Minas Gerais](https://www.minasgerais.com.br/pt/atracoes/diamantina/garimpo-real) situa o Garimpo Real próximo ao aeroporto. A ficha de Extração não identifica operador ou estabelecimento. Não foi confirmada equivalência; ambas permanecem. A fonte foi adicionada ao Garimpo Real e sua coordenada permanece genérica. |
+| Mirante dos Canyons / Mirantes dos cânions (Capitólio) | O [parque Mirante dos Canyons](https://cataguacapitolio.com.br/mirante) reúne vários mirantes, mas a ficha plural não identifica qual local representa. Pode incluir outro mirante; fichas mantidas até identificação do destino. |
+| Cânions de Furnas / Passeio pelo Lago de Furnas (Capitólio) | O lago comporta percursos diferentes; não foi identificado operador ou itinerário que demonstre equivalência. Mantidas as duas opções. |
+| Queijo do Serro / Fazenda produtora de Queijo do Serro | Uma degustação e uma visita à produção podem ocorrer em locais diferentes. Nenhuma ficha identifica estabelecimento; mantidas até confirmação de produtor e experiência. |
+
+Esta revisão não reclassifica `accessEffort`. A confirmação individual do esforço permanece pendente.
+
+
+## Agrupamento municipal em 01/10/2026
+
+A revisão reuniu oito grupos de localidades em seus municípios, preservando todas as 169 atrações, coordenadas, precisão cartográfica, regras de visita e esforço de acesso. `locality` e o sufixo do nome identificam os passeios transferidos. Os destaques dos distritos foram associados às fichas transferidas; os passeios não passam a ser selecionados por padrão apenas por pertencerem ao destino principal. Agrupamento municipal não implica proximidade, mesma experiência ou acesso pelo centro da cidade.
+
+| Grupo atual | Localidades reunidas | Evidência |
+| --- | --- | --- |
+| Diamantina | Extração/Curralinho, Biribiri, Mendanha e Vau | [Legislação municipal sobre os distritos](https://www.diamantina.mg.gov.br/portal/leis_decretos/1/0/0/75/0/0/0/0/0/0/0/0/0/0/0/0/0/0/E/data-decrescente/avancada), [Vila de Biribiri](https://www.diamantina.mg.gov.br/portal/turismo/0/9/736/vila-de-biribiri), [cadastro municipal da comunidade do Vau](https://www.diamantina.mg.gov.br/portal/editais/4) |
+| Serro | Milho Verde e São Gonçalo do Rio das Pedras | [Distritos do Serro](https://www.serro.mg.gov.br/portal/turismo/0/9/746/Nossos-Distritos) |
+| Ouro Preto | Amarantina | [Distritos de Ouro Preto](https://www.ouropreto.mg.gov.br/turismo/distritos) |
+| Catas Altas | Santuário do Caraça | [Portal turístico de Minas Gerais](https://www.minasgerais.com.br/pt/apoio-destino/catas-altas?tipo_lazer=80%2C81%2C88%2C89) |
+
+Os grupos sem outra ficha do município no cadastro passaram a exibir município primeiro: Conceição do Mato Dentro · Tabuleiro, Prados · Bichinho, Itabira · Ipoema e Uberaba · Peirópolis. Mantidos os IDs desses grupos, suas referências geográficas e a seleção inicial de Peirópolis. Fontes: [Tabuleiro](https://www.cmd.mg.gov.br/tabuleiro-do-mato-dentro/), [Bichinho](https://www.minasgerais.com.br/pt/destinos/bichinho), [Ipoema](https://turismo.itabira.mg.gov.br/atrativos/ipoema), [Peirópolis](https://www.uberaba.mg.gov.br/portal/acervo/links/Arquivos/GUIA%20TURISTICO%20GEOPARK%20UBERABA.pdf).
+
+Canastra, Serra do Cipó e Peruaçu continuam como grupos regionais: não foi atribuído um único município a áreas que exigem definição do atrativo ou do acesso. Os restaurantes Boa Lembrança seguem como paradas de refeição independentes. A suspeita entre Garimpo Real e Experiência de garimpo permanece pendente, agora dentro do mesmo grupo de Diamantina: pertencer ao mesmo município não prova equivalência.

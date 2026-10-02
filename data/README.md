@@ -2,6 +2,8 @@
 
 Edite somente [`roteiro.json`](roteiro.json). O arquivo mantém cada parada em `routeStops`, com perfil e atrações detalhadas no próprio registro. Assim, os dados de rota e as fichas detalhadas ficam juntos, sem listas paralelas de cidades. Se um campo pesquisado divergir de um valor específico da rota, o valor anterior da rota fica registrado em `routeOverrides`.
 
+Agrupe os passeios de distritos, bairros e comunidades na parada do município quando esse vínculo estiver confirmado. `municipality` identifica o município dos grupos revisados; `locality` identifica a localidade de uma atração. Passeios transferidos recebem a localidade também no nome e em `catalogName`, para que ela apareça na página e no catálogo. Preserve as coordenadas do passeio e use `mapQuery` com a localidade correta: reunir fichas não desloca atrações para a sede municipal nem comprova duplicação. Grupos regionais que abrangem vários municípios e restaurantes independentes podem permanecer como paradas próprias. A revisão está em [`location-audit.md`](location-audit.md).
+
 O campo `selectedByDefault` em cada parada ou atração define se ela começa selecionada na página. A seleção feita na interface altera somente o estado em memória do navegador; para mudar o padrão permanente, edite esse campo no JSON e regenere os arquivos.
 
 O objeto `schedule` guarda as datas da viagem e a ordem inicial das paradas. Em cada cidade, `initialDate` define a data inicial, `stayDays` a faixa de duração sugerida e `overnight` indica pernoite. A página usa esses valores como padrão; mudanças feitas durante a navegação ficam somente em memória.
