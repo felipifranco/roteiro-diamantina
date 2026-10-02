@@ -61,6 +61,7 @@ def assemble_data(catalog, plan):
     if type(plan.get("version")) is not int or plan["version"] != 1:
         raise ValueError("trip plan version must be the integer 1")
     data = copy.deepcopy(catalog)
+    data["policies"] = copy.deepcopy(plan.get("policies"))
     schedule = copy.deepcopy(plan.get("schedule"))
     if not isinstance(schedule, dict):
         raise ValueError("schedule must be an object")
@@ -79,8 +80,8 @@ def assemble_data(catalog, plan):
         if not isinstance(stop.get("attractions", []), list):
             raise ValueError("catalog attractions must be a list")
         for attraction in stop.get("attractions", []):
-            if isinstance(attraction, dict) and "selectedByDefault" in attraction:
-                raise ValueError("catalog attractions must not contain trip selection")
+            if isinstance(attraction, dict) and any(field in attraction for field in ("selectedByDefault", "required")):
+                raise ValueError("catalog attractions must not contain trip selection or required policy")
     selected_attractions = plan.get("selectedAttractions", [])
     if not isinstance(selected_attractions, list):
         raise ValueError("selectedAttractions must be a list")
@@ -94,7 +95,10 @@ def assemble_data(catalog, plan):
         if attraction is None or key in selected_keys:
             raise ValueError("selectedAttractions must reference unique catalog attractions")
         selected_keys.add(key)
+        if type(item.get("required", False)) is not bool:
+            raise ValueError("selectedAttractions.required must be a boolean")
         attraction["selectedByDefault"] = True
+        attraction["required"] = item.get("required", False)
     visits, stays = plan.get("visits"), plan.get("stays")
     if not isinstance(visits, list) or not isinstance(stays, list):
         raise ValueError("visits and stays must be lists")
@@ -114,6 +118,9 @@ def assemble_data(catalog, plan):
     for stop_id in (schedule.get("originId"), schedule.get("destinationId")):
         if isinstance(stop_id, str) and stop_id in by_id:
             by_id[stop_id]["selectedByDefault"] = True
+    for item in selected_attractions:
+        if item.get("required") and not by_id[item["stopId"]].get("selectedByDefault"):
+            raise ValueError("required attraction must have a selected parent")
     previous_end = None
     for stay in sorted(stays, key=lambda item: str(item.get("checkIn", "")) if isinstance(item, dict) else ""):
         if not isinstance(stay, dict) or not isinstance(stay.get("stopId"), str) or stay["stopId"] not in by_id:
@@ -207,6 +214,21 @@ def validate(data):
     route_stops = data.get("routeStops")
     if not isinstance(route_stops, list) or not route_stops:
         raise ValueError("routeStops must be a non-empty list")
+    policies = data.get("policies")
+    if not isinstance(policies, dict):
+        raise ValueError("policies must be an object")
+    hours = policies.get("maxDrivingHoursPerDay")
+    if not isinstance(hours, (int, float)) or isinstance(hours, bool) or not 0 < hours <= 24:
+        raise ValueError("policies.maxDrivingHoursPerDay must be greater than zero and at most 24")
+    destination_policy = policies.get("destination")
+    if (not isinstance(destination_policy, dict)
+            or any(type(destination_policy.get(field)) is not bool for field in ("required", "fixedDate"))
+            or destination_policy.get("sameDayOrder") not in {"before", "after"}):
+        raise ValueError("policies.destination requires required, fixedDate and sameDayOrder (before/after)")
+    suggestion = policies.get("newStopDate")
+    if (not isinstance(suggestion, dict) or suggestion.get("anchor") not in {"destination", "start"}
+            or type(suggestion.get("offsetDays")) is not int or suggestion["offsetDays"] < 0):
+        raise ValueError("policies.newStopDate requires anchor (destination/start) and non-negative offsetDays")
     schedule = data.get("schedule")
     if not isinstance(schedule, dict):
         raise ValueError("schedule must be an object")
@@ -281,13 +303,15 @@ def validate(data):
         if not isinstance(stop["type"], str) or stop["type"] not in STOP_TYPES:
             raise ValueError(f"routeStops[{index}].type must be one of {sorted(STOP_TYPES)}")
         if stop["kind"] == "restaurante":
-            dish = stop.get("dish2026")
+            dish = stop.get("dish")
             if stop["type"] != "gastronomia" or not isinstance(dish, dict) or any(
                 not isinstance(dish.get(field), str) or not dish[field].strip()
                 for field in ("name", "description", "url", "image", "credit")
             ):
-                raise ValueError(f"routeStops[{index}] restaurant must have a 2026 dish")
-            if not dish["url"].startswith("https://boalembranca.com.br/pratos/") or not dish["image"].startswith("assets/dishes/2026/") or not (ROOT / dish["image"]).is_file():
+                raise ValueError(f"routeStops[{index}] restaurant must have a commemorative dish")
+            if type(dish.get("year")) is not int or not 1000 <= dish["year"] <= 9999:
+                raise ValueError("restaurant dish.year must be a four-digit integer")
+            if not dish["url"].startswith("https://boalembranca.com.br/pratos/") or not dish["image"].startswith("assets/dishes/") or not (ROOT / dish["image"]).is_file():
                 raise ValueError(f"routeStops[{index}] restaurant dish links or image are invalid")
         for field in ("days", "kid", "url"):
             if not isinstance(stop[field], str):
@@ -387,7 +411,7 @@ def _js_json(value):
 
 def render_app_data(data):
     route_stops = copy.deepcopy(data["routeStops"])
-    payload = {"schedule": copy.deepcopy(data["schedule"]), "routeStops": route_stops,
+    payload = {"policies": copy.deepcopy(data["policies"]), "schedule": copy.deepcopy(data["schedule"]), "routeStops": route_stops,
                "accessAlerts": copy.deepcopy(data.get("accessAlerts", [])),
                "sources": copy.deepcopy(data.get("sources", []))}
     return (
@@ -419,10 +443,10 @@ def render_markdown(data):
     ]
     for city in data["routeStops"]:
         if city["kind"] == "restaurante":
-            dish = city["dish2026"]
+            dish = city["dish"]
             lines.append(_row([
                 f"**{city['name']}**", city["address"],
-                f"**{dish['name']} (Boa Lembrança 2026)**",
+                f"**{dish['name']} (Boa Lembrança {dish['year']})**",
                 f"{dish['description']} [Prato e imagem]({dish['url']})",
                 "—", "Restaurante / refeição", city["days"], "—", age_cell(city), ticket_cell(city), "A confirmar",
             ]))

@@ -28,7 +28,7 @@ selected.add('ourobranco');
 const after=cities.map(s=>[colorClass(s),routeIcon(s,{labels:new Map([['ourobranco','1']])})]);
 console.log(JSON.stringify({before,after}));
 """
-        result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
+        result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
         self.assertEqual(json.loads(result.stdout), {
             "before": [["agency history", "+"], ["agency history", "+"]],
             "after": [["agency history", "+"], ["agency history", "1"]],
@@ -40,7 +40,7 @@ console.log(JSON.stringify({before,after}));
         helper = re.search(r"function isMapGroup\(s\)\{([^}]*)\}", PAGE)
         assert helper is not None, "city/tour groups must be classified explicitly"
         script = f"const schedule={{originId:'origem'}}; function isMapGroup(s){{{helper.group(1)}}}; console.log(JSON.stringify([isMapGroup({{kind:'cidade',attractions:[{{name:'tour'}}]}}),isMapGroup({{kind:'cidade',attractions:[]}}),isMapGroup({{kind:'regiao'}})]))"
-        result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
+        result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
         self.assertEqual(json.loads(result.stdout), [True, True, True])
 
     def test_map_and_card_icons_share_one_route_state(self):
@@ -65,7 +65,7 @@ const toursFor=s=>s.id==='cidade'?[tour]:s.id==='optional'?[optionalTour]:[];
 const plan={labels:new Map([['origem','M'],['destino','D'],['passeio','1a'],['outside','2']])};
 console.log(JSON.stringify([origin,destination,city,tour,optional,unselectedOptional,alert,outside].map(s=>routeIcon(s,plan))));
 """
-        result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
+        result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
         self.assertEqual(json.loads(result.stdout), ["M", "D", "↔", "1a", "↔", "+", "!", "2"])
 
     def test_route_plan_gives_active_tours_one_card_and_map_label_not_the_parent(self):
@@ -89,13 +89,16 @@ const origin={id:'mirassol',kind:'cidade'},destination={id:'diamantina',kind:'ci
 const city={id:'cidade',kind:'regiao'},tour={id:'passeio',kind:'atracao',parentId:'cidade'};
 const routeStops=[origin,city,tour,destination],selected=new Set(['cidade','passeio']);
 const dates=new Map([['cidade','2026-10-08'],['passeio','2026-10-08']]);
+const TripCalendar=require('./assets/trip-calendar.js');
+const policies={destination:{required:true,fixedDate:true,sameDayOrder:'before'}};
+const routeDate=s=>dates.get(s.id)||schedule.destinationDate,inTrip=()=>true;
 const orderedSelected=()=>[city],ensureDate=()=>{};
 const toursFor=s=>s.id==='cidade'?[tour]:[];
 """ + planner.group(0) + """
 const plan=routePlan();
 console.log(JSON.stringify({labels:Object.fromEntries(plan.labels),points:[...plan.beforePoints,...plan.sameDay,...plan.afterPoints].map(s=>s.id),order:plan.order.map(s=>s.id)}));
 """
-        result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
+        result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
         state = json.loads(result.stdout)
         self.assertNotIn("cidade", state["labels"], "a map-only group must not look like a routed stop")
         self.assertEqual(state["labels"]["passeio"], "1a", "card and map must use the same route label")
@@ -122,7 +125,7 @@ const stops=[
 const ids=values=>effectiveRouteStops(stops,new Set(values)).map(s=>s.id);
 console.log(JSON.stringify({cityOnly:ids(['cidade']),cityWithTour:ids(['cidade','passeio']),orphanTour:ids(['passeio']),fixedDestination:ids(['diamantina','casa-jk'])}));
 """
-        result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
+        result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
         self.assertEqual(
             json.loads(result.stdout),
             {
@@ -165,7 +168,7 @@ console.log(JSON.stringify({cityOnly:ids(['cidade']),cityWithTour:ids(['cidade',
         script = "const tourCache=new Map();const attractionStops=[{id:'c-poi-1',name:'Casa de JK',parentId:'c',kind:'atracao'},{id:'c-poi-2',name:'Mirante novo',parentId:'c',kind:'atracao'}];" + "".join(helpers) + """
 console.log(JSON.stringify(toursFor({id:'c',name:'Cidade',type:'historia',sights:['Centro histórico','Casa de JK']}).map(t=>[t.id,t.kind])));
 """
-        result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
+        result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
         self.assertEqual(
             json.loads(result.stdout),
             [["c-sight-1", "atracao"], ["c-poi-1", "atracao"], ["c-poi-2", "atracao"]],

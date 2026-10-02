@@ -31,8 +31,8 @@ assert re.search(r"grid-template-columns\s*:\s*32px\s+minmax\(0,1fr\)", return_h
 
 move = re.search(r"function moveSameDay\(id,step\)\{(.*?)\}\s*function totalEnd", html, re.S)
 assert move, "stop reorder handler not found"
-assert "dates.set(current.id,nextDate)" in move.group(1), "reorder must cross date groups"
-assert "dates.set(adjacent.id,currentDate)" in move.group(1), "reorder must preserve the adjacent stop's date"
+assert "TripCalendar.reorderVisit(orderedSelected(),id,step,dates,manual)" in move.group(1), "reorder must cross date groups"
+assert "dates.set(adjacent.id,currentDate)" in (root / "assets/trip-calendar.js").read_text(), "reorder must preserve the adjacent stop's date"
 
 layers = re.findall(r"\.side\s*\{([^}]*)\}", html)
 assert layers, "sidebar stacking rule not found"
@@ -51,7 +51,7 @@ assert "function routeableAttractionInfo(s)" in html and "ageSummaryMarkup(tour)
 assert "Tempo estimado de visita:" in html, "attraction stops must label their own visit duration, not a city stay"
 assert "fixedDates=new Map([[origin.id,schedule.startDate],[destination.id,schedule.destinationDate]])" in html, "fixed stop dates should come from itinerary data"
 assert "const routeDate=s=>dates.get(s.id)||(s.kind==='atracao'?dates.get(s.parentId)||fixedDates.get(s.parentId):fixedDates.get(s.id))" in html, "attraction markers should prefer their own date, then inherit their city's or fixed parent's date"
-assert "out.push(d)" in html, "visits can share the fixed destination day"
+assert "TripCalendar.calendarDays(schedule.startDate,schedule.endDate)" in html, "visits can share the fixed destination day"
 assert "candidates(date).map" in html, "date options should include the inherited date"
 assert "routeStops.forEach(s=>" in html, "selected attractions must update markers and popups"
 schedule = data["schedule"]
@@ -67,8 +67,8 @@ assert not any(attractions['setelagoas'].values()), "Sete Lagoas attractions mus
 assert "structuredClone(schedule.stays||[])" in html, "lodging should come from the trip plan"
 assert "TripCalendar.nightCount(stay)" in html, "nights should use the lodging dates"
 assert "Pernoite" not in html and "PERNOITE" not in html, "overnight text must come from the JSON"
-assert "if(routed.has(city.id))labels.set(city.id,String(i+1))" in html, "map sequence markers must number the first intermediate stop as 1"
-assert "`${i+1}${String.fromCharCode(97+j)}`" in html, "tour markers should share their city's number (3a, 3b…)"
+assert "if(routed.has(city.id))labels.set(city.id,String(i+1))" in (root / "assets/trip-calendar.js").read_text(), "map sequence markers must number the first intermediate stop as 1"
+assert "`${i+1}${String.fromCharCode(97+j)}`" in (root / "assets/trip-calendar.js").read_text(), "tour markers should share their city's number (3a, 3b…)"
 assert "String(stopsInOrder.indexOf(s)+1)" not in html, "map marker numbering must not count the origin as a numbered stop"
 assert "setMapIcon(s,'M',schedule.startDate)" in html, "Mirassol origin marker should identify the city, not look like stop 1"
 assert "const icon=routeIcon(s,plan)" in html and "createCard(s,icon,plan,!plan.labels.has(s.id)&&hasSelectedTours(s))" in html, "cards should use the same route marker icon as the map"

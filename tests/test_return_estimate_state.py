@@ -9,7 +9,7 @@ PAGE = (ROOT / "index.html").read_text(encoding="utf-8")
 class ReturnEstimateStateTests(unittest.TestCase):
     def test_return_date_is_unknown_without_a_successful_route_duration(self):
         self.assertIsNotNone(
-            re.search(r"function returnDate\(order\)\{return returnDriveHours===null\?null:add", PAGE),
+            re.search(r"function returnDate\(order\)\{return TripCalendar\.estimateReturn", PAGE),
             "a visit end date is not a return estimate",
         )
 

@@ -122,8 +122,8 @@ class RouteInteractionControlsTests(unittest.TestCase):
     def test_fixed_diamantina_day_tours_are_included_in_the_route(self):
         draw_start = FINAL_ROUTING.index("window.drawLine=async function(){")
         draw = FINAL_ROUTING[draw_start:]
-        self.assertIn("sameDay=[...points(destination).filter(s=>s.id!==destination.id),...sameDate.flatMap(points)]", FINAL_ROUTING)
-        self.assertIn("stopsInOrder=[origin,...before,destination,...sameDay,...after,origin]", draw)
+        self.assertIn("TripCalendar.planRoute(groups,origin,destination,routeDate,toursFor,routed,policies.destination,inTrip(destination))", FINAL_ROUTING)
+        self.assertIn("stopsInOrder=plan.routePoints", draw)
 
     def test_route_request_is_invalidated_before_aborting_previous_fetch(self):
         draw_start = FINAL_ROUTING.index("window.drawLine=async function(){")

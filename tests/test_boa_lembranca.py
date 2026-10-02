@@ -19,7 +19,7 @@ class BoaLembrancaTests(unittest.TestCase):
         self.assertEqual(len(restaurants), 8)
         self.assertEqual(len({(stop["lat"], stop["lon"]) for stop in restaurants}), 8)
         self.assertEqual(
-            {stop["dish2026"]["name"] for stop in restaurants},
+            {stop["dish"]["name"] for stop in restaurants},
             {
                 "Cumé que Podi", 'Ravioli de Pato "In Brodo"', "Filé Oriental",
                 "Ndunderi Alla Sorrentina", "Entre Ossos e Raízes",
@@ -28,7 +28,7 @@ class BoaLembrancaTests(unittest.TestCase):
         )
         for stop in restaurants:
             with self.subTest(restaurant=stop["name"]):
-                dish = stop["dish2026"]
+                dish = stop["dish"]
                 self.assertIn(dish["name"], stop["guideBriefing"])
                 self.assertTrue(dish["url"].startswith("https://boalembranca.com.br/pratos/"))
                 self.assertTrue((ROOT / dish["image"]).read_bytes().startswith(b"\x89PNG\r\n\x1a\n"))
@@ -38,7 +38,7 @@ class BoaLembrancaTests(unittest.TestCase):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("if(s.kind==='restaurante')return `<div class=\"dish-pin\"", page)
         self.assertIn("routeStops.filter(s=>s.selectedByDefault).map(s=>s.id)", page)
-        self.assertIn("Prato 2026: ${s.dish2026.name}", page)
+        self.assertIn("Prato ${s.dish.year}: ${s.dish.name}", page)
 
     def test_restaurant_enters_route_as_its_own_stop(self):
         if not shutil.which("node"):

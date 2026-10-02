@@ -8,6 +8,11 @@
     "originId": "mirassol",
     "endDate": "2026-10-13"
   },
+  "policies": {
+    "maxDrivingHoursPerDay": 8,
+    "destination": {"required": true, "fixedDate": true, "sameDayOrder": "before"},
+    "newStopDate": {"anchor": "destination", "offsetDays": 1}
+  },
   "visits": [
     {
       "stopId": "peiro",
@@ -55,7 +60,8 @@
   "selectedAttractions": [
     {
       "stopId": "diamantina",
-      "name": "Vesperata"
+      "name": "Vesperata",
+      "required": true
     },
     {
       "stopId": "cordisburgo",

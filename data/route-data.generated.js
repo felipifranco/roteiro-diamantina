@@ -1,5 +1,17 @@
 // Generated from data/pontos-de-parada.json and data/roteiro.json by scripts/generate_route_data.py. Do not edit.
 window.ROTEIRO_DATA = {
+  "policies": {
+    "maxDrivingHoursPerDay": 8,
+    "destination": {
+      "required": true,
+      "fixedDate": true,
+      "sameDayOrder": "before"
+    },
+    "newStopDate": {
+      "anchor": "destination",
+      "offsetDays": 1
+    }
+  },
   "schedule": {
     "startDate": "2026-10-07",
     "destinationId": "diamantina",
@@ -2531,7 +2543,8 @@ window.ROTEIRO_DATA = {
           },
           "kind": "atracao",
           "type": "historia",
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "required": true
         },
         {
           "name": "Caminho dos Escravos",
@@ -3203,7 +3216,8 @@ window.ROTEIRO_DATA = {
           },
           "kind": "atracao",
           "type": "historia",
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "required": false
         },
         {
           "name": "Portal Grande Sertão",
@@ -3229,7 +3243,8 @@ window.ROTEIRO_DATA = {
           },
           "kind": "atracao",
           "type": "historia",
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "required": false
         },
         {
           "name": "Casa Elefante",
@@ -3255,7 +3270,8 @@ window.ROTEIRO_DATA = {
           },
           "kind": "atracao",
           "type": "historia",
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "required": false
         }
       ],
       "relevanceSource": "agency",
@@ -5034,7 +5050,8 @@ window.ROTEIRO_DATA = {
           "mapQuery": "Museu dos Dinossauros / Complexo Cultural e Científico de Peirópolis, Uberaba MG",
           "kind": "atracao",
           "type": "historia",
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "required": false
         },
         {
           "name": "Geossítio de Peirópolis",
@@ -5061,7 +5078,8 @@ window.ROTEIRO_DATA = {
           "locality": "Peirópolis",
           "mapQuery": "Geossítio de Peirópolis, Uberaba MG",
           "kind": "atracao",
-          "selectedByDefault": true
+          "selectedByDefault": true,
+          "required": false
         }
       ],
       "guideBriefing": "Peirópolis, distrito rural de Uberaba, tornou-se referência paleontológica a partir das pesquisas iniciadas na região na década de 1940. As rochas do Triângulo Mineiro preservaram fósseis do Cretáceo, incluindo dinossauros e outros animais. O antigo núcleo ferroviário passou a abrigar pesquisa, museu e educação científica, aproximando o visitante do território onde os fósseis são encontrados e estudados.",
@@ -6135,7 +6153,8 @@ window.ROTEIRO_DATA = {
       "locationAccuracy": "exact",
       "address": "Avenida Maria do Carmo, 250, Tereza Cristina, São Joaquim de Bicas, MG",
       "mapQuery": "Casa do Rei Bistrô Avenida Maria do Carmo, 250, Tereza Cristina São Joaquim de Bicas MG",
-      "dish2026": {
+      "dish": {
+        "year": 2026,
         "name": "Cumé que Podi",
         "description": "Ragu de cordeiro sobre purê de batatas, com farofa de amendoim, jabuticaba em calda e salada fresca.",
         "url": "https://boalembranca.com.br/pratos/cume-que-podi",
@@ -6167,7 +6186,8 @@ window.ROTEIRO_DATA = {
       "locationAccuracy": "exact",
       "address": "Rua Tomaz Gonzaga, 593 - Lourdes, Belo Horizonte, MG",
       "mapQuery": "D'artagnan Bistrô Rua Tomaz Gonzaga, 593 - Lourdes Belo Horizonte MG",
-      "dish2026": {
+      "dish": {
+        "year": 2026,
         "name": "Ravioli de Pato \"In Brodo\"",
         "description": "Ravioli recheado de pato servido em consommé com vinho Madeira.",
         "url": "https://boalembranca.com.br/pratos/ravioli-de-pato-in-brodo",
@@ -6199,7 +6219,8 @@ window.ROTEIRO_DATA = {
       "locationAccuracy": "exact",
       "address": "Avenida Quinta Avenida, 739 casa - Vale do Sol - loja 6, Nova Lima, MG",
       "mapQuery": "diVino Restaurante Avenida Quinta Avenida, 739 casa - Vale do Sol - loja 6 Nova Lima MG",
-      "dish2026": {
+      "dish": {
+        "year": 2026,
         "name": "Filé Oriental",
         "description": "Tornedores de filé grelhados com molho agridoce de shoyu e ostra, acompanhados de risoto frito com açafrão-da-terra.",
         "url": "https://boalembranca.com.br/pratos/file-oriental",
@@ -6231,7 +6252,8 @@ window.ROTEIRO_DATA = {
       "locationAccuracy": "exact",
       "address": "Rua Claudio Manoel, 583 Funcionários, Belo Horizonte, MG",
       "mapQuery": "Domenico Pizzeria e Trattoria Rua Claudio Manoel, 583 Funcionários Belo Horizonte MG",
-      "dish2026": {
+      "dish": {
+        "year": 2026,
         "name": "Ndunderi Alla Sorrentina",
         "description": "Massa artesanal macia de ricota fresca, inspirada no ndunderi da Campânia, no sul da Itália.",
         "url": "https://boalembranca.com.br/pratos/ndunderi-alla-sorrentina",
@@ -6263,7 +6285,8 @@ window.ROTEIRO_DATA = {
       "locationAccuracy": "exact",
       "address": "Rua Estoril, 938 - São Francisco, Belo Horizonte, MG",
       "mapQuery": "Maria das Tranças Rua Estoril, 938 - São Francisco Belo Horizonte MG",
-      "dish2026": {
+      "dish": {
+        "year": 2026,
         "name": "Entre Ossos e Raízes",
         "description": "Ossobuco assado lentamente com vinho tinto e legumes, servido com purê de mandioca e açafrão, farofa crocante, cenouras e PANCs.",
         "url": "https://boalembranca.com.br/pratos/entre-ossos-e-raizes",
@@ -6295,7 +6318,8 @@ window.ROTEIRO_DATA = {
       "locationAccuracy": "exact",
       "address": "Rua Joaquim Gomes da Costa, 59, Diamantina, MG",
       "mapQuery": "Relicário Gastronomia Rua Joaquim Gomes da Costa, 59 Diamantina MG",
-      "dish2026": {
+      "dish": {
+        "year": 2026,
         "name": "Filet à Baronesa",
         "description": "Steak de filé mignon ao molho amanteigado de cogumelos frescos e ervas, com purê de batata-baroa e requeijão moreno, vagens salteadas e baroa palha. O prato aproxima ingredientes brasileiros de uma apresentação contemporânea.",
         "url": "https://boalembranca.com.br/pratos/filet-a-baronesa",
@@ -6327,7 +6351,8 @@ window.ROTEIRO_DATA = {
       "locationAccuracy": "exact",
       "address": "Rua Curitiba, 2105 - Lourdes, Belo Horizonte, MG",
       "mapQuery": "Taste-Vin Rua Curitiba, 2105 - Lourdes Belo Horizonte MG",
-      "dish2026": {
+      "dish": {
+        "year": 2026,
         "name": "Bavette en Sauce",
         "description": "Carne bovina em molho aromático com pimenta-do-reino, acompanhada de pastel de espinafre em massa folhada.",
         "url": "https://boalembranca.com.br/pratos/bavette-en-sauce",
@@ -6359,7 +6384,8 @@ window.ROTEIRO_DATA = {
       "locationAccuracy": "exact",
       "address": "Rua Mandacaru, 260 - Pampulha, Belo Horizonte, MG",
       "mapQuery": "Xapuri Rua Mandacaru, 260 - Pampulha Belo Horizonte MG",
-      "dish2026": {
+      "dish": {
+        "year": 2026,
         "name": "Cheirin no Cangote",
         "description": "Copa-lombo suíno defumado e grelhado com molho de laranja, purê de legumes assados, repolho roxo fermentado e farofa crocante de cebola.",
         "url": "https://boalembranca.com.br/pratos/cheirin-no-cangote",

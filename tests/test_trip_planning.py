@@ -129,8 +129,9 @@ assert.deepEqual(dayKeys,['2026-10-07','2026-10-08','2026-10-09','2026-10-10','2
         helper = re.search(r'function totalEnd\(order\)\{.*?\n', page).group(0)
         script = """
 const assert=require('node:assert/strict');
-const {addDays:add}=require('./assets/trip-calendar.js');
-const schedule={destinationDate:'2026-10-09'},routeDate=stop=>stop.date;
+const TripCalendar=require('./assets/trip-calendar.js');
+const schedule={startDate:'2026-10-07',destinationDate:'2026-10-09'},routeDate=stop=>stop.date;
+const destination={date:schedule.destinationDate},inTrip=()=>true;
 let stays=[{stopId:'city',checkIn:'2026-10-11',checkOut:'2026-10-13'}];
 """ + helper + """
 const visits=[{date:'2026-10-11',stayDays:[1,10]}];
