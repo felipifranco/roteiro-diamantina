@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the app adapter and human-readable catalog from data/roteiro.json.
-
-Edit only data/roteiro.json, then run `python3 scripts/generate_route_data.py`.
-"""
+"""Generate app data and the catalog from the place catalog and trip plan."""
 
 import argparse
 import copy
@@ -14,6 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "data" / "roteiro.json"
+CATALOG_SOURCE = ROOT / "data" / "pontos-de-parada.json"
 APP_OUTPUT = ROOT / "data" / "route-data.generated.js"
 MARKDOWN_OUTPUT = ROOT / "PONTOS-DE-PARADA.md"
 
@@ -45,6 +43,102 @@ STOP_TYPES = {"natureza", "historia", "gastronomia"}
 LOCATION_ACCURACIES = {"exact", "street-center", "trail-point", "city-center"}
 AGE_STATUSES = {"livre", "idade_minima", "indeterminada"}
 TICKET_STATUSES = {"online", "bilheteria", "agendamento", "gratuito", "por_passeio", "reserva_indeterminada", "indeterminado"}
+
+
+def planning_date(value, path):
+    if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+        raise ValueError(f"{path} must be a YYYY-MM-DD date")
+    try:
+        return date.fromisoformat(value)
+    except ValueError as error:
+        raise ValueError(f"{path} must be a real calendar date") from error
+
+
+def assemble_data(catalog, plan):
+    """Resolve place references; date/selection fields exist only in the app adapter."""
+    if not isinstance(catalog, dict) or not isinstance(plan, dict):
+        raise ValueError("catalog and trip plan must be objects")
+    if type(plan.get("version")) is not int or plan["version"] != 1:
+        raise ValueError("trip plan version must be the integer 1")
+    data = copy.deepcopy(catalog)
+    schedule = copy.deepcopy(plan.get("schedule"))
+    if not isinstance(schedule, dict):
+        raise ValueError("schedule must be an object")
+    for field in ("startDate", "destinationDate", "endDate", "dateRangeEnd"):
+        planning_date(schedule.get(field), f"schedule.{field}")
+    stops = data.get("routeStops")
+    if not isinstance(stops, list) or any(not isinstance(stop, dict) for stop in stops):
+        raise ValueError("routeStops must contain objects")
+    ids = [stop.get("id") for stop in stops]
+    if any(not isinstance(stop_id, str) or not stop_id for stop_id in ids) or len(set(ids)) != len(ids):
+        raise ValueError("catalog place IDs must be unique non-empty strings")
+    by_id = dict(zip(ids, stops))
+    for stop in stops:
+        if any(field in stop for field in ("initialDate", "overnight", "selectedByDefault")):
+            raise ValueError("catalog places must not contain trip dates, overnight or selection")
+        if not isinstance(stop.get("attractions", []), list):
+            raise ValueError("catalog attractions must be a list")
+        for attraction in stop.get("attractions", []):
+            if isinstance(attraction, dict) and "selectedByDefault" in attraction:
+                raise ValueError("catalog attractions must not contain trip selection")
+    selected_attractions = plan.get("selectedAttractions", [])
+    if not isinstance(selected_attractions, list):
+        raise ValueError("selectedAttractions must be a list")
+    selected_keys = set()
+    for item in selected_attractions:
+        if not isinstance(item, dict) or not isinstance(item.get("stopId"), str) or not isinstance(item.get("name"), str):
+            raise ValueError("selectedAttractions must contain stopId and name")
+        key = (item["stopId"], item["name"])
+        city = by_id.get(item["stopId"])
+        attraction = next((a for a in city.get("attractions", []) if isinstance(a, dict) and a.get("name") == item["name"]), None) if city else None
+        if attraction is None or key in selected_keys:
+            raise ValueError("selectedAttractions must reference unique catalog attractions")
+        selected_keys.add(key)
+        attraction["selectedByDefault"] = True
+    visits, stays = plan.get("visits"), plan.get("stays")
+    if not isinstance(visits, list) or not isinstance(stays, list):
+        raise ValueError("visits and stays must be lists")
+    schedule["initialStopOrder"] = []
+    for visit in visits:
+        if not isinstance(visit, dict) or not isinstance(visit.get("stopId"), str) or visit["stopId"] not in by_id:
+            raise ValueError("visits.stopId must refer to a catalog place")
+        stop_id = visit["stopId"]
+        if stop_id in schedule["initialStopOrder"] or stop_id in (schedule.get("originId"), schedule.get("destinationId")):
+            raise ValueError("visits must not repeat places or include fixed endpoints")
+        planning_date(visit.get("date"), "visits.date")
+        if not schedule["startDate"] <= visit["date"] <= schedule["endDate"]:
+            raise ValueError("visits.date must be within the trip")
+        by_id[stop_id]["initialDate"] = visit["date"]
+        by_id[stop_id]["selectedByDefault"] = True
+        schedule["initialStopOrder"].append(stop_id)
+    for stop_id in (schedule.get("originId"), schedule.get("destinationId")):
+        if isinstance(stop_id, str) and stop_id in by_id:
+            by_id[stop_id]["selectedByDefault"] = True
+    previous_end = None
+    for stay in sorted(stays, key=lambda item: str(item.get("checkIn", "")) if isinstance(item, dict) else ""):
+        if not isinstance(stay, dict) or not isinstance(stay.get("stopId"), str) or stay["stopId"] not in by_id:
+            raise ValueError("stays.stopId must refer to a catalog place")
+        if by_id[stay["stopId"]].get("kind") not in {"cidade", "regiao"}:
+            raise ValueError("stays must refer to a city or region")
+        check_in = planning_date(stay.get("checkIn"), "stays.checkIn")
+        check_out = planning_date(stay.get("checkOut"), "stays.checkOut")
+        if check_out <= check_in:
+            raise ValueError("stays.checkOut must be after checkIn")
+        if not schedule["startDate"] <= stay["checkIn"] < stay["checkOut"] <= schedule["endDate"]:
+            raise ValueError("stays dates must be within the trip")
+        if previous_end and stay["checkIn"] < previous_end:
+            raise ValueError("stays must not overlap")
+        previous_end = stay["checkOut"]
+    schedule["stays"] = copy.deepcopy(stays)
+    schedule["dayNotes"] = copy.deepcopy(plan.get("dayNotes", []))
+    data["schedule"] = schedule
+    validate(data)
+    return data
+
+
+def load_data():
+    return assemble_data(json.loads(CATALOG_SOURCE.read_text(encoding="utf-8")),
+                         json.loads(SOURCE.read_text(encoding="utf-8")))
 
 
 def validate_visit_rules(item, path):
@@ -116,7 +210,7 @@ def validate(data):
     schedule = data.get("schedule")
     if not isinstance(schedule, dict):
         raise ValueError("schedule must be an object")
-    for field in ("startDate", "destinationDate", "dateRangeEnd"):
+    for field in ("startDate", "destinationDate", "endDate", "dateRangeEnd"):
         value = schedule.get(field)
         if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
             raise ValueError(f"schedule.{field} must be a YYYY-MM-DD date")
@@ -124,8 +218,8 @@ def validate(data):
             date.fromisoformat(value)
         except ValueError as error:
             raise ValueError(f"schedule.{field} must be a real calendar date") from error
-    if schedule["startDate"] > schedule["destinationDate"] or schedule["destinationDate"] > schedule["dateRangeEnd"]:
-        raise ValueError("schedule dates must be ordered startDate <= destinationDate <= dateRangeEnd")
+    if not schedule["startDate"] <= schedule["destinationDate"] <= schedule["endDate"] <= schedule["dateRangeEnd"]:
+        raise ValueError("schedule dates must be ordered startDate <= destinationDate <= endDate <= dateRangeEnd")
     if any(not isinstance(schedule.get(field), str) for field in ("originId", "destinationId")) or not isinstance(schedule.get("initialStopOrder"), list):
         raise ValueError("schedule must have originId, destinationId, and initialStopOrder")
     day_notes = schedule.get("dayNotes", [])
@@ -139,7 +233,7 @@ def validate(data):
             date.fromisoformat(note["date"])
         except ValueError as error:
             raise ValueError("schedule.dayNotes requires real calendar dates") from error
-        if note["date"] in note_dates or not schedule["startDate"] <= note["date"] <= schedule["dateRangeEnd"]:
+        if note["date"] in note_dates or not schedule["startDate"] <= note["date"] <= schedule["endDate"]:
             raise ValueError("schedule.dayNotes dates must be unique and within the trip")
         note_dates.add(note["date"])
         if not isinstance(note.get("text"), str) or not isinstance(note.get("replaces", []), list) or any(not isinstance(value, str) for value in note.get("replaces", [])):
@@ -179,14 +273,6 @@ def validate(data):
             or stay_days[0] > stay_days[1]
         ):
             raise ValueError(f"routeStops[{index}].stayDays must be an ordered pair of non-negative numbers")
-        if "overnight" in stop:
-            overnight = stop["overnight"]
-            if (
-                not isinstance(overnight, dict)
-                or type(overnight.get("nights")) is not int or overnight["nights"] < 1
-                or any(not isinstance(overnight.get(field), str) or not overnight[field].strip() for field in ("label", "dayLabel"))
-            ):
-                raise ValueError(f"routeStops[{index}].overnight must define positive integer nights, label, and dayLabel")
         validate_visit_rules(stop, f"routeStops[{index}]")
         if not isinstance(stop["name"], str) or not stop["name"].strip():
             raise ValueError(f"routeStops[{index}].name must be a non-empty string")
@@ -305,7 +391,7 @@ def render_app_data(data):
                "accessAlerts": copy.deepcopy(data.get("accessAlerts", [])),
                "sources": copy.deepcopy(data.get("sources", []))}
     return (
-        "// Generated from data/roteiro.json by scripts/generate_route_data.py. Do not edit.\n"
+        "// Generated from data/pontos-de-parada.json and data/roteiro.json by scripts/generate_route_data.py. Do not edit.\n"
         "window.ROTEIRO_DATA = " + _js_json(payload) + ";\n"
     )
 
@@ -322,7 +408,7 @@ def render_markdown(data):
     lines = [
         "# Pontos de parada",
         "",
-        "<!-- Gerado por scripts/generate_route_data.py a partir de data/roteiro.json. Não edite manualmente. -->",
+        "<!-- Gerado por scripts/generate_route_data.py a partir de data/pontos-de-parada.json. Não edite manualmente. -->",
         "",
         data["intro"],
         "",
@@ -368,10 +454,10 @@ def render_markdown(data):
     return "\n".join(lines) + "\n"
 
 
-def outputs(data):
+def outputs(data, catalog):
     return {
         APP_OUTPUT: render_app_data(data),
-        MARKDOWN_OUTPUT: render_markdown(data),
+        MARKDOWN_OUTPUT: render_markdown(catalog),
     }
 
 
@@ -380,9 +466,9 @@ def main(argv=None):
     parser.add_argument("--check", action="store_true", help="fail if generated files are stale")
     args = parser.parse_args(argv)
     try:
-        data = json.loads(SOURCE.read_text(encoding="utf-8"))
-        validate(data)
-        generated = outputs(data)
+        catalog = json.loads(CATALOG_SOURCE.read_text(encoding="utf-8"))
+        data = assemble_data(catalog, json.loads(SOURCE.read_text(encoding="utf-8")))
+        generated = outputs(data, catalog)
     except (OSError, json.JSONDecodeError, ValueError) as error:
         print(f"Invalid route data: {error}", file=sys.stderr)
         return 1
@@ -398,6 +484,9 @@ def main(argv=None):
         return 0
 
     for path, content in generated.items():
+        if path.is_file() and path.read_text(encoding="utf-8") == content:
+            print(f"Unchanged {path.relative_to(ROOT)}")
+            continue
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8")
         print(f"Generated {path.relative_to(ROOT)}")

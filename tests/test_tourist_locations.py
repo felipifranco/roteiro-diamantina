@@ -1,3 +1,4 @@
+from scripts.generate_route_data import load_data
 """Keep destination highlights tied to real map points."""
 
 import json
@@ -10,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class TouristLocationTests(unittest.TestCase):
     def test_campos_altos_visits_have_verified_individual_destinations(self):
-        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         city = next(stop for stop in data["routeStops"] if stop["id"] == "camposaltos")
         visits = city["attractions"]
         self.assertEqual(len(visits), 5)
@@ -24,14 +25,14 @@ class TouristLocationTests(unittest.TestCase):
                 self.assertNotEqual(point, (city["lat"], city["lon"]))
                 self.assertNotIn(point, coordinates)
                 coordinates.add(point)
-                self.assertFalse(visit["selectedByDefault"])
+                self.assertFalse(visit.get("selectedByDefault", False))
         self.assertEqual(visits[4]["locationAccuracy"], "city-center")
         self.assertIn("Entrada de visitantes não confirmada", visits[4]["locationNote"])
-        self.assertEqual(city["overnight"]["nights"], 1)
+        self.assertIn({"stopId": "camposaltos", "checkIn": "2026-10-07", "checkOut": "2026-10-08"}, data["schedule"]["stays"])
         self.assertEqual(city["initialDate"], "2026-10-07")
 
     def test_municipal_groups_preserve_district_visits_and_locations(self):
-        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         groups = {stop["id"]: stop for stop in data["routeStops"]}
         self.assertEqual(sum(len(stop.get("attractions", [])) for stop in groups.values()), 174)
         for old_id in ("curralinho", "biribiri", "mendanha", "vau", "milhoverde", "saogoncalo", "amarantina", "caraca"):
@@ -60,7 +61,7 @@ class TouristLocationTests(unittest.TestCase):
         self.assertIn("Experiência de garimpo · Extração / Curralinho", diam)
 
     def test_memorial_has_its_own_map_point(self):
-        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         city = next(stop for stop in data["routeStops"] if stop["id"] == "setelagoas")
         memorial = next(item for item in city["attractions"] if item["name"] == "Memorial do Humorista Zacarias")
         self.assertEqual(memorial["locationAccuracy"], "exact")
@@ -72,7 +73,7 @@ class TouristLocationTests(unittest.TestCase):
         self.assertIn("attractionStops.filter(s=>s.routeable).forEach(addAttractionMarker)", page)
 
     def test_casa_da_gloria_combines_the_visit_and_links(self):
-        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         cities = {city["id"]: {item["name"]: item for item in city.get("attractions", [])} for city in data["routeStops"]}
         diam = cities["diamantina"]
         self.assertNotIn("Passadiço da Glória", diam)
@@ -89,7 +90,7 @@ class TouristLocationTests(unittest.TestCase):
         )
 
     def test_diamantina_highlights_have_individual_attractions(self):
-        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         city = next(stop for stop in data["routeStops"] if stop["id"] == "diamantina")
         names = {item["name"].casefold() for item in city["attractions"]}
         self.assertTrue(all(sight.casefold() in names for sight in city["sights"]))

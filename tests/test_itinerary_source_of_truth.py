@@ -1,3 +1,4 @@
+from scripts.generate_route_data import load_data
 import json
 import re
 import shutil
@@ -23,36 +24,19 @@ EXPECTED_ROUTE_STOP_IDS = (
 
 
 class ItinerarySourceOfTruthTests(unittest.TestCase):
-    def test_overnight_text_and_duration_follow_json(self):
+    def test_lodging_labels_use_dates_independently_of_visit_selection(self):
         if not shutil.which("node"):
-            self.skipTest("Node.js is required for the overnight runtime test")
+            self.skipTest("Node.js is required")
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         helper = re.search(r"const overnightLabel=.*?;\n", page).group(0)
-        script = """
-const selected=new Set(['city']),dates=new Map([['city','2026-10-07']]);
+        script = "const TripCalendar=require('./assets/trip-calendar.js');" + """
+const stays=[{stopId:'city',checkIn:'2026-10-07',checkOut:'2026-10-09'}];
 const fmt=date=>date.slice(8,10)+'/'+date.slice(5,7);
-const add=(date,n)=>{const value=new Date(date+'T12:00:00Z');value.setUTCDate(value.getUTCDate()+n);return value.toISOString().slice(0,10)};
 """ + helper + """
-const stop={id:'city',overnight:{nights:3,label:'Hospedagem {start} até {end}',dayLabel:'Hospedagem em {name}'}};
-const first=overnightLabel(stop);
-dates.set('city','2026-10-08');const changed=overnightLabel(stop);
-selected.delete('city');const removed=overnightLabel(stop);
-console.log(JSON.stringify([first,changed,removed,overnightLabel({id:'city'})]));
+console.log(JSON.stringify([overnightLabel({id:'city'}),overnightLabel({id:'other'})]));
 """
-        result = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True)
-        self.assertEqual(json.loads(result.stdout), ["Hospedagem 07/10 até 10/10", "Hospedagem 08/10 até 11/10", "", ""])
-        self.assertNotIn("Pernoite", page)
-        self.assertNotIn("PERNOITE", page)
-
-    def test_validator_rejects_invalid_overnight_definitions(self):
-        from scripts.generate_route_data import validate
-        original = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
-        for value in (True, {}, {"nights": 0, "label": "Teste", "dayLabel": "Teste"}, {"nights": True, "label": "Teste", "dayLabel": "Teste"}, {"nights": 1.5, "label": "Teste", "dayLabel": "Teste"}, {"nights": 2, "label": None, "dayLabel": "Teste"}):
-            with self.subTest(value=value):
-                data = json.loads(json.dumps(original))
-                data["routeStops"][0]["overnight"] = value
-                with self.assertRaisesRegex(ValueError, "overnight"):
-                    validate(data)
+        result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
+        self.assertEqual(json.loads(result.stdout), ["🛏 07/10 → 09/10 · 2 noites", ""])
 
     def test_attraction_access_uses_its_record_independently_of_city_and_name(self):
         if not shutil.which("node"):
@@ -75,7 +59,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         self.assertEqual(effort, ["Acesso próprio", "Nota do passeio", "easy"])
 
     def test_itinerary_notes_alerts_and_sources_are_in_json(self):
-        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         for note in data["schedule"]["dayNotes"]:
             self.assertNotIn(note["text"], page)
@@ -92,7 +76,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
 
     def test_validator_rejects_invalid_individual_access_metadata(self):
         from scripts.generate_route_data import validate
-        original = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        original = load_data()
         for value in ("easy", {}, {"level": "wrong", "label": "Teste", "note": "Teste"}, {"level": "easy", "label": "Teste", "note": 1}):
             for target in ("stop", "attraction"):
                 with self.subTest(value=value, target=target):
@@ -106,8 +90,8 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
 
     def test_canonical_json_contains_unified_route_stops(self):
         source = ROOT / "data" / "roteiro.json"
-        self.assertTrue(source.is_file(), "data/roteiro.json must be the canonical dataset")
-        data = json.loads(source.read_text(encoding="utf-8"))
+        self.assertTrue(source.is_file(), "data/roteiro.json must be the trip plan")
+        data = load_data()
         self.assertIn("routeStops", data)
         self.assertNotIn("catalog", data)
         self.assertTrue(data["intro"])
@@ -117,7 +101,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         self.assertTrue(all("attractions" in stop and "profile" in stop for stop in data["routeStops"] if stop["id"] not in {"mirassol", "cipo", "peruacu", "delfinopolis"}))
 
     def test_schedule_and_default_stop_dates_are_in_canonical_data(self):
-        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         schedule = data["schedule"]
         self.assertEqual(schedule["startDate"], "2026-10-07")
         self.assertEqual(schedule["destinationId"], "diamantina")
@@ -134,10 +118,10 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         self.assertTrue(stops["belohorizonte"]["selectedByDefault"])
         self.assertNotIn("overnight", stops["araxa"])
         self.assertNotIn("overnight", stops["cordisburgo"])
-        self.assertEqual(stops["camposaltos"]["overnight"]["nights"], 1)
+        self.assertIn({"stopId": "camposaltos", "checkIn": "2026-10-07", "checkOut": "2026-10-08"}, schedule["stays"])
         self.assertEqual(stops["camposaltos"]["initialDate"], "2026-10-07")
         self.assertTrue(stops["camposaltos"]["selectedByDefault"])
-        self.assertEqual(stops["belohorizonte"]["overnight"]["nights"], 1)
+        self.assertIn({"stopId": "belohorizonte", "checkIn": "2026-10-11", "checkOut": "2026-10-12"}, schedule["stays"])
         self.assertEqual(stops["araxa"]["stayDays"], [1, 1])
         generated = (ROOT / "data" / "route-data.generated.js").read_text(encoding="utf-8")
         self.assertIn('"schedule"', generated)
@@ -145,7 +129,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         self.assertEqual(schedule["dayNotes"], [])
 
     def test_araxa_and_peiropolis_research_is_embedded_in_route_stops(self):
-        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         route_stops = {stop["id"]: stop for stop in data["routeStops"]}
         expected_araxa = (
             "Grande Hotel e Termas de Araxá",
@@ -181,7 +165,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         from scripts.generate_route_data import validate
 
         source = ROOT / "data" / "roteiro.json"
-        original = json.loads(source.read_text(encoding="utf-8"))
+        original = load_data()
         invalid_values = (
             ("lat", 91),
             ("lat", -91),
@@ -248,7 +232,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         from scripts.generate_route_data import validate
 
         source = ROOT / "data" / "roteiro.json"
-        original = json.loads(source.read_text(encoding="utf-8"))
+        original = load_data()
         malformed = [("top-level", [])]
         invalid_version = json.loads(json.dumps(original))
         invalid_version["version"] = True
@@ -283,7 +267,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         from scripts.generate_route_data import validate
 
         source = ROOT / "data" / "roteiro.json"
-        data = json.loads(source.read_text(encoding="utf-8"))
+        data = load_data()
         data["routeStops"][0]["name"] = None
 
         with self.assertRaisesRegex(ValueError, r"routeStops\[0\]\.name must be a non-empty string"):
@@ -293,7 +277,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         from scripts.generate_route_data import validate
 
         source = ROOT / "data" / "roteiro.json"
-        data = json.loads(source.read_text(encoding="utf-8"))
+        data = load_data()
         data["routeStops"][0]["kind"] = "unknown"
 
         with self.assertRaisesRegex(ValueError, r"routeStops\[0\]\.kind must be one of"):
@@ -303,7 +287,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         from scripts.generate_route_data import validate
 
         source = ROOT / "data" / "roteiro.json"
-        original = json.loads(source.read_text(encoding="utf-8"))
+        original = load_data()
         invalid_values = (
             ("type", None),
             ("type", "unknown"),

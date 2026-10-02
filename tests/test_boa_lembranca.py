@@ -1,3 +1,4 @@
+from scripts.generate_route_data import load_data
 """Restaurant stops keep the 2026 dish and a durable local photo."""
 
 import json
@@ -13,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class BoaLembrancaTests(unittest.TestCase):
     def test_eight_independent_restaurant_stops(self):
-        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         restaurants = [stop for stop in data["routeStops"] if stop["kind"] == "restaurante"]
         self.assertEqual(len(restaurants), 8)
         self.assertEqual(len({(stop["lat"], stop["lon"]) for stop in restaurants}), 8)

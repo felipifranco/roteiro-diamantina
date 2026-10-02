@@ -1,3 +1,4 @@
+from scripts.generate_route_data import load_data
 import json
 import unittest
 from pathlib import Path
@@ -10,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class VisitRulesTests(unittest.TestCase):
     def test_every_point_has_age_and_ticket_state(self):
-        data = json.loads((ROOT / "data/roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         validate(data)
         for stop in data["routeStops"]:
             self.assertIn("ageClassification", stop)
@@ -20,7 +21,7 @@ class VisitRulesTests(unittest.TestCase):
                 self.assertIn("ticket", attraction)
 
     def test_researched_child_decisions_and_ticket_sources(self):
-        data = json.loads((ROOT / "data/roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         stops = {stop["id"]: stop for stop in data["routeStops"]}
         cases = [
             ("setelagoas", "Monumento Natural Estadual Gruta Rei do Mato", "idade_minima", 6),

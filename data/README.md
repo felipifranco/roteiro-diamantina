@@ -1,20 +1,33 @@
 # Fonte dos dados do roteiro
 
-Edite somente [`roteiro.json`](roteiro.json). O arquivo mantém cada parada em `routeStops`, com perfil e atrações detalhadas no próprio registro. Assim, os dados de rota e as fichas detalhadas ficam juntos, sem listas paralelas de cidades. Se um campo pesquisado divergir de um valor específico da rota, o valor anterior da rota fica registrado em `routeOverrides`.
+Os dados editáveis são separados por responsabilidade:
+
+- [`pontos-de-parada.json`](pontos-de-parada.json): catálogo de cidades, regiões, restaurantes e atrações, com coordenadas, descrições, fontes e duração sugerida de visita. Cada lugar tem um `id` estável e é cadastrado uma única vez.
+- [`roteiro.json`](roteiro.json): planejamento desta viagem, com calendário, visitas, seleção de passeios, hospedagens e notas por dia. Referencia os lugares do catálogo, sem copiar suas fichas.
+
+O gerador valida as referências e reúne os dois arquivos no adaptador usado pela página. Os campos `initialDate` e `selectedByDefault` desse adaptador são derivados do planejamento; não são campos para editar no catálogo. `routeOverrides` preserva valores históricos da pesquisa quando necessário.
 
 Agrupe os passeios de distritos, bairros e comunidades na parada do município quando esse vínculo estiver confirmado. `municipality` identifica o município dos grupos revisados; `locality` identifica a localidade de uma atração. Passeios transferidos recebem a localidade também no nome e em `catalogName`, para que ela apareça na página e no catálogo. Preserve as coordenadas do passeio e use `mapQuery` com a localidade correta: reunir fichas não desloca atrações para a sede municipal nem comprova duplicação. Grupos regionais que abrangem vários municípios e restaurantes independentes podem permanecer como paradas próprias. A revisão está em [`location-audit.md`](location-audit.md).
 
-O campo `selectedByDefault` em cada parada ou atração define se ela começa selecionada na página. A seleção feita na interface altera somente o estado em memória do navegador; para mudar o padrão permanente, edite esse campo no JSON e regenere os arquivos.
+`visits` no planejamento define as paradas inicialmente selecionadas, na ordem desejada, com `stopId` e `date`. `selectedAttractions` define os passeios selecionados com `stopId` e `name` (nome exato da atração no catálogo). Origem e destino começam selecionados por serem fixos. Alterações de seleção, datas e hospedagens na interface ficam em memória do navegador; para mudar o padrão permanente, edite o planejamento e regenere os arquivos.
 
 `kind` descreve a entidade (`cidade`, `regiao`, `atracao`, `restaurante` ou `alerta`); `type` descreve o tema (`historia`, `natureza` ou `gastronomia`). Origem e destino são definidos por `schedule.originId` e `schedule.destinationId`, não por `kind`. Não use `opcional` como classificação: a participação na rota é calculada a partir da seleção atual. O tema determina a cor base do marcador; o símbolo mostra sua participação e ordem na rota. A interface calcula `routeable` para atrações conforme `locationAccuracy` e `sameSiteAs`; uma atração sem destino próprio continua com `kind: atracao`, mas não entra sozinha no traçado.
 
-O objeto `schedule` guarda as datas da viagem e a ordem inicial das paradas. Em cada cidade, `initialDate` define a data inicial, `stayDays` a faixa de duração sugerida e `overnight` define o pernoite: `nights` é a quantidade de noites, `label` é o texto do cartão/mapa com `{start}` e `{end}`, e `dayLabel` é o texto do cabeçalho com `{name}`. Sem esse objeto, não há indicação de pernoite. Os textos e a duração são definidos somente no JSON. A página usa esses valores como padrão; mudanças feitas durante a navegação ficam somente em memória.
+O objeto `schedule` do planejamento guarda `startDate`, `endDate`, `destinationDate`, `originId`, `destinationId` e `dateRangeEnd`. O calendário mostra todos os dias entre `startDate` e `endDate`, inclusive, independentemente das visitas e hospedagens. Nesta viagem, o período é de 7 a 13 de outubro de 2026: os dias 12 e 13 continuam visíveis mesmo sem programação. `dateRangeEnd` é apenas o limite máximo permitido para configurar o período; não define os dias exibidos. As opções de visita, hospedagem e notas respeitam `endDate`. A estimativa de retorno é calculada separadamente e não encurta nem estende o calendário. As faixas `stayDays` do catálogo continuam sendo sugestões de duração de visita; não definem noites de hospedagem.
+
+`stays` é uma lista independente de hospedagens. `checkIn` inclui a primeira noite; `checkOut` é a data de saída e não inclui uma noite. Por exemplo, duas noites no mesmo lugar:
+
+```json
+{"stopId": "camposaltos", "checkIn": "2026-10-07", "checkOut": "2026-10-09"}
+```
+
+Isso representa as noites de 7 e 8, com saída no dia 9. É possível voltar ao mesmo lugar em outro intervalo, sem duplicar sua ficha. Intervalos não podem se sobrepor e devem ficar dentro das datas de planejamento. As hospedagens não dependem da data nem da seleção de uma visita. Na página, escolha **Onde dormir?** no cabeçalho de cada dia. Para duas noites no mesmo lugar, selecione esse lugar nos dois dias. A quantidade de noites é calculada pelas datas; editar ou limpar um dia preserva as outras noites. Dias consecutivos no mesmo lugar formam uma única estadia. O último dia da viagem não oferece hospedagem, pois a noite ultrapassaria o término do período. A estadia também entra no cálculo do retorno estimado. O cadastro indica a cidade/região de hospedagem; não define hotel ou reserva. Para incluir esse lugar no trajeto rodoviário, adicione-o também como parada de visita.
 
 Cada parada e atração pode ter `accessEffort`, com `level` (`easy`, `moderate`, `hard` ou `unknown`), `label` e `note`. O acesso exibido para uma atração consulta o registro dela; a página não deduz esforço pelo nome nem aplica a nota da cidade aos passeios. Os valores migrados preservam as estimativas anteriores e devem ser revisados com as fontes de cada local.
 
-`schedule.dayNotes` define as notas iniciais por data (`date` e `text`). O campo opcional `replaces` lista textos antigos que podem ser atualizados no navegador; notas personalizadas são preservadas. `accessAlerts` guarda os avisos de estrada e `sources` os links de fontes. Origem e destino são identificados pelos registros indicados em `schedule`.
+`dayNotes` no planejamento define as notas iniciais por data (`date` e `text`). O campo opcional `replaces` lista textos antigos que podem ser atualizados no navegador; notas personalizadas são preservadas. `accessAlerts` guarda os avisos de estrada e `sources` os links de fontes. Origem e destino são identificados pelos registros indicados em `schedule`.
 
-Após alterar o JSON, regenere os arquivos derivados:
+Após alterar qualquer um dos JSONs, regenere os arquivos derivados:
 
 ```bash
 python3 scripts/generate_route_data.py
@@ -29,10 +42,10 @@ Cada parada e atração tem `relevanceSource`, que controla o destaque individua
 
 Use `agency` somente com evidência de inclusão em roteiro comercial. Não deduza esse valor pelo nome do ponto, por `agencyRationale`, pela posição no roteiro ou pela importância aparente. Sem essa evidência, use `guide`. `agencyAudit` registra a cobertura da pesquisa e não define a aparência de nenhum ponto; a interface consulta somente o `relevanceSource` de cada item. A relevância não seleciona o ponto para a rota.
 
-O gerador atualiza:
+O gerador atualiza apenas os arquivos cujo conteúdo mudou:
 
 - `route-data.generated.js`: dados carregados pelo `index.html`;
-- `PONTOS-DE-PARADA.md`: catálogo legível para consulta.
+- `PONTOS-DE-PARADA.md`: versão legível de `pontos-de-parada.json`, independente do planejamento da viagem. Mudar datas, visitas ou hospedagens em `roteiro.json` não altera nem regrava esse Markdown.
 
 Não edite esses arquivos gerados manualmente. Para verificar se estão sincronizados:
 

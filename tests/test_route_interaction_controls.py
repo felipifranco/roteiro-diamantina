@@ -1,3 +1,4 @@
+from scripts.generate_route_data import load_data
 import json
 import re
 import unittest
@@ -27,7 +28,7 @@ class RouteInteractionControlsTests(unittest.TestCase):
             self.assertEqual(attraction.get("estimatedDuration", attraction.get("days")), duration)
 
     def test_generated_route_attractions_preserve_source_fields_and_unknowns(self):
-        source = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        source = load_data()
         generated = (ROOT / "data" / "route-data.generated.js").read_text(encoding="utf-8")
         payload = json.loads(generated.split("window.ROTEIRO_DATA = ", 1)[1].rsplit(";", 1)[0])
         source_stops = {stop["id"]: stop for stop in source["routeStops"]}
@@ -121,7 +122,7 @@ class RouteInteractionControlsTests(unittest.TestCase):
     def test_fixed_diamantina_day_tours_are_included_in_the_route(self):
         draw_start = FINAL_ROUTING.index("window.drawLine=async function(){")
         draw = FINAL_ROUTING[draw_start:]
-        self.assertIn("sameDay=points(destination).filter(s=>s.id!==destination.id)", FINAL_ROUTING)
+        self.assertIn("sameDay=[...points(destination).filter(s=>s.id!==destination.id),...sameDate.flatMap(points)]", FINAL_ROUTING)
         self.assertIn("stopsInOrder=[origin,...before,destination,...sameDay,...after,origin]", draw)
 
     def test_route_request_is_invalidated_before_aborting_previous_fetch(self):

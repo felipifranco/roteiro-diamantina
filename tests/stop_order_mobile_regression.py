@@ -6,7 +6,9 @@ import sys
 html_path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parents[1] / "index.html"
 html = html_path.read_text()
 root = Path(__file__).resolve().parents[1]
-data = json.loads((root / "data" / "roteiro.json").read_text(encoding="utf-8"))
+sys.path.insert(0, str(root))
+from scripts.generate_route_data import load_data
+data = load_data()
 start = html.rfind(".stop-head:has(.stop-date){")
 assert start >= 0, "mobile stop-header rules not found"
 mobile = html[start:]
@@ -49,7 +51,7 @@ assert "function routeableAttractionInfo(s)" in html and "ageSummaryMarkup(tour)
 assert "Tempo estimado de visita:" in html, "attraction stops must label their own visit duration, not a city stay"
 assert "fixedDates=new Map([[origin.id,schedule.startDate],[destination.id,schedule.destinationDate]])" in html, "fixed stop dates should come from itinerary data"
 assert "const routeDate=s=>dates.get(s.id)||(s.kind==='atracao'?dates.get(s.parentId)||fixedDates.get(s.parentId):fixedDates.get(s.id))" in html, "attraction markers should prefer their own date, then inherit their city's or fixed parent's date"
-assert "d!==schedule.destinationDate||d===selectedDate" in html, "city date options must not offer Diamantina's fixed day"
+assert "out.push(d)" in html, "visits can share the fixed destination day"
 assert "candidates(date).map" in html, "date options should include the inherited date"
 assert "routeStops.forEach(s=>" in html, "selected attractions must update markers and popups"
 schedule = data["schedule"]
@@ -62,8 +64,8 @@ attractions = {stop["id"]: {item["name"]: item.get("selectedByDefault", False) f
 assert all(attractions['peiro'].values()), "both Peirópolis tours must start selected"
 assert all(selected for name, selected in attractions['cordisburgo'].items() if name != 'Gruta do Maquiné'), "Cordisburgo attractions except Gruta do Maquiné must start selected"
 assert not any(attractions['setelagoas'].values()), "Sete Lagoas attractions must not start selected"
-assert "s.overnight&&selected.has(s.id)" in html, "overnight stops should come from the JSON"
-assert "fmt(add(dates.get(s.id),s.overnight.nights))" in html, "overnight duration must come from the JSON"
+assert "structuredClone(schedule.stays||[])" in html, "lodging should come from the trip plan"
+assert "TripCalendar.nightCount(stay)" in html, "nights should use the lodging dates"
 assert "Pernoite" not in html and "PERNOITE" not in html, "overnight text must come from the JSON"
 assert "if(routed.has(city.id))labels.set(city.id,String(i+1))" in html, "map sequence markers must number the first intermediate stop as 1"
 assert "`${i+1}${String.fromCharCode(97+j)}`" in html, "tour markers should share their city's number (3a, 3b…)"

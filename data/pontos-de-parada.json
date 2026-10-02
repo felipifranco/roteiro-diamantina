@@ -1,34 +1,5 @@
-// Generated from data/pontos-de-parada.json and data/roteiro.json by scripts/generate_route_data.py. Do not edit.
-window.ROTEIRO_DATA = {
-  "schedule": {
-    "startDate": "2026-10-07",
-    "destinationId": "diamantina",
-    "destinationDate": "2026-10-09",
-    "dateRangeEnd": "2026-10-31",
-    "originId": "mirassol",
-    "endDate": "2026-10-13",
-    "initialStopOrder": [
-      "peiro",
-      "araxa",
-      "camposaltos",
-      "cordisburgo",
-      "setelagoas",
-      "belohorizonte"
-    ],
-    "stays": [
-      {
-        "stopId": "camposaltos",
-        "checkIn": "2026-10-07",
-        "checkOut": "2026-10-08"
-      },
-      {
-        "stopId": "belohorizonte",
-        "checkIn": "2026-10-11",
-        "checkOut": "2026-10-12"
-      }
-    ],
-    "dayNotes": []
-  },
+{
+  "version": 2,
   "routeStops": [
     {
       "id": "mirassol",
@@ -50,8 +21,7 @@ window.ROTEIRO_DATA = {
         "status": "indeterminado"
       },
       "profile": "Origem e retorno do circuito",
-      "attractions": [],
-      "selectedByDefault": true
+      "attractions": []
     },
     {
       "id": "canastra",
@@ -2525,8 +2495,7 @@ window.ROTEIRO_DATA = {
             "level": "easy"
           },
           "kind": "atracao",
-          "type": "historia",
-          "selectedByDefault": true
+          "type": "historia"
         },
         {
           "name": "Caminho dos Escravos",
@@ -3056,8 +3025,7 @@ window.ROTEIRO_DATA = {
         "note": "Centro histórico tem calçamento e desníveis; Casa de JK e museus devem ser confirmados individualmente.",
         "level": "moderate"
       },
-      "municipality": "Diamantina",
-      "selectedByDefault": true
+      "municipality": "Diamantina"
     },
     {
       "id": "peruacu",
@@ -3197,8 +3165,7 @@ window.ROTEIRO_DATA = {
             "url": "https://www.mg.gov.br/servico/visitar-o-museu-casa-guimaraes-rosa"
           },
           "kind": "atracao",
-          "type": "historia",
-          "selectedByDefault": true
+          "type": "historia"
         },
         {
           "name": "Portal Grande Sertão",
@@ -3223,8 +3190,7 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "kind": "atracao",
-          "type": "historia",
-          "selectedByDefault": true
+          "type": "historia"
         },
         {
           "name": "Casa Elefante",
@@ -3249,8 +3215,7 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "kind": "atracao",
-          "type": "historia",
-          "selectedByDefault": true
+          "type": "historia"
         }
       ],
       "relevanceSource": "agency",
@@ -3263,9 +3228,7 @@ window.ROTEIRO_DATA = {
       "stayDays": [
         0.5,
         1
-      ],
-      "initialDate": "2026-10-11",
-      "selectedByDefault": true
+      ]
     },
     {
       "id": "belohorizonte",
@@ -3373,9 +3336,7 @@ window.ROTEIRO_DATA = {
       "stayDays": [
         1,
         2
-      ],
-      "initialDate": "2026-10-11",
-      "selectedByDefault": true
+      ]
     },
     {
       "id": "brumadinho",
@@ -5028,8 +4989,7 @@ window.ROTEIRO_DATA = {
           "locality": "Peirópolis",
           "mapQuery": "Museu dos Dinossauros / Complexo Cultural e Científico de Peirópolis, Uberaba MG",
           "kind": "atracao",
-          "type": "historia",
-          "selectedByDefault": true
+          "type": "historia"
         },
         {
           "name": "Geossítio de Peirópolis",
@@ -5055,8 +5015,7 @@ window.ROTEIRO_DATA = {
           },
           "locality": "Peirópolis",
           "mapQuery": "Geossítio de Peirópolis, Uberaba MG",
-          "kind": "atracao",
-          "selectedByDefault": true
+          "kind": "atracao"
         }
       ],
       "guideBriefing": "Peirópolis, distrito rural de Uberaba, tornou-se referência paleontológica a partir das pesquisas iniciadas na região na década de 1940. As rochas do Triângulo Mineiro preservaram fósseis do Cretáceo, incluindo dinossauros e outros animais. O antigo núcleo ferroviário passou a abrigar pesquisa, museu e educação científica, aproximando o visitante do território onde os fósseis são encontrados e estudados.",
@@ -5069,9 +5028,7 @@ window.ROTEIRO_DATA = {
         "status": "por_passeio"
       },
       "municipality": "Uberaba",
-      "mapQuery": "Peirópolis, Uberaba MG",
-      "initialDate": "2026-10-07",
-      "selectedByDefault": true
+      "mapQuery": "Peirópolis, Uberaba MG"
     },
     {
       "id": "araxa",
@@ -5279,9 +5236,7 @@ window.ROTEIRO_DATA = {
       "stayDays": [
         1,
         1
-      ],
-      "initialDate": "2026-10-07",
-      "selectedByDefault": true
+      ]
     },
     {
       "id": "camposaltos",
@@ -5529,9 +5484,7 @@ window.ROTEIRO_DATA = {
           "label": "Turismo municipal",
           "url": "https://www.camposaltos.mg.gov.br/portal/cultura-e-turismo/"
         }
-      ],
-      "initialDate": "2026-10-07",
-      "selectedByDefault": true
+      ]
     },
     {
       "id": "itabirito",
@@ -5798,9 +5751,7 @@ window.ROTEIRO_DATA = {
       },
       "ticket": {
         "status": "por_passeio"
-      },
-      "initialDate": "2026-10-11",
-      "selectedByDefault": true
+      }
     },
     {
       "id": "presidentekubitschek",
@@ -6370,6 +6321,23 @@ window.ROTEIRO_DATA = {
       }
     }
   ],
+  "intro": "Paradas e atrações de Minas Gerais reunidas a partir de roteiros comerciais de agências, guias e fontes oficiais. O cadastro descreve o interesse de cada visita e sua relação com o circuito; a estrela identifica pontos com inclusão comprovada em roteiro comercial. Estimativa de tempo é uma referência de planejamento. Tempo real publicado reúne durações atribuídas às fontes consultadas, separadas das estimativas; registros antigos sem link individual ainda precisam de conferência da fonte. Valores sem duração ficam como — ou Duração a confirmar. A classificação etária e o ingresso/agendamento são definidos para cada passeio, sem herdar as regras da cidade. Acessibilidade e esforço de acesso são informações distintas; A confirmar indica que a condição individual ainda precisa ser verificada.",
+  "agencyAudit": {
+    "lastReviewed": "2026-09-29",
+    "rule": "Paradas e atrações explicitamente incluídas em roteiros comercializados por agências devem ser cadastradas com relevanceSource=agency.",
+    "reviewedRoutes": [
+      "Primotur — Cidades Históricas de Minas",
+      "Primotur — Circuito do Ouro: Entre Cenários da História",
+      "Ouro Azul — Vesperata de Diamantina com Gruta do Maquiné e Serra de Santa Helena",
+      "Agência Minhas Gerais — Tour em Diamantina",
+      "Agência Minhas Gerais — Estrada Real de Diamantina até Serro",
+      "Agência Minhas Gerais — Cânion do Funil",
+      "Ouro Azul — Estrada Real Mineira: Diamantina a BH",
+      "Ouro Preto Travel — Minas Gerais do Ouro e Barroco",
+      "Primotur — Entre Trilhas, Sabores e Aromas: Sabará a Itabirito",
+      "Primotur — Cidades Históricas de Minas: Sabará e Congonhas"
+    ]
+  },
   "accessAlerts": [
     {
       "title": "⚠ Acesso à Canastra e Capitólio",
@@ -6396,4 +6364,4 @@ window.ROTEIRO_DATA = {
       "label": "Visit Diamantina"
     }
   ]
-};
+}

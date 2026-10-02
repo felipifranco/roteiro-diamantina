@@ -1,3 +1,4 @@
+from scripts.generate_route_data import load_data
 import json
 import re
 import shutil
@@ -14,7 +15,7 @@ class GroupedTourSelectionTests(unittest.TestCase):
     def test_ouro_preto_and_ouro_branco_share_theme_and_dynamic_route_symbols(self):
         if not shutil.which("node"):
             self.skipTest("Node.js is required for marker behavior")
-        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        data = load_data()
         cities = [s for s in data["routeStops"] if s["id"] in {"ouropreto", "ourobranco"}]
         self.assertTrue(all(s["kind"] == "cidade" for s in cities))
         helpers = re.search(r"function colorClass\(s\)\{[^\n]+", PAGE).group(0)
