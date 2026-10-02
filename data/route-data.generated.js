@@ -36,7 +36,9 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "indeterminado"
       },
-      "selectedByDefault": true
+      "selectedByDefault": true,
+      "profile": "Origem e retorno do circuito",
+      "attractions": []
     },
     {
       "id": "canastra",
@@ -169,7 +171,7 @@ window.ROTEIRO_DATA = {
             "level": "hard"
           },
           "kind": "atracao",
-          "type": "natureza"
+          "type": "gastronomia"
         }
       ],
       "guideBriefing": "A Serra da Canastra é um grande chapadão do sudoeste mineiro, protegido em parte pelo Parque Nacional criado em 1972. A região está ligada às cabeceiras do rio São Francisco, ao Cerrado e aos campos de altitude, à pecuária tradicional e ao queijo artesanal da Canastra. A visita combina geografia, conservação ambiental e uma cultura rural moldada pelo isolamento das serras.",
@@ -217,7 +219,8 @@ window.ROTEIRO_DATA = {
             "status": "indeterminada"
           },
           "ticket": {
-            "status": "indeterminado"
+            "status": "online",
+            "url": "https://ingressos.pauaparque.com.br/"
           },
           "accessEffort": {
             "label": "Variável",
@@ -225,7 +228,25 @@ window.ROTEIRO_DATA = {
             "level": "moderate"
           },
           "kind": "atracao",
-          "type": "natureza"
+          "type": "natureza",
+          "description": "Parque de contemplação dos cânions de Furnas, com mirantes, deck suspenso, trilhas e piscinas naturais.",
+          "agencyRationale": "Complemento documentado na página oficial do parque; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Mirante / caminhada",
+          "estimatedDuration": "Duração a confirmar",
+          "publishedDuration": "—",
+          "oneYearOld": "A confirmar",
+          "accessibility": "A confirmar",
+          "days": "Duração a confirmar",
+          "sourceUrl": "https://cataguacapitolio.com.br/mirante",
+          "researchedAt": "2026-10-02",
+          "mapQuery": "Parque Mirante dos Canyons MG-050 km 312 Capitólio MG",
+          "visitLinks": [
+            {
+              "label": "Parque · fonte oficial",
+              "url": "https://cataguacapitolio.com.br/mirante"
+            }
+          ],
+          "guideBriefing": "Parque de contemplação dos cânions de Furnas, com mirantes, deck suspenso, trilhas e piscinas naturais. A duração e as condições de acesso dependem das atividades escolhidas; confirme com o parque."
         },
         {
           "name": "Cânions de Furnas",
@@ -405,7 +426,8 @@ window.ROTEIRO_DATA = {
             "level": "moderate"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "historia",
+          "days": "1 h"
         },
         {
           "name": "Doze Profetas",
@@ -1091,7 +1113,8 @@ window.ROTEIRO_DATA = {
             "level": "hard"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "historia",
+          "days": "30 min"
         },
         {
           "name": "Catedral da Sé",
@@ -1216,7 +1239,7 @@ window.ROTEIRO_DATA = {
           "visitType": "Mina / visita guiada",
           "estimatedDuration": "1h15",
           "publishedDuration": "~45 min",
-          "oneYearOld": "Não confirmado",
+          "oneYearOld": "Sim, com responsável — conforme fonte da classificação etária",
           "accessibility": "Não confirmado — há meia-entrada 60+, mas isso não comprova acessibilidade física",
           "guideBriefing": "Antiga mina de ouro industrial com visita por vagonete até galerias subterrâneas. A escala e profundidade tornam a mineração muito mais compreensível do que apenas observá-la em museus. A descida de vagonete e as galerias dão caráter de experiência ao roteiro. Roteiros organizados a utilizam para explicar em escala física a atividade econômica que criou Mariana e Ouro Preto.",
           "lat": -20.392408,
@@ -1471,7 +1494,9 @@ window.ROTEIRO_DATA = {
         "label": "Exigente nas trilhas",
         "note": "O ICMBio classifica roteiros com caminhadas de vários quilômetros; escolha só atrativo com acesso curto confirmado.",
         "level": "hard"
-      }
+      },
+      "profile": "Parque nacional · serras · cachoeiras",
+      "attractions": []
     },
     {
       "id": "tabuleiro",
@@ -1550,7 +1575,7 @@ window.ROTEIRO_DATA = {
           },
           "mapQuery": "Centro histórico, Conceição do Mato Dentro MG",
           "kind": "atracao",
-          "type": "natureza"
+          "type": "historia"
         },
         {
           "name": "Serra do Espinhaço",
@@ -1611,7 +1636,7 @@ window.ROTEIRO_DATA = {
           },
           "mapQuery": "Igreja Matriz de Nossa Senhora da Conceição, Conceição do Mato Dentro MG",
           "kind": "atracao",
-          "type": "natureza"
+          "type": "historia"
         }
       ],
       "relevanceSource": "agency",
@@ -1743,7 +1768,7 @@ window.ROTEIRO_DATA = {
             "level": "easy"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "gastronomia"
         },
         {
           "name": "Cachoeira da Grota Seca",
@@ -1774,7 +1799,7 @@ window.ROTEIRO_DATA = {
             "level": "moderate"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Cachoeira do Carijó",
@@ -1804,7 +1829,7 @@ window.ROTEIRO_DATA = {
             "level": "moderate"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Casa dos Ottoni",
@@ -1984,7 +2009,7 @@ window.ROTEIRO_DATA = {
             "level": "easy"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "gastronomia"
         },
         {
           "name": "Igreja de Nossa Senhora do Rosário · Milho Verde",
@@ -2080,7 +2105,7 @@ window.ROTEIRO_DATA = {
           "mapQuery": "Cachoeiras, Milho Verde, Serro MG",
           "catalogName": "Cachoeiras · Milho Verde",
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Cachoeira do Comércio · São Gonçalo do Rio das Pedras",
@@ -2092,7 +2117,9 @@ window.ROTEIRO_DATA = {
             "status": "indeterminada"
           },
           "ticket": {
-            "status": "indeterminado"
+            "status": "gratuito",
+            "url": "https://www.minasgerais.com.br/pt/atracoes/serro/cachoeira/cachoeira-do-comercio",
+            "note": "Entrada franca informada pelo portal estadual; confirme condições atuais."
           },
           "accessEffort": {
             "label": "Variável",
@@ -2102,9 +2129,25 @@ window.ROTEIRO_DATA = {
           "locality": "São Gonçalo do Rio das Pedras",
           "mapQuery": "Cachoeira do Comércio, São Gonçalo do Rio das Pedras, Serro MG",
           "catalogName": "Cachoeira do Comércio · São Gonçalo do Rio das Pedras",
-          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. ",
+          "guideBriefing": "Localidade: São Gonçalo do Rio das Pedras, município de Serro. Cachoeira em São Gonçalo do Rio das Pedras, distrito do Serro, com queda d’água, paredão e moinhos tradicionais de pau-a-pique nas proximidades. Confirme o percurso e as condições de visita localmente.",
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza",
+          "description": "Cachoeira em São Gonçalo do Rio das Pedras, distrito do Serro, com queda d’água, paredão e moinhos tradicionais de pau-a-pique nas proximidades.",
+          "agencyRationale": "Complemento documentado no portal turístico estadual; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Cachoeira / paisagem",
+          "estimatedDuration": "Duração a confirmar",
+          "publishedDuration": "—",
+          "oneYearOld": "A confirmar",
+          "accessibility": "A confirmar",
+          "days": "Duração a confirmar",
+          "sourceUrl": "https://www.minasgerais.com.br/pt/atracoes/serro/cachoeira/cachoeira-do-comercio",
+          "researchedAt": "2026-10-02",
+          "visitLinks": [
+            {
+              "label": "Turismo de Minas Gerais · fonte oficial",
+              "url": "https://www.minasgerais.com.br/pt/atracoes/serro/cachoeira/cachoeira-do-comercio"
+            }
+          ]
         },
         {
           "name": "Núcleo histórico · São Gonçalo do Rio das Pedras",
@@ -2200,7 +2243,7 @@ window.ROTEIRO_DATA = {
           "mapQuery": "Cachoeiras e Serra do Espinhaço, São Gonçalo do Rio das Pedras, Serro MG",
           "catalogName": "Cachoeiras e Serra do Espinhaço · São Gonçalo do Rio das Pedras",
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         }
       ],
       "relevanceSource": "agency",
@@ -2273,7 +2316,8 @@ window.ROTEIRO_DATA = {
             "level": "moderate"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "historia",
+          "days": "1 h"
         },
         {
           "name": "Centro Histórico",
@@ -2747,7 +2791,7 @@ window.ROTEIRO_DATA = {
             "level": "moderate"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Cachoeira da Sentinela",
@@ -2777,7 +2821,7 @@ window.ROTEIRO_DATA = {
             "level": "moderate"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Gruta do Salitre · Extração / Curralinho",
@@ -2805,7 +2849,7 @@ window.ROTEIRO_DATA = {
           "mapQuery": "Gruta do Salitre, Extração / Curralinho, Diamantina MG",
           "catalogName": "Gruta do Salitre · Extração / Curralinho",
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Experiência de garimpo · Extração / Curralinho",
@@ -2896,7 +2940,7 @@ window.ROTEIRO_DATA = {
           "mapQuery": "Cachoeiras, Biribiri, Diamantina MG",
           "catalogName": "Cachoeiras · Biribiri",
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Trilhas do Parque Estadual do Biribiri · Biribiri",
@@ -2928,7 +2972,7 @@ window.ROTEIRO_DATA = {
           "mapQuery": "Trilhas do Parque Estadual do Biribiri, Biribiri, Diamantina MG",
           "catalogName": "Trilhas do Parque Estadual do Biribiri · Biribiri",
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Núcleo histórico e artesanato de Mendanha · Mendanha",
@@ -3033,7 +3077,9 @@ window.ROTEIRO_DATA = {
         "label": "Exigente",
         "note": "Cavernas e trilhas podem ter escadas e terreno irregular; confirmar percurso guiado e restrições.",
         "level": "hard"
-      }
+      },
+      "profile": "Cavernas · cânion · pinturas rupestres",
+      "attractions": []
     },
     {
       "id": "delfinopolis",
@@ -3065,7 +3111,9 @@ window.ROTEIRO_DATA = {
         "label": "Variável",
         "note": "Balsa e cachoeiras: confirmar operação, embarque e caminhada antes de incluir.",
         "level": "moderate"
-      }
+      },
+      "profile": "Acesso à Canastra · travessia do Rio Grande",
+      "attractions": []
     },
     {
       "id": "cordisburgo",
@@ -3111,7 +3159,7 @@ window.ROTEIRO_DATA = {
             "note": "Compra on-line com pelo menos 48 h de antecedência, segundo a bilheteria oficial."
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Museu Casa Guimarães Rosa",
@@ -3299,7 +3347,7 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "gastronomia"
         }
       ],
       "relevanceSource": "agency",
@@ -4016,7 +4064,7 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Gastronomia",
@@ -4040,7 +4088,7 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "gastronomia"
         },
         {
           "name": "Largo das Forras",
@@ -4275,7 +4323,7 @@ window.ROTEIRO_DATA = {
           "locality": "Bichinho",
           "mapQuery": "Cachaçarias e produtos locais, Prados MG",
           "kind": "atracao",
-          "type": "historia"
+          "type": "gastronomia"
         }
       ],
       "relevanceSource": "agency",
@@ -4389,7 +4437,7 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Santuário e igreja neogótica · Caraça",
@@ -4475,7 +4523,7 @@ window.ROTEIRO_DATA = {
           "mapQuery": "Trilhas, cachoeiras e grutas, Caraça, Catas Altas MG",
           "catalogName": "Trilhas, cachoeiras e grutas · Caraça",
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Observação do lobo-guará · Caraça",
@@ -4502,7 +4550,7 @@ window.ROTEIRO_DATA = {
           "mapQuery": "Observação do lobo-guará, Caraça, Catas Altas MG",
           "catalogName": "Observação do lobo-guará · Caraça",
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         }
       ],
       "relevanceSource": "guide",
@@ -4917,7 +4965,7 @@ window.ROTEIRO_DATA = {
             }
           ],
           "kind": "atracao",
-          "type": "natureza"
+          "type": "historia"
         }
       ],
       "relevanceSource": "guide",
@@ -5555,7 +5603,7 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "gastronomia"
         }
       ],
       "relevanceSource": "agency",
@@ -5685,7 +5733,7 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         },
         {
           "name": "Memorial do Humorista Zacarias",
@@ -5741,7 +5789,7 @@ window.ROTEIRO_DATA = {
             "note": "Compra on-line com pelo menos 48 h de antecedência, segundo a bilheteria oficial."
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         }
       ],
       "guideBriefing": "Sete Lagoas aparece em roteiro comercial ligado à Vesperata de Diamantina, com paradas culturais, geológicas e panorâmicas.",
@@ -5762,7 +5810,7 @@ window.ROTEIRO_DATA = {
       "lat": -18.61417,
       "lon": -43.56167,
       "kind": "cidade",
-      "type": "historia",
+      "type": "natureza",
       "days": "Duração a confirmar",
       "sights": [
         "Cânion do Funil"
@@ -5798,7 +5846,7 @@ window.ROTEIRO_DATA = {
             "level": "hard"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "natureza"
         }
       ],
       "guideBriefing": "Município usado como acesso ao Cânion do Funil em passeio comercializado a partir de Diamantina.",
