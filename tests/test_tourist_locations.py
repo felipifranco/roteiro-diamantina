@@ -9,6 +9,27 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class TouristLocationTests(unittest.TestCase):
+    def test_campos_altos_visits_have_verified_individual_destinations(self):
+        data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
+        city = next(stop for stop in data["routeStops"] if stop["id"] == "camposaltos")
+        visits = city["attractions"]
+        self.assertEqual(len(visits), 5)
+        coordinates = set()
+        for visit in visits[:4]:
+            with self.subTest(name=visit["name"]):
+                self.assertEqual(visit["locationAccuracy"], "exact")
+                self.assertTrue(visit["locationSourceUrl"].startswith("https://www.google.com/maps/"))
+                self.assertRegex(visit["locationPlusCode"], r"^58GM[A-Z0-9]{4}\+[A-Z0-9]{2}$")
+                point = (visit["lat"], visit["lon"])
+                self.assertNotEqual(point, (city["lat"], city["lon"]))
+                self.assertNotIn(point, coordinates)
+                coordinates.add(point)
+                self.assertFalse(visit["selectedByDefault"])
+        self.assertEqual(visits[4]["locationAccuracy"], "city-center")
+        self.assertIn("Entrada de visitantes não confirmada", visits[4]["locationNote"])
+        self.assertEqual(city["overnight"]["nights"], 1)
+        self.assertEqual(city["initialDate"], "2026-10-07")
+
     def test_municipal_groups_preserve_district_visits_and_locations(self):
         data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))
         groups = {stop["id"]: stop for stop in data["routeStops"]}

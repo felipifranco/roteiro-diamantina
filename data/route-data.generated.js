@@ -5256,7 +5256,7 @@ window.ROTEIRO_DATA = {
       "kid": "Visitas urbanas e passeios rurais têm acessos diferentes. Confirme horários, condições de acesso e hospedagem antes da viagem.",
       "url": "https://www.minasgerais.com.br/pt/destinos/campos-altos",
       "profile": "Memória ferroviária · turismo religioso · artesanato · natureza",
-      "guideBriefing": "Campos Altos tem sua formação ligada à estação inaugurada em 1913 pela Estrada de Ferro Goyaz. A memória ferroviária se combina com o turismo religioso do Santuário de Nossa Senhora Aparecida e o trabalho em metal do artesão Dito Leandro.\n\nSugestão para a passagem com pernoite: considerar as visitas urbanas se houver tempo e deixar os passeios rurais para uma programação própria. A Cachoeira Olho do Sol tem acesso por estrada de terra; a visitação ao parque estadual precisa ser confirmada com o IEF.\n\nO pernoite do roteiro é de 7 para 8 de outubro. A festa de Nossa Senhora Aparecida tem sua data tradicional em 12 de outubro; consulte a programação vigente. Para refeições, o portal estadual reúne opções como Cafeteria Estação de Minas e Armazém 262. Confirme horários e hospedagem diretamente com os estabelecimentos.",
+      "guideBriefing": "Campos Altos tem sua formação ligada à estação inaugurada no início da década de 1910 pela Estrada de Ferro Goyaz. A memória ferroviária se combina com o turismo religioso do Santuário de Nossa Senhora Aparecida e o trabalho em metal do artesão Dito Leandro.\n\nSugestão para a passagem com pernoite: considerar as visitas urbanas se houver tempo e deixar os passeios rurais para uma programação própria. A Cachoeira Olho do Sol tem acesso por estrada de terra; a visitação ao parque estadual precisa ser confirmada com o IEF.\n\nO pernoite do roteiro é de 7 para 8 de outubro. A festa de Nossa Senhora Aparecida tem sua data tradicional em 12 de outubro; consulte a programação vigente. Para refeições, o portal estadual reúne opções como Cafeteria Estação de Minas e Armazém 262. Confirme horários e hospedagem diretamente com os estabelecimentos.",
       "attractions": [
         {
           "name": "Santuário de Nossa Senhora Aparecida",
@@ -5268,10 +5268,10 @@ window.ROTEIRO_DATA = {
           "oneYearOld": "Regra etária não publicada; confirmar com o responsável.",
           "accessibility": "Acessibilidade e horários não confirmados. Verifique rampas, escadas e acesso aos diferentes templos com o santuário.",
           "guideBriefing": "A primeira capela surgiu em 1951. O conjunto reúne templos, sala de ex-votos e uma imagem monumental de Nossa Senhora Aparecida. A visita permite conhecer a devoção local e observar a cidade. A festa tradicional ocorre em outubro; horários de visita e celebrações devem ser consultados para a data da viagem.\n\nAcessibilidade e horários não confirmados. Verifique rampas, escadas e acesso aos diferentes templos com o santuário.",
-          "lat": -19.696,
-          "lon": -46.171,
-          "locationAccuracy": "city-center",
-          "locationNote": "Coordenada de referência de Campos Altos; ponto físico ainda não confirmado. Use a busca pelo nome e endereço.",
+          "lat": -19.6855953,
+          "lon": -46.1806676,
+          "locationAccuracy": "exact",
+          "locationNote": "Local físico conferido por nome e município no Google Maps, em concordância com a fonte turística. Coordenada cruzada com o cadastro geográfico da Buser.",
           "days": "30–60 min (estimativa de planejamento)",
           "relevanceSource": "guide",
           "mapQuery": "Santuário Diocesano Nossa Senhora Aparecida Campos Altos MG",
@@ -5291,11 +5291,14 @@ window.ROTEIRO_DATA = {
               "label": "Fonte oficial",
               "url": "https://www.camposaltos.mg.gov.br/portal/santuario-nossa-senhora-aparecida/"
             }
-          ]
+          ],
+          "locationSourceUrl": "https://www.google.com/maps/search/Santu%C3%A1rio+de+Campos+Altos/",
+          "locationPlusCode": "58GM8R79+QP",
+          "locationCrossCheckUrl": "https://www.buser.com.br/destinos/pontos-turisticos/mg/campos-altos-mg/cachoeira-olho-do-sol"
         },
         {
           "name": "Estação Ferroviária de Campos Altos",
-          "description": "Estação de 1913 ligada à formação da cidade; a ferrovia permanece voltada ao transporte de cargas.",
+          "description": "Estação do início da década de 1910 ligada à formação da cidade; a ferrovia permanece voltada ao transporte de cargas.",
           "agencyRationale": "Complemento documentado em fonte oficial; inclusão em roteiro comercial de agência não confirmada.",
           "visitType": "Patrimônio ferroviário / contemplação externa",
           "estimatedDuration": "20–30 min (estimativa de planejamento)",
@@ -5303,10 +5306,10 @@ window.ROTEIRO_DATA = {
           "oneYearOld": "Regra etária não publicada; confirmar com o responsável.",
           "accessibility": "Praça Benedito Valadares, Centro. Acessibilidade não publicada; mantenha-se nas áreas públicas, sem entrar na linha ou em áreas operacionais.",
           "guideBriefing": "A estação representa a origem ferroviária de Campos Altos. O prédio e o armazém podem ser apreciados em uma passagem pelo centro. A linha é usada por trens de carga, sem serviço de passageiros; não há confirmação de visita interna.\n\nPraça Benedito Valadares, Centro. Acessibilidade não publicada; mantenha-se nas áreas públicas, sem entrar na linha ou em áreas operacionais.",
-          "lat": -19.696,
-          "lon": -46.171,
-          "locationAccuracy": "city-center",
-          "locationNote": "Coordenada de referência de Campos Altos; ponto físico ainda não confirmado. Use a busca pelo nome e endereço.",
+          "lat": -19.7005625,
+          "lon": -46.1730625,
+          "locationAccuracy": "exact",
+          "locationNote": "Local físico conferido por nome e município no Google Maps, em concordância com a fonte turística. Coordenada obtida do Plus Code do local (célula de aproximadamente 14 m).",
           "days": "20–30 min (estimativa de planejamento)",
           "relevanceSource": "guide",
           "mapQuery": "Estação Ferroviária Campos Altos Praça Benedito Valadares MG",
@@ -5327,9 +5330,15 @@ window.ROTEIRO_DATA = {
             {
               "label": "Fonte oficial",
               "url": "https://www.minasgerais.com.br/pt/atracoes/campos-altos/arquitetura/estacao-ferroviaria-de-campos-altos"
+            },
+            {
+              "label": "Patrimônio ferroviário · Prefeitura",
+              "url": "https://www.camposaltos.mg.gov.br/portal/estacao-ferroviaria-de-campos-altos/"
             }
           ],
-          "address": "Praça Benedito Valadares, Centro, Campos Altos, MG"
+          "address": "Praça Benedito Valadares, Centro, Campos Altos, MG",
+          "locationSourceUrl": "https://www.google.com/maps/search/Esta%C3%A7%C3%A3o+Ferrovi%C3%A1ria+Campos+Altos+MG/",
+          "locationPlusCode": "58GM7RXG+QQ"
         },
         {
           "name": "Oficina e exposição de Dito Leandro",
@@ -5341,10 +5350,10 @@ window.ROTEIRO_DATA = {
           "oneYearOld": "Regra etária não publicada; confirmar com o responsável.",
           "accessibility": "Rua Tiradentes, 175, Centro. Horários e acessibilidade não publicados; confirme a visita com o responsável.",
           "guideBriefing": "Dito Leandro transforma metal descartado em esculturas. O espaço reúne produção e exposição, oferecendo contato com o trabalho do artesão. O portal estadual informa visita guiada; combine previamente a disponibilidade.\n\nRua Tiradentes, 175, Centro. Horários e acessibilidade não publicados; confirme a visita com o responsável.",
-          "lat": -19.696,
-          "lon": -46.171,
-          "locationAccuracy": "city-center",
-          "locationNote": "Coordenada de referência de Campos Altos; ponto físico ainda não confirmado. Use a busca pelo nome e endereço.",
+          "lat": -19.6971875,
+          "lon": -46.1731875,
+          "locationAccuracy": "exact",
+          "locationNote": "Local físico conferido por nome e município no Google Maps, em concordância com a fonte turística. Coordenada obtida do Plus Code do local (célula de aproximadamente 14 m).",
           "days": "30–60 min (estimativa de planejamento)",
           "relevanceSource": "guide",
           "mapQuery": "Dito Leandro Rua Tiradentes 175 Campos Altos MG",
@@ -5367,7 +5376,9 @@ window.ROTEIRO_DATA = {
               "url": "https://www.minasgerais.com.br/pt/atracoes/campos-altos/artesanato/dito-leandro"
             }
           ],
-          "address": "Rua Tiradentes, 175, Centro, Campos Altos, MG"
+          "address": "Rua Tiradentes, 175, Centro, Campos Altos, MG",
+          "locationSourceUrl": "https://www.google.com/maps/search/Dito+Leandro+Campos+Altos+MG/",
+          "locationPlusCode": "58GM8R3G+4P"
         },
         {
           "name": "Cachoeira Olho do Sol",
@@ -5379,10 +5390,10 @@ window.ROTEIRO_DATA = {
           "oneYearOld": "Regra etária não publicada; confirmar com o responsável.",
           "accessibility": "Acesso rural com trilhas, rochas e desníveis. Acessibilidade não publicada; confirme estrada, percurso e condições da água antes de visitar.",
           "guideBriefing": "O portal estadual situa a cachoeira a aproximadamente 14,3 km do centro e descreve acesso por estrada de terra. Há trilhas junto ao rio, rochas e desníveis. Reserve tempo próprio para o deslocamento; o tempo publicado de visita não foi encontrado.\n\nAcesso rural com trilhas, rochas e desníveis. Acessibilidade não publicada; confirme estrada, percurso e condições da água antes de visitar.",
-          "lat": -19.696,
-          "lon": -46.171,
-          "locationAccuracy": "city-center",
-          "locationNote": "Coordenada de referência de Campos Altos; ponto físico ainda não confirmado. Use a busca pelo nome e endereço.",
+          "lat": -19.7852832,
+          "lon": -46.2362161,
+          "locationAccuracy": "exact",
+          "locationNote": "Local físico conferido por nome e município no Google Maps, em concordância com a fonte turística. Coordenada cruzada com o cadastro geográfico da Buser.",
           "days": "Duração a confirmar",
           "relevanceSource": "guide",
           "mapQuery": "Cachoeira Olho do Sol Campos Altos MG",
@@ -5409,7 +5420,10 @@ window.ROTEIRO_DATA = {
             "level": "hard",
             "label": "Terreno irregular",
             "note": "A fonte oficial descreve trilhas e rochas com desníveis; confirme o percurso e suas condições."
-          }
+          },
+          "locationSourceUrl": "https://www.google.com/maps/search/Cachoeira+Olho+do+Sol+Campos+Altos/",
+          "locationPlusCode": "58GM6Q77+VG",
+          "locationCrossCheckUrl": "https://www.buser.com.br/destinos/pontos-turisticos/mg/campos-altos-mg/cachoeira-olho-do-sol"
         },
         {
           "name": "Parque Estadual dos Campos Altos",
@@ -5424,7 +5438,7 @@ window.ROTEIRO_DATA = {
           "lat": -19.696,
           "lon": -46.171,
           "locationAccuracy": "city-center",
-          "locationNote": "Coordenada de referência de Campos Altos; ponto físico ainda não confirmado. Use a busca pelo nome e endereço.",
+          "locationNote": "Entrada de visitantes não confirmada. Não usar como destino a sede administrativa nem um ponto genérico no interior do parque.",
           "days": "Duração a confirmar",
           "relevanceSource": "guide",
           "mapQuery": "Parque Estadual dos Campos Altos MG",

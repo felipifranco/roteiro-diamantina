@@ -44,7 +44,7 @@ map.on('popupopen',keepPopupVisible);
 function mapSearchUrl(item,place){return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapQuery||`${item.name} ${place.replace(/ ·.*/, '')}`)}`}
 function formatMapDate(date){return date?new Date(`${date}T12:00:00`).toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'}):''}
 function knownDuration(s){const value=(s.days||'').trim();return value&&!['—','Duração a confirmar'].includes(value)?value:''}
-function tourLocation(tour){return tour.sameSiteAs?`📍 ${tour.sameSiteAs}`:tour.locationAccuracy==='exact'?'📍 Localização':tour.locationAccuracy==='street-center'?'📍 Rua':tour.locationAccuracy==='trail-point'?'📍 Referência':''}
+function tourLocation(tour){return tour.sameSiteAs?`📍 ${tour.sameSiteAs}`:tour.locationAccuracy==='exact'?'📍 Localização':tour.locationAccuracy==='street-center'?'📍 Rua':tour.locationAccuracy==='trail-point'?'📍 Referência':tour.locationAccuracy==='city-center'?'📍 Localização a confirmar':''}
 function tourCardMeta(tour,city,inRoute=false,date=''){
  const [effort,,cls]=effortFor(tour),time=knownDuration(tour),parts=[];
  if(inRoute)parts.push('<b class="tour-in">✓ No roteiro</b>');
