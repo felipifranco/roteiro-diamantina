@@ -24,7 +24,8 @@ window.ROTEIRO_DATA = {
       {
         "stopId": "diamantina",
         "checkIn": "2026-10-08",
-        "checkOut": "2026-10-10"
+        "checkOut": "2026-10-10",
+        "fixed": true
       },
       {
         "stopId": "belohorizonte",

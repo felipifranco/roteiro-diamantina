@@ -80,6 +80,7 @@ class TripPlanningTests(unittest.TestCase):
             ('stays', [{'stopId': 'missing', 'checkIn': '2026-10-07', 'checkOut': '2026-10-09'}]),
             ('stays', [{'stopId': 'araxa', 'checkIn': '2026-10-07', 'checkOut': '2026-10-07'}]),
             ('stays', [{'stopId': 'araxa', 'checkIn': '2026-10-30', 'checkOut': '2026-11-01'}]),
+            ('stays', [{'stopId': 'araxa', 'checkIn': '2026-10-08', 'checkOut': '2026-10-09', 'fixed': 'yes'}]),
             ('stays', [
                 {'stopId': 'araxa', 'checkIn': '2026-10-07', 'checkOut': '2026-10-09'},
                 {'stopId': 'camposaltos', 'checkIn': '2026-10-08', 'checkOut': '2026-10-10'},
@@ -159,6 +160,12 @@ assert.equal(stayOnDay(removed,'2026-10-08'),undefined);
 assert.equal(stayOnDay(removed,'2026-10-09').stopId,'camposaltos');
 assert.deepEqual(changeNight(split,'2026-10-08','camposaltos','2026-10-13'),longer);
 assert.throws(()=>changeNight(stays,'2026-10-13','araxa','2026-10-13'),/período/);
+const fixed=[{stopId:'diamantina',checkIn:'2026-10-08',checkOut:'2026-10-10',fixed:true}];
+assert.throws(()=>changeNight(fixed,'2026-10-08','araxa','2026-10-13'),/fixo/);
+assert.throws(()=>changeNight(fixed,'2026-10-09','','2026-10-13'),/fixo/);
+const adjacent=changeNight(fixed,'2026-10-07','diamantina','2026-10-13');
+assert.equal(adjacent.length,2);
+assert.equal(stayOnDay(adjacent,'2026-10-08').fixed,true);
 assert.equal(first[0].checkOut,'2026-10-08');
 assert.equal(longer[0].checkOut,'2026-10-10');
 """

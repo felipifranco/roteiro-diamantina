@@ -124,6 +124,8 @@ def assemble_data(catalog, plan):
         check_out = planning_date(stay.get("checkOut"), "stays.checkOut")
         if check_out <= check_in:
             raise ValueError("stays.checkOut must be after checkIn")
+        if "fixed" in stay and not isinstance(stay["fixed"], bool):
+            raise ValueError("stays.fixed must be a boolean")
         if not schedule["startDate"] <= stay["checkIn"] < stay["checkOut"] <= schedule["endDate"]:
             raise ValueError("stays dates must be within the trip")
         if previous_end and stay["checkIn"] < previous_end:
