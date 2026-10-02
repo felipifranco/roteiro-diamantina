@@ -14,16 +14,7 @@ window.ROTEIRO_DATA = {
       "belohorizonte"
     ],
     "originId": "mirassol",
-    "dayNotes": [
-      {
-        "date": "2026-10-11",
-        "text": "Curvelo tem mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base.",
-        "replaces": [
-          "Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base.",
-          "Sete Lagoas e Curvelo têm mais hotéis e serviços. Cordisburgo tem poucas pousadas; é melhor como parada turística do que como base. Na Gruta Rei do Mato, confirme a idade mínima para crianças."
-        ]
-      }
-    ]
+    "dayNotes": []
   },
   "routeStops": [
     {

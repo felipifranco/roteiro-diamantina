@@ -142,7 +142,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         generated = (ROOT / "data" / "route-data.generated.js").read_text(encoding="utf-8")
         self.assertIn('"schedule"', generated)
         self.assertIn('"initialDate": "2026-10-11"', generated)
-        self.assertEqual(schedule["dayNotes"][0]["date"], "2026-10-11")
+        self.assertEqual(schedule["dayNotes"], [])
 
     def test_araxa_and_peiropolis_research_is_embedded_in_route_stops(self):
         data = json.loads((ROOT / "data" / "roteiro.json").read_text(encoding="utf-8"))

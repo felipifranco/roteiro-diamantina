@@ -19,7 +19,7 @@ class NoChildSpecificUiCopyTests(unittest.TestCase):
         self.assertIn("knownAge=age.status==='livre'||age.status==='idade_minima'", page)
         self.assertIn("function visitRuleMarkup(s,compact=false)", page)
         self.assertIn("ageSummaryMarkup(tour)", page)
-        self.assertIn("visitRuleMarkup(s,true)", page)
+        self.assertIn("rules.innerHTML=ageSummaryMarkup(s)", page)
         self.assertIn("${visitRuleMarkup(s)}", page)
         self.assertIn("Regra oficial ↗", page)
 
