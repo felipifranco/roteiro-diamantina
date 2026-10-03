@@ -34,17 +34,18 @@ class BoaLembrancaTests(unittest.TestCase):
                 self.assertTrue((ROOT / dish["image"]).read_bytes().startswith(b"\x89PNG\r\n\x1a\n"))
                 self.assertTrue(stop["address"])
 
-    def test_belo_horizonte_groups_only_its_available_restaurants(self):
+    def test_restaurants_group_by_catalog_city_without_selecting(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         function = re.search(r"function restaurantsForCity\(city\)\{[^}]*\}", page)
-        self.assertIsNotNone(function, "restaurants must be grouped with Belo Horizonte")
+        self.assertIsNotNone(function, "restaurants must be grouped with their own city")
         assert function is not None
         stops = load_data()["routeStops"]
         expected = [s["id"] for s in stops if s["kind"] == "restaurante" and s.get("city") == "Belo Horizonte"]
         already_selected = expected[:1]
-        script = "const stops=" + json.dumps(stops) + ";const selected=new Set(" + json.dumps(already_selected) + ");const inTrip=s=>selected.has(s.id);" + function.group() + "console.log(JSON.stringify([restaurantsForCity({id:'belohorizonte'}).map(s=>s.id),restaurantsForCity({id:'diamantina'}).map(s=>s.id)]));"
+        script = "const stops=" + json.dumps(stops) + ";const selected=new Set(" + json.dumps(already_selected) + ");const inTrip=s=>selected.has(s.id);" + function.group() + "console.log(JSON.stringify(Object.fromEntries(stops.filter(s=>s.kind==='cidade').map(city=>[city.id,restaurantsForCity(city).map(s=>s.id)]))));"
         result = subprocess.run(["node"], input=script, capture_output=True, text=True, check=True)
-        self.assertEqual(json.loads(result.stdout), [[s for s in expected if s not in already_selected], []])
+        grouped = {city['id']: [s['id'] for s in stops if s['kind'] == 'restaurante' and s.get('city') == city['name'].split(' · ')[0] and s['id'] not in already_selected] for city in stops if city['kind'] == 'cidade'}
+        self.assertEqual(json.loads(result.stdout), grouped)
 
     def test_dish_photo_replaces_agency_star(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
