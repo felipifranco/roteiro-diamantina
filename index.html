@@ -321,6 +321,7 @@ function ensureTripSummary(){if(!document.getElementById('tripSummary')){const e
   if(available.length){sectionTitle('Fora do roteiro',String(available.filter(s=>s.kind!=='alerta').length),'Toque em ＋ para levar ao roteiro.');const list=document.createElement('div');list.className='available-list';available.forEach(s=>list.appendChild(createCard(s,routeIcon(s,plan),plan)));root.appendChild(list)}
   drawSummary(chosen);
   if(scroller)scroller.scrollTop=scrollTop;
+  window.refreshRouteDeepLink?.();
  };
  window.drawLine=async function(){
   if(line){map.removeLayer(line);line=null}
@@ -688,4 +689,32 @@ function ensureTripSummary(){if(!document.getElementById('tripSummary')){const e
 #stops .tour-row.has-tour-icon .tour-pinned{grid-column:3;grid-row:1;align-self:center;justify-self:center;min-width:36px;padding:4px 5px;font-size:9px;text-align:center}
 @media(max-width:360px){#stops .available-list .attraction-links{padding-left:4px!important}}
 #stops .stop-focus .stay-note.dish-note{display:block;margin-top:2px}#stops .stop-focus .stay-note.dish-note::before{content:none}
-</style><script>new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(map.getContainer());</script></body></html>
+</style>
+<script id="route-deep-links">
+function routePointFromUrl(){
+ let id;try{id=decodeURIComponent(location.hash.slice(1))}catch{return null}
+ return routeStops.find(s=>s.id===id)||null;
+}
+function openStopFromUrl(){
+ const point=routePointFromUrl();
+ if(!point||!markers[point.id])return false;
+ const target=markMapRouteCard(point),card=target?.closest('.stop')||target;
+ const toggle=card?.querySelector('.tours-toggle');
+ if(toggle?.getAttribute('aria-expanded')==='false')toggle.click();
+ revealMapSelection(point);
+ moveMapToStop(point);
+ return true;
+}
+window.refreshRouteDeepLink=()=>{
+ const point=routePointFromUrl();
+ if(point&&markers[point.id]?.isPopupOpen?.()){
+  markMapRouteCard(point);
+  keepPopupVisible({popup:markers[point.id].getPopup()});
+  revealMapSelection(point);
+ }
+};
+window.addEventListener('hashchange',openStopFromUrl);
+map.on('resize',()=>window.refreshRouteDeepLink());
+openStopFromUrl();
+</script>
+<script>new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(map.getContainer());</script></body></html>

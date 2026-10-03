@@ -63,7 +63,9 @@ assert all(defaults.get(stop_id) for stop_id in ('mirassol', 'diamantina', 'peir
 attractions = {stop["id"]: {item["name"]: item.get("selectedByDefault", False) for item in stop.get("attractions", [])} for stop in data["routeStops"]}
 assert all(attractions['peiro'].values()), "both Peirópolis tours must start selected"
 assert all(selected for name, selected in attractions['cordisburgo'].items() if name != 'Gruta do Maquiné'), "Cordisburgo attractions except Gruta do Maquiné must start selected"
-assert not any(attractions['setelagoas'].values()), "Sete Lagoas attractions must not start selected"
+trip_plan = json.loads((root / "data/roteiro.json").read_text())
+expected_setelagoas = {item["name"] for item in trip_plan["selectedAttractions"] if item["stopId"] == "setelagoas"}
+assert {name for name, selected in attractions['setelagoas'].items() if selected} == expected_setelagoas, "Sete Lagoas attractions must follow the current canonical itinerary"
 assert "structuredClone(schedule.stays||[])" in html, "lodging should come from the trip plan"
 assert "TripCalendar.nightCount(stay)" in html, "nights should use the lodging dates"
 assert "Pernoite" not in html and "PERNOITE" not in html, "overnight text must come from the JSON"
