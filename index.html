@@ -22,6 +22,8 @@
 <script src="./data/route-data.generated.js"></script>
 <script src="./assets/trip-calendar.js"></script>
 <script src="./assets/trip-route.js"></script>
+<script src="./assets/map-location.js"></script>
+<style>.map-location{display:flex;flex-wrap:wrap;gap:4px;max-width:230px;padding:6px;background:#fffefa;border:1px solid #d9ded5;border-radius:10px;box-shadow:0 3px 14px #14251d24}.map-location button{min-height:42px;padding:7px 10px;border:0;border-radius:6px;background:#fffefa;color:#245aa5;font:600 13px/1.3 "Segoe UI",sans-serif;cursor:pointer}.map-location button:hover,.map-location button[aria-pressed="true"]{background:#edf4ff}.map-location button:focus-visible{outline:2px solid #2475de;outline-offset:1px}.map-location .map-location-stop{min-width:42px;font-size:20px}.map-location-status{flex-basis:100%;max-width:216px;padding:2px 5px;color:#52645a;font:11px/1.4 "Segoe UI",sans-serif}@media(max-width:400px){.map-location{max-width:215px}.map-location button{padding:7px 8px;font-size:12px}}</style>
 <script>
 const schedule=window.ROTEIRO_DATA.schedule;
 const policies=window.ROTEIRO_DATA.policies;
@@ -33,6 +35,7 @@ const stops=window.ROTEIRO_DATA.routeStops;
 const attractionStops=TripRoute.attractionStops(stops);
 const routeStops=[...stops,...attractionStops.filter(s=>s.routeable)];
 const map=L.map('map',{zoomControl:true,scrollWheelZoom:true}).setView([-19.4,-45.9],7);L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+MapLocation.attach(map);
 const selected=new Set(routeStops.filter(s=>s.selectedByDefault).map(s=>s.id));const markers={};let line=null;let activeFilter='all';
 function colorClass(s){const isAgency=s.relevanceSource==='agency',typeClass=s.kind==='alerta'?'warning':s.type==='historia'?'history':s.type==='gastronomia'?'gastronomy':'';return [isAgency?'agency':'',typeClass].filter(Boolean).join(' ')}
 function pinMarkup(s,label){if(s.kind==='restaurante')return `<div class="dish-pin"><img src="${s.dish.image}" alt=""><span class="dish-pin-order">${label==='+'?'':label}</span></div>`;const isAgency=s.relevanceSource==='agency',badge=isAgency?'<i class="pin-agency-badge" aria-hidden="true">★</i>':'';return `<div class="pin ${colorClass(s)}"><span>${label}</span>${badge}</div>`}
