@@ -15,18 +15,19 @@ function el(tag){const e={tag,children:[],hidden:false,textContent:'',attrs:{},a
 function layer(pos,options){const l={pos,options,addTo(){layers.push(this);return this},setLatLng(p){this.pos=p;return this},setRadius(r){this.options.radius=r;return this},bindTooltip(){return this},remove(){layers=layers.filter(x=>x!==this)}};return l}
 const map={setView(p,z){views.push([p,z]);return this},getZoom(){return 7},on(){}};
 const geo={watchPosition(s,e,o){watchCalls++;success=s;error=e;assert.equal(o.enableHighAccuracy,true);return 0},clearWatch(id){cleared.push(id)}};
-const window={L:{control(){return {addTo(m){this.onAdd(m);return this}}},DomUtil:{create:()=>el('div')},DomEvent:{disableClickPropagation(){},disableScrollPropagation(){}},circle:layer,circleMarker:layer},navigator:{geolocation:geo},document:{createElement:el},addEventListener(){}};
+const window={alert(){},L:{control(options){assert.equal(options.position,'bottomleft');return {addTo(m){this.onAdd(m);return this}}},DomUtil:{create:()=>el('div')},DomEvent:{disableClickPropagation(){},disableScrollPropagation(){}},circle:layer,circleMarker:layer},navigator:{geolocation:geo},document:{createElement:el},addEventListener(){}};
 vm.runInNewContext(fs.readFileSync(process.argv[1],'utf8'),{window,Number,Math});
 window.MapLocation.attach(map);
-const locate=nodes.find(n=>n.attrs['aria-label']==='Minha localização'),stop=nodes.find(n=>n.attrs['aria-label']==='Desativar localização');
-assert.ok(locate);assert.ok(stop);assert.equal(watchCalls,0);
+const locate=nodes.find(n=>n.attrs['aria-label']==='Minha localização');
+assert.ok(locate);assert.equal(nodes.filter(n=>n.tag==='button').length,1);
+assert.ok(locate.innerHTML.includes('<svg'));assert.equal(locate.textContent,'');
+assert.equal(watchCalls,0);
 locate.click();assert.equal(watchCalls,1);
 success({coords:{latitude:-19.92,longitude:-43.94,accuracy:30}});
 assert.equal(layers.length,2);assert.equal(views.length,1);
 success({coords:{latitude:-19.93,longitude:-43.95,accuracy:15}});
 assert.equal(layers.length,2);assert.equal(views.length,1,'GPS não deve impedir explorar o mapa');
-locate.click();assert.equal(views.length,2);assert.equal(watchCalls,1);
-stop.click();assert.equal(cleared[0],0);assert.equal(layers.length,0);
+locate.click();assert.equal(cleared[0],0);assert.equal(layers.length,0);
 success({coords:{latitude:-19.94,longitude:-43.96,accuracy:10}});assert.equal(layers.length,0,'Callback antigo deve ser ignorado');
 locate.click();error({code:1});assert.equal(layers.length,0);assert.ok(nodes.some(n=>n.textContent.includes('Permita')));
 locate.click();error({code:3});assert.ok(nodes.some(n=>n.textContent.includes('demorou')));
