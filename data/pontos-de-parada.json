@@ -3148,7 +3148,8 @@
       "sights": [
         "Conjunto Moderno da Pampulha",
         "Praça da Liberdade",
-        "Mercado Central"
+        "Mercado Central",
+        "Feira Hippie (Feira da Afonso Pena)"
       ],
       "kid": "A cidade tem deslocamentos urbanos; agrupe visitas por região e confira acessibilidade de cada atração.",
       "url": "https://www.google.com/maps/search/?api=1&query=Belo+Horizonte+MG",
@@ -3232,6 +3233,48 @@
           },
           "ticket": {
             "status": "indeterminado"
+          },
+          "kind": "atracao",
+          "type": "gastronomia"
+        },
+        {
+          "name": "Feira Hippie (Feira da Afonso Pena)",
+          "description": "Feira de artes, artesanato e produtores de variedades realizada aos domingos na Avenida Afonso Pena. Surgiu na Praça da Liberdade em 1969 e foi transferida para a avenida em 1991. Reúne artesanato, roupas, decoração e gastronomia, oferecendo um passeio pela produção artesanal e pela vida de rua de Belo Horizonte.",
+          "agencyRationale": "Combina artesanato, compras e gastronomia em um passeio urbano na região central; inclusão solicitada pelo proprietário após a conversa com o guia.",
+          "visitType": "Feira ao ar livre / artesanato / gastronomia",
+          "estimatedDuration": "2–3 h",
+          "publishedDuration": "—",
+          "oneYearOld": "Planejar pausas e proteção de sol ou chuva; a circulação com carrinho depende do movimento entre as barracas.",
+          "access": {
+            "level": "moderate",
+            "label": "Caminhada em feira urbana",
+            "description": "Percurso variável ao ar livre entre barracas. Esforço moderado como estimativa de planejamento: a feira ocupa cerca de 1 km de avenida, mas não é necessário percorrer toda a extensão. Prever pausas e atenção ao movimento de pessoas."
+          },
+          "lat": -19.9215025,
+          "lon": -43.9370989,
+          "locationAccuracy": "exact",
+          "locationSourceUrl": "https://www.google.com/maps/place/Feira+Hippie/data=!4m7!3m6!1s0xa69990a67d78c9:0x14154ccb050a86f8!8m2!3d-19.9215025!4d-43.9370989!16s%2Fg%2F11v3g7nvfh",
+          "locationNote": "Marcador representativo da Feira Hippie na Avenida Afonso Pena, não do escritório da feira. A atividade ocupa um trecho da avenida, não um único edifício.",
+          "mapQuery": "Feira Hippie Avenida Afonso Pena Belo Horizonte MG",
+          "address": "Avenida Afonso Pena, Centro, Belo Horizonte/MG",
+          "days": "2–3 h",
+          "scheduleNote": "Aos domingos, das 8h às 14h, conforme horário habitual informado pela Prefeitura de Belo Horizonte. Visita prevista pela manhã; conferir eventuais alterações perto da data. As 2–3 h são estimativa de visita, não duração oficial.",
+          "visitLinks": [
+            {
+              "label": "Informações da Prefeitura de BH",
+              "url": "https://prefeitura.pbh.gov.br/noticias/barracas-de-alimentacao-da-feira-da-afonso-pena-tambem-vao-funcionar-24-horas-durante"
+            },
+            {
+              "label": "Localização da feira",
+              "url": "https://www.google.com/maps/search/?api=1&query=Feira+Hippie+Avenida+Afonso+Pena+Belo+Horizonte+MG"
+            }
+          ],
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado",
+            "note": "Compras e consumo nas barracas são pagos à parte."
           },
           "kind": "atracao",
           "type": "gastronomia"

@@ -34,7 +34,7 @@ class TouristLocationTests(unittest.TestCase):
     def test_municipal_groups_preserve_district_visits_and_locations(self):
         data = load_data()
         groups = {stop["id"]: stop for stop in data["routeStops"]}
-        self.assertEqual(sum(len(stop.get("attractions", [])) for stop in groups.values()), 174)
+        self.assertEqual(sum(len(stop.get("attractions", [])) for stop in groups.values()), 175)
         for old_id in ("curralinho", "biribiri", "mendanha", "vau", "milhoverde", "saogoncalo", "amarantina", "caraca"):
             self.assertNotIn(old_id, groups)
         expected = {

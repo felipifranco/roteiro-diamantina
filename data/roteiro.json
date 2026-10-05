@@ -118,6 +118,11 @@
       "stopId": "belohorizonte",
       "name": "Mercado Central",
       "date": "2026-10-11"
+    },
+    {
+      "stopId": "belohorizonte",
+      "name": "Feira Hippie (Feira da Afonso Pena)",
+      "date": "2026-10-11"
     }
   ]
 }
