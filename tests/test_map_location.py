@@ -36,6 +36,11 @@ console.log('GPS opt-in, atualização, recentralização, parada e erros: OK');
         result = subprocess.run(['node', '-e', script, str(source)], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
+    def test_hover_does_not_show_location_as_active_after_touch_off(self):
+        html = (ROOT / 'index.html').read_text()
+        self.assertNotIn('.map-location button:hover,', html,
+                         'Hover persistente no celular não pode exibir GPS desligado como ativo')
+
     def test_page_mounts_location_control(self):
         html = (ROOT / 'index.html').read_text()
         self.assertIn('./assets/map-location.js', html)
