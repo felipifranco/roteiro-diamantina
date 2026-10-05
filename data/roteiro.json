@@ -32,6 +32,10 @@
       "date": "2026-10-07"
     },
     {
+      "stopId": "hotel-estilo-de-minas",
+      "date": "2026-10-08"
+    },
+    {
       "stopId": "cordisburgo",
       "date": "2026-10-10"
     },
@@ -59,9 +63,10 @@
       "reservationStatus": "informed_by_owner"
     },
     {
-      "stopId": "diamantina",
+      "stopId": "hotel-estilo-de-minas",
       "checkIn": "2026-10-08",
-      "checkOut": "2026-10-10"
+      "checkOut": "2026-10-10",
+      "reservationStatus": "planned"
     },
     {
       "stopId": "belohorizonte",

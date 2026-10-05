@@ -29,6 +29,7 @@ window.ROTEIRO_DATA = {
       "araxa",
       "camposaltos",
       "camposaltos-palace-hotel",
+      "hotel-estilo-de-minas",
       "cordisburgo",
       "setelagoas",
       "belohorizonte"
@@ -44,9 +45,10 @@ window.ROTEIRO_DATA = {
         "reservationStatus": "informed_by_owner"
       },
       {
-        "stopId": "diamantina",
+        "stopId": "hotel-estilo-de-minas",
         "checkIn": "2026-10-08",
-        "checkOut": "2026-10-10"
+        "checkOut": "2026-10-10",
+        "reservationStatus": "planned"
       },
       {
         "stopId": "belohorizonte",
@@ -3020,6 +3022,40 @@ window.ROTEIRO_DATA = {
       },
       "profile": "Acesso à Canastra · travessia do Rio Grande",
       "attractions": []
+    },
+    {
+      "id": "hotel-estilo-de-minas",
+      "name": "Hotel Estilo de Minas",
+      "lat": -18.2394261,
+      "lon": -43.6233388,
+      "locationAccuracy": "exact",
+      "locationSourceUrl": "https://www.google.com/maps/place/Estilo+de+Minas/data=!4m2!3m1!1s0xaeb9cae1c77e37:0xdc5be8aaa69d2f20",
+      "locationNote": "Ponto do estabelecimento nomeado no Google Maps, conferido pelo endereço e site oficial; não é o centro do mapa incorporado.",
+      "kind": "hospedagem",
+      "canHostStay": true,
+      "type": "natureza",
+      "days": "Pernoite",
+      "sights": [],
+      "kid": "",
+      "url": "https://hotelestilodeminas.com.br/",
+      "bookingUrl": "https://www.booking.com/Share-StFWLx6",
+      "profile": "Hospedagem em Diamantina",
+      "municipality": "Diamantina",
+      "city": "Diamantina",
+      "address": "Av. João Antunes de Oliveira, 100A, Cazuza, Diamantina/MG, CEP 39100-000",
+      "phone": "+55 (38) 98046-6710",
+      "email": "hotelestilodeminas@gmail.com",
+      "mapQuery": "Hotel Estilo de Minas Av. João Antunes de Oliveira 100A Diamantina MG",
+      "guideBriefing": "Hospedagem em Diamantina indicada pelo proprietário pelo link do Booking. Endereço e contato conferidos na página oficial. O site oficial informa interdição temporária da piscina e do quiosque-bar; consultar o hotel antes de contar com essas instalações. O link compartilhado é um anúncio, não uma confirmação de reserva.",
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "indeterminado"
+      },
+      "initialDate": "2026-10-08",
+      "selectedByDefault": true
     },
     {
       "id": "cordisburgo",
