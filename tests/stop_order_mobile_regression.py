@@ -36,8 +36,13 @@ assert "dates.set(adjacent.id,currentDate)" in (root / "assets/trip-calendar.js"
 
 layers = re.findall(r"\.side\s*\{([^}]*)\}", html)
 assert layers, "sidebar stacking rule not found"
-assert re.search(r"position\s*:\s*relative", layers[-1]), "sidebar must create a stacking context above map markers"
-assert re.search(r"z-index\s*:\s*1000", layers[-1]), "sidebar must stack above Leaflet's marker pane"
+def sidebar_property(prop):
+    values = [match.group(1).strip() for rule in layers
+              for match in re.finditer(r"(?:^|;)\s*" + re.escape(prop) + r"\s*:\s*([^;]+)", rule)]
+    return values[-1] if values else None
+
+assert sidebar_property("position") == "relative", "sidebar must create a stacking context above map markers"
+assert sidebar_property("z-index") == "1000", "sidebar must stack above Leaflet's marker pane"
 
 fixed_head = re.search(r"\.fixed-day \.stop-head\s*\{([^}]*)\}", html)
 assert fixed_head, "fixed destination card needs its own grid layout"
@@ -55,7 +60,8 @@ assert "TripCalendar.calendarDays(schedule.startDate,schedule.endDate)" in html,
 assert "candidates(date).map" in html, "date options should include the inherited date"
 assert "routeStops.forEach(s=>" in html, "selected attractions must update markers and popups"
 schedule = data["schedule"]
-assert schedule["initialStopOrder"] == ['peiro', 'araxa', 'camposaltos', 'cordisburgo', 'setelagoas', 'belohorizonte'], "initial stop order should be configured in the JSON"
+trip_plan = json.loads((root / "data/roteiro.json").read_text())
+assert schedule["initialStopOrder"] == [visit["stopId"] for visit in trip_plan["visits"]], "initial stop order should follow the canonical itinerary"
 assert "const initialStops=schedule.initialStopOrder" in html, "the page should read the initial stop order from generated data"
 assert "if(s.initialDate)dates.set(s.id,s.initialDate)" in html, "initial stop dates should come from the JSON"
 defaults = {stop["id"]: stop.get("selectedByDefault", False) for stop in data["routeStops"]}
