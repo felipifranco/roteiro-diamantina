@@ -13,13 +13,18 @@ class MapPanelResizeTests(unittest.TestCase):
 const assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
 let height=844,mobile=true,style={},invalidations=0;
 const events={},attrs={},handle={offsetHeight:24,setAttribute(k,v){attrs[k]=v},addEventListener(k,f){events[k]=f},setPointerCapture(){},releasePointerCapture(){}};
-const app={clientHeight:height,style:{setProperty(k,v){style[k]=v}},getBoundingClientRect(){return {top:0,height}},querySelector(s){return s==='.map-wrap'?wrap:handle}};
-const wrap={getBoundingClientRect(){return {height:186}}};
+const mastEvents={},mast={addEventListener(k,f){mastEvents[k]=f},setPointerCapture(){}};
+const app={clientHeight:height,style:{setProperty(k,v){style[k]=v}},getBoundingClientRect(){return {top:0,height}},querySelector(s){return s==='.map-wrap'?wrap:s==='.mast'?mast:handle}};
+const wrap={getBoundingClientRect(){return {height:parseFloat(style['--mobile-map-height'])||186}}};
 const media={get matches(){return mobile},addEventListener(k,f){this[k]=f}};
 const listeners={},window={document:{querySelector(){return app}},matchMedia(){return media},addEventListener(k,f){listeners[k]=f}};
 vm.runInNewContext(fs.readFileSync(process.argv[1],'utf8'),{window,Math});
 window.MapPanelResize.attach({invalidateSize(){invalidations++}});
-function e(y,id=1){return {clientY:y,pointerId:id,button:0,preventDefault(){}}}
+function e(y,id=1,target=handle){return {clientY:y,pointerId:id,button:0,currentTarget:target,preventDefault(){}}}
+assert.equal(typeof mastEvents.pointerdown,'function','Todo o cabeçalho deve iniciar o arraste');
+mastEvents.pointerdown(e(230,2,mast));mastEvents.pointermove(e(330,2,mast));
+assert.equal(parseFloat(style['--mobile-map-height']),286,'Arrastar pelo título/resumo também ajusta o mapa');
+mastEvents.pointerup(e(330,2,mast));
 const initial=parseFloat(style['--mobile-map-height']);
 events.pointerdown(e(initial+12));events.pointermove(e(initial+212));
 assert.equal(parseFloat(style['--mobile-map-height']),initial+200);

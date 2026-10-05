@@ -27,19 +27,21 @@
    drag=null;
    if(mobile.matches)setHeight(ratio===null?wrap.getBoundingClientRect().height:ratio*limits().available);
   }
-  handle.addEventListener('pointerdown',event=>{
-   if(!mobile.matches||event.button!==0||drag)return;
-   event.preventDefault();
-   drag={id:event.pointerId,y:event.clientY,height:wrap.getBoundingClientRect().height};
-   handle.setPointerCapture(event.pointerId);
-  });
-  handle.addEventListener('pointermove',event=>{
-   if(!drag||event.pointerId!==drag.id)return;
-   event.preventDefault();
-   setHeight(drag.height+event.clientY-drag.y);
-  });
   function finish(event){if(drag&&event.pointerId===drag.id)drag=null}
-  ['pointerup','pointercancel','lostpointercapture'].forEach(type=>handle.addEventListener(type,finish));
+  [handle,app.querySelector('.mast')].forEach(surface=>{
+   surface.addEventListener('pointerdown',event=>{
+    if(!mobile.matches||event.button!==0||drag||event.target?.closest?.('a,button,input,select,textarea,summary'))return;
+    event.preventDefault();
+    drag={id:event.pointerId,y:event.clientY,height:wrap.getBoundingClientRect().height};
+    surface.setPointerCapture(event.pointerId);
+   });
+   surface.addEventListener('pointermove',event=>{
+    if(!drag||event.pointerId!==drag.id)return;
+    event.preventDefault();
+    setHeight(drag.height+event.clientY-drag.y);
+   });
+   ['pointerup','pointercancel','lostpointercapture'].forEach(type=>surface.addEventListener(type,finish));
+  });
   handle.addEventListener('keydown',event=>{
    if(!mobile.matches)return;
    const height=ratio*limits().available;
