@@ -209,7 +209,7 @@ assert.deepEqual([...dates],[['city','2026-10-08'],['explicit','2026-10-10'],['e
         plan = json.loads((ROOT / 'data/roteiro.json').read_text())
         data = assemble_data(catalog, plan)
         for stop in catalog['routeStops']:
-            self.assertIs(stop.get('canHostStay'), stop['kind'] in {'cidade', 'regiao'})
+            self.assertIs(stop.get('canHostStay'), stop['kind'] in {'cidade', 'regiao', 'hospedagem'})
             for attraction in stop.get('attractions', []):
                 self.assertNotIn('canHostStay', attraction)
         for value in (None, 1, 'true', 'false', {}, []):

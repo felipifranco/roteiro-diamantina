@@ -38,7 +38,7 @@ ATTRACTION_FIELDS = (
     "oneYearOld",
     "access",
 )
-STOP_KINDS = {"cidade", "regiao", "atracao", "alerta", "restaurante"}
+STOP_KINDS = {"cidade", "regiao", "atracao", "alerta", "restaurante", "hospedagem"}
 STOP_TYPES = {"natureza", "historia", "gastronomia"}
 LOCATION_ACCURACIES = {"exact", "street-center", "trail-point", "city-center"}
 AGE_STATUSES = {"livre", "idade_minima", "indeterminada"}

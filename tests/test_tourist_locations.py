@@ -28,7 +28,7 @@ class TouristLocationTests(unittest.TestCase):
                 self.assertFalse(visit.get("selectedByDefault", False))
         self.assertEqual(visits[4]["locationAccuracy"], "city-center")
         self.assertIn("Entrada de visitantes não confirmada", visits[4]["locationNote"])
-        self.assertIn({"stopId": "camposaltos", "checkIn": "2026-10-07", "checkOut": "2026-10-08"}, data["schedule"]["stays"])
+        self.assertIn({"stopId": "camposaltos-palace-hotel", "checkIn": "2026-10-07", "checkOut": "2026-10-08", "checkInTime": "12:00", "checkOutTime": "12:00", "nights": 1, "reservationStatus": "informed_by_owner"}, data["schedule"]["stays"])
         self.assertEqual(city["initialDate"], "2026-10-07")
 
     def test_municipal_groups_preserve_district_visits_and_locations(self):

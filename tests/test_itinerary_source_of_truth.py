@@ -15,7 +15,7 @@ EXPECTED_ROUTE_STOP_IDS = (
     "peruacu", "delfinopolis", "cordisburgo", "belohorizonte",
     "brumadinho", "saojoaodelrei", "tiradentes", "bichinho",
     "catasaltas", "santabarbara", "sabara", "caete", "peiro", "araxa", "camposaltos",
-    "itabirito", "ourobranco", "setelagoas",
+    "camposaltos-palace-hotel", "itabirito", "ourobranco", "setelagoas",
     "presidentekubitschek", "ipoema", "itambemato", "raposos", "novalima", "rioacima",
     "boa-casa-do-rei-bistro", "boa-dartagnan", "boa-divinorestaurante",
     "boa-domenico-pizzeria-e-trattoria", "boa-maria-das-trancas",
@@ -106,7 +106,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         self.assertEqual(schedule["startDate"], "2026-10-07")
         self.assertEqual(schedule["destinationId"], "diamantina")
         self.assertEqual(schedule["destinationDate"], "2026-10-08")
-        self.assertEqual(schedule["initialStopOrder"], ["peiro", "araxa", "camposaltos", "cordisburgo", "setelagoas", "belohorizonte"])
+        self.assertEqual(schedule["initialStopOrder"], ["peiro", "araxa", "camposaltos", "camposaltos-palace-hotel", "cordisburgo", "setelagoas", "belohorizonte"])
         stops = {stop["id"]: stop for stop in data["routeStops"]}
         self.assertEqual(stops["peiro"]["initialDate"], "2026-10-07")
         self.assertEqual(stops["araxa"]["initialDate"], "2026-10-07")
@@ -118,7 +118,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         self.assertTrue(stops["belohorizonte"]["selectedByDefault"])
         self.assertNotIn("overnight", stops["araxa"])
         self.assertNotIn("overnight", stops["cordisburgo"])
-        self.assertIn({"stopId": "camposaltos", "checkIn": "2026-10-07", "checkOut": "2026-10-08"}, schedule["stays"])
+        self.assertIn({"stopId": "camposaltos-palace-hotel", "checkIn": "2026-10-07", "checkOut": "2026-10-08", "checkInTime": "12:00", "checkOutTime": "12:00", "nights": 1, "reservationStatus": "informed_by_owner"}, schedule["stays"])
         self.assertEqual(stops["camposaltos"]["initialDate"], "2026-10-07")
         self.assertTrue(stops["camposaltos"]["selectedByDefault"])
         self.assertIn({"stopId": "belohorizonte", "checkIn": "2026-10-10", "checkOut": "2026-10-11"}, schedule["stays"])

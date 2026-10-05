@@ -41,7 +41,7 @@ function colorClass(s){const isAgency=s.relevanceSource==='agency',typeClass=s.k
 function pinMarkup(s,label){if(s.kind==='restaurante')return `<div class="dish-pin"><img src="${s.dish.image}" alt=""><span class="dish-pin-order">${label==='+'?'':label}</span></div>`;const isAgency=s.relevanceSource==='agency',badge=isAgency?'<i class="pin-agency-badge" aria-hidden="true">★</i>':'';return `<div class="pin ${colorClass(s)}"><span>${label}</span>${badge}</div>`}
 function pin(s,label){return L.divIcon({className:'',html:pinMarkup(s,label),iconSize:s.kind==='restaurante'?[42,42]:[28,34],iconAnchor:s.kind==='restaurante'?[21,40]:[14,33],popupAnchor:s.kind==='restaurante'?[0,-38]:[0,-25]})}
 let popupAfterMove=null;
-function stopMapZoom(s){return s.kind==='atracao'||s.kind==='restaurante'?16:s.kind==='regiao'?8:9}
+function stopMapZoom(s){return s.kind==='atracao'||s.kind==='restaurante'||s.kind==='hospedagem'?16:s.kind==='regiao'?8:9}
 function focusStop(s,zoom){if(popupAfterMove){map.off('moveend',popupAfterMove);popupAfterMove=null}map.stop();map.closePopup();const marker=markers[s.id],target=L.latLng(s.lat,s.lon),open=()=>{popupAfterMove=null;marker.openPopup()};if(map.getZoom()===zoom&&map.getCenter().distanceTo(target)<1){open();return}popupAfterMove=open;map.once('moveend',open);map.flyTo(target,zoom,{duration:.55})}
 function moveMapToStop(s,zoom=stopMapZoom(s)){markMapRouteCard(s);focusStop(s,zoom)}
 function clearMapRouteLink(){document.querySelectorAll('.map-linked').forEach(el=>el.classList.remove('map-linked'));document.querySelectorAll('.map-linked-popup').forEach(el=>el.classList.remove('map-linked-popup'))}
@@ -77,17 +77,24 @@ function visitRuleMarkup(s,compact=false){const age=s.ageClassification||{},tick
 // A lista resume a parada; o popup reúne a ficha completa.
 function placeLabel(s,date=schedule.destinationDate){
  const theme=s.type==='historia'?'HISTÓRIA / CULTURA':s.type==='gastronomia'?'GASTRONOMIA':'NATUREZA';
- return s.id===schedule.originId?`${s.name.split(' · ')[0].toUpperCase()} · ORIGEM`:s.id===schedule.destinationId?`DESTINO${policies.destination.fixedDate?' FIXO':''} · ${formatMapDate(date)}`:s.kind==='restaurante'?`${s.city.toUpperCase()} · BOA LEMBRANÇA ${s.dish.year}`:s.kind==='alerta'?'AVISO DE ACESSO':s.kind==='atracao'?`PASSEIO · ${s.parent||''}`:theme
+ return s.id===schedule.originId?`${s.name.split(' · ')[0].toUpperCase()} · ORIGEM`:s.id===schedule.destinationId?`DESTINO${policies.destination.fixedDate?' FIXO':''} · ${formatMapDate(date)}`:s.kind==='restaurante'?`${s.city.toUpperCase()} · BOA LEMBRANÇA ${s.dish.year}`:s.kind==='alerta'?'AVISO DE ACESSO':s.kind==='hospedagem'?`HOSPEDAGEM · ${s.city.toUpperCase()}`:s.kind==='atracao'?`PASSEIO · ${s.parent||''}`:theme
 }
 function escapeCardText(value){return String(value||'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]))}
 function guideContent(s){return s.kind==='atracao'?s.description||'':s.guideBriefing||''}
 function popupGuide(s){const text=guideContent(s);return text?`<details class="pop-guide"><summary>Guia de visita</summary><p>${escapeCardText(text)}</p></details>`:''}
+function hotelReservationMarkup(s){
+ const stay=schedule.stays.find(item=>item.stopId===s.id&&item.reservationStatus==='informed_by_owner');
+ if(!stay)return '';
+ const date=value=>new Date(`${value}T12:00:00`).toLocaleDateString('pt-BR');
+ return `<section class="pop-section hotel-reservation"><strong>Reserva informada</strong><div>Chegada: ${date(stay.checkIn)}${stay.checkInTime?` às ${escapeCardText(stay.checkInTime)}`:''}</div><div>Saída: ${date(stay.checkOut)}${stay.checkOutTime?` às ${escapeCardText(stay.checkOutTime)}`:''}</div><div>${TripCalendar.nightCount(stay)} diária(s)</div></section>`;
+}
 function popup(s,extra=false,inRoute=false,date=''){
  const isAttraction=extra||s.kind==='atracao',city=isAttraction?stops.find(item=>item.id===s.parentId)||s:null;
  const titleUrl=s.kind==='restaurante'?s.url:isAttraction?mapSearchUrl(s,s.parent||''):null;
  const title=titleUrl?`<a class="pop-title pop-title-link" target="_blank" rel="noopener" href="${titleUrl}">${s.name} ↗</a>`:`<div class="pop-title">${s.name}</div>`;
  const header=`<div class="pop-head">${title}<span class="pop-tag">${placeLabel(s,date||schedule.destinationDate)}</span></div>`;
  if(s.kind==='restaurante')return `${header}<section class="pop-section"><img class="pop-dish-photo" src="${s.dish.image}" alt="Prato comemorativo ${s.dish.name}"><small class="dish-credit">Imagem do prato: ${s.dish.credit}</small><b>${s.dish.name}</b><p class="pop-dish-description">${s.dish.description}</p><div class="tour-where">${s.address}</div></section>${popupGuide(s)}<section class="pop-section">${visitRuleMarkup(s)}</section><div class="pop-actions"><a target="_blank" rel="noopener" href="${s.dish.url}">Ver prato ↗</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lon}">Navegar ↗</a></div>`;
+ if(s.kind==='hospedagem')return `${header}${hotelReservationMarkup(s)}<section class="pop-section"><div>${escapeCardText(s.address)}</div><div>CNPJ: ${escapeCardText(s.cnpj)}</div><div><a href="tel:${escapeCardText(s.phone)}">${escapeCardText(s.phone)}</a></div><div><a href="mailto:${escapeCardText(s.email)}">${escapeCardText(s.email)}</a></div></section><div class="pop-actions"><a target="_blank" rel="noopener" href="${s.url}">Site do hotel ↗</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lon}">Navegar ↗</a></div>`;
  const body=isAttraction?`<div class="tour-where">${tourCardMeta(s,city,inRoute,date)}</div>${routeableAttractionInfo(s)}`:`${s.sights.length?`<ul class="pop-sights">${s.sights.map(name=>{const item=(s.attractions||[]).find(a=>a.name.toLowerCase()===name.toLowerCase())||{name};return `<li><a target="_blank" rel="noopener" href="${mapSearchUrl(item,s.name)}">${name} ↗</a></li>`}).join('')}</ul>`:''}${accessDetailMarkup(s)}${visitRuleMarkup(s)}`;
  const actions=isAttraction?`<a target="_blank" rel="noopener" href="${s.url}">Página da cidade ↗</a><a target="_blank" rel="noopener" href="${s.locationAccuracy!=='exact'?mapSearchUrl(s,s.parent||''):`https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lon}`}">${s.locationAccuracy!=='exact'?'Buscar local':'Navegar'} ↗</a>`:`<a target="_blank" rel="noopener" href="${s.url}">Mais informações ↗</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lon}">Navegar ↗</a>`;
  return `${header}<section class="pop-section">${body}</section>${popupGuide(s)}<div class="pop-actions">${actions}</div>`
@@ -152,7 +159,7 @@ function ensureTripSummary(){if(!document.getElementById('tripSummary')){const e
  function appendDayNotes(group,day){const details=document.createElement('details');details.className='day-notes';details.open=Boolean(dayNotes[day]);const summary=document.createElement('summary');summary.textContent='Notas do dia';const input=document.createElement('textarea');input.rows=2;input.value=dayNotes[day]||'';input.setAttribute('aria-label',`Notas do dia ${day}`);const resize=(maxHeight=Infinity)=>{input.style.height='auto';input.style.height=`${Math.min(input.scrollHeight,maxHeight)}px`};input.addEventListener('input',()=>{resize();dayNotes[day]=input.value;try{localStorage.setItem(dayNotesStorageKey,JSON.stringify(dayNotes))}catch{}});details.append(summary,input);group.appendChild(details);if(details.open)requestAnimationFrame(()=>resize(88))}
  const routeDate=s=>TripCalendar.routeDate(s,dates,fixedDates);
  const durationLabel=s=>knownDuration(s);
- const overnightLabel=(s,day)=>stays.filter(stay=>stay.stopId===s.id&&(!day||stay.checkIn===day)).map(stay=>`🛏 ${fmt(stay.checkIn)} → ${fmt(stay.checkOut)} · ${TripCalendar.nightCount(stay)} noite${TripCalendar.nightCount(stay)===1?'':'s'}`).join(' · ');
+ const overnightLabel=(s,day)=>stays.filter(stay=>stay.stopId===s.id&&(!day||stay.checkIn===day)).map(stay=>`🛏 ${fmt(stay.checkIn)}${stay.checkInTime?` às ${stay.checkInTime}`:''} → ${fmt(stay.checkOut)}${stay.checkOutTime?` às ${stay.checkOutTime}`:''} · ${TripCalendar.nightCount(stay)} noite${TripCalendar.nightCount(stay)===1?'':'s'}`).join(' · ');
  const isFixed=s=>TripCalendar.isFixedStop(s,schedule,policies.destination);
  const isRequired=s=>TripCalendar.isRequiredStop(s,schedule,policies.destination);
  const inTrip=s=>isRequired(s)||selected.has(s.id);
@@ -287,7 +294,7 @@ function ensureTripSummary(){if(!document.getElementById('tripSummary')){const e
   tours.forEach(tour=>body.appendChild(tourRow(s,tour,canPick,iconPlan,day)));
   const restaurants=restaurantsForCity(s);
   if(restaurants.length)body.appendChild(restaurantSection(restaurants[0].city,restaurants,iconPlan));
-  const source=document.createElement('a');source.className='tour-source';source.target='_blank';source.rel='noopener';source.href=s.url;source.textContent=s.kind==='restaurante'?'Restaurante · Boa Lembrança ↗':'Informações oficiais / cidade ↗';body.appendChild(source);
+  const source=document.createElement('a');source.className='tour-source';source.target='_blank';source.rel='noopener';source.href=s.url;source.textContent=s.kind==='restaurante'?'Restaurante · Boa Lembrança ↗':s.kind==='hospedagem'?'Site do hotel ↗':'Informações oficiais / cidade ↗';body.appendChild(source);
   details.appendChild(body);card.appendChild(details);
   return card;
  }

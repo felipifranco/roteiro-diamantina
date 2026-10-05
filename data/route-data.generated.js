@@ -28,15 +28,20 @@ window.ROTEIRO_DATA = {
       "peiro",
       "araxa",
       "camposaltos",
+      "camposaltos-palace-hotel",
       "cordisburgo",
       "setelagoas",
       "belohorizonte"
     ],
     "stays": [
       {
-        "stopId": "camposaltos",
+        "stopId": "camposaltos-palace-hotel",
         "checkIn": "2026-10-07",
-        "checkOut": "2026-10-08"
+        "checkOut": "2026-10-08",
+        "checkInTime": "12:00",
+        "checkOutTime": "12:00",
+        "nights": 1,
+        "reservationStatus": "informed_by_owner"
       },
       {
         "stopId": "diamantina",
@@ -5583,6 +5588,41 @@ window.ROTEIRO_DATA = {
           "url": "https://www.camposaltos.mg.gov.br/portal/cultura-e-turismo/"
         }
       ],
+      "initialDate": "2026-10-07",
+      "selectedByDefault": true
+    },
+    {
+      "id": "camposaltos-palace-hotel",
+      "name": "Campos Altos Palace Hotel",
+      "lat": -19.692769,
+      "lon": -46.1655231,
+      "locationAccuracy": "exact",
+      "locationSourceUrl": "https://www.camposaltospalacehotel.com.br/localizacao.php",
+      "locationNote": "Coordenadas do estabelecimento no link Google Maps publicado na página oficial de localização do hotel.",
+      "kind": "hospedagem",
+      "canHostStay": true,
+      "type": "natureza",
+      "days": "Pernoite",
+      "sights": [],
+      "kid": "",
+      "url": "https://www.camposaltospalacehotel.com.br/",
+      "providedWebsite": "www.camposaltospalacehotel.com.",
+      "profile": "Hospedagem em Campos Altos",
+      "municipality": "Campos Altos",
+      "city": "Campos Altos",
+      "address": "Av Vereador Joao Alegre, 728 - Santa Terezinha - Campos Altos/MG - Brasil",
+      "cnpj": "32.030.605/0001-11",
+      "phone": "3734263606",
+      "email": "camposaltospalacehotel@gmail.com",
+      "mapQuery": "Campos Altos Palace Hotel Vereador Joao Alegre 728 Campos Altos MG",
+      "guideBriefing": "Hospedagem em Campos Altos. Endereço informado na reserva: Av Vereador Joao Alegre, 728 - Santa Terezinha - Campos Altos/MG - Brasil. Telefone: 3734263606. E-mail: camposaltospalacehotel@gmail.com. CNPJ: 32.030.605/0001-11.",
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "indeterminado"
+      },
       "initialDate": "2026-10-07",
       "selectedByDefault": true
     },

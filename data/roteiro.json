@@ -28,6 +28,10 @@
       "date": "2026-10-07"
     },
     {
+      "stopId": "camposaltos-palace-hotel",
+      "date": "2026-10-07"
+    },
+    {
       "stopId": "cordisburgo",
       "date": "2026-10-10"
     },
@@ -46,9 +50,13 @@
   },
   "stays": [
     {
-      "stopId": "camposaltos",
+      "stopId": "camposaltos-palace-hotel",
       "checkIn": "2026-10-07",
-      "checkOut": "2026-10-08"
+      "checkOut": "2026-10-08",
+      "checkInTime": "12:00",
+      "checkOutTime": "12:00",
+      "nights": 1,
+      "reservationStatus": "informed_by_owner"
     },
     {
       "stopId": "diamantina",
