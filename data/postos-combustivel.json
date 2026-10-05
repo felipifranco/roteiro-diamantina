@@ -405,12 +405,221 @@
         {
           "label": "Ponto no mapa",
           "url": "https://www.google.com/maps/place/Posto+Santana+II+Ltda/data=!4m6!3m5!1s0xa8d5aaaaaaaaab:0x5805766b9353cfef!8m2!3d-18.6363349!4d-44.0416578!16s%2Fg%2F1pv1yjdbr"
+        },
+        {
+          "label": "Fonte de localização e endereço",
+          "url": "https://www.google.com/maps/place/Posto+Santana+II+Ltda/@-18.6363349,-44.0416578,17z/data=!3m1!4b1!4m6!3m5!1s0xa8d5aaaaaaaaab:0x5805766b9353cfef!8m2!3d-18.6363349!4d-44.0416578!16s%2Fg%2F1pv1yjdbr"
+        },
+        {
+          "label": "Licença ambiental / endereço",
+          "url": "https://sistemas.meioambiente.mg.gov.br/licenciamento/uploads/zVDIuBp-qplw6JLqnm7Vl9BdsVQ9Sz8b.pdf"
+        },
+        {
+          "label": "Fonte de localização e endereço",
+          "url": "https://casadosdados.com.br/solucao/cnpj/posto-santana-ii-ltda-86580131000100"
         }
       ],
       "accessNote": "Sentido e acesso pela pista não confirmados; confira eventuais retornos no navegador.",
       "km": 525,
       "corridorDistanceMeters": 34.7,
-      "routeProgressKm": 795.3
+      "routeProgressKm": 795.3,
+      "routeIds": [
+        "rio-preto-diamantina-rodovias-mapa",
+        "diamantina-bh-rodovias-mapa"
+      ],
+      "routeName": "Rodovias do mapa · Rio Preto–Diamantina e Diamantina–BH",
+      "corridorMeasurements": {
+        "diamantina-bh-rodovias-mapa": {
+          "distanceMeters": 34.7,
+          "progressKm": 90.1
+        }
+      },
+      "verificationNote": "Endereço cartográfico informa km 525; licença ambiental de 2020 informa km 535. Navegue pelo ponto do estabelecimento."
+    },
+    {
+      "id": "fuel-north-novo-posto-real-davila",
+      "name": "Novo Posto Real D'Ávila (Posto Petrobras)",
+      "lat": -18.2400697,
+      "lon": -43.6244268,
+      "road": "BR-367 / MGC-367 (Avenida João Antunes de Oliveira)",
+      "municipality": "Diamantina/MG",
+      "address": "Avenida João Antunes de Oliveira, 889, Cazuza, Diamantina - MG, 39100-000",
+      "sources": [
+        {
+          "url": "https://www.google.com/maps/place/Posto+Petrobras/@-18.2400697,-43.6244268,17z/data=!3m1!4b1!4m6!3m5!1s0xaeb9a875b1156b:0x8ac768984377a017!8m2!3d-18.2400697!4d-43.6244268!16s%2Fg%2F1wyc5kz3",
+          "label": "Ficha cartográfica do estabelecimento"
+        },
+        {
+          "url": "https://maiscnpj.com.br/cnpj/pdf.php?cnpj=60909957000187",
+          "label": "Fonte de identidade e endereço"
+        },
+        {
+          "url": "https://cnpj.biz/60909957000187",
+          "label": "Fonte de identidade e endereço"
+        }
+      ],
+      "verificationNote": "Nome comercial pode estar atualizado; ficha cartográfica identifica Posto Petrobras. Coordenadas do estabelecimento, não do centro do mapa.",
+      "accessNote": "Posto junto à BR-367 na saída de Diamantina. Entrada e conversões não confirmadas.",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "routeIds": [
+        "diamantina-bh-rodovias-mapa"
+      ],
+      "routeName": "Rodovias do mapa · Diamantina–Cordisburgo–Sete Lagoas–Belo Horizonte",
+      "corridorDistanceMeters": 43.7,
+      "routeProgressKm": 10.4
+    },
+    {
+      "id": "fuel-north-posto-kobu",
+      "name": "Posto Kobu (Shell)",
+      "lat": -18.4438547,
+      "lon": -43.7371634,
+      "road": "BR-259 / BR-367 / MGC-367 trecho compartilhado",
+      "municipality": "Gouveia/MG",
+      "address": "Rodovia BR-259, s/n, km 452, Zona Rural / São Lucas, Gouveia - MG, 39120-000",
+      "km": 452,
+      "sources": [
+        {
+          "url": "https://www.google.com/maps?cid=5505371785464434006",
+          "label": "Ficha cartográfica do estabelecimento"
+        },
+        {
+          "url": "https://find.shell.com/br/fuel/10117220-posto-kobu-ltda-epp/pt_BR",
+          "label": "Diretório oficial Shell"
+        },
+        {
+          "url": "https://www.hotelkobu.com.br/",
+          "label": "Fonte de identidade e endereço"
+        },
+        {
+          "url": "https://paradasnaestrada.com/minas-gerais/",
+          "label": "Fonte de identidade e endereço"
+        }
+      ],
+      "verificationNote": "Coordenadas da ficha cartográfica e ponto independente conciliados; coordenadas divergentes do diretório Shell não foram utilizadas.",
+      "accessNote": "Posto no trecho compartilhado BR-259/BR-367. Confirme a entrada e eventuais retornos no navegador.",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "routeIds": [
+        "diamantina-bh-rodovias-mapa"
+      ],
+      "routeName": "Rodovias do mapa · Diamantina–Cordisburgo–Sete Lagoas–Belo Horizonte",
+      "corridorDistanceMeters": 15.7,
+      "routeProgressKm": 42.2
+    },
+    {
+      "id": "fuel-dbh-shell-cordisburgo-mg231",
+      "name": "Posto Shell — Cordisburgo / MG-231",
+      "lat": -19.1401466,
+      "lon": -44.3237481,
+      "road": "MG-231",
+      "municipality": "Cordisburgo/MG",
+      "address": "MG-231 / Rod. Via Alberto, Zona Rural, Cordisburgo - MG, 35780-000",
+      "sources": [
+        {
+          "url": "https://www.google.com/maps/place/Posto+Shell/data=!4m6!3m5!1s0xa6316e902c2ff1:0x5c1787de07fe26bf!8m2!3d-19.1401466!4d-44.3237481!16s%2Fg%2F11q331c55f",
+          "label": "Ficha cartográfica do estabelecimento"
+        },
+        {
+          "url": "https://guia.cordisnoticias.com.br/listing/posto-shell/",
+          "label": "Fonte de identidade e endereço"
+        },
+        {
+          "url": "https://exa.ai/library/place/5322pcj3h2s",
+          "label": "Fonte de identidade e endereço"
+        }
+      ],
+      "verificationNote": "Coordenadas da ficha cartográfica conferidas; guia local confirma MG-231. Horário e telefone não confirmados.",
+      "accessNote": "Posto junto à MG-231, fora do centro. Confirme a entrada no navegador.",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "routeIds": [
+        "diamantina-bh-rodovias-mapa"
+      ],
+      "routeName": "Rodovias do mapa · Diamantina–Cordisburgo–Sete Lagoas–Belo Horizonte",
+      "corridorDistanceMeters": 61.2,
+      "routeProgressKm": 202.7
+    },
+    {
+      "id": "fuel-dbh-gauchao-br040-sete-lagoas",
+      "name": "Posto Gauchão — BR-040 / Barreiro",
+      "lat": -19.4461407,
+      "lon": -44.3212029,
+      "road": "BR-040",
+      "municipality": "Sete Lagoas/MG",
+      "address": "Rodovia BR-040, km 466, s/n, Barreiro, Sete Lagoas - MG",
+      "km": 466,
+      "sources": [
+        {
+          "url": "https://www.google.com/maps/place/Posto+Gauch%C3%A3o/data=!4m6!3m5!1s0xa651888260ad05:0xf6924230ab1abd09!8m2!3d-19.4461407!4d-44.3212029!16s%2Fg%2F1pzrl923b",
+          "label": "Ficha cartográfica do estabelecimento"
+        },
+        {
+          "url": "https://www.waze.com/pt-BR/live-map/directions?to=place.w.206898758.2068856503.191270",
+          "label": "Fonte de identidade e endereço"
+        },
+        {
+          "url": "https://www.gasoradar.com.br/posto-de-gasolina/9175",
+          "label": "Fonte de identidade e endereço"
+        },
+        {
+          "url": "https://guiadotrc.com.br/transportadora/19410968000114",
+          "label": "Fonte de identidade e endereço"
+        }
+      ],
+      "verificationNote": "Coordenadas cartográficas corroboradas pelo Waze; km 466 conforme endereço publicado.",
+      "accessNote": "Lado oposto ao traçado sul da BR-040; pode exigir retorno ou acesso de serviço. Não atravesse o canteiro.",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "routeIds": [
+        "diamantina-bh-rodovias-mapa"
+      ],
+      "routeName": "Rodovias do mapa · Diamantina–Cordisburgo–Sete Lagoas–Belo Horizonte",
+      "corridorDistanceMeters": 38.2,
+      "routeProgressKm": 241.9
+    },
+    {
+      "id": "fuel-dbh-canecao-br040-sete-lagoas",
+      "name": "Posto Canecão — BR-040 / Barreiro",
+      "lat": -19.4506201,
+      "lon": -44.3172337,
+      "road": "BR-040",
+      "municipality": "Sete Lagoas/MG",
+      "address": "BR-040, km 465, Barreiro, Sete Lagoas - MG",
+      "km": 465,
+      "sources": [
+        {
+          "url": "https://www.google.com/maps/place/Posto+Canec%C3%A3o/data=!4m6!3m5!1s0xa65184409bfabb:0x431a32bc10007a47!8m2!3d-19.4506201!4d-44.3172337!16s%2Fg%2F1pzszhjck",
+          "label": "Ficha cartográfica do estabelecimento"
+        },
+        {
+          "url": "https://www.waze.com/es/live-map/directions/posto-canecao-ltda-barreiro-de-sete-lagoas-%28sete-lagoas%29?to=place.w.206898757.2068856503.254463",
+          "label": "Fonte de identidade e endereço"
+        },
+        {
+          "url": "https://www.postocanecao.com.br/localizacao.php",
+          "label": "Fonte de identidade e endereço"
+        },
+        {
+          "url": "https://linkedin.com/company/posto-canecao",
+          "label": "Fonte de identidade e endereço"
+        }
+      ],
+      "verificationNote": "Coordenadas da ficha cartográfica corroboradas pelo Waze no mesmo complexo; km 465 conforme endereço publicado.",
+      "accessNote": "Posto junto à BR-040. Confirme a entrada/saída e o sentido de acesso no navegador.",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "routeIds": [
+        "diamantina-bh-rodovias-mapa"
+      ],
+      "routeName": "Rodovias do mapa · Diamantina–Cordisburgo–Sete Lagoas–Belo Horizonte",
+      "corridorDistanceMeters": 55.1,
+      "routeProgressKm": 242.5
     }
   ],
   "excludedUncertain": [
@@ -423,16 +632,72 @@
       "reason": "Categoria principal oficina mecânica; identidade como posto varejista insuficientemente confirmada."
     },
     {
-      "name": "Kobu Gouveia",
-      "reason": "Fontes divergem sobre coordenadas e denominação da rodovia; ponto não publicado até conciliação."
-    },
-    {
       "name": "Novo Horizonte Abaeté",
       "reason": "Acesso fora do eixo e identidade/operador atual não confirmados."
     },
     {
       "name": "Garimpo MG-427 km 54",
       "reason": "Fora do corredor já destacado no mapa."
+    }
+  ],
+  "routes": [
+    {
+      "id": "rio-preto-diamantina-rodovias-mapa",
+      "name": "Rodovias do mapa · São José do Rio Preto–Diamantina",
+      "origin": "São José do Rio Preto/SP",
+      "destination": "Diamantina/MG",
+      "checkedAt": "2026-10-05",
+      "scope": "Trecho de ida do roteiro já destacado no mapa, a partir da SP-425; não é uma nova rota nem inclui retorno.",
+      "geometryFile": "./data/rodovias-abastecimento.geojson",
+      "routingSource": "https://router.project-osrm.org/route/v1/driving/-49.50745,-20.81414;-47.7424457,-19.7442903;-47.743080139,-19.742990494;-46.940923,-19.600915;-46.171,-19.696;-46.1655231,-19.692769;-43.60065,-18.24409?overview=full&geometries=geojson&steps=true",
+      "roads": [
+        "SP-425",
+        "SP-265/SP-425",
+        "SP-413",
+        "AMG-2540",
+        "MG-427",
+        "BR-050/BR-262",
+        "BR-262",
+        "MG-176",
+        "BR-352/MG-060",
+        "MG-164",
+        "MG-420",
+        "BR-040",
+        "BR-135",
+        "BR-259",
+        "BR-367"
+      ],
+      "coverageNote": "Levantamento inicial, não exaustivo. Sem opção corroborada em SP-265/SP-413/AMG-2540, BR-352 e trecho final Gouveia–Diamantina. Pins próximos ao eixo não comprovam lado da pista ou retorno."
+    },
+    {
+      "id": "diamantina-bh-rodovias-mapa",
+      "name": "Rodovias do mapa · Diamantina–Cordisburgo–Sete Lagoas–Belo Horizonte",
+      "origin": "Diamantina/MG",
+      "destination": "Belo Horizonte/MG",
+      "checkedAt": "2026-10-05",
+      "geometryFile": "./data/rodovias-abastecimento-diamantina-bh.geojson",
+      "routingSource": "https://router.project-osrm.org/route/v1/driving/-43.60065,-18.24409;-43.6233388,-18.2394261;-43.5967276,-18.2452602;-44.35217,-19.1251;-44.322836,-19.122867;-44.322558,-19.117163;-44.322672,-19.127964;-44.2476263,-19.4660631;-44.28304,-19.49504;-43.94302,-19.92258?overview=full&geometries=geojson&steps=true",
+      "scope": "Traçado existente, com passeios e paradas selecionados; não altera o roteiro.",
+      "roads": [
+        "BR-367",
+        "BR-259",
+        "AMG-0915",
+        "AMG-0910",
+        "LMG-754",
+        "MG-421",
+        "MG-231",
+        "BR-040/BR-135",
+        "MG-238/MG-424"
+      ],
+      "coverageNote": "Levantamento inicial, não exaustivo. Sem novos pontos corroborados nas AMG/LMG/MG entre BR-259 e Cordisburgo ou na aproximação final de BH. Pontos próximos ao eixo não comprovam acesso pela pista.",
+      "stationIds": [
+        "fuel-north-novo-posto-real-davila",
+        "fuel-north-posto-kobu",
+        "posto-santana-ii",
+        "fuel-dbh-shell-cordisburgo-mg231",
+        "fuel-dbh-gauchao-br040-sete-lagoas",
+        "fuel-dbh-canecao-br040-sete-lagoas"
+      ]
     }
   ]
 }

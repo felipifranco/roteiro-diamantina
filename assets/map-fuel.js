@@ -16,7 +16,7 @@
       const box = L.DomUtil.create('div', 'map-fuel');
       button = window.document.createElement('button');
       button.type = 'button'; button.innerHTML = icon;
-      button.title = 'Mostrar ou ocultar postos nas rodovias do mapa até Diamantina';
+      button.title = 'Mostrar ou ocultar postos nas rodovias do roteiro';
       button.setAttribute('aria-label', button.title);
       button.setAttribute('aria-pressed', 'true');
       button.disabled = true;
@@ -34,7 +34,7 @@
         if (!s.roadside || s.locationAccuracy !== 'exact' || !Number.isFinite(s.lat) || !Number.isFinite(s.lon) || Math.abs(s.lat) > 90 || Math.abs(s.lon) > 180) continue;
         const destination = encodeURIComponent(`${s.lat},${s.lon}`);
         const sources = (s.sources || []).filter(source => /^https:\/\//.test(source.url)).map(source => `<a target="_blank" rel="noopener" href="${escape(source.url)}">${escape(source.label || 'Fonte da localização')} ↗</a>`).join(' · ');
-        const popup = `<h3>${escape(s.name)}</h3><div class="pop-type">Posto rodoviário · ${escape(s.municipality)}</div><p>${escape(s.road)}${s.km ? ' · km ' + escape(s.km) : ''}</p><p>${escape(s.accessNote || 'Confirme o acesso e eventuais retornos no navegador antes de entrar.')}</p>${s.verificationNote ? `<p class="pop-meta">${escape(s.verificationNote)}</p>` : ''}<p class="pop-meta">${escape(data.route.name)}<br>Ponto de apoio, não uma parada obrigatória.</p><div class="pop-actions"><a target="_blank" rel="noopener" href="https://waze.com/ul?ll=${destination}&amp;navigate=yes">Waze ↗</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;destination=${destination}">Google Maps ↗</a></div><p class="pop-meta">Localização conferida: ${escape(s.verifiedAt)}. Funcionamento, preços e combustível disponível precisam de confirmação.</p><div class="pop-meta">${sources}</div>`;
+        const popup = `<h3>${escape(s.name)}</h3><div class="pop-type">Posto rodoviário · ${escape(s.municipality)}</div><p>${escape(s.road)}${s.km ? ' · km ' + escape(s.km) : ''}</p><p>${escape(s.accessNote || 'Confirme o acesso e eventuais retornos no navegador antes de entrar.')}</p>${s.verificationNote ? `<p class="pop-meta">${escape(s.verificationNote)}</p>` : ''}<p class="pop-meta">${escape(s.routeName || data.route.name)}<br>Ponto de apoio, não uma parada obrigatória.</p><div class="pop-actions"><a target="_blank" rel="noopener" href="https://waze.com/ul?ll=${destination}&amp;navigate=yes">Waze ↗</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;destination=${destination}">Google Maps ↗</a></div><p class="pop-meta">Localização conferida: ${escape(s.verifiedAt)}. Funcionamento, preços e combustível disponível precisam de confirmação.</p><div class="pop-meta">${sources}</div>`;
         markers[s.id] = L.marker([s.lat, s.lon], { title: s.name, icon: L.divIcon({ className: 'fuel-pin', html: icon, iconSize: [32, 36], iconAnchor: [16, 35], popupAnchor: [0, -30] }) }).addTo(layer).bindPopup(popup, { maxWidth: 310, autoPan: false }).bindTooltip(s.name);
       }
       setActive(true); button.disabled = false;
