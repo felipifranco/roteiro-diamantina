@@ -1,0 +1,438 @@
+{
+  "version": 1,
+  "route": {
+    "id": "rio-preto-diamantina-rodovias-mapa",
+    "name": "Rodovias do mapa · São José do Rio Preto–Diamantina",
+    "origin": "São José do Rio Preto/SP",
+    "destination": "Diamantina/MG",
+    "checkedAt": "2026-10-05",
+    "scope": "Trecho de ida do roteiro já destacado no mapa, a partir da SP-425; não é uma nova rota nem inclui retorno.",
+    "geometryFile": "./data/rodovias-abastecimento.geojson",
+    "routingSource": "https://router.project-osrm.org/route/v1/driving/-49.50745,-20.81414;-47.7424457,-19.7442903;-47.743080139,-19.742990494;-46.940923,-19.600915;-46.171,-19.696;-46.1655231,-19.692769;-43.60065,-18.24409?overview=full&geometries=geojson&steps=true",
+    "roads": [
+      "SP-425",
+      "SP-265/SP-425",
+      "SP-413",
+      "AMG-2540",
+      "MG-427",
+      "BR-050/BR-262",
+      "BR-262",
+      "MG-176",
+      "BR-352/MG-060",
+      "MG-164",
+      "MG-420",
+      "BR-040",
+      "BR-135",
+      "BR-259",
+      "BR-367"
+    ],
+    "coverageNote": "Levantamento inicial, não exaustivo. Sem opção corroborada em SP-265/SP-413/AMG-2540, BR-352 e trecho final Gouveia–Diamantina. Pins próximos ao eixo não comprovam lado da pista ou retorno."
+  },
+  "stations": [
+    {
+      "id": "posto-monte-carlo-rio-preto",
+      "name": "Posto Monte Carlo Rio Preto",
+      "lat": -20.790185,
+      "lon": -49.2920377,
+      "road": "SP-425 / Rodovia Assis Chateaubriand",
+      "municipality": "São José do Rio Preto/SP",
+      "address": "Rod. Assis Chateaubriand, S/N - Zona Rural",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Identidade e endereço",
+          "url": "https://www.google.com/maps/place/Posto+Monte+Carlo+Rio+Preto/data=!4m7!3m6!1s0x94bc527a28772325:0xadde39b8e4542eda!8m2!3d-20.790185!4d-49.2920377!16s%2Fg%2F1tgptqn9!19sChIJJSN3KHpSvJQR2i5U5Lg53q0?authuser=0&hl=pt-BR&g_ep=EgoyMDI2MDkzMC4wIJJjKgBIAVAD&rclk=1"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Posto+Monte+Carlo+Rio+Preto/data=!4m7!3m6!1s0x94bc527a28772325:0xadde39b8e4542eda!8m2!3d-20.790185!4d-49.2920377!16s%2Fg%2F1tgptqn9!19sChIJJSN3KHpSvJQR2i5U5Lg53q0?authuser=0&hl=pt-BR&g_ep=EgoyMDI2MDkzMC4wIJJjKgBIAVAD&rclk=1"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira no navegador antes de entrar.",
+      "corridorDistanceMeters": 71.7,
+      "routeProgressKm": 6.6
+    },
+    {
+      "id": "posto-rei-do-suco",
+      "name": "Auto Posto Rei do Suco",
+      "lat": -20.714158,
+      "lon": -48.9882964,
+      "road": "SP-425 / Rodovia Assis Chateaubriand",
+      "municipality": "Olímpia/SP",
+      "address": "Rod. Assis Chateaubriand, km 145, Água Parada",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Identidade e endereço",
+          "url": "https://www.turismo.olimpia.sp.gov.br/portal/servicos/1062/postos-de-combustiveis/"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Auto+Posto+Rei+do+Suco/data=!4m7!3m6!1s0x94bc689af8874b09:0xf73614b12950e560!8m2!3d-20.714158!4d-48.9882964!16s%2Fg%2F11bwdm6cyc!19sChIJCUuH-JpovJQRYOVQKbEUNvc?authuser=0&hl=pt-BR&g_ep=EgoyMDI2MDkzMC4wIJJjKgBIAVAD&rclk=1"
+        }
+      ],
+      "accessNote": "Sentido São José do Rio Preto → Olímpia, conforme Turismo da Prefeitura. Não verificados detalhes da entrada/retornos.",
+      "km": 145,
+      "corridorDistanceMeters": 41.0,
+      "routeProgressKm": 39.6
+    },
+    {
+      "id": "posto-rei-do-suco-ii",
+      "name": "Auto Posto Rei do Suco II",
+      "lat": -20.7133984,
+      "lon": -48.9879263,
+      "road": "SP-425 / Rodovia Assis Chateaubriand",
+      "municipality": "Olímpia/SP",
+      "address": "Rod. Assis Chateaubriand, km 145, Água Parada",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Identidade e endereço",
+          "url": "https://www.turismo.olimpia.sp.gov.br/portal/servicos/1062/postos-de-combustiveis/"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Auto+Posto+Rei+do+Suco+II/data=!4m7!3m6!1s0x94bc689b115870d7:0x1778e4403beb6396!8m2!3d-20.7133984!4d-48.9879263!16s%2Fg%2F11d_dtvwlw!19sChIJ13BYEZtovJQRlmPrO0DkeBc?authuser=0&hl=pt-BR&g_ep=EgoyMDI2MDkzMC4wIJJjKgBIAVAD&rclk=1"
+        }
+      ],
+      "accessNote": "Sentido Olímpia → São José do Rio Preto: lado contrário à ida, conforme Turismo da Prefeitura. Retorno não verificado.",
+      "km": 145,
+      "corridorDistanceMeters": 30.1,
+      "routeProgressKm": 39.7
+    },
+    {
+      "id": "posto-mineirao-uberaba",
+      "name": "Posto Mineirão",
+      "lat": -19.789685,
+      "lon": -47.9875466,
+      "road": "MG-427 / Rodovia Edilson Lamartine Mendes",
+      "municipality": "Uberaba/MG",
+      "address": "MG-427; Maps identifica Glebas Santa Mônica",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Identidade e endereço",
+          "url": "https://www.waze.com/pt-BR/live-map/directions/auto-posto-mineirao-mg-427-rod.-edilson-lamartine-mendes-uberaba?to=place.w.204473922.2044804757.281219"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Posto+Mineir%C3%A3o/@-19.789685,-47.9875466,17z/data=!3m1!4b1!4m6!3m5!1s0x94bad0bb49d2e3ad:0x7e9a844f4fb3c378!8m2!3d-19.789685!4d-47.9875466!16s%2Fg%2F11kzcgnn44?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira no navegador antes de entrar.",
+      "verificationNote": "Quilometragem publicada em fonte antiga; não utilizada como referência exata. Funcionamento não confirmado.",
+      "corridorDistanceMeters": 97.0,
+      "routeProgressKm": 213.7
+    },
+    {
+      "id": "br262-bela-vista-uberaba",
+      "name": "Auto Posto Bela Vista",
+      "lat": -19.6857491,
+      "lon": -47.6758002,
+      "road": "BR-262",
+      "municipality": "Uberaba/MG",
+      "address": "Rodovia BR-262, km 773, s/n, Uberaba/MG",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Endereço do posto",
+          "url": "https://www.autoyas.com/BR/Uberaba/124807741509217/AUTO-POSTO-BELA-VISTA"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Auto+Posto+Bela+Vista/@-19.6857491,-47.6758002,17z/data=!3m1!4b1!4m6!3m5!1s0x94bab0cf4e79884d:0xbe70661bb9aa7!8m2!3d-19.6857491!4d-47.6758002!16s%2Fg%2F11c67vwcx2"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira eventuais retornos no navegador.",
+      "verificationNote": "Fontes divergem sobre a quilometragem; navegue pelo ponto do estabelecimento, não pelo km.",
+      "corridorDistanceMeters": 66.5,
+      "routeProgressKm": 254.1
+    },
+    {
+      "id": "br262-caxuxa-perdizinha",
+      "name": "Posto Caxuxa Perdizinha",
+      "lat": -19.6122338,
+      "lon": -47.4054489,
+      "road": "BR-262",
+      "municipality": "Perdizes/MG",
+      "address": "Rodovia BR-262, km 742, Zona Rural, Perdizes/MG",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Endereço do posto",
+          "url": "https://redecaxuxatriangulo.com.br/#posto-perdizinha"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Posto+Caxuxa+Perdizinha/@-19.6122338,-47.4054489,17z/data=!3m1!4b1!4m6!3m5!1s0x94b007caf6f09101:0x85ba760e0a439d03!8m2!3d-19.6122338!4d-47.4054489!16s%2Fg%2F11pzp3h975"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira eventuais retornos no navegador.",
+      "km": 742,
+      "publishedHours": {
+        "text": "24 horas",
+        "source": "https://redecaxuxatriangulo.com.br/#posto-perdizinha",
+        "checkedAt": "2026-10-05"
+      },
+      "corridorDistanceMeters": 59.9,
+      "routeProgressKm": 284.3
+    },
+    {
+      "id": "br262-alpa2-ibia",
+      "name": "Posto Alpa 2",
+      "lat": -19.592306,
+      "lon": -46.4935698,
+      "road": "BR-262",
+      "municipality": "Ibiá/MG",
+      "address": "Rodovia BR-262, km 631,6, Zona Rural, Ibiá/MG",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Endereço do posto",
+          "url": "https://www.postosalpa.com.br/nossos-servicos/posto-alpa-2/"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Posto+Alpa/@-19.592306,-46.5636076,12z/data=!4m6!3m5!1s0x94b19675a9454435:0xb2a8464b32bc63e6!8m2!3d-19.592306!4d-46.4935698!15sCh1CUiAyNjIgLSBLTSA2MzEsNiAtICBJYmnDoS9NR1oaIhhiciAyNjIga20gNjMxIDYgaWJpw6EgbWeSAQtnYXNfc3RhdGlvbpoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSVExXWXpaVFZuUlJBQg?shorturl=1"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira eventuais retornos no navegador.",
+      "km": 631.6,
+      "corridorDistanceMeters": 116.8,
+      "routeProgressKm": 395.0
+    },
+    {
+      "id": "br262-hg-campos-altos",
+      "name": "Rede HG — Posto Campos Altos",
+      "lat": -19.6578402,
+      "lon": -46.2122082,
+      "road": "BR-262",
+      "municipality": "Campos Altos/MG",
+      "address": "BR-262, km 598, Zona Rural, Campos Altos/MG",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Endereço do posto",
+          "url": "https://redehg.com.br/postos/posto-campos-altos/"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Rede+HG+-+Posto+Campos+Altos/@-19.6580962,-46.2152823,16.5z/data=!4m7!3m6!1s0x94b181d3358fae51:0xd35c0beb512dc49!8m2!3d-19.6578402!4d-46.2122082!15sCjlCUi0yNjIsIGttIDU5OCAtIFpvbmEgUnVyYWwsIENhbXBvcyBBbHRvcyAtIE1HLCAzODk3MC0wMDCSAQtnYXNfc3RhdGlvbuABAA!16s%2Fg%2F11kbzfwpfh?entry=tts&g_ep=EgoyMDI0MDUwOC4wKgBIAVAD"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira eventuais retornos no navegador.",
+      "km": 598,
+      "publishedHours": {
+        "text": "24 horas",
+        "source": "https://redehg.com.br/postos/posto-campos-altos/",
+        "checkedAt": "2026-10-05"
+      },
+      "corridorDistanceMeters": 15.2,
+      "routeProgressKm": 429.0
+    },
+    {
+      "id": "br262-pmg-corrego-danta",
+      "name": "Posto Minas Gerais — PMG Córrego Danta",
+      "lat": -19.6662095,
+      "lon": -46.0572307,
+      "road": "BR-262",
+      "municipality": "Córrego Danta/MG",
+      "address": "BR-262, km 580, s/n, Zona Rural, Córrego Danta/MG, 38990-000",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Endereço do posto",
+          "url": "https://redepmg.com.br/"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Posto+Petrobras+PMG/@-19.665541,-46.0568597,18.5z/data=!4m6!3m5!1s0x94b22d5f8b0e3f5b:0xd39893b5e8fe7b9c!8m2!3d-19.6662095!4d-46.0572307!16s%2Fg%2F11b809pdlj"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira eventuais retornos no navegador.",
+      "km": 580,
+      "publishedHours": {
+        "text": "24 horas",
+        "source": "https://redepmg.com.br/",
+        "checkedAt": "2026-10-05"
+      },
+      "corridorDistanceMeters": 63.3,
+      "routeProgressKm": 454.5
+    },
+    {
+      "id": "br262-dom-pedro-luz",
+      "name": "Posto Dom Pedro Luz",
+      "lat": -19.740756,
+      "lon": -45.8528216,
+      "road": "BR-262",
+      "municipality": "Luz/MG",
+      "address": "Rodovia BR-262, km 544, Zona Rural, Luz/MG, 35595-000",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Endereço do posto",
+          "url": "https://rededompedro.com/posto/posto-dom-pedro-luz/"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps?cid=9560124458558693877"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira eventuais retornos no navegador.",
+      "km": 544,
+      "corridorDistanceMeters": 63.6,
+      "routeProgressKm": 487.8
+    },
+    {
+      "id": "posto-aw-plus-dores",
+      "name": "Posto de Combustíveis A e W Plus",
+      "lat": -19.4535408,
+      "lon": -45.5858342,
+      "road": "MG-176",
+      "municipality": "Dores do Indaiá/MG",
+      "address": "MG-176, Dores do Indaiá - MG, 35610-000",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Identidade e endereço",
+          "url": "https://www.google.com/maps/place/Posto+de+Combust%C3%ADveis+A+e+W+Plus/data=!4m6!3m5!1s0x94b2f9002142053d:0x9e14cfc718d38aa1!8m2!3d-19.4535408!4d-45.5858342!16s%2Fg%2F11zxdx71lv"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Posto+de+Combust%C3%ADveis+A+e+W+Plus/data=!4m6!3m5!1s0x94b2f9002142053d:0x9e14cfc718d38aa1!8m2!3d-19.4535408!4d-45.5858342!16s%2Fg%2F11zxdx71lv"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira eventuais retornos no navegador.",
+      "verificationNote": "Posto junto à MG-176; quilometragem e horário não confirmados.",
+      "corridorDistanceMeters": 11.9,
+      "routeProgressKm": 549.0
+    },
+    {
+      "id": "posto-quati-rodoviario",
+      "name": "Auto Posto e Restaurante Quati (rodoviário, Paraíso)",
+      "lat": -19.2377091,
+      "lon": -45.013053,
+      "road": "MG-164",
+      "municipality": "Pompéu/MG",
+      "address": "zona rural - MG-164, S/N - KM 02 - Paraíso, Pompéu - MG, 35640-000",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Identidade e endereço",
+          "url": "https://www.google.com/maps/place/Auto+Posto+e+Restaurante+Quati+-+Restaurante,+Churrascaria+,+Lanchonete+Posto+de+Gasolina+em+Pompeu/@-19.2377091,-45.013053,17z/data=!3m1!4b1!4m6!3m5!1s0x94b2d313646b2481:0xa0a689150de801b8!8m2!3d-19.2377091!4d-45.013053!16s%2Fg%2F11rq255q04?authuser=0&hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Auto+Posto+e+Restaurante+Quati+-+Restaurante,+Churrascaria+,+Lanchonete+Posto+de+Gasolina+em+Pompeu/@-19.2377091,-45.013053,17z/data=!3m1!4b1!4m6!3m5!1s0x94b2d313646b2481:0xa0a689150de801b8!8m2!3d-19.2377091!4d-45.013053!16s%2Fg%2F11rq255q04?authuser=0&hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira eventuais retornos no navegador.",
+      "km": 2,
+      "corridorDistanceMeters": 64.5,
+      "routeProgressKm": 643.6
+    },
+    {
+      "id": "posto-hg-quilometragem",
+      "name": "Rede HG - Posto Quilometragem",
+      "lat": -18.8547798,
+      "lon": -44.4956478,
+      "road": "BR-135",
+      "municipality": "Curvelo/MG",
+      "address": "Rodovia BR 135, km 633, s/n, Zona Rural, Curvelo/MG",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Identidade e endereço",
+          "url": "https://redehg.com.br/postos/posto-quilometragem/"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Rede+HG+-+Posto+Quilometragem/data=!4m6!3m5!1s0xa8796900326a7f:0x4ce8a035ca0d4599!8m2!3d-18.8547798!4d-44.4956478!16s%2Fg%2F1ptx2v83v"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira eventuais retornos no navegador.",
+      "km": 633,
+      "publishedHours": {
+        "text": "24 horas",
+        "source": "https://redehg.com.br/postos/posto-quilometragem/",
+        "checkedAt": "2026-10-05"
+      },
+      "corridorDistanceMeters": 30.6,
+      "routeProgressKm": 735.8
+    },
+    {
+      "id": "posto-santana-ii",
+      "name": "Posto Santana II Ltda",
+      "lat": -18.6363349,
+      "lon": -44.0416578,
+      "road": "BR-259",
+      "municipality": "Gouveia/MG, Vila Alexandre Mascarenhas (município conforme endereço publicado)",
+      "address": "BR 259 km 525, Vila Alexandre Mascarenhas, Gouveia/MG, 39120-000",
+      "roadside": true,
+      "locationAccuracy": "exact",
+      "verifiedAt": "2026-10-05",
+      "sources": [
+        {
+          "label": "Identidade e endereço",
+          "url": "https://cnpja.com/office/86580131000100"
+        },
+        {
+          "label": "Ponto no mapa",
+          "url": "https://www.google.com/maps/place/Posto+Santana+II+Ltda/data=!4m6!3m5!1s0xa8d5aaaaaaaaab:0x5805766b9353cfef!8m2!3d-18.6363349!4d-44.0416578!16s%2Fg%2F1pv1yjdbr"
+        }
+      ],
+      "accessNote": "Sentido e acesso pela pista não confirmados; confira eventuais retornos no navegador.",
+      "km": 525,
+      "corridorDistanceMeters": 34.7,
+      "routeProgressKm": 795.3
+    }
+  ],
+  "excludedUncertain": [
+    {
+      "name": "Posto Estrela da Guia",
+      "reason": "Fichas próximas e possível duplicação com estabelecimento fechado; operação/identidade atual não conciliada."
+    },
+    {
+      "name": "Petrobras Angueretá",
+      "reason": "Categoria principal oficina mecânica; identidade como posto varejista insuficientemente confirmada."
+    },
+    {
+      "name": "Kobu Gouveia",
+      "reason": "Fontes divergem sobre coordenadas e denominação da rodovia; ponto não publicado até conciliação."
+    },
+    {
+      "name": "Novo Horizonte Abaeté",
+      "reason": "Acesso fora do eixo e identidade/operador atual não confirmados."
+    },
+    {
+      "name": "Garimpo MG-427 km 54",
+      "reason": "Fora do corredor já destacado no mapa."
+    }
+  ]
+}
