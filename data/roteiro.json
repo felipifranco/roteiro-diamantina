@@ -123,6 +123,11 @@
       "stopId": "belohorizonte",
       "name": "Feira Hippie (Feira da Afonso Pena)",
       "date": "2026-10-11"
+    },
+    {
+      "stopId": "araxa",
+      "name": "Grande Hotel e Termas de Araxá",
+      "date": "2026-10-07"
     }
   ]
 }

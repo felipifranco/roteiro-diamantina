@@ -5231,7 +5231,10 @@ window.ROTEIRO_DATA = {
             "status": "indeterminado"
           },
           "kind": "atracao",
-          "type": "historia"
+          "type": "historia",
+          "initialDate": "2026-10-07",
+          "selectedByDefault": true,
+          "required": false
         },
         {
           "name": "Complexo do Barreiro",
