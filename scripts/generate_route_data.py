@@ -334,7 +334,12 @@ def validate(data):
             raise ValueError(f"routeStops[{index}].kind must be one of {sorted(STOP_KINDS)}")
         if not isinstance(stop["type"], str) or stop["type"] not in STOP_TYPES:
             raise ValueError(f"routeStops[{index}].type must be one of {sorted(STOP_TYPES)}")
-        if stop["kind"] == "restaurante":
+        if stop["kind"] == "restaurante" and "dish" not in stop and not all(
+            isinstance(stop.get(field), str) and stop[field].strip()
+            for field in ("food", "city", "address")
+        ):
+            raise ValueError(f"routeStops[{index}] restaurant must have a commemorative dish or food, city and address")
+        if stop["kind"] == "restaurante" and "dish" in stop:
             dish = stop.get("dish")
             if stop["type"] != "gastronomia" or not isinstance(dish, dict) or any(
                 not isinstance(dish.get(field), str) or not dish[field].strip()
@@ -483,6 +488,13 @@ def render_markdown(data):
         "|---|---|---|---|---|---|---:|---:|---|---|---|",
     ]
     for city in data["routeStops"]:
+        if city["kind"] == "restaurante" and "dish" not in city:
+            lines.append(_row([
+                f"**{city['name']}**", city["address"], "**Almoço / restaurante**",
+                city["food"] + " " + city["hours"] + " " + city["availabilityNote"],
+                "—", "Restaurante / refeição", city["days"], "—", age_cell(city), ticket_cell(city), "A confirmar",
+            ]))
+            continue
         if city["kind"] == "restaurante":
             dish = city["dish"]
             lines.append(_row([

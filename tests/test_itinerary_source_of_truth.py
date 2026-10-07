@@ -20,6 +20,7 @@ EXPECTED_ROUTE_STOP_IDS = (
     "boa-casa-do-rei-bistro", "boa-dartagnan", "boa-divinorestaurante",
     "boa-domenico-pizzeria-e-trattoria", "boa-maria-das-trancas",
     "boa-relicario-gastronomia", "boa-taste-vin", "boa-xapuri-2",
+    "almoco-cupim-grill-uberaba", "almoco-zebu-uberaba", "almoco-nossa-casa-uberaba",
 )
 
 
@@ -305,7 +306,7 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
 
     def test_application_uses_generated_route_data(self):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn('<script src="./data/route-data.generated.js"></script>', page)
+        self.assertRegex(page, r'<script src="\./data/route-data\.generated\.js(?:\?[^"\s]+)?"></script>')
         self.assertIn("const stops=window.ROTEIRO_DATA.routeStops;", page)
         self.assertNotRegex(page, r"const stops\s*=\s*\[")
 

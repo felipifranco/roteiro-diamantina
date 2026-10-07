@@ -92,7 +92,7 @@ assert.equal(optional.returnStart,0);
 
     def test_restaurant_year_is_data_driven_in_generator_and_ui(self):
         catalog=json.loads((ROOT/'data/pontos-de-parada.json').read_text())
-        restaurants=[s for s in catalog['routeStops'] if s['kind']=='restaurante']
+        restaurants=[s for s in catalog['routeStops'] if s['kind']=='restaurante' and 'dish' in s]
         self.assertIn('dish',restaurants[0],'dish schema must not encode the year in its key')
         self.assertEqual(restaurants[0]['dish']['year'],2026)
         for stop in restaurants:

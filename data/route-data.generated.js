@@ -6612,6 +6612,135 @@ window.ROTEIRO_DATA = {
         "status": "reserva_indeterminada"
       },
       "city": "Belo Horizonte"
+    },
+    {
+      "id": "almoco-cupim-grill-uberaba",
+      "name": "Cupim Grill Churrascaria",
+      "lat": -19.7699365,
+      "lon": -47.9464522,
+      "address": "Praça Vicentino Rodrigues da Cunha, 110 — São Benedito, Uberaba/MG",
+      "phone": "(34) 3336-4691",
+      "food": "Churrascaria com rodízio. Site oficial informa espaço kids.",
+      "hours": "Todos os dias, almoço das 11h às 15h.",
+      "sources": [
+        {
+          "url": "https://cupimgrill.com/",
+          "label": "Site oficial: almoço, endereço e contato"
+        },
+        {
+          "url": "https://www.google.com/maps/search/Cupim+Grill+Churrascaria+Uberaba/",
+          "label": "Ficha cartográfica do estabelecimento: coordenadas, endereço e telefone"
+        }
+      ],
+      "municipality": "Uberaba/MG",
+      "verifiedAt": "2026-10-07",
+      "locationAccuracy": "exact",
+      "availabilityNote": "Horário publicado, não confirmação de atendimento ou mesas em tempo real. Preços não confirmados.",
+      "kind": "restaurante",
+      "city": "Uberaba",
+      "canHostStay": false,
+      "type": "gastronomia",
+      "days": "1 h (estimativa de refeição)",
+      "sights": [],
+      "kid": "Site oficial informa espaço kids; confirme condições de uso.",
+      "url": "https://cupimgrill.com/",
+      "profile": "Churrascaria com rodízio. Site oficial informa espaço kids.",
+      "guideBriefing": "Churrascaria com rodízio. Site oficial informa espaço kids.\n\nHorário publicado: Todos os dias, almoço das 11h às 15h.\nHorário publicado, não confirmação de atendimento ou mesas em tempo real. Preços não confirmados.",
+      "relevanceSource": "guide",
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "reserva_indeterminada"
+      },
+      "mapQuery": "Cupim Grill Churrascaria Praça Vicentino Rodrigues da Cunha, 110 — São Benedito, Uberaba/MG"
+    },
+    {
+      "id": "almoco-zebu-uberaba",
+      "name": "Churrascaria Zebu",
+      "lat": -19.7782479,
+      "lon": -47.945217,
+      "address": "Av. Tonico dos Santos, 880 — Jardim Induberaba, Uberaba/MG",
+      "phone": "(34) 3336-4666",
+      "food": "Churrascaria com variedade de cortes e acompanhamentos.",
+      "hours": "Segunda a sábado, almoço das 11h às 15h; domingo, das 11h às 16h.",
+      "sources": [
+        {
+          "url": "https://churrascariazebu.com.br/",
+          "label": "Site oficial: almoço, endereço e contato"
+        },
+        {
+          "url": "https://www.google.com/maps/search/Churrascaria+Zebu+Uberaba/",
+          "label": "Ficha cartográfica do estabelecimento: coordenadas, endereço e telefone"
+        }
+      ],
+      "municipality": "Uberaba/MG",
+      "verifiedAt": "2026-10-07",
+      "locationAccuracy": "exact",
+      "availabilityNote": "Horário publicado, não confirmação de atendimento ou mesas em tempo real. Preços não confirmados.",
+      "kind": "restaurante",
+      "city": "Uberaba",
+      "canHostStay": false,
+      "type": "gastronomia",
+      "days": "1 h (estimativa de refeição)",
+      "sights": [],
+      "kid": "Estrutura infantil não confirmada; consulte o restaurante.",
+      "url": "https://churrascariazebu.com.br/",
+      "profile": "Churrascaria com variedade de cortes e acompanhamentos.",
+      "guideBriefing": "Churrascaria com variedade de cortes e acompanhamentos.\n\nHorário publicado: Segunda a sábado, almoço das 11h às 15h; domingo, das 11h às 16h.\nHorário publicado, não confirmação de atendimento ou mesas em tempo real. Preços não confirmados.",
+      "relevanceSource": "guide",
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "reserva_indeterminada"
+      },
+      "mapQuery": "Churrascaria Zebu Av. Tonico dos Santos, 880 — Jardim Induberaba, Uberaba/MG"
+    },
+    {
+      "id": "almoco-nossa-casa-uberaba",
+      "name": "Restaurante Nossa Casa",
+      "lat": -19.7776699,
+      "lon": -47.9440928,
+      "address": "Rua Arlinda Cruvinel Borges, 542 — Jardim Induberaba, Uberaba/MG",
+      "phone": "(34) 3336-9849",
+      "food": "Self-service de comida caseira; também oferece marmitex.",
+      "hours": "Segunda a sábado, das 10h30 às 14h, conforme perfil do restaurante.",
+      "sources": [
+        {
+          "url": "https://www.facebook.com/RestauranteNossaCasaUberaba/",
+          "label": "Perfil do restaurante: horário publicado e self-service"
+        },
+        {
+          "url": "https://www.google.com/maps/search/Restaurante+Nossa+Casa+Uberaba/",
+          "label": "Ficha cartográfica do estabelecimento: coordenadas, endereço e telefone"
+        }
+      ],
+      "municipality": "Uberaba/MG",
+      "verifiedAt": "2026-10-07",
+      "locationAccuracy": "exact",
+      "availabilityNote": "Horário publicado, não confirmação de atendimento ou mesas em tempo real. Preços não confirmados.",
+      "kind": "restaurante",
+      "city": "Uberaba",
+      "canHostStay": false,
+      "type": "gastronomia",
+      "days": "1 h (estimativa de refeição)",
+      "sights": [],
+      "kid": "Estrutura infantil não confirmada; consulte o restaurante.",
+      "url": "https://www.facebook.com/RestauranteNossaCasaUberaba/",
+      "profile": "Self-service de comida caseira; também oferece marmitex.",
+      "guideBriefing": "Self-service de comida caseira; também oferece marmitex.\n\nHorário publicado: Segunda a sábado, das 10h30 às 14h, conforme perfil do restaurante.\nHorário publicado, não confirmação de atendimento ou mesas em tempo real. Preços não confirmados.",
+      "relevanceSource": "guide",
+      "attractions": [],
+      "ageClassification": {
+        "status": "indeterminada"
+      },
+      "ticket": {
+        "status": "reserva_indeterminada"
+      },
+      "mapQuery": "Restaurante Nossa Casa Rua Arlinda Cruvinel Borges, 542 — Jardim Induberaba, Uberaba/MG"
     }
   ],
   "accessAlerts": [

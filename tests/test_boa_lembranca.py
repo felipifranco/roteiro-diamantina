@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class BoaLembrancaTests(unittest.TestCase):
     def test_eight_independent_restaurant_stops(self):
         data = load_data()
-        restaurants = [stop for stop in data["routeStops"] if stop["kind"] == "restaurante"]
+        restaurants = [stop for stop in data["routeStops"] if stop["kind"] == "restaurante" and "dish" in stop]
         self.assertEqual(len(restaurants), 8)
         self.assertEqual(len({(stop["lat"], stop["lon"]) for stop in restaurants}), 8)
         self.assertEqual(

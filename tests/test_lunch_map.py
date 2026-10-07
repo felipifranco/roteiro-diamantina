@@ -1,20 +1,21 @@
+import json
 import pathlib
-import subprocess
 import unittest
+from scripts.generate_route_data import load_data
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 class LunchMapTests(unittest.TestCase):
-    def test_lunch_pins_have_navigation_without_changing_route(self):
-        self.assertTrue((ROOT / 'assets/map-lunch.js').exists(), 'Falta a camada de almoço')
-        script = r'''
-const assert=require('node:assert/strict'),fs=require('fs'),vm=require('vm');
-const markers={},L={layerGroup(){return{addTo(){return this}}},divIcon(x){return x},marker(coords,options){return{coords,options,addTo(){return this},bindPopup(html,popupOptions){this.html=html;this.popupOptions=popupOptions;return this},bindTooltip(){return this},getLatLng(){return coords},openPopup(){}}}};
-const data=JSON.parse(fs.readFileSync('data/locais-almoco.json','utf8'));
-const window={L,location:{hash:''},addEventListener(){},fetch:async()=>({ok:true,json:async()=>data})};
-const map={setView(){throw Error('Não recentrar ao carregar')}};
-vm.runInNewContext(fs.readFileSync('assets/map-lunch.js','utf8'),{window,console});
-(async()=>{const result=await window.MapLunch.attach(map);assert.equal(Object.keys(result.markers).length,3);for(const s of data.places){const m=result.markers[s.id];assert.ok(m.html.includes(s.name));assert.ok(m.html.includes('waze.com/ul?ll='));assert.ok(m.html.includes('navigate=yes'));assert.ok(m.html.includes('Horário publicado'));assert.equal(m.popupOptions.autoPan,false)}})().catch(e=>{console.error(e);process.exitCode=1});
-'''
-        result = subprocess.run(['node', '-e', script], cwd=ROOT, capture_output=True, text=True)
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    def test_lunch_pins_use_canonical_records_without_duplicate_layer(self):
+        data = load_data()
+        research = json.loads((ROOT / 'data/locais-almoco.json').read_text())
+        page = (ROOT / 'index.html').read_text()
+        self.assertNotIn('MapLunch.attach', page)
+        self.assertNotIn('assets/map-lunch.js', page)
+        stops = {s['id']: s for s in data['routeStops']}
+        for original in research['places']:
+            record = stops[original['id']]
+            self.assertEqual(record['kind'], 'restaurante')
+            for field in ('name', 'lat', 'lon', 'address', 'phone', 'food', 'hours', 'sources', 'availabilityNote'):
+                self.assertEqual(record[field], original[field])
+            self.assertFalse(record.get('selectedByDefault', False))
