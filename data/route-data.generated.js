@@ -6366,7 +6366,19 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "reserva_indeterminada"
       },
-      "city": "São Joaquim de Bicas"
+      "city": "São Joaquim de Bicas",
+      "mealService": "Jantar; almoço sáb/dom",
+      "hours": "Qua–sex: 18h–23h. Sáb: 12h–16h e 18h–23h. Dom: 12h–16h. Seg/ter: fechado.",
+      "hoursSources": [
+        {
+          "url": "https://boalembranca.com.br/restaurantes/casa-do-rei-bistro",
+          "sourceName": "Boa Lembrança",
+          "evidence": "Quarta a sexta: 18:00 - 23:00. Sábado: 12:00 - 16:00 / 18:00 - 23:00. Domingo: 12:00 - 16:00."
+        }
+      ],
+      "hoursCheckedAt": "2026-10-09",
+      "hoursStatus": "published",
+      "hoursNote": "Horários publicados; feriados, reserva e disponibilidade do prato precisam de confirmação com o restaurante."
     },
     {
       "id": "boa-dartagnan",
@@ -6401,7 +6413,19 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "reserva_indeterminada"
       },
-      "city": "Belo Horizonte"
+      "city": "Belo Horizonte",
+      "mealService": "Almoço e jantar; terça só jantar",
+      "hours": "Ter: 19h–0h. Qua/qui: 12h–16h e 19h–0h. Sex/sáb: 12h–0h. Dom: 12h–17h (só almoço). Seg: fechado.",
+      "hoursSources": [
+        {
+          "url": "https://boalembranca.com.br/restaurantes/dartagnan",
+          "sourceName": "Boa Lembrança",
+          "evidence": "Terça: 19:00 - 00:00. Quarta e quinta: 12:00 - 16:00 / 19:00 - 00:00. Sexta e sábado: 12:00 - 00:00."
+        }
+      ],
+      "hoursCheckedAt": "2026-10-09",
+      "hoursStatus": "published",
+      "hoursNote": "Horários publicados do bistrô da Rua Tomaz Gonzaga; não confirmação de funcionamento excepcional."
     },
     {
       "id": "boa-divinorestaurante",
@@ -6436,7 +6460,19 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "reserva_indeterminada"
       },
-      "city": "Nova Lima"
+      "city": "Nova Lima",
+      "mealService": "Jantar qua–sex; almoço sáb/dom",
+      "hours": "Qua/qui: a partir de 19h30 (fechamento não informado). Sex: 19h30–23h30. Sáb: 12h30–17h. Dom: 12h30–17h30. Seg/ter: fechado.",
+      "hoursSources": [
+        {
+          "url": "https://boalembranca.com.br/restaurantes/divinorestaurante",
+          "sourceName": "Boa Lembrança",
+          "evidence": "Quarta: 19:30. Quinta: 19:30. Sexta: 19:30 - 23:30. Sábado: 12:30 - 17:00. Domingo: 12:30 - 17:30."
+        }
+      ],
+      "hoursCheckedAt": "2026-10-09",
+      "hoursStatus": "published_partial",
+      "hoursNote": "A ficha publica apenas a abertura na quarta e quinta; não foi inventado horário de encerramento nesses dias."
     },
     {
       "id": "boa-domenico-pizzeria-e-trattoria",
@@ -6471,7 +6507,19 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "reserva_indeterminada"
       },
-      "city": "Belo Horizonte"
+      "city": "Belo Horizonte",
+      "mealService": "Jantar; almoço sáb/dom",
+      "hours": "Seg–sex: 18h30–0h. Sáb: 12h–15h e 18h30–0h. Dom: 12h–15h e 18h–23h.",
+      "hoursSources": [
+        {
+          "url": "https://boalembranca.com.br/restaurantes/domenico-pizzeria-e-trattoria",
+          "sourceName": "Boa Lembrança",
+          "evidence": "Sábado: 12:00 - 15:00 / 18:30 - 00:00. Domingo: 12:00 - 15:00 / 18:00 - 23:00."
+        }
+      ],
+      "hoursCheckedAt": "2026-10-09",
+      "hoursStatus": "published",
+      "hoursNote": "Horários publicados; feriados e disponibilidade do prato precisam de confirmação com o restaurante."
     },
     {
       "id": "boa-maria-das-trancas",
@@ -6506,7 +6554,24 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "reserva_indeterminada"
       },
-      "city": "Belo Horizonte"
+      "city": "Belo Horizonte",
+      "mealService": "Almoço e jantar",
+      "hours": "Seg–sáb: 11h–21h. Dom: 11h–18h (almoço).",
+      "hoursSources": [
+        {
+          "url": "https://www.mariadastrancas.com.br/",
+          "sourceName": "Maria das Tranças — unidade São Francisco",
+          "evidence": "Horário de funcionamento presencial: Segunda a sábado ---- 11 às 21h. Domingo ---- 11 às 18h."
+        },
+        {
+          "url": "https://boalembranca.com.br/restaurantes/maria-das-trancas",
+          "sourceName": "Boa Lembrança — unidade Rua Estoril",
+          "evidence": "Segunda a sábado: 11:00 - 21:00. Domingo: 11:00 - 18:00."
+        }
+      ],
+      "hoursCheckedAt": "2026-10-09",
+      "hoursStatus": "published",
+      "hoursNote": "Unidade Rua Estoril, 938, São Francisco; horários publicados, não confirmação de reserva ou funcionamento excepcional."
     },
     {
       "id": "boa-relicario-gastronomia",
@@ -6541,7 +6606,19 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "reserva_indeterminada"
       },
-      "city": "Diamantina"
+      "city": "Diamantina",
+      "mealService": "Jantar; almoço sáb/dom",
+      "hours": "Ter–qui: 18h–23h. Sex: 18h–0h. Sáb: 12h–15h e 18h30–0h. Dom: 12h–16h. Seg: confirmar (fonte divergente).",
+      "hoursSources": [
+        {
+          "url": "https://boalembranca.com.br/restaurantes/relicario-gastronomia",
+          "sourceName": "Boa Lembrança",
+          "evidence": "Sábado: 12:00 - 15:00 / 18:30 - 00:00. Domingo: 12:00 - 16:00. Descrição: jantar de terça a sábado."
+        }
+      ],
+      "hoursCheckedAt": "2026-10-09",
+      "hoursStatus": "conflicting",
+      "hoursNote": "A tabela informa segunda 18h–23h, mas a descrição anuncia jantar de terça a sábado. Segunda não é apresentada como confirmada."
     },
     {
       "id": "boa-taste-vin",
@@ -6576,7 +6653,24 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "reserva_indeterminada"
       },
-      "city": "Belo Horizonte"
+      "city": "Belo Horizonte",
+      "mealService": "Jantar; almoço aos sábados",
+      "hours": "Seg/ter: 19h–23h. Qua/sáb: 19h–23h30. Qui/sex: 19h–0h. Almoço sáb: 12h30–15h45. Dom: fechado.",
+      "hoursSources": [
+        {
+          "url": "https://www.tastevinbh.com.br/contato.html",
+          "sourceName": "Taste-Vin — contato e horários",
+          "evidence": "Almoço: sábado das 12h30 às 15h45. Sábado de 19h às 23h30 (encerramento da cozinha às 23h15)."
+        },
+        {
+          "url": "https://boalembranca.com.br/restaurantes/taste-vin",
+          "sourceName": "Boa Lembrança",
+          "evidence": "Domingo: Fechado."
+        }
+      ],
+      "hoursCheckedAt": "2026-10-09",
+      "hoursStatus": "published",
+      "hoursNote": "Horários publicados; feriados e datas especiais precisam de confirmação com o restaurante."
     },
     {
       "id": "boa-xapuri-2",
@@ -6611,7 +6705,24 @@ window.ROTEIRO_DATA = {
       "ticket": {
         "status": "reserva_indeterminada"
       },
-      "city": "Belo Horizonte"
+      "city": "Belo Horizonte",
+      "mealService": "Almoço e jantar",
+      "hours": "Ter–sáb: 11h–22h. Dom: 11h–17h (só almoço). Seg: fechado.",
+      "hoursSources": [
+        {
+          "url": "https://www.instagram.com/xapurirestaurante/",
+          "sourceName": "Xapuri — perfil oficial",
+          "evidence": "Ter à Sáb: 11h às 22h | Domingos: 11h às 17h"
+        },
+        {
+          "url": "https://boalembranca.com.br/restaurantes/xapuri-2",
+          "sourceName": "Boa Lembrança",
+          "evidence": "Segunda: Fechado. Terça a sábado: 11:00 - 22:00. Domingo: 11:00 - 17:00."
+        }
+      ],
+      "hoursCheckedAt": "2026-10-09",
+      "hoursStatus": "published",
+      "hoursNote": "Horários publicados pela associação; não confirmação de horários especiais ou disponibilidade do prato."
     },
     {
       "id": "almoco-cupim-grill-uberaba",
