@@ -300,6 +300,7 @@ function ensureTripSummary(){if(!document.getElementById('tripSummary')){const e
   toggle.setAttribute('aria-label',tours.length?`Passeios e acesso de ${s.name}: ${canPick?`${chosen} de ${tours.length} no roteiro`:`${tours.length} passeios`}`:`Informações e acesso de ${s.name}`);
   toggle.addEventListener('click',()=>{details.hidden=!details.hidden;toggle.setAttribute('aria-expanded',String(!details.hidden));if(details.hidden)openCards.delete(s.id);else openCards.add(s.id);syncAttractionVisibility()});
   head.insertBefore(toggle,head.querySelector('.reorder-actions'));
+  if(editable){const actions=document.createElement('div');actions.className='route-card-actions';[head.querySelector('.drag-handle'),head.querySelector('.stop-date'),toggle,head.querySelector('.reorder-actions'),navigation].filter(Boolean).forEach(element=>actions.appendChild(element));head.appendChild(actions)}
   const body=document.createElement('div');body.className='attraction-links';
   const between=routeLegs?.intra.get(s.id);if(between){const travel=document.createElement('p');travel.className='tour-hint';travel.innerHTML=`<span class="leg-time">🚗 Entre passeios: ${travelText(between.duration,between.distance)}</span>`;body.appendChild(travel)}
   if(s.kind==='restaurante'&&s.dish){const dish=document.createElement('div');dish.className='restaurant-dish';const photo=document.createElement('img');photo.src=s.dish.image;photo.alt=`Prato comemorativo ${s.dish.name}`;const detail=document.createElement('div');const title=document.createElement('strong');title.textContent=s.dish.name;const description=document.createElement('p');description.textContent=s.dish.description;const source=document.createElement('a');source.href=s.dish.url;source.target='_blank';source.rel='noopener';source.textContent=`Prato de ${s.dish.year} no Boa Lembrança ↗`;detail.append(title,description,source);dish.append(photo,detail);body.appendChild(dish)}
@@ -780,4 +781,22 @@ openStopFromUrl();
 </style>
 <script src="./assets/map-fuel.js?v=20261005-2"></script>
 <script src="./assets/map-panel-resize.js"></script>
+<style>
+/* Keep navigation beside the existing route-card controls. */
+#stops .editable-stop .stop-head .route-card-actions{grid-column:1/-1;grid-row:2;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:4px;min-width:0;width:100%}
+#stops .editable-stop .stop-head .route-card-actions .drag-handle{flex:none;width:20px;min-width:20px;height:30px}
+#stops .editable-stop .stop-head .route-card-actions .stop-date{position:static;flex:none;width:60px;min-width:0;max-width:60px;height:30px;margin:0;padding:2px 3px;font-size:11px}
+#stops .editable-stop .stop-head .route-card-actions .tours-toggle{position:static;flex:none;height:30px;margin:0;padding:0 4px;font-size:10px;white-space:nowrap}
+#stops .editable-stop .stop-head .route-card-actions .reorder-actions{position:static;flex:none;height:30px;margin:0;align-items:center}
+#stops .editable-stop .stop-head .route-card-actions .reorder-actions button{width:25px;min-width:25px;height:28px;min-height:28px}
+#stops .editable-stop .stop-head .route-card-actions .stop-navigation{display:flex;flex:none;margin:0}
+#stops .editable-stop .stop-head .route-card-actions .waze-navigation{height:30px;min-height:30px;padding:2px 4px;font-size:10px;white-space:nowrap}
+@media(max-width:360px){
+ #stops .editable-stop .stop-head .route-card-actions{gap:3px}
+ #stops .editable-stop .stop-head .route-card-actions .stop-date{width:54px;max-width:54px;padding:2px;font-size:10px}
+ #stops .editable-stop .stop-head .route-card-actions .tours-toggle{padding:0 3px;font-size:9px}
+ #stops .editable-stop .stop-head .route-card-actions .reorder-actions button{width:24px;min-width:24px}
+ #stops .editable-stop .stop-head .route-card-actions .waze-navigation{padding:2px 3px;font-size:9.5px}
+}
+</style>
 <script>MapPanelResize.attach(map);new ResizeObserver(()=>map.invalidateSize({pan:false})).observe(map.getContainer());window.fuelMapReady=MapFuel.attach(map);</script></body></html>
