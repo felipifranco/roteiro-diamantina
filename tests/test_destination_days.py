@@ -10,20 +10,34 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class DestinationDaysTests(unittest.TestCase):
-    def test_belo_horizonte_keeps_arrival_on_10_and_tours_on_11(self):
+    def test_belo_horizonte_covers_days_10_through_12(self):
         data = load_data()
         city = next(s for s in data['routeStops'] if s['id'] == 'belohorizonte')
         self.assertEqual(city['initialDate'], '2026-10-10')
-        self.assertEqual(city['availableDates'], ['2026-10-11'])
-        self.assertEqual(data['schedule']['stays'][-1], {
+        self.assertEqual(city['availableDates'], ['2026-10-11', '2026-10-12'])
+        bh_stay = next(s for s in data['schedule']['stays'] if s['stopId'] == 'belohorizonte')
+        self.assertEqual(bh_stay, {
             'stopId': 'belohorizonte', 'checkIn': '2026-10-10',
-            'checkOut': '2026-10-11',
+            'checkOut': '2026-10-12',
         })
+
+    def test_day_12_orders_belo_horizonte_divino_then_ouro_preto(self):
+        data = load_data()
+        plan = json.loads((ROOT / 'data/roteiro.json').read_text())
+        visits = [(visit['stopId'], visit['date']) for visit in plan['visits']]
+        self.assertIn(('boa-divinorestaurante', '2026-10-12'), visits)
+        self.assertIn(('ouropreto', '2026-10-12'), visits)
+        order = data['schedule']['initialStopOrder']
+        self.assertLess(order.index('belohorizonte'), order.index('boa-divinorestaurante'))
+        self.assertLess(order.index('boa-divinorestaurante'), order.index('ouropreto'))
+        ouro_preto = next(s for s in data['routeStops'] if s['id'] == 'ouropreto')
+        self.assertEqual(ouro_preto['initialDate'], '2026-10-12')
+        self.assertEqual(ouro_preto['availableDates'], ['2026-10-13'])
 
     def test_extra_visit_days_must_be_valid_and_inside_the_trip(self):
         catalog = json.loads((ROOT / 'data/pontos-de-parada.json').read_text())
         plan = json.loads((ROOT / 'data/roteiro.json').read_text())
-        for dates in ['2026-10-11', ['2026-10-32'], ['2026-10-14'], [None]]:
+        for dates in ['2026-10-11', ['2026-10-32'], ['2026-10-15'], [None]]:
             with self.subTest(dates=dates), self.assertRaises(ValueError):
                 invalid = copy.deepcopy(plan)
                 invalid['availableDates']['belohorizonte'] = dates
@@ -37,7 +51,7 @@ class DestinationDaysTests(unittest.TestCase):
         data = assemble_data(catalog, plan)
         places = {s['id']: s for s in data['routeStops']}
         self.assertEqual(places['diamantina']['availableDates'], ['2026-10-09'])
-        self.assertEqual(places['belohorizonte']['availableDates'], ['2026-10-11'])
+        self.assertEqual(places['belohorizonte']['availableDates'], ['2026-10-11', '2026-10-12'])
 
     def test_availability_rejects_unknown_places_and_legacy_visit_config(self):
         catalog = json.loads((ROOT / 'data/pontos-de-parada.json').read_text())
@@ -63,7 +77,7 @@ class DestinationDaysTests(unittest.TestCase):
     def test_tour_dates_must_be_valid_and_inside_the_trip(self):
         catalog = json.loads((ROOT / 'data/pontos-de-parada.json').read_text())
         plan = json.loads((ROOT / 'data/roteiro.json').read_text())
-        for date in ['2026-10-32', '2026-10-14', '2026-10-06', None]:
+        for date in ['2026-10-32', '2026-10-15', '2026-10-06', None]:
             with self.subTest(date=date), self.assertRaises(ValueError):
                 invalid = copy.deepcopy(plan)
                 invalid['selectedAttractions'][0]['date'] = date

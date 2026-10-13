@@ -46,11 +46,20 @@
     {
       "stopId": "belohorizonte",
       "date": "2026-10-10"
+    },
+    {
+      "stopId": "boa-divinorestaurante",
+      "date": "2026-10-12"
+    },
+    {
+      "stopId": "ouropreto",
+      "date": "2026-10-12"
     }
   ],
   "availableDates": {
     "diamantina": ["2026-10-09"],
-    "belohorizonte": ["2026-10-11"]
+    "belohorizonte": ["2026-10-11", "2026-10-12"],
+    "ouropreto": ["2026-10-13"]
   },
   "stays": [
     {
@@ -71,7 +80,7 @@
     {
       "stopId": "belohorizonte",
       "checkIn": "2026-10-10",
-      "checkOut": "2026-10-11"
+      "checkOut": "2026-10-12"
     },
     {
       "stopId": "ouropreto",

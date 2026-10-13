@@ -93,14 +93,14 @@ class TripPlanningTests(unittest.TestCase):
                 assemble_data(self.catalog, plan)
 
     @unittest.skipUnless(shutil.which('node'), 'Node.js is required')
-    def test_calendar_keeps_days_12_and_13_without_showing_the_month(self):
+    def test_calendar_includes_every_trip_day_without_showing_the_month(self):
         page = (ROOT / 'index.html').read_text()
         helper = re.search(r'const dayKeys=.*?;', page).group(0)
         script = "const TripCalendar=require('./assets/trip-calendar.js');" \
             + 'const schedule=' + json.dumps(self.plan['schedule']) + ';' \
             + helper + """
 const assert=require('node:assert/strict');
-assert.deepEqual(dayKeys,['2026-10-07','2026-10-08','2026-10-09','2026-10-10','2026-10-11','2026-10-12','2026-10-13']);
+assert.deepEqual(dayKeys,['2026-10-07','2026-10-08','2026-10-09','2026-10-10','2026-10-11','2026-10-12','2026-10-13','2026-10-14']);
 """
         subprocess.run(['node', '-e', script], cwd=ROOT, capture_output=True, text=True, check=True)
 
@@ -114,9 +114,9 @@ assert.deepEqual(dayKeys,['2026-10-07','2026-10-08','2026-10-09','2026-10-10','2
 
     def test_visits_and_stays_cannot_fall_outside_calendar(self):
         for field, items in (
-            ('visits', [{'stopId': 'araxa', 'date': '2026-10-14'}]),
-            ('stays', [{'stopId': 'araxa', 'checkIn': '2026-10-13', 'checkOut': '2026-10-14'}]),
-            ('dayNotes', [{'date': '2026-10-14', 'text': 'Outside trip'}]),
+            ('visits', [{'stopId': 'araxa', 'date': '2026-10-15'}]),
+            ('stays', [{'stopId': 'araxa', 'checkIn': '2026-10-14', 'checkOut': '2026-10-15'}]),
+            ('dayNotes', [{'date': '2026-10-15', 'text': 'Outside trip'}]),
         ):
             with self.subTest(field=field), self.assertRaises(ValueError):
                 plan = copy.deepcopy(self.plan)

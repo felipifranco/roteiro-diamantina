@@ -32,7 +32,9 @@ window.ROTEIRO_DATA = {
       "hotel-estilo-de-minas",
       "cordisburgo",
       "setelagoas",
-      "belohorizonte"
+      "belohorizonte",
+      "boa-divinorestaurante",
+      "ouropreto"
     ],
     "stays": [
       {
@@ -53,7 +55,7 @@ window.ROTEIRO_DATA = {
       {
         "stopId": "belohorizonte",
         "checkIn": "2026-10-10",
-        "checkOut": "2026-10-11"
+        "checkOut": "2026-10-12"
       },
       {
         "stopId": "ouropreto",
@@ -1066,7 +1068,12 @@ window.ROTEIRO_DATA = {
         "label": "Atenção a ladeiras",
         "description": "O centro histórico tem ladeiras e calçamento irregular. Escolha o percurso a pé e confirme os acessos internos de cada atração."
       },
-      "municipality": "Ouro Preto"
+      "municipality": "Ouro Preto",
+      "initialDate": "2026-10-12",
+      "selectedByDefault": true,
+      "availableDates": [
+        "2026-10-13"
+      ]
     },
     {
       "id": "mariana",
@@ -3383,7 +3390,8 @@ window.ROTEIRO_DATA = {
       "initialDate": "2026-10-10",
       "selectedByDefault": true,
       "availableDates": [
-        "2026-10-11"
+        "2026-10-11",
+        "2026-10-12"
       ]
     },
     {
@@ -6477,7 +6485,9 @@ window.ROTEIRO_DATA = {
       ],
       "hoursCheckedAt": "2026-10-09",
       "hoursStatus": "published_partial",
-      "hoursNote": "A ficha publica apenas a abertura na quarta e quinta; não foi inventado horário de encerramento nesses dias."
+      "hoursNote": "A ficha publica apenas a abertura na quarta e quinta; não foi inventado horário de encerramento nesses dias.",
+      "initialDate": "2026-10-12",
+      "selectedByDefault": true
     },
     {
       "id": "boa-domenico-pizzeria-e-trattoria",

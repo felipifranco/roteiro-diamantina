@@ -22,7 +22,8 @@ class BookingHotelStopTests(unittest.TestCase):
         stay = next(s for s in data['schedule']['stays'] if s['checkIn'] == '2026-10-08')
         self.assertEqual(stay, {'stopId': hotel['id'], 'checkIn': '2026-10-08',
                                 'checkOut': '2026-10-10', 'reservationStatus': 'planned'})
-        self.assertEqual(len(data['schedule']['stays']), 3)
+        self.assertEqual(len(data['schedule']['stays']), 4)
+        self.assertIn({'stopId': 'ouropreto', 'checkIn': '2026-10-12', 'checkOut': '2026-10-14'}, data['schedule']['stays'])
         self.assertTrue(next(s for s in data['routeStops'] if s['id'] == 'diamantina')['selectedByDefault'])
         self.assertTrue(next(s for s in data['routeStops'] if s['id'] == 'diamantina')['attractions'])
 
