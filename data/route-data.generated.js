@@ -23,7 +23,7 @@ window.ROTEIRO_DATA = {
     "destinationDate": "2026-10-08",
     "dateRangeEnd": "2026-10-31",
     "originId": "mirassol",
-    "endDate": "2026-10-13",
+    "endDate": "2026-10-14",
     "initialStopOrder": [
       "peiro",
       "araxa",
@@ -54,6 +54,11 @@ window.ROTEIRO_DATA = {
         "stopId": "belohorizonte",
         "checkIn": "2026-10-10",
         "checkOut": "2026-10-11"
+      },
+      {
+        "stopId": "ouropreto",
+        "checkIn": "2026-10-12",
+        "checkOut": "2026-10-14"
       }
     ],
     "dayNotes": []
