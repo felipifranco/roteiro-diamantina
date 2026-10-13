@@ -1545,11 +1545,11 @@ window.ROTEIRO_DATA = {
           "access": {
             "level": "unknown",
             "label": "A confirmar",
-            "description": "A ficha municipal confirma o nome, mas não foi possível confirmar um ponto de entrada em mapa aberto. O marcador usa apenas a referência da cidade; use a busca pelo nome/endereço no Waze e confirme acesso antes de ir."
+            "description": "O marcador foi ajustado ao prédio identificado no OpenStreetMap/Nominatim como Igreja de Bom Jesus de Matosinhos, na Rua Alvarenga; a ficha municipal informa templo fechado para restauração, e o acesso interno não está confirmado."
           },
-          "lat": -20.38567,
-          "lon": -43.50362,
-          "locationAccuracy": "city-center",
+          "lat": -20.3821961,
+          "lon": -43.5161583,
+          "locationAccuracy": "exact",
           "days": "15–20 min",
           "relevanceSource": "official_tourism_inventory",
           "ageClassification": {
@@ -1561,7 +1561,7 @@ window.ROTEIRO_DATA = {
           },
           "kind": "atracao",
           "type": "historia",
-          "mapQuery": "Igreja Bom Jesus de Matosinhos e São Miguel e Almas, Ouro Preto MG",
+          "mapQuery": "Igreja de Bom Jesus de Matosinhos, Rua Alvarenga, Cabeças, Ouro Preto MG",
           "catalogName": "Igreja Bom Jesus de Matosinhos e São Miguel e Almas",
           "visitLinks": [
             {
@@ -1660,11 +1660,11 @@ window.ROTEIRO_DATA = {
           "access": {
             "level": "unknown",
             "label": "A confirmar",
-            "description": "A ficha municipal confirma o nome, mas não foi possível confirmar um ponto de entrada em mapa aberto. O marcador usa apenas a referência da cidade; use a busca pelo nome/endereço no Waze e confirme acesso antes de ir."
+            "description": "O marcador foi ajustado ao prédio indicado pelo OpenStreetMap/Nominatim na Rua Padre Rolim; a entrada para visitação não foi confirmada. Confirme acesso antes de ir."
           },
-          "lat": -20.38567,
-          "lon": -43.50362,
-          "locationAccuracy": "city-center",
+          "lat": -20.3835416,
+          "lon": -43.5044509,
+          "locationAccuracy": "exact",
           "days": "20–30 min",
           "relevanceSource": "official_tourism_inventory",
           "ageClassification": {
@@ -1676,7 +1676,7 @@ window.ROTEIRO_DATA = {
           },
           "kind": "atracao",
           "type": "historia",
-          "mapQuery": "Igreja de Nossa Senhora das Mercês e Misericórdia, Ouro Preto MG",
+          "mapQuery": "Igreja Nossa Senhora das Mercês e Misericórdia, Rua Padre Rolim, Centro, Ouro Preto MG",
           "catalogName": "Igreja de Nossa Senhora das Mercês e Misericórdia",
           "visitLinks": [
             {
