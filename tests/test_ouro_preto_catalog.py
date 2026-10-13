@@ -113,13 +113,23 @@ class OuroPretoCatalogAuditTests(unittest.TestCase):
                 self.assertTrue(any("ouropreto.mg.gov.br" in link["url"] for link in item["visitLinks"]))
 
     def test_municipal_museum_inventory_is_complete_and_visit_sites_are_distinguished(self):
-        self.assertTrue(OFFICIAL_MUSEUMS <= self.by_name.keys(), OFFICIAL_MUSEUMS - self.by_name.keys())
+        self.assertTrue((OFFICIAL_MUSEUMS - {"Museu Aleijadinho"}) <= self.by_name.keys(), (OFFICIAL_MUSEUMS - {"Museu Aleijadinho"}) - self.by_name.keys())
         self.assertTrue(OFFICIAL_MAP_SITES <= self.by_name.keys(), OFFICIAL_MAP_SITES - self.by_name.keys())
-        self.assertEqual(self.by_name["Museu Aleijadinho"]["sameSiteAs"], "Igreja Nossa Senhora da Conceição")
+        self.assertNotIn("Museu Aleijadinho", self.by_name, "The museum belongs within the church circuit, not as a separate tour")
+        church = self.by_name["Igreja Nossa Senhora da Conceição"]
+        self.assertTrue(any(link["url"].endswith("/atrativo-item/590") for link in church["visitLinks"]))
+        self.assertIn("nos fundos", church["description"])
+        for phrase in ("São Francisco de Assis", "Mercês e Perdões"):
+            self.assertIn(phrase, church["description"])
+        for name in ("Igreja de São Francisco de Assis", "Igreja de Nossa Senhora das Mercês e Perdões"):
+            with self.subTest(church=name):
+                self.assertIn("Museu Aleijadinho", self.by_name[name]["description"])
+                self.assertTrue(any(link["url"].endswith("/atrativo-item/584") for link in self.by_name[name]["visitLinks"]))
         self.assertEqual(self.by_name["Museu de Arte Sacra de Ouro Preto"]["sameSiteAs"], "Basílica de Nossa Senhora do Pilar")
 
     def test_new_attractions_have_specific_descriptions_and_official_sources(self):
         audited = (CORE_CHURCHES | CITY_CHAPELS | OFFICIAL_DISTRICT_CHURCHES | OFFICIAL_CITY_PASSOS | OFFICIAL_RESTORATION_SITES | OFFICIAL_MINES | OFFICIAL_MUSEUMS | OFFICIAL_MAP_SITES) - {
+            "Museu Aleijadinho",
             "Basílica de Nossa Senhora do Pilar",
             "Igreja Nossa Senhora da Conceição",
             "Igreja Nossa Senhora do Carmo",

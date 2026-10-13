@@ -676,7 +676,7 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Igreja de São Francisco de Assis",
-          "description": "Uma das obras-primas do barroco/rococó mineiro, com projeto e esculturas associados a Aleijadinho e pintura de Mestre Ataíde. Para os circuitos de barroco, é uma parada essencial por reunir arquitetura, escultura e pintura desses mestres no mesmo edifício, tornando visível o que os guias explicam sobre a arte religiosa mineira.",
+          "description": "Uma das obras-primas do barroco/rococó mineiro, com projeto e esculturas associados a Aleijadinho e pintura de Mestre Ataíde. Para os circuitos de barroco, é uma parada essencial por reunir arquitetura, escultura e pintura desses mestres no mesmo edifício, tornando visível o que os guias explicam sobre a arte religiosa mineira. A ficha municipal do Museu Aleijadinho informa que peças do acervo estão expostas nesta igreja, além de sua sede física nos fundos da Matriz de Nossa Senhora da Conceição. Essa visita é parte do circuito do museu, não um passeio separado.",
           "agencyRationale": "Para os circuitos de barroco, é parada essencial: permite ver arquitetura, escultura e pintura associadas a Aleijadinho e Ataíde no mesmo edifício, tornando visível o que os guias explicam sobre o barroco mineiro.",
           "visitType": "Igreja / interna",
           "estimatedDuration": "30 min",
@@ -709,6 +709,14 @@ window.ROTEIRO_DATA = {
             {
               "label": "Prefeitura — situação das obras (02/09/2026)",
               "url": "https://www.ouropreto.mg.gov.br/noticia/5756"
+            },
+            {
+              "label": "Prefeitura — Museu Aleijadinho e circuito do acervo",
+              "url": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/590"
+            },
+            {
+              "label": "Prefeitura — peças do acervo nas igrejas",
+              "url": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/584"
             }
           ],
           "scheduleNote": "Em 02/09/2026, a Prefeitura informou contrato de restauração com início então previsto para agosto e prazo de seis meses. Confirme se a igreja está acessível no dia; não presuma visita interna."
@@ -1269,8 +1277,8 @@ window.ROTEIRO_DATA = {
           "lon": -43.500495,
           "locationAccuracy": "exact",
           "catalogName": "Igreja Nossa Senhora da Conceição",
-          "description": "Matriz do bairro Antônio Dias, ligada à formação do núcleo antigo e à história das irmandades locais. A própria ficha municipal do Museu Aleijadinho informa que o museu ocupa esta igreja e reúne o acervo da paróquia; por isso, as duas opções compartilham o mesmo local físico, mas têm conteúdos de visita diferentes.",
-          "agencyRationale": "É um dos templos centrais do núcleo histórico; sua ficha deve ser distinguida do Museu Aleijadinho, instalado no mesmo edifício.",
+          "description": "Matriz do bairro Antônio Dias. A ficha municipal do Museu Aleijadinho o localiza nos fundos desta igreja. A própria Prefeitura também informa que peças do acervo podem ser vistas na Igreja de São Francisco de Assis e na Igreja de Nossa Senhora das Mercês e Perdões; essas exibições pertencem ao circuito do museu e não são um passeio separado.",
+          "agencyRationale": "O Museu Aleijadinho fica fisicamente nos fundos da Matriz de Nossa Senhora da Conceição; parte de seu acervo também está exposta em São Francisco de Assis e Mercês e Perdões. O catálogo agrupa o museu ao circuito de igrejas para evitar uma parada duplicada.",
           "visitType": "Igreja / visita interna sujeita a confirmação",
           "estimatedDuration": "30–45 min",
           "publishedDuration": "—",
@@ -1293,48 +1301,19 @@ window.ROTEIRO_DATA = {
           "mapQuery": "Igreja Nossa Senhora da Conceição, Antônio Dias, Ouro Preto MG",
           "visitLinks": [
             {
-              "label": "Prefeitura — Museu instalado na Matriz",
-              "url": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/590"
-            }
-          ],
-          "scheduleNote": "A ficha municipal do Museu Aleijadinho confirma que ele fica dentro da Matriz; confirme horário e acesso ao interior da igreja e do museu diretamente com a instituição."
-        },
-        {
-          "name": "Museu Aleijadinho",
-          "lat": -20.386625,
-          "lon": -43.500495,
-          "locationAccuracy": "exact",
-          "catalogName": "Museu Aleijadinho",
-          "description": "Criado em 1968 para preservar o acervo da Paróquia de Nossa Senhora da Conceição, o museu reúne cerca de 250 peças sacras e documentos gráficos. A ficha municipal destaca, entre outras obras, leões de essa em madeira, uma imagem de São Francisco de Paula em pedra-sabão policromada e um crucificado. O museu funciona dentro da Matriz da Conceição.",
-          "agencyRationale": "Apresenta o acervo paroquial e obras associadas à tradição escultórica de Ouro Preto em seu contexto original.",
-          "visitType": "Museu / coleção sacra dentro da Matriz",
-          "estimatedDuration": "45–60 min",
-          "publishedDuration": "—",
-          "oneYearOld": "A confirmar",
-          "access": {
-            "level": "moderate",
-            "label": "Atenção ao entorno",
-            "description": "O percurso pelo centro histórico pode envolver ladeiras e calçamento irregular. Os acessos e a circulação interna desta atração não estão detalhados; confirme entrada, degraus e alternativas sem escadas."
-          },
-          "days": "45–60 min",
-          "relevanceSource": "agency",
-          "ageClassification": {
-            "status": "indeterminada"
-          },
-          "ticket": {
-            "status": "indeterminado"
-          },
-          "kind": "atracao",
-          "type": "historia",
-          "mapQuery": "Museu Aleijadinho, Igreja Nossa Senhora da Conceição, Ouro Preto MG",
-          "sameSiteAs": "Igreja Nossa Senhora da Conceição",
-          "visitLinks": [
+              "label": "Prefeitura — Santuário de Nossa Senhora da Conceição",
+              "url": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/581"
+            },
             {
-              "label": "Prefeitura — ficha do Museu Aleijadinho",
+              "label": "Prefeitura — Museu Aleijadinho, instalado nesta igreja",
               "url": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/590"
+            },
+            {
+              "label": "Prefeitura — circuito do acervo nas igrejas",
+              "url": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/584"
             }
           ],
-          "scheduleNote": "A ficha municipal localiza o museu dentro da Matriz da Conceição; confirme horário e acesso ao interior diretamente com a instituição antes de ir."
+          "scheduleNote": "A ficha municipal de Mercês e Perdões informa que o Santuário de Nossa Senhora da Conceição está em restauração e sem visitação, enquanto a ficha da própria Matriz lista horários de visita; as páginas divergem. Confirme a abertura diretamente antes de planejar a entrada. O Museu Aleijadinho permanece integrado ao circuito das igrejas, sem passeio independente."
         },
         {
           "name": "Museu do Oratório",
@@ -1614,7 +1593,7 @@ window.ROTEIRO_DATA = {
         },
         {
           "name": "Igreja de Nossa Senhora das Mercês e Perdões",
-          "description": "Conhecida como “Mercês de baixo”, sua capela primitiva foi edificada em 1742. A irmandade era dedicada a negros e mulatos nascidos no Brasil; o templo foi ampliado diante do aumento de fiéis. A ficha municipal publica visitação de terça a domingo, das 8h30 às 12h e das 13h30 às 16h45.",
+          "description": "Conhecida como “Mercês de baixo”, sua capela primitiva foi edificada em 1742. A irmandade era dedicada a negros e mulatos nascidos no Brasil; o templo foi ampliado diante do aumento de fiéis. A ficha municipal publica visitação de terça a domingo, das 8h30 às 12h e das 13h30 às 16h45. A ficha municipal do Museu Aleijadinho informa que peças do acervo estão expostas nesta igreja, além de sua sede física nos fundos da Matriz de Nossa Senhora da Conceição. Essa visita é parte do circuito do museu, não um passeio separado.",
           "agencyRationale": "Explica como irmandades negras e pardas organizavam devoção, assistência e vida comunitária; sua visita pode ser combinada com a Igreja de São Francisco de Assis no mesmo núcleo de Antônio Dias.",
           "visitType": "Igreja / visita interna",
           "estimatedDuration": "30–45 min",
@@ -1645,6 +1624,10 @@ window.ROTEIRO_DATA = {
             {
               "label": "Prefeitura de Ouro Preto — ficha turística",
               "url": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/584"
+            },
+            {
+              "label": "Prefeitura — Museu Aleijadinho e circuito do acervo",
+              "url": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/590"
             }
           ],
           "scheduleNote": "Horário publicado pela Prefeitura: terça a domingo, 8h30–12h e 13h30–16h45; confirme ingresso, intervalo e funcionamento antes de ir."
@@ -8355,6 +8338,28 @@ window.ROTEIRO_DATA = {
         "status": "reserva_indeterminada"
       },
       "mapQuery": "Restaurante Nossa Casa Rua Arlinda Cruvinel Borges, 542 — Jardim Induberaba, Uberaba/MG"
+    }
+  ],
+  "visitedAttractions": [
+    {
+      "stopId": "ouropreto",
+      "name": "Igreja de São Francisco de Assis",
+      "date": "2026-10-13"
+    },
+    {
+      "stopId": "ouropreto",
+      "name": "Igreja de Nossa Senhora das Mercês e Perdões",
+      "date": "2026-10-13"
+    },
+    {
+      "stopId": "ouropreto",
+      "name": "Igreja de Santa Efigênia",
+      "date": "2026-10-13"
+    },
+    {
+      "stopId": "ouropreto",
+      "name": "Igreja Nossa Senhora da Conceição",
+      "date": "2026-10-13"
     }
   ],
   "accessAlerts": [

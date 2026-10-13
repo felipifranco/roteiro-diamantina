@@ -140,6 +140,22 @@ def assemble_data(catalog, plan):
     for item in selected_attractions:
         if item.get("required") and not by_id[item["stopId"]].get("selectedByDefault"):
             raise ValueError("required attraction must have a selected parent")
+    visited_attractions = plan.get("visitedAttractions", [])
+    if not isinstance(visited_attractions, list):
+        raise ValueError("visitedAttractions must be a list")
+    visited_keys = set()
+    for item in visited_attractions:
+        if not isinstance(item, dict) or not isinstance(item.get("stopId"), str) or not isinstance(item.get("name"), str):
+            raise ValueError("visitedAttractions must contain stopId and name")
+        key = (item["stopId"], item["name"])
+        city = by_id.get(item["stopId"])
+        attraction = next((a for a in city.get("attractions", []) if isinstance(a, dict) and a.get("name") == item["name"]), None) if city else None
+        if attraction is None or key in visited_keys:
+            raise ValueError("visitedAttractions must reference unique catalog attractions")
+        visited_keys.add(key)
+        planning_date(item.get("date"), "visitedAttractions.date")
+        if not schedule["startDate"] <= item["date"] <= schedule["endDate"]:
+            raise ValueError("visitedAttractions.date must be within the trip")
     previous_end = None
     for stay in sorted(stays, key=lambda item: str(item.get("checkIn", "")) if isinstance(item, dict) else ""):
         if not isinstance(stay, dict) or not isinstance(stay.get("stopId"), str) or stay["stopId"] not in by_id:
@@ -158,6 +174,7 @@ def assemble_data(catalog, plan):
     schedule["stays"] = copy.deepcopy(stays)
     schedule["dayNotes"] = copy.deepcopy(plan.get("dayNotes", []))
     data["schedule"] = schedule
+    data["visitedAttractions"] = copy.deepcopy(visited_attractions)
     validate(data)
     return data
 
@@ -458,6 +475,7 @@ def _js_json(value):
 def render_app_data(data):
     route_stops = copy.deepcopy(data["routeStops"])
     payload = {"routing": copy.deepcopy(data["routing"]), "policies": copy.deepcopy(data["policies"]), "schedule": copy.deepcopy(data["schedule"]), "routeStops": route_stops,
+               "visitedAttractions": copy.deepcopy(data.get("visitedAttractions", [])),
                "accessAlerts": copy.deepcopy(data.get("accessAlerts", [])),
                "sources": copy.deepcopy(data.get("sources", []))}
     return (
