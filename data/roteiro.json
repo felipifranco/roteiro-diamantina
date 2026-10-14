@@ -7,7 +7,7 @@
     "destinationDate": "2026-10-08",
     "dateRangeEnd": "2026-10-31",
     "originId": "mirassol",
-    "endDate": "2026-10-14"
+    "endDate": "2026-10-16"
   },
   "policies": {
     "maxDrivingHoursPerDay": 8,
@@ -54,12 +54,17 @@
     {
       "stopId": "ouropreto",
       "date": "2026-10-12"
+    },
+    {
+      "stopId": "tiradentes",
+      "date": "2026-10-14"
     }
   ],
   "availableDates": {
     "diamantina": ["2026-10-09"],
     "belohorizonte": ["2026-10-11", "2026-10-12"],
-    "ouropreto": ["2026-10-13"]
+    "ouropreto": ["2026-10-13"],
+    "tiradentes": ["2026-10-15", "2026-10-16"]
   },
   "stays": [
     {
@@ -86,6 +91,11 @@
       "stopId": "ouropreto",
       "checkIn": "2026-10-12",
       "checkOut": "2026-10-14"
+    },
+    {
+      "stopId": "tiradentes",
+      "checkIn": "2026-10-14",
+      "checkOut": "2026-10-16"
     }
   ],
   "dayNotes": [],

@@ -107,8 +107,12 @@ console.log(JSON.stringify([tourCardMeta(tour,city),tourCardMeta({name:tour.name
         self.assertEqual(schedule["startDate"], "2026-10-07")
         self.assertEqual(schedule["destinationId"], "diamantina")
         self.assertEqual(schedule["destinationDate"], "2026-10-08")
-        self.assertEqual(schedule["initialStopOrder"], ["peiro", "araxa", "camposaltos", "camposaltos-palace-hotel", "hotel-estilo-de-minas", "cordisburgo", "setelagoas", "belohorizonte", "boa-divinorestaurante", "ouropreto"])
+        self.assertEqual(schedule["initialStopOrder"], ["peiro", "araxa", "camposaltos", "camposaltos-palace-hotel", "hotel-estilo-de-minas", "cordisburgo", "setelagoas", "belohorizonte", "boa-divinorestaurante", "ouropreto", "tiradentes"])
+        self.assertEqual(schedule["endDate"], "2026-10-16")
         stops = {stop["id"]: stop for stop in data["routeStops"]}
+        self.assertEqual(stops["tiradentes"]["initialDate"], "2026-10-14")
+        self.assertEqual(stops["tiradentes"]["availableDates"], ["2026-10-15", "2026-10-16"])
+        self.assertTrue(stops["tiradentes"]["selectedByDefault"])
         self.assertEqual(stops["peiro"]["initialDate"], "2026-10-07")
         self.assertEqual(stops["araxa"]["initialDate"], "2026-10-07")
         self.assertEqual(stops["cordisburgo"]["initialDate"], "2026-10-10")

@@ -23,7 +23,7 @@ window.ROTEIRO_DATA = {
     "destinationDate": "2026-10-08",
     "dateRangeEnd": "2026-10-31",
     "originId": "mirassol",
-    "endDate": "2026-10-14",
+    "endDate": "2026-10-16",
     "initialStopOrder": [
       "peiro",
       "araxa",
@@ -34,7 +34,8 @@ window.ROTEIRO_DATA = {
       "setelagoas",
       "belohorizonte",
       "boa-divinorestaurante",
-      "ouropreto"
+      "ouropreto",
+      "tiradentes"
     ],
     "stays": [
       {
@@ -61,6 +62,11 @@ window.ROTEIRO_DATA = {
         "stopId": "ouropreto",
         "checkIn": "2026-10-12",
         "checkOut": "2026-10-14"
+      },
+      {
+        "stopId": "tiradentes",
+        "checkIn": "2026-10-14",
+        "checkOut": "2026-10-16"
       }
     ],
     "dayNotes": []
@@ -5781,6 +5787,12 @@ window.ROTEIRO_DATA = {
       "stayDays": [
         1,
         2
+      ],
+      "initialDate": "2026-10-14",
+      "selectedByDefault": true,
+      "availableDates": [
+        "2026-10-15",
+        "2026-10-16"
       ]
     },
     {

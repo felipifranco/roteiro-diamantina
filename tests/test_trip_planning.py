@@ -22,6 +22,21 @@ class TripPlanningTests(unittest.TestCase):
         self.catalog = json.loads((ROOT / 'data/pontos-de-parada.json').read_text())
         self.plan = json.loads((ROOT / 'data/roteiro.json').read_text())
 
+    def test_tiradentes_is_scheduled_with_a_two_night_stay_from_october_14_to_16(self):
+        data = assemble_data(self.catalog, self.plan)
+        stop = next(stop for stop in data['routeStops'] if stop['id'] == 'tiradentes')
+        stay = next((stay for stay in self.plan['stays'] if stay['stopId'] == 'tiradentes'), None)
+        visit = next((visit for visit in self.plan['visits'] if visit['stopId'] == 'tiradentes'), None)
+        self.assertEqual(data['schedule']['endDate'], '2026-10-16')
+        self.assertTrue(stop['selectedByDefault'])
+        self.assertEqual(stop['initialDate'], '2026-10-14')
+        self.assertEqual(stop['availableDates'], ['2026-10-15', '2026-10-16'])
+        self.assertEqual(visit, {'stopId': 'tiradentes', 'date': '2026-10-14'})
+        self.assertEqual(stay, {'stopId': 'tiradentes', 'checkIn': '2026-10-14', 'checkOut': '2026-10-16'})
+        stays = {item['stopId']: item for item in self.plan['stays']}
+        self.assertEqual(stays['ouropreto']['checkOut'], '2026-10-14')
+        self.assertLess(data['schedule']['initialStopOrder'].index('ouropreto'), data['schedule']['initialStopOrder'].index('tiradentes'))
+
     def test_changing_trip_plan_does_not_rewrite_place_catalog(self):
         with tempfile.TemporaryDirectory(dir=ROOT) as directory:
             root = Path(directory)
@@ -38,7 +53,8 @@ class TripPlanningTests(unittest.TestCase):
                 original_app = app_path.read_bytes()
                 sentinel = 1_700_000_000_000_000_000
                 os.utime(markdown_path, ns=(sentinel, sentinel))
-                self.plan['stays'][-1]['checkOut'] = '2026-10-13'
+                ouropreto_stay = next(stay for stay in self.plan['stays'] if stay['stopId'] == 'ouropreto')
+                ouropreto_stay['checkOut'] = '2026-10-13'
                 plan_path.write_text(json.dumps(self.plan))
                 self.assertEqual(generator.main([]), 0)
                 self.assertNotEqual(app_path.read_bytes(), original_app)
@@ -55,10 +71,11 @@ class TripPlanningTests(unittest.TestCase):
             for attraction in stop.get('attractions', []):
                 self.assertNotIn('selectedByDefault', attraction)
         original = copy.deepcopy(self.catalog)
-        self.plan['stays'][-1]['checkOut'] = '2026-10-13'
+        ouropreto_stay = next(stay for stay in self.plan['stays'] if stay['stopId'] == 'ouropreto')
+        ouropreto_stay['checkOut'] = '2026-10-13'
         data = assemble_data(self.catalog, self.plan)
         self.assertEqual(self.catalog, original)
-        self.assertEqual(data['schedule']['stays'][-1]['checkOut'], '2026-10-13')
+        self.assertEqual(next(stay for stay in data['schedule']['stays'] if stay['stopId'] == 'ouropreto')['checkOut'], '2026-10-13')
         self.assertNotIn('overnight', data['routeStops'][0])
 
     def test_lodging_can_be_repeated_and_does_not_require_a_visit(self):
@@ -100,7 +117,8 @@ class TripPlanningTests(unittest.TestCase):
             + 'const schedule=' + json.dumps(self.plan['schedule']) + ';' \
             + helper + """
 const assert=require('node:assert/strict');
-assert.deepEqual(dayKeys,['2026-10-07','2026-10-08','2026-10-09','2026-10-10','2026-10-11','2026-10-12','2026-10-13','2026-10-14']);
+assert.deepEqual(dayKeys,TripCalendar.calendarDays(schedule.startDate,schedule.endDate));
+assert.equal(dayKeys.at(-1),'2026-10-16');
 """
         subprocess.run(['node', '-e', script], cwd=ROOT, capture_output=True, text=True, check=True)
 
@@ -114,9 +132,9 @@ assert.deepEqual(dayKeys,['2026-10-07','2026-10-08','2026-10-09','2026-10-10','2
 
     def test_visits_and_stays_cannot_fall_outside_calendar(self):
         for field, items in (
-            ('visits', [{'stopId': 'araxa', 'date': '2026-10-15'}]),
-            ('stays', [{'stopId': 'araxa', 'checkIn': '2026-10-14', 'checkOut': '2026-10-15'}]),
-            ('dayNotes', [{'date': '2026-10-15', 'text': 'Outside trip'}]),
+            ('visits', [{'stopId': 'araxa', 'date': '2026-10-17'}]),
+            ('stays', [{'stopId': 'araxa', 'checkIn': '2026-10-16', 'checkOut': '2026-10-17'}]),
+            ('dayNotes', [{'date': '2026-10-17', 'text': 'Outside trip'}]),
         ):
             with self.subTest(field=field), self.assertRaises(ValueError):
                 plan = copy.deepcopy(self.plan)

@@ -37,7 +37,7 @@ class DestinationDaysTests(unittest.TestCase):
     def test_extra_visit_days_must_be_valid_and_inside_the_trip(self):
         catalog = json.loads((ROOT / 'data/pontos-de-parada.json').read_text())
         plan = json.loads((ROOT / 'data/roteiro.json').read_text())
-        for dates in ['2026-10-11', ['2026-10-32'], ['2026-10-15'], [None]]:
+        for dates in ['2026-10-11', ['2026-10-32'], ['2026-10-17'], [None]]:
             with self.subTest(dates=dates), self.assertRaises(ValueError):
                 invalid = copy.deepcopy(plan)
                 invalid['availableDates']['belohorizonte'] = dates
@@ -77,7 +77,7 @@ class DestinationDaysTests(unittest.TestCase):
     def test_tour_dates_must_be_valid_and_inside_the_trip(self):
         catalog = json.loads((ROOT / 'data/pontos-de-parada.json').read_text())
         plan = json.loads((ROOT / 'data/roteiro.json').read_text())
-        for date in ['2026-10-32', '2026-10-15', '2026-10-06', None]:
+        for date in ['2026-10-32', '2026-10-17', '2026-10-06', None]:
             with self.subTest(date=date), self.assertRaises(ValueError):
                 invalid = copy.deepcopy(plan)
                 invalid['selectedAttractions'][0]['date'] = date
