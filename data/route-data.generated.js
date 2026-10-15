@@ -5467,11 +5467,26 @@ window.ROTEIRO_DATA = {
       "days": "1–2 dias",
       "sights": [
         "Centro Histórico",
+        "Passeio de Maria Fumaça (Tiradentes–São João del-Rei)",
         "Matriz de Santo Antônio",
         "Chafariz de São José",
         "Museu Casa Padre Toledo",
         "Largo das Forras",
-        "Museu de Sant’Ana"
+        "Museu de Sant'Ana",
+        "Museu da Liturgia",
+        "Igreja Nossa Senhora do Rosário dos Pretos",
+        "Capela dos Passos",
+        "Igreja de São Francisco de Paula",
+        "Santuário da Santíssima Trindade",
+        "Igreja Nossa Senhora das Mercês",
+        "Museu da Moto",
+        "Capela Bom Jesus da Pobreza",
+        "Capela de São João Evangelista",
+        "Serra de São José",
+        "Travessia Serra de São José",
+        "Estrada Parque Passos dos Fundadores",
+        "Rua Direita",
+        "Gastronomia"
       ],
       "kid": "Ruas de pedra e ladeiras podem dificultar carrinhos; priorize trechos curtos e pausas.",
       "url": "https://www.google.com/maps/search/?api=1&query=Tiradentes+MG",
@@ -5748,6 +5763,390 @@ window.ROTEIRO_DATA = {
           },
           "kind": "atracao",
           "type": "historia"
+        },
+        {
+          "name": "Passeio de Maria Fumaça (Tiradentes–São João del-Rei)",
+          "description": "Trem a vapor no trecho turístico da antiga Estrada de Ferro Oeste de Minas entre Tiradentes e São João del-Rei. O percurso tem cerca de 12,8 km; cada trecho dura aproximadamente 40 minutos e pode ser feito só de ida ou ida e volta. Em Tiradentes, o embarque é na estação ferroviária da Praça da Estação.",
+          "agencyRationale": "Experiência ferroviária histórica identificada no Portal Minas Gerais e na operadora atual; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Passeio de trem a vapor / ida ou ida e volta",
+          "estimatedDuration": "Cerca de 40 min por trecho",
+          "publishedDuration": "Cerca de 40 min por trecho",
+          "oneYearOld": "Regra etária e condições para criança pequena a confirmar com a operadora.",
+          "access": {
+            "level": "unknown",
+            "label": "Embarque a confirmar",
+            "description": "A estação e os carros são históricos. Acessibilidade da plataforma, degraus do embarque e espaço para carrinho não foram confirmados; consulte a ABPF antes de comprar."
+          },
+          "lat": -21.1147886,
+          "lon": -44.1676973,
+          "locationAccuracy": "exact",
+          "locationSourceUrl": "https://maps.app.goo.gl/4eryAbwEjUkceBiZ7",
+          "mapQuery": "Estação Ferroviária de Tiradentes, Praça da Estação, Tiradentes MG",
+          "sourceUrl": "https://efom.org.br/informacoes/",
+          "researchedAt": "2026-10-15",
+          "days": "Cerca de 40 min por trecho",
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "online",
+            "url": "https://efom.org.br/compra-de-bilhetes/",
+            "note": "Consulte as datas e condições vigentes no site da operadora; horários variam conforme dia da semana e feriados."
+          },
+          "visitLinks": [
+            {
+              "label": "ABPF — horários e informações do passeio",
+              "url": "https://efom.org.br/informacoes/"
+            },
+            {
+              "label": "ABPF — compra de bilhetes",
+              "url": "https://efom.org.br/compra-de-bilhetes/"
+            },
+            {
+              "label": "ABPF — localização da estação de Tiradentes",
+              "url": "https://efom.org.br/localizacao/"
+            }
+          ],
+          "scheduleNote": "Pesquisa em 15/10/2026: a programação regular publicada informa saídas de Tiradentes às sextas e sábados às 11h30 e 15h30, e aos domingos às 11h30; feriados têm programação própria. Para a estadia de 14–16/10, a sexta-feira 16/10 aparece na grade regular; a quinta-feira 15/10 não. Confirme assentos e horários atuais com a ABPF. A operação foi transferida à ABPF em outubro de 2026.",
+          "kind": "atracao",
+          "type": "historia",
+          "initialDate": "2026-10-16",
+          "selectedByDefault": true,
+          "required": false
+        },
+        {
+          "name": "Capela dos Passos",
+          "description": "Conjunto de seis pequenas capelas dos Passos distribuídas pelo centro histórico e ligadas à Via Sacra. É um circuito de vários pontos, não uma única parada; a posição e a abertura de cada capela devem ser confirmadas antes de planejar o percurso.",
+          "agencyRationale": "Atrativo listado no Portal Minas Gerais; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Circuito religioso a pé",
+          "estimatedDuration": "Duração a confirmar",
+          "publishedDuration": "—",
+          "oneYearOld": "Regra etária não publicada; confirme as condições do percurso.",
+          "access": {
+            "level": "unknown",
+            "label": "Circuito a confirmar",
+            "description": "São vários pontos no centro histórico; trajeto, calçamento, degraus e abertura das capelas não foram verificados individualmente."
+          },
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "locationNote": "Referência no centro de Tiradentes; o circuito não tem um ponto único ou traçado verificado.",
+          "mapQuery": "Capela dos Passos, Tiradentes MG",
+          "sourceUrl": "https://www.minasgerais.com.br/pt/destinos/tiradentes",
+          "researchedAt": "2026-10-15",
+          "days": "Duração a confirmar",
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "visitLinks": [
+            {
+              "label": "Portal Minas Gerais — atrativos de Tiradentes",
+              "url": "https://www.minasgerais.com.br/pt/destinos/tiradentes"
+            }
+          ],
+          "kind": "atracao",
+          "type": "historia"
+        },
+        {
+          "name": "Igreja de São Francisco de Paula",
+          "description": "Igreja histórica situada em posição elevada no conjunto urbano de Tiradentes, destacada no inventário turístico estadual. Confirme a abertura interna e o percurso de subida antes da visita.",
+          "agencyRationale": "Atrativo listado no Portal Minas Gerais; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Igreja / visita interna a confirmar",
+          "estimatedDuration": "Duração a confirmar",
+          "publishedDuration": "—",
+          "oneYearOld": "Regra etária não publicada; confirme com o responsável.",
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Confirme horário, acesso interno, degraus e percurso de subida; a coordenada do cadastro é apenas uma referência municipal."
+          },
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "locationNote": "Ponto individual ainda não confirmado; coordenada de referência no centro de Tiradentes.",
+          "mapQuery": "Igreja de São Francisco de Paula, Tiradentes MG",
+          "sourceUrl": "https://www.minasgerais.com.br/pt/destinos/tiradentes",
+          "researchedAt": "2026-10-15",
+          "days": "Duração a confirmar",
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "visitLinks": [
+            {
+              "label": "Portal Minas Gerais — atrativos de Tiradentes",
+              "url": "https://www.minasgerais.com.br/pt/destinos/tiradentes"
+            }
+          ],
+          "kind": "atracao",
+          "type": "historia"
+        },
+        {
+          "name": "Santuário da Santíssima Trindade",
+          "description": "Santuário de devoção à Santíssima Trindade. O inventário turístico estadual registra uma capela original do fim do século XVIII; confirme calendário religioso, horário e visitação interna.",
+          "agencyRationale": "Atrativo listado no Portal Minas Gerais; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Santuário / visita religiosa",
+          "estimatedDuration": "Duração a confirmar",
+          "publishedDuration": "—",
+          "oneYearOld": "Regra etária não publicada; confirme com o responsável.",
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Horário, acesso interno, degraus e condições para visitantes não foram verificados; a coordenada do cadastro é apenas uma referência municipal."
+          },
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "locationNote": "Ponto individual ainda não confirmado; coordenada de referência no centro de Tiradentes.",
+          "mapQuery": "Santuário da Santíssima Trindade, Tiradentes MG",
+          "sourceUrl": "https://www.minasgerais.com.br/pt/destinos/tiradentes",
+          "researchedAt": "2026-10-15",
+          "days": "Duração a confirmar",
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "visitLinks": [
+            {
+              "label": "Portal Minas Gerais — atrativos de Tiradentes",
+              "url": "https://www.minasgerais.com.br/pt/destinos/tiradentes"
+            }
+          ],
+          "kind": "atracao",
+          "type": "historia"
+        },
+        {
+          "name": "Igreja Nossa Senhora das Mercês",
+          "description": "Igreja histórica ligada à devoção de Nossa Senhora das Mercês, com elementos barrocos e rococós apontados no inventário turístico estadual. Confirme abertura, horário e acesso interno.",
+          "agencyRationale": "Atrativo listado no Portal Minas Gerais; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Igreja / visita interna a confirmar",
+          "estimatedDuration": "Duração a confirmar",
+          "publishedDuration": "—",
+          "oneYearOld": "Regra etária não publicada; confirme com o responsável.",
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Confirme horário, degraus, acesso interno e condições de visita; a coordenada do cadastro é apenas uma referência municipal."
+          },
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "locationNote": "Ponto individual ainda não confirmado; coordenada de referência no centro de Tiradentes.",
+          "mapQuery": "Igreja Nossa Senhora das Mercês, Tiradentes MG",
+          "sourceUrl": "https://www.minasgerais.com.br/pt/destinos/tiradentes",
+          "researchedAt": "2026-10-15",
+          "days": "Duração a confirmar",
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "visitLinks": [
+            {
+              "label": "Portal Minas Gerais — atrativos de Tiradentes",
+              "url": "https://www.minasgerais.com.br/pt/destinos/tiradentes"
+            }
+          ],
+          "kind": "atracao",
+          "type": "historia"
+        },
+        {
+          "name": "Museu da Moto",
+          "description": "Museu dedicado à história das motocicletas, listado entre os atrativos culturais de Tiradentes. Funcionamento, acervo disponível, ingresso e necessidade de agendamento precisam ser confirmados diretamente com o espaço.",
+          "agencyRationale": "Atrativo listado no Portal Minas Gerais; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Museu / visita a confirmar",
+          "estimatedDuration": "Duração a confirmar",
+          "publishedDuration": "—",
+          "oneYearOld": "Regra etária não publicada; confirme com o responsável.",
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Endereço exato, funcionamento, degraus e circulação interna não foram verificados; a coordenada do cadastro é apenas uma referência municipal."
+          },
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "locationNote": "Endereço e ponto individual não confirmados; coordenada de referência no centro de Tiradentes.",
+          "mapQuery": "Museu da Moto, Tiradentes MG",
+          "sourceUrl": "https://www.minasgerais.com.br/pt/destinos/tiradentes",
+          "researchedAt": "2026-10-15",
+          "days": "Duração a confirmar",
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "visitLinks": [
+            {
+              "label": "Portal Minas Gerais — atrativos de Tiradentes",
+              "url": "https://www.minasgerais.com.br/pt/destinos/tiradentes"
+            }
+          ],
+          "kind": "atracao",
+          "type": "historia"
+        },
+        {
+          "name": "Capela Bom Jesus da Pobreza",
+          "description": "Capela histórica de fachada simples, incluída no conjunto religioso do centro de Tiradentes. Confirme se está aberta à visitação e se a visita interna é permitida no dia.",
+          "agencyRationale": "Atrativo listado no Portal Minas Gerais; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Capela / visita interna a confirmar",
+          "estimatedDuration": "Duração a confirmar",
+          "publishedDuration": "—",
+          "oneYearOld": "Regra etária não publicada; confirme com o responsável.",
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Confirme abertura, degraus, circulação interna e regras de visita; a coordenada do cadastro é apenas uma referência municipal."
+          },
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "locationNote": "Ponto individual ainda não confirmado; coordenada de referência no centro de Tiradentes.",
+          "mapQuery": "Capela Bom Jesus da Pobreza, Tiradentes MG",
+          "sourceUrl": "https://www.minasgerais.com.br/pt/destinos/tiradentes",
+          "researchedAt": "2026-10-15",
+          "days": "Duração a confirmar",
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "visitLinks": [
+            {
+              "label": "Portal Minas Gerais — atrativos de Tiradentes",
+              "url": "https://www.minasgerais.com.br/pt/destinos/tiradentes"
+            }
+          ],
+          "kind": "atracao",
+          "type": "historia"
+        },
+        {
+          "name": "Capela de São João Evangelista",
+          "description": "Capela histórica dedicada a São João Evangelista, incluída entre os atrativos religiosos de Tiradentes. Confirme abertura, horário e acesso interno antes de se deslocar.",
+          "agencyRationale": "Atrativo listado no Portal Minas Gerais; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Capela / visita interna a confirmar",
+          "estimatedDuration": "Duração a confirmar",
+          "publishedDuration": "—",
+          "oneYearOld": "Regra etária não publicada; confirme com o responsável.",
+          "access": {
+            "level": "unknown",
+            "label": "A confirmar",
+            "description": "Confirme horário, degraus, acesso interno e condições de visita; a coordenada do cadastro é apenas uma referência municipal."
+          },
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "locationNote": "Ponto individual ainda não confirmado; coordenada de referência no centro de Tiradentes.",
+          "mapQuery": "Capela de São João Evangelista, Tiradentes MG",
+          "sourceUrl": "https://www.minasgerais.com.br/pt/destinos/tiradentes",
+          "researchedAt": "2026-10-15",
+          "days": "Duração a confirmar",
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "visitLinks": [
+            {
+              "label": "Portal Minas Gerais — atrativos de Tiradentes",
+              "url": "https://www.minasgerais.com.br/pt/destinos/tiradentes"
+            }
+          ],
+          "kind": "atracao",
+          "type": "historia"
+        },
+        {
+          "name": "Travessia Serra de São José",
+          "description": "Travessia guiada que cruza a Serra de São José e pode incluir trechos como a Trilha do Carteiro e a Calçada dos Escravos, conforme o percurso contratado. Não há um único traçado ou tempo universal; confirme guia, ponto de saída, extensão, desnível e condições do dia.",
+          "agencyRationale": "Atividade de natureza listada no Portal Minas Gerais; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Travessia / caminhada guiada",
+          "estimatedDuration": "Duração a confirmar",
+          "publishedDuration": "—",
+          "oneYearOld": "Adequação para criança pequena deve ser confirmada com o guia responsável.",
+          "access": {
+            "level": "unknown",
+            "label": "Percurso a confirmar",
+            "description": "Trilha em serra; extensão, desnível, terreno, guia, autorização e ponto de início dependem do percurso. Confirme todos esses dados antes de sair."
+          },
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "locationNote": "A coordenada municipal não é o início da trilha; ponto de encontro e traçado precisam ser confirmados com o guia.",
+          "mapQuery": "Travessia Serra de São José, Tiradentes MG",
+          "sourceUrl": "https://www.minasgerais.com.br/pt/destinos/tiradentes",
+          "researchedAt": "2026-10-15",
+          "days": "Duração a confirmar",
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "visitLinks": [
+            {
+              "label": "Portal Minas Gerais — atrativos de Tiradentes",
+              "url": "https://www.minasgerais.com.br/pt/destinos/tiradentes"
+            }
+          ],
+          "kind": "atracao",
+          "type": "natureza"
+        },
+        {
+          "name": "Estrada Parque Passos dos Fundadores",
+          "description": "Percurso rodoviário panorâmico associado à Serra de São José e listado entre as experiências de natureza da região. É um trecho, não um ponto único de parada; confirme o trajeto, as condições da estrada e os locais permitidos para parar.",
+          "agencyRationale": "Experiência de natureza listada no Portal Minas Gerais; inclusão em roteiro comercial de agência não confirmada.",
+          "visitType": "Percurso rodoviário panorâmico",
+          "estimatedDuration": "Duração a confirmar",
+          "publishedDuration": "—",
+          "oneYearOld": "A confirmar conforme trajeto e condições da estrada.",
+          "access": {
+            "level": "unknown",
+            "label": "Trajeto a confirmar",
+            "description": "O cadastro não define início, fim, pavimentação nem pontos autorizados de parada. Confirme o percurso e as condições atuais antes de seguir."
+          },
+          "lat": -21.110469,
+          "lon": -44.174294,
+          "locationAccuracy": "city-center",
+          "locationNote": "A coordenada municipal é apenas referência; o percurso não foi mapeado como uma linha viária.",
+          "mapQuery": "Estrada Parque Passos dos Fundadores, Tiradentes MG",
+          "sourceUrl": "https://www.minasgerais.com.br/pt/destinos/tiradentes",
+          "researchedAt": "2026-10-15",
+          "days": "Duração a confirmar",
+          "relevanceSource": "guide",
+          "ageClassification": {
+            "status": "indeterminada"
+          },
+          "ticket": {
+            "status": "indeterminado"
+          },
+          "visitLinks": [
+            {
+              "label": "Portal Minas Gerais — atrativos de Tiradentes",
+              "url": "https://www.minasgerais.com.br/pt/destinos/tiradentes"
+            }
+          ],
+          "kind": "atracao",
+          "type": "natureza"
         },
         {
           "name": "Igreja Nossa Senhora do Rosário dos Pretos",
